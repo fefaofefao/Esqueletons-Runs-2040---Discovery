@@ -1,16 +1,16 @@
 class_name BattleEngine
 extends RefCounted
-## Regras da batalha em dupla (2×2), sem nenhuma interface: a tela de batalha
-## e o simulador (fase 3c) usam a mesma lógica. Cada rodada devolve uma lista
-## de eventos que a tela anima em ordem.
+## Regras da batalha em dupla (2×2) com TURNOS POR TEMPO (timeline):
+## cada esqueleto em campo tem um "relógio". Quem chega primeiro age; depois
+## volta para a fila com uma espera = base / VEL × PESO da ação.
+##   - golpes LEVES voltam logo, PESADOS demoram (o jogador vê isso na timeline);
+##   - alguns golpes ATRASAM o alvo (empurram o próximo turno dele);
+##   - SINTONIA: se dois aliados agem em sequência, o segundo ganha +25%.
+## Sem nenhuma interface: a tela e o simulador (fase 3c) usam o mesmo motor.
 ##
-## Ações (uma por esqueleto ativo do jogador):
-##   {"kind": "move", "move": id, "target": uid}
-##   {"kind": "switch", "to": índice no time}
-##   {"kind": "item", "item": id, "target": uid}
-##   {"kind": "flee"}
-##
-## Eventos: ver _ev(); cada um tem "t" (tipo) e uids dos envolvidos.
+## Uso: next_actor() diz quem age; act(ação) resolve e devolve eventos.
+## Ações: {"kind": "move", "move": id, "target": uid} | {"kind": "switch", "to": índice}
+##        {"kind": "item", "item": id, "target": uid}    | {"kind": "flee"}
 
 const PLAYER := 0
 const ENEMY := 1
@@ -21,11 +21,17 @@ var kind := "wild"  # wild | tamer | boss
 var teams: Array = [[], []]
 var active: Array = [[-1, -1], [-1, -1]]
 var bag: Dictionary = {}
-var round_no := 0
+var now := 0.0
+var turn_no := 0
 var flee_attempts := 0
 var result := ""  # "" | win | lose | fled
 var events: Array = []
-var last_player_actions: Dictionary = {}
+## Próximo instante de ação de cada esqueleto em campo (uid -> tempo).
+var next_at: Dictionary = {}
+## Última ação de cada esqueleto do jogador (para "Repetir").
+var last_actions: Dictionary = {}
+var _last_side := -1
+var _last_uid := -1
 var _participants := {}
 
 
@@ -38,6 +44,7 @@ func setup(player_team: Array, enemy_team: Array, battle_kind: String = "wild", 
 	kind = battle_kind
 	teams = [player_team, enemy_team]
 	var per := int(rules.get("active_per_side", 2))
+	next_at = {}
 	for side in 2:
 		active[side] = []
 		for i in per:
@@ -52,9 +59,16 @@ func setup(player_team: Array, enemy_team: Array, battle_kind: String = "wild", 
 			if not teams[side][i].is_fainted():
 				active[side][slot] = i
 				slot += 1
+	var init: Array = rules.get("timing", {}).get("initial", [0.3, 0.65])
+	for side in 2:
+		for m in active_units(side):
+			next_at[m.uid] = base_delay(m) * rng.randf_range(float(init[0]), float(init[1]))
 	result = ""
-	round_no = 0
+	now = 0.0
+	turn_no = 0
 	flee_attempts = 0
+	_last_side = -1
+	_last_uid = -1
 	_participants = {}
 	_mark_participation()
 
@@ -176,85 +190,134 @@ static func calc_damage(r: Dictionary, attacker: Monster, defender: Monster, mv:
 	var vr: Array = d.get("variance", [0.85, 1.0])
 	var variance: float = opts.get("variance", random.randf_range(float(vr[0]), float(vr[1])) if random else (float(vr[0]) + float(vr[1])) / 2.0)
 	var crit: bool = opts.get("crit", random.randf() < float(d.get("crit_chance", 0.0625)) if random else false)
-	var dmg := base * eff * stab * variance * (float(d.get("crit_mul", 1.5)) if crit else 1.0)
+	var dmg := base * eff * stab * variance * (float(d.get("crit_mul", 1.5)) if crit else 1.0) * float(opts.get("bonus", 1.0))
 	return {"damage": maxi(1, int(dmg)), "crit": crit, "eff": eff}
 
 
-# ------------------------------------------------------------------ ordem
-func action_priority(a: Dictionary) -> int:
-	var pr: Dictionary = rules.get("priority", {})
+# ------------------------------------------------------------------ tempo
+## Espera até a próxima ação: base / VEL efetiva.
+func base_delay(m: Monster) -> float:
+	return float(rules.get("timing", {}).get("base", 1000)) / maxf(1.0, m.battle_stat("spd"))
+
+
+func move_weight(move_id: String) -> float:
+	var w: Dictionary = rules.get("timing", {}).get("weights", {})
+	return float(w.get(str(move_data(move_id).get("weight", "normal")), 1.0))
+
+
+func action_weight(a: Dictionary) -> float:
+	var t: Dictionary = rules.get("timing", {})
 	match str(a.get("kind", "")):
-		"switch":
-			return int(pr.get("switch", 6))
-		"item":
-			return int(pr.get("item", 5))
-		"flee":
-			return int(pr.get("flee", 7))
 		"move":
-			return int(move_data(str(a.get("move", ""))).get("priority", 0))
-	return 0
+			return move_weight(str(a.get("move", "")))
+		"switch":
+			return float(t.get("switch", 1.0))
+		"item":
+			return float(t.get("item", 1.0))
+		"flee":
+			return float(t.get("flee", 1.0))
+	return 1.0
 
 
-func order_actions(acts: Array) -> Array:
-	for a in acts:
-		a["_tie"] = rng.randf()
-	acts.sort_custom(func(x: Dictionary, y: Dictionary) -> bool:
-		var px := action_priority(x)
-		var py := action_priority(y)
-		if px != py:
-			return px > py
-		var sx: float = (x["user"] as Monster).battle_stat("spd")
-		var sy: float = (y["user"] as Monster).battle_stat("spd")
-		if not is_equal_approx(sx, sy):
-			return sx > sy
-		return x["_tie"] > y["_tie"])
-	return acts
+func _order_key(m: Monster) -> Array:
+	return [float(next_at.get(m.uid, INF)), -m.battle_stat("spd"), m.side, m.uid]
 
 
-## Ordem prevista para a timeline (prioridade das ações escolhidas, se houver, e VEL).
-func predicted_order(player_actions: Dictionary = {}) -> Array:
-	var acts := []
+static func _key_less(a: Array, b: Array) -> bool:
+	for i in a.size():
+		if a[i] != b[i]:
+			return a[i] < b[i]
+	return false
+
+
+## Quem age agora (o menor relógio entre os que estão em campo).
+func next_actor() -> Monster:
+	var best: Monster = null
 	for side in 2:
 		for m in active_units(side):
-			var a: Dictionary = player_actions.get(m.uid, {"kind": "move", "move": ""}).duplicate()
-			a["user"] = m
-			acts.append(a)
-	var saved := rng.state
-	var ordered := order_actions(acts)
-	rng.state = saved
-	return ordered.map(func(a: Dictionary) -> Monster: return a["user"])
+			if not next_at.has(m.uid):
+				next_at[m.uid] = now + base_delay(m)
+			if best == null or _key_less(_order_key(m), _order_key(best)):
+				best = m
+	return best
 
 
-# ------------------------------------------------------------------ rodada
-func run_round(player_actions: Dictionary) -> Array:
+## Próximas n ações previstas (para a timeline). override: {uid: peso} da ação
+## que esse esqueleto está escolhendo agora (mostra onde o próximo turno dele cai).
+func predict(n: int = 8, override: Dictionary = {}) -> Array:
+	var sim := next_at.duplicate()
+	var units := active_units(PLAYER) + active_units(ENEMY)
+	var out := []
+	var used := {}
+	for i in n:
+		var best: Monster = null
+		var best_t := INF
+		for m in units:
+			var t: float = sim.get(m.uid, now + base_delay(m))
+			if best == null or t < best_t or (is_equal_approx(t, best_t) and m.battle_stat("spd") > best.battle_stat("spd")):
+				best = m
+				best_t = t
+		if best == null:
+			break
+		out.append(best)
+		var w := 1.0
+		if override.has(best.uid) and not used.has(best.uid):
+			w = float(override[best.uid])
+			used[best.uid] = true
+		sim[best.uid] = best_t + base_delay(best) * w
+	return out
+
+
+## Sintonia: o esqueleto age logo depois de um aliado (sem inimigo no meio).
+func sintonia_for(m: Monster) -> bool:
+	return _last_side == m.side and _last_uid != m.uid and _last_uid != -1
+
+
+# ------------------------------------------------------------------ ação
+func act(action: Dictionary) -> Array:
 	events = []
 	if result != "":
 		return events
-	round_no += 1
-	last_player_actions = player_actions.duplicate(true)
+	var actor := next_actor()
+	if actor == null:
+		return events
+	now = float(next_at[actor.uid])
+	turn_no += 1
 	_mark_participation()
-	var acts := []
-	for m in active_units(PLAYER):
-		if player_actions.has(m.uid):
-			var a: Dictionary = player_actions[m.uid].duplicate()
-			a["user"] = m
-			acts.append(a)
-	for m in active_units(ENEMY):
-		var a := BattleAI.choose(self, m)
-		a["user"] = m
-		acts.append(a)
-	for a in order_actions(acts):
-		if result != "":
-			break
-		var user: Monster = a["user"]
-		if user.is_fainted() or slot_of(user) < 0:
-			continue
-		_execute(a)
+	# veneno conta nos turnos do próprio envenenado
+	if actor.is_poisoned():
+		_poison_tick(actor)
 		_check_end()
-	if result == "":
-		_end_of_round()
-		_check_end()
+		if actor.is_fainted() or result != "":
+			_last_side = -1
+			_last_uid = -1
+			return events
+	var sync := sintonia_for(actor)
+	_ev("turn", {"user": actor.uid, "sintonia": sync})
+	if actor.side == PLAYER:
+		last_actions[actor.uid] = action.duplicate()
+	var bonus := float(rules.get("sintonia", {}).get("bonus", 1.25)) if sync else 1.0
+	match str(action.get("kind", "")):
+		"move":
+			_use_move(actor, str(action.get("move", "struggle")), int(action.get("target", 0)), bonus)
+		"switch":
+			switch_in(actor.side, slot_of(actor), int(action.get("to", -1)))
+		"item":
+			_use_item(actor, str(action.get("item", "")), int(action.get("target", 0)))
+		"flee":
+			_try_flee(actor)
+	if not actor.is_fainted() and slot_of(actor) >= 0:
+		next_at[actor.uid] = now + base_delay(actor) * action_weight(action)
+	_last_side = actor.side
+	_last_uid = actor.uid
+	_check_end()
 	return events
+
+
+## Turno do inimigo (IA).
+func act_enemy() -> Array:
+	var actor := next_actor()
+	return act(BattleAI.choose(self, actor))
 
 
 func _ev(t: String, data: Dictionary = {}) -> void:
@@ -263,20 +326,7 @@ func _ev(t: String, data: Dictionary = {}) -> void:
 	events.append(e)
 
 
-func _execute(a: Dictionary) -> void:
-	var user: Monster = a["user"]
-	match str(a.get("kind", "")):
-		"move":
-			_use_move(user, str(a.get("move", "struggle")), int(a.get("target", 0)))
-		"switch":
-			switch_in(user.side, slot_of(user), int(a.get("to", -1)))
-		"item":
-			_use_item(user, str(a.get("item", "")), int(a.get("target", 0)))
-		"flee":
-			_try_flee(user)
-
-
-func _use_move(user: Monster, move_id: String, target_uid: int) -> void:
+func _use_move(user: Monster, move_id: String, target_uid: int, bonus: float) -> void:
 	var mv := move_data(move_id)
 	if mv.is_empty():
 		return
@@ -295,7 +345,6 @@ func _use_move(user: Monster, move_id: String, target_uid: int) -> void:
 	if target_kind in ["enemy", "ally"]:
 		var chosen := find(target_uid)
 		if chosen == null or not targets.has(chosen):
-			# alvo caiu ou saiu: passa para outro válido do mesmo lado
 			chosen = targets[0] if not targets.is_empty() else null
 		targets = [chosen] if chosen else []
 	if targets.is_empty():
@@ -309,7 +358,7 @@ func _use_move(user: Monster, move_id: String, target_uid: int) -> void:
 			_ev("miss", {"user": user.uid, "target": target.uid})
 			continue
 		if str(mv.get("category", "physical")) != "status" and int(mv.get("power", 0)) > 0:
-			var r := calc_damage(rules, user, target, mv, rng)
+			var r := calc_damage(rules, user, target, mv, rng, {"bonus": bonus})
 			if target_kind == "all_enemies" and targets.size() > 1:
 				r["damage"] = maxi(1, int(r["damage"] * 0.75))
 			_damage(target, int(r["damage"]), {"crit": r["crit"], "eff": r["eff"], "user": user.uid})
@@ -318,7 +367,7 @@ func _use_move(user: Monster, move_id: String, target_uid: int) -> void:
 				break
 			if rng.randf() * 100.0 >= float(eff.get("chance", 100)):
 				continue
-			_apply_effect(user, target, eff)
+			_apply_effect(user, target, eff, bonus)
 		if target.is_fainted():
 			_on_faint(target)
 
@@ -331,7 +380,7 @@ func _damage(target: Monster, amount: int, extra: Dictionary) -> void:
 	_ev("damage", e)
 
 
-func _apply_effect(user: Monster, target: Monster, eff: Dictionary) -> void:
+func _apply_effect(user: Monster, target: Monster, eff: Dictionary, bonus: float = 1.0) -> void:
 	match str(eff.get("kind", "")):
 		"poison":
 			if target.is_poisoned():
@@ -348,12 +397,17 @@ func _apply_effect(user: Monster, target: Monster, eff: Dictionary) -> void:
 			target.stages[s] = after
 			_ev("stat", {"target": target.uid, "stat": s, "delta": after - before, "requested": int(eff.get("stages", 1))})
 		"heal":
-			var amount := int(ceil(target.max_hp() * float(eff.get("percent", 30)) / 100.0))
+			var amount := int(ceil(target.max_hp() * float(eff.get("percent", 30)) / 100.0 * bonus))
 			_heal(target, amount)
 		"cure":
 			if target.is_poisoned():
 				target.poison_turns = 0
 				_ev("cured", {"target": target.uid})
+		"delay":
+			if next_at.has(target.uid):
+				var push := base_delay(target) * float(eff.get("amount", 0.3))
+				next_at[target.uid] = float(next_at[target.uid]) + push
+				_ev("delayed", {"target": target.uid})
 
 
 func _heal(target: Monster, amount: int) -> void:
@@ -412,7 +466,8 @@ func _try_flee(user: Monster) -> void:
 		_ev("flee_failed", {"user": user.uid})
 
 
-## Troca o esqueleto de um slot. Usado pela ação "switch" e para repor quem caiu.
+## Troca o esqueleto de um slot (ação "switch" ou reposição de quem caiu).
+## Quem entra espera um turno inteiro para agir.
 func switch_in(side: int, slot: int, team_index: int) -> bool:
 	if slot < 0 or team_index < 0 or team_index >= teams[side].size():
 		return false
@@ -423,9 +478,12 @@ func switch_in(side: int, slot: int, team_index: int) -> bool:
 	if out_idx >= 0:
 		var outgoing: Monster = teams[side][out_idx]
 		outgoing.stages = {}
-		_ev("switch_out", {"target": outgoing.uid, "slot": slot, "side": side})
+		next_at.erase(outgoing.uid)
+		if not outgoing.is_fainted():
+			_ev("switch_out", {"target": outgoing.uid, "slot": slot, "side": side})
 	active[side][slot] = team_index
 	incoming.stages = {}
+	next_at[incoming.uid] = now + base_delay(incoming) * float(rules.get("timing", {}).get("enter", 0.8))
 	_ev("switch_in", {"target": incoming.uid, "slot": slot, "side": side})
 	_mark_participation()
 	return true
@@ -445,36 +503,29 @@ func pending_replacements() -> Array:
 
 func _on_faint(m: Monster) -> void:
 	m.poison_turns = 0
+	next_at.erase(m.uid)
 	_ev("faint", {"target": m.uid})
+	var slot := slot_of(m)
+	if slot >= 0:
+		active[m.side][slot] = -1
 	if m.side == ENEMY:
 		_award_xp(m)
-		var slot := slot_of(m)
 		var res := reserves(ENEMY)
-		if slot >= 0:
-			active[ENEMY][slot] = -1
-			if not res.is_empty():
-				switch_in(ENEMY, slot, res[0])
-	else:
-		var slot := slot_of(m)
-		if slot >= 0:
-			active[PLAYER][slot] = -1
+		if slot >= 0 and not res.is_empty():
+			switch_in(ENEMY, slot, res[0])
 
 
-func _end_of_round() -> void:
+func _poison_tick(m: Monster) -> void:
 	var p: Dictionary = rules.get("poison", {})
-	for side in 2:
-		for m in active_units(side):
-			if not m.is_poisoned():
-				continue
-			var dmg := maxi(int(p.get("min_damage", 1)), int(m.max_hp() * float(p.get("fraction", 0.0834))))
-			m.poison_turns -= 1
-			var dealt := mini(dmg, m.hp)
-			m.hp -= dealt
-			_ev("poison_tick", {"target": m.uid, "amount": dealt, "hp": m.hp})
-			if m.is_fainted():
-				_on_faint(m)
-			elif m.poison_turns == 0:
-				_ev("poison_end", {"target": m.uid})
+	var dmg := maxi(int(p.get("min_damage", 1)), int(m.max_hp() * float(p.get("fraction", 0.0834))))
+	m.poison_turns -= 1
+	var dealt := mini(dmg, m.hp)
+	m.hp -= dealt
+	_ev("poison_tick", {"target": m.uid, "amount": dealt, "hp": m.hp})
+	if m.is_fainted():
+		_on_faint(m)
+	elif m.poison_turns == 0:
+		_ev("poison_end", {"target": m.uid})
 
 
 func _check_end() -> void:

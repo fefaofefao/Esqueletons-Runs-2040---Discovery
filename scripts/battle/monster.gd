@@ -1,6 +1,6 @@
 class_name Monster
 extends RefCounted
-## Um esqueleto (do jogador ou inimigo): espécie, nível, XP, atributos, PV,
+## Um esqueleto (do jogador ou inimigo): espécie, idade (o "nível"), XP, atributos, PV,
 ## golpes com PP, status (veneno) e estágios de atributo da batalha.
 ## Serializa para o save com to_dict/from_dict.
 
@@ -28,7 +28,8 @@ static func create(species: String, lvl: int, golden_flag: bool = false) -> Mons
 	m.uid = _next_uid
 	_next_uid += 1
 	m.species_id = species
-	m.level = clampi(lvl, 1, int(Data.battle_rules().get("level_max", 50)))
+	# idade: até 100 para o jogador; inimigos especiais (Rei) chegam a 120
+	m.level = clampi(lvl, 1, int(Data.battle_rules().get("enemy_level_max", 120)))
 	m.xp = xp_for_level(m.level)
 	m.golden = golden_flag
 	m.moves = []
@@ -134,9 +135,10 @@ func heal_full() -> void:
 
 
 # ------------------------------------------------------------ XP e níveis
+## XP acumulado para chegar à idade n.
 static func xp_for_level(n: int) -> int:
-	var k := float(Data.battle_rules().get("xp", {}).get("curve_k", 0.8))
-	return int(k * pow(maxf(n, 1) - 1, 3)) if n > 1 else 0
+	var x: Dictionary = Data.battle_rules().get("xp", {})
+	return int(float(x.get("curve_k", 1.0)) * pow(maxf(n, 1) - 1, float(x.get("curve_exp", 2.2)))) if n > 1 else 0
 
 
 func xp_to_next() -> int:
@@ -167,10 +169,10 @@ func knows(move_id: String) -> bool:
 	return false
 
 
-## Soma XP e devolve a lista de níveis alcançados (o PV sobe junto com o máximo).
+## Soma XP e devolve a lista de idades alcançadas (aniversários) (o PV sobe junto com o máximo).
 func gain_xp(amount: int) -> Array:
 	var reached := []
-	var cap := int(Data.battle_rules().get("level_max", 50))
+	var cap := int(Data.battle_rules().get("level_max", 100))
 	xp += amount
 	while level < cap and xp >= xp_for_level(level + 1):
 		var old_max := max_hp()

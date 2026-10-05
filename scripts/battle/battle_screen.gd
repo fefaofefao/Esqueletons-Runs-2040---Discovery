@@ -1,23 +1,28 @@
 class_name BattleScreen
 extends CanvasLayer
-## Tela da batalha 2×2. Fluxo:
-##   intro → comando (anel → golpes/alvo, itens, trocar, fugir) para cada aliado
-##   → rodada (BattleEngine) → animação dos eventos → reposições → próxima rodada
-##   → fim (vitória, derrota ou fuga).
-## Controles: D-pad/teclado/gamepad e toque em tudo (anel, golpes, alvos, listas).
-## MENU repete o último turno.
+## Batalha 2×2 com turnos por tempo, numa arena lateral:
+##   topo: timeline das próximas 8 ações (Sintonia = elo ciano; fantasma =
+##         onde cai o próximo turno de quem está escolhendo);
+##   faixa: mensagens e detalhes do golpe;
+##   arena: aliados à esquerda, inimigos à direita (menu em anel em quem age,
+##          golpes no centro, etiquetas Forte/Normal/Fraco sobre os inimigos);
+##   base: cartas com nome, idade e PV.
+## Controles: D-pad/teclado/gamepad e toque em tudo. MENU repete a última ação
+## de quem está agindo.
 
 signal finished(result: String)
 
-const ENEMY_POS := [Vector2(226, 88), Vector2(276, 80)]
-const ENEMY_SINGLE := Vector2(250, 86)
-const ALLY_POS := [Vector2(58, 150), Vector2(124, 156)]
-const ALLY_SINGLE := Vector2(88, 152)
+const ALLY_POS := [Vector2(98, 118), Vector2(58, 134)]
+const ALLY_SINGLE := Vector2(78, 126)
+const ENEMY_POS := [Vector2(222, 118), Vector2(262, 134)]
+const ENEMY_SINGLE := Vector2(242, 126)
+const RIBBON_POS := Vector2(40, 22)
+const RIBBON_SIZE := Vector2(240, 34)
 
 var engine: BattleEngine
 var info: Dictionary = {}
 var views := {}
-var panels := {}
+var cards := {}
 var state := "busy"
 
 var _root: Control
@@ -27,16 +32,16 @@ var _ox := 0.0
 var _timeline: TimelineBar
 var _ring: RingMenu
 var _log: BattleLog
-var _moves: MovePanel
-var _preview: PanelContainer
+var _detail: PanelContainer
+var _detail_label: Label
+var _moves: MoveList
 var _list_panel: PanelContainer
 var _list_title: Label
 var _list: MenuList
 var _repeat: PanelContainer
-var _fx: Node2D
-var _cmd_units: Array = []
-var _cmd_i := 0
-var _actions := {}
+var _tags := {}
+var _actor: Monster
+var _chosen: Dictionary = {}
 var _targets: Array = []
 var _target_i := 0
 var _pending_item := ""
@@ -45,10 +50,11 @@ var _list_cb: Callable
 var _held := Vector2i.ZERO
 var _next_ms := 0
 var _ended := false
+var _debug_taps: Array[int] = []
 
 
-## info: {"kind": "wild"|"tamer"|"boss", "enemies": [[species, level], ...],
-##        "tamer_key": chave do nome do domador, "reward": moedas}
+## info: {"kind": "wild"|"tamer"|"boss", "enemies": [[species, idade, golden?], ...],
+##        "tamer_key": chave do nome, "reward": moedas, "seed": opcional}
 func setup(battle_info: Dictionary, player_team: Array, bag: Dictionary) -> BattleScreen:
 	info = battle_info
 	engine = BattleEngine.new()
@@ -74,13 +80,10 @@ func _ready() -> void:
 	_field = Node2D.new()
 	_field.y_sort_enabled = true
 	_root.add_child(_field)
-	_fx = Node2D.new()
-	_fx.z_index = 10
-	_root.add_child(_fx)
 	_build_ui()
 	get_viewport().size_changed.connect(_layout)
-	_layout()
 	_spawn_units()
+	_layout()
 	_run()
 
 
@@ -90,25 +93,24 @@ func _build_ui() -> void:
 	_timeline.mouse_filter = Control.MOUSE_FILTER_STOP
 	_timeline.gui_input.connect(_on_timeline_input)
 	_root.add_child(_timeline)
+	_log = BattleLog.new()
+	_log.visible = false
+	_root.add_child(_log)
+	_detail = PanelContainer.new()
+	_detail.add_theme_stylebox_override("panel", UiTheme.frame("dark"))
+	_detail.visible = false
+	_detail_label = UiTheme.label("", UiTheme.TEXT_LIGHT)
+	_detail_label.custom_minimum_size = Vector2(BattleLog.TEXT_WIDTH, 24)
+	_detail.add_child(_detail_label)
+	_root.add_child(_detail)
+	_moves = MoveList.new()
+	_moves.visible = false
+	_moves.tapped.connect(_on_move_tapped)
+	_root.add_child(_moves)
 	_ring = RingMenu.new()
 	_ring.visible = false
 	_ring.chosen.connect(_on_ring_chosen)
 	_root.add_child(_ring)
-	_log = BattleLog.new()
-	_log.visible = false
-	_root.add_child(_log)
-	_preview = PanelContainer.new()
-	_preview.custom_minimum_size = Vector2(120, 52)
-	_preview.visible = false
-	var pv_inner := Control.new()
-	pv_inner.custom_minimum_size = Vector2(106, 46)
-	_preview.add_child(pv_inner)
-	_root.add_child(_preview)
-	_moves = MovePanel.new()
-	_moves.visible = false
-	_moves.build(pv_inner)
-	_moves.tapped.connect(_on_move_tapped)
-	_root.add_child(_moves)
 	_list_panel = PanelContainer.new()
 	_list_panel.visible = false
 	_list_panel.custom_minimum_size = Vector2(196, 0)
@@ -142,17 +144,16 @@ func _layout() -> void:
 	_ox = floorf((vp.x - 320.0) / 2.0)
 	_bg.position = Vector2(floorf((vp.x - _bg.texture.get_width()) / 2.0), 0)
 	_field.position = Vector2(_ox, 0)
-	_fx.position = Vector2(_ox, 0)
-	_log.position = Vector2(_ox + 4, 128)
-	_log.custom_minimum_size = Vector2(194, 50)
-	_log.size = Vector2(194, 50)
-	_moves.position = Vector2(_ox + 4, 128)
-	_preview.position = Vector2(_ox + 196, 74)
-	_list_panel.position = Vector2(_ox + 62, 34)
-	_repeat.position = Vector2(_ox + 4, 21)
+	for p in [_log, _detail]:
+		p.position = Vector2(_ox, 0) + RIBBON_POS
+		p.custom_minimum_size = RIBBON_SIZE
+		p.size = RIBBON_SIZE
+	_moves.position = Vector2(_ox + 100, 64)
+	_list_panel.position = Vector2(_ox + 62, 30)
+	_repeat.position = Vector2(_ox + 2, 124)
 	_place_timeline()
-	for uid in panels.keys():
-		_place_panel(engine.find(uid))
+	for uid in cards.keys():
+		_place_card(engine.find(uid))
 
 
 func _place_timeline() -> void:
@@ -167,19 +168,17 @@ func _slot_pos(side: int, slot: int) -> Vector2:
 	return ALLY_SINGLE if count <= 1 and slot == 0 else ALLY_POS[slot]
 
 
-func _place_panel(m: Monster) -> void:
-	if m == null or not panels.has(m.uid):
+func _place_card(m: Monster) -> void:
+	if m == null or not cards.has(m.uid):
 		return
-	var p: UnitPanel = panels[m.uid]
+	var c: UnitCard = cards[m.uid]
 	var slot := engine.slot_of(m)
 	if slot < 0:
-		p.visible = false
+		c.visible = false
 		return
-	p.visible = true
-	if m.side == BattleEngine.ENEMY:
-		p.position = Vector2(_ox + 4, 40 + slot * 23)
-	else:
-		p.position = Vector2(_ox + 320 - 4 - UnitPanel.W, 128 + slot * 25)
+	c.visible = true
+	var x := 2.0 + slot * (UnitCard.W + 1) if m.side == BattleEngine.PLAYER else 320.0 - 2.0 - (2 - slot) * (UnitCard.W + 1) + 1
+	c.position = Vector2(_ox + x, 180 - UnitCard.H)
 
 
 func _spawn_units() -> void:
@@ -189,13 +188,12 @@ func _spawn_units() -> void:
 			v.visible = false
 			_field.add_child(v)
 			views[m.uid] = v
-			var p := UnitPanel.new().setup(m, side == BattleEngine.PLAYER)
-			p.visible = false
-			_root.add_child(p)
-			panels[m.uid] = p
-	_root.move_child(_ring, -1)
-	_root.move_child(_list_panel, -1)
-	_root.move_child(_repeat, -1)
+			var c := UnitCard.new().setup(m, side == BattleEngine.PLAYER)
+			c.visible = false
+			_root.add_child(c)
+			cards[m.uid] = c
+	for c in [_moves, _ring, _list_panel, _repeat]:
+		_root.move_child(c, -1)
 
 
 func _view(uid: int) -> UnitView:
@@ -208,6 +206,7 @@ func _name(uid: int) -> String:
 
 
 func _say(key: String, args: Dictionary = {}) -> void:
+	_detail.visible = false
 	await _log.say(tr(key).format(args))
 
 
@@ -216,10 +215,26 @@ func _run() -> void:
 	Audio.sfx("menu_open")
 	await _intro()
 	while not _ended:
-		await _command_phase()
-		if _ended:
+		var actor := engine.next_actor()
+		if actor == null:
 			break
-		await _play_round()
+		_refresh_timeline()
+		_mark_actor(actor)
+		var evs: Array
+		if actor.side == BattleEngine.PLAYER:
+			var action: Dictionary = await _choose_action(actor)
+			if _ended:
+				break
+			evs = engine.act(action)
+		else:
+			await get_tree().create_timer(0.25).timeout
+			evs = engine.act_enemy()
+		_log.visible = true
+		for e in evs:
+			await _play_event(e)
+		_mark_actor(null)
+		for uid in cards:
+			cards[uid].refresh()
 		if engine.result != "":
 			await _finish()
 			break
@@ -235,53 +250,57 @@ func _intro() -> void:
 		v.enter(false)
 	await get_tree().create_timer(0.4).timeout
 	for m in enemies:
-		_place_panel(m)
+		_place_card(m)
 	if engine.is_wild():
 		if enemies.size() > 1:
 			await _say("BTL_WILD_APPEARS_2", {"a": enemies[0].display_name(), "b": enemies[1].display_name()})
 		else:
 			await _say("BTL_WILD_APPEARS", {"name": enemies[0].display_name()})
 	else:
-		var tamer := tr(str(info.get("tamer_key", "BTL_TAMER_DEFAULT")))
-		await _say("BTL_TAMER_CHALLENGE", {"tamer": tamer})
+		await _say("BTL_TAMER_CHALLENGE", {"tamer": tr(str(info.get("tamer_key", "BTL_TAMER_DEFAULT")))})
 	for m in allies:
 		var v := _view(m.uid)
 		v.position = _slot_pos(m.side, engine.slot_of(m))
 		v.enter(true)
-		_place_panel(m)
+		_place_card(m)
 	await _say("BTL_GO", {"name": " & ".join(allies.map(func(x: Monster) -> String: return x.display_name()))})
 
 
-func _command_phase() -> void:
-	_log.visible = false
-	_actions = {}
-	_cmd_units = engine.active_units(BattleEngine.PLAYER)
-	_cmd_i = 0
-	_refresh_timeline()
-	_open_ring()
-	while state != "done":
-		await get_tree().process_frame
-		if _ended:
-			return
-	state = "busy"
-	_hide_menus()
-
-
-func _refresh_timeline() -> void:
-	_timeline.set_order(engine.predicted_order(_actions), views)
+func _refresh_timeline(ghost_weight: float = -1.0) -> void:
+	var override := {}
+	var ghost := -1
+	if ghost_weight > 0.0 and _actor:
+		override[_actor.uid] = ghost_weight
+		ghost = _actor.uid
+	_timeline.set_order(engine.predict(int(engine.rules.get("timing", {}).get("preview", 8)), override), views, ghost)
 	_place_timeline()
 
 
-func _current_unit() -> Monster:
-	return _cmd_units[_cmd_i]
+func _mark_actor(m: Monster) -> void:
+	for uid in cards:
+		cards[uid].set_acting(m != null and uid == m.uid, m != null and engine.sintonia_for(m))
+
+
+func _choose_action(actor: Monster) -> Dictionary:
+	_actor = actor
+	_chosen = {}
+	_open_ring()
+	if engine.sintonia_for(actor):
+		_show_detail(tr("BTL_SINTONIA_READY").format({"name": actor.display_name()}))
+	while _chosen.is_empty() and not _ended:
+		await get_tree().process_frame
+	_hide_menus()
+	state = "busy"
+	return _chosen
+
+
+func _choose(action: Dictionary) -> void:
+	_chosen = action
 
 
 func _open_ring() -> void:
 	_hide_menus()
-	var m := _current_unit()
-	for uid in views:
-		views[uid].set_selected(false)
-	var v := _view(m.uid)
+	var v := _view(_actor.uid)
 	var disabled := {}
 	if not engine.is_wild():
 		disabled["flee"] = true
@@ -289,43 +308,28 @@ func _open_ring() -> void:
 		disabled["switch"] = true
 	if _battle_items().is_empty():
 		disabled["items"] = true
-	_ring.open_at(v.position + _field.position + Vector2(0, -36), disabled)
-	_update_repeat_chip()
-	state = "ring"
-
-
-func _update_repeat_chip() -> void:
-	_repeat.visible = _cmd_i == 0 and engine.round_no > 0 and _repeat_actions().size() == _cmd_units.size()
+	_ring.open_at(v.position + _field.position + Vector2(0, -34), disabled)
+	_repeat.visible = not _repeat_action().is_empty()
 	(_repeat.get_node("L") as Label).text = tr("BTL_REPEAT")
+	_refresh_timeline()
+	state = "ring"
 
 
 func _hide_menus() -> void:
 	_ring.visible = false
 	_moves.visible = false
-	_preview.visible = false
+	_detail.visible = false
 	_list_panel.visible = false
 	_repeat.visible = false
+	_clear_tags()
 	for uid in views:
 		views[uid].set_selected(false)
 
 
-func _next_unit() -> void:
-	_refresh_timeline()
-	_cmd_i += 1
-	if _cmd_i >= _cmd_units.size():
-		state = "done"
-	else:
-		_open_ring()
-
-
-func _prev_unit() -> void:
-	if _cmd_i == 0:
-		return
-	_cmd_i -= 1
-	_actions.erase(_current_unit().uid)
-	_refresh_timeline()
-	Audio.sfx("cancel")
-	_open_ring()
+func _show_detail(text: String) -> void:
+	_log.visible = false
+	_detail.visible = true
+	_detail_label.text = "\n".join(TextFit.wrap_lines(text, BattleLog.TEXT_WIDTH).slice(0, 2))
 
 
 # ------------------------------------------------------------------ entrada
@@ -373,8 +377,9 @@ func _on_dir(d: Vector2i) -> void:
 		"ring":
 			_ring.select_dir(d)
 		"moves":
-			_moves.move_cursor(d)
-			_moves.update_preview(_first_target())
+			if d.y != 0:
+				_moves.move_cursor(d.y)
+				_update_move_detail()
 		"target":
 			if _targets.size() > 1:
 				_target_i = wrapi(_target_i + (1 if (d.x > 0 or d.y > 0) else -1), 0, _targets.size())
@@ -394,8 +399,6 @@ func _on_confirm() -> void:
 
 func _on_back() -> void:
 	match state:
-		"ring":
-			_prev_unit()
 		"moves":
 			Audio.sfx("cancel")
 			_open_ring()
@@ -409,7 +412,7 @@ func _on_back() -> void:
 				_open_moves()
 
 
-# ------------------------------------------------------------------ anel
+# ------------------------------------------------------------------ anel e golpes
 func _on_ring_chosen(id: String) -> void:
 	if state != "ring":
 		return
@@ -421,24 +424,58 @@ func _on_ring_chosen(id: String) -> void:
 		"switch":
 			_open_switch(false)
 		"flee":
-			_actions[_current_unit().uid] = {"kind": "flee"}
-			_next_unit()
+			_choose({"kind": "flee"})
 
 
 func _open_moves() -> void:
 	_hide_menus()
 	_pending_item = ""
-	_moves.open(_current_unit(), engine)
-	_preview.visible = true
-	_moves.update_preview(_first_target())
-	_view(_current_unit().uid).set_selected(false)
+	_moves.open(_actor, engine)
+	_update_move_detail()
 	state = "moves"
 
 
-func _first_target() -> Monster:
-	var mv := engine.move_data(_moves.current_move())
-	var t := engine.legal_targets(_current_unit(), str(mv.get("target", "enemy")))
-	return t[0] if not t.is_empty() else null
+## Detalhes do golpe na faixa, etiquetas de efetividade sobre os alvos e
+## fantasma na timeline mostrando quando quem escolhe vai agir de novo.
+func _update_move_detail() -> void:
+	var mid := _moves.current_move()
+	var mv := engine.move_data(mid)
+	var t := str(mv.get("type", ""))
+	var power := int(mv.get("power", 0))
+	var line1 := tr("BTL_DETAIL").format({
+		"type": tr("TYPE_" + t.to_upper()) if t != "" else "—",
+		"p": power if power > 0 else "—",
+		"acc": int(mv.get("accuracy", 100)),
+		"weight": tr("BTL_WEIGHT_" + str(mv.get("weight", "normal")).to_upper())})
+	var line2 := "%s · %s" % [tr("BTL_TARGET_" + str(mv.get("target", "enemy")).to_upper()), tr(str(mv.get("desc_key", "")))]
+	_show_detail(line1 + "\n" + line2)
+	_show_tags(mv)
+	_refresh_timeline(engine.move_weight(mid))
+
+
+func _show_tags(mv: Dictionary) -> void:
+	_clear_tags()
+	var foes := str(mv.get("target", "enemy")) in ["enemy", "all_enemies"]
+	if not foes or int(mv.get("power", 0)) <= 0:
+		return
+	for m in engine.active_units(BattleEngine.ENEMY):
+		var mult := engine.effectiveness(str(mv.get("type", "")), m.type())
+		var tag := PanelContainer.new()
+		tag.add_theme_stylebox_override("panel", UiTheme.frame("dark"))
+		var l := UiTheme.label(tr(BattleEngine.effectiveness_label(mult)),
+			Color8(110, 230, 120) if mult > 1.01 else (Color8(255, 120, 110) if mult < 0.99 else UiTheme.TEXT_LIGHT))
+		tag.add_child(l)
+		_root.add_child(tag)
+		tag.reset_size()
+		var v := _view(m.uid)
+		tag.position = v.position + _field.position + Vector2(-tag.size.x / 2.0, -10)
+		_tags[m.uid] = tag
+
+
+func _clear_tags() -> void:
+	for t in _tags.values():
+		t.queue_free()
+	_tags = {}
 
 
 func _on_move_tapped(i: int) -> void:
@@ -448,8 +485,8 @@ func _on_move_tapped(i: int) -> void:
 		_choose_move()
 	else:
 		_moves.index = i
-		_moves.move_cursor(Vector2i.ZERO)
-		_moves.update_preview(_first_target())
+		_moves.move_cursor(0)
+		_update_move_detail()
 		Audio.sfx("cursor")
 
 
@@ -459,16 +496,15 @@ func _choose_move() -> void:
 		return
 	Audio.sfx("confirm")
 	var mid := _moves.current_move()
-	var mv := engine.move_data(mid)
-	var tk := str(mv.get("target", "enemy"))
-	_targets = engine.legal_targets(_current_unit(), tk)
+	var tk := str(engine.move_data(mid).get("target", "enemy"))
+	_targets = engine.legal_targets(_actor, tk)
 	if BattleEngine.target_needs_choice(tk) and _targets.size() > 1:
 		_target_i = 0
+		_moves.visible = false
 		state = "target"
 		_show_target()
 		return
-	_actions[_current_unit().uid] = {"kind": "move", "move": mid, "target": _targets[0].uid if not _targets.is_empty() else 0}
-	_next_unit()
+	_choose({"kind": "move", "move": mid, "target": _targets[0].uid if not _targets.is_empty() else 0})
 
 
 func _show_target() -> void:
@@ -478,21 +514,16 @@ func _show_target() -> void:
 	var v := _view(t.uid)
 	if v:
 		v.set_selected(true)
-	if _pending_item == "":
-		_moves.update_preview(t)
 
 
 func _confirm_target() -> void:
 	Audio.sfx("confirm")
 	var t: Monster = _targets[_target_i]
 	if _pending_item != "":
-		_actions[_current_unit().uid] = {"kind": "item", "item": _pending_item, "target": t.uid}
+		_choose({"kind": "item", "item": _pending_item, "target": t.uid})
 		_pending_item = ""
 	else:
-		_actions[_current_unit().uid] = {"kind": "move", "move": _moves.current_move(), "target": t.uid}
-	for uid in views:
-		views[uid].set_selected(false)
-	_next_unit()
+		_choose({"kind": "move", "move": _moves.current_move(), "target": t.uid})
 
 
 ## Toque num esqueleto durante a escolha de alvo: 1º toque marca, 2º confirma.
@@ -548,7 +579,7 @@ func _party_rows(filter: Callable) -> Array:
 	var team: Array = engine.teams[BattleEngine.PLAYER]
 	for i in team.size():
 		var m: Monster = team[i]
-		rows.append({"id": str(i), "key": "", "suffix": "%s %s" % [m.display_name(), tr("BTL_LEVEL_SHORT").format({"n": m.level})],
+		rows.append({"id": str(i), "key": "", "suffix": "%s · %s" % [m.display_name(), UnitCard.age_text(m.level)],
 			"value": func() -> String: return "%d/%d" % [m.hp, m.max_hp()], "enabled": filter.call(i, m)})
 	return rows
 
@@ -566,21 +597,18 @@ func _on_list_activated(id: String) -> void:
 	match _list_mode:
 		"items":
 			_pending_item = id
-			var it := Data.item(id)
-			var kind := str(it.get("target", "ally"))
+			var kind := str(Data.item(id).get("target", "ally"))
 			var rows := _party_rows(func(_i: int, m: Monster) -> bool:
 				return m.is_fainted() if kind == "fainted_ally" else not m.is_fainted())
 			_open_list("item_target", "BTL_ITEM_TARGET", rows)
 		"item_target":
 			var t: Monster = engine.teams[BattleEngine.PLAYER][int(id)]
-			_actions[_current_unit().uid] = {"kind": "item", "item": _pending_item, "target": t.uid}
+			_list_panel.visible = false
+			_choose({"kind": "item", "item": _pending_item, "target": t.uid})
 			_pending_item = ""
-			_list_panel.visible = false
-			_next_unit()
 		"switch":
-			_actions[_current_unit().uid] = {"kind": "switch", "to": int(id)}
 			_list_panel.visible = false
-			_next_unit()
+			_choose({"kind": "switch", "to": int(id)})
 		"switch_forced", "learn":
 			if _list_cb.is_valid():
 				var cb := _list_cb
@@ -601,53 +629,37 @@ func _on_list_cancelled() -> void:
 
 
 # ------------------------------------------------------------------ repetir
-func _repeat_actions() -> Dictionary:
-	var last := engine.last_player_actions
-	var out := {}
-	for m in engine.active_units(BattleEngine.PLAYER):
-		if not last.has(m.uid):
-			return {}
-		var a: Dictionary = last[m.uid]
-		if a.get("kind") != "move":
-			return {}
-		var ok := false
-		for mv in m.moves:
-			if mv["id"] == a.get("move") and int(mv["pp"]) > 0:
-				ok = true
-		if not ok:
-			return {}
-		out[m.uid] = a.duplicate()
-	return out
+func _repeat_action() -> Dictionary:
+	if _actor == null or not engine.last_actions.has(_actor.uid):
+		return {}
+	var a: Dictionary = engine.last_actions[_actor.uid]
+	if a.get("kind") != "move":
+		return {}
+	for mv in _actor.moves:
+		if mv["id"] == a.get("move") and int(mv["pp"]) > 0:
+			return a.duplicate()
+	return {}
 
 
 func _repeat_last() -> void:
-	if state != "ring" or _cmd_i != 0:
+	if state != "ring":
 		return
-	var acts := _repeat_actions()
-	if acts.is_empty() or acts.size() != _cmd_units.size():
+	var a := _repeat_action()
+	if a.is_empty():
 		Audio.sfx("bump")
 		return
 	Audio.sfx("confirm")
-	_actions = acts
-	state = "done"
+	_choose(a)
 
 
-# ------------------------------------------------------------------ rodada
-func _play_round() -> void:
-	_hide_menus()
-	var evs := engine.run_round(_actions)
-	_log.visible = true
-	_timeline.set_order(engine.predicted_order(_actions), views)
-	for e in evs:
-		await _play_event(e)
-	for uid in panels:
-		panels[uid].refresh()
-
-
+# ------------------------------------------------------------------ eventos
 func _play_event(e: Dictionary) -> void:
 	match str(e.t):
+		"turn":
+			if bool(e.get("sintonia", false)):
+				_sparkles(_view(int(e.user)).center())
+				await _say("BTL_SINTONIA", {"name": _name(int(e.user))})
 		"move":
-			_timeline.set_current(int(e.user))
 			var mv := engine.move_data(str(e.move))
 			var user := _view(int(e.user))
 			await _say("BTL_USED", {"user": _name(int(e.user)), "move": tr(str(mv.get("name_key", "")))})
@@ -663,7 +675,7 @@ func _play_event(e: Dictionary) -> void:
 				v.hurt()
 				_float_number(v.center() - Vector2(0, 12), str(int(e.amount)), Color8(255, 240, 200))
 			Audio.sfx("bump")
-			await panels[int(e.target)].animate_hp(int(e.hp))
+			await cards[int(e.target)].animate_hp(int(e.hp))
 			if bool(e.get("crit", false)):
 				await _say("BTL_CRIT")
 			var eff := float(e.get("eff", 1.0))
@@ -675,38 +687,42 @@ func _play_event(e: Dictionary) -> void:
 			await _say("BTL_MISS", {"user": _name(int(e.user))})
 		"no_target":
 			await _say("BTL_NO_TARGET")
+		"delayed":
+			_arrows(_view(int(e.target)).center(), false)
+			_refresh_timeline()
+			await _say("BTL_DELAYED", {"name": _name(int(e.target))})
 		"poisoned":
 			_burst(_view(int(e.target)).center(), Color8(170, 90, 210))
-			panels[int(e.target)].refresh()
+			cards[int(e.target)].refresh()
 			await _say("BTL_POISONED", {"name": _name(int(e.target))})
 		"already_poisoned":
 			await _say("BTL_ALREADY_POISONED", {"name": _name(int(e.target))})
 		"poison_tick":
-			var v := _view(int(e.target))
-			_bubbles(v.center())
-			await panels[int(e.target)].animate_hp(int(e.hp), 0.35)
+			_bubbles(_view(int(e.target)).center())
+			await cards[int(e.target)].animate_hp(int(e.hp), 0.35)
 			await _say("BTL_POISON_TICK", {"name": _name(int(e.target))})
 		"poison_end":
-			panels[int(e.target)].refresh()
+			cards[int(e.target)].refresh()
 			await _say("BTL_POISON_END", {"name": _name(int(e.target))})
 		"stat":
 			var up := int(e.requested) > 0
 			var key := ("BTL_STAT_UP" if up else "BTL_STAT_DOWN") if int(e.delta) != 0 else ("BTL_STAT_MAX" if up else "BTL_STAT_MIN")
 			_arrows(_view(int(e.target)).center(), up)
+			if str(e.stat) == "spd":
+				_refresh_timeline()
 			await _say(key, {"name": _name(int(e.target)), "stat": tr("STAT_" + str(e.stat).to_upper())})
 		"heal":
 			_sparkles(_view(int(e.target)).center())
-			await panels[int(e.target)].animate_hp(int(e.hp))
+			await cards[int(e.target)].animate_hp(int(e.hp))
 			await _say("BTL_HEALED", {"name": _name(int(e.target)), "n": int(e.amount)})
 		"cured":
-			panels[int(e.target)].refresh()
+			cards[int(e.target)].refresh()
 			await _say("BTL_CURED", {"name": _name(int(e.target))})
 		"revived":
-			panels[int(e.target)].shown_hp = 0
-			await panels[int(e.target)].animate_hp(int(e.hp))
+			cards[int(e.target)].shown_hp = 0
+			await cards[int(e.target)].animate_hp(int(e.hp))
 			await _say("BTL_REVIVED", {"name": _name(int(e.target))})
 		"item":
-			_timeline.set_current(int(e.user))
 			await _say("BTL_ITEM_USED", {"item": tr(str(Data.item(str(e.item)).get("name_key", ""))), "name": _name(int(e.target))})
 		"item_fail":
 			await _say("BTL_NO_ITEMS")
@@ -716,7 +732,7 @@ func _play_event(e: Dictionary) -> void:
 				await _say("BTL_COME_BACK", {"name": _name(int(e.target))})
 			if v and v.visible:
 				await v.leave(int(e.side) == BattleEngine.PLAYER)
-			panels[int(e.target)].visible = false
+			cards[int(e.target)].visible = false
 		"switch_in":
 			var m := engine.find(int(e.target))
 			var v := _view(m.uid)
@@ -726,15 +742,16 @@ func _play_event(e: Dictionary) -> void:
 				await _say("BTL_TAMER_SENDS", {"tamer": tr(str(info.get("tamer_key", "BTL_TAMER_DEFAULT"))), "name": m.display_name()})
 			elif m.side == BattleEngine.PLAYER:
 				await _say("BTL_GO", {"name": m.display_name()})
-			panels[m.uid].bind(m)
-			_place_panel(m)
+			cards[m.uid].bind(m)
+			_place_card(m)
 			await v.enter(m.side == BattleEngine.PLAYER)
+			_refresh_timeline()
 		"faint":
 			var v := _view(int(e.target))
 			Audio.sfx("cancel")
 			if v:
 				await v.faint()
-			panels[int(e.target)].visible = false
+			cards[int(e.target)].visible = false
 			await _say("BTL_FAINT", {"name": _name(int(e.target))})
 		"xp":
 			var m := engine.find(int(e.target))
@@ -742,9 +759,9 @@ func _play_event(e: Dictionary) -> void:
 			for lvl in e.get("levels", []):
 				Audio.sfx("save")
 				if _view(m.uid).visible:
-					_sparkles(_view(m.uid).center())
+					_confetti(_view(m.uid).center())
 				await _say("BTL_LEVEL_UP", {"name": m.display_name(), "n": int(lvl)})
-			panels[m.uid].refresh()
+			cards[m.uid].refresh()
 		"learned":
 			await _say("BTL_LEARNED", {"name": _name(int(e.target)), "move": tr(str(Data.move(str(e.move)).get("name_key", "")))})
 		"learn_prompt":
@@ -803,7 +820,6 @@ func _replacements() -> void:
 		_log.visible = true
 		for e in engine.events:
 			await _play_event(e)
-	# reposiciona quem ficou sozinho/em dupla
 	for side in 2:
 		for m in engine.active_units(side):
 			var v := _view(m.uid)
@@ -811,11 +827,12 @@ func _replacements() -> void:
 			if v.position != target:
 				var tw := create_tween()
 				tw.tween_property(v, "position", target, 0.25)
-			_place_panel(m)
+			_place_card(m)
 
 
 func _finish() -> void:
 	_ended = true
+	_hide_menus()
 	match engine.result:
 		"win":
 			Audio.sfx("save")
@@ -835,13 +852,9 @@ func debug_win() -> void:
 		m.hp = 0
 	engine.result = "win"
 	state = "busy"
-	_hide_menus()
 	if not _ended:
 		_log.visible = true
 		await _finish()
-
-
-var _debug_taps: Array[int] = []
 
 
 ## Três toques na timeline abrem o menu de debug (só em build de debug).
@@ -890,7 +903,12 @@ func _bubbles(at: Vector2) -> void:
 
 
 func _sparkles(at: Vector2) -> void:
-	_particles(at, Color8(140, 255, 160), 12, 30.0, Vector2(0, -40), "sparkle")
+	_particles(at, Color8(140, 255, 220), 12, 30.0, Vector2(0, -40), "sparkle")
+
+
+func _confetti(at: Vector2) -> void:
+	for c in [Color8(255, 120, 140), Color8(255, 220, 90), Color8(120, 200, 255), Color8(150, 240, 140)]:
+		_particles(at - Vector2(0, 20), c, 6, 60.0, Vector2(0, 90))
 
 
 func _arrows(at: Vector2, up: bool) -> void:

@@ -76,7 +76,7 @@ func refresh() -> void:
 		r.scale = Vector2.ONE
 	_label.text = tr(_key(selected))
 	_label_panel.reset_size()
-	_label_panel.position = Vector2(-_label_panel.size.x / 2.0, RADIUS + 11)
+	_label_panel.position = Vector2(-_label_panel.size.x / 2.0, -RADIUS - 28)
 	queue_redraw()
 
 

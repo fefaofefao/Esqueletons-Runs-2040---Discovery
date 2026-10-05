@@ -110,3 +110,23 @@ Registro das escolhas feitas sem consulta (AGENTS.md, seção A). Cada item diz 
 ### Conteúdo de teste (não é conteúdo do jogo)
 - As espécies e os golpes reais são das fases 3b/3c. Para testar a batalha agora existem **4 bonecos de treino** (um por tipo) e **12 golpes de teste** em `data/test/`, com nomes próprios de teste nos 3 idiomas (`i18n/test.csv`). Eles só aparecem pelo menu de debug e **ficam fora do AAB de release** (`exclude_filter`). A fase 3 os substitui.
 - **Itens reais** (`data/items.json`): Poção P/M/G (30/80/200 PV), Antídoto e Reviver (50%).
+
+## Decisões do Fernando após a fase 2 (idade e batalha nova)
+
+### Nível = idade
+- O jogo mostra **idade** ("12 anos", "Age 12", "12 años"); cada nível ganho é um **aniversário** ("Feliz aniversário! X fez 13 anos!", com confete).
+- **Idade máxima do jogador: 100.** Inimigos especiais podem chegar a **120** (Rei Esqueleto). O motor limita a criação a 120 e a XP a 100.
+- **Estágios:** Bebê → Adolescente → Adulto. As idades de crescimento são por linha (ex.: 28/60).
+- **Metas reescaladas ×2** (seção 11 do AGENTS.md): Guardiões aos 22, 34, 46, 58, 70 e 80 anos; Castelo 88–92; Rei 120. A história termina com a equipe por volta dos 80–90 anos.
+- **Curva de XP:** XP(idade n) = (n−1)^2,2. Com 100 idades, uma curva cúbica exigiria grind; a final é calibrada pelo simulador na fase 3c.
+
+### Batalha inovadora (não parecer Pokémon)
+- **Turnos por tempo, não por rodada.** Cada esqueleto tem um relógio próprio: quem está mais perto de zero age. Depois de agir, volta para a fila com espera = base ÷ VEL × **peso** da ação. Esqueletos rápidos agem mais vezes. A timeline mostra as **próximas 8 ações**.
+- **Peso dos golpes:** **Leve** (×0,65, volta logo), **Normal** e **Pesado** (×1,45, demora). Ao escolher um golpe, a timeline mostra um **fantasma** de onde o próximo turno vai cair. Esse é o lugar da "prioridade" da especificação: golpes leves fazem o esqueleto agir de novo mais cedo.
+- **Atraso:** golpes com o efeito `delay` empurram o próximo turno do alvo na fila. Servem para quebrar a Sintonia inimiga.
+- **Sintonia:** se dois aliados (ou dois inimigos) agem em sequência na timeline, o segundo ganha **+25%** de dano e cura. A timeline liga os dois com um elo ciano. Assim a ordem vira estratégia: golpes leves, trocas e atrasos servem para montar ou desfazer Sintonias.
+- **Veneno** conta os turnos do próprio envenenado (3 a 5) e causa dano no início de cada um.
+- **Trocar** custa o turno; quem entra espera 0,8 de um turno. **Fugir** e **itens** têm peso normal.
+- **Visual:** arena lateral (aliados à esquerda virados para a direita, inimigos espelhados à direita), timeline no topo, faixa de mensagens e detalhes logo abaixo, cartas de nome/idade/PV na base, lista de golpes no centro, etiquetas Forte/Normal/Fraco **sobre os próprios inimigos** e menu em anel em quem age.
+- **Repetir:** MENU repete a última ação de quem está agindo.
+- **A IA** pondera o valor do golpe pelo peso (valor ÷ √peso) e valoriza atrasar o inimigo.

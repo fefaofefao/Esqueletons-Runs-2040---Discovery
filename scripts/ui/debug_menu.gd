@@ -94,7 +94,7 @@ const TEST_BATTLES := {
 	"tamer": {"kind": "tamer", "tamer_key": "DBG_TAMER_NAME", "reward": 300,
 		"enemies": [["teste_fisico", 1], ["teste_cura", 0], ["teste_veneno", 1]]},
 	"boss": {"kind": "boss", "tamer_key": "DBG_BOSS_NAME", "reward": 1000,
-		"enemies": [["teste_magico", 4], ["teste_cura", 4]]},
+		"enemies": [["teste_magico", 8], ["teste_cura", 8]]},
 }
 
 
@@ -102,7 +102,7 @@ func _start_test_battle(id: String) -> void:
 	var info: Dictionary = TEST_BATTLES[id].duplicate(true)
 	var lvl := maxi(2, _party_level())
 	for e in info.enemies:
-		e[1] = clampi(lvl + int(e[1]), 1, 50)
+		e[1] = clampi(lvl + int(e[1]), 1, 120)
 	close()
 	Game.start_battle(info)
 
@@ -135,7 +135,7 @@ func _onoff(v: bool) -> String:
 func _on_value_step(id: String, dir: int) -> void:
 	match id:
 		"level":
-			_set_party_level(clampi(_party_level() + 5 * dir, 1, 50))
+			_set_party_level(clampi(_party_level() + 10 * dir, 1, 100))
 		"speed10":
 			Speed.set_debug_multiplier(1.0 if Speed.debug_multiplier > 1.0 else 10.0)
 		"radii":

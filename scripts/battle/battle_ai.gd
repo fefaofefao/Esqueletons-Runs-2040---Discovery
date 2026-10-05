@@ -17,7 +17,8 @@ static func choose(engine: BattleEngine, m: Monster) -> Dictionary:
 		var mv := engine.move_data(mid)
 		var target_kind := str(mv.get("target", "enemy"))
 		for t in engine.legal_targets(m, target_kind):
-			var s := score(engine, m, mv, t, target_kind)
+			# valor por tempo: golpes pesados precisam render mais para compensar a espera
+			var s := score(engine, m, mv, t, target_kind) / sqrt(engine.move_weight(mid))
 			if s > best_score:
 				best_score = s
 				best = {"kind": "move", "move": mid, "target": t.uid}
@@ -50,6 +51,9 @@ static func score(engine: BattleEngine, user: Monster, mv: Dictionary, target: M
 			"cure":
 				if not foes and target.is_poisoned():
 					value += target.max_hp() * 0.25
+			"delay":
+				if foes:
+					value += user.max_hp() * 0.08 * chance
 			"stat":
 				var stage := int(target.stages.get(str(eff.get("stat", "")), 0))
 				var helps := (int(eff.get("stages", 1)) > 0) != foes

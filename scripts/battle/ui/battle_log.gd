@@ -1,6 +1,6 @@
 class_name BattleLog
 extends PanelContainer
-## Caixa de mensagens da batalha (2 linhas): máquina de escrever que respeita
+## Faixa de mensagens da batalha (2 linhas): máquina de escrever que respeita
 ## o 2x e a velocidade do texto; segue sozinha após uma pausa curta. A (ou
 ## toque) acelera.
 
@@ -8,8 +8,8 @@ signal advanced
 
 const HOLD := 0.55
 ## Largura útil do texto e linhas (o teste de overflow usa as mesmas medidas).
-const TEXT_WIDTH := 180.0
-const LINES := 3
+const TEXT_WIDTH := 226.0
+const LINES := 2
 
 var _label: Label
 var _shown := 0.0
@@ -21,9 +21,10 @@ var _waiting := false
 func _init() -> void:
 	theme = UiTheme.build()
 	mouse_filter = Control.MOUSE_FILTER_STOP
+	add_theme_stylebox_override("panel", UiTheme.frame("light"))
 	_label = UiTheme.label("")
 	_label.vertical_alignment = VERTICAL_ALIGNMENT_TOP
-	_label.custom_minimum_size = Vector2(TEXT_WIDTH, 36)
+	_label.custom_minimum_size = Vector2(TEXT_WIDTH, 24)
 	add_child(_label)
 	gui_input.connect(func(e: InputEvent) -> void:
 		if e is InputEventMouseButton and e.pressed:

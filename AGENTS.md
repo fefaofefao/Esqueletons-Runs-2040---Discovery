@@ -25,6 +25,21 @@ Se uma regra de qualidade não puder ser cumprida, **não entregue conteúdo de 
 
 ---
 
+## C. Decisões do Fernando (valem por cima do texto abaixo)
+
+Registradas na ordem em que chegaram. Em caso de conflito com as seções seguintes, **vale o que está aqui**.
+
+1. **Nome:** *Esqueletons Runs 2040 — Edição Discovery*, primeiro jogo de uma série. Produtora FSamp Labs.
+2. **Tela inicial e logo em alta resolução** (não pixel art), com cara de abertura de série.
+3. **Nível = idade.** O jogo chama o nível de **idade**: cada nível ganho é um **aniversário** ("fez 13 anos!"). Ao atingir a idade de crescimento, o esqueleto cresce para o estágio seguinte. Isso faz parte da lore e do desenvolvimento.
+   - **Idade máxima 100**; o **chefe final (Rei Esqueleto) tem 120**.
+   - Estágio 1 = **bebê** (pequeno), estágio 2 = **adolescente**, estágio 3 = **adulto em força total**.
+   - As metas de nível da seção 11 passam a ser idades (escala ×2): ver a tabela da seção 11.
+4. **Os 6 Guardiões são parentes do Rei Esqueleto.** Quanto mais perto do Rei (na história e no mapa), mais difícil o líder e os capangas. Quem viaja de cidade em cidade é o **jogador**. Detalhes em `docs/roteiro/00_notas_do_fernando.md`.
+5. **A batalha não pode parecer Pokémon.** Deve ser inovadora: ver `docs/DECISOES.md` (timeline por tempo, peso dos golpes, atraso, Sintonia e arena lateral).
+
+---
+
 ## 0. Regras gerais
 
 - Você é o desenvolvedor líder. O Fernando delega as decisões técnicas e espera tudo pronto para gerar o AAB e publicar, sem configuração manual que possa ser automatizada.
@@ -161,7 +176,7 @@ Primeiro, gere o `docs/BESTIARIO.md`. Cada **linha** tem uma ficha com:
 
 1. **Conceito em uma frase**, ligado ao mundo: profissão ou papel em vida, objeto característico e habitat da região. Exemplos: "esqueleto de mineiro que carrega uma lanterna de cristal", "esqueleto de lavadeira do pântano com cesto de ervas venenosas".
 2. **Silhueta distinta**: descreva o formato que o diferencia dos outros a 32×32 pixels (chapéu, ferramenta, postura, tamanho). Duas linhas não podem ter silhuetas parecidas.
-3. **Arco de crescimento**: o que muda de Filhote para Jovem e de Jovem para Adulto, contando uma história visual de amadurecimento. Exemplo: o ajudante com balde vira mineiro com picareta, que vira mestre de minas com armadura de pedra. É **proibido** que um estágio seja só um recolor ou um aumento de tamanho.
+3. **Arco de crescimento**: o que muda de Bebê para Adolescente e de Adolescente para Adulto, contando uma história visual de amadurecimento. Exemplo: o ajudante com balde vira mineiro com picareta, que vira mestre de minas com armadura de pedra. É **proibido** que um estágio seja só um recolor ou um aumento de tamanho.
 4. **Personalidade** em 3 palavras e um **comportamento no mapa**: rápido, tímido, patrulha em círculo ou persegue o jogador.
 5. **Tipo**, **região de origem**, **raridade** e **níveis de crescimento**.
 6. **Golpe assinatura**, que só a linha aprende.
@@ -178,8 +193,8 @@ Primeiro, gere o `docs/BESTIARIO.md`. Cada **linha** tem uma ficha com:
 **Revisão visual**: gere o `docs/bestiario_sheet.png`, uma grade com todos os sprites de mapa e de batalha lado a lado, para conferir a variedade de silhuetas e cores de uma só vez.
 
 ### Crescimento em 3 estágios
-- Os estágios são **Filhote → Jovem → Adulto**, ou nomes próprios por linha.
-- Os níveis de crescimento são definidos **por linha** em JSON (ex.: 14/30 ou 18/36). Linhas raras crescem mais tarde.
+- Os estágios são **Bebê → Adolescente → Adulto** (ver seção C).
+- As idades de crescimento são definidas **por linha** em JSON (ex.: 28/60 ou 36/72). Linhas raras crescem mais tarde.
 - **Ao crescer:**
   - atributos maiores e sprite novo;
   - golpe exclusivo, quando houver;
@@ -220,7 +235,7 @@ Primeiro, gere o `docs/BESTIARIO.md`. Cada **linha** tem uma ficha com:
 ### Golpes e progressão
 - **56 golpes:** 16 Físicos, 16 Mágicos, 12 de Cura/Suporte e 12 de Veneno. Cada golpe tem nome nos 3 idiomas, tipo, poder, precisão, PP, alvo e efeito.
 - Cada esqueleto tem até 4 golpes e aprende novos por nível.
-- **Nível máximo 50.** A história termina com a equipe por volta do **nível 40–45**.
+- **Idade máxima 100** (o Rei Esqueleto tem 120). A história termina com a equipe por volta dos **80–90 anos**. (Ver seção C.)
 - **XP:** os participantes recebem 100% e as reservas, 50%.
 - **Itens:** poções (P/M/G), antídoto, reviver e itens-chave.
 - **Ossário:** mostra cada espécie como vista, derrotada, recrutada ou Golden, com o % de conclusão.
@@ -265,20 +280,20 @@ Primeiro, gere o `docs/BESTIARIO.md`. Cada **linha** tem uma ficha com:
 
 **Metas em `data/balance.json`**, que o código e o simulador usam:
 
-| Região | Nível esperado na chegada | Nível do Guardião (média) |
+| Região | Idade esperada na chegada | Idade do Guardião (média) |
 |---|---|---|
-| Prólogo | 1–5 | — |
-| Bosque | 5–9 | 11 |
-| Minas | 11–15 | 17 |
-| Pântano | 17–21 | 23 |
-| Ossório | 23–27 | 29 |
-| Picos | 29–33 | 35 |
-| Deserto | 34–38 | 40 |
-| Castelo | 40–43 | 44–46 |
+| Prólogo | 1–10 | — |
+| Bosque | 10–18 | 22 |
+| Minas | 22–30 | 34 |
+| Pântano | 34–42 | 46 |
+| Ossório | 46–54 | 58 |
+| Picos | 58–66 | 70 |
+| Deserto | 68–76 | 80 |
+| Castelo | 80–86 | 88–92 (Rei: 120) |
 
 - **Bandas de atributos totais por estágio:**
-  - Filhote ≈ 250–320;
-  - Jovem ≈ 360–430;
+  - Bebê ≈ 250–320;
+  - Adolescente ≈ 360–430;
   - Adulto ≈ 470–540;
   - únicos ≈ 450–520;
   - Rei ≈ 600.

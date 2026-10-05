@@ -27,7 +27,7 @@ BTL_ITEM_USED,Você usou {item} em {name}.,You used {item} on {name}.,Usaste {it
 BTL_NO_ITEMS,Não foi possível usar o item.,The item couldn't be used.,No se pudo usar el objeto.
 BTL_FAINT,{name} caiu!,{name} went down!,¡{name} cayó!
 BTL_XP,{name} ganhou {n} de XP!,{name} gained {n} XP!,¡{name} ganó {n} de EXP!
-BTL_LEVEL_UP,{name} subiu para o nível {n}!,{name} grew to level {n}!,¡{name} subió al nivel {n}!
+BTL_LEVEL_UP,Feliz aniversário! {name} fez {n} anos!,Happy birthday! {name} turned {n}!,¡Feliz cumpleaños! {name} cumplió {n} años!
 BTL_LEARNED,{name} aprendeu {move}!,{name} learned {move}!,¡{name} aprendió {move}!
 BTL_LEARN_PROMPT,"{name} quer aprender {move}, mas já sabe 4 golpes.","{name} wants to learn {move}, but already knows 4 moves.","{name} quiere aprender {move}, pero ya sabe 4 golpes."
 BTL_LEARN_TITLE,Esquecer qual golpe?,Forget which move?,¿Qué golpe olvidar?
@@ -46,8 +46,6 @@ BTL_RING_ITEMS,Itens,Items,Objetos
 BTL_RING_SWITCH,Trocar,Switch,Cambiar
 BTL_RING_FLEE,Fugir,Run,Huir
 BTL_REPEAT,Repetir turno,Repeat turn,Repetir turno
-BTL_LEVEL_SHORT,Nv{n},Lv{n},Nv{n}
-BTL_PREVIEW_STATS,Poder {p} · {acc}%,Power {p} · {acc}%,Poder {p} · {acc}%
 BTL_EFF_STRONG,Forte,Strong,Fuerte
 BTL_EFF_NORMAL,Normal,Normal,Normal
 BTL_EFF_WEAK,Fraco,Weak,Débil
@@ -88,6 +86,15 @@ DBG_TEAM_GIVEN,Equipe de teste e itens na bolsa.,Test team and items added.,Equi
 DBG_BATTLE_WILD1,Selvagem (1),Wild (1),Salvaje (1)
 DBG_BATTLE_WILD2,Selvagens (2),Wild (2),Salvajes (2)
 DBG_BATTLE_TAMER,Domador (3),Tamer (3),Domador (3)
-DBG_BATTLE_BOSS,"Chefe (2, +4 níveis)","Boss (2, +4 levels)","Jefe (2, +4 niveles)"
+DBG_BATTLE_BOSS,"Chefe (2, +8 anos)","Boss (2, +8 years)","Jefe (2, +8 años)"
 DBG_TAMER_NAME,Domador de Teste,Test Tamer,Domador de Prueba
 DBG_BOSS_NAME,Chefe de Teste,Test Boss,Jefe de Prueba
+BTL_AGE,{n} anos,Age {n},{n} años
+BTL_AGE_ONE,1 ano,Age 1,1 año
+BTL_SINTONIA,Sintonia! {name} age logo depois do parceiro.,In sync! {name} follows right after a partner.,¡Sintonía! {name} actúa justo después de su compañero.
+BTL_SINTONIA_READY,Sintonia: {name} age em sequência e ganha +25%.,In sync: {name} acts right after an ally and gets +25%.,Sintonía: {name} actúa en cadena y gana +25%.
+BTL_DELAYED,{name} foi atrasado na fila!,{name} was pushed back in line!,¡{name} fue retrasado en la fila!
+BTL_DETAIL,{type} · Poder {p} · {acc}% · {weight},{type} · Power {p} · {acc}% · {weight},{type} · Poder {p} · {acc}% · {weight}
+BTL_WEIGHT_LIGHT,Leve,Light,Ligero
+BTL_WEIGHT_NORMAL,Normal,Normal,Normal
+BTL_WEIGHT_HEAVY,Pesado,Heavy,Pesado

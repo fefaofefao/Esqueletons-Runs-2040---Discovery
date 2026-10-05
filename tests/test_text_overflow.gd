@@ -18,8 +18,8 @@ const VALUE_PREFIXES := ["LANG_NAME_", "VAL_", "SET_TEXT_SLOW", "SET_TEXT_NORMAL
 const BATTLE_LOG_PREFIXES := ["BTL_WILD", "BTL_TAMER_", "BTL_GO", "BTL_COME", "BTL_USED", "BTL_MISS", "BTL_NO_", "BTL_CRIT",
 	"BTL_EFF_STRONG_MSG", "BTL_EFF_WEAK_MSG", "BTL_POISON", "BTL_ALREADY", "BTL_STAT_", "BTL_HEALED", "BTL_CURED",
 	"BTL_REVIVED", "BTL_ITEM_USED", "BTL_FAINT", "BTL_XP", "BTL_LEVEL_UP", "BTL_LEARNED", "BTL_LEARN_PROMPT",
-	"BTL_DID_NOT", "BTL_FLED", "BTL_FLEE", "BTL_CANT", "BTL_WIN", "BTL_MONEY", "BTL_LOSE"]
-const PREVIEW_PREFIXES := ["TYPE_", "BTL_PREVIEW_STATS", "BTL_EFF_STRONG", "BTL_EFF_NORMAL", "BTL_EFF_WEAK", "BTL_TARGET_"]
+	"BTL_DID_NOT", "BTL_FLED", "BTL_FLEE", "BTL_CANT", "BTL_WIN", "BTL_MONEY", "BTL_LOSE", "BTL_SINTONIA", "BTL_DELAYED"]
+const PREVIEW_PREFIXES := ["TYPE_", "BTL_EFF_STRONG", "BTL_EFF_NORMAL", "BTL_EFF_WEAK", "BTL_TARGET_", "BTL_WEIGHT_", "BTL_DETAIL", "BTL_AGE"]
 ## Nome de esqueleto/golpe no pior caso para as mensagens da batalha.
 const WORST_UNIT := "Wwwwwwwwwww"
 const SKIP_KEYS := ["BTL_LOSE_MONEY", "BTL_NO_PARTY", "DBG_TIMES_BODY", "ABOUT_VERSION", "ABOUT_PRODUCER", "ABOUT_CONTACT", "ABOUT_SITE", "NAME_DEFAULT", "SPK_BENTO"]
@@ -48,12 +48,26 @@ func test_texts_fit() -> void:
 			var text := _fill(str(all[key][lang]))
 			var is_pt: bool = lang == "pt_BR"
 			if key.ends_with("_DESC"):
-				_check_width(key, lang, text, MovePanel.DESC_WIDTH, is_pt)
+				# golpes: 2ª linha da faixa = "Alvo: ... · descrição"; itens: descrição sozinha
+				# a folga de 30% vale para a descrição; o prefixo do alvo é fixo
+				var tkey := _target_key_for_desc(key)
+				var prefix := (str(all[tkey][lang]) + " · ") if tkey != "" else ""
+				var w := UiTheme.text_width(prefix + text)
+				check(w <= BattleLog.TEXT_WIDTH, "%s [%s] não cabe na faixa (%.0f px): '%s'" % [key, lang, w, prefix + text])
+				if is_pt:
+					var grown := UiTheme.text_width(prefix) + UiTheme.text_width(text) * UiTheme.TEXT_GROWTH
+					check(grown <= BattleLog.TEXT_WIDTH, "%s [pt_BR] sem 30%% de folga na descrição (%.0f px)" % [key, grown])
 			elif key.begins_with("BTL_EFF_") and key.ends_with("_MSG") or (_has_prefix(key, BATTLE_LOG_PREFIXES) and not _has_prefix(key, PREVIEW_PREFIXES)):
 				var lines := TextFit.wrap_lines(text, BattleLog.TEXT_WIDTH).size()
 				check(lines <= BattleLog.LINES, "%s [%s] usa %d linhas no log da batalha" % [key, lang, lines])
+			elif key == "BTL_DETAIL":
+				var worst := str(all[key][lang]).format({"type": _longest(all, ["TYPE_FISICO", "TYPE_MAGICO", "TYPE_CURA", "TYPE_VENENO"], lang),
+					"p": 120, "acc": 100, "weight": _longest(all, ["BTL_WEIGHT_LIGHT", "BTL_WEIGHT_NORMAL", "BTL_WEIGHT_HEAVY"], lang)})
+				_check_width(key, lang, worst, BattleLog.TEXT_WIDTH, is_pt)
+			elif key.begins_with("BTL_AGE"):
+				_check_width(key, lang, text.replace("30", "100"), UnitCard.W - 34.0, false)
 			elif _has_prefix(key, PREVIEW_PREFIXES):
-				_check_width(key, lang, text, MovePanel.PREVIEW_TEXT_WIDTH - (11.0 if key.begins_with("TYPE_") else 0.0), is_pt)
+				_check_width(key, lang, text, 120.0, is_pt)
 			elif _has_prefix(key, DIALOG_PREFIXES) or key in DIALOG_KEYS:
 				var lines := TextFit.wrap_lines(text, UiTheme.DIALOG_TEXT_WIDTH).size()
 				check(lines <= UiTheme.DIALOG_LINES, "%s [%s] usa %d linhas (máx. %d)" % [key, lang, lines, UiTheme.DIALOG_LINES])
@@ -119,4 +133,28 @@ func test_species_names_fit_panel() -> void:
 		var key := str(Data.species(id).get("name_key", ""))
 		for lang in LANGS:
 			var name := str(all.get(key, {}).get(lang, ""))
-			check(UiTheme.text_width(name) <= UnitPanel.NAME_WIDTH, "nome %s [%s] '%s' não cabe na caixa (%.0f px)" % [id, lang, name, UiTheme.text_width(name)])
+			check(UiTheme.text_width(name) <= UnitCard.NAME_WIDTH, "nome %s [%s] '%s' não cabe na caixa (%.0f px)" % [id, lang, name, UiTheme.text_width(name)])
+
+
+func _longest(all: Dictionary, keys: Array, lang: String) -> String:
+	var best := ""
+	for k in keys:
+		var t := str(all[k][lang])
+		if UiTheme.text_width(t) > UiTheme.text_width(best):
+			best = t
+	return best
+
+
+## Chave do texto de alvo do golpe que usa esta descrição ("" se não for golpe).
+func _target_key_for_desc(desc_key: String) -> String:
+	if desc_key == "BTL_STRUGGLE_DESC":
+		return "BTL_TARGET_ENEMY"
+	for path in ["res://data/moves.json", "res://data/test/moves_test.json"]:
+		if not FileAccess.file_exists(path):
+			continue
+		var d = Data.load_json(path)
+		var lst = d.get("moves", {})
+		for mv in (lst.values() if lst is Dictionary else lst):
+			if str(mv.get("desc_key", "")) == desc_key:
+				return "BTL_TARGET_" + str(mv.get("target", "enemy")).to_upper()
+	return ""

@@ -1,7 +1,8 @@
 class_name UnitView
 extends Node2D
-## Esqueleto em campo: sprite 32x32 em escala 2 (frente para inimigos, costas
-## para o jogador), sombra e animações (entrada, ataque, dano, queda, seleção).
+## Esqueleto em campo (arena lateral): sprite 32x32 em escala 2, aliados virados
+## para a direita e inimigos espelhados; sombra e animações (entrada, ataque, dano,
+## queda, seleção).
 
 const SCALE := 2.0
 
@@ -26,7 +27,9 @@ func setup(m: Monster, enemy: bool) -> UnitView:
 	var tex: Texture2D = load(str(m.info().get("sprite", "res://assets/battle/dummy_fisico.png")))
 	sprite.texture = tex
 	sprite.region_enabled = true
-	sprite.region_rect = Rect2(32 if not enemy else 0, 0, 32, 32)
+	# folha: quadro de batalha virado para a direita; o inimigo é espelhado
+	sprite.region_rect = Rect2(0, 0, 32, 32)
+	sprite.flip_h = enemy
 	sprite.centered = false
 	sprite.scale = Vector2(SCALE, SCALE)
 	sprite.offset = Vector2(-16, -32)
@@ -56,7 +59,7 @@ func _process(delta: float) -> void:
 
 
 func head_region() -> Rect2:
-	return Rect2(8 + (0 if is_enemy else 32), 1, 16, 14)
+	return Rect2(8, 1, 16, 14)
 
 
 func enter(from_left: bool) -> void:

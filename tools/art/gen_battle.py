@@ -68,8 +68,8 @@ def battle_bg():
             px, py = cx + math.cos(a) * (rx - 2), cy + math.sin(a) * (ry - 1)
             put(img, int(px), int(py), (150, 190, 96))
             put(img, int(px), int(py) - 1, (120, 170, 80))
-    platform(286, 92, 68, 14)
-    platform(118, 156, 86, 17)
+    platform(118, 130, 74, 15)
+    platform(282, 130, 74, 15)
     return img
 
 

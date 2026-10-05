@@ -64,7 +64,7 @@ DBG_TIMES_BODY,"Tempo por região:
 {lines}","Tiempo por región:
 {lines}"
 DBG_TIMES_EMPTY,Nenhum tempo registrado ainda.,No time recorded yet.,Aún no hay tiempo registrado.
-DBG_SET_LEVEL,Definir nível,Set level,Fijar nivel
+DBG_SET_LEVEL,Definir idade,Set age,Fijar edad
 DBG_ADD_SKELETON,Adicionar esqueleto,Add skeleton,Añadir esqueleto
 DBG_FORCE_GOLDEN,Forçar Golden,Force Golden,Forzar Golden
 DBG_FORCE_GROWTH,Forçar crescimento,Force growth,Forzar crecimiento

@@ -273,7 +273,7 @@ def check_species(keys):
         if len(stages) != 3:
             err(f"espécies: linha {lid} sem 3 estágios ({len(stages)})")
         gl = ln.get("growth_levels", [])
-        if len(gl) != 2 or not (0 < gl[0] < gl[1] <= 50):
+        if len(gl) != 2 or not (0 < gl[0] < gl[1] <= 100):
             err(f"espécies: linha {lid} com níveis de crescimento fora de ordem {gl}")
         growth[lid] = gl
         if ln.get("type") not in TYPES:
@@ -435,8 +435,8 @@ def check_battle(keys):
     beats = b.get("type_chart", {}).get("beats", {})
     if beats != {"fisico": "magico", "magico": "veneno", "veneno": "fisico"}:
         err("battle.json: ciclo de vantagens deve ser Físico > Mágico > Veneno > Físico (Cura neutro)")
-    if b.get("level_max") != 50 or b.get("party_size") != 4 or b.get("active_per_side") != 2:
-        err("battle.json: nível máximo 50, time de 4 e 2 em campo")
+    if b.get("level_max") != 100 or b.get("enemy_level_max") != 120 or b.get("party_size") != 4 or b.get("active_per_side") != 2:
+        err("battle.json: idade máxima 100 (chefe final 120), time de 4 e 2 em campo")
     need_key(keys, b.get("struggle", {}).get("name_key", ""), "battle.json (struggle)")
     for iid, it in ((load(DATA / "items.json") or {}).get("items", {})).items():
         need_key(keys, it.get("name_key", ""), f"item {iid}")
@@ -456,6 +456,8 @@ def check_battle(keys):
                 need_key(keys, mv.get("desc_key", ""), f"golpe {mid}")
                 if mv.get("type") not in TYPES:
                     err(f"golpe {mid}: tipo inválido {mv.get('type')}")
+                if mv.get("weight", "normal") not in ("light", "normal", "heavy"):
+                    err(f"golpe {mid}: peso inválido {mv.get('weight')}")
                 if mv.get("target") not in ("enemy", "all_enemies", "self", "ally", "all_allies"):
                     err(f"golpe {mid}: alvo inválido {mv.get('target')}")
     tpath = DATA / "test" / "species_test.json"

@@ -10,8 +10,8 @@
    "accuracy": 100,
    "pp": 30,
    "target": "enemy",
-   "priority": 0,
-   "effects": []
+   "effects": [],
+   "weight": "normal"
   },
   "teste_pancada": {
    "name_key": "TEST_MOVE_SLAM",
@@ -22,8 +22,15 @@
    "accuracy": 85,
    "pp": 10,
    "target": "enemy",
-   "priority": 0,
-   "effects": []
+   "effects": [
+    {
+     "kind": "delay",
+     "amount": 0.35,
+     "chance": 100,
+     "on": "target"
+    }
+   ],
+   "weight": "heavy"
   },
   "teste_golpe_rapido": {
    "name_key": "TEST_MOVE_QUICK",
@@ -34,8 +41,8 @@
    "accuracy": 100,
    "pp": 25,
    "target": "enemy",
-   "priority": 1,
-   "effects": []
+   "effects": [],
+   "weight": "light"
   },
   "teste_quebra_guarda": {
    "name_key": "TEST_MOVE_GUARDBREAK",
@@ -46,7 +53,6 @@
    "accuracy": 95,
    "pp": 15,
    "target": "enemy",
-   "priority": 0,
    "effects": [
     {
      "kind": "stat",
@@ -55,7 +61,8 @@
      "chance": 50,
      "on": "target"
     }
-   ]
+   ],
+   "weight": "normal"
   },
   "teste_faisca": {
    "name_key": "TEST_MOVE_SPARK",
@@ -66,8 +73,8 @@
    "accuracy": 100,
    "pp": 30,
    "target": "enemy",
-   "priority": 0,
-   "effects": []
+   "effects": [],
+   "weight": "normal"
   },
   "teste_chuva_astral": {
    "name_key": "TEST_MOVE_STARRAIN",
@@ -78,8 +85,8 @@
    "accuracy": 95,
    "pp": 15,
    "target": "all_enemies",
-   "priority": 0,
-   "effects": []
+   "effects": [],
+   "weight": "normal"
   },
   "teste_ferrao": {
    "name_key": "TEST_MOVE_STING",
@@ -90,14 +97,14 @@
    "accuracy": 100,
    "pp": 25,
    "target": "enemy",
-   "priority": 0,
    "effects": [
     {
      "kind": "poison",
      "chance": 60,
      "on": "target"
     }
-   ]
+   ],
+   "weight": "normal"
   },
   "teste_nevoa_toxica": {
    "name_key": "TEST_MOVE_TOXICFOG",
@@ -108,7 +115,6 @@
    "accuracy": 85,
    "pp": 15,
    "target": "all_enemies",
-   "priority": 0,
    "effects": [
     {
      "kind": "poison",
@@ -122,7 +128,8 @@
      "chance": 100,
      "on": "target"
     }
-   ]
+   ],
+   "weight": "normal"
   },
   "teste_remendo": {
    "name_key": "TEST_MOVE_PATCH",
@@ -133,14 +140,14 @@
    "accuracy": 100,
    "pp": 15,
    "target": "self",
-   "priority": 0,
    "effects": [
     {
      "kind": "heal",
      "percent": 35,
      "on": "target"
     }
-   ]
+   ],
+   "weight": "normal"
   },
   "teste_curativo": {
    "name_key": "TEST_MOVE_MEND",
@@ -151,14 +158,14 @@
    "accuracy": 100,
    "pp": 10,
    "target": "ally",
-   "priority": 0,
    "effects": [
     {
      "kind": "heal",
      "percent": 40,
      "on": "target"
     }
-   ]
+   ],
+   "weight": "normal"
   },
   "teste_limpeza": {
    "name_key": "TEST_MOVE_CLEANSE",
@@ -169,13 +176,13 @@
    "accuracy": 100,
    "pp": 10,
    "target": "all_allies",
-   "priority": 0,
    "effects": [
     {
      "kind": "cure",
      "on": "target"
     }
-   ]
+   ],
+   "weight": "normal"
   },
   "teste_fortalecer": {
    "name_key": "TEST_MOVE_BULKUP",
@@ -186,7 +193,6 @@
    "accuracy": 100,
    "pp": 15,
    "target": "self",
-   "priority": 0,
    "effects": [
     {
      "kind": "stat",
@@ -202,7 +208,8 @@
      "chance": 100,
      "on": "target"
     }
-   ]
+   ],
+   "weight": "normal"
   }
  }
 }

@@ -46,28 +46,82 @@ func test_type_chart() -> void:
 	check_eq(BattleEngine.effectiveness_label(0.75), "BTL_EFF_WEAK", "rótulo Fraco")
 
 
-func test_turn_order_speed_and_priority() -> void:
+func _auto(b: BattleEngine, max_turns: int = 200, chooser: Callable = Callable()) -> void:
+	for i in max_turns:
+		if b.result != "":
+			return
+		var actor := b.next_actor()
+		if actor == null:
+			return
+		if actor.side == BattleEngine.PLAYER:
+			var a: Dictionary = chooser.call(actor) if chooser.is_valid() else BattleAI.choose(b, actor)
+			b.act(a)
+			for slot in b.pending_replacements():
+				b.switch_in(0, slot, b.reserves(0)[0])
+		else:
+			b.act_enemy()
+
+
+func test_timeline_speed_and_weight() -> void:
 	var b := _engine([["teste_cura", 20], ["teste_veneno", 20]], [["teste_fisico", 20], ["teste_magico", 20]])
-	var order := b.predicted_order()
-	for i in order.size() - 1:
-		check(order[i].battle_stat("spd") >= order[i + 1].battle_stat("spd"), "ordem por VEL")
-	var slow: Monster = b.active_units(0)[0]  # cura, o mais lento
-	var acts := {slow.uid: {"kind": "move", "move": "teste_golpe_rapido", "target": b.active_units(1)[0].uid}}
-	check(b.predicted_order(acts)[0] == slow, "golpe com prioridade passa na frente")
-	acts = {slow.uid: {"kind": "switch", "to": 0}}
-	check(b.predicted_order(acts)[0] == slow, "troca age antes dos golpes")
+	var counts := {}
+	var sim := b.predict(40)
+	for m in sim:
+		counts[m.species_id] = int(counts.get(m.species_id, 0)) + 1
+	check(counts["teste_veneno"] > counts["teste_cura"], "o mais rápido aparece mais vezes na timeline (%s)" % str(counts))
+	var actor := b.next_actor()
+	var foe: Monster = b.active_units(1 - actor.side)[0]
+	var mv_light := {"kind": "move", "move": "teste_golpe_rapido", "target": foe.uid}
+	var mv_heavy := {"kind": "move", "move": "teste_pancada", "target": foe.uid}
+	check(b.action_weight(mv_light) < 1.0 and b.action_weight(mv_heavy) > 1.0, "pesos leve < 1 < pesado")
+	var light_pos := b.predict(8, {actor.uid: 0.65}).slice(1).find(actor)
+	var heavy_pos := b.predict(8, {actor.uid: 1.45}).slice(1).find(actor)
+	check(light_pos <= heavy_pos, "golpe leve devolve o turno antes (%d vs %d)" % [light_pos, heavy_pos])
+	var t0 := b.now
+	b.act({"kind": "move", "move": "teste_soco", "target": foe.uid} if actor.side == 0 else BattleAI.choose(b, actor))
+	check(b.now >= t0, "o tempo só anda para frente")
+
+
+func test_delay_pushes_target() -> void:
+	var b := _engine([["teste_fisico", 30]], [["teste_cura", 30]])
+	var foe: Monster = b.active_units(1)[0]
+	var before: float = b.next_at[foe.uid]
+	b._apply_effect(b.active_units(0)[0], foe, {"kind": "delay", "amount": 0.35})
+	check(b.next_at[foe.uid] > before, "atraso empurra o próximo turno do alvo")
+
+
+func test_sintonia_bonus() -> void:
+	R = Data.battle_rules()
+	var a := Monster.create("teste_fisico", 30)
+	var d := Monster.create("teste_magico", 30)
+	var mv := Data.move("teste_soco")
+	var normal := BattleEngine.calc_damage(R, a, d, mv, null, {"variance": 1.0, "crit": false})
+	var synced := BattleEngine.calc_damage(R, a, d, mv, null, {"variance": 1.0, "crit": false, "bonus": 1.25})
+	check(synced["damage"] > normal["damage"], "Sintonia aumenta o dano")
+	var b := _engine([["teste_fisico", 20], ["teste_magico", 20]], [["teste_cura", 5]])
+	var allies := b.active_units(0)
+	b._last_side = 0
+	b._last_uid = allies[0].uid
+	check(b.sintonia_for(allies[1]), "aliado logo depois de aliado = Sintonia")
+	check(not b.sintonia_for(allies[0]), "o mesmo esqueleto não sintoniza consigo")
 
 
 func test_round_events_and_pp() -> void:
 	var b := _engine([["teste_fisico", 15], ["teste_magico", 15]], [["teste_magico", 12], ["teste_fisico", 12]])
-	var p0: Monster = b.active_units(0)[0]
-	var target: Monster = b.active_units(1)[0]
-	var pp_before: int = p0.moves.filter(func(x): return x.id == "teste_soco")[0].pp
-	var ev := b.run_round({p0.uid: {"kind": "move", "move": "teste_soco", "target": target.uid}})
-	check(ev.any(func(e): return e.t == "move" and e.user == p0.uid), "evento do golpe")
-	check(ev.any(func(e): return e.t == "damage" or e.t == "miss"), "evento de dano")
-	var pp_after: int = p0.moves.filter(func(x): return x.id == "teste_soco")[0].pp
-	check_eq(pp_after, pp_before - 1, "gasta 1 PP")
+	var done := false
+	for i in 10:
+		var actor := b.next_actor()
+		if actor.side == 0:
+			var target: Monster = b.active_units(1)[0]
+			var pp_before: int = actor.moves.filter(func(x): return x.id == "teste_soco")[0].pp
+			var ev := b.act({"kind": "move", "move": "teste_soco", "target": target.uid})
+			check(ev.any(func(e): return e.t == "move" and e.user == actor.uid), "evento do golpe")
+			check(ev.any(func(e): return e.t == "damage" or e.t == "miss"), "evento de dano")
+			check_eq(actor.moves.filter(func(x): return x.id == "teste_soco")[0].pp, pp_before - 1, "gasta 1 PP")
+			done = true
+			break
+		b.act_enemy()
+	check(done, "o jogador age em até 10 turnos")
 
 
 func test_poison_lasts_3_to_5_turns() -> void:
@@ -80,8 +134,8 @@ func test_poison_lasts_3_to_5_turns() -> void:
 		durations[t.poison_turns] = true
 		check(t.poison_turns >= 3 and t.poison_turns <= 5, "veneno entre 3 e 5 turnos")
 		var hp := t.hp
-		b._end_of_round()
-		check(t.hp < hp, "veneno tira PV no fim da rodada")
+		b._poison_tick(t)
+		check(t.hp < hp, "veneno tira PV no turno do envenenado")
 	check(durations.size() >= 2, "duração do veneno varia")
 
 
@@ -115,24 +169,28 @@ func test_heal_items_and_revive() -> void:
 
 func test_switch_costs_turn() -> void:
 	var b := _engine([["teste_fisico", 20], ["teste_magico", 20], ["teste_cura", 20]], [["teste_veneno", 5]])
-	var a: Monster = b.active_units(0)[0]
-	var ev := b.run_round({a.uid: {"kind": "switch", "to": 2}})
+	while b.next_actor().side != 0:
+		b.act_enemy()
+	var a := b.next_actor()
+	var ev := b.act({"kind": "switch", "to": 2})
 	check(ev.any(func(e): return e.t == "switch_in"), "troca acontece")
-	check(not ev.any(func(e): return e.t == "move" and e.user == a.uid), "quem sai não ataca na rodada")
+	check(not ev.any(func(e): return e.t == "move"), "trocar gasta o turno")
 	check(b.active_units(0).any(func(m): return m.species_id == "teste_cura"), "reserva entrou")
+	check(not b.next_at.has(a.uid), "quem saiu sai da timeline")
 
 
 func test_flee_rules() -> void:
 	var b := _engine([["teste_veneno", 30]], [["teste_cura", 5]], "tamer")
-	var a: Monster = b.active_units(0)[0]
-	var ev := b.run_round({a.uid: {"kind": "flee"}})
+	while b.next_actor().side != 0:
+		b.act_enemy()
+	var ev := b.act({"kind": "flee"})
 	check(ev.any(func(e): return e.t == "cant_flee"), "não foge de domador")
 	var fled := 0
 	for seed in 200:
 		var w := _engine([["teste_veneno", 30]], [["teste_cura", 30]], "wild", seed)
 		var p := w.flee_chance()
 		check(p >= 0.15 and p <= 0.95, "chance de fuga dentro dos limites")
-		w.run_round({w.active_units(0)[0].uid: {"kind": "flee"}})
+		w._try_flee(w.active_units(0)[0])
 		if w.result == "fled":
 			fled += 1
 	check(fled > 60 and fled < 199, "fuga depende de sorte e VEL (%d/200)" % fled)
@@ -161,26 +219,27 @@ func test_level_up_learns_moves() -> void:
 	var before := m.moves.size()
 	var hp_before := m.max_hp()
 	var levels := m.gain_xp(Monster.xp_for_level(8) - m.xp)
-	check_eq(levels, [8], "sobe para o nível 8")
-	check(m.max_hp() > hp_before, "atributos sobem com o nível")
+	check_eq(levels, [8], "faz 8 anos")
+	check(m.max_hp() > hp_before, "atributos sobem com a idade")
 	check(Monster.moves_learned_at("teste_fisico", 8).has("teste_fortalecer"), "learnset no nível 8")
 	check(before <= 4, "no máximo 4 golpes")
 	var full := Monster.create("teste_fisico", 20)
 	check_eq(full.moves.size(), 4, "nasce com os 4 golpes mais recentes")
 	check(BattleEngine.learn_move(full, "teste_soco", 0), "aprende trocando um golpe")
-	var top := Monster.create("teste_fisico", 50)
-	top.gain_xp(999999)
-	check_eq(top.level, 50, "nível máximo 50")
+	var top := Monster.create("teste_fisico", 99)
+	top.gain_xp(99999999)
+	check_eq(top.level, 100, "idade máxima 100")
+	check_eq(Monster.create("teste_magico", 120).level, 120, "chefe final pode ter 120")
+	check_eq(Monster.create("teste_magico", 200).level, 120, "nunca passa de 120")
 
 
 func test_defeat() -> void:
 	var b := _engine([["teste_cura", 2]], [["teste_fisico", 40]], "wild", 3)
-	for i in 20:
-		if b.result != "":
-			break
-		var a: Monster = b.active_units(0)[0]
-		b.run_round({a.uid: {"kind": "move", "move": "teste_faisca", "target": b.active_units(1)[0].uid}})
+	_auto(b)
 	check_eq(b.result, "lose", "perde quando a equipe toda cai")
+	var w := _engine([["teste_fisico", 40], ["teste_magico", 40]], [["teste_cura", 8], ["teste_veneno", 8]], "wild", 4)
+	_auto(w)
+	check_eq(w.result, "win", "vence uma batalha inteira pela IA")
 
 
 func test_serialization() -> void:
