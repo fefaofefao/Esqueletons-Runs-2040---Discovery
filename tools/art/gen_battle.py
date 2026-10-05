@@ -73,6 +73,58 @@ def battle_bg():
     return img
 
 
+def battle_bg_forest():
+    """Fundo de batalha do Bosque: céu entre copas, troncos ao fundo e chão de folhas."""
+    W, H = 400, 180
+    img = new(W, H)
+    horizon = 92
+    for y in range(H):
+        for x in range(W):
+            if y < horizon:
+                t = y / horizon
+                c = mix((150, 206, 196), (210, 236, 210), t)
+            else:
+                t = (y - horizon) / (H - horizon)
+                c = mix((92, 140, 72), (118, 164, 86), t)
+                if hash01(x, y, 6) > 0.93:
+                    c = (150, 120, 70)
+                elif hash01(x, y, 7) > 0.96:
+                    c = (160, 196, 100)
+            put(img, x, y, c)
+    # troncos ao fundo (camada distante) e copas
+    for i, tx in enumerate(range(-10, W + 20, 34)):
+        w = 8 + (i * 7) % 6
+        col = (98, 120, 96) if i % 2 else (84, 108, 88)
+        rect(img, tx, 20, w, horizon - 18, col)
+        rect(img, tx + w - 2, 20, 2, horizon - 18, mix(col, (40, 50, 40), 0.3))
+    for i, cx in enumerate(range(-20, W + 40, 46)):
+        ellipse(img, cx, 14 + (i % 3) * 6, 34, 22, (70, 124, 74))
+        ellipse(img, cx - 6, 8 + (i % 3) * 6, 22, 12, (92, 150, 84))
+    # raios de luz
+    for x0 in (90, 230, 330):
+        for y in range(20, horizon):
+            for k in range(6):
+                xx = x0 + (y - 20) // 3 + k
+                if 0 <= xx < W and bayer(xx, y) < 0.35:
+                    put(img, xx, y, mix(img.getpixel((xx, y))[:3], (250, 250, 210), 0.35))
+    # raízes no chão
+    for (x0, x1, y) in [(10, 70, 100), (330, 395, 104), (180, 230, 98)]:
+        for x in range(x0, x1):
+            put(img, x, y + int(2 * math.sin(x / 6)), (110, 80, 54))
+            put(img, x, y + 1 + int(2 * math.sin(x / 6)), (88, 62, 42))
+    def platform(cx, cy, rx, ry):
+        ellipse(img, cx, cy + 3, rx, ry, (96, 120, 66))
+        ellipse(img, cx, cy, rx, ry, (120, 150, 80))
+        ellipse(img, cx, cy - 1, rx - 4, ry - 3, (138, 170, 92))
+        for k in range(16):
+            a = k / 16 * 2 * math.pi
+            px, py = cx + math.cos(a) * (rx - 2), cy + math.sin(a) * (ry - 1)
+            put(img, int(px), int(py), (196, 160, 90) if k % 3 == 0 else (90, 140, 70))
+    platform(118, 130, 74, 15)
+    platform(282, 130, 74, 15)
+    return img
+
+
 # ------------------------------------------------------------------ bonecos
 TYPE_COLORS = {
     "fisico": ((214, 64, 64), (150, 36, 44)),
@@ -257,6 +309,7 @@ def cake(frame):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
+    battle_bg_forest().save(OUT / "bg_bosque.png")
     battle_bg().save(OUT / "bg_praia.png")
     for kind in TYPE_COLORS:
         front = dummy(kind)

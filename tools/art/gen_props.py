@@ -8,6 +8,7 @@ import json
 import math
 from pathlib import Path
 
+from draw import rng
 from draw import (new, put, rect, ellipse, line, outline, shade_blob, hash01,
                   mix, quad_bezier, from_ascii)
 
@@ -529,6 +530,147 @@ def net_snag():
     return img
 
 
+# ------------------------------------------------------------- floresta (fase 4b)
+def tree_oak(seed=0):
+    W, H = 40, 52
+    img = new(W, H)
+    rect(img, 16, 30, 8, 21, (120, 84, 56))
+    rect(img, 20, 30, 4, 21, (96, 66, 44))
+    for x in (13, 25):
+        rect(img, x, 47, 3, 4, (110, 76, 50))
+    r = rng(seed + 11)
+    blobs = [(20, 18, 17, 14), (10, 24, 9, 8), (30, 24, 9, 8), (20, 8, 11, 8)]
+    for (cx, cy, rx, ry) in blobs:
+        ellipse(img, cx, cy, rx, ry, (70, 132, 70))
+    for (cx, cy, rx, ry) in blobs:
+        ellipse(img, cx - 2, cy - 3, rx * 0.65, ry * 0.6, (96, 160, 84))
+    for _ in range(26):
+        x, y = r.randint(4, 36), r.randint(2, 32)
+        if img.getpixel((x, y))[3]:
+            put(img, x, y, (130, 190, 100) if r.random() < 0.5 else (52, 104, 58))
+    outline(img, OUT_C)
+    return img
+
+
+def tree_pine(seed=0):
+    W, H = 28, 46
+    img = new(W, H)
+    rect(img, 12, 36, 4, 9, (110, 76, 50))
+    for i, (y, half) in enumerate([(4, 4), (11, 7), (18, 10), (25, 12), (31, 13)]):
+        for yy in range(y, y + 9):
+            h = half * (yy - y + 2) / 10
+            for x in range(int(14 - h), int(14 + h) + 1):
+                put(img, x, yy, (44, 104, 74) if x < 14 else (34, 84, 62))
+    rect(img, 13, 1, 2, 4, (44, 104, 74))
+    outline(img, OUT_C)
+    return img
+
+
+def root_wall():
+    W, H = 34, 26
+    img = new(W, H)
+    r = rng(5)
+    for i in range(14):
+        y0 = r.randint(4, 22)
+        y1 = r.randint(4, 22)
+        c = (124, 88, 58) if i % 2 else (98, 68, 46)
+        for t in range(0, 34):
+            y = y0 + (y1 - y0) * t / 33 + 2 * __import__("math").sin(t / 4 + i)
+            rect(img, t, int(y), 1, 3, c)
+    for _ in range(8):
+        ellipse(img, r.randint(4, 30), r.randint(4, 20), 2, 1.5, (90, 150, 70))
+    outline(img, OUT_C)
+    return img
+
+
+def root_arch():
+    W, H = 34, 30
+    img = new(W, H)
+    ellipse(img, 17, 18, 16, 13, (104, 72, 48))
+    ellipse(img, 17, 22, 9, 9, (20, 14, 24))
+    rect(img, 8, 22, 18, 8, (20, 14, 24))
+    for x in range(2, 32, 5):
+        rect(img, x, 6 + (x % 3), 2, 6, (130, 94, 62))
+    ellipse(img, 8, 6, 5, 3, (80, 140, 70))
+    ellipse(img, 26, 5, 6, 3, (80, 140, 70))
+    outline(img, OUT_C)
+    return img
+
+
+def stump():
+    img = new(18, 14)
+    ellipse(img, 9, 9, 8, 4.5, (120, 84, 56))
+    ellipse(img, 9, 6, 7, 3, (190, 150, 100))
+    ellipse(img, 9, 6, 3.5, 1.5, (160, 120, 80))
+    outline(img, OUT_C)
+    return img
+
+
+def log():
+    img = new(34, 14)
+    rect(img, 3, 3, 28, 9, (120, 84, 56))
+    rect(img, 3, 3, 28, 2, (150, 110, 74))
+    ellipse(img, 31, 7.5, 3, 4.5, (190, 150, 100))
+    ellipse(img, 31, 7.5, 1.5, 2, (150, 110, 70))
+    for x in (9, 18, 25):
+        put(img, x, 6, (90, 150, 70))
+        put(img, x + 1, 5, (90, 150, 70))
+    outline(img, OUT_C)
+    return img
+
+
+def mushrooms(frame=0, glow=False):
+    img = new(16, 14)
+    cap = (120, 230, 220) if glow else (214, 70, 70)
+    if glow and frame:
+        cap = (160, 250, 240)
+    for (cx, cy, r) in [(5, 8, 3.5), (11, 9, 2.6)]:
+        rect(img, int(cx) - 1, int(cy), 2, 4, (236, 226, 200))
+        ellipse(img, cx, cy, r, r * 0.7, cap)
+        if not glow:
+            put(img, int(cx) - 1, int(cy) - 1, (250, 250, 250))
+    outline(img, OUT_C)
+    return img
+
+
+def herb_blue():
+    img = new(14, 16)
+    for (x0, x1) in [(7, 3), (7, 11), (7, 7)]:
+        line(img, 7, 15, x1, 6, (70, 140, 70))
+    for (x, y) in [(3, 5), (11, 5), (7, 3)]:
+        ellipse(img, x, y, 2, 2, (90, 140, 230))
+        put(img, x, y, (230, 240, 255))
+    outline(img, OUT_C)
+    return img
+
+
+def raizerno_tree():
+    W, H = 56, 64
+    img = new(W, H)
+    rect(img, 16, 18, 24, 40, (110, 78, 54))
+    rect(img, 30, 18, 10, 40, (92, 64, 44))
+    for (x0, x1) in [(16, 4), (20, 12), (36, 46), (40, 54)]:
+        line(img, x0, 56, x1, 63, (110, 78, 54))
+        line(img, x0 + 1, 56, x1 + 1, 63, (110, 78, 54))
+    for (cx, cy, rx, ry) in [(28, 12, 24, 12), (12, 18, 10, 7), (44, 18, 10, 7)]:
+        ellipse(img, cx, cy, rx, ry, (70, 132, 70))
+        ellipse(img, cx - 3, cy - 3, rx * 0.6, ry * 0.5, (96, 160, 84))
+    # rosto de osso no tronco
+    ellipse(img, 28, 34, 8, 7, (226, 220, 200))
+    rect(img, 23, 34, 3, 3, (40, 30, 48))
+    rect(img, 30, 34, 3, 3, (40, 30, 48))
+    for x in range(24, 33, 2):
+        put(img, x, 40, (40, 30, 48))
+    # brasão: coroa sobre onda
+    for x in range(22, 35):
+        put(img, x, 50 + (1 if (x // 2) % 2 else 0), (240, 200, 90))
+    for x in (24, 28, 32):
+        line(img, x, 47, x, 45, (240, 200, 90))
+    rect(img, 23, 47, 11, 1, (240, 200, 90))
+    outline(img, OUT_C)
+    return img
+
+
 # ------------------------------------------------------------- empacotamento
 PROPS = {
     # id: (função, quadros, fps, origem em px (pés), colisão [células relativas], camada, interativo)
@@ -569,6 +711,17 @@ PROPS = {
     "stall": (lambda f: stall(), 1, 0, (24, 33), [[-1, 0], [0, 0], [1, 0]], "y", False),
     "flower_box": (lambda f: flower_box(), 1, 0, (8, 13), [[0, 0]], "y", False),
     "net_snag": (lambda f: net_snag(), 1, 0, (10, 13), [[0, 0]], "y", True),
+    "tree_oak": (lambda f: tree_oak(1), 1, 0, (20, 50), [[0, 0], [-1, 0]], "y", False),
+    "tree_oak2": (lambda f: tree_oak(7), 1, 0, (20, 50), [[0, 0], [-1, 0]], "y", False),
+    "tree_pine": (lambda f: tree_pine(), 1, 0, (14, 44), [[0, 0]], "y", False),
+    "root_wall": (lambda f: root_wall(), 1, 0, (17, 24), [[-1, 0], [0, 0]], "y", True),
+    "root_arch": (lambda f: root_arch(), 1, 0, (17, 29), [[-1, 0], [1, 0], [-1, -1], [0, -1], [1, -1]], "y", False),
+    "stump": (lambda f: stump(), 1, 0, (9, 12), [[0, 0]], "y", False),
+    "log": (lambda f: log(), 1, 0, (17, 12), [[-1, 0], [0, 0]], "y", False),
+    "mushrooms": (lambda f: mushrooms(0), 1, 0, (8, 13), [], "ground", False),
+    "glow_shroom": (lambda f: mushrooms(f, True), 2, 1.5, (8, 13), [], "ground", False),
+    "herb_blue": (lambda f: herb_blue(), 1, 0, (7, 15), [[0, 0]], "y", True),
+    "raizerno_tree": (lambda f: raizerno_tree(), 1, 0, (28, 62), [[-1, 0], [0, 0], [1, 0], [-1, -1], [0, -1], [1, -1]], "y", True),
 }
 
 
@@ -576,6 +729,7 @@ PROPS = {
 LIGHTS = {
     "lamp": {"radius": 40, "color": [1.0, 0.82, 0.5], "intensity": 0.35, "offset": [0, -9]},
     "campfire": {"radius": 44, "color": [1.0, 0.6, 0.3], "intensity": 0.3, "offset": [0, -6]},
+    "glow_shroom": {"radius": 26, "color": [0.5, 1.0, 0.95], "intensity": 0.4, "offset": [0, -6]},
     "lamp_post": {"radius": 36, "color": [1.0, 0.85, 0.55], "intensity": 0.28, "offset": [0, -25]},
 }
 

@@ -1,0 +1,66 @@
+{
+ "id": "raizal_casa_musgo",
+ "region": "bosque",
+ "name_key": "MAP_RAIZAL_CASA_MUSGO",
+ "tileset": "overworld",
+ "legend": {
+  "T": "wall_top",
+  "w": "wall",
+  "n": "wall_window",
+  ".": "floor",
+  "m": "mat"
+ },
+ "ground": [
+  "TTTTTTTTTTTT",
+  "TwwnwwwwwnwT",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "TTTTTTmTTTTT"
+ ],
+ "spawn": {
+  "x": 6,
+  "y": 8,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "table",
+   "x": 7,
+   "y": 4
+  },
+  {
+   "type": "plant",
+   "x": 1,
+   "y": 2
+  },
+  {
+   "type": "mushrooms",
+   "x": 9,
+   "y": 7
+  }
+ ],
+ "npcs": [
+  {
+   "id": "pai_musgo",
+   "x": 5,
+   "y": 3,
+   "facing": "down"
+  }
+ ],
+ "warps": [
+  {
+   "x": 6,
+   "y": 9,
+   "to": "raizal",
+   "tx": 31,
+   "ty": 21,
+   "facing": "down",
+   "sfx": "door"
+  }
+ ]
+}

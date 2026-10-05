@@ -12,7 +12,8 @@
    "maps": [
     "praia_despertar",
     "cabana_bento"
-   ]
+   ],
+   "battle_bg": "res://assets/battle/bg_praia.png"
   },
   "vila_mare": {
    "name_key": "REGION_VILA_MARE",
@@ -29,7 +30,8 @@
     "vila_loja",
     "vila_casa_remo",
     "vila_casa_concha"
-   ]
+   ],
+   "battle_bg": "res://assets/battle/bg_praia.png"
   },
   "bosque": {
    "name_key": "REGION_BOSQUE",
@@ -41,8 +43,17 @@
    ],
    "music": "",
    "maps": [
-    "rota_1"
-   ]
+    "rota_1",
+    "tunel_raizes",
+    "raizal",
+    "bosque_velho",
+    "raizal_rancho",
+    "raizal_loja",
+    "raizal_casa_galho",
+    "raizal_casa_musgo",
+    "raizal_casa_salvia"
+   ],
+   "battle_bg": "res://assets/battle/bg_bosque.png"
   },
   "minas": {
    "name_key": "REGION_MINAS",
@@ -53,7 +64,10 @@
     0.9
    ],
    "music": "",
-   "maps": []
+   "maps": [
+    "rota_2"
+   ],
+   "battle_bg": "res://assets/battle/bg_praia.png"
   },
   "pantano": {
    "name_key": "REGION_PANTANO",
@@ -64,7 +78,8 @@
     0.82
    ],
    "music": "",
-   "maps": []
+   "maps": [],
+   "battle_bg": "res://assets/battle/bg_praia.png"
   },
   "ossorio": {
    "name_key": "REGION_OSSORIO",
@@ -75,7 +90,8 @@
     0.9
    ],
    "music": "",
-   "maps": []
+   "maps": [],
+   "battle_bg": "res://assets/battle/bg_praia.png"
   },
   "picos": {
    "name_key": "REGION_PICOS",
@@ -86,7 +102,8 @@
     1.05
    ],
    "music": "",
-   "maps": []
+   "maps": [],
+   "battle_bg": "res://assets/battle/bg_praia.png"
   },
   "deserto": {
    "name_key": "REGION_DESERTO",
@@ -97,7 +114,8 @@
     0.85
    ],
    "music": "",
-   "maps": []
+   "maps": [],
+   "battle_bg": "res://assets/battle/bg_praia.png"
   },
   "castelo": {
    "name_key": "REGION_CASTELO",
@@ -108,7 +126,8 @@
     0.9
    ],
    "music": "",
-   "maps": []
+   "maps": [],
+   "battle_bg": "res://assets/battle/bg_praia.png"
   }
  }
 }

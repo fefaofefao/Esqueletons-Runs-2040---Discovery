@@ -164,3 +164,10 @@ Registro das escolhas feitas sem consulta (AGENTS.md, seção A). Cada item diz 
 - **Domador por linha de visão** (seção 7): enxerga N células à frente até o primeiro obstáculo; cada um luta uma vez só (flag).
 - **Parceiro inicial tem apelido** (Lia/Taro) e é uma espécie comum do Bestiário. O recorrente usa a outra linha.
 - **Estrada norte bloqueada pelo Brás** (arbusto + NPC numa célula só): obriga a 1ª batalha contra domador sem parede invisível.
+
+## Fase 4b — Bosque
+- **Raízes no lugar de "estrada fechada por NPC":** o problema local (o Guardião isolou a vila) vira o motivo dos 3 caminhos da Rota 1. Vencer o Guardião abre o atalho central, que muda o mundo de forma visível.
+- **Túnel escuro por tinta do mapa** (`tint`) com cogumelos que emitem luz: o momento de Lia ("eu tenho luz") acontece no próprio cenário.
+- **Guardiões são esqueletos no mapa** (sprite adulto da linha que lideram), coerente com o arco: são a família ressuscitada pela coroa.
+- **Fundo de batalha por região** (`battle_bg` em `regions.json`).
+- **Idades coerentes com o estágio** também em domadores e Guardiões (o teste confere). Por isso Vagalú aparece aos 22 e os Irmãos Galho usam bebês.

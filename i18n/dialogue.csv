@@ -86,3 +86,82 @@ DLG_P_RIVAL_BYE,"A gente se vê no Bosque. Não se perde, hein!","See you in the
 DLG_P_RIVAL_LATER,Tá bom. Mas eu vou estar te esperando!,Fine. But I'll be waiting for you!,Vale. ¡Pero te voy a estar esperando!
 MSG_ROUTE1_LOCKED,A estrada do Bosque abre na próxima atualização (fase 4b).,The road to the forest opens in the next update (phase 4b).,El camino al bosque se abre en la próxima actualización (fase 4b).
 MSG_DOCK_BLOCKED,O Fiscal Brás está bloqueando a estrada.,Inspector Brás is blocking the road.,El Inspector Brás está bloqueando el camino.
+SPK_LENHADOR_VELHO,Lenhador Velho,Old Woodcutter,Leñador Viejo
+SPK_RUFO,Rufo,Rufus,Rufo
+SPK_IRIS,Íris,Iris,Iris
+SPK_CIPO,Cipó,Vine,Bejuco
+SPK_TILIA,Dona Tília,Mrs. Linden,Doña Tilia
+SPK_TOCO,Seu Toco,Mr. Stump,Don Tocón
+SPK_SALVIA,Sálvia,Sage,Salvia
+SPK_GRAVETO,Graveto,Twig,Ramita
+SPK_HERA,Dona Hera,Mrs. Ivy,Doña Hiedra
+SPK_GUARDA_RAIZ,Guarda-raiz,Root Guard,Guardarraíz
+SPK_GALHO,Irmãos Galho,Branch Brothers,Hermanos Rama
+SPK_MUSGO,Pai Musgo,Papa Moss,Papá Musgo
+SPK_RAMALHO,Ramalho,Ramalho,Ramalho
+BTL_TAMER_RUFO,Rufo,Rufus,Rufo
+BTL_TAMER_IRIS,Íris,Iris,Iris
+BTL_TAMER_CIPO,Cipó,Vine,Bejuco
+BTL_TAMER_GALHO,Irmãos Galho,Branch Brothers,Hermanos Rama
+BTL_TAMER_MUSGO,Pai Musgo,Papa Moss,Papá Musgo
+BTL_TAMER_RAMALHO,Guardião Ramalho,Guardian Ramalho,Guardián Ramalho
+MAP_ROTA_1,Rota 1,Route 1,Ruta 1
+MAP_TUNEL,Túnel das Raízes,Root Tunnel,Túnel de Raíces
+MAP_RAIZAL,Raizal,Rootvale,Raizal
+MAP_BOSQUE_VELHO,Bosque Velho,Old Grove,Bosque Viejo
+MAP_RAIZAL_RANCHO,Rancho da Tília,Linden's Ranch,Rancho de Tilia
+MAP_RAIZAL_LOJA,Venda do Toco,Stump's Shop,Tienda de Tocón
+MAP_RAIZAL_CASA_GALHO,Casa dos Irmãos Galho,Branch Brothers' House,Casa de los Hermanos Rama
+MAP_RAIZAL_CASA_MUSGO,Casa da Família Musgo,Moss Family House,Casa de la Familia Musgo
+MAP_RAIZAL_CASA_SALVIA,Casa da Sálvia,Sage's House,Casa de Salvia
+MSG_ROUTE2_LOCKED,A estrada das Minas abre na próxima atualização (fase 4c).,The road to the mines opens in the next update (phase 4c).,El camino a las minas se abre en la próxima actualización (fase 4c).
+ITEM_ROOT_CHIP,Lasca de Raiz,Root Chip,Astilla de Raíz
+ITEM_ROOT_CHIP_TEXT,Uma lasca do machado do Ramalho. Prova que você venceu o Guardião do Bosque.,A chip from Ramalho's axe. Proof that you beat the Forest Guardian.,Una astilla del hacha de Ramalho. Prueba que venciste al Guardián del Bosque.
+SIGN_B_FORK,← Caminho dos Domadores · ↑ Túnel das Raízes · → Campo das Flores,← Tamers' Trail · ↑ Root Tunnel · → Flower Field,← Senda de Domadores · ↑ Túnel de Raíces · → Campo de Flores
+OBJ_ROOT_WALL,Raízes trançadas fecham a estrada. Só o Guardião manda desfazer.,Braided roots block the road. Only the Guardian can undo them.,Raíces trenzadas cierran el camino. Solo el Guardián puede deshacerlas.
+DLG_B_VELHO_1,"Três caminhos, um destino. Domador dá moeda, flor dá esqueleto, túnel dá medo.","Three paths, one destination. Tamers give coins, flowers give skeletons, the tunnel gives chills.","Tres caminos, un destino. Los domadores dan monedas, las flores dan esqueletos, el túnel da miedo."
+DLG_B_VELHO_2,As raízes fecharam a estrada inteira. Só o Ramalho manda desfazer.,The roots closed the whole road. Only Ramalho can undo them.,Las raíces cerraron todo el camino. Solo Ramalho puede deshacerlas.
+DLG_B_RUFO_1,Ei! Você tem cara de quem perde. Prova que eu tô errado!,Hey! You look like a loser. Prove me wrong!,¡Eh! Tienes cara de perdedor. ¡Demuestra que me equivoco!
+DLG_B_RUFO_2,"Tá, tá. Cara de quem ganha. Satisfeito?","Fine, fine. You look like a winner. Happy?","Vale, vale. Cara de ganador. ¿Contento?"
+DLG_B_IRIS_1,"Meus esqueletos são lentos, mas quando batem...","My skeletons are slow, but when they hit...","Mis esqueletos son lentos, pero cuando pegan..."
+DLG_B_IRIS_2,Lentos e derrotados. Vou repensar a estratégia.,Slow and beaten. Time to rethink my strategy.,Lentos y derrotados. Voy a repensar mi estrategia.
+DLG_B_CIPO_1,Primo do Rei mandou vigiar. Eu vigio... batalhando!,The King's cousin told me to keep watch. I watch... by battling!,El primo del Rey me mandó vigilar. Yo vigilo... ¡peleando!
+DLG_B_CIPO_2,Vigiei mal. Não conta pro Ramalho.,I watched badly. Don't tell Ramalho.,Vigilé mal. No se lo cuentes a Ramalho.
+DLG_B_TUNEL_LIA_1,Tá escuro... muito escuro.,It's dark... really dark.,Está oscuro... muy oscuro.
+DLG_B_TUNEL_LIA_2,Tudo bem. Eu tenho luz. Eu vou na frente!,It's okay. I have light. I'll go first!,Está bien. Tengo luz. ¡Yo voy delante!
+DLG_B_TUNEL_TARO_1,Escuro? Melhor. Ninguém me vê chegando.,Dark? Good. Nobody sees me coming.,¿Oscuro? Mejor. Nadie me ve llegar.
+DLG_B_TUNEL_LIAR_1,Eu... eu tava só olhando a entrada. Não tô com medo!,I... I was just looking at the entrance. I'm not scared!,Yo... solo miraba la entrada. ¡No tengo miedo!
+DLG_B_TUNEL_LIAR_2,Vai logo.,Just go.,Ve ya.
+DLG_B_TUNEL_LIAR_3,"Tá bom, tá bom!","Okay, okay!","¡Vale, vale!"
+DLG_B_RIVAL_TARO,Ramalho sabe pra onde levaram os mais velhos. Eu vou perguntar do meu jeito.,Ramalho knows where they took the elders. I'll ask him my way.,Ramalho sabe adónde llevaron a los mayores. Le voy a preguntar a mi manera.
+DLG_B_RIVAL_LIA,"Atravessei sozinha! Agora me enfrenta, que eu tô corajosa!","I crossed it alone! Now fight me, I'm feeling brave!","¡Lo crucé sola! Ahora enfréntame, que estoy valiente."
+DLG_B_RIVAL_BYE,"Te vejo em Ossório. Fica vivo... quer dizer, fica inteiro!","See you in Ossório. Stay alive... I mean, stay in one piece!","Nos vemos en Ossório. Sigue vivo... digo, ¡sigue entero!"
+SIGN_B_RAIZAL,"Raizal. Madeira boa, chá melhor.","Rootvale. Good wood, better tea.","Raizal. Buena madera, mejor té."
+SIGN_B_CLEARING,↑ Clareira do Machado (Guardião Ramalho),↑ Axe Clearing (Guardian Ramalho),↑ Claro del Hacha (Guardián Ramalho)
+DLG_B_TILIA_1,"Raiz trançada não deixa ninguém sair, nem doente. Deita aí que eu cuido.","Braided roots don't let anyone out, not even the sick. Lie down, I'll take care of you.","Las raíces trenzadas no dejan salir a nadie, ni a los enfermos. Acuéstate, que yo te cuido."
+DLG_B_TILIA_2,Seu esqueleto tá crescendo forte. Já viu quando faz aniversário? Vira festa.,Your skeleton's growing strong. Ever seen its birthday? It's a party.,Tu esqueleto crece fuerte. ¿Viste cuando cumple años? Es una fiesta.
+DLG_B_TOCO_1,"Com a estrada fechada, eu vendo o que sobrou. E o que sobrou é caro.","With the road closed, I sell what's left. And what's left is pricey.","Con el camino cerrado, vendo lo que sobra. Y lo que sobra es caro."
+DLG_B_TOCO_2,Volta quando o Ramalho cansar dessa brincadeira.,Come back when Ramalho gets tired of this game.,Vuelve cuando Ramalho se canse de este juego.
+DLG_B_SALVIA_ASK,"Meu estoque de erva-de-febre acabou. Tem um pé no Bosque Velho, perto do tronco grande. Traz pra mim?","I'm out of feverweed. There's a patch in the Old Grove, near the big trunk. Could you bring me some?","Se me acabó la hierba de fiebre. Hay una mata en el Bosque Viejo, cerca del tronco grande. ¿Me la traes?"
+DLG_B_SALVIA_WHERE,"Bosque Velho, atrás da vila. A erva tem flor azul.","The Old Grove, behind the village. It has blue flowers.","El Bosque Viejo, detrás de la villa. Tiene flores azules."
+DLG_B_SALVIA_THANKS,"Isso! Com isso eu curo meia vila. Toma, um Reviver e meu muito obrigada.","Yes! With this I can heal half the village. Here, a Revive and my heartfelt thanks.","¡Eso! Con esto curo a media villa. Toma, un Revivir y mi más sincero gracias."
+DLG_B_SALVIA_AFTER,"Quando a estrada abrir, vou mandar chá pra Vila Maré.","When the road opens, I'll send tea to Tidemark Village.","Cuando abra el camino, voy a mandar té a Villa Marea."
+OBJ_HERB,Você colheu a erva-de-febre de flor azul.,You picked the blue-flowered feverweed.,Recogiste la hierba de fiebre de flor azul.
+DLG_B_GRAVETO,Eu tentei desfazer as raízes com os dentes. Agora as raízes têm marca de dente.,I tried to undo the roots with my teeth. Now the roots have teeth marks.,Intenté deshacer las raíces con los dientes. Ahora las raíces tienen marcas de dientes.
+DLG_B_HERA_1,"O Ramalho não é mau. É primo do Rei, e todo primo quer agradar.","Ramalho isn't bad. He's the King's cousin, and every cousin wants to please.","Ramalho no es malo. Es primo del Rey, y todo primo quiere agradar."
+DLG_B_HERA_2,Dizem que todos os Guardiões são da família. Família grande dá briga grande.,"They say all the Guardians are family. Big families, big fights.","Dicen que todos los Guardianes son familia. Familia grande, pelea grande."
+DLG_B_GUARDA,O Ramalho tá na Clareira. Ele adora visita... pra derrubar.,Ramalho is in the Clearing. He loves visitors... to knock over.,Ramalho está en el Claro. Le encantan las visitas... para tumbarlas.
+DLG_B_GALHO_1,A gente empurra seu turno pra lá e pra cá. Treino pro Ramalho!,We'll push your turn back and forth. Ramalho training!,Te empujamos el turno de aquí para allá. ¡Entrenamiento para Ramalho!
+DLG_B_GALHO_2,Viu? Golpe leve escapa do atraso.,See? Light moves dodge the delay.,¿Viste? Los golpes ligeros escapan del retraso.
+DLG_B_MUSGO_1,Esporo aqui é tempero.,Spores are seasoning around here.,Aquí las esporas son condimento.
+DLG_B_MUSGO_2,Leva antídoto pras Minas. Lá o ar é pior.,Bring antidotes to the Mines. The air there is worse.,Lleva antídotos a las Minas. Allí el aire es peor.
+DLG_B_RAMALHO_1,"Primo do Rei, campeão de queda de braço do Bosque e dono deste machado! Você é o tal que abriu o cais?","Cousin of the King, the forest's arm-wrestling champ, and owner of this axe! Are you the one who opened the dock?","¡Primo del Rey, campeón de pulso del Bosque y dueño de esta hacha! ¿Eres tú quien abrió el muelle?"
+DLG_B_RAMALHO_2,Aqui a gente espera. Quem espera não se perde. Deixa eu te ensinar a esperar!,"Around here, we wait. Those who wait don't get lost. Let me teach you how to wait!",Aquí se espera. Quien espera no se pierde. ¡Déjame enseñarte a esperar!
+DLG_B_RAMALHO_WIN,"Ha! Bateu antes de eu levantar o machado. Assim não vale... vale, vale.","Ha! You hit before I could lift my axe. That's not fair... fine, it's fair.","¡Ja! Pegaste antes de que levantara el hacha. Así no vale... vale, vale."
+DLG_B_RAMALHO_MOTIVE,O primo me trouxe de volta primeiro. Eu devo tudo a ele. Mas trançar o bosque inteiro... foi demais.,My cousin brought me back first. I owe him everything. But braiding the whole forest... that was too much.,Mi primo me trajo de vuelta primero. Se lo debo todo. Pero trenzar el bosque entero... fue demasiado.
+DLG_B_RAMALHO_ROOTS,"Pronto: mandei desfazer as raízes da estrada. Vai, antes que eu mude de ideia!","There: I've ordered the road roots undone. Go, before I change my mind!",Listo: mandé deshacer las raíces del camino. ¡Vete antes de que cambie de idea!
+DLG_B_RAMALHO_AFTER,"Se for às Minas, cuidado com a Tia Fornalha. Ela não ri de nada.","If you head to the Mines, watch out for Aunt Furnace. She doesn't laugh at anything.","Si vas a las Minas, cuidado con la Tía Fragua. No se ríe de nada."
+DLG_B_RAIZERNO_1,"Um esqueleto enorme dorme fundido ao tronco. Na casca, um brasão: uma coroa sobre uma onda.",A huge skeleton sleeps fused to the trunk. Carved in the bark: a crown over a wave.,"Un esqueleto enorme duerme fundido al tronco. En la corteza, un escudo: una corona sobre una ola."
+DLG_B_RAIZERNO_2,O desenho é igual ao do ingresso do museu.,The design matches the one on the museum ticket.,El dibujo es igual al de la entrada del museo.
+OPT_B_WAKE,Acordar,Wake it,Despertarlo
+OPT_B_LET_SLEEP,Deixar dormir,Let it sleep,Dejarlo dormir

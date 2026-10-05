@@ -1,6 +1,16 @@
 {
  "_comment": "Estoque das lojas por cidade (preço vem de data/items.json). O estoque melhora a cada cidade (seção 6).",
  "shops": {
-  "vila_mare": ["pocao_p", "antidoto", "reviver"]
+  "vila_mare": [
+   "pocao_p",
+   "antidoto",
+   "reviver"
+  ],
+  "raizal": [
+   "pocao_p",
+   "pocao_m",
+   "antidoto",
+   "reviver"
+  ]
  }
 }

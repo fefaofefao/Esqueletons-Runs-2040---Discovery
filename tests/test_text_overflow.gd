@@ -81,7 +81,7 @@ func test_texts_fit() -> void:
 				_check_width(key, lang, text.replace("30", "100"), UnitCard.W - 34.0, false)
 			elif _has_prefix(key, PREVIEW_PREFIXES):
 				_check_width(key, lang, text, 120.0, is_pt)
-			elif _has_prefix(key, DIALOG_PREFIXES) or key in DIALOG_KEYS:
+			elif _has_prefix(key, DIALOG_PREFIXES) or key in DIALOG_KEYS or (key.begins_with("ITEM_") and key.ends_with("_TEXT")):
 				var lines := TextFit.wrap_lines(text, UiTheme.DIALOG_TEXT_WIDTH).size()
 				check(lines <= UiTheme.DIALOG_LINES, "%s [%s] usa %d linhas (máx. %d)" % [key, lang, lines, UiTheme.DIALOG_LINES])
 				if is_pt and not key.begins_with("DBG_"):

@@ -11,7 +11,8 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 | 3b — Bestiário | ✅ concluída |
 | 3c — Golpes e balanceamento | ✅ concluída |
 | 4a — Arco e Prólogo | ✅ concluída |
-| 4b–4h — Regiões, Castelo e finais | ⏳ próxima (4b) |
+| 4b — Bosque das Raízes | ✅ concluída |
+| 4c–4h — Regiões, Castelo e finais | ⏳ próxima (4c) |
 | 5 — Monetização e conformidade | — |
 | 6 — Polimento e publicação | — |
 
@@ -207,5 +208,43 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 - A estrada norte leva à Rota 1, que é a fase 4b; por enquanto aparece uma mensagem de "próxima atualização".
 - Os tempos reais do Prólogo devem ser medidos e passados ao `balance.json` (orçamento atual: 15 min).
 
-### Próxima tarefa: Fase 4b — Bosque das Raízes
-`02_bosque.md`, Rota 1 com 2–3 caminhos, cidade do Bosque, Guardião Ramalho (mecânica de Atraso), pista do brasão e momento de Lia/Taro.
+## Fase 4b — Bosque das Raízes (concluída)
+
+### Feito
+- **`docs/roteiro/02_bosque.md`:**
+  - problema local: as raízes trançadas isolam Raizal e falta remédio;
+  - pista nº 2: o brasão no Raizerno, igual ao do ingresso;
+  - momento de Lia: o túnel escuro;
+  - Guardião Ramalho, primo do Rei, que ensina o Atraso;
+  - NPCs, casas de domadores e escolhas.
+- **Rota 1 com 3 caminhos** que se reencontram antes de Raizal:
+  - Domadores (Rufo, Íris, Cipó);
+  - Campo das Flores (mais selvagens, inclusive Flautim raro);
+  - Túnel das Raízes (escuro, com cogumelos luminosos e um selvagem forte).
+  A estrada central fica fechada por raízes até o Guardião perder. Placa na bifurcação e Lenhador Velho com a dica.
+- **Raizal (cidade completa):**
+  - Rancho (Tília), Loja com Poção M (Toco);
+  - 2 casas de domadores (Irmãos Galho, Família Musgo);
+  - Sálvia com a missão da erva-de-febre, Graveto (humor) e Hera (lore: os Guardiões são família);
+  - a Clareira do Machado com o Guardião.
+- **Ramalho:** equipe Toreiro 22, Vagalú 22 e Raizela 23; vê o jogador e desafia. A vitória dá 800 moedas e a Lasca de Raiz, e desfaz as raízes da Rota 1.
+- **Bosque Velho:** Raizerno (único, batalha selvagem com marcador) e o brasão.
+- **Recorrente:** cena no túnel e batalha opcional na saída.
+- **Arte:**
+  - carvalhos, pinheiros, raízes trançadas, bocas de túnel, tocos, troncos, cogumelos (inclusive luminosos), erva azul e o tronco do Raizerno;
+  - 12 NPCs novos (Ramalho é um esqueleto);
+  - **fundo de batalha da floresta**, escolhido pela região.
+- **Texto:** 79 chaves nos 3 idiomas (`tools/maps/bosque_text.py`), cerca de 490 palavras PT-BR.
+- **Ferramentas:** o executor de testes aceita `--only=` e não trava mais quando um teste não compila.
+
+### Verificação
+- `tests/run_tests.tscn`: 0 falhas. O novo `test_bosque.gd`:
+  - percorre a Rota 1 por busca em largura: o oeste sozinho e o leste sozinho chegam a Raizal, o centro fica fechado e abre depois do Ramalho, e o Túnel atravessa;
+  - confere a cidade completa e as idades coerentes da equipe do Guardião.
+- Captura `capture.tscn -- --bosque`: bifurcação, campo, túnel com Lia, Raizal, Ramalho vendo o jogador, a batalha do Guardião e o brasão do Raizerno.
+
+### Pendências
+- A estrada norte de Raizal leva às Minas (fase 4c). O vigia da Rota 2 vai pedir a Lasca de Raiz.
+
+### Próxima tarefa: Fase 4c — Minas de Cinzas
+`03_minas.md`, Rota 2, Minas, Tia Fornalha (Defesa), escolha 2 (quebrar a corrente ou negociar), pista do mapa antigo e o lenço da mãe do Taro.

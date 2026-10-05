@@ -24,6 +24,10 @@ func _ready() -> void:
 	await _shot("00_titulo_intro")
 	await _wait(1.6)
 	await _shot("01_titulo")
+	if "--bosque" in OS.get_cmdline_user_args():
+		await _bosque_shots()
+		get_tree().quit()
+		return
 	if "--prologo" in OS.get_cmdline_user_args():
 		await _prologo_shots()
 		get_tree().quit()
@@ -369,3 +373,43 @@ func _prologo_shots() -> void:
 	Game.open_overlay(TeamMenu.new())
 	await _wait(0.4)
 	await _shot("p13_equipe")
+
+
+func _bosque_shots() -> void:
+	Game.start_new_game("Téo")
+	await _wait(1.0)
+	await _advance()
+	for f in ["intro_done", "bento_met", "has_partner", "partner_lia", "tut_battle", "tut_marker", "bras_beaten"]:
+		SaveGame.set_flag(f)
+	var lia := Monster.create("faroleira_2", 20)
+	lia.nickname = "Lia"
+	SaveGame.data["party"] = [lia.to_dict(), Monster.create("lenhador_2", 20).to_dict(), Monster.create("rendeira_2", 19).to_dict()]
+	await _goto("rota_1", Vector2i(19, 43), "up")
+	await _wait(1.0)
+	await _shot("b1_rota_bifurcacao")
+	await _goto("rota_1", Vector2i(31, 28), "up")
+	await _shot("b2_campo_flores")
+	Game.warp("tunel_raizes", Vector2i(3, 12), "up")
+	await _wait(1.6)
+	await _advance([], "b3_tunel_lia", 1)
+	await _goto("tunel_raizes", Vector2i(12, 10), "up")
+	await _shot("b4_tunel_dentro")
+	await _goto("raizal", Vector2i(19, 22), "up")
+	await _wait(0.8)
+	await _shot("b5_raizal")
+	await _goto("raizal", Vector2i(19, 7), "up")
+	await _wait(0.3)
+	Game.world.player.try_move(Vector2i.UP)
+	await _wait(2.5)
+	await _shot("b6_ramalho_ve")
+	await _advance([], "b7_ramalho_fala", 1)
+	await _wait(1.0)
+	if Game.battle:
+		await _wait(4.0)
+		await _shot("b8_ramalho_batalha")
+		Game.battle.debug_win()
+		await _advance([], "", -1, 160)
+	await _goto("bosque_velho", Vector2i(12, 7), "up")
+	await _wait(0.6)
+	Game.world.interact(Vector2i(12, 6), Vector2i.UP)
+	await _advance([1], "b9_raizerno_brasao", 1)

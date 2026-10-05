@@ -1,0 +1,358 @@
+{
+ "id": "raizal",
+ "region": "bosque",
+ "name_key": "MAP_RAIZAL",
+ "tileset": "overworld",
+ "legend": {
+  "g": "grass",
+  "f": "flowers",
+  "B": "bush",
+  "p": "path",
+  "~": "water",
+  ".": "sand"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BgggggggggggffffffffffffffffgggggggggggB",
+  "BgggggggggggffggggggggggggffgggggggggggB",
+  "BgggggggggggffggggggggggggffgggggggggggB",
+  "BgggggggggggffggggggggggggffgggggggggggB",
+  "BgggggggggggffggggggggggggffgggggggggggB",
+  "BgggggggggggffffffffffffffffgggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggppppppppppppppppppppppggggggggB",
+  "BggggggggpggggppppppppppppggggpggggggggB",
+  "BggggggggpggggppppppppppppggggpggggggggB",
+  "BggggggggpggggppppppppppppggggpggggggggB",
+  "ppppppppppppppppppppppppppggggpggggggggB",
+  "ppppppppppppppppppppppppppggggpggggggggB",
+  "BggggggggpggggppppppppppppggggpggggggggB",
+  "BggggggggpggggppppppppppppggggpggggggggB",
+  "BggggggggpgggggggggppgggggggggpggggggggB",
+  "BggggggggpgggggggggppgggggggggpggggggggB",
+  "BgggggppppppppppppppppppppppppppppgggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
+ ],
+ "spawn": {
+  "x": 19,
+  "y": 29,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "house_ranch",
+   "x": 12,
+   "y": 10
+  },
+  {
+   "type": "house_shop",
+   "x": 27,
+   "y": 10
+  },
+  {
+   "type": "house_a",
+   "x": 8,
+   "y": 20
+  },
+  {
+   "type": "house_b",
+   "x": 31,
+   "y": 20
+  },
+  {
+   "type": "house_a",
+   "x": 14,
+   "y": 27
+  },
+  {
+   "type": "sign",
+   "x": 18,
+   "y": 28,
+   "dialog": "bosque/placa_raizal"
+  },
+  {
+   "type": "sign",
+   "x": 18,
+   "y": 7,
+   "dialog": "bosque/placa_clareira"
+  },
+  {
+   "type": "stall",
+   "x": 23,
+   "y": 17
+  },
+  {
+   "type": "lamp_post",
+   "x": 13,
+   "y": 13
+  },
+  {
+   "type": "lamp_post",
+   "x": 26,
+   "y": 13
+  },
+  {
+   "type": "log",
+   "x": 24,
+   "y": 3
+  },
+  {
+   "type": "stump",
+   "x": 15,
+   "y": 3
+  },
+  {
+   "type": "stump",
+   "x": 23,
+   "y": 5
+  },
+  {
+   "type": "mushrooms",
+   "x": 5,
+   "y": 26
+  },
+  {
+   "type": "flower_box",
+   "x": 10,
+   "y": 11
+  },
+  {
+   "type": "tree_oak",
+   "x": 5,
+   "y": 5
+  },
+  {
+   "type": "tree_oak",
+   "x": 8,
+   "y": 8
+  },
+  {
+   "type": "tree_oak",
+   "x": 3,
+   "y": 2
+  },
+  {
+   "type": "tree_oak",
+   "x": 6,
+   "y": 1
+  },
+  {
+   "type": "tree_oak2",
+   "x": 2,
+   "y": 5
+  },
+  {
+   "type": "tree_pine",
+   "x": 37,
+   "y": 5
+  },
+  {
+   "type": "tree_oak",
+   "x": 33,
+   "y": 9
+  },
+  {
+   "type": "tree_oak",
+   "x": 28,
+   "y": 3
+  },
+  {
+   "type": "tree_pine",
+   "x": 36,
+   "y": 2
+  },
+  {
+   "type": "tree_pine",
+   "x": 31,
+   "y": 1
+  },
+  {
+   "type": "tree_oak",
+   "x": 11,
+   "y": 29
+  },
+  {
+   "type": "tree_oak",
+   "x": 6,
+   "y": 23
+  },
+  {
+   "type": "tree_pine",
+   "x": 4,
+   "y": 28
+  },
+  {
+   "type": "tree_oak2",
+   "x": 30,
+   "y": 24
+  },
+  {
+   "type": "tree_oak",
+   "x": 35,
+   "y": 23
+  },
+  {
+   "type": "tree_oak",
+   "x": 30,
+   "y": 27
+  },
+  {
+   "type": "tree_oak2",
+   "x": 25,
+   "y": 23
+  }
+ ],
+ "npcs": [
+  {
+   "id": "graveto",
+   "x": 17,
+   "y": 16,
+   "facing": "right"
+  },
+  {
+   "id": "hera",
+   "x": 23,
+   "y": 13,
+   "facing": "down"
+  },
+  {
+   "id": "guarda_raiz",
+   "x": 21,
+   "y": 8,
+   "facing": "left",
+   "if_not": "ramalho_beaten"
+  },
+  {
+   "id": "ramalho",
+   "x": 19,
+   "y": 3,
+   "facing": "down",
+   "if_not": "ramalho_beaten"
+  },
+  {
+   "id": "ramalho_depois",
+   "x": 22,
+   "y": 3,
+   "facing": "left",
+   "if": "ramalho_beaten"
+  }
+ ],
+ "warps": [
+  {
+   "x": 12,
+   "y": 10,
+   "to": "raizal_rancho",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 27,
+   "y": 10,
+   "to": "raizal_loja",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 8,
+   "y": 20,
+   "to": "raizal_casa_galho",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 31,
+   "y": 20,
+   "to": "raizal_casa_musgo",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 14,
+   "y": 27,
+   "to": "raizal_casa_salvia",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 19,
+   "y": 31,
+   "to": "rota_1",
+   "tx": 19,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 31,
+   "to": "rota_1",
+   "tx": 20,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 0,
+   "y": 15,
+   "to": "bosque_velho",
+   "tx": 22,
+   "ty": 8,
+   "facing": "left",
+   "sfx": ""
+  },
+  {
+   "x": 0,
+   "y": 16,
+   "to": "bosque_velho",
+   "tx": 22,
+   "ty": 9,
+   "facing": "left",
+   "sfx": ""
+  },
+  {
+   "x": 19,
+   "y": 0,
+   "to": "rota_2",
+   "tx": -1,
+   "ty": -1,
+   "facing": "up",
+   "sfx": "",
+   "locked_message": "MSG_ROUTE2_LOCKED"
+  },
+  {
+   "x": 20,
+   "y": 0,
+   "to": "rota_2",
+   "tx": -1,
+   "ty": -1,
+   "facing": "up",
+   "sfx": "",
+   "locked_message": "MSG_ROUTE2_LOCKED"
+  }
+ ],
+ "ambient": [
+  "leaves"
+ ]
+}

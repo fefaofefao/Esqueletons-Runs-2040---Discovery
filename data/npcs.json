@@ -274,6 +274,343 @@
      "dialog": "vila_mare/bras_depois"
     }
    ]
+  },
+  "lenhador_velho": {
+   "name_key": "SPK_LENHADOR_VELHO",
+   "role": "hint",
+   "sprite": "res://assets/sprites/npc/lenhador_velho.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "bosque/velho"
+    }
+   ]
+  },
+  "rufo": {
+   "name_key": "SPK_RUFO",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/rufo.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "rufo_beaten",
+     "dialog": "bosque/rufo_depois"
+    },
+    {
+     "dialog": "bosque/rufo"
+    }
+   ],
+   "tamer": {
+    "vision": 4,
+    "flag": "rufo_beaten"
+   }
+  },
+  "iris": {
+   "name_key": "SPK_IRIS",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/iris.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "iris_beaten",
+     "dialog": "bosque/iris_depois"
+    },
+    {
+     "dialog": "bosque/iris"
+    }
+   ],
+   "tamer": {
+    "vision": 4,
+    "flag": "iris_beaten"
+   }
+  },
+  "cipo": {
+   "name_key": "SPK_CIPO",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/cipo.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "cipo_beaten",
+     "dialog": "bosque/cipo_depois"
+    },
+    {
+     "dialog": "bosque/cipo"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "cipo_beaten"
+   }
+  },
+  "tilia": {
+   "name_key": "SPK_TILIA",
+   "role": "ranch",
+   "sprite": "res://assets/sprites/npc/tilia.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "bosque/tilia"
+    }
+   ]
+  },
+  "toco": {
+   "name_key": "SPK_TOCO",
+   "role": "shop",
+   "sprite": "res://assets/sprites/npc/toco.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "bosque/toco"
+    }
+   ]
+  },
+  "salvia": {
+   "name_key": "SPK_SALVIA",
+   "role": "quest",
+   "sprite": "res://assets/sprites/npc/salvia.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "salvia_done",
+     "dialog": "bosque/salvia_depois"
+    },
+    {
+     "if": "salvia_herb",
+     "dialog": "bosque/salvia_obrigada"
+    },
+    {
+     "if": "salvia_quest",
+     "dialog": "bosque/salvia_onde"
+    },
+    {
+     "dialog": "bosque/salvia_pede"
+    }
+   ]
+  },
+  "graveto": {
+   "name_key": "SPK_GRAVETO",
+   "role": "hint",
+   "sprite": "res://assets/sprites/npc/graveto.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "bosque/graveto"
+    }
+   ]
+  },
+  "hera": {
+   "name_key": "SPK_HERA",
+   "role": "lore",
+   "sprite": "res://assets/sprites/npc/hera.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "bosque/hera"
+    }
+   ]
+  },
+  "guarda_raiz": {
+   "name_key": "SPK_GUARDA_RAIZ",
+   "role": "hint",
+   "sprite": "res://assets/sprites/npc/guarda_raiz.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "bosque/guarda"
+    }
+   ]
+  },
+  "irmao_galho": {
+   "name_key": "SPK_GALHO",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/irmao_galho.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "galho_beaten",
+     "dialog": "bosque/galho_depois"
+    },
+    {
+     "dialog": "bosque/galho"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "galho_beaten"
+   }
+  },
+  "pai_musgo": {
+   "name_key": "SPK_MUSGO",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/pai_musgo.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "musgo_beaten",
+     "dialog": "bosque/musgo_depois"
+    },
+    {
+     "dialog": "bosque/musgo"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "musgo_beaten"
+   }
+  },
+  "ramalho": {
+   "name_key": "SPK_RAMALHO",
+   "role": "guardian",
+   "sprite": "res://assets/sprites/npc/skel_ramalho.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "bosque/ramalho"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "ramalho_beaten"
+   }
+  },
+  "ramalho_depois": {
+   "name_key": "SPK_RAMALHO",
+   "role": "guardian",
+   "sprite": "res://assets/sprites/npc/skel_ramalho.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "bosque/ramalho_depois"
+    }
+   ]
+  },
+  "lia_tunel": {
+   "name_key": "SPK_LIA",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_lia.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "bosque/tunel_taro"
+    }
+   ]
+  },
+  "rival_lia_b": {
+   "name_key": "SPK_LIA",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_lia.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "bosque/rival_lia"
+    }
+   ]
+  },
+  "rival_taro_b": {
+   "name_key": "SPK_TARO",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_taro.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "bosque/rival_taro"
+    }
+   ]
   }
  }
 }

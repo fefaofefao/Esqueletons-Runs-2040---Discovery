@@ -1,0 +1,71 @@
+{
+ "id": "raizal_casa_salvia",
+ "region": "bosque",
+ "name_key": "MAP_RAIZAL_CASA_SALVIA",
+ "tileset": "overworld",
+ "legend": {
+  "T": "wall_top",
+  "w": "wall",
+  "n": "wall_window",
+  ".": "floor",
+  "m": "mat"
+ },
+ "ground": [
+  "TTTTTTTTTTTT",
+  "TwwnwwwwwnwT",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "TTTTTTmTTTTT"
+ ],
+ "spawn": {
+  "x": 6,
+  "y": 8,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "shelf",
+   "x": 3,
+   "y": 2
+  },
+  {
+   "type": "plant",
+   "x": 10,
+   "y": 2
+  },
+  {
+   "type": "plant",
+   "x": 1,
+   "y": 7
+  },
+  {
+   "type": "table",
+   "x": 7,
+   "y": 5
+  }
+ ],
+ "npcs": [
+  {
+   "id": "salvia",
+   "x": 6,
+   "y": 3,
+   "facing": "down"
+  }
+ ],
+ "warps": [
+  {
+   "x": 6,
+   "y": 9,
+   "to": "raizal",
+   "tx": 14,
+   "ty": 28,
+   "facing": "down",
+   "sfx": "door"
+  }
+ ]
+}

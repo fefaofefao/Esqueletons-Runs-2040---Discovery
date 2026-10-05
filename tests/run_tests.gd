@@ -16,10 +16,19 @@ func _ready() -> void:
 		if f.begins_with("test_") and f.ends_with(".gd") and f != "test_case.gd":
 			files.append(f)
 	files.sort()
+	# --only=parte_do_nome roda só os arquivos que contêm o texto
+	for a in OS.get_cmdline_user_args():
+		if a.begins_with("--only="):
+			var only := a.substr(7)
+			files = files.filter(func(f: String) -> bool: return f.contains(only))
 	var total_fail := 0
 	var total_checks := 0
 	for f in files:
 		var script: GDScript = load("res://tests/" + f)
+		if script == null or not script.can_instantiate():
+			printerr("FALHOU  ", f, ": não compila")
+			total_fail += 1
+			continue
 		var t = script.new()
 		if t.has_method("set_tree"):
 			t.set_tree(get_tree(), self)

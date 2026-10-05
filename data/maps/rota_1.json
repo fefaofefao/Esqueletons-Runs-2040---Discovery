@@ -1,0 +1,391 @@
+{
+ "id": "rota_1",
+ "region": "bosque",
+ "name_key": "MAP_ROTA_1",
+ "tileset": "overworld",
+ "legend": {
+  "g": "grass",
+  "f": "flowers",
+  "B": "bush",
+  "p": "path",
+  "~": "water",
+  ".": "sand"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBggppgggBBBBBBBBBBppBggggggfffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffggffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffggffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffggB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffggB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffggffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffggffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfggfffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfggfffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppfggfB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppfggfB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfffggfffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfffggfffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggggggggggggppggggggffffffppffffB",
+  "BBggppgggggggggggggppggggggffffffppffffB",
+  "BBggppgggggggggggggppggggggffffffppffffB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggppppppppppppppppppppppppppgggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
+ ],
+ "spawn": {
+  "x": 19,
+  "y": 47,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "root_wall",
+   "x": 20,
+   "y": 35,
+   "if_not": "ramalho_beaten",
+   "dialog": "bosque/raizes"
+  },
+  {
+   "type": "root_wall",
+   "x": 20,
+   "y": 15,
+   "if_not": "ramalho_beaten",
+   "dialog": "bosque/raizes"
+  },
+  {
+   "type": "root_arch",
+   "x": 24,
+   "y": 37
+  },
+  {
+   "type": "root_arch",
+   "x": 24,
+   "y": 12
+  },
+  {
+   "type": "sign",
+   "x": 18,
+   "y": 42,
+   "dialog": "bosque/placa_bifurcacao"
+  },
+  {
+   "type": "stump",
+   "x": 23,
+   "y": 43
+  },
+  {
+   "type": "log",
+   "x": 10,
+   "y": 44
+  },
+  {
+   "type": "mushrooms",
+   "x": 7,
+   "y": 27
+  },
+  {
+   "type": "mushrooms",
+   "x": 30,
+   "y": 6
+  },
+  {
+   "type": "tree_oak",
+   "x": 11,
+   "y": 47
+  },
+  {
+   "type": "tree_oak2",
+   "x": 34,
+   "y": 46
+  },
+  {
+   "type": "tree_oak",
+   "x": 27,
+   "y": 44
+  },
+  {
+   "type": "tree_oak2",
+   "x": 34,
+   "y": 43
+  },
+  {
+   "type": "tree_oak",
+   "x": 30,
+   "y": 47
+  },
+  {
+   "type": "tree_oak",
+   "x": 17,
+   "y": 47
+  },
+  {
+   "type": "tree_pine",
+   "x": 4,
+   "y": 43
+  },
+  {
+   "type": "tree_pine",
+   "x": 3,
+   "y": 46
+  },
+  {
+   "type": "tree_pine",
+   "x": 9,
+   "y": 44
+  },
+  {
+   "type": "tree_oak",
+   "x": 6,
+   "y": 2
+  },
+  {
+   "type": "tree_oak",
+   "x": 26,
+   "y": 8
+  },
+  {
+   "type": "tree_oak",
+   "x": 16,
+   "y": 6
+  },
+  {
+   "type": "tree_pine",
+   "x": 13,
+   "y": 5
+  },
+  {
+   "type": "tree_pine",
+   "x": 35,
+   "y": 4
+  },
+  {
+   "type": "tree_oak2",
+   "x": 31,
+   "y": 6
+  },
+  {
+   "type": "tree_oak",
+   "x": 5,
+   "y": 8
+  },
+  {
+   "type": "tree_oak2",
+   "x": 26,
+   "y": 5
+  },
+  {
+   "type": "tree_oak2",
+   "x": 36,
+   "y": 8
+  },
+  {
+   "type": "tree_oak2",
+   "x": 31,
+   "y": 3
+  },
+  {
+   "type": "tree_pine",
+   "x": 3,
+   "y": 30
+  },
+  {
+   "type": "tree_pine",
+   "x": 3,
+   "y": 23
+  },
+  {
+   "type": "tree_oak2",
+   "x": 6,
+   "y": 12
+  },
+  {
+   "type": "tree_pine",
+   "x": 7,
+   "y": 27
+  },
+  {
+   "type": "tree_oak",
+   "x": 7,
+   "y": 16
+  },
+  {
+   "type": "tree_pine",
+   "x": 3,
+   "y": 36
+  }
+ ],
+ "npcs": [
+  {
+   "id": "lenhador_velho",
+   "x": 22,
+   "y": 42,
+   "facing": "left"
+  },
+  {
+   "id": "rufo",
+   "x": 6,
+   "y": 30,
+   "facing": "left"
+  },
+  {
+   "id": "iris",
+   "x": 3,
+   "y": 20,
+   "facing": "right"
+  },
+  {
+   "id": "cipo",
+   "x": 12,
+   "y": 9,
+   "facing": "down"
+  },
+  {
+   "id": "rival_lia_b",
+   "x": 26,
+   "y": 13,
+   "facing": "left",
+   "if": "partner_taro",
+   "if_not": "rival_bosque_done"
+  },
+  {
+   "id": "rival_taro_b",
+   "x": 26,
+   "y": 13,
+   "facing": "left",
+   "if": "partner_lia",
+   "if_not": "rival_bosque_done"
+  }
+ ],
+ "warps": [
+  {
+   "x": 19,
+   "y": 49,
+   "to": "vila_mare",
+   "tx": 19,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 49,
+   "to": "vila_mare",
+   "tx": 20,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 19,
+   "y": 0,
+   "to": "raizal",
+   "tx": 19,
+   "ty": 30,
+   "facing": "up",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 0,
+   "to": "raizal",
+   "tx": 20,
+   "ty": 30,
+   "facing": "up",
+   "sfx": ""
+  },
+  {
+   "x": 24,
+   "y": 37,
+   "to": "tunel_raizes",
+   "tx": 3,
+   "ty": 12,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 24,
+   "y": 12,
+   "to": "tunel_raizes",
+   "tx": 27,
+   "ty": 1,
+   "facing": "down",
+   "sfx": "door"
+  }
+ ],
+ "spawns": [
+  {
+   "id": "r1_sul",
+   "table": "rota1_sul",
+   "x": 10,
+   "y": 45,
+   "radius": 3,
+   "count": 2
+  },
+  {
+   "id": "r1_oeste",
+   "table": "rota1_oeste",
+   "x": 5,
+   "y": 25,
+   "radius": 2,
+   "count": 1
+  },
+  {
+   "id": "r1_campo_a",
+   "table": "rota1_campo",
+   "x": 30,
+   "y": 32,
+   "radius": 4,
+   "count": 3
+  },
+  {
+   "id": "r1_campo_b",
+   "table": "rota1_campo",
+   "x": 30,
+   "y": 18,
+   "radius": 4,
+   "count": 3
+  },
+  {
+   "id": "r1_norte",
+   "table": "rota1_norte",
+   "x": 10,
+   "y": 6,
+   "radius": 3,
+   "count": 2
+  }
+ ],
+ "ambient": [
+  "leaves"
+ ]
+}

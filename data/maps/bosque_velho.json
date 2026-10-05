@@ -1,0 +1,134 @@
+{
+ "id": "bosque_velho",
+ "region": "bosque",
+ "name_key": "MAP_BOSQUE_VELHO",
+ "tileset": "overworld",
+ "legend": {
+  "g": "grass",
+  "f": "flowers",
+  "B": "bush",
+  "p": "path",
+  "~": "water",
+  ".": "sand"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBBBBBB",
+  "BBgggggggggggggggggggggB",
+  "BBggfffffffffffffffffggB",
+  "BBggfffffffffffffffffggB",
+  "BBggffgggggggggggggffggB",
+  "BBggffgggggggggggggffggB",
+  "BBggffgggggggggggggffggB",
+  "BBggffggggggpppppppppppp",
+  "BBggffggggggpppppppppppp",
+  "BBggffgggggggggggggffggB",
+  "BBggffgggggggggggggffggB",
+  "BBggffgggggggggggggffggB",
+  "BBggfffffffffffffffffggB",
+  "BBgggggggggggggggggggggB",
+  "BBgggggggggggggggggggggB",
+  "BBBBBBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBBBBBB"
+ ],
+ "tint": [
+  0.82,
+  0.92,
+  0.85
+ ],
+ "spawn": {
+  "x": 21,
+  "y": 8,
+  "facing": "left"
+ },
+ "props": [
+  {
+   "type": "raizerno_tree",
+   "x": 11,
+   "y": 6,
+   "dialog": "bosque/raizerno"
+  },
+  {
+   "type": "herb_blue",
+   "x": 16,
+   "y": 11,
+   "dialog": "bosque/erva",
+   "if": "salvia_quest",
+   "if_not": "salvia_herb"
+  },
+  {
+   "type": "mushrooms",
+   "x": 7,
+   "y": 11
+  },
+  {
+   "type": "mushrooms",
+   "x": 17,
+   "y": 5
+  },
+  {
+   "type": "glow_shroom",
+   "x": 5,
+   "y": 7
+  },
+  {
+   "type": "tree_oak",
+   "x": 15,
+   "y": 4
+  },
+  {
+   "type": "tree_oak",
+   "x": 4,
+   "y": 3
+  },
+  {
+   "type": "tree_pine",
+   "x": 10,
+   "y": 14
+  },
+  {
+   "type": "tree_oak2",
+   "x": 3,
+   "y": 9
+  },
+  {
+   "type": "tree_oak2",
+   "x": 3,
+   "y": 13
+  },
+  {
+   "type": "tree_oak2",
+   "x": 6,
+   "y": 12
+  },
+  {
+   "type": "tree_pine",
+   "x": 19,
+   "y": 5
+  }
+ ],
+ "npcs": [],
+ "warps": [
+  {
+   "x": 23,
+   "y": 8,
+   "to": "raizal",
+   "tx": 1,
+   "ty": 15,
+   "facing": "right",
+   "sfx": ""
+  },
+  {
+   "x": 23,
+   "y": 9,
+   "to": "raizal",
+   "tx": 1,
+   "ty": 16,
+   "facing": "right",
+   "sfx": ""
+  }
+ ],
+ "ambient": [
+  "leaves"
+ ]
+}

@@ -77,7 +77,8 @@ warps = [
     {"x": 30, "y": 20, "to": "vila_casa_concha", "tx": 6, "ty": 8, "facing": "up", "sfx": "door"},
     {"x": 19, "y": H - 1, "to": "praia_despertar", "tx": 23, "ty": 1, "facing": "down", "sfx": ""},
     {"x": 20, "y": H - 1, "to": "praia_despertar", "tx": 24, "ty": 1, "facing": "down", "sfx": ""},
-    {"x": 19, "y": 0, "to": "rota_1", "tx": -1, "ty": -1, "facing": "up", "sfx": "", "locked_message": "MSG_ROUTE1_LOCKED"},
+    {"x": 19, "y": 0, "to": "rota_1", "tx": 19, "ty": 48, "facing": "up", "sfx": ""},
+    {"x": 20, "y": 0, "to": "rota_1", "tx": 20, "ty": 48, "facing": "up", "sfx": ""},
 ]
 vila = {"id": "vila_mare", "region": "vila_mare", "name_key": "MAP_VILA_MARE", "tileset": "overworld",
         "legend": {"g": "grass", "f": "flowers", "B": "bush", "p": "path", "~": "water", "W": "deep", "=": "dock", ".": "sand"},

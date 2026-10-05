@@ -33,6 +33,18 @@ NPCS = {
     "jurema": dict(skin=(170, 112, 80), hair=(40, 30, 30), style="long", shirt=(80, 160, 150), legs=(60, 80, 110), hat=("straw", (226, 196, 120))),
     "bras": dict(skin=(232, 186, 150), hair=(60, 40, 30), style="short", shirt=(110, 140, 70), legs=(60, 60, 70), hat=("cap", (110, 140, 70)), badge=True),
     "seu_remo": dict(skin=(200, 150, 110), hair=(90, 60, 40), style="short", shirt=(214, 120, 60), legs=(70, 70, 90), beard=(90, 60, 40)),
+    "lenhador_velho": dict(skin=(214, 160, 120), hair=(200, 200, 206), style="bald", shirt=(170, 60, 50), legs=(70, 60, 50), beard=(200, 200, 206), hat=("cap", (90, 70, 50))),
+    "rufo": dict(skin=(232, 186, 150), hair=(150, 80, 40), style="short", shirt=(200, 140, 60), legs=(60, 70, 90)),
+    "iris": dict(skin=(200, 150, 110), hair=(60, 40, 70), style="long", shirt=(140, 90, 170), legs=(60, 60, 80)),
+    "cipo": dict(skin=(244, 202, 166), hair=(40, 90, 40), style="short", shirt=(70, 120, 70), legs=(70, 60, 50), hat=("cap", (60, 110, 60)), badge=True),
+    "tilia": dict(skin=(226, 176, 136), hair=(170, 100, 60), style="bun", shirt=(240, 160, 170), legs=(110, 90, 120), skirt=True, apron=(246, 240, 226)),
+    "toco": dict(skin=(200, 150, 110), hair=(110, 80, 50), style="short", shirt=(120, 90, 60), legs=(60, 50, 40), apron=(170, 130, 80), beard=(110, 80, 50)),
+    "salvia": dict(skin=(232, 190, 160), hair=(220, 220, 200), style="long", shirt=(90, 150, 120), legs=(70, 100, 90), skirt=True, glasses=True),
+    "graveto": dict(skin=(244, 202, 166), hair=(60, 40, 30), style="short", shirt=(90, 150, 210), legs=(70, 60, 50), small=True),
+    "hera": dict(skin=(214, 160, 120), hair=(90, 60, 40), style="bun", shirt=(110, 140, 90), legs=(80, 70, 60), skirt=True),
+    "guarda_raiz": dict(skin=(232, 186, 150), hair=(60, 40, 30), style="short", shirt=(110, 140, 70), legs=(60, 60, 70), hat=("cap", (110, 140, 70)), badge=True),
+    "irmao_galho": dict(skin=(214, 160, 120), hair=(140, 90, 50), style="short", shirt=(150, 110, 70), legs=(70, 60, 50), hat=("cap", (150, 110, 70))),
+    "pai_musgo": dict(skin=(200, 150, 110), hair=(60, 90, 50), style="short", shirt=(90, 120, 80), legs=(60, 70, 60), beard=(60, 90, 50)),
     "vo_concha": dict(skin=(232, 190, 160), hair=(236, 236, 240), style="bun", shirt=(150, 110, 180), legs=(120, 90, 140), skirt=True, glasses=True, cane=True),
 }
 
@@ -182,6 +194,7 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     skeleton_sheet("faroleira_1").save(out / "skel_lia.png")
     skeleton_sheet("grumete_1").save(out / "skel_taro.png")
+    skeleton_sheet("lenhador_3").save(out / "skel_ramalho.png")
     preview = new(len(NPCS) * 2 * FW, 4 * FH)
     for i, (nid, r) in enumerate(NPCS.items()):
         s = sheet(r)

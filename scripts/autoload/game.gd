@@ -195,6 +195,8 @@ func start_battle(info: Dictionary) -> String:
 	transitioning = true
 	Controls.clear()
 	await _battle_flash()
+	if not info.has("bg"):
+		info["bg"] = str(Data.region(world.region_id).get("battle_bg", "res://assets/battle/bg_praia.png"))
 	battle = BattleScreen.new().setup(info, party, SaveGame.data["bag"])
 	world.visible = false
 	if touch:

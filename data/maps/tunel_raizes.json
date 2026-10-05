@@ -1,0 +1,152 @@
+{
+ "id": "tunel_raizes",
+ "region": "bosque",
+ "name_key": "MAP_TUNEL",
+ "tileset": "overworld",
+ "legend": {
+  "g": "grass",
+  "f": "flowers",
+  "B": "bush",
+  "p": "path",
+  "~": "water",
+  ".": "sand"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBBBBBBBBBppBBB",
+  "BBBBBBBBBBBBBBBBBBBBBBBBBBBppBBB",
+  "BBBBBBBBBBBBBBBBBBBBBBBBBBBppBBB",
+  "BBBBBBBBBBBBBBBBBBBBBBBBBBBppBBB",
+  "BBBBBBBBBBBBBBBBBBBppppppppppBBB",
+  "BBBBBBBBBBBBBBBBBBBppppppppppBBB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBB",
+  "BBBBBBBBBBpppppBBBBppBBBBBBBBBBB",
+  "BBBppppppppppppppppppBBBBBBBBBBB",
+  "BBBppppppppppppppppppBBBBBBBBBBB",
+  "BBBppBBBBBpppppBBBBBBBBBBBBBBBBB",
+  "BBBppBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+  "BBBppBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+ ],
+ "tint": [
+  0.42,
+  0.42,
+  0.58
+ ],
+ "spawn": {
+  "x": 3,
+  "y": 12,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "glow_shroom",
+   "x": 5,
+   "y": 9
+  },
+  {
+   "type": "glow_shroom",
+   "x": 9,
+   "y": 10
+  },
+  {
+   "type": "glow_shroom",
+   "x": 15,
+   "y": 9
+  },
+  {
+   "type": "glow_shroom",
+   "x": 20,
+   "y": 7
+  },
+  {
+   "type": "glow_shroom",
+   "x": 22,
+   "y": 4
+  },
+  {
+   "type": "glow_shroom",
+   "x": 26,
+   "y": 5
+  },
+  {
+   "type": "glow_shroom",
+   "x": 28,
+   "y": 2
+  },
+  {
+   "type": "glow_shroom",
+   "x": 12,
+   "y": 11
+  }
+ ],
+ "npcs": [
+  {
+   "id": "lia_tunel",
+   "x": 4,
+   "y": 11,
+   "facing": "up",
+   "if": "partner_taro",
+   "if_not": "tunel_visto"
+  }
+ ],
+ "warps": [
+  {
+   "x": 3,
+   "y": 13,
+   "to": "rota_1",
+   "tx": 24,
+   "ty": 38,
+   "facing": "down",
+   "sfx": "door"
+  },
+  {
+   "x": 4,
+   "y": 13,
+   "to": "rota_1",
+   "tx": 24,
+   "ty": 38,
+   "facing": "down",
+   "sfx": "door"
+  },
+  {
+   "x": 27,
+   "y": 0,
+   "to": "rota_1",
+   "tx": 24,
+   "ty": 13,
+   "facing": "down",
+   "sfx": "door"
+  },
+  {
+   "x": 28,
+   "y": 0,
+   "to": "rota_1",
+   "tx": 24,
+   "ty": 13,
+   "facing": "down",
+   "sfx": "door"
+  }
+ ],
+ "spawns": [
+  {
+   "id": "tunel",
+   "table": "tunel",
+   "x": 12,
+   "y": 9,
+   "radius": 1,
+   "count": 1
+  }
+ ],
+ "on_enter": [
+  {
+   "if": "partner_lia",
+   "if_not": "tunel_visto",
+   "dialog": "bosque/tunel_lia"
+  },
+  {
+   "if": "partner_taro",
+   "if_not": "tunel_visto",
+   "dialog": "bosque/tunel_taro"
+  }
+ ]
+}

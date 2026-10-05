@@ -364,11 +364,19 @@
    "x": 19,
    "y": 0,
    "to": "rota_1",
-   "tx": -1,
-   "ty": -1,
+   "tx": 19,
+   "ty": 48,
    "facing": "up",
-   "sfx": "",
-   "locked_message": "MSG_ROUTE1_LOCKED"
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 0,
+   "to": "rota_1",
+   "tx": 20,
+   "ty": 48,
+   "facing": "up",
+   "sfx": ""
   }
  ],
  "ambient": [

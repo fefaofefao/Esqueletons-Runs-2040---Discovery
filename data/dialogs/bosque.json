@@ -1,0 +1,555 @@
+{
+ "_comment": "Gerado por tools/maps/bosque_text.py a partir de docs/roteiro/02_bosque.md.",
+ "dialogs": {
+  "placa_bifurcacao": [
+   {
+    "say": "SIGN_B_FORK"
+   }
+  ],
+  "raizes": [
+   {
+    "say": "OBJ_ROOT_WALL"
+   }
+  ],
+  "velho": [
+   {
+    "say": "DLG_B_VELHO_1",
+    "speaker": "SPK_LENHADOR_VELHO"
+   },
+   {
+    "say": "DLG_B_VELHO_2",
+    "speaker": "SPK_LENHADOR_VELHO"
+   }
+  ],
+  "rufo": [
+   {
+    "say": "DLG_B_RUFO_1",
+    "speaker": "SPK_RUFO"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_RUFO",
+    "enemies": [
+     [
+      "lenhador_1",
+      12
+     ],
+     [
+      "cogumeleiro_1",
+      12
+     ]
+    ],
+    "reward": 300,
+    "win_flag": "rufo_beaten"
+   },
+   {
+    "say": "DLG_B_RUFO_2",
+    "speaker": "SPK_RUFO"
+   }
+  ],
+  "rufo_depois": [
+   {
+    "say": "DLG_B_RUFO_2",
+    "speaker": "SPK_RUFO"
+   }
+  ],
+  "iris": [
+   {
+    "say": "DLG_B_IRIS_1",
+    "speaker": "SPK_IRIS"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_IRIS",
+    "enemies": [
+     [
+      "mineiro_1",
+      13
+     ],
+     [
+      "lenhador_1",
+      13
+     ]
+    ],
+    "reward": 320,
+    "win_flag": "iris_beaten"
+   },
+   {
+    "say": "DLG_B_IRIS_2",
+    "speaker": "SPK_IRIS"
+   }
+  ],
+  "iris_depois": [
+   {
+    "say": "DLG_B_IRIS_2",
+    "speaker": "SPK_IRIS"
+   }
+  ],
+  "cipo": [
+   {
+    "say": "DLG_B_CIPO_1",
+    "speaker": "SPK_CIPO"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_CIPO",
+    "enemies": [
+     [
+      "herborista_1",
+      14
+     ],
+     [
+      "cogumeleiro_1",
+      14
+     ]
+    ],
+    "reward": 350,
+    "win_flag": "cipo_beaten",
+    "items": [
+     [
+      "pocao_m",
+      1
+     ]
+    ]
+   },
+   {
+    "say": "DLG_B_CIPO_2",
+    "speaker": "SPK_CIPO"
+   }
+  ],
+  "cipo_depois": [
+   {
+    "say": "DLG_B_CIPO_2",
+    "speaker": "SPK_CIPO"
+   }
+  ],
+  "tunel_lia": [
+   {
+    "say": "DLG_B_TUNEL_LIA_1",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "say": "DLG_B_TUNEL_LIA_2",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "set_flag": "tunel_visto"
+   }
+  ],
+  "tunel_taro": [
+   {
+    "say": "DLG_B_TUNEL_TARO_1",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_B_TUNEL_LIAR_1",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "say": "DLG_B_TUNEL_LIAR_2",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_B_TUNEL_LIAR_3",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "set_flag": "tunel_visto"
+   },
+   {
+    "action": "hide_npc",
+    "id": "lia_tunel"
+   }
+  ],
+  "rival_taro": [
+   {
+    "say": "DLG_B_RIVAL_TARO",
+    "speaker": "SPK_TARO",
+    "choice": [
+     {
+      "text": "OPT_P_FIGHT",
+      "goto": "bosque/rival_taro_luta"
+     },
+     {
+      "text": "OPT_P_NOT_NOW",
+      "goto": "vila_mare/rival_depois_taro"
+     }
+    ]
+   }
+  ],
+  "rival_taro_luta": [
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_TARO",
+    "enemies": [
+     [
+      "grumete_1",
+      14
+     ],
+     [
+      "lenhador_1",
+      13
+     ]
+    ],
+    "reward": 200,
+    "win_flag": "rival_bosque_done",
+    "marker": {
+     "species": "grumete_1",
+     "amount": 10
+    }
+   },
+   {
+    "say": "DLG_B_RIVAL_BYE",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "action": "hide_npc",
+    "id": "rival_taro_b"
+   }
+  ],
+  "rival_lia": [
+   {
+    "say": "DLG_B_RIVAL_LIA",
+    "speaker": "SPK_LIA",
+    "choice": [
+     {
+      "text": "OPT_P_FIGHT",
+      "goto": "bosque/rival_lia_luta"
+     },
+     {
+      "text": "OPT_P_NOT_NOW",
+      "goto": "vila_mare/rival_depois_lia"
+     }
+    ]
+   }
+  ],
+  "rival_lia_luta": [
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_LIA",
+    "enemies": [
+     [
+      "faroleira_1",
+      14
+     ],
+     [
+      "herborista_1",
+      13
+     ]
+    ],
+    "reward": 200,
+    "win_flag": "rival_bosque_done",
+    "marker": {
+     "species": "faroleira_1",
+     "amount": 10
+    }
+   },
+   {
+    "say": "DLG_B_RIVAL_BYE",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "action": "hide_npc",
+    "id": "rival_lia_b"
+   }
+  ],
+  "placa_raizal": [
+   {
+    "say": "SIGN_B_RAIZAL"
+   }
+  ],
+  "placa_clareira": [
+   {
+    "say": "SIGN_B_CLEARING"
+   }
+  ],
+  "tilia": [
+   {
+    "action": "heal"
+   },
+   {
+    "action": "respawn"
+   },
+   {
+    "say": "DLG_B_TILIA_1",
+    "speaker": "SPK_TILIA"
+   },
+   {
+    "say": "DLG_B_TILIA_2",
+    "speaker": "SPK_TILIA",
+    "choice": [
+     {
+      "text": "OPT_P_RANCH",
+      "goto": "vila_mare/rancho"
+     },
+     {
+      "text": "OPT_P_LEAVE"
+     }
+    ]
+   }
+  ],
+  "toco": [
+   {
+    "say": "DLG_B_TOCO_1",
+    "speaker": "SPK_TOCO"
+   },
+   {
+    "action": "shop",
+    "id": "raizal"
+   },
+   {
+    "say": "DLG_B_TOCO_2",
+    "speaker": "SPK_TOCO"
+   }
+  ],
+  "salvia_pede": [
+   {
+    "say": "DLG_B_SALVIA_ASK",
+    "speaker": "SPK_SALVIA"
+   },
+   {
+    "set_flag": "salvia_quest"
+   },
+   {
+    "say": "DLG_B_SALVIA_WHERE",
+    "speaker": "SPK_SALVIA"
+   }
+  ],
+  "salvia_onde": [
+   {
+    "say": "DLG_B_SALVIA_WHERE",
+    "speaker": "SPK_SALVIA"
+   }
+  ],
+  "salvia_obrigada": [
+   {
+    "say": "DLG_B_SALVIA_THANKS",
+    "speaker": "SPK_SALVIA"
+   },
+   {
+    "action": "give_item",
+    "item": "reviver",
+    "n": 1
+   },
+   {
+    "set_flag": "salvia_done"
+   }
+  ],
+  "salvia_depois": [
+   {
+    "say": "DLG_B_SALVIA_AFTER",
+    "speaker": "SPK_SALVIA"
+   }
+  ],
+  "erva": [
+   {
+    "say": "OBJ_HERB"
+   },
+   {
+    "set_flag": "salvia_herb"
+   }
+  ],
+  "graveto": [
+   {
+    "say": "DLG_B_GRAVETO",
+    "speaker": "SPK_GRAVETO"
+   }
+  ],
+  "hera": [
+   {
+    "say": "DLG_B_HERA_1",
+    "speaker": "SPK_HERA"
+   },
+   {
+    "say": "DLG_B_HERA_2",
+    "speaker": "SPK_HERA"
+   }
+  ],
+  "guarda": [
+   {
+    "say": "DLG_B_GUARDA",
+    "speaker": "SPK_GUARDA_RAIZ"
+   }
+  ],
+  "galho": [
+   {
+    "say": "DLG_B_GALHO_1",
+    "speaker": "SPK_GALHO"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_GALHO",
+    "enemies": [
+     [
+      "lenhador_1",
+      17
+     ],
+     [
+      "herborista_1",
+      16
+     ]
+    ],
+    "reward": 400,
+    "win_flag": "galho_beaten",
+    "items": [
+     [
+      "pocao_m",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_B_GALHO_2",
+    "speaker": "SPK_GALHO"
+   }
+  ],
+  "galho_depois": [
+   {
+    "say": "DLG_B_GALHO_2",
+    "speaker": "SPK_GALHO"
+   }
+  ],
+  "musgo": [
+   {
+    "say": "DLG_B_MUSGO_1",
+    "speaker": "SPK_MUSGO"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_MUSGO",
+    "enemies": [
+     [
+      "cogumeleiro_1",
+      16
+     ],
+     [
+      "herborista_1",
+      16
+     ]
+    ],
+    "reward": 350,
+    "win_flag": "musgo_beaten",
+    "items": [
+     [
+      "antidoto",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_B_MUSGO_2",
+    "speaker": "SPK_MUSGO"
+   }
+  ],
+  "musgo_depois": [
+   {
+    "say": "DLG_B_MUSGO_2",
+    "speaker": "SPK_MUSGO"
+   }
+  ],
+  "ramalho": [
+   {
+    "say": "DLG_B_RAMALHO_1",
+    "speaker": "SPK_RAMALHO"
+   },
+   {
+    "say": "DLG_B_RAMALHO_2",
+    "speaker": "SPK_RAMALHO"
+   },
+   {
+    "action": "battle",
+    "kind": "boss",
+    "tamer_key": "BTL_TAMER_RAMALHO",
+    "enemies": [
+     [
+      "lenhador_2",
+      22
+     ],
+     [
+      "flautista_2",
+      22
+     ],
+     [
+      "herborista_2",
+      23
+     ]
+    ],
+    "reward": 800,
+    "win_flag": "ramalho_beaten"
+   },
+   {
+    "say": "DLG_B_RAMALHO_WIN",
+    "speaker": "SPK_RAMALHO"
+   },
+   {
+    "say": "DLG_B_RAMALHO_MOTIVE",
+    "speaker": "SPK_RAMALHO"
+   },
+   {
+    "action": "give_item",
+    "item": "lasca_raiz",
+    "n": 1
+   },
+   {
+    "say": "DLG_B_RAMALHO_ROOTS",
+    "speaker": "SPK_RAMALHO"
+   },
+   {
+    "action": "hide_npc",
+    "id": "ramalho"
+   },
+   {
+    "action": "hide_npc",
+    "id": "guarda_raiz"
+   }
+  ],
+  "ramalho_depois": [
+   {
+    "say": "DLG_B_RAMALHO_MOTIVE",
+    "speaker": "SPK_RAMALHO"
+   },
+   {
+    "say": "DLG_B_RAMALHO_AFTER",
+    "speaker": "SPK_RAMALHO"
+   }
+  ],
+  "raizerno": [
+   {
+    "say": "DLG_B_RAIZERNO_1"
+   },
+   {
+    "say": "DLG_B_RAIZERNO_2",
+    "choice": [
+     {
+      "text": "OPT_B_WAKE",
+      "goto": "bosque/raizerno_luta"
+     },
+     {
+      "text": "OPT_B_LET_SLEEP"
+     }
+    ]
+   }
+  ],
+  "raizerno_luta": [
+   {
+    "action": "battle",
+    "kind": "wild",
+    "tamer_key": "",
+    "enemies": [
+     [
+      "raizerno",
+      20
+     ]
+    ],
+    "reward": 0
+   }
+  ]
+ }
+}

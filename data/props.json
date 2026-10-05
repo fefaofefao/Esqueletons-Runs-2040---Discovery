@@ -903,6 +903,303 @@
    ],
    "layer": "y",
    "interactive": true
+  },
+  "tree_oak": {
+   "rect": [
+    0,
+    293,
+    40,
+    52
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    20,
+    50
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ],
+    [
+     -1,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "tree_oak2": {
+   "rect": [
+    41,
+    293,
+    40,
+    52
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    20,
+    50
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ],
+    [
+     -1,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "tree_pine": {
+   "rect": [
+    82,
+    293,
+    28,
+    46
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    14,
+    44
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "root_wall": {
+   "rect": [
+    111,
+    293,
+    34,
+    26
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    17,
+    24
+   ],
+   "collision": [
+    [
+     -1,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "root_arch": {
+   "rect": [
+    146,
+    293,
+    34,
+    30
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    17,
+    29
+   ],
+   "collision": [
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "stump": {
+   "rect": [
+    181,
+    293,
+    18,
+    14
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    9,
+    12
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "log": {
+   "rect": [
+    200,
+    293,
+    34,
+    14
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    17,
+    12
+   ],
+   "collision": [
+    [
+     -1,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "mushrooms": {
+   "rect": [
+    235,
+    293,
+    16,
+    14
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    8,
+    13
+   ],
+   "collision": [],
+   "layer": "ground",
+   "interactive": false
+  },
+  "glow_shroom": {
+   "rect": [
+    0,
+    346,
+    16,
+    14
+   ],
+   "frames": 2,
+   "fps": 1.5,
+   "origin": [
+    8,
+    13
+   ],
+   "collision": [],
+   "layer": "ground",
+   "interactive": false,
+   "light": {
+    "radius": 26,
+    "color": [
+     0.5,
+     1.0,
+     0.95
+    ],
+    "intensity": 0.4,
+    "offset": [
+     0,
+     -6
+    ]
+   }
+  },
+  "herb_blue": {
+   "rect": [
+    33,
+    346,
+    14,
+    16
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    7,
+    15
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "raizerno_tree": {
+   "rect": [
+    48,
+    346,
+    56,
+    64
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    28,
+    62
+   ],
+   "collision": [
+    [
+     -1,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
   }
  }
 }

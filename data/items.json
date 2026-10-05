@@ -51,6 +51,14 @@
    "price": 0,
    "battle": false,
    "target": "none"
+  },
+  "lasca_raiz": {
+   "name_key": "ITEM_ROOT_CHIP",
+   "desc_key": "ITEM_ROOT_CHIP_TEXT",
+   "kind": "key",
+   "price": 0,
+   "battle": false,
+   "target": "none"
   }
  }
 }
