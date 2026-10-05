@@ -12,36 +12,36 @@
  },
  "ground": [
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BgBBggBBgBBBBBgggggppggBgggggBBgggBggBBB",
+  "BggggggggggggBgggggppggggggggggggggggggB",
+  "BggggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppggggggggggggggggggB",
   "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggppppppppppppppppppppppggggggggB",
+  "BggggggggggggggggggppgggggggggggggggggBB",
+  "BggggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppggggggggggggggggggB",
+  "BBgggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggBBB",
+  "BBgggggggppppppppppppppppppppppggggggggB",
+  "BggggggggpggggssssssssssssggggpgggggggBB",
   "BggggggggpggggssssssssssssggggpggggggggB",
   "BggggggggpggggssssssssssssggggpggggggggB",
-  "BggggggggpggggssssssssssssggggpggggggggB",
+  "pppppppppppppppsssssssssssggggpggggggBBB",
   "pppppppppppppppsssssssssssggggpggggggggB",
-  "pppppppppppppppsssssssssssggggpggggggggB",
-  "BggggggggpggggssssssssssssggggpggggggggB",
-  "BggggggggpggggssssssssssssggggpggggggggB",
-  "BggggggggpgggggggggppgggggggggpggggggggB",
-  "BggggggggpgggggggggppgggggggggpggggggggB",
-  "BgggggppppppppppppppppppppppppppppgggggB",
+  "BggggggggpggggssssssssssssggggpgggggggBB",
+  "BggggggggpggggssssssssssssggggpggggggBBB",
+  "BBgggggggpgggggggggppgggggggggpggggggggB",
+  "BBgggggggpgggggggggppgggggggggpgggggggBB",
+  "BBggggppppppppppppppppppppppppppppgggggB",
+  "BBggggggggggggpggggppggggggggggggggggBBB",
   "BgggggggggggggpggggppggggggggggggggggggB",
+  "BBggggggggggggpggggppggggggggggggggggggB",
+  "BBggggggggggggpggggppggggggggggggggggggB",
+  "BBggggggggggggpggggppggggggggggggggggggB",
   "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppgggggggggggggggggBB",
+  "BgggBggggggggggggggppggggggggggggggBggBB",
+  "BgBBBBBgBggBgBgggggppgggBggggggggBBBgggB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
  ],
  "spawn": {
@@ -192,6 +192,91 @@
    "type": "rock_small",
    "x": 33,
    "y": 27
+  },
+  {
+   "type": "rock_small",
+   "x": 8,
+   "y": 26
+  },
+  {
+   "type": "rock_small",
+   "x": 2,
+   "y": 20
+  },
+  {
+   "type": "rock_small",
+   "x": 27,
+   "y": 5
+  },
+  {
+   "type": "rock_small",
+   "x": 11,
+   "y": 18
+  },
+  {
+   "type": "rock_small",
+   "x": 32,
+   "y": 4
+  },
+  {
+   "type": "cactus",
+   "x": 24,
+   "y": 5
+  },
+  {
+   "type": "rock_small",
+   "x": 25,
+   "y": 29
+  },
+  {
+   "type": "rock_small",
+   "x": 38,
+   "y": 16
+  },
+  {
+   "type": "cactus",
+   "x": 7,
+   "y": 12
+  },
+  {
+   "type": "rock_small",
+   "x": 32,
+   "y": 15
+  },
+  {
+   "type": "cactus",
+   "x": 35,
+   "y": 28
+  },
+  {
+   "type": "cactus",
+   "x": 34,
+   "y": 11
+  },
+  {
+   "type": "cactus",
+   "x": 7,
+   "y": 30
+  },
+  {
+   "type": "cactus",
+   "x": 1,
+   "y": 30
+  },
+  {
+   "type": "cactus",
+   "x": 2,
+   "y": 7
+  },
+  {
+   "type": "rock_small",
+   "x": 27,
+   "y": 14
+  },
+  {
+   "type": "cactus",
+   "x": 37,
+   "y": 12
   }
  ],
  "npcs": [
@@ -326,5 +411,6 @@
    "if_not": "palmeiral_visto",
    "dialog": "deserto/chegada_cidade"
   }
- ]
+ ],
+ "refined": true
 }

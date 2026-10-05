@@ -182,6 +182,81 @@
    "type": "reeds",
    "x": 36,
    "y": 24
+  },
+  {
+   "type": "mushrooms",
+   "x": 35,
+   "y": 10
+  },
+  {
+   "type": "reeds",
+   "x": 3,
+   "y": 19
+  },
+  {
+   "type": "mushrooms",
+   "x": 31,
+   "y": 4
+  },
+  {
+   "type": "reeds",
+   "x": 10,
+   "y": 27
+  },
+  {
+   "type": "reeds",
+   "x": 36,
+   "y": 13
+  },
+  {
+   "type": "glow_shroom",
+   "x": 34,
+   "y": 24
+  },
+  {
+   "type": "dead_tree",
+   "x": 33,
+   "y": 14
+  },
+  {
+   "type": "reeds",
+   "x": 30,
+   "y": 28
+  },
+  {
+   "type": "glow_shroom",
+   "x": 3,
+   "y": 22
+  },
+  {
+   "type": "reeds",
+   "x": 13,
+   "y": 4
+  },
+  {
+   "type": "dead_tree",
+   "x": 7,
+   "y": 24
+  },
+  {
+   "type": "reeds",
+   "x": 25,
+   "y": 28
+  },
+  {
+   "type": "mushrooms",
+   "x": 37,
+   "y": 18
+  },
+  {
+   "type": "reeds",
+   "x": 6,
+   "y": 13
+  },
+  {
+   "type": "reeds",
+   "x": 12,
+   "y": 23
   }
  ],
  "npcs": [
@@ -344,5 +419,6 @@
    "if_not": "brejo_visto",
    "dialog": "pantano/chegada_brejo"
   }
- ]
+ ],
+ "refined": true
 }

@@ -129,8 +129,8 @@ rz.fill(14, 12, 25, 18, "p"); rz.fill(9, 11, 30, 11, "p"); rz.fill(6, 21, 33, 21
 rz.fill(9, 11, 9, 21, "p"); rz.fill(30, 11, 30, 21, "p")
 rz.fill(0, 15, 14, 16, "p")                                  # trilha do Bosque Velho
 rz.fill(14, 21, 14, 27, "p")
-pr = [{"type": "house_ranch", "x": 12, "y": 10}, {"type": "house_shop", "x": 27, "y": 10},
-      {"type": "house_a", "x": 8, "y": 20}, {"type": "house_b", "x": 31, "y": 20}, {"type": "house_a", "x": 14, "y": 27},
+pr = [{"type": "log_cabin_ranch", "x": 12, "y": 10}, {"type": "log_cabin_shop", "x": 27, "y": 10},
+      {"type": "log_cabin", "x": 8, "y": 20}, {"type": "log_cabin_b", "x": 31, "y": 20}, {"type": "log_cabin", "x": 14, "y": 27},
       {"type": "sign", "x": 18, "y": 28, "dialog": "bosque/placa_raizal"}, {"type": "sign", "x": 18, "y": 7, "dialog": "bosque/placa_clareira"},
       {"type": "stall", "x": 23, "y": 17}, {"type": "lamp_post", "x": 13, "y": 13}, {"type": "lamp_post", "x": 26, "y": 13},
       {"type": "log", "x": 24, "y": 3}, {"type": "stump", "x": 15, "y": 3}, {"type": "stump", "x": 23, "y": 5},

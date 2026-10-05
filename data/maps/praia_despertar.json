@@ -16,20 +16,20 @@
  "ground": [
   "BBBBBBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBBBBBB",
-  "BBBBBBBBBBBBBBgggggBBBBppgBBBBBBBBBBBBBBBggggBBB",
-  "BBBBBggggggBgggggggggggppggBBBBBgggggBBgggggggBB",
-  "BBggggggggggggffgggggggppgggggggggggggfgggggggBB",
-  "BBgggfgggggggggggggggggppgggggfgggggggggggggggBB",
-  "BBggggfggggggggggggfgggppggggg...gggggggggffggBB",
-  "BBggggg....ggggggggggggppgg.........ggggggggg.BB",
-  "BBgg..........gggggggggpp...............gg....BB",
-  "BB..............gggggggpp.....................BB",
-  "BB.....................pp.....................BB",
+  "BBBBBBBBBBBBBBgggggBBBBppgBBBBBBBBBBBBBBBgBgBBBB",
+  "BBBBBggBgggBgggggggggggppggBBBBBgggBBBBgBgggggBB",
+  "BBBgggggggggggffgggggggppgggggggggggggfgggggggBB",
+  "BBgggfggfggggggggggggggppgggggfgggggggggggggggBB",
+  "BBBgggfffggggggggggfgggppggggg...gggggggggffggBB",
+  "BBBgggf....ggggggggggggppgg.........gggggggggBBB",
+  "BBgg..........gggggggggpp...............gg...BBB",
+  "BB..............gggggggpp....................BBB",
+  "BBB....................pp.....................BB",
   "BB.....................pp.....................BB",
   "B......................pp......................B",
-  "B......................p.......................B",
+  "B......................p......................BB",
+  "BB............................................BB",
   "B..............................................B",
-  "................................................",
   "................................................",
   "................................................",
   "........==......................................",
@@ -193,6 +193,61 @@
    "y": 20
   },
   {
+   "type": "rock_small",
+   "x": 40,
+   "y": 17
+  },
+  {
+   "type": "rock_small",
+   "x": 27,
+   "y": 6
+  },
+  {
+   "type": "plant",
+   "x": 12,
+   "y": 3
+  },
+  {
+   "type": "driftwood",
+   "x": 12,
+   "y": 14
+  },
+  {
+   "type": "rock_small",
+   "x": 4,
+   "y": 4
+  },
+  {
+   "type": "rock_small",
+   "x": 19,
+   "y": 5
+  },
+  {
+   "type": "starfish",
+   "x": 18,
+   "y": 17
+  },
+  {
+   "type": "rock_small",
+   "x": 26,
+   "y": 16
+  },
+  {
+   "type": "starfish",
+   "x": 8,
+   "y": 12
+  },
+  {
+   "type": "plant",
+   "x": 40,
+   "y": 6
+  },
+  {
+   "type": "starfish",
+   "x": 29,
+   "y": 14
+  },
+  {
    "type": "lighthouse_lit",
    "x": 6,
    "y": 15,
@@ -290,5 +345,6 @@
    "count": 3,
    "if": "has_partner"
   }
- ]
+ ],
+ "refined": true
 }

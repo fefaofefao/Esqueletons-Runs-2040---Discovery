@@ -92,6 +92,11 @@
    "dialog": "pantano/malote",
    "if": "pena_quest",
    "if_not": "malote_pego"
+  },
+  {
+   "type": "reeds",
+   "x": 13,
+   "y": 4
   }
  ],
  "npcs": [
@@ -166,5 +171,6 @@
    "if_not": "caldeirao_visto",
    "dialog": "pantano/chegada_caldeirao"
   }
- ]
+ ],
+ "refined": true
 }

@@ -13,36 +13,36 @@
  },
  "ground": [
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BggggggggBBBggBBBggppggggBBgggBBBgBgBgBB",
+  "BBggggggggggggggBggppggggggggggggggggggB",
+  "BBgggggggggggggggggppggggggggggggggggBBB",
   "BggggggggggggggggggppggggggggggggggggggB",
   "BggggggggggggggggggppggggggggggggggggggB",
+  "BBBggggggggggggggggppgggggggggggggggggBB",
   "BggggggggggggggggggppggggggggggggggggggB",
   "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
+  "BBgggggggggggggggggppggggggggggggggggggB",
+  "BBgggggggggggggggggppggggggggggggggggggB",
   "BggggggggppppppppppppppppppppppggggggggB",
   "BggggggggpggggssssssssssssggggpggggggggB",
   "BggggggggpggggssssssssssssggggpggggggggB",
-  "BggggggggpggggssssssssssssggggpggggggggB",
+  "BggggggggpggggssssssssssssggggpgggggggBB",
   "pppppppppppppppsssssssssssggggpggggggggB",
   "pppppppppppppppsssssssssssggggpggggggggB",
-  "BggggggggpggggssssssssssssggggpggggggggB",
-  "BggggggggpggggssssssssssssggggpggggggggB",
-  "BggggggggpgggggggggppgggggggggpggggggggB",
-  "BggggggggpgggggggggppgggggggggpggggggggB",
-  "BgggggppppppppppppppppppppppppppppgggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggpggggssssssssssssggggpgggggggBB",
+  "BggggggggpggggssssssssssssggggpgggggggBB",
+  "BBgggggggpgggggggggppgggggggggpggggggggB",
+  "BBgggggggpgggggggggppgggggggggpgggggggBB",
+  "BBggggppppppppppppppppppppppppppppggggBB",
+  "BgggggggggggggpggggppgggggggggggggggggBB",
+  "BBggggggggggggpggggppgggggggggggggggggBB",
+  "BBggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppgggggggggggggggggBB",
+  "BBggggggggggggpggggppggggggggggggggggggB",
+  "BBggggggggggggpggggppgggggggggggggggggBB",
+  "BggggggggggggggggggppgggggggggggggggggBB",
+  "BggggggggBgBgggggggppggBgggggggggggggggB",
+  "BgBggggBBBBBggBBgggppggBBggggBggBBgBgggB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
  ],
  "spawn": {
@@ -188,6 +188,86 @@
    "type": "rock_small",
    "x": 25,
    "y": 28
+  },
+  {
+   "type": "rock_small",
+   "x": 9,
+   "y": 6
+  },
+  {
+   "type": "rock_small",
+   "x": 33,
+   "y": 13
+  },
+  {
+   "type": "snow_pine",
+   "x": 24,
+   "y": 5
+  },
+  {
+   "type": "rock_small",
+   "x": 22,
+   "y": 26
+  },
+  {
+   "type": "snow_pine",
+   "x": 32,
+   "y": 16
+  },
+  {
+   "type": "snow_pine",
+   "x": 28,
+   "y": 17
+  },
+  {
+   "type": "rock_small",
+   "x": 14,
+   "y": 2
+  },
+  {
+   "type": "snow_pine",
+   "x": 6,
+   "y": 27
+  },
+  {
+   "type": "rock_small",
+   "x": 35,
+   "y": 21
+  },
+  {
+   "type": "rock_small",
+   "x": 36,
+   "y": 6
+  },
+  {
+   "type": "rock_small",
+   "x": 26,
+   "y": 30
+  },
+  {
+   "type": "rock_small",
+   "x": 3,
+   "y": 27
+  },
+  {
+   "type": "rock_small",
+   "x": 4,
+   "y": 11
+  },
+  {
+   "type": "rock_small",
+   "x": 38,
+   "y": 26
+  },
+  {
+   "type": "rock_small",
+   "x": 32,
+   "y": 8
+  },
+  {
+   "type": "rock_small",
+   "x": 33,
+   "y": 1
   }
  ],
  "npcs": [
@@ -334,5 +414,6 @@
    "if_not": "geada_vista",
    "dialog": "picos/chegada_cidade"
   }
- ]
+ ],
+ "refined": true
 }

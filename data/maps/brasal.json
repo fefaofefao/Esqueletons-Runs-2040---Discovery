@@ -13,36 +13,36 @@
  },
  "ground": [
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BggBBgBBBgggBggggggppggggBggggBBgggggggB",
+  "BgggggBggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppgggggggggggggggggBB",
+  "BggggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBBggggggggggggggggppgggggggggggggggggBB",
+  "BggggggggggggggggggppgggggggggggggggggBB",
+  "BggggggggggggggggggppgggggggggggggggggBB",
   "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggppppppppppppppppppppppggggggggB",
-  "BggggggggpggggssssssssssssggggpggggggggB",
-  "BggggggggpggggssssssssssssggggpggggggggB",
-  "BggggggggpggggssssssssssssggggpggggggggB",
-  "pppppppppppppppsssssssssssggggpggggggggB",
-  "pppppppppppppppsssssssssssggggpggggggggB",
-  "BggggggggpggggssssssssssssggggpggggggggB",
-  "BggggggggpggggssssssssssssggggpggggggggB",
+  "BggggggggggggggggggppgggggggggggggggggBB",
+  "BggggggggppppppppppppppppppppppgggggggBB",
+  "BggggggggpggggssssssssssssggggpgggggggBB",
+  "BggggggggpggggssssssssssssggggpgggggggBB",
+  "BggggggggpggggssssssssssssggggpgggggggBB",
+  "pppppppppppppppsssssssssssggggpgggggggBB",
+  "pppppppppppppppsssssssssssggggpgggggggBB",
+  "BggggggggpggggssssssssssssggggpgggggggBB",
+  "BggggggggpggggssssssssssssggggpgggggggBB",
+  "BBBggggggpgggggggggppgggggggggpgggggggBB",
   "BggggggggpgggggggggppgggggggggpggggggggB",
-  "BggggggggpgggggggggppgggggggggpggggggggB",
-  "BgggggppppppppppppppppppppppppppppgggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggppppppppppppppppppppppppppppggggBB",
+  "BBggggggggggggpggggppgggggggggggggggggBB",
+  "BBggggggggggggpggggppggggggggggggggggggB",
+  "BBggggggggggggpggggppgggggggggggggggggBB",
+  "BgggggggggggggpggggppgggggggggggggggggBB",
+  "BBBgggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggBBB",
   "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BggggggBBBgggggggggppgggggggBBBgggggBggB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
  ],
  "spawn": {
@@ -193,6 +193,91 @@
    "type": "rock_big",
    "x": 25,
    "y": 26
+  },
+  {
+   "type": "rock_small",
+   "x": 33,
+   "y": 2
+  },
+  {
+   "type": "rock_small",
+   "x": 15,
+   "y": 7
+  },
+  {
+   "type": "dead_tree",
+   "x": 24,
+   "y": 4
+  },
+  {
+   "type": "rock_small",
+   "x": 34,
+   "y": 27
+  },
+  {
+   "type": "rubble",
+   "x": 12,
+   "y": 18
+  },
+  {
+   "type": "rubble",
+   "x": 36,
+   "y": 19
+  },
+  {
+   "type": "rock_small",
+   "x": 34,
+   "y": 11
+  },
+  {
+   "type": "rubble",
+   "x": 2,
+   "y": 28
+  },
+  {
+   "type": "rubble",
+   "x": 27,
+   "y": 4
+  },
+  {
+   "type": "rock_small",
+   "x": 34,
+   "y": 5
+  },
+  {
+   "type": "rock_small",
+   "x": 11,
+   "y": 30
+  },
+  {
+   "type": "rock_small",
+   "x": 38,
+   "y": 30
+  },
+  {
+   "type": "rock_small",
+   "x": 8,
+   "y": 25
+  },
+  {
+   "type": "rock_small",
+   "x": 28,
+   "y": 16
+  },
+  {
+   "type": "rubble",
+   "x": 37,
+   "y": 16
+  },
+  {
+   "type": "rock_small",
+   "x": 38,
+   "y": 9
+  },
+  {
+   "type": "dead_tree",
+   "x": 28,
+   "y": 28
   }
  ],
  "npcs": [
@@ -340,5 +425,6 @@
    "if_not": "brasal_visto",
    "dialog": "minas/chegada_brasal"
   }
- ]
+ ],
+ "refined": true
 }

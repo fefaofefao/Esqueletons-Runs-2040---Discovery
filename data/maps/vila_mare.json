@@ -16,34 +16,34 @@
  "ground": [
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
-  "BBgggggggggggggggggppgggggggggggg~~~WWWW",
+  "BBgBBgBggBBBBggggggppgggggggBBggg~~~WWWW",
+  "BBggBggggggggggggggpBgggggggggggg~~~WWWW",
+  "BBBggggggggggggggggpBgggggggggggg~f~WWWW",
   "BBgggggggggggggggggpBgggggggggggg~~~WWWW",
-  "BBgggggggggggggggggpBgggggggggggg~f~WWWW",
-  "BBgggggggggggggggggpBgggggggggggg~~~WWWW",
+  "BBBggggggggggggggggppgggggggggggg~~~WWWW",
   "BBgggggggggggggggggppgggggggggggg~~~WWWW",
   "BBgggggggggggggggggppgggggggggggg~~~WWWW",
-  "BBgggggggggggggggggppgggggggggggg~~~WWWW",
+  "BBBBgggggggggggggggppgggggggggg..~~~WWWW",
   "BBgggggggggggggggggppgggggggggg..~~~WWWW",
-  "BBgggggggggggggggggppgggggggggg..~~~WWWW",
-  "BBgggggggpppppppppppppppppppppp..~~~WWWW",
+  "BBBggggggpppppppppppppppppppppp..~~~WWWW",
   "BBgggggggpggggppppppppppppggggp..~~~WWWW",
   "BBgggggggpggggpfppppppppfpggggp..~~~WWWW",
   "BBgggggggpggggppppppppppppggggp..~~~WWWW",
   "BBgggggggpggggppppppppppppppppppp======W",
-  "BBgggggggpggggppppppppppppppppppp======W",
+  "BBBggggggpggggppppppppppppppppppp======W",
   "BBgggggggpggggpfppppppppfpggggp..~~~WWWW",
-  "BBgggggggpggggppppppppppppggggp..~~~WWWW",
-  "BBgggggggpgggggggggppgggggggggp..~~~WWWW",
-  "BBgggggggpgggggggggppgggggggggp..~~~WWWW",
+  "BBBggggggpggggppppppppppppggggp..~~~WWWW",
+  "BBBggggggpgggggggggppgggggggggp..~~~WWWW",
+  "BBBggggggpgggggggggppgggggggggp..~~~WWWW",
   "BBggggpppppppppppppppppppppppppppp~~WWWW",
+  "BBBggggggggggggggggppgggggggggg..~~~WWWW",
   "BBgggggggggggggggggppgggggggggg..~~~WWWW",
   "BBgggggggggggggggggppgggggggggg..~~~WWWW",
-  "BBgggggggggggggggggppgggggggggg..~~~WWWW",
-  "BBgggggggggggggggggppgggggggggg..~~~WWWW",
-  "BBgggfgggggggggggggppgggggggggg..~~~WWWW",
-  "BBggggfggggggggggggppgggggggggggg~~~WWWW",
+  "BBggggggggggggggfggppgggggggggg..~~~WWWW",
+  "BBBggfgggggggggfgggppgggggggggg..~~~WWWW",
+  "BBBgggfggggggggfgggppgggggggggggg~~~WWWW",
   "BBggggggggggfggggggppggggggfggggg~~~WWWW",
-  "BBgggggggggggggggggppgggggggggggg~~~WWWW",
+  "BBgBBggBBBgBBBBBgggppgggggBggggBg~~~WWWW",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
  ],
@@ -253,6 +253,56 @@
    "type": "fence",
    "x": 28,
    "y": 6
+  },
+  {
+   "type": "palm",
+   "x": 14,
+   "y": 30
+  },
+  {
+   "type": "plant",
+   "x": 2,
+   "y": 21
+  },
+  {
+   "type": "plant",
+   "x": 22,
+   "y": 25
+  },
+  {
+   "type": "rock_small",
+   "x": 26,
+   "y": 2
+  },
+  {
+   "type": "rock_small",
+   "x": 11,
+   "y": 27
+  },
+  {
+   "type": "rock_small",
+   "x": 14,
+   "y": 6
+  },
+  {
+   "type": "stump",
+   "x": 23,
+   "y": 28
+  },
+  {
+   "type": "stump",
+   "x": 12,
+   "y": 17
+  },
+  {
+   "type": "rock_small",
+   "x": 5,
+   "y": 4
+  },
+  {
+   "type": "stump",
+   "x": 9,
+   "y": 7
   }
  ],
  "npcs": [
@@ -425,5 +475,6 @@
    "if_not": "x_vila_mare_visto",
    "dialog": "extras/chegada_vila_mare"
   }
- ]
+ ],
+ "refined": true
 }

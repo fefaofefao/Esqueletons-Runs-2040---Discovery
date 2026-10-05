@@ -242,6 +242,96 @@
    "type": "reeds",
    "x": 3,
    "y": 15
+  },
+  {
+   "type": "mushrooms",
+   "x": 8,
+   "y": 5
+  },
+  {
+   "type": "reeds",
+   "x": 28,
+   "y": 21
+  },
+  {
+   "type": "reeds",
+   "x": 27,
+   "y": 11
+  },
+  {
+   "type": "reeds",
+   "x": 5,
+   "y": 47
+  },
+  {
+   "type": "glow_shroom",
+   "x": 36,
+   "y": 20
+  },
+  {
+   "type": "reeds",
+   "x": 24,
+   "y": 3
+  },
+  {
+   "type": "dead_tree",
+   "x": 16,
+   "y": 12
+  },
+  {
+   "type": "glow_shroom",
+   "x": 37,
+   "y": 23
+  },
+  {
+   "type": "reeds",
+   "x": 15,
+   "y": 5
+  },
+  {
+   "type": "glow_shroom",
+   "x": 9,
+   "y": 12
+  },
+  {
+   "type": "mushrooms",
+   "x": 35,
+   "y": 6
+  },
+  {
+   "type": "reeds",
+   "x": 36,
+   "y": 31
+  },
+  {
+   "type": "reeds",
+   "x": 37,
+   "y": 36
+  },
+  {
+   "type": "reeds",
+   "x": 31,
+   "y": 28
+  },
+  {
+   "type": "reeds",
+   "x": 23,
+   "y": 37
+  },
+  {
+   "type": "mushrooms",
+   "x": 30,
+   "y": 44
+  },
+  {
+   "type": "reeds",
+   "x": 29,
+   "y": 35
+  },
+  {
+   "type": "glow_shroom",
+   "x": 23,
+   "y": 47
   }
  ],
  "npcs": [
@@ -377,5 +467,6 @@
    "if_not": "rota3_vista",
    "dialog": "pantano/chegada_rota"
   }
- ]
+ ],
+ "refined": true
 }

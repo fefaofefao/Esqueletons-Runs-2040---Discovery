@@ -13,20 +13,20 @@
  "ground": [
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BBggggggggBggggggggppgggggggBBBBBBBBgBBB",
+  "BBgggggggggggggggggppggggggggggggggggBBB",
+  "BBBBgggggggggggggggppggggggggggggggggBBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBBggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppggggggggggggggggBBB",
+  "BBBggggggggggggggggppgggggggggggggggggBB",
+  "BBBggggggggggggggggppgggggggggggggggggfB",
+  "BBBggggggggggggggggppgggggggggggggggggfB",
   "BBgggggggggggggggggppgggggggggggggggggfB",
-  "BBgggggggggggggggggppgggggggggggggggggfB",
-  "BBgggggggggggggggggppgggggggggggggggggfB",
-  "BBgggggggggggggggggppgggggggggggggggggfB",
-  "BBgggggggggggggggggppgggggggggggggggggfB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffggffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffggffffB",
+  "BBBggggggggggggggBgppgggggggggggggggggfB",
+  "BBggggggggBBBBBggBgppgBBggggggggggggggfB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffggffffB",
+  "BBggppggBBBBBBBBBBBppBBBBffffffffggffffB",
   "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
   "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
   "BBggppgggBBBBBBBBBBppBBBBfffggfffppffffB",
@@ -34,32 +34,32 @@
   "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
   "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
   "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBBgppggBBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBBgppgBBBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppggBBBBBBBBBBBppBBBBffffffffpggfffB",
   "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
   "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffpggfffB",
   "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffggppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffggppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffggppffffB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffggppffffB",
+  "BBBgppggBBBBBBBBBBBppBBBBffffffffppffffB",
   "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
   "BBggppgggBBBBBBBBBBppBBBBffffffffggffffB",
-  "BBggppgggggggggggggppggggffffffffggffffB",
+  "BBggppgggggBBBgggBgppggBgffffffffggffffB",
   "BBggppgggggggggggggppggggffffffffppffffB",
   "BBggppgggggggggggggppggggffffffffppffffB",
   "BBggppgggggggggggggppggggffffffffppffffB",
   "BBggppgggppppppppppppppppppppppppppgggBB",
+  "BBBggggggggggggggggppggggggggggggggggBBB",
+  "BBBggggggggggggggggppgggggggggggggggggBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppggggggggggggggggBBB",
+  "BBgggggggggggggggggppggBgggggggggggggBBB",
+  "BBBgggBBBBgBgBgggggppggBBgggBBgggggBgBBB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
  ],
  "spawn": {
@@ -199,6 +199,231 @@
    "type": "rock_small",
    "x": 3,
    "y": 16
+  },
+  {
+   "type": "snow_pine",
+   "x": 29,
+   "y": 1
+  },
+  {
+   "type": "rock_big",
+   "x": 33,
+   "y": 1
+  },
+  {
+   "type": "snow_pine",
+   "x": 11,
+   "y": 15
+  },
+  {
+   "type": "snow_pine",
+   "x": 22,
+   "y": 15
+  },
+  {
+   "type": "snow_pine",
+   "x": 14,
+   "y": 16
+  },
+  {
+   "type": "snow_pine",
+   "x": 16,
+   "y": 17
+  },
+  {
+   "type": "rock_big",
+   "x": 11,
+   "y": 18
+  },
+  {
+   "type": "snow_pine",
+   "x": 14,
+   "y": 18
+  },
+  {
+   "type": "snow_pine",
+   "x": 17,
+   "y": 19
+  },
+  {
+   "type": "snow_pine",
+   "x": 11,
+   "y": 20
+  },
+  {
+   "type": "rock_big",
+   "x": 15,
+   "y": 20
+  },
+  {
+   "type": "snow_pine",
+   "x": 23,
+   "y": 20
+  },
+  {
+   "type": "rock_big",
+   "x": 10,
+   "y": 22
+  },
+  {
+   "type": "snow_pine",
+   "x": 22,
+   "y": 22
+  },
+  {
+   "type": "snow_pine",
+   "x": 13,
+   "y": 24
+  },
+  {
+   "type": "snow_pine",
+   "x": 16,
+   "y": 24
+  },
+  {
+   "type": "snow_pine",
+   "x": 10,
+   "y": 25
+  },
+  {
+   "type": "snow_pine",
+   "x": 12,
+   "y": 26
+  },
+  {
+   "type": "snow_pine",
+   "x": 23,
+   "y": 26
+  },
+  {
+   "type": "rock_big",
+   "x": 14,
+   "y": 27
+  },
+  {
+   "type": "rock_big",
+   "x": 16,
+   "y": 27
+  },
+  {
+   "type": "snow_pine",
+   "x": 10,
+   "y": 28
+  },
+  {
+   "type": "snow_pine",
+   "x": 22,
+   "y": 28
+  },
+  {
+   "type": "rock_big",
+   "x": 15,
+   "y": 29
+  },
+  {
+   "type": "snow_pine",
+   "x": 17,
+   "y": 29
+  },
+  {
+   "type": "rock_big",
+   "x": 10,
+   "y": 30
+  },
+  {
+   "type": "snow_pine",
+   "x": 13,
+   "y": 30
+  },
+  {
+   "type": "snow_pine",
+   "x": 16,
+   "y": 31
+  },
+  {
+   "type": "snow_pine",
+   "x": 13,
+   "y": 32
+  },
+  {
+   "type": "snow_pine",
+   "x": 15,
+   "y": 33
+  },
+  {
+   "type": "snow_pine",
+   "x": 17,
+   "y": 33
+  },
+  {
+   "type": "rock_big",
+   "x": 11,
+   "y": 34
+  },
+  {
+   "type": "rock_small",
+   "x": 36,
+   "y": 4
+  },
+  {
+   "type": "snow_pine",
+   "x": 30,
+   "y": 48
+  },
+  {
+   "type": "snow_pine",
+   "x": 27,
+   "y": 44
+  },
+  {
+   "type": "snow_pine",
+   "x": 5,
+   "y": 6
+  },
+  {
+   "type": "rock_small",
+   "x": 6,
+   "y": 42
+  },
+  {
+   "type": "rock_small",
+   "x": 15,
+   "y": 46
+  },
+  {
+   "type": "rock_small",
+   "x": 30,
+   "y": 44
+  },
+  {
+   "type": "snow_pine",
+   "x": 10,
+   "y": 48
+  },
+  {
+   "type": "snow_pine",
+   "x": 35,
+   "y": 46
+  },
+  {
+   "type": "rock_small",
+   "x": 4,
+   "y": 48
+  },
+  {
+   "type": "rock_small",
+   "x": 34,
+   "y": 12
+  },
+  {
+   "type": "snow_pine",
+   "x": 28,
+   "y": 12
+  },
+  {
+   "type": "rock_small",
+   "x": 15,
+   "y": 11
   }
  ],
  "npcs": [
@@ -370,5 +595,6 @@
    "if_not": "rota5_vista",
    "dialog": "picos/chegada_rota"
   }
- ]
+ ],
+ "refined": true
 }

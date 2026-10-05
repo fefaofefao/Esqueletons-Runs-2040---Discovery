@@ -13,53 +13,53 @@
  "ground": [
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BBggggggggBBggBgBggppggBBgBggBBgggggggBB",
+  "BBgggggggggggggggggppggBggggggggggggBBBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBBggggggggggggggggppggggggggggggggggBBB",
+  "BBgggggggggggggggggppggggggggggggggggBBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBBggggggggggggggggppgggggggggggggggggBB",
+  "BBBggggggggggggggggppgggggggggggggggggBB",
+  "BBBBgggggggggggggggppgggggggggggggggggfB",
   "BBgggggggggggggggggppgggggggggggggggggfB",
-  "BBgggggggggggggggggppgggggggggggggggggfB",
-  "BBgggggggggggggggggppgggggggggggggggggfB",
-  "BBgggggggggggggggggppgggggggggggggggggfB",
-  "BBgggggggggggggggggppgggggggggggggggggfB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBBggggggggggggBBggppgggggggggggggggggfB",
+  "BBBggggggggBBBBBBBgppggBBgggggggggggggfB",
+  "BBBgppgggBBBBBBBBBBppBBBBBfffffffppffBBB",
+  "BBBgppgggBBBBBBBBBBppBBBBBBffffffppfffBB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppfffBB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppfffBB",
+  "BBggppgggBBBBBBBBBBppBBBBBBffffffpggffBB",
   "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppggBBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppggBBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBBgppgggBBBBBBBBBBppBBBBBfffffffppffffB",
+  "BBBgppgggBBBBBBBBBBppBBBBBfffffffppfffBB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppfffBB",
+  "BBggppggBBBBBBBBBBBppBBBBBffggfffppfffBB",
   "BBggppgggBBBBBBBBBBppBBBBfffggfffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBfffggfffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffgggfppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffgggfpggfffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBfffffffggpffffB",
-  "BBggppgggBBBBBBBBBBppBBBBfffffffggpffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffgggfppffBBB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffgggfpggffBB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffpggfffB",
+  "BBggppgggBBBBBBBBBBppBBBBBfffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBBfffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBBffffffggpffffB",
+  "BBBgppggBBBBBBBBBBBppBBBBfffffffggpffffB",
+  "BBBgppgggBggBgBggggppggBBffffffffppffffB",
   "BBggppgggggggggggggppggggffffffffppffffB",
-  "BBggppgggggggggggggppggggffffffffppffffB",
-  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggggggggggggppggggffffffffppfffBB",
   "BBggppgggggggggggggppggggffffffffppffffB",
   "BBggppgggppppppppppppppppppppppppppgggBB",
+  "BBBggggggggggggggggppggggggggggggggggBBB",
+  "BBBggggggggggggggggppggggggggggggggggBBB",
+  "BBBBgggggggggggggggppggggggggggggggggBBB",
+  "BBgggggggggggggggggppggggggggggggggggBBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppggggggggggBggggggBB",
+  "BBggggBgggBBggggBggppggggggggggBggggggBB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
  ],
  "spawn": {
@@ -226,6 +226,266 @@
    "dialog": "minas/cristal_vela",
    "if": "pirita_quest",
    "if_not": "cristal_pego"
+  },
+  {
+   "type": "rock_big",
+   "x": 1,
+   "y": 13
+  },
+  {
+   "type": "rock_big",
+   "x": 16,
+   "y": 14
+  },
+  {
+   "type": "rock_big",
+   "x": 10,
+   "y": 15
+  },
+  {
+   "type": "rock_small",
+   "x": 12,
+   "y": 15
+  },
+  {
+   "type": "dead_tree",
+   "x": 17,
+   "y": 16
+  },
+  {
+   "type": "rock_small",
+   "x": 15,
+   "y": 17
+  },
+  {
+   "type": "rock_small",
+   "x": 12,
+   "y": 18
+  },
+  {
+   "type": "rock_small",
+   "x": 16,
+   "y": 19
+  },
+  {
+   "type": "dead_tree",
+   "x": 12,
+   "y": 20
+  },
+  {
+   "type": "dead_tree",
+   "x": 14,
+   "y": 20
+  },
+  {
+   "type": "dead_tree",
+   "x": 16,
+   "y": 21
+  },
+  {
+   "type": "rock_big",
+   "x": 23,
+   "y": 22
+  },
+  {
+   "type": "rock_small",
+   "x": 10,
+   "y": 23
+  },
+  {
+   "type": "dead_tree",
+   "x": 13,
+   "y": 23
+  },
+  {
+   "type": "rock_big",
+   "x": 15,
+   "y": 23
+  },
+  {
+   "type": "dead_tree",
+   "x": 1,
+   "y": 24
+  },
+  {
+   "type": "rock_big",
+   "x": 17,
+   "y": 25
+  },
+  {
+   "type": "dead_tree",
+   "x": 13,
+   "y": 26
+  },
+  {
+   "type": "dead_tree",
+   "x": 16,
+   "y": 27
+  },
+  {
+   "type": "dead_tree",
+   "x": 14,
+   "y": 28
+  },
+  {
+   "type": "dead_tree",
+   "x": 12,
+   "y": 29
+  },
+  {
+   "type": "dead_tree",
+   "x": 17,
+   "y": 29
+  },
+  {
+   "type": "rock_big",
+   "x": 11,
+   "y": 31
+  },
+  {
+   "type": "rock_small",
+   "x": 13,
+   "y": 31
+  },
+  {
+   "type": "rock_small",
+   "x": 15,
+   "y": 31
+  },
+  {
+   "type": "dead_tree",
+   "x": 17,
+   "y": 32
+  },
+  {
+   "type": "rock_big",
+   "x": 10,
+   "y": 33
+  },
+  {
+   "type": "dead_tree",
+   "x": 12,
+   "y": 33
+  },
+  {
+   "type": "rock_small",
+   "x": 14,
+   "y": 33
+  },
+  {
+   "type": "rock_small",
+   "x": 23,
+   "y": 33
+  },
+  {
+   "type": "rock_big",
+   "x": 17,
+   "y": 34
+  },
+  {
+   "type": "rock_small",
+   "x": 25,
+   "y": 8
+  },
+  {
+   "type": "rubble",
+   "x": 9,
+   "y": 10
+  },
+  {
+   "type": "rock_small",
+   "x": 30,
+   "y": 4
+  },
+  {
+   "type": "rock_small",
+   "x": 30,
+   "y": 46
+  },
+  {
+   "type": "rock_small",
+   "x": 34,
+   "y": 43
+  },
+  {
+   "type": "rock_small",
+   "x": 25,
+   "y": 13
+  },
+  {
+   "type": "rock_small",
+   "x": 34,
+   "y": 11
+  },
+  {
+   "type": "rock_small",
+   "x": 25,
+   "y": 45
+  },
+  {
+   "type": "rock_small",
+   "x": 8,
+   "y": 14
+  },
+  {
+   "type": "dead_tree",
+   "x": 32,
+   "y": 8
+  },
+  {
+   "type": "dead_tree",
+   "x": 5,
+   "y": 44
+  },
+  {
+   "type": "rock_small",
+   "x": 24,
+   "y": 3
+  },
+  {
+   "type": "rubble",
+   "x": 7,
+   "y": 4
+  },
+  {
+   "type": "rock_small",
+   "x": 6,
+   "y": 47
+  },
+  {
+   "type": "rock_small",
+   "x": 15,
+   "y": 9
+  },
+  {
+   "type": "rock_small",
+   "x": 36,
+   "y": 6
+  },
+  {
+   "type": "rubble",
+   "x": 8,
+   "y": 37
+  },
+  {
+   "type": "rubble",
+   "x": 15,
+   "y": 38
+  },
+  {
+   "type": "rock_small",
+   "x": 28,
+   "y": 12
+  },
+  {
+   "type": "dead_tree",
+   "x": 30,
+   "y": 30
+  },
+  {
+   "type": "rubble",
+   "x": 29,
+   "y": 43
   }
  ],
  "npcs": [
@@ -373,5 +633,6 @@
    "if_not": "vigia_lasca_ok",
    "dialog": "minas/vigia_entrada"
   }
- ]
+ ],
+ "refined": true
 }

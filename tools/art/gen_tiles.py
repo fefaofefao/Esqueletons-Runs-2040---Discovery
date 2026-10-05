@@ -155,6 +155,31 @@ def tile_grass(variant, flowers=False):
     return frames
 
 
+def tile_grass_detail(kind):
+    """Variantes raras da grama (refinamento dos mapas): tufo alto, pedrinhas e trevos."""
+    frames = tile_grass(3 + ["tuft", "pebbles", "clover"].index(kind))
+    out = []
+    for f, img in enumerate(frames):
+        if kind == "tuft":
+            for i, (bx, h) in enumerate([(5, 6), (7, 8), (9, 7), (11, 5), (6, 4)]):
+                lean = 1 if (f + i) % 2 else 0
+                for k in range(h):
+                    put(img, bx + (lean if k > h // 2 else 0), 13 - k, GRASS_DD if k < 2 else (GRASS_D if k < h - 1 else GRASS_L))
+        elif kind == "pebbles":
+            for (px, py) in [(4, 10), (10, 5), (12, 12)]:
+                put(img, px, py, (150, 146, 136))
+                put(img, px + 1, py, (184, 180, 168))
+                put(img, px, py + 1, (110, 108, 100))
+                put(img, px + 1, py + 1, (130, 126, 118))
+        else:
+            for (cx, cy) in [(4, 4), (10, 9), (6, 12)]:
+                for (dx, dy) in [(0, 0), (1, 0), (0, 1), (1, 1), (-1, 0), (0, -1)]:
+                    put(img, cx + dx, cy + dy, GRASS_L if (dx + dy + f) % 2 else (128, 200, 104))
+                put(img, cx, cy + 2, GRASS_DD)
+        out.append(img)
+    return out
+
+
 def tile_bush(variant):
     img = new(T, T)
     rect(img, 0, 0, T, T, BUSH_D)
@@ -195,7 +220,12 @@ def tile_path(variant):
             elif h < 0.1:
                 c = DIRT_D
             put(img, x, y, c)
-    for (x, y) in ([(4, 5), (11, 12)] if variant == 0 else [(7, 3), (2, 10), (12, 7)]):
+    if variant == 2:  # rachadura e marcas de roda
+        for k in range(10):
+            put(img, 3 + k, 6 + (k // 3) % 2, DIRT_D)
+        for k in range(14):
+            put(img, 1 + k, 12, mix(DIRT, DIRT_D, 0.5))
+    for (x, y) in ([(4, 5), (11, 12)] if variant == 0 else [(7, 3), (2, 10), (12, 7)] if variant == 1 else [(13, 3)]):
         put(img, x, y, (150, 140, 128))
         put(img, x + 1, y, (176, 166, 152))
         put(img, x, y + 1, (120, 110, 100))
@@ -519,10 +549,11 @@ def main():
     water = tile_water()
     terrain("water", [water], True, fps=3.0)
     terrain("deep", [tile_deep()], True, fps=2.5)
-    terrain("grass", [tile_grass(0), tile_grass(1)], False, fps=1.5, weights=[3, 2])
+    terrain("grass", [tile_grass(0), tile_grass(1), tile_grass_detail("tuft"), tile_grass_detail("pebbles"), tile_grass_detail("clover")],
+            False, fps=1.5, weights=[30, 20, 3, 2, 2])
     terrain("flowers", [tile_grass(2, flowers=True)], False, fps=1.5)
-    terrain("path", [tile_path(0), tile_path(1)], False, weights=[3, 1])
-    terrain("bush", [tile_bush(0), tile_bush(1)], True)
+    terrain("path", [tile_path(0), tile_path(1), tile_path(2)], False, weights=[6, 2, 1])
+    terrain("bush", [tile_bush(0), tile_bush(1), tile_bush(2), tile_bush(3)], True, weights=[3, 3, 2, 2])
     terrain("dock", [tile_dock()], False)
     terrain("floor", [tile_floor(0), tile_floor(1)], False, weights=[3, 1])
     terrain("wall", [tile_wall("plain")], True)

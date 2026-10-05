@@ -415,3 +415,7 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 ### Pendências
 - Do Fernando: site, ID de editor do AdMob, Secrets (keystore e IDs reais) e a tag `v0.1.0` (ver `docs/CHECKLIST_FINAL.md`).
 - Ouvir as músicas e revisar as traduções no teste fechado (anotar em `docs/FEEDBACK.md`).
+
+## Progressão dos selvagens e refinamento dos mapas (pedidos do Fernando)
+- Selvagens e domadores em rampa: cada rota começa perto da idade do último líder e fica abaixo do próximo (Rota 1 agora 7–9 → 12–14). Regra conferida pelo `validate_data.py`.
+- Mapas: 1º passe de refinamento (`tools/maps/refine.py`), tiles com mais variação, casas de toras em Raizal e a folha `docs/mapas_sheet.png` para revisão.

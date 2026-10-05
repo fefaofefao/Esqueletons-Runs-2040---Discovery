@@ -13,53 +13,53 @@
  "ground": [
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BBBgggBggggggBggBggppggBBBgggBgggBBBBBBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBBggggggggggggggggppgggggggggggggggggBB",
+  "BBBBgggggggggggggggppgggggggggggggggggBB",
+  "BBBggggggggggggggggppgggggggggggggggggBB",
+  "BBBggggggggggggggggppgggggggggggggggggBB",
+  "BBBggggggggggggggggppgggggggggggggggggfB",
+  "BBBggggggggggggggggppgggggggggggggggggBB",
+  "BBBggggggggggggggggppgggggggggggggggggBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggfB",
-  "BBgggggggggggggggggppgggggggggggggggggfB",
-  "BBgggggggggggggggggppgggggggggggggggggfB",
-  "BBgggggggggggggggggppgggggggggggggggggfB",
-  "BBgggggggggggggggggppgggggggggggggggggfB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffggffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffggffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBBgggggggBgggggBggppgggBBggggggggggggfB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppfffBB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffggfffBB",
+  "BBggppggBBBBBBBBBBBppBBBBBfffffffggffBBB",
+  "BBggppggBBBBBBBBBBBppBBBBffffffffppffBBB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppfffBB",
   "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
   "BBggppgggBBBBBBBBBBppBBBBffffffffppggffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppggffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffggffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffggffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppfggfB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppfggfB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffggffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffggffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggggggggggggppggggffffffffppffffB",
-  "BBggppgggggggggggggppggggffffffffppffffB",
-  "BBggppgggggggggggggppggggffffffffppffffB",
-  "BBggppgggggggggggggppggggffffffffppffffB",
-  "BBggppgggppppppppppppppppppppppppppgggBB",
+  "BBggppgggBBBBBBBBBBppBBBBBfffffffppggffB",
+  "BBggppgggBBBBBBBBBBppBBBBBfffffffppffffB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffggffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBBfffggffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBBBffffffpggfffB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffpggfffB",
+  "BBggppggBBBBBBBBBBBppBBBBffffffffppfffBB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffppfffBB",
+  "BBBgppgggBBBBBBBBBBppBBBBBfffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBBfffffffppfggfB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffppfggBB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBBgppggBBBBBBBBBBBppBBBBBfffggffppffffB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffggffppfffBB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppggggBBBBBggggppggBgffffffffppfffBB",
+  "BBggppgggggggggggggppggBgffffffffppffffB",
+  "BBggppgggggggggggggppggggffffffffppfffBB",
+  "BBBgppgggggggggggggppggggffffffffppfffBB",
+  "BBggppgggppppppppppppppppppppppppppgBBBB",
+  "BBBggggggggggggggggppgggggggggggggggBBBB",
+  "BBBggggggggggggggggppggggggggggggggggBBB",
+  "BBBggggggggggggggggppgggggggggggggggggBB",
+  "BBBggggggggggggggggppggggggggggggggggBBB",
+  "BBBggggggggggggggggppgggggggggggggggggBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBggBBBggBgggggggggppggggBBgBgggggggggBB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
  ],
  "spawn": {
@@ -213,6 +213,266 @@
    "type": "palm",
    "x": 7,
    "y": 21
+  },
+  {
+   "type": "rock_big",
+   "x": 35,
+   "y": 1
+  },
+  {
+   "type": "cactus",
+   "x": 12,
+   "y": 15
+  },
+  {
+   "type": "cactus",
+   "x": 16,
+   "y": 15
+  },
+  {
+   "type": "rock_big",
+   "x": 14,
+   "y": 16
+  },
+  {
+   "type": "rock_big",
+   "x": 22,
+   "y": 16
+  },
+  {
+   "type": "rock_big",
+   "x": 16,
+   "y": 17
+  },
+  {
+   "type": "cactus",
+   "x": 11,
+   "y": 19
+  },
+  {
+   "type": "cactus",
+   "x": 13,
+   "y": 19
+  },
+  {
+   "type": "rock_big",
+   "x": 16,
+   "y": 19
+  },
+  {
+   "type": "rock_big",
+   "x": 23,
+   "y": 19
+  },
+  {
+   "type": "rock_big",
+   "x": 13,
+   "y": 21
+  },
+  {
+   "type": "rock_big",
+   "x": 22,
+   "y": 22
+  },
+  {
+   "type": "cactus",
+   "x": 10,
+   "y": 23
+  },
+  {
+   "type": "cactus",
+   "x": 15,
+   "y": 23
+  },
+  {
+   "type": "rock_big",
+   "x": 10,
+   "y": 25
+  },
+  {
+   "type": "cactus",
+   "x": 12,
+   "y": 26
+  },
+  {
+   "type": "rock_big",
+   "x": 14,
+   "y": 26
+  },
+  {
+   "type": "rock_big",
+   "x": 23,
+   "y": 26
+  },
+  {
+   "type": "rock_big",
+   "x": 17,
+   "y": 27
+  },
+  {
+   "type": "rock_big",
+   "x": 10,
+   "y": 28
+  },
+  {
+   "type": "cactus",
+   "x": 16,
+   "y": 29
+  },
+  {
+   "type": "rock_big",
+   "x": 10,
+   "y": 30
+  },
+  {
+   "type": "rock_big",
+   "x": 23,
+   "y": 30
+  },
+  {
+   "type": "rock_big",
+   "x": 22,
+   "y": 32
+  },
+  {
+   "type": "cactus",
+   "x": 10,
+   "y": 33
+  },
+  {
+   "type": "rock_big",
+   "x": 1,
+   "y": 34
+  },
+  {
+   "type": "rock_big",
+   "x": 16,
+   "y": 34
+  },
+  {
+   "type": "cactus",
+   "x": 22,
+   "y": 34
+  },
+  {
+   "type": "rock_big",
+   "x": 11,
+   "y": 35
+  },
+  {
+   "type": "rock_big",
+   "x": 13,
+   "y": 35
+  },
+  {
+   "type": "cactus",
+   "x": 32,
+   "y": 44
+  },
+  {
+   "type": "rock_small",
+   "x": 26,
+   "y": 7
+  },
+  {
+   "type": "cactus",
+   "x": 32,
+   "y": 2
+  },
+  {
+   "type": "cactus",
+   "x": 24,
+   "y": 47
+  },
+  {
+   "type": "cactus",
+   "x": 31,
+   "y": 38
+  },
+  {
+   "type": "rock_small",
+   "x": 26,
+   "y": 27
+  },
+  {
+   "type": "rock_small",
+   "x": 17,
+   "y": 10
+  },
+  {
+   "type": "cactus",
+   "x": 2,
+   "y": 40
+  },
+  {
+   "type": "rock_small",
+   "x": 31,
+   "y": 25
+  },
+  {
+   "type": "dead_tree",
+   "x": 9,
+   "y": 37
+  },
+  {
+   "type": "cactus",
+   "x": 2,
+   "y": 17
+  },
+  {
+   "type": "cactus",
+   "x": 6,
+   "y": 9
+  },
+  {
+   "type": "cactus",
+   "x": 25,
+   "y": 10
+  },
+  {
+   "type": "rock_small",
+   "x": 28,
+   "y": 37
+  },
+  {
+   "type": "rock_small",
+   "x": 8,
+   "y": 47
+  },
+  {
+   "type": "dead_tree",
+   "x": 12,
+   "y": 12
+  },
+  {
+   "type": "rock_small",
+   "x": 17,
+   "y": 5
+  },
+  {
+   "type": "cactus",
+   "x": 25,
+   "y": 15
+  },
+  {
+   "type": "cactus",
+   "x": 31,
+   "y": 12
+  },
+  {
+   "type": "rock_small",
+   "x": 28,
+   "y": 13
+  },
+  {
+   "type": "rock_small",
+   "x": 15,
+   "y": 44
+  },
+  {
+   "type": "rock_small",
+   "x": 3,
+   "y": 7
   }
  ],
  "npcs": [
@@ -354,5 +614,6 @@
    "if_not": "rota6_vista",
    "dialog": "deserto/chegada_rota"
   }
- ]
+ ],
+ "refined": true
 }

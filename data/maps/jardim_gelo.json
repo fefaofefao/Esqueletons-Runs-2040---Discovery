@@ -18,18 +18,18 @@
   "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
   "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
   "BBBBBBppppppppBBBBBBBBBBBBBBBBBBBB",
-  "BBBBBBppppppppBBBBggggggggggggBBBB",
+  "BBBBBBppppppppBBBBBggggBggggBgBBBB",
   "BBBBBBppppppppBBBBggggggggggggpppp",
   "BBBBBBpppppppppppppgggggggggggpppp",
   "BBBBBBpppppppppppppgggggggggggpppp",
   "BBBgggggggggggBBBBggggggggggggpppp",
-  "BBBgggggggggggBBBBggggggggggggBBBB",
+  "BBBgggggggggggBBBBggBggggBggggBBBB",
+  "BBBBBggggggggBBBBBBBBBBBBBBBBBBBBB",
+  "BBBggggggggggBBBBBBBBBBBBBBBBBBBBB",
   "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
   "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
   "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
-  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
-  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
-  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBggggBBgggggBBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
  ],
@@ -87,6 +87,171 @@
    "dialog": "picos/broto",
    "if": "camelia_quest",
    "if_not": "broto_pego"
+  },
+  {
+   "type": "snow_pine",
+   "x": 22,
+   "y": 1
+  },
+  {
+   "type": "rock_big",
+   "x": 25,
+   "y": 1
+  },
+  {
+   "type": "snow_pine",
+   "x": 27,
+   "y": 1
+  },
+  {
+   "type": "rock_big",
+   "x": 31,
+   "y": 2
+  },
+  {
+   "type": "snow_pine",
+   "x": 26,
+   "y": 3
+  },
+  {
+   "type": "rock_big",
+   "x": 1,
+   "y": 4
+  },
+  {
+   "type": "snow_pine",
+   "x": 20,
+   "y": 4
+  },
+  {
+   "type": "rock_big",
+   "x": 22,
+   "y": 4
+  },
+  {
+   "type": "snow_pine",
+   "x": 32,
+   "y": 4
+  },
+  {
+   "type": "snow_pine",
+   "x": 26,
+   "y": 5
+  },
+  {
+   "type": "snow_pine",
+   "x": 29,
+   "y": 5
+  },
+  {
+   "type": "rock_big",
+   "x": 20,
+   "y": 6
+  },
+  {
+   "type": "snow_pine",
+   "x": 31,
+   "y": 6
+  },
+  {
+   "type": "rock_big",
+   "x": 4,
+   "y": 8
+  },
+  {
+   "type": "rock_big",
+   "x": 1,
+   "y": 10
+  },
+  {
+   "type": "rock_big",
+   "x": 3,
+   "y": 10
+  },
+  {
+   "type": "rock_big",
+   "x": 1,
+   "y": 14
+  },
+  {
+   "type": "rock_big",
+   "x": 32,
+   "y": 14
+  },
+  {
+   "type": "rock_big",
+   "x": 16,
+   "y": 15
+  },
+  {
+   "type": "rock_big",
+   "x": 21,
+   "y": 15
+  },
+  {
+   "type": "snow_pine",
+   "x": 24,
+   "y": 15
+  },
+  {
+   "type": "snow_pine",
+   "x": 29,
+   "y": 16
+  },
+  {
+   "type": "snow_pine",
+   "x": 1,
+   "y": 17
+  },
+  {
+   "type": "rock_big",
+   "x": 24,
+   "y": 17
+  },
+  {
+   "type": "rock_big",
+   "x": 26,
+   "y": 17
+  },
+  {
+   "type": "snow_pine",
+   "x": 32,
+   "y": 17
+  },
+  {
+   "type": "rock_big",
+   "x": 16,
+   "y": 18
+  },
+  {
+   "type": "rock_big",
+   "x": 18,
+   "y": 18
+  },
+  {
+   "type": "snow_pine",
+   "x": 21,
+   "y": 18
+  },
+  {
+   "type": "snow_pine",
+   "x": 26,
+   "y": 19
+  },
+  {
+   "type": "rock_big",
+   "x": 24,
+   "y": 20
+  },
+  {
+   "type": "snow_pine",
+   "x": 8,
+   "y": 18
+  },
+  {
+   "type": "rock_small",
+   "x": 26,
+   "y": 9
   }
  ],
  "npcs": [
@@ -154,5 +319,6 @@
    "if_not": "jardim_visto",
    "dialog": "picos/chegada_jardim"
   }
- ]
+ ],
+ "refined": true
 }

@@ -13,36 +13,36 @@
  },
  "ground": [
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BgggggggBBgBBfBBffffffffffffgBgggBgggggB",
+  "BggggggggggBffggggggggggggffggggggggggBB",
+  "BgggggggggggffggggggggggggffggggfgfggggB",
+  "BgggggggggggffggggggggggggffgggggggggggB",
+  "BgggggggggggffggggggggggggffggggfgfggggB",
   "BgggggggggggffffffffffffffffgggggggggggB",
-  "BgggggggggggffggggggggggggffgggggggggggB",
-  "BgggggggggggffggggggggggggffgggggggggggB",
-  "BgggggggggggffggggggggggggffgggggggggggB",
-  "BgggggggggggffggggggggggggffgggggggggggB",
-  "BgggggggggggffffffffffffffffgggggggggggB",
+  "BBBggggggggggggggggppggggggggggggggggggB",
+  "BBgggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppgggggggggggggggggBB",
   "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggppppppppppppppppppppppggggggggB",
+  "BBgggggggppppppppppppppppppppppgggggggBB",
+  "BBgggggggpggggppppppppppppggggpggggggggB",
   "BggggggggpggggppppppppppppggggpggggggggB",
   "BggggggggpggggppppppppppppggggpggggggggB",
-  "BggggggggpggggppppppppppppggggpggggggggB",
+  "ppppppppppppppppppppppppppggggpgggggggBB",
   "ppppppppppppppppppppppppppggggpggggggggB",
-  "ppppppppppppppppppppppppppggggpggggggggB",
-  "BggggggggpggggppppppppppppggggpggggggggB",
-  "BggggggggpggggppppppppppppggggpggggggggB",
-  "BggggggggpgggggggggppgggggggggpggggggggB",
-  "BggggggggpgggggggggppgggggggggpggggggggB",
-  "BgggggppppppppppppppppppppppppppppgggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BggggggggpggggppppppppppppggggpgggggggBB",
+  "BggggggggpggggppppppppppppggggpgggggggBB",
+  "BggggggggpgggggggggppgggggggggpgggggggBB",
+  "BggggggggpgggggggggppgggggggggpgggggggBB",
+  "BBggggppppppppppppppppppppppppppppgggBBB",
+  "BBggggggggggggpggggppgggggggggggggggggBB",
+  "BBggggggggggggpggggppggggggggggggggggggB",
+  "BffgggggggggggpggggppggggggggggggggggggB",
+  "BffgggggggggggpggggppggggggggggggggggBBB",
+  "BgfgggggggggggpggggppgggggggggggggggggBB",
+  "BBggggggggggggpggggppggggggggggggggggggB",
   "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggBggggggggggBgggBB",
+  "BBBBggggBggggBgBgggppggBggBBggBgggBggggB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
  ],
  "spawn": {
@@ -52,27 +52,27 @@
  },
  "props": [
   {
-   "type": "house_ranch",
+   "type": "log_cabin_ranch",
    "x": 12,
    "y": 10
   },
   {
-   "type": "house_shop",
+   "type": "log_cabin_shop",
    "x": 27,
    "y": 10
   },
   {
-   "type": "house_a",
+   "type": "log_cabin",
    "x": 8,
    "y": 20
   },
   {
-   "type": "house_b",
+   "type": "log_cabin_b",
    "x": 31,
    "y": 20
   },
   {
-   "type": "house_a",
+   "type": "log_cabin",
    "x": 14,
    "y": 27
   },
@@ -211,6 +211,76 @@
   {
    "type": "tree_oak2",
    "x": 25,
+   "y": 23
+  },
+  {
+   "type": "log",
+   "x": 35,
+   "y": 13
+  },
+  {
+   "type": "stump",
+   "x": 26,
+   "y": 7
+  },
+  {
+   "type": "mushrooms",
+   "x": 2,
+   "y": 24
+  },
+  {
+   "type": "mushrooms",
+   "x": 12,
+   "y": 19
+  },
+  {
+   "type": "tree_pine",
+   "x": 36,
+   "y": 10
+  },
+  {
+   "type": "log",
+   "x": 10,
+   "y": 6
+  },
+  {
+   "type": "mushrooms",
+   "x": 36,
+   "y": 26
+  },
+  {
+   "type": "stump",
+   "x": 27,
+   "y": 16
+  },
+  {
+   "type": "tree_oak2",
+   "x": 5,
+   "y": 13
+  },
+  {
+   "type": "mushrooms",
+   "x": 32,
+   "y": 28
+  },
+  {
+   "type": "stump",
+   "x": 35,
+   "y": 18
+  },
+  {
+   "type": "mushrooms",
+   "x": 14,
+   "y": 30
+  },
+  {
+   "type": "stump",
+   "x": 25,
+   "y": 29
+  },
+  {
+   "type": "stump",
+   "x": 16,
    "y": 23
   }
  ],
@@ -375,5 +445,6 @@
    "if_not": "x_raizal_visto",
    "dialog": "extras/chegada_raizal"
   }
- ]
+ ],
+ "refined": true
 }

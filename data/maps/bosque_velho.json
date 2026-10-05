@@ -14,20 +14,20 @@
  "ground": [
   "BBBBBBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBBBBBB",
-  "BBgggggggggggggggggggggB",
+  "BBgggggBBBggBBgBgBggggBB",
   "BBggfffffffffffffffffggB",
   "BBggfffffffffffffffffggB",
-  "BBggffgggggggggggggffggB",
-  "BBggffgggggggggggggffggB",
-  "BBggffgggggggggggggffggB",
+  "BBggffgggggggggggggffgBB",
+  "BBBgffgggggggggggggffggB",
+  "BBBgffgggggggggggggffggB",
   "BBggffggggggpppppppppppp",
   "BBggffggggggpppppppppppp",
   "BBggffgggggggggggggffggB",
-  "BBggffgggggggggggggffggB",
-  "BBggffgggggggggggggffggB",
+  "BBBgffgggggggggggggffggB",
+  "BBggffgggggggggggggffgBB",
   "BBggfffffffffffffffffggB",
-  "BBgggggggggggggggggggggB",
-  "BBgggggggggggggggggggggB",
+  "BBgggggggggggggffggggggB",
+  "BBggBBggBggggBBBfBBBBggB",
   "BBBBBBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBBBBBB"
  ],
@@ -105,6 +105,26 @@
    "type": "tree_pine",
    "x": 19,
    "y": 5
+  },
+  {
+   "type": "mushrooms",
+   "x": 5,
+   "y": 8
+  },
+  {
+   "type": "rock_small",
+   "x": 10,
+   "y": 10
+  },
+  {
+   "type": "log",
+   "x": 6,
+   "y": 5
+  },
+  {
+   "type": "mushrooms",
+   "x": 18,
+   "y": 3
   }
  ],
  "npcs": [],
@@ -137,5 +157,6 @@
    "if_not": "x_bosque_velho_visto",
    "dialog": "extras/chegada_bosque_velho"
   }
- ]
+ ],
+ "refined": true
 }

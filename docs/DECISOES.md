@@ -198,3 +198,11 @@ Registro das escolhas feitas sem consulta (AGENTS.md, seção A). Cada item diz 
 - **Recorrente:** as aparições do "recorrente" (lutas opcionais na Vila, no Bosque, em Ossório e nos Picos; Lia no túnel e no arquivo; Taro na mina, no brejo e no portão; pós-jogo) só aparecem em saves antigos com um parceiro só (`if_none: [flag do próprio]`). Não somem do código para que esses saves continuem coerentes.
 - **Save v2:** `partner_uid` virou a lista `partner_uids`; a migração marca o parceiro antigo como inicial.
 - **Simulador:** a equipe típica passa a ser Lia + Taro + 2 recrutas da região (`balance.json → team` com `@starters`).
+
+## Refinamento dos mapas (pedido do Fernando)
+
+- **Revisão:** `tools/screenshots/make_map_sheet.py` gera `docs/mapas_sheet.png` com os 24 mapas externos na ordem da história, com as zonas dos selvagens e a faixa de idade marcadas (a mesma ideia do `bestiario_sheet.png`).
+- **Primeiro passe (automático, `tools/maps/refine.py`, último passo do `build_all.py`):** bordas de mata/rocha irregulares (duas camadas), árvores e pedras por cima das massas de mata/rocha (dão volume sem mudar a passagem), manchas de flores e detalhes por região (conchas, tocos, cogumelos, juncos, cactos, pinheiros nevados...). Cada objeto que bloqueia só entra se todos os destinos continuam alcançáveis e nenhum bolsão de chão fica isolado; trilhas, portas, NPCs, objetos interativos e zonas de selvagens ficam protegidos.
+- **Tiles:** grama com tufos, pedrinhas e trevos (variantes raras), 4 variantes de mata e uma trilha com marcas de roda.
+- **Raizal** ganhou casas próprias de toras com telhado de musgo (antes repetia as casas da Vila Maré).
+- Próximos passes dependem do retorno do Fernando no teste (traçado das trilhas, tamanho das áreas, pontos de interesse).

@@ -1049,6 +1049,38 @@ def snow_pine():
     return img
 
 
+def log_cabin(kind, roof, wood):
+    """Cabana de toras de Raizal (Bosque): paredes de toras com as pontas redondas
+    nos cantos e telhado de musgo com tufos de folhas e cogumelos."""
+    W, H = (80, 70) if kind != "house" else (64, 62)
+    wood_d = mix(wood, (40, 24, 16), 0.35)
+    img = house(W, H, roof, mix(roof, (20, 40, 20), 0.35), wood, wood_d, kind)
+    wall_top = H - 30
+    for y in range(wall_top + 2, H - 1):
+        for x in range(3, W - 3):
+            px = img.getpixel((x, y))
+            if px[3] and px[:3] in (wood, mix(wood, wood_d, 0.25), wood_d):
+                ring = (y - wall_top) % 5
+                c = mix(wood, (255, 230, 190), 0.18) if ring == 1 else (wood_d if ring == 0 else wood)
+                if hash01(x, y, 9) > 0.93:
+                    c = wood_d
+                put(img, x, y, c)
+    for yy in range(wall_top + 3, H - 3, 5):  # pontas das toras nos cantos
+        for cx in (3, W - 4):
+            ellipse(img, cx, yy + 1, 2.2, 2.2, mix(wood, (240, 214, 170), 0.35))
+            put(img, cx, yy + 1, wood_d)
+    for i in range(9):  # tufos de folhas no telhado
+        x = int(W * 0.18 + hash01(i, 1, W) * W * 0.64)
+        y = int(4 + hash01(i, 2, W) * (wall_top - 6))
+        ellipse(img, x, y, 3, 2, mix(roof, (190, 230, 120), 0.45))
+    for i, x in enumerate((int(W * 0.24), int(W * 0.7))):  # cogumelos na beira
+        y = wall_top - 1
+        rect(img, x, y, 1, 2, (236, 226, 200))
+        ellipse(img, x, y - 1, 2, 1.2, (210, 60, 60) if i == 0 else (230, 160, 60))
+    outline(img, OUT_C)
+    return img
+
+
 def chalet(kind, roof):
     W, H = (80, 70) if kind != "house" else (64, 62)
     img = house(W, H, roof, mix(roof, (30, 30, 40), 0.3), (150, 110, 74), (116, 84, 56), kind)
@@ -1362,6 +1394,10 @@ PROPS = {
     "bell_tower": (lambda f: bell_tower(), 1, 0, (13, 43), [[0, 0], [-1, 0]], "y", True),
     "torch": (torch, 2, 6.0, (5, 21), [[0, 0]], "y", False),
     "snow_pine": (lambda f: snow_pine(), 1, 0, (14, 44), [[0, 0]], "y", False),
+    "log_cabin": (lambda f: log_cabin("house", (86, 132, 66), (150, 104, 62)), 1, 0, (32, 61), [[-2, 0], [-1, 0], [1, 0], [-2, -1], [-1, -1], [0, -1], [1, -1]], "y", False),
+    "log_cabin_b": (lambda f: log_cabin("house", (122, 140, 60), (128, 86, 52)), 1, 0, (32, 61), [[-2, 0], [-1, 0], [1, 0], [-2, -1], [-1, -1], [0, -1], [1, -1]], "y", False),
+    "log_cabin_ranch": (lambda f: log_cabin("ranch", (74, 124, 64), (156, 108, 64)), 1, 0, (40, 69), [[-2, 0], [-1, 0], [1, 0], [2, 0], [-2, -1], [-1, -1], [0, -1], [1, -1], [2, -1]], "y", False),
+    "log_cabin_shop": (lambda f: log_cabin("shop", (96, 128, 70), (144, 100, 60)), 1, 0, (40, 69), [[-2, 0], [-1, 0], [1, 0], [2, 0], [-2, -1], [-1, -1], [0, -1], [1, -1], [2, -1]], "y", False),
     "chalet": (lambda f: chalet("house", (120, 70, 60)), 1, 0, (32, 61), [[-2, 0], [-1, 0], [1, 0], [-2, -1], [-1, -1], [0, -1], [1, -1]], "y", False),
     "chalet_ranch": (lambda f: chalet("ranch", (170, 60, 60)), 1, 0, (40, 69), [[-2, 0], [-1, 0], [1, 0], [2, 0], [-2, -1], [-1, -1], [0, -1], [1, -1], [2, -1]], "y", False),
     "chalet_shop": (lambda f: chalet("shop", (70, 90, 150)), 1, 0, (40, 69), [[-2, 0], [-1, 0], [1, 0], [2, 0], [-2, -1], [-1, -1], [0, -1], [1, -1], [2, -1]], "y", False),
