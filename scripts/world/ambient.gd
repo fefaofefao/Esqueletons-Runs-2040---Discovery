@@ -4,6 +4,11 @@ extends RefCounted
 ##   sea_sparkle  brilhos na água
 ##   leaves       folhas soltas dos coqueiros, levadas pelo vento
 ##   dust_motes   poeira flutuando na luz (interiores)
+##   ash          cinza caindo devagar (Minas)
+##   mist         névoa rasteira (Pântano)
+##   snow         neve caindo (Picos)
+##   sand         areia levada pelo vento (Deserto)
+##   embers       brasas subindo (Castelo)
 
 
 static func add_to_map(map: MapView) -> void:
@@ -15,6 +20,16 @@ static func add_to_map(map: MapView) -> void:
 				_leaves(map)
 			"dust_motes":
 				_dust_motes(map)
+			"ash":
+				_weather(map, "dot", Color(0.75, 0.72, 0.72, 0.7), Vector2(0.2, 1), 4.0, 10.0, 7.0)
+			"mist":
+				_weather(map, "dust", Color(0.85, 0.95, 0.85, 0.35), Vector2(1, 0), 2.0, 5.0, 8.0)
+			"snow":
+				_weather(map, "dot", Color(1, 1, 1, 0.9), Vector2(-0.3, 1), 8.0, 16.0, 6.0)
+			"sand":
+				_weather(map, "dot", Color(0.95, 0.82, 0.6, 0.7), Vector2(1, 0.15), 18.0, 30.0, 3.0)
+			"embers":
+				_weather(map, "dot", Color(1.0, 0.55, 0.25, 0.85), Vector2(0.1, -1), 5.0, 10.0, 4.0)
 
 
 static func _base(tex: String, amount: int, lifetime: float) -> CPUParticles2D:
@@ -58,7 +73,7 @@ static func _sea_sparkle(map: MapView) -> void:
 
 
 static func _leaves(map: MapView) -> void:
-	var palms := map.props_of("palm")
+	var palms := map.props_of("palm") + map.props_of("tree_oak") + map.props_of("tree_pine")
 	if palms.is_empty():
 		return
 	var rng := RandomNumberGenerator.new()
@@ -91,5 +106,23 @@ static func _dust_motes(map: MapView) -> void:
 	p.initial_velocity_min = 1.0
 	p.initial_velocity_max = 3.0
 	p.color = Color(1, 0.95, 0.8, 0.5)
+	p.z_index = 20
+	map.add_child(p)
+
+
+## Clima da região: partículas espalhadas pelo mapa inteiro, com direção e
+## velocidade próprias. Quantidade limitada pela área (desempenho em celular).
+static func _weather(map: MapView, tex: String, color: Color, dir: Vector2, vmin: float, vmax: float, life: float) -> void:
+	var size := map.pixel_size()
+	var p := _base(tex, clampi(int(size.x * size.y / 2400.0), 12, 70), life)
+	p.emission_shape = CPUParticles2D.EMISSION_SHAPE_RECTANGLE
+	p.emission_rect_extents = size / 2.0
+	p.position = size / 2.0
+	p.direction = dir.normalized()
+	p.spread = 20.0
+	p.initial_velocity_min = vmin
+	p.initial_velocity_max = vmax
+	p.color = color
+	p.preprocess = life
 	p.z_index = 20
 	map.add_child(p)

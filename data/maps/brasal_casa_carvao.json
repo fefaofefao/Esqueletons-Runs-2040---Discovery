@@ -1,0 +1,72 @@
+{
+ "id": "brasal_casa_carvao",
+ "region": "minas",
+ "name_key": "MAP_BRASAL_CASA_CARVAO",
+ "tileset": "overworld",
+ "legend": {
+  "T": "wall_top",
+  "w": "wall",
+  "n": "wall_window",
+  ".": "floor",
+  "m": "mat"
+ },
+ "ground": [
+  "TTTTTTTTTTTT",
+  "TwwnwwwwwnwT",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "TTTTTTmTTTTT"
+ ],
+ "spawn": {
+  "x": 6,
+  "y": 8,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "map_board",
+   "x": 9,
+   "y": 2,
+   "dialog": "minas/mapa_antigo"
+  },
+  {
+   "type": "table",
+   "x": 4,
+   "y": 5
+  },
+  {
+   "type": "stool",
+   "x": 3,
+   "y": 6
+  },
+  {
+   "type": "lamp",
+   "x": 1,
+   "y": 7
+  }
+ ],
+ "npcs": [
+  {
+   "id": "carvao",
+   "x": 6,
+   "y": 3,
+   "facing": "down"
+  }
+ ],
+ "warps": [
+  {
+   "x": 6,
+   "y": 9,
+   "to": "brasal",
+   "tx": 14,
+   "ty": 28,
+   "facing": "down",
+   "sfx": "door"
+  }
+ ]
+}

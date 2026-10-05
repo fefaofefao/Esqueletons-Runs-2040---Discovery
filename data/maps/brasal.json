@@ -1,0 +1,344 @@
+{
+ "id": "brasal",
+ "region": "minas",
+ "name_key": "MAP_BRASAL",
+ "tileset": "overworld",
+ "legend": {
+  "g": "ash",
+  "f": "mud",
+  "B": "rock",
+  "p": "path",
+  ".": "floor",
+  "s": "stone"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggppppppppppppppppppppppggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "pppppppppppppppsssssssssssggggpggggggggB",
+  "pppppppppppppppsssssssssssggggpggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "BggggggggpgggggggggppgggggggggpggggggggB",
+  "BggggggggpgggggggggppgggggggggpggggggggB",
+  "BgggggppppppppppppppppppppppppppppgggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
+ ],
+ "spawn": {
+  "x": 19,
+  "y": 29,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "house_stone_ranch",
+   "x": 12,
+   "y": 10
+  },
+  {
+   "type": "house_stone_shop",
+   "x": 27,
+   "y": 10
+  },
+  {
+   "type": "house_stone",
+   "x": 8,
+   "y": 20
+  },
+  {
+   "type": "house_stone",
+   "x": 31,
+   "y": 20
+  },
+  {
+   "type": "house_stone",
+   "x": 14,
+   "y": 27
+  },
+  {
+   "type": "sign",
+   "x": 18,
+   "y": 28,
+   "dialog": "minas/placa_brasal"
+  },
+  {
+   "type": "sign",
+   "x": 3,
+   "y": 14,
+   "dialog": "minas/placa_mina"
+  },
+  {
+   "type": "anvil",
+   "x": 22,
+   "y": 16
+  },
+  {
+   "type": "mine_lamp",
+   "x": 13,
+   "y": 13
+  },
+  {
+   "type": "mine_lamp",
+   "x": 26,
+   "y": 13
+  },
+  {
+   "type": "rails",
+   "x": 5,
+   "y": 15
+  },
+  {
+   "type": "rails",
+   "x": 6,
+   "y": 15
+  },
+  {
+   "type": "mine_cart",
+   "x": 7,
+   "y": 13
+  },
+  {
+   "type": "chain_gate",
+   "x": 20,
+   "y": 1,
+   "if_not": "fornalha_beaten"
+  },
+  {
+   "type": "rock_small",
+   "x": 2,
+   "y": 8
+  },
+  {
+   "type": "crystal",
+   "x": 8,
+   "y": 3
+  },
+  {
+   "type": "rock_small",
+   "x": 2,
+   "y": 3
+  },
+  {
+   "type": "crystal",
+   "x": 10,
+   "y": 8
+  },
+  {
+   "type": "rock_small",
+   "x": 29,
+   "y": 4
+  },
+  {
+   "type": "rock_big",
+   "x": 32,
+   "y": 4
+  },
+  {
+   "type": "rock_small",
+   "x": 28,
+   "y": 1
+  },
+  {
+   "type": "rock_big",
+   "x": 28,
+   "y": 8
+  },
+  {
+   "type": "crystal",
+   "x": 11,
+   "y": 24
+  },
+  {
+   "type": "rock_big",
+   "x": 5,
+   "y": 29
+  },
+  {
+   "type": "crystal",
+   "x": 9,
+   "y": 28
+  },
+  {
+   "type": "crystal",
+   "x": 33,
+   "y": 25
+  },
+  {
+   "type": "rock_small",
+   "x": 25,
+   "y": 29
+  },
+  {
+   "type": "rock_big",
+   "x": 25,
+   "y": 26
+  }
+ ],
+ "npcs": [
+  {
+   "id": "pirita",
+   "x": 16,
+   "y": 16,
+   "facing": "right"
+  },
+  {
+   "id": "fagulha",
+   "x": 23,
+   "y": 14,
+   "facing": "down"
+  },
+  {
+   "id": "turmalina",
+   "x": 25,
+   "y": 18,
+   "facing": "left"
+  },
+  {
+   "id": "guarda_estrada",
+   "x": 21,
+   "y": 2,
+   "facing": "left",
+   "if_not": "fornalha_beaten"
+  }
+ ],
+ "warps": [
+  {
+   "x": 19,
+   "y": 31,
+   "to": "rota_2",
+   "tx": 19,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 31,
+   "to": "rota_2",
+   "tx": 20,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 19,
+   "y": 0,
+   "to": "rota_3",
+   "tx": 19,
+   "ty": 48,
+   "facing": "up",
+   "sfx": "",
+   "if": "fornalha_beaten",
+   "locked_message": "MSG_FORNALHA_ROAD"
+  },
+  {
+   "x": 20,
+   "y": 0,
+   "to": "rota_3",
+   "tx": 20,
+   "ty": 48,
+   "facing": "up",
+   "sfx": "",
+   "if": "fornalha_beaten",
+   "locked_message": "MSG_FORNALHA_ROAD"
+  },
+  {
+   "x": 0,
+   "y": 15,
+   "to": "mina_funda",
+   "tx": 32,
+   "ty": 10,
+   "facing": "left",
+   "sfx": ""
+  },
+  {
+   "x": 0,
+   "y": 16,
+   "to": "mina_funda",
+   "tx": 32,
+   "ty": 11,
+   "facing": "left",
+   "sfx": ""
+  },
+  {
+   "x": 12,
+   "y": 10,
+   "to": "brasal_rancho",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 27,
+   "y": 10,
+   "to": "brasal_loja",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 8,
+   "y": 20,
+   "to": "brasal_casa_bigorna",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 31,
+   "y": 20,
+   "to": "brasal_casa_agata",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 14,
+   "y": 27,
+   "to": "brasal_casa_carvao",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  }
+ ],
+ "ambient": [
+  "ash"
+ ],
+ "tint": [
+  0.9,
+  0.84,
+  0.82
+ ],
+ "on_enter": [
+  {
+   "if_not": "brasal_visto",
+   "dialog": "minas/chegada_brasal"
+  }
+ ]
+}

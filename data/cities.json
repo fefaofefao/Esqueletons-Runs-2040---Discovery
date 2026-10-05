@@ -1,0 +1,62 @@
+{
+ "_comment": "Gerado pelos scripts de região (tools/maps). Conferido por tools/validate_data.py.",
+ "cities": [
+  {
+   "id": "vila_mare",
+   "map": "vila_mare",
+   "ranch": "marola",
+   "shop": "vila_mare",
+   "tamer_houses": [
+    "seu_remo",
+    "vo_concha"
+   ],
+   "npcs": [
+    "pipa",
+    "cascalho",
+    "jurema",
+    "bento"
+   ],
+   "quests": [
+    "jurema"
+   ]
+  },
+  {
+   "id": "raizal",
+   "map": "raizal",
+   "ranch": "tilia",
+   "shop": "raizal",
+   "tamer_houses": [
+    "irmao_galho",
+    "pai_musgo"
+   ],
+   "npcs": [
+    "graveto",
+    "hera",
+    "salvia"
+   ],
+   "quests": [
+    "salvia"
+   ]
+  },
+  {
+   "id": "brasal",
+   "map": "brasal",
+   "ranch": "rubi",
+   "shop": "brasal",
+   "tamer_houses": [
+    "bigorna",
+    "agata"
+   ],
+   "npcs": [
+    "pirita",
+    "fagulha",
+    "turmalina",
+    "carvao"
+   ],
+   "quests": [
+    "carvao",
+    "pirita"
+   ]
+  }
+ ]
+}

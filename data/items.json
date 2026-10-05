@@ -59,6 +59,30 @@
    "price": 0,
    "battle": false,
    "target": "none"
+  },
+  "martelo_tia": {
+   "name_key": "ITEM_HAMMER",
+   "desc_key": "ITEM_HAMMER_TEXT",
+   "kind": "key",
+   "price": 0,
+   "battle": false,
+   "target": "none"
+  },
+  "capacete_carvao": {
+   "name_key": "ITEM_HELMET",
+   "desc_key": "ITEM_HELMET_TEXT",
+   "kind": "key",
+   "price": 0,
+   "battle": false,
+   "target": "none"
+  },
+  "cristal_vela": {
+   "name_key": "ITEM_CRYSTAL",
+   "desc_key": "ITEM_CRYSTAL_TEXT",
+   "kind": "key",
+   "price": 0,
+   "battle": false,
+   "target": "none"
   }
  }
 }

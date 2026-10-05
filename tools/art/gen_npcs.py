@@ -58,6 +58,7 @@ NPCS = {
     "agata": dict(skin=(200, 150, 110), hair=(50, 40, 40), style="long", shirt=(100, 120, 140), legs=(60, 60, 70), hat=("cap", (230, 190, 60))),
     "bigorna": dict(skin=(232, 186, 150), hair=(90, 60, 40), style="short", shirt=(130, 130, 140), legs=(60, 60, 70), apron=(90, 70, 50)),
     "fuligem": dict(skin=(190, 140, 100), hair=(50, 50, 50), style="short", shirt=(100, 110, 80), legs=(60, 60, 50), glasses=True),
+    "cascudo": dict(skin=(200, 150, 110), hair=(40, 30, 30), style="short", shirt=(90, 130, 170), legs=(70, 60, 50), small=True, hat=("cap", (200, 90, 60))),
     "bloqueio": dict(skin=(214, 160, 120), hair=(60, 40, 30), style="short", shirt=(90, 90, 100), legs=(60, 60, 70), hat=("cap", (230, 190, 60)), badge=True),
     "vo_concha": dict(skin=(232, 190, 160), hair=(236, 236, 240), style="bun", shirt=(150, 110, 180), legs=(120, 90, 140), skirt=True, glasses=True, cane=True),
 }
@@ -216,6 +217,7 @@ def main():
     skeleton_sheet("tamborileiro_3").save(out / "skel_duna.png")
     skeleton_sheet("rei_esqueleto").save(out / "skel_rei.png")
     skeleton_sheet("degustor").save(out / "skel_degustor.png")
+    skeleton_sheet("mineiro_2").save(out / "skel_mineiro.png")
     for sp in ("faroleira_2", "faroleira_3", "grumete_2", "grumete_3"):
         skeleton_sheet(sp).save(out / f"skel_{sp}.png")
     for sp in ("vagonauta", "brumaga", "bufardo", "nevasco", "ampulhor"):

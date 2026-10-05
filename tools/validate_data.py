@@ -458,6 +458,27 @@ def check_cities(keys):
             err(f"cidade {cid}: {len(houses)} casas de domadores (esperado 2 ou 3)")
         if not 3 <= len(c.get("npcs", [])) <= 6:
             err(f"cidade {cid}: {len(c.get('npcs', []))} NPCs (esperado 3 a 6)")
+        if not 1 <= len(c.get("quests", [])) <= 2:
+            err(f"cidade {cid}: {len(c.get('quests', []))} missões secundárias (esperado 1 ou 2)")
+        # tudo o que a ficha da cidade cita precisa existir de verdade
+        npc_db = (load(DATA / "npcs.json") or {}).get("npcs", {})
+        shops = (load(DATA / "shops.json") or {}).get("shops", {})
+        if c.get("shop") and c["shop"] not in shops:
+            err(f"cidade {cid}: loja '{c['shop']}' não existe em shops.json")
+        placed = set()
+        mp = DATA / "maps" / f"{c.get('map', '')}.json"
+        if not mp.exists():
+            err(f"cidade {cid}: mapa '{c.get('map')}' não existe")
+            continue
+        town = load(mp) or {}
+        rooms = [load(DATA / "maps" / f"{w['to']}.json") or {} for w in town.get("warps", []) if (DATA / "maps" / f"{w['to']}.json").exists()]
+        for m in [town] + rooms:
+            placed |= {n["id"] for n in m.get("npcs", [])}
+        for nid in [c.get("ranch")] + houses + c.get("npcs", []):
+            if nid not in npc_db:
+                err(f"cidade {cid}: NPC '{nid}' não existe em npcs.json")
+            elif nid not in placed:
+                err(f"cidade {cid}: NPC '{nid}' não está na cidade nem nos interiores")
 
 
 def check_routes():
@@ -472,6 +493,8 @@ def check_routes():
             err(f"rota {r.get('id')}: sem caminho alternativo ({len(paths)} caminho)")
         if any(p.get("required") for p in paths):
             err(f"rota {r.get('id')}: nenhum caminho pode ser obrigatório")
+        if not (DATA / "maps" / f"{r.get('map', '')}.json").exists():
+            err(f"rota {r.get('id')}: mapa '{r.get('map')}' não existe")
 
 
 def check_balance():

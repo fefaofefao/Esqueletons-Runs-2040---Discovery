@@ -165,3 +165,139 @@ DLG_B_RAIZERNO_1,"Um esqueleto enorme dorme fundido ao tronco. Na casca, um bras
 DLG_B_RAIZERNO_2,O desenho é igual ao do ingresso do museu.,The design matches the one on the museum ticket.,El dibujo es igual al de la entrada del museo.
 OPT_B_WAKE,Acordar,Wake it,Despertarlo
 OPT_B_LET_SLEEP,Deixar dormir,Let it sleep,Dejarlo dormir
+SPK_VIGIA_LASCA,Vigia da Trilha,Trail Lookout,Vigía del Sendero
+SPK_SEIXO,Seu Seixo,Old Pebble,Don Guijarro
+SPK_BRITA,Brita,Grit,Grava
+SPK_GRAXA,Graxa,Grease,Grasa
+SPK_FULIGEM,Fuligem,Soot,Hollín
+SPK_RUBI,Dona Rubi,Mrs. Ruby,Doña Rubí
+SPK_COBRE,Seu Cobre,Mr. Copper,Don Cobre
+SPK_PIRITA,Pirita,Pyrite,Pirita
+SPK_FAGULHA,Fagulha,Spark,Chispa
+SPK_TURMALINA,Vó Turmalina,Granny Tourmaline,Abuela Turmalina
+SPK_CARVAO,Seu Carvão,Old Coal,Don Carbón
+SPK_AGATA,Ágata,Agate,Ágata
+SPK_BIGORNA,Mestre Bigorna,Master Anvil,Maestro Yunque
+SPK_BLOQUEIO,Capataz Bloqueio,Foreman Blockade,Capataz Bloqueo
+SPK_FORNALHA,Tia Fornalha,Aunt Furnace,Tía Fragua
+BTL_TAMER_BRITA,Brita,Grit,Grava
+BTL_TAMER_GRAXA,Graxa,Grease,Grasa
+BTL_TAMER_FULIGEM,Fuligem,Soot,Hollín
+BTL_TAMER_BIGORNA,Mestre Bigorna,Master Anvil,Maestro Yunque
+BTL_TAMER_AGATA,Ágata,Agate,Ágata
+BTL_TAMER_BLOQUEIO,Capataz Bloqueio,Foreman Blockade,Capataz Bloqueo
+BTL_TAMER_FORNALHA,Guardiã Tia Fornalha,Guardian Aunt Furnace,Guardiana Tía Fragua
+MAP_ROTA_2,Rota 2 — Trilha da Cinza,Route 2 — Ash Trail,Ruta 2 — Sendero de Ceniza
+MAP_BRASAL,Brasal,Embervale,Brasal
+MAP_MINA_FUNDA,Mina Funda,Deep Mine,Mina Honda
+MAP_BRASAL_RANCHO,Rancho da Rubi,Ruby's Ranch,Rancho de Rubí
+MAP_BRASAL_LOJA,Armazém do Cobre,Copper's Store,Almacén de Cobre
+MAP_BRASAL_CASA_BIGORNA,Oficina do Bigorna,Anvil's Workshop,Taller de Yunque
+MAP_BRASAL_CASA_AGATA,Casa da Ágata,Agate's House,Casa de Ágata
+MAP_BRASAL_CASA_CARVAO,Casa do Carvão,Coal's House,Casa de Carbón
+MSG_FORNALHA_ROAD,Correntes fecham a estrada do norte. Ordem da Tia Fornalha.,Chains block the north road. Aunt Furnace's orders.,Cadenas cierran el camino del norte. Órdenes de la Tía Fragua.
+MSG_CLEARING_ROAD,O Ramalho não deixa ninguém passar pela Clareira.,Ramalho won't let anyone through the Clearing.,Ramalho no deja pasar a nadie por el Claro.
+MSG_ROUTE3_LOCKED,Lama funda demais. O caminho para o Pântano ainda não está pronto.,The mud is too deep. The way to the swamp isn't ready yet.,El barro es demasiado hondo. El camino al pantano aún no está listo.
+ITEM_HAMMER,Martelo da Tia,Auntie's Hammer,Martillo de la Tía
+ITEM_HAMMER_TEXT,"Presente da Tia Fornalha. Quebra pedra, não quebra promessa. Abre passagens de entulho.","A gift from Aunt Furnace. Breaks stone, never a promise. Clears rubble passages.","Regalo de la Tía Fragua. Rompe piedra, no promesas. Abre pasos de escombros."
+ITEM_HELMET,Capacete do Carvão,Coal's Helmet,Casco de Carbón
+ITEM_HELMET_TEXT,Capacete de mineiro com lanterna. Ainda cheira a café.,A miner's helmet with a lamp. It still smells of coffee.,Casco de minero con linterna. Todavía huele a café.
+OPT_M_BREAK,Quebrar a corrente,Break the chain,Romper la cadena
+OPT_M_TALK,Pedir que ela solte,Ask her to let go,Pedirle que los suelte
+OPT_M_RIDE,Encarar o vagonete,Face the cart,Enfrentar la vagoneta
+OPT_M_LEAVE,Deixar quieto,Leave it be,Dejarlo tranquilo
+SIGN_M_FORK,← Trilha dos Domadores · ↑ Galeria Velha · → Campo de Cascalho,← Tamers' Trail · ↑ Old Gallery · → Gravel Field,← Senda de Domadores · ↑ Galería Vieja · → Campo de Grava
+DLG_M_VIGIA_1,"Alto! Lasca de Raiz? Deixa eu ver... É do machado do Ramalho, sim.","Halt! A Root Chip? Let me see... Yep, that's from Ramalho's axe.","¡Alto! ¿Astilla de Raíz? A ver... Sí, es del hacha de Ramalho."
+DLG_M_VIGIA_2,Pode passar. Mas lá em cima não é o Bosque. Lá a Tia não ri.,"You may pass. But up there it's not the Forest. Up there, Auntie doesn't laugh.",Puedes pasar. Pero allá arriba no es el Bosque. Allá la Tía no se ríe.
+DLG_M_VIGIA_3,Eu só vigio a trilha. A cinza vigia o resto.,I just watch the trail. The ash watches everything else.,Yo solo vigilo el sendero. La ceniza vigila lo demás.
+DLG_M_SEIXO_1,"Domador paga em moeda, cascalho paga em esqueleto, e a Galeria Velha... paga em susto.","Tamers pay in coins, gravel pays in skeletons, and the Old Gallery... pays in frights.","Los domadores pagan en monedas, la grava paga en esqueletos y la Galería Vieja... paga en sustos."
+DLG_M_SEIXO_2,Lá dentro mora um aguadeiro que canta no escuro. Bonito. Mas bate forte.,"A water-carrier lives in there, singing in the dark. Pretty. But it hits hard.",Ahí dentro vive un aguador que canta en la oscuridad. Bonito. Pero pega fuerte.
+DLG_M_BRITA_1,"Capacete na cabeça, esqueleto na mão. Bora ver quem cava mais fundo!","Helmet on the head, skeleton in hand. Let's see who digs deeper!","Casco en la cabeza, esqueleto en mano. ¡A ver quién cava más hondo!"
+DLG_M_BRITA_2,Cavei meu próprio buraco. Que vergonha.,I dug my own hole. How embarrassing.,Cavé mi propio hoyo. Qué vergüenza.
+DLG_M_GRAXA_1,Esse vagonete não anda há meses. Eu também não. Bora mexer!,This cart hasn't moved in months. Neither have I. Let's get moving!,Esta vagoneta no se mueve hace meses. Yo tampoco. ¡A movernos!
+DLG_M_GRAXA_2,Pelo menos agora eu tô suado de verdade.,At least now I'm actually sweaty.,Al menos ahora sí estoy sudado.
+DLG_M_FULIGEM_1,Limpo chaminé da forja. Respiro fumaça. Meus esqueletos também. Prepara o pulmão!,I sweep the forge chimney. I breathe smoke. So do my skeletons. Brace your lungs!,Limpio la chimenea de la fragua. Respiro humo. Mis esqueletos también. ¡Prepara los pulmones!
+DLG_M_FULIGEM_2,"Cof, cof. Leva um antídoto pra Mina. Lá o ar morde.","Cough, cough. Take an antidote to the Mine. The air bites in there.","Cof, cof. Lleva un antídoto a la Mina. Allí el aire muerde."
+SIGN_M_BRASAL,Brasal. Aqui o fogo nunca dorme. Nem a gente.,Embervale. The fire never sleeps here. Neither do we.,Brasal. Aquí el fuego nunca duerme. Nosotros tampoco.
+SIGN_M_MINE,← Mina Funda. Entrada proibida por ordem da Tia.,← Deep Mine. Entry forbidden by Auntie's orders.,← Mina Honda. Entrada prohibida por orden de la Tía.
+DLG_M_RUBI_1,"Cinza no cabelo, cinza no chá, cinza no travesseiro. Deita, que pelo menos aqui é quentinho.","Ash in your hair, ash in your tea, ash on your pillow. Lie down, at least it's cozy here.","Ceniza en el pelo, en el té, en la almohada. Acuéstate, que al menos aquí está calentito."
+DLG_M_RUBI_2,"Antes, o Rancho vivia cheio de mineiro com esqueleto no colo. Agora só tem você.",This Ranch used to be full of miners with skeletons on their laps. Now it's just you.,Antes el Rancho vivía lleno de mineros con esqueletos en el regazo. Ahora solo estás tú.
+DLG_M_COBRE_1,Minério? Não tem. Mas poção grande eu arranjo. Do jeito que o povo apanha...,Ore? None. But I can get you big potions. The way folks get knocked around...,¿Mineral? No hay. Pero pociones grandes sí consigo. Con lo que la gente recibe...
+DLG_M_COBRE_BROKE,"Com os mineiros fugidos, tudo encareceu. Não me olha assim, a culpa é de quem quebrou.","With the miners gone, everything got pricier. Don't look at me like that, blame whoever broke things.","Con los mineros huidos, todo subió. No me mires así, la culpa es de quien rompió."
+DLG_M_COBRE_DEAL,"Os mineiros voltaram e o minério também. Pra você, desconto de amigo.","The miners came back, and so did the ore. Friend's discount for you.","Volvieron los mineros y el mineral también. Para ti, descuento de amigo."
+DLG_M_COBRE_2,Volte sempre. E bata a cinza da bota antes de entrar.,Come back anytime. And knock the ash off your boots first.,Vuelve cuando quieras. Y sacúdete la ceniza de las botas antes de entrar.
+DLG_M_PIRITA,Fiz bolo pro aniversário do meu esqueleto. Ficou com gosto de cinza. Tudo aqui tem.,I baked a cake for my skeleton's birthday. It tasted like ash. Everything here does.,Hice un pastel para el cumpleaños de mi esqueleto. Sabía a ceniza. Aquí todo sabe así.
+DLG_M_PIRITA_AFTER,"A fumaça baixou! Vou fazer outro bolo. Com cobertura de verdade, dessa vez.",The smoke's gone down! I'm baking another cake. With real frosting this time.,¡Bajó el humo! Voy a hacer otro pastel. Con cobertura de verdad esta vez.
+DLG_M_FAGULHA_1,Os esqueletos da Tia são duros feito pedra. Soco nem faz cócegas!,Auntie's skeletons are hard as rock. Punches don't even tickle!,¡Los esqueletos de la Tía son duros como piedra! ¡Los golpes ni les hacen cosquillas!
+DLG_M_FAGULHA_2,"Mas faísca entra em qualquer fresta. Golpe Mágico bate na RES, não na DEF. Anota!","But a spark gets into any crack. Magic moves hit RES, not DEF. Write that down!","Pero una chispa entra por cualquier rendija. Los golpes Mágicos van contra RES, no DEF. ¡Apúntalo!"
+DLG_M_TURMALINA_1,"A Fornalha forjou o sino desta cidade, no tempo do reino. Agora só forja corrente.","Furnace forged this town's bell, back in the kingdom days. Now she only forges chains.","La Fragua forjó la campana de este pueblo, en tiempos del reino. Ahora solo forja cadenas."
+DLG_M_TURMALINA_2,"Tia do Rei, dizem. Cuidava dele quando ele era menino. Quem cuida demais, prende.","The King's aunt, they say. She looked after him as a boy. Those who care too much end up caging.","Tía del Rey, dicen. Lo cuidaba de niño. Quien cuida de más, termina encerrando."
+DLG_M_CARVAO_ASK,"A Tia expulsou os mineiros de gente. Na correria, larguei meu capacete na Mina Funda. Busca pra mim?","Auntie threw out all the human miners. In the rush, I left my helmet in the Deep Mine. Fetch it for me?","La Tía echó a los mineros humanos. Con las prisas, dejé mi casco en la Mina Honda. ¿Me lo traes?"
+DLG_M_CARVAO_WHERE,"Na câmara do sul da mina, perto dos trilhos. A lanterna ainda deve estar acesa.","In the mine's south chamber, by the rails. The lamp should still be lit.","En la cámara sur de la mina, junto a los rieles. La linterna debe seguir encendida."
+DLG_M_CARVAO_THANKS,"Meu capacete! Quarenta anos de mina nessa lata. Toma, duas Poções G. E olha o mapa ali na parede.","My helmet! Forty years of mining in this tin. Here, two Potions L. And take a look at the map on the wall.","¡Mi casco! Cuarenta años de mina en esta lata. Toma, dos Pociones G. Y mira el mapa de la pared."
+DLG_M_CARVAO_AFTER,Esse mapa é mais velho que a mina. Meu avô dizia que o mar desenhou ele sozinho.,That map is older than the mine. My grandpa said the sea drew it by itself.,Ese mapa es más viejo que la mina. Mi abuelo decía que el mar lo dibujó solo.
+OBJ_M_HELMET,"Um capacete com a lanterna acesa, caído entre os trilhos.","A helmet with its lamp still lit, lying between the rails.","Un casco con la linterna encendida, tirado entre los rieles."
+DLG_M_MAP_1,"Um mapa antigo da costa, com três baías lado a lado e um farol na do meio.","An old map of the coast, with three bays side by side and a lighthouse on the middle one.","Un mapa antiguo de la costa, con tres bahías una al lado de otra y un faro en la del medio."
+DLG_M_MAP_2,"Você conhece essas três baías. São as da sua cidade, em 2040. Só os nomes estão errados.","You know these three bays. They're your hometown's, in 2040. Only the names are wrong.","Conoces estas tres bahías. Son las de tu ciudad, en 2040. Solo los nombres están mal."
+DLG_M_MAP_3,Coincidência... não é?,Just a coincidence... right?,Una coincidencia... ¿no?
+DLG_M_BIGORNA_1,Aqui se treina defesa. Meus esqueletos sobem a guarda até você cansar de bater.,We train defense here. My skeletons raise their guard until you're tired of hitting.,Aquí se entrena defensa. Mis esqueletos suben la guardia hasta que te canses de pegar.
+DLG_M_BIGORNA_2,"Contra parede, não empurra: procura a fresta. A Tia luta igualzinho.","Against a wall, don't push: find the crack. Auntie fights the same way.","Contra un muro, no empujes: busca la grieta. La Tía pelea igualito."
+DLG_M_AGATA_1,Gás de mina é perfume pra mim. Aguenta três rodadas de veneno?,Mine gas is perfume to me. Can you take three rounds of poison?,El gas de mina es perfume para mí. ¿Aguantas tres rondas de veneno?
+DLG_M_AGATA_2,"Aguentou. Leva esses antídotos, você mereceu respirar.","You held out. Take these antidotes, you've earned some fresh air.","Aguantaste. Llévate estos antídotos, te ganaste respirar."
+DLG_M_ROAD_GUARD,Ordem da Tia: ninguém sai. Nem eu. E olha que eu queria.,"Auntie's orders: nobody leaves. Not even me. And believe me, I'd like to.",Orden de la Tía: nadie sale. Ni yo. Y mira que me gustaría.
+DLG_M_BLOQ_1,"Turno da noite, turno do dia, turno de bater em intruso. Hoje é o terceiro.","Night shift, day shift, intruder-bashing shift. Today's the third one.","Turno de noche, turno de día, turno de golpear intrusos. Hoy toca el tercero."
+DLG_M_BLOQ_2,Tá. Pode ir até a forja. Mas eu não vi você.,Fine. Go on to the forge. But I never saw you.,Vale. Sigue hasta la fragua. Pero yo no te vi.
+DLG_M_SCARF_0,"Um lenço vermelho com bolinhas amarelas, preso num prego da viga.","A red scarf with yellow dots, caught on a nail in the beam.","Un pañuelo rojo con lunares amarillos, enganchado en un clavo de la viga."
+DLG_M_SCARF_T1,Esse lenço... é da minha mãe. Ela amarrava no meu pescoço quando eu tinha frio.,This scarf... it's my mom's. She'd tie it around my neck when I was cold.,Este pañuelo... es de mi mamá. Me lo ataba al cuello cuando tenía frío.
+DLG_M_SCARF_T2,Ela passou por aqui. Então ela tá... inteira. Tá inteira.,She came through here. So she's... in one piece. She's in one piece.,Pasó por aquí. Entonces está... entera. Está entera.
+DLG_M_SCARF_T3,Vamos mais rápido. Por favor.,Let's go faster. Please.,Vamos más rápido. Por favor.
+DLG_M_SCARF_R1,Ei. Não encosta. Esse lenço é da minha mãe.,Hey. Don't touch that. That scarf is my mom's.,Eh. No lo toques. Ese pañuelo es de mi mamá.
+DLG_M_SCARF_R2,"Os capangas trouxeram os levados por esta mina, rumo ao norte. Ela tá viva... quer dizer, inteira.","The henchmen brought the ones they took through this mine, heading north. She's alive... I mean, in one piece.","Los secuaces trajeron a los que se llevaron por esta mina, rumbo al norte. Está viva... digo, entera."
+DLG_M_SCARF_L1,"A gente ajuda a procurar, Taro! Eu ilumino, você corre.","We'll help you look, Taro! I'll light the way, you run.","¡Te ayudamos a buscar, Taro! Yo ilumino, tú corres."
+DLG_M_SCARF_R3,...Valeu. Mas eu vou na frente. Sempre vou.,...Thanks. But I'm going ahead. I always do.,...Gracias. Pero yo voy delante. Siempre.
+DLG_M_VAGO_1,"Um vagonete com cara de esqueleto desce os trilhos sozinho, livre e furioso.","A cart with a skeleton's face rolls down the rails on its own, free and furious.","Una vagoneta con cara de esqueleto baja sola por los rieles, libre y furiosa."
+DLG_M_FOR_1,Regra um: ninguém entra na forja sem bater. Você não bateu.,Rule one: nobody enters the forge without knocking. You didn't knock.,Regla uno: nadie entra en la fragua sin llamar. Tú no llamaste.
+DLG_M_FOR_2,"Eu forjo as correntes que fecham as estradas. Estrada fechada, ninguém se perde. Simples.","I forge the chains that close the roads. Closed road, nobody gets lost. Simple.","Yo forjo las cadenas que cierran los caminos. Camino cerrado, nadie se pierde. Simple."
+DLG_M_FOR_3,"Regra dois: quem quer passar, aguenta o calor. Vamos ver.","Rule two: whoever wants through, takes the heat. Let's see.","Regla dos: quien quiere pasar, aguanta el calor. A ver."
+DLG_M_FOR_WIN,"Hmpf. Regra três: quem vence, fala. Fala logo.","Hmph. Rule three: the winner speaks. Speak, then.","Hmpf. Regla tres: quien gana, habla. Habla ya."
+DLG_M_FOR_MOTIVE,"O Rei é meu sobrinho. Quando a coroa rachar, a família vai embora de novo. Enquanto houver corrente, ninguém vai.","The King is my nephew. When the crown cracks, the family goes away again. As long as there are chains, nobody goes.","El Rey es mi sobrino. Cuando la corona se rompa, la familia se irá otra vez. Mientras haya cadenas, nadie se va."
+DLG_M_FOR_CHOICE,A corrente mestra prende todos os mineiros à forja. O que você vai fazer?,The master chain binds every miner to the forge. What will you do?,La cadena maestra ata a todos los mineros a la fragua. ¿Qué vas a hacer?
+DLG_M_BREAK_1,Você puxa a alavanca da forja. A corrente mestra estoura com um estrondo.,You pull the forge lever. The master chain bursts with a bang.,Tiras de la palanca de la fragua. La cadena maestra revienta con un estruendo.
+DLG_M_BREAK_2,"Sem ordem, eles vão correr pro escuro! Olha só!","Without orders, they'll run off into the dark! Look!","¡Sin órdenes, van a correr a la oscuridad! ¡Mira!"
+DLG_M_BREAK_3,Os esqueletos mineiros fogem pelas galerias. Um vagonete desgovernado some trilho abaixo.,The miner skeletons flee down the galleries. A runaway cart vanishes down the rails.,Los esqueletos mineros huyen por las galerías. Una vagoneta desbocada se pierde rieles abajo.
+DLG_M_BREAK_4,Vai. A estrada tá aberta. E não volta pedindo desconto.,Go. The road is open. And don't come back asking for a discount.,Vete. El camino está abierto. Y no vuelvas pidiendo descuento.
+DLG_M_TALK_1,Pedir? Faz cem anos que ninguém me pede nada. Só obedecem.,Ask? Nobody's asked me anything in a hundred years. They just obey.,¿Pedir? Hace cien años que nadie me pide nada. Solo obedecen.
+DLG_M_TALK_2,"...Regra quatro, que eu acabei de inventar: quem pede direito, recebe direito.","...Rule four, which I just made up: whoever asks properly, gets properly.","...Regla cuatro, que acabo de inventar: quien pide bien, recibe bien."
+DLG_M_TALK_3,"Turno encerrado! Soltem as correntes e vão pra casa. Amanhã, quem quiser, volta.","Shift's over! Drop the chains and go home. Tomorrow, whoever wants to, comes back.","¡Se acabó el turno! Suelten las cadenas y a casa. Mañana, quien quiera, vuelve."
+DLG_M_TALK_4,"Leva meu martelo. Quebra pedra, não quebra promessa. Vai ter entulho no caminho do Pântano.","Take my hammer. It breaks stone, never a promise. There'll be rubble on the way to the Swamp.","Llévate mi martillo. Rompe piedra, no promesas. Habrá escombros camino al Pantano."
+DLG_M_FOR_BYE,"Se encontrar a Musga no Pântano, manda ela comer direito. É ordem da tia.","If you see Musga in the Swamp, tell her to eat properly. Auntie's orders.","Si ves a Musga en el Pantano, dile que coma bien. Orden de la tía."
+DLG_M_FOR_AFTER_DEAL,Os mineiros voltaram sozinhos. Trabalham mais rápido sem corrente. Não conta pra ninguém.,The miners came back on their own. They work faster without chains. Don't tell anyone.,Los mineros volvieron solos. Trabajan más rápido sin cadenas. No se lo cuentes a nadie.
+DLG_M_FOR_AFTER_BREAK,As galerias estão vazias. Espero que você saiba o que fez.,The galleries are empty. I hope you know what you did.,Las galerías están vacías. Espero que sepas lo que hiciste.
+DLG_M_MINER_CHAINED,Clang. Clang. Clang. O esqueleto não para de martelar. Nem olha pra você.,Clang. Clang. Clang. The skeleton won't stop hammering. It doesn't even look at you.,Clang. Clang. Clang. El esqueleto no deja de martillar. Ni te mira.
+DLG_M_MINER_FREE,"O esqueleto mineiro martela devagar, cantarolando. Ninguém mandou: ele quis.","The miner skeleton hammers slowly, humming. Nobody ordered it: it wanted to.","El esqueleto minero martilla despacio, tarareando. Nadie se lo ordenó: quiso."
+DLG_M_ARR_R2_L1,Por que tudo aqui é cinza? Até a grama! Será que alguém pintou?,Why is everything gray here? Even the grass! Did someone paint it?,¿Por qué aquí todo es gris? ¡Hasta la hierba! ¿Alguien la pintó?
+DLG_M_ARR_R2_L2,"Ah, é fumaça. Tem uma chaminé enorme lá no norte. Quem acende um fogo desse tamanho?","Oh, it's smoke. There's a huge chimney up north. Who lights a fire that big?","Ah, es humo. Hay una chimenea enorme al norte. ¿Quién enciende un fuego tan grande?"
+DLG_M_ARR_R2_T1,Cheiro de forja. Meu pai cheirava assim quando voltava do trabalho.,Smells like a forge. My dad smelled like this when he came home from work.,Huele a fragua. Mi papá olía así cuando volvía del trabajo.
+DLG_M_ARR_R2_T2,...Anda. Tô com pressa.,...Come on. I'm in a hurry.,...Vamos. Tengo prisa.
+DLG_M_ARR_BR_L1,Ninguém na rua... As janelas tão fechadas por causa da cinza?,Nobody in the streets... Are the windows shut because of the ash?,Nadie en la calle... ¿Las ventanas están cerradas por la ceniza?
+DLG_M_ARR_BR_L2,"Se eu fosse uma cidade, ia querer alguém pra abrir as janelas.","If I were a town, I'd want someone to open my windows.","Si yo fuera un pueblo, querría que alguien abriera mis ventanas."
+DLG_M_ARR_BR_T1,Cidade parada. Mina fechada. A Tia manda em tudo aqui.,Town's stuck. Mine's shut. Auntie runs everything here.,Pueblo parado. Mina cerrada. La Tía manda en todo aquí.
+DLG_M_ARR_BR_T2,Ótimo. Mais uma pra eu derrubar.,Great. One more for me to knock down.,Genial. Una más para tumbar.
+DLG_M_ARR_MI_L1,Escuro de novo. Mas agora eu sei: escuro é só lugar sem lamparina ainda.,Dark again. But now I know: dark is just a place that doesn't have a lamp yet.,Oscuro otra vez. Pero ahora lo sé: lo oscuro es solo un lugar sin farol todavía.
+DLG_M_ARR_MI_T1,Ouviu? Martelo. Muito martelo. Tem gente trabalhando sem parar lá dentro.,Hear that? Hammering. Lots of it. Someone's working nonstop in there.,¿Oyes? Martillos. Muchos. Alguien trabaja sin parar ahí dentro.
+DLG_M_RUBI_AFTER,"A fumaça baixou! Hoje de manhã vi o céu. Era azul, imagina.","The smoke went down! This morning I saw the sky. It was blue, can you imagine.","¡Bajó el humo! Esta mañana vi el cielo. Era azul, imagínate."
+DLG_M_TURMALINA_AFTER,Ouvi o sino da cidade tocar de novo. Quem será que lembrou dele?,I heard the town bell ring again. I wonder who remembered it.,Oí la campana del pueblo sonar otra vez. ¿Quién se habrá acordado de ella?
+DLG_M_FAGULHA_AFTER,Você venceu a Tia? Com faísca ou com soco? Fala que foi com faísca!,You beat Auntie? With sparks or punches? Say it was sparks!,¿Venciste a la Tía? ¿Con chispa o con puñetazo? ¡Di que fue con chispa!
+DLG_M_PIRITA_ASK,"Amanhã é aniversário do meu Gasito, e vela nenhuma acende com tanta cinza.","Tomorrow is my Gasito's birthday, and no candle stays lit with all this ash.","Mañana es el cumpleaños de mi Gasito, y ninguna vela prende con tanta ceniza."
+DLG_M_PIRITA_ASK1,Dizem que na Galeria Velha tem cristal que brilha sozinho...,They say the Old Gallery has crystals that glow on their own...,Dicen que en la Galería Vieja hay cristales que brillan solos...
+DLG_M_PIRITA_ASK2,Traz um pra mim? Vela que não apaga é a melhor vela.,Would you bring me one? A candle that never goes out is the best candle.,¿Me traes uno? Una vela que no se apaga es la mejor vela.
+DLG_M_PIRITA_WHERE,"Galeria Velha, no meio da Rota 2. O cristal fica perto da saída norte.","The Old Gallery, in the middle of Route 2. The crystal is near the north exit.","La Galería Vieja, en medio de la Ruta 2. El cristal está cerca de la salida norte."
+OBJ_M_CRYSTAL,"Um cristal do tamanho de um polegar, quentinho e brilhando sozinho.","A thumb-sized crystal, warm and glowing on its own.","Un cristal del tamaño de un pulgar, tibio y brillando solo."
+DLG_M_PIRITA_PARTY1,"Achou! Gasito, olha a vela! Parabéns pra você, nessa cinza tão...","You found it! Gasito, look at the candle! Happy birthday to you, in this ash so...","¡Lo encontraste! ¡Gasito, mira la vela! Cumpleaños feliz, en esta ceniza tan..."
+DLG_M_PIRITA_PARTY2,"O Gasito sopra o cristal. Não apaga, claro. Ele sopra de novo, mais forte. Todo mundo ri.","Gasito blows on the crystal. It doesn't go out, of course. He blows harder. Everyone laughs.","Gasito sopla el cristal. No se apaga, claro. Sopla otra vez, más fuerte. Todos se ríen."
+DLG_M_PIRITA_PARTY3,"Toma, duas Poções M. E um pedaço de bolo... com só um pouquinho de cinza.","Here, two Potions M. And a slice of cake... with just a little bit of ash.","Toma, dos Pociones M. Y un trozo de pastel... con solo un poquito de ceniza."
+ITEM_CRYSTAL,Cristal-vela,Candle Crystal,Cristal Vela
+ITEM_CRYSTAL_TEXT,Brilha sozinho e não apaga com sopro. A Pirita quer para um bolo.,Glows on its own and won't blow out. Pyrite wants it for a cake.,Brilla solo y no se apaga al soplar. Pirita lo quiere para un pastel.
+SPK_CASCUDO,Cascudo,Pebbles,Pedrusco
+DLG_M_CASCUDO_1,Eu cato cristal aqui. Uma vez vi um esqueleto dourado brilhando mais que todos eles juntos!,I collect crystals here. Once I saw a golden skeleton shining brighter than all of them together!,Aquí recojo cristales. ¡Una vez vi un esqueleto dorado que brillaba más que todos juntos!
+DLG_M_CASCUDO_2,"Ele piscava e fazia tlin-tlin. Se ouvir esse som, corre atrás!","It sparkled and went ting-ting. If you hear that sound, chase it!","Centelleaba y hacía tilín-tilín. ¡Si oyes ese sonido, corre tras él!"

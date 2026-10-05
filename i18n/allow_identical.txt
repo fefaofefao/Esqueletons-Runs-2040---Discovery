@@ -57,6 +57,12 @@ SPK_RUFO
 SPK_RAMALHO
 BTL_TAMER_RUFO
 MAP_RAIZAL
+# --- região minas (nomes próprios iguais nos idiomas) ---
+SPK_PIRITA
+SPK_AGATA
+BTL_TAMER_AGATA
+MAP_BRASAL
+# --- fim minas ---
 # --- gerado por tools/bestiary/build.py (descrições de golpes) ---
 MOVE_CHUTE_NA_CANELA_DESC
 MOVE_RANGER_OS_DENTES_DESC

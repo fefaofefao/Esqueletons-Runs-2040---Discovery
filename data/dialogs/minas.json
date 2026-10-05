@@ -1,0 +1,838 @@
+{
+ "_comment": "Gerado por tools/maps/minas.py (fonte única do roteiro).",
+ "dialogs": {
+  "placa_bifurcacao": [
+   {
+    "say": "SIGN_M_FORK"
+   }
+  ],
+  "vigia_entrada": [
+   {
+    "say": "DLG_M_VIGIA_1",
+    "speaker": "SPK_VIGIA_LASCA"
+   },
+   {
+    "say": "DLG_M_VIGIA_2",
+    "speaker": "SPK_VIGIA_LASCA"
+   },
+   {
+    "say": "DLG_M_ARR_R2_L1",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_M_ARR_R2_L2",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_M_ARR_R2_T1",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "say": "DLG_M_ARR_R2_T2",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "vigia_lasca_ok",
+    "value": true
+   }
+  ],
+  "vigia": [
+   {
+    "say": "DLG_M_VIGIA_3",
+    "speaker": "SPK_VIGIA_LASCA"
+   }
+  ],
+  "seixo": [
+   {
+    "say": "DLG_M_SEIXO_1",
+    "speaker": "SPK_SEIXO"
+   },
+   {
+    "say": "DLG_M_SEIXO_2",
+    "speaker": "SPK_SEIXO"
+   }
+  ],
+  "brita": [
+   {
+    "say": "DLG_M_BRITA_1",
+    "speaker": "SPK_BRITA"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_BRITA",
+    "enemies": [
+     [
+      "mineiro_2",
+      25
+     ],
+     [
+      "gasista_2",
+      24
+     ]
+    ],
+    "reward": 420,
+    "win_flag": "brita_beaten"
+   },
+   {
+    "say": "DLG_M_BRITA_2",
+    "speaker": "SPK_BRITA"
+   }
+  ],
+  "brita_depois": [
+   {
+    "say": "DLG_M_BRITA_2",
+    "speaker": "SPK_BRITA"
+   }
+  ],
+  "graxa": [
+   {
+    "say": "DLG_M_GRAXA_1",
+    "speaker": "SPK_GRAXA"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_GRAXA",
+    "enemies": [
+     [
+      "lenhador_2",
+      26
+     ],
+     [
+      "mineiro_2",
+      25
+     ]
+    ],
+    "reward": 450,
+    "win_flag": "graxa_beaten"
+   },
+   {
+    "say": "DLG_M_GRAXA_2",
+    "speaker": "SPK_GRAXA"
+   }
+  ],
+  "graxa_depois": [
+   {
+    "say": "DLG_M_GRAXA_2",
+    "speaker": "SPK_GRAXA"
+   }
+  ],
+  "fuligem": [
+   {
+    "say": "DLG_M_FULIGEM_1",
+    "speaker": "SPK_FULIGEM"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_FULIGEM",
+    "enemies": [
+     [
+      "gasista_2",
+      27
+     ],
+     [
+      "ferreiro_2",
+      26
+     ]
+    ],
+    "reward": 480,
+    "win_flag": "fuligem_beaten",
+    "items": [
+     [
+      "pocao_m",
+      1
+     ],
+     [
+      "antidoto",
+      1
+     ]
+    ]
+   },
+   {
+    "say": "DLG_M_FULIGEM_2",
+    "speaker": "SPK_FULIGEM"
+   }
+  ],
+  "fuligem_depois": [
+   {
+    "say": "DLG_M_FULIGEM_2",
+    "speaker": "SPK_FULIGEM"
+   }
+  ],
+  "placa_brasal": [
+   {
+    "say": "SIGN_M_BRASAL"
+   }
+  ],
+  "placa_mina": [
+   {
+    "say": "SIGN_M_MINE"
+   }
+  ],
+  "rubi": [
+   {
+    "action": "heal"
+   },
+   {
+    "action": "respawn"
+   },
+   {
+    "say": "DLG_M_RUBI_AFTER",
+    "speaker": "SPK_RUBI",
+    "if": "fornalha_beaten"
+   },
+   {
+    "say": "DLG_M_RUBI_1",
+    "speaker": "SPK_RUBI"
+   },
+   {
+    "say": "DLG_M_RUBI_2",
+    "choice": [
+     {
+      "text": "OPT_P_RANCH",
+      "goto": "vila_mare/rancho"
+     },
+     {
+      "text": "OPT_P_LEAVE"
+     }
+    ],
+    "speaker": "SPK_RUBI"
+   }
+  ],
+  "cobre": [
+   {
+    "say": "DLG_M_COBRE_BROKE",
+    "speaker": "SPK_COBRE",
+    "if": "minas_quebrou"
+   },
+   {
+    "say": "DLG_M_COBRE_DEAL",
+    "speaker": "SPK_COBRE",
+    "if": "minas_negociou"
+   },
+   {
+    "say": "DLG_M_COBRE_1",
+    "speaker": "SPK_COBRE",
+    "if_not": "fornalha_beaten"
+   },
+   {
+    "action": "shop",
+    "id": "brasal"
+   },
+   {
+    "say": "DLG_M_COBRE_2",
+    "speaker": "SPK_COBRE"
+   }
+  ],
+  "pirita": [
+   {
+    "say": "DLG_M_PIRITA_AFTER",
+    "speaker": "SPK_PIRITA",
+    "if": "fornalha_beaten"
+   },
+   {
+    "say": "DLG_M_PIRITA",
+    "speaker": "SPK_PIRITA",
+    "if_not": "fornalha_beaten"
+   }
+  ],
+  "fagulha": [
+   {
+    "say": "DLG_M_FAGULHA_AFTER",
+    "speaker": "SPK_FAGULHA",
+    "if": "fornalha_beaten"
+   },
+   {
+    "say": "DLG_M_FAGULHA_1",
+    "speaker": "SPK_FAGULHA"
+   },
+   {
+    "say": "DLG_M_FAGULHA_2",
+    "speaker": "SPK_FAGULHA"
+   }
+  ],
+  "turmalina": [
+   {
+    "say": "DLG_M_TURMALINA_AFTER",
+    "speaker": "SPK_TURMALINA",
+    "if": "fornalha_beaten"
+   },
+   {
+    "say": "DLG_M_TURMALINA_1",
+    "speaker": "SPK_TURMALINA"
+   },
+   {
+    "say": "DLG_M_TURMALINA_2",
+    "speaker": "SPK_TURMALINA"
+   }
+  ],
+  "carvao_pede": [
+   {
+    "say": "DLG_M_CARVAO_ASK",
+    "speaker": "SPK_CARVAO"
+   },
+   {
+    "set_flag": "carvao_quest",
+    "value": true
+   },
+   {
+    "say": "DLG_M_CARVAO_WHERE",
+    "speaker": "SPK_CARVAO"
+   }
+  ],
+  "carvao_onde": [
+   {
+    "say": "DLG_M_CARVAO_WHERE",
+    "speaker": "SPK_CARVAO"
+   }
+  ],
+  "carvao_obrigado": [
+   {
+    "say": "DLG_M_CARVAO_THANKS",
+    "speaker": "SPK_CARVAO"
+   },
+   {
+    "action": "take_item",
+    "item": "capacete_carvao",
+    "n": 1
+   },
+   {
+    "action": "give_item",
+    "item": "pocao_g",
+    "n": 2
+   },
+   {
+    "set_flag": "carvao_done",
+    "value": true
+   }
+  ],
+  "carvao_depois": [
+   {
+    "say": "DLG_M_CARVAO_AFTER",
+    "speaker": "SPK_CARVAO"
+   }
+  ],
+  "capacete": [
+   {
+    "say": "OBJ_M_HELMET"
+   },
+   {
+    "action": "give_item",
+    "item": "capacete_carvao",
+    "n": 1
+   },
+   {
+    "set_flag": "carvao_helmet_taken",
+    "value": true
+   }
+  ],
+  "mapa_antigo": [
+   {
+    "say": "DLG_M_MAP_1"
+   },
+   {
+    "say": "DLG_M_MAP_2"
+   },
+   {
+    "say": "DLG_M_MAP_3"
+   },
+   {
+    "set_flag": "pista_3",
+    "value": true
+   }
+  ],
+  "bigorna": [
+   {
+    "say": "DLG_M_BIGORNA_1",
+    "speaker": "SPK_BIGORNA"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_BIGORNA",
+    "enemies": [
+     [
+      "ferreiro_2",
+      30
+     ],
+     [
+      "mineiro_2",
+      30
+     ]
+    ],
+    "reward": 620,
+    "win_flag": "bigorna_beaten",
+    "items": [
+     [
+      "pocao_m",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_M_BIGORNA_2",
+    "speaker": "SPK_BIGORNA"
+   }
+  ],
+  "bigorna_depois": [
+   {
+    "say": "DLG_M_BIGORNA_2",
+    "speaker": "SPK_BIGORNA"
+   }
+  ],
+  "agata": [
+   {
+    "say": "DLG_M_AGATA_1",
+    "speaker": "SPK_AGATA"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_AGATA",
+    "enemies": [
+     [
+      "gasista_2",
+      30
+     ],
+     [
+      "aguadeiro_2",
+      29
+     ]
+    ],
+    "reward": 560,
+    "win_flag": "agata_beaten",
+    "items": [
+     [
+      "antidoto",
+      3
+     ],
+     [
+      "reviver",
+      1
+     ]
+    ]
+   },
+   {
+    "say": "DLG_M_AGATA_2",
+    "speaker": "SPK_AGATA"
+   }
+  ],
+  "agata_depois": [
+   {
+    "say": "DLG_M_AGATA_2",
+    "speaker": "SPK_AGATA"
+   }
+  ],
+  "guarda_estrada": [
+   {
+    "say": "DLG_M_ROAD_GUARD",
+    "speaker": "SPK_BLOQUEIO"
+   }
+  ],
+  "bloqueio": [
+   {
+    "say": "DLG_M_BLOQ_1",
+    "speaker": "SPK_BLOQUEIO"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_BLOQUEIO",
+    "enemies": [
+     [
+      "mineiro_2",
+      31
+     ],
+     [
+      "ferreiro_2",
+      31
+     ]
+    ],
+    "reward": 500,
+    "win_flag": "bloqueio_beaten"
+   },
+   {
+    "say": "DLG_M_BLOQ_2",
+    "speaker": "SPK_BLOQUEIO"
+   }
+  ],
+  "bloqueio_depois": [
+   {
+    "say": "DLG_M_BLOQ_2",
+    "speaker": "SPK_BLOQUEIO"
+   }
+  ],
+  "lenco_parceiro": [
+   {
+    "say": "DLG_M_SCARF_0"
+   },
+   {
+    "say": "DLG_M_SCARF_T1",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_M_SCARF_T2",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_M_SCARF_T3",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "set_flag": "lenco_visto",
+    "value": true
+   }
+  ],
+  "lenco_recorrente": [
+   {
+    "say": "DLG_M_SCARF_R1",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_M_SCARF_R2",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_M_SCARF_L1",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "say": "DLG_M_SCARF_R3",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "set_flag": "lenco_visto",
+    "value": true
+   },
+   {
+    "action": "hide_npc",
+    "id": "taro_mina"
+   }
+  ],
+  "vagonauta": [
+   {
+    "say": "DLG_M_VAGO_1",
+    "choice": [
+     {
+      "text": "OPT_M_RIDE",
+      "goto": "minas/vagonauta_luta"
+     },
+     {
+      "text": "OPT_M_LEAVE"
+     }
+    ]
+   }
+  ],
+  "vagonauta_luta": [
+   {
+    "action": "battle",
+    "kind": "wild",
+    "tamer_key": "",
+    "enemies": [
+     [
+      "vagonauta",
+      30
+     ]
+    ],
+    "reward": 0
+   }
+  ],
+  "fornalha": [
+   {
+    "say": "DLG_M_FOR_1",
+    "speaker": "SPK_FORNALHA"
+   },
+   {
+    "say": "DLG_M_FOR_2",
+    "speaker": "SPK_FORNALHA"
+   },
+   {
+    "say": "DLG_M_FOR_3",
+    "speaker": "SPK_FORNALHA"
+   },
+   {
+    "action": "battle",
+    "kind": "boss",
+    "tamer_key": "BTL_TAMER_FORNALHA",
+    "enemies": [
+     [
+      "mineiro_2",
+      34
+     ],
+     [
+      "ferreiro_2",
+      33
+     ],
+     [
+      "gasista_2",
+      35
+     ],
+     [
+      "aguadeiro_2",
+      34
+     ]
+    ],
+    "reward": 1000,
+    "win_flag": "fornalha_beaten"
+   },
+   {
+    "say": "DLG_M_FOR_WIN",
+    "speaker": "SPK_FORNALHA"
+   },
+   {
+    "say": "DLG_M_FOR_MOTIVE",
+    "speaker": "SPK_FORNALHA"
+   },
+   {
+    "say": "DLG_M_FOR_CHOICE",
+    "choice": [
+     {
+      "text": "OPT_M_BREAK",
+      "goto": "minas/quebrar"
+     },
+     {
+      "text": "OPT_M_TALK",
+      "goto": "minas/negociar"
+     }
+    ]
+   }
+  ],
+  "quebrar": [
+   {
+    "say": "DLG_M_BREAK_1"
+   },
+   {
+    "say": "DLG_M_BREAK_2",
+    "speaker": "SPK_FORNALHA"
+   },
+   {
+    "say": "DLG_M_BREAK_3"
+   },
+   {
+    "set_flag": "minas_quebrou",
+    "value": true
+   },
+   {
+    "say": "DLG_M_BREAK_4",
+    "speaker": "SPK_FORNALHA"
+   },
+   {
+    "say": "DLG_M_FOR_BYE",
+    "speaker": "SPK_FORNALHA"
+   },
+   {
+    "action": "refresh_map"
+   }
+  ],
+  "negociar": [
+   {
+    "say": "DLG_M_TALK_1",
+    "speaker": "SPK_FORNALHA"
+   },
+   {
+    "say": "DLG_M_TALK_2",
+    "speaker": "SPK_FORNALHA"
+   },
+   {
+    "say": "DLG_M_TALK_3",
+    "speaker": "SPK_FORNALHA"
+   },
+   {
+    "set_flag": "minas_negociou",
+    "value": true
+   },
+   {
+    "set_flag": "red_minas",
+    "value": true
+   },
+   {
+    "action": "give_item",
+    "item": "martelo_tia",
+    "n": 1
+   },
+   {
+    "say": "DLG_M_TALK_4",
+    "speaker": "SPK_FORNALHA"
+   },
+   {
+    "say": "DLG_M_FOR_BYE",
+    "speaker": "SPK_FORNALHA"
+   },
+   {
+    "action": "refresh_map"
+   }
+  ],
+  "fornalha_depois": [
+   {
+    "say": "DLG_M_FOR_AFTER_DEAL",
+    "speaker": "SPK_FORNALHA",
+    "if": "minas_negociou"
+   },
+   {
+    "say": "DLG_M_FOR_AFTER_BREAK",
+    "speaker": "SPK_FORNALHA",
+    "if": "minas_quebrou"
+   },
+   {
+    "say": "DLG_M_FOR_BYE",
+    "speaker": "SPK_FORNALHA"
+   }
+  ],
+  "fornalha_escolha": [
+   {
+    "say": "DLG_M_FOR_MOTIVE",
+    "speaker": "SPK_FORNALHA"
+   },
+   {
+    "say": "DLG_M_FOR_CHOICE",
+    "choice": [
+     {
+      "text": "OPT_M_BREAK",
+      "goto": "minas/quebrar"
+     },
+     {
+      "text": "OPT_M_TALK",
+      "goto": "minas/negociar"
+     }
+    ]
+   }
+  ],
+  "mineiro_preso": [
+   {
+    "say": "DLG_M_MINER_CHAINED"
+   }
+  ],
+  "mineiro_livre": [
+   {
+    "say": "DLG_M_MINER_FREE"
+   }
+  ],
+  "chegada_brasal": [
+   {
+    "say": "DLG_M_ARR_BR_L1",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_M_ARR_BR_L2",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_M_ARR_BR_T1",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "say": "DLG_M_ARR_BR_T2",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "brasal_visto",
+    "value": true
+   }
+  ],
+  "chegada_mina": [
+   {
+    "say": "DLG_M_ARR_MI_L1",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_M_ARR_MI_T1",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "mina_vista",
+    "value": true
+   }
+  ],
+  "pirita_pede": [
+   {
+    "say": "DLG_M_PIRITA_ASK",
+    "speaker": "SPK_PIRITA"
+   },
+   {
+    "say": "DLG_M_PIRITA_ASK1",
+    "speaker": "SPK_PIRITA"
+   },
+   {
+    "say": "DLG_M_PIRITA_ASK2",
+    "speaker": "SPK_PIRITA"
+   },
+   {
+    "set_flag": "pirita_quest",
+    "value": true
+   }
+  ],
+  "pirita_onde": [
+   {
+    "say": "DLG_M_PIRITA_WHERE",
+    "speaker": "SPK_PIRITA"
+   }
+  ],
+  "pirita_festa": [
+   {
+    "say": "DLG_M_PIRITA_PARTY1",
+    "speaker": "SPK_PIRITA"
+   },
+   {
+    "action": "take_item",
+    "item": "cristal_vela",
+    "n": 1
+   },
+   {
+    "action": "sfx",
+    "name": "birthday"
+   },
+   {
+    "say": "DLG_M_PIRITA_PARTY2"
+   },
+   {
+    "say": "DLG_M_PIRITA_PARTY3",
+    "speaker": "SPK_PIRITA"
+   },
+   {
+    "action": "give_item",
+    "item": "pocao_m",
+    "n": 2
+   },
+   {
+    "set_flag": "pirita_done",
+    "value": true
+   }
+  ],
+  "cristal_vela": [
+   {
+    "say": "OBJ_M_CRYSTAL"
+   },
+   {
+    "action": "give_item",
+    "item": "cristal_vela",
+    "n": 1
+   },
+   {
+    "set_flag": "cristal_pego",
+    "value": true
+   }
+  ],
+  "cascudo": [
+   {
+    "say": "DLG_M_CASCUDO_1",
+    "speaker": "SPK_CASCUDO"
+   },
+   {
+    "say": "DLG_M_CASCUDO_2",
+    "speaker": "SPK_CASCUDO"
+   }
+  ]
+ }
+}

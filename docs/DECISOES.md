@@ -171,3 +171,10 @@ Registro das escolhas feitas sem consulta (AGENTS.md, seção A). Cada item diz 
 - **Guardiões são esqueletos no mapa** (sprite adulto da linha que lideram), coerente com o arco: são a família ressuscitada pela coroa.
 - **Fundo de batalha por região** (`battle_bg` em `regions.json`).
 - **Idades coerentes com o estágio** também em domadores e Guardiões (o teste confere). Por isso Vagalú aparece aos 22 e os Irmãos Galho usam bebês.
+
+## Fase 4c — Minas e kit de região
+- **Uma fonte por região** (`tools/maps/<regiao>.py` + `regionkit.py`): o documento de roteiro é gerado das mesmas estruturas que viram JSON do jogo. A regra "implemente exatamente o roteiro" vira garantia mecânica, não disciplina.
+- **Layouts padrão** de rota (3 caminhos que se reencontram), cidade (Rancho, Loja, 3 casas, praça) e covil do Guardião. Cada região muda terreno, objetos, clima, NPCs e história; a forma constante ajuda o jogador a se orientar e permite testes genéricos.
+- **Saídas com condição** (`if` no warp + `locked_message`) em vez de NPC bloqueando: o mundo abre por história sem paredes invisíveis.
+- **Escolha 2 sem "certo e errado" óbvio:** quebrar dá um único recrutável (Vagonauta) e encarece a loja; negociar dá atalho, desconto e Redenção. Os dois têm ganho.
+- **Clima por região** com uma única função de partículas (cinza, névoa, neve, areia, brasas), limitada pela área do mapa para manter 60 FPS.

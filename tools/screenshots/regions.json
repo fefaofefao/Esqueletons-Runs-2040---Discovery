@@ -1,0 +1,112 @@
+{
+ "minas": {
+  "flags": [
+   "intro_done",
+   "bento_met",
+   "has_partner",
+   "partner_lia",
+   "tut_battle",
+   "tut_marker",
+   "bras_beaten",
+   "ramalho_beaten",
+   "has_lasca_raiz",
+   "vigia_lasca_ok"
+  ],
+  "party": [
+   [
+    "faroleira_2",
+    32,
+    "Lia"
+   ],
+   [
+    "lenhador_2",
+    31
+   ],
+   [
+    "mineiro_2",
+    30
+   ],
+   [
+    "herborista_2",
+    30
+   ]
+  ],
+  "steps": [
+   {
+    "map": "rota_2",
+    "x": 19,
+    "y": 43,
+    "f": "up",
+    "shot": "m1_rota2_bifurcacao",
+    "wait": 0.8
+   },
+   {
+    "map": "rota_2",
+    "x": 31,
+    "y": 28,
+    "f": "up",
+    "shot": "m2_cascalho"
+   },
+   {
+    "map": "brasal",
+    "x": 19,
+    "y": 24,
+    "f": "up",
+    "shot": "m3_brasal",
+    "wait": 0.8
+   },
+   {
+    "map": "brasal",
+    "x": 19,
+    "y": 12,
+    "f": "up",
+    "shot": "m4_brasal_norte"
+   },
+   {
+    "map": "brasal_casa_carvao",
+    "x": 9,
+    "y": 3,
+    "f": "up",
+    "interact": [
+     9,
+     2
+    ],
+    "shot": "m5_mapa_antigo",
+    "shot_at": 1
+   },
+   {
+    "map": "mina_funda",
+    "x": 24,
+    "y": 11,
+    "f": "left",
+    "shot": "m6_mina_salao",
+    "wait": 0.8
+   },
+   {
+    "map": "mina_funda",
+    "x": 7,
+    "y": 15,
+    "f": "down",
+    "shot": "m7_camara_sul"
+   },
+   {
+    "map": "mina_funda",
+    "x": 10,
+    "y": 7,
+    "f": "up",
+    "flags": [
+     "bloqueio_beaten"
+    ],
+    "step": "up",
+    "shot": "m8_fornalha",
+    "shot_at": 1,
+    "battle": true,
+    "after_choices": [
+     1
+    ],
+    "after_shot": "m9_escolha",
+    "after_shot_at": 3
+   }
+  ]
+ }
+}

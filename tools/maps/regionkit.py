@@ -149,6 +149,8 @@ class Region:
         self.CHOICES = []      # (escolha, opções, consequência)
         self.HOUSES = []       # (dono, tema, recompensa)
         self.BATTLE_BG = {}
+        self.CITIES = []       # cities.json: {id, map, ranch, shop, tamer_houses, npcs, quests}
+        self.ROUTES = []       # routes.json: {id, map, paths: [{kind, required}]}
         self.order = []        # ordem dos diálogos no documento
 
     def t(self, key, pt, en, es):
@@ -174,6 +176,8 @@ class Region:
         self._merge("data/encounters.json", "tables", self.TABLES)
         self._merge("data/shops.json", "shops", self.SHOPS)
         self._merge("data/items.json", "items", self.ITEMS)
+        self._merge_list("data/cities.json", "cities", self.CITIES)
+        self._merge_list("data/routes.json", "routes", self.ROUTES)
         for mid, m in self.MAPS.items():
             for r in m["ground"]:
                 assert len(r) == len(m["ground"][0]), mid
@@ -198,6 +202,21 @@ class Region:
         d = json.loads(p.read_text())
         d.setdefault(key, {}).update(values)
         p.write_text(json.dumps(d, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+    def _merge_list(self, path, key, items):
+        if not items:
+            return
+        p = ROOT / path
+        d = json.loads(p.read_text()) if p.exists() else {"_comment": "Gerado pelos scripts de região (tools/maps). Conferido por tools/validate_data.py.", key: []}
+        ids = {i["id"] for i in items}
+        d[key] = [x for x in d.get(key, []) if x["id"] not in ids] + list(items)
+        p.write_text(json.dumps(d, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+    def tamer(self, nid, sprite, name, ref, flag, vision=4, if_=None):
+        """NPC domador: luta uma vez (flag) e depois repete a fala final."""
+        self.NPCS[nid] = human(sprite, name, [{"if": flag, "dialog": self.ref(ref + "_depois")}, {"dialog": self.ref(ref)}], "stand",
+                               {"vision": vision, "flag": flag}, "tamer")
+        return nid
 
     def _write_csv(self):
         path = ROOT / "i18n/dialogue.csv"

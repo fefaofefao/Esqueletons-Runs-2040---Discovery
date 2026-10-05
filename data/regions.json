@@ -65,9 +65,16 @@
    ],
    "music": "",
    "maps": [
-    "rota_2"
+    "rota_2",
+    "brasal",
+    "mina_funda",
+    "brasal_rancho",
+    "brasal_loja",
+    "brasal_casa_bigorna",
+    "brasal_casa_agata",
+    "brasal_casa_carvao"
    ],
-   "battle_bg": "res://assets/battle/bg_praia.png"
+   "battle_bg": "res://assets/battle/bg_minas.png"
   },
   "pantano": {
    "name_key": "REGION_PANTANO",
@@ -78,7 +85,9 @@
     0.82
    ],
    "music": "",
-   "maps": [],
+   "maps": [
+    "rota_3"
+   ],
    "battle_bg": "res://assets/battle/bg_praia.png"
   },
   "ossorio": {

@@ -137,7 +137,7 @@ func on_player_arrived(cell: Vector2i) -> void:
 	if w.is_empty():
 		return
 	var to := str(w.get("to", ""))
-	if not Data.has_map(to):
+	if not Data.has_map(to) or not MapView.condition_ok(w):
 		player.frozen = true
 		await Game.show_message(str(w.get("locked_message", "MSG_AREA_LOCKED")))
 		player.step_back()

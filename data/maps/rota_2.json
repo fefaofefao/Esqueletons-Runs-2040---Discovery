@@ -1,0 +1,371 @@
+{
+ "id": "rota_2",
+ "region": "minas",
+ "name_key": "MAP_ROTA_2",
+ "tileset": "overworld",
+ "legend": {
+  "g": "ash",
+  "f": "mud",
+  "B": "rock",
+  "p": "path",
+  ".": "floor"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfffggfffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfffggfffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffgggfppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffgggfpggfffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfffffffggpffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfffffffggpffffB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggppppppppppppppppppppppppppgggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
+ ],
+ "spawn": {
+  "x": 19,
+  "y": 47,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "mine_lamp",
+   "x": 18,
+   "y": 36
+  },
+  {
+   "type": "mine_lamp",
+   "x": 21,
+   "y": 13
+  },
+  {
+   "type": "rails",
+   "x": 33,
+   "y": 44
+  },
+  {
+   "type": "rails",
+   "x": 34,
+   "y": 44
+  },
+  {
+   "type": "mine_cart",
+   "x": 34,
+   "y": 46
+  },
+  {
+   "type": "crystal",
+   "x": 27,
+   "y": 24
+  },
+  {
+   "type": "crystal",
+   "x": 37,
+   "y": 12
+  },
+  {
+   "type": "sign",
+   "x": 18,
+   "y": 42,
+   "dialog": "minas/placa_bifurcacao"
+  },
+  {
+   "type": "rock_small",
+   "x": 11,
+   "y": 44
+  },
+  {
+   "type": "rock_small",
+   "x": 31,
+   "y": 44
+  },
+  {
+   "type": "rock_big",
+   "x": 8,
+   "y": 44
+  },
+  {
+   "type": "rock_small",
+   "x": 14,
+   "y": 47
+  },
+  {
+   "type": "rock_big",
+   "x": 4,
+   "y": 47
+  },
+  {
+   "type": "rock_small",
+   "x": 15,
+   "y": 44
+  },
+  {
+   "type": "rock_small",
+   "x": 36,
+   "y": 47
+  },
+  {
+   "type": "rock_big",
+   "x": 23,
+   "y": 47
+  },
+  {
+   "type": "rock_small",
+   "x": 8,
+   "y": 2
+  },
+  {
+   "type": "rock_big",
+   "x": 27,
+   "y": 6
+  },
+  {
+   "type": "rock_big",
+   "x": 15,
+   "y": 4
+  },
+  {
+   "type": "rock_small",
+   "x": 3,
+   "y": 3
+  },
+  {
+   "type": "rock_small",
+   "x": 32,
+   "y": 2
+  },
+  {
+   "type": "rock_small",
+   "x": 34,
+   "y": 5
+  },
+  {
+   "type": "rock_big",
+   "x": 5,
+   "y": 6
+  },
+  {
+   "type": "rock_big",
+   "x": 16,
+   "y": 7
+  },
+  {
+   "type": "rock_small",
+   "x": 23,
+   "y": 6
+  },
+  {
+   "type": "rock_small",
+   "x": 7,
+   "y": 24
+  },
+  {
+   "type": "rock_small",
+   "x": 3,
+   "y": 33
+  },
+  {
+   "type": "rock_small",
+   "x": 8,
+   "y": 16
+  },
+  {
+   "type": "rock_big",
+   "x": 8,
+   "y": 12
+  },
+  {
+   "type": "rock_small",
+   "x": 3,
+   "y": 27
+  },
+  {
+   "type": "crystal",
+   "x": 21,
+   "y": 16,
+   "dialog": "minas/cristal_vela",
+   "if": "pirita_quest",
+   "if_not": "cristal_pego"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "graxa",
+   "x": 6,
+   "y": 30,
+   "facing": "left"
+  },
+  {
+   "id": "brita",
+   "x": 3,
+   "y": 20,
+   "facing": "right"
+  },
+  {
+   "id": "fuligem",
+   "x": 12,
+   "y": 9,
+   "facing": "down"
+  },
+  {
+   "id": "seixo",
+   "x": 22,
+   "y": 42,
+   "facing": "left"
+  },
+  {
+   "id": "vigia_lasca",
+   "x": 22,
+   "y": 46,
+   "facing": "left"
+  },
+  {
+   "id": "cascudo",
+   "x": 28,
+   "y": 25,
+   "facing": "down"
+  }
+ ],
+ "warps": [
+  {
+   "x": 19,
+   "y": 49,
+   "to": "raizal",
+   "tx": 19,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 49,
+   "to": "raizal",
+   "tx": 20,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 19,
+   "y": 0,
+   "to": "brasal",
+   "tx": 19,
+   "ty": 30,
+   "facing": "up",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 0,
+   "to": "brasal",
+   "tx": 20,
+   "ty": 30,
+   "facing": "up",
+   "sfx": ""
+  }
+ ],
+ "spawns": [
+  {
+   "id": "r2_sul",
+   "table": "rota2_sul",
+   "x": 10,
+   "y": 45,
+   "radius": 3,
+   "count": 2
+  },
+  {
+   "id": "r2_oeste",
+   "table": "rota2_oeste",
+   "x": 5,
+   "y": 25,
+   "radius": 2,
+   "count": 1
+  },
+  {
+   "id": "r2_campo_a",
+   "table": "rota2_campo",
+   "x": 30,
+   "y": 32,
+   "radius": 4,
+   "count": 3
+  },
+  {
+   "id": "r2_campo_b",
+   "table": "rota2_campo",
+   "x": 30,
+   "y": 18,
+   "radius": 4,
+   "count": 3
+  },
+  {
+   "id": "r2_galeria",
+   "table": "rota2_galeria",
+   "x": 19,
+   "y": 25,
+   "radius": 2,
+   "count": 1
+  },
+  {
+   "id": "r2_norte",
+   "table": "rota2_norte",
+   "x": 10,
+   "y": 6,
+   "radius": 3,
+   "count": 2
+  }
+ ],
+ "ambient": [
+  "ash"
+ ],
+ "tint": [
+  0.92,
+  0.88,
+  0.86
+ ],
+ "on_enter": [
+  {
+   "if_not": "vigia_lasca_ok",
+   "dialog": "minas/vigia_entrada"
+  }
+ ]
+}

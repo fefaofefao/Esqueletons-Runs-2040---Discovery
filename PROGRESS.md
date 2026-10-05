@@ -12,7 +12,8 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 | 3c — Golpes e balanceamento | ✅ concluída |
 | 4a — Arco e Prólogo | ✅ concluída |
 | 4b — Bosque das Raízes | ✅ concluída |
-| 4c–4h — Regiões, Castelo e finais | ⏳ próxima (4c) |
+| 4c — Minas de Cinzas | ✅ concluída |
+| 4d–4h — Regiões, Castelo e finais | ⏳ próxima (4d) |
 | 5 — Monetização e conformidade | — |
 | 6 — Polimento e publicação | — |
 
@@ -246,5 +247,29 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 ### Pendências
 - A estrada norte de Raizal leva às Minas (fase 4c). O vigia da Rota 2 vai pedir a Lasca de Raiz.
 
-### Próxima tarefa: Fase 4c — Minas de Cinzas
-`03_minas.md`, Rota 2, Minas, Tia Fornalha (Defesa), escolha 2 (quebrar a corrente ou negociar), pista do mapa antigo e o lenço da mãe do Taro.
+## Fase 4c — Minas de Cinzas (concluída)
+
+### Feito
+- **Kit de região** (`tools/maps/regionkit.py`): uma fonte única por região gera o roteiro `docs/roteiro/NN_<id>.md`, as falas nos 3 idiomas, NPCs, encontros, loja, itens, mapas e as fichas de cidade/rota (`data/cities.json`, `data/routes.json`). O roteiro e o jogo não podem divergir.
+- **`docs/roteiro/03_minas.md`** (gerado por `tools/maps/minas.py`):
+  - problema local: a Tia Fornalha acorrentou os esqueletos mineiros à forja, onde martelam as correntes que fecham as estradas;
+  - pista nº 3: o mapa antigo do Seu Carvão com as três baías da cidade do protagonista;
+  - momento de Taro: o lenço da mãe na Mina Funda (como parceiro ou recorrente);
+  - Guardiã Tia Fornalha (Defesa), NPCs, casas e a **escolha 2**.
+- **Rota 2** com 3 caminhos (Domadores Graxa/Brita/Fuligem; Campo de Cascalho; Galeria Velha com um selvagem forte). O Vigia confere a Lasca de Raiz. A saída norte de Raizal só abre depois do Ramalho (saídas agora aceitam condições).
+- **Brasal:** Rancho (Rubi), Loja com Poção G (Cobre, preço muda com a escolha), casas do Mestre Bigorna (Defesa) e da Ágata (gás e cura), 2 missões (capacete do Carvão, bolo do Gasito da Pirita), NPCs de dica/humor/lore e falas que mudam depois da Guardiã.
+- **Mina Funda:** salão de selvagens, Capataz Bloqueio, câmara sul (lenço, capacete, Vagonauta) e a forja da Tia.
+- **Escolha 2:** quebrar a corrente (loja +25%, Vagonauta recrutável) ou pedir que ela solte (Martelo da Tia, loja −10%, +1 Redenção).
+- **Parceiro comenta** a primeira visita de cada lugar (falas diferentes para Lia e Taro).
+- **Arte:** casas de pedra, trilhos, vagonete, lampião de mina, cristais, vigas, bigorna, forja animada, corrente, entulho, quadro do mapa, lenço, capacete; 16 NPCs; sprites dos 6 Guardiões, do Rei, dos únicos e de Lia/Taro crescidos; **fundos de batalha de todas as regiões** (Minas, Pântano, Ossório, Picos, Deserto, Castelo); terrenos de todas as regiões; clima por região (cinza, névoa, neve, areia, brasas).
+- **Sistemas:** `take_item`, `give_monster`, `refresh_map`, `fade`, `wait`, `credits`, `heal_all`; condições `if_all`/`if_any`/`if_count`; preço da loja por flag; tela de créditos.
+- **Texto:** ~1.130 palavras PT-BR na região.
+
+### Verificação
+- `tests/run_tests.tscn`: 0 falhas. Novo `test_regions.gd`, genérico para todas as regiões: caminhos de cada rota por busca em largura, cidades completas, idades e média dos Guardiões contra o `balance.json`, as duas opções da escolha 2 e as missões.
+- `tools/validate_data.py`: OK, agora também com `cities.json` e `routes.json` (rancho, loja, 2–3 casas, 3–6 NPCs, 1–2 missões e NPCs presentes de verdade nos mapas).
+- `tools/simulate.py --check`: 174 min, 0 critérios falhando.
+- Capturas: `capture.tscn -- --region=minas` (roteiro em `tools/screenshots/regions.json`).
+
+### Pendências
+- O volume de texto do Prólogo (~690) e do Bosque (~490) está abaixo do orçamento do arco; será completado na revisão de texto da fase 6, junto com as regiões novas, para atingir 12–18 mil palavras no total.

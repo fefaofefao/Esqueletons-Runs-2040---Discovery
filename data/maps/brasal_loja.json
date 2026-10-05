@@ -1,0 +1,76 @@
+{
+ "id": "brasal_loja",
+ "region": "minas",
+ "name_key": "MAP_BRASAL_LOJA",
+ "tileset": "overworld",
+ "legend": {
+  "T": "wall_top",
+  "w": "wall",
+  "n": "wall_window",
+  ".": "floor",
+  "m": "mat"
+ },
+ "ground": [
+  "TTTTTTTTTTTT",
+  "TwwnwwwwwnwT",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "TTTTTTmTTTTT"
+ ],
+ "spawn": {
+  "x": 6,
+  "y": 8,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "shelf",
+   "x": 3,
+   "y": 2
+  },
+  {
+   "type": "shelf",
+   "x": 10,
+   "y": 2
+  },
+  {
+   "type": "table",
+   "x": 7,
+   "y": 4
+  },
+  {
+   "type": "crate",
+   "x": 10,
+   "y": 7
+  },
+  {
+   "type": "crystal",
+   "x": 1,
+   "y": 7
+  }
+ ],
+ "npcs": [
+  {
+   "id": "cobre",
+   "x": 6,
+   "y": 3,
+   "facing": "down"
+  }
+ ],
+ "warps": [
+  {
+   "x": 6,
+   "y": 9,
+   "to": "brasal",
+   "tx": 27,
+   "ty": 11,
+   "facing": "down",
+   "sfx": "door"
+  }
+ ]
+}

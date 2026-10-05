@@ -611,6 +611,437 @@
      "dialog": "bosque/rival_taro"
     }
    ]
+  },
+  "vigia_lasca": {
+   "name_key": "SPK_VIGIA_LASCA",
+   "role": "hint",
+   "sprite": "res://assets/sprites/npc/vigia_lasca.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "minas/vigia"
+    }
+   ]
+  },
+  "seixo": {
+   "name_key": "SPK_SEIXO",
+   "role": "hint",
+   "sprite": "res://assets/sprites/npc/seixo.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "minas/seixo"
+    }
+   ]
+  },
+  "brita": {
+   "name_key": "SPK_BRITA",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/brita.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "brita_beaten",
+     "dialog": "minas/brita_depois"
+    },
+    {
+     "dialog": "minas/brita"
+    }
+   ],
+   "tamer": {
+    "vision": 4,
+    "flag": "brita_beaten"
+   }
+  },
+  "graxa": {
+   "name_key": "SPK_GRAXA",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/graxa.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "graxa_beaten",
+     "dialog": "minas/graxa_depois"
+    },
+    {
+     "dialog": "minas/graxa"
+    }
+   ],
+   "tamer": {
+    "vision": 4,
+    "flag": "graxa_beaten"
+   }
+  },
+  "fuligem": {
+   "name_key": "SPK_FULIGEM",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/fuligem.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "fuligem_beaten",
+     "dialog": "minas/fuligem_depois"
+    },
+    {
+     "dialog": "minas/fuligem"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "fuligem_beaten"
+   }
+  },
+  "rubi": {
+   "name_key": "SPK_RUBI",
+   "role": "ranch",
+   "sprite": "res://assets/sprites/npc/rubi.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "minas/rubi"
+    }
+   ]
+  },
+  "cobre": {
+   "name_key": "SPK_COBRE",
+   "role": "shop",
+   "sprite": "res://assets/sprites/npc/cobre.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "minas/cobre"
+    }
+   ]
+  },
+  "pirita": {
+   "name_key": "SPK_PIRITA",
+   "role": "quest",
+   "sprite": "res://assets/sprites/npc/pirita.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "pirita_done",
+     "dialog": "minas/pirita"
+    },
+    {
+     "if": "has_cristal_vela",
+     "dialog": "minas/pirita_festa"
+    },
+    {
+     "if": "pirita_quest",
+     "dialog": "minas/pirita_onde"
+    },
+    {
+     "dialog": "minas/pirita_pede"
+    }
+   ]
+  },
+  "fagulha": {
+   "name_key": "SPK_FAGULHA",
+   "role": "hint",
+   "sprite": "res://assets/sprites/npc/fagulha.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "minas/fagulha"
+    }
+   ]
+  },
+  "turmalina": {
+   "name_key": "SPK_TURMALINA",
+   "role": "lore",
+   "sprite": "res://assets/sprites/npc/turmalina.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "minas/turmalina"
+    }
+   ]
+  },
+  "carvao": {
+   "name_key": "SPK_CARVAO",
+   "role": "quest",
+   "sprite": "res://assets/sprites/npc/carvao.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "carvao_done",
+     "dialog": "minas/carvao_depois"
+    },
+    {
+     "if": "has_capacete_carvao",
+     "dialog": "minas/carvao_obrigado"
+    },
+    {
+     "if": "carvao_quest",
+     "dialog": "minas/carvao_onde"
+    },
+    {
+     "dialog": "minas/carvao_pede"
+    }
+   ]
+  },
+  "bigorna": {
+   "name_key": "SPK_BIGORNA",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/bigorna.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "bigorna_beaten",
+     "dialog": "minas/bigorna_depois"
+    },
+    {
+     "dialog": "minas/bigorna"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "bigorna_beaten"
+   }
+  },
+  "agata": {
+   "name_key": "SPK_AGATA",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/agata.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "agata_beaten",
+     "dialog": "minas/agata_depois"
+    },
+    {
+     "dialog": "minas/agata"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "agata_beaten"
+   }
+  },
+  "guarda_estrada": {
+   "name_key": "SPK_BLOQUEIO",
+   "role": "hint",
+   "sprite": "res://assets/sprites/npc/bloqueio.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "minas/guarda_estrada"
+    }
+   ]
+  },
+  "bloqueio": {
+   "name_key": "SPK_BLOQUEIO",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/bloqueio.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "bloqueio_beaten",
+     "dialog": "minas/bloqueio_depois"
+    },
+    {
+     "dialog": "minas/bloqueio"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "bloqueio_beaten"
+   }
+  },
+  "taro_mina": {
+   "name_key": "SPK_TARO",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_taro.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "minas/lenco_recorrente"
+    }
+   ]
+  },
+  "vagonauta_npc": {
+   "name_key": "SPECIES_VAGONAUTA",
+   "role": "wild",
+   "sprite": "res://assets/sprites/npc/skel_vagonauta.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "minas/vagonauta"
+    }
+   ]
+  },
+  "fornalha": {
+   "name_key": "SPK_FORNALHA",
+   "role": "guardian",
+   "sprite": "res://assets/sprites/npc/skel_fornalha.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "if_any": [
+      "minas_quebrou",
+      "minas_negociou"
+     ],
+     "dialog": "minas/fornalha_depois"
+    },
+    {
+     "if": "fornalha_beaten",
+     "dialog": "minas/fornalha_escolha"
+    },
+    {
+     "dialog": "minas/fornalha"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "fornalha_beaten"
+   }
+  },
+  "mineiro_forja": {
+   "name_key": "SPECIES_MINEIRO_2",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_mineiro.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "if": "minas_negociou",
+     "dialog": "minas/mineiro_livre"
+    },
+    {
+     "dialog": "minas/mineiro_preso"
+    }
+   ]
+  },
+  "cascudo": {
+   "name_key": "SPK_CASCUDO",
+   "role": "hint",
+   "sprite": "res://assets/sprites/npc/cascudo.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "minas/cascudo"
+    }
+   ]
   }
  }
 }

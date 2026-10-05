@@ -1,0 +1,47 @@
+{
+ "_comment": "Gerado pelos scripts de região (tools/maps). Conferido por tools/validate_data.py.",
+ "routes": [
+  {
+   "id": "rota_1",
+   "map": "rota_1",
+   "from": "vila_mare",
+   "to": "raizal",
+   "paths": [
+    {
+     "kind": "domadores",
+     "required": false
+    },
+    {
+     "kind": "selvagem",
+     "required": false
+    },
+    {
+     "kind": "atalho",
+     "required": false,
+     "note": "Túnel das Raízes: escuro, com um selvagem forte"
+    }
+   ]
+  },
+  {
+   "id": "rota_2",
+   "map": "rota_2",
+   "from": "raizal",
+   "to": "brasal",
+   "paths": [
+    {
+     "kind": "domadores",
+     "required": false
+    },
+    {
+     "kind": "selvagem",
+     "required": false
+    },
+    {
+     "kind": "atalho",
+     "required": false,
+     "note": "Galeria Velha: curta, com um selvagem forte"
+    }
+   ]
+  }
+ ]
+}

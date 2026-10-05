@@ -24,6 +24,11 @@ func _ready() -> void:
 	await _shot("00_titulo_intro")
 	await _wait(1.6)
 	await _shot("01_titulo")
+	for a in OS.get_cmdline_user_args():
+		if a.begins_with("--region="):
+			await _region_shots(a.substr(9))
+			get_tree().quit()
+			return
 	if "--bosque" in OS.get_cmdline_user_args():
 		await _bosque_shots()
 		get_tree().quit()
@@ -413,3 +418,49 @@ func _bosque_shots() -> void:
 	await _wait(0.6)
 	Game.world.interact(Vector2i(12, 6), Vector2i.UP)
 	await _advance([1], "b9_raizerno_brasao", 1)
+
+
+## Capturas por região, descritas em tools/screenshots/regions.json:
+## {"<região>": {"flags": [...], "party": [[espécie, idade, apelido?]], "steps": [
+##    {"map", "x", "y", "f", "shot", "interact": [x, y]?, "choices": [...]?, "shot_at": n?,
+##     "step": "up"?, "battle": true?, "wait": s?}]}}
+func _region_shots(rid: String) -> void:
+	var all = Data.load_json("res://tools/screenshots/regions.json")
+	var cfg: Dictionary = all.get(rid, {})
+	Game.start_new_game("Téo")
+	await _wait(1.0)
+	await _advance()
+	for f in cfg.get("flags", []):
+		SaveGame.set_flag(str(f))
+	var party := []
+	for e in cfg.get("party", []):
+		var m := Monster.create(str(e[0]), int(e[1]))
+		if e.size() > 2:
+			m.nickname = str(e[2])
+		party.append(m.to_dict())
+	if not party.is_empty():
+		SaveGame.data["party"] = party
+	for st in cfg.get("steps", []):
+		for f in st.get("flags", []):
+			SaveGame.set_flag(str(f))
+		if st.get("no_wait_warp", false):
+			Game.warp(str(st.map), Vector2i(int(st.x), int(st.y)), str(st.get("f", "up")))
+			await _wait(1.6)
+		else:
+			await _goto(str(st.map), Vector2i(int(st.x), int(st.y)), str(st.get("f", "up")))
+		await _wait(float(st.get("wait", 0.4)))
+		if st.has("step"):
+			Game.world.player.try_move({"up": Vector2i.UP, "down": Vector2i.DOWN, "left": Vector2i.LEFT, "right": Vector2i.RIGHT}[str(st.step)])
+			await _wait(2.5)
+		if st.has("interact"):
+			var c := Vector2i(int(st.interact[0]), int(st.interact[1]))
+			Game.world.interact(c, c - Game.world.player.cell)
+		if st.has("interact") or st.has("step") or st.get("no_wait_warp", false):
+			await _advance(st.get("choices", []).duplicate(), str(st.get("shot", "")), int(st.get("shot_at", 0)), 40)
+			if st.get("battle", false) and Game.battle:
+				await _wait(4.0)
+				await _shot(str(st.shot) + "_batalha")
+				Game.battle.debug_win()
+				await _advance(st.get("after_choices", []).duplicate(), str(st.get("after_shot", "")), int(st.get("after_shot_at", 0)), 160)
+		else:
+			await _shot(str(st.shot))

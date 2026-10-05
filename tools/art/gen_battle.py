@@ -125,6 +125,128 @@ def battle_bg_forest():
     return img
 
 
+def battle_bg_region(kind):
+    """Fundos das regiões 2–7, um gerador parametrizado: céu/teto, camada do
+    fundo (silhuetas próprias de cada lugar) e chão com textura."""
+    W, H = 400, 180
+    P = {
+        "minas": dict(sky=((40, 34, 44), (70, 58, 62)), ground=((86, 78, 80), (110, 100, 98)), speck=(60, 56, 60), speck2=(170, 150, 120), horizon=88,
+                      plat=((80, 72, 74), (104, 96, 94), (122, 112, 108)), rim=(255, 196, 110)),
+        "pantano": dict(sky=((120, 150, 130), (180, 196, 160)), ground=((64, 92, 66), (80, 110, 74)), speck=(50, 70, 52), speck2=(140, 170, 90), horizon=84,
+                        plat=((70, 86, 58), (96, 112, 70), (112, 130, 80)), rim=(180, 120, 200)),
+        "ossorio": dict(sky=((130, 150, 200), (220, 214, 210)), ground=((150, 146, 140), (170, 164, 156)), speck=(126, 122, 118), speck2=(196, 190, 180), horizon=86,
+                        plat=((130, 124, 118), (156, 150, 142), (176, 170, 160)), rim=(210, 180, 90)),
+        "picos": dict(sky=((150, 186, 230), (226, 238, 250)), ground=((220, 232, 242), (240, 246, 252)), speck=(190, 210, 228), speck2=(255, 255, 255), horizon=90,
+                      plat=((180, 200, 220), (210, 226, 240), (232, 242, 250)), rim=(150, 210, 240)),
+        "deserto": dict(sky=((236, 170, 110), (250, 222, 170)), ground=((226, 190, 130), (238, 206, 146)), speck=(206, 166, 108), speck2=(250, 226, 170), horizon=84,
+                        plat=((200, 160, 100), (224, 186, 124), (240, 204, 142)), rim=(170, 120, 70)),
+        "castelo": dict(sky=((30, 22, 40), (66, 46, 70)), ground=((70, 62, 80), (86, 76, 96)), speck=(56, 48, 66), speck2=(120, 90, 130), horizon=92,
+                        plat=((110, 40, 54), (140, 54, 66), (162, 70, 80)), rim=(230, 190, 90)),
+    }[kind]
+    img = new(W, H)
+    hz = P["horizon"]
+    for y in range(H):
+        for x in range(W):
+            if y < hz:
+                c = mix(P["sky"][0], P["sky"][1], y / hz)
+            else:
+                c = mix(P["ground"][0], P["ground"][1], (y - hz) / (H - hz))
+                if hash01(x, y, 6) > 0.93:
+                    c = P["speck"]
+                elif hash01(x, y, 7) > 0.97:
+                    c = P["speck2"]
+            put(img, x, y, c)
+    if kind == "minas":
+        for i, x0 in enumerate(range(0, W, 70)):                       # vigas
+            rect(img, x0 + 6, 18, 8, hz - 18, (110, 80, 54))
+            rect(img, x0 - 10, 14, 40, 6, (126, 90, 60))
+        for (cx, cy) in [(60, 50), (200, 40), (330, 56), (130, 70), (270, 74)]:   # cristais
+            for k in range(3):
+                h = 10 + k * 4
+                for yy in range(h):
+                    w = max(1, (h - yy) // 3)
+                    rect(img, cx + k * 5 - w // 2, cy - yy, w, 1, (150, 220, 255) if yy < h - 2 else (240, 255, 255))
+        for x in range(0, W):                                           # trilho
+            put(img, x, hz + 6, (130, 130, 140)); put(img, x, hz + 12, (130, 130, 140))
+            if x % 8 == 0:
+                rect(img, x, hz + 5, 3, 9, (100, 74, 50))
+        for x0 in (40, 360):                                            # lampiões
+            ellipse(img, x0, 30, 10, 10, mix(P["sky"][0], (255, 200, 110), 0.35))
+            rect(img, x0 - 2, 26, 4, 6, (255, 210, 120))
+    elif kind == "pantano":
+        for i, tx in enumerate(range(-10, W + 20, 52)):                  # árvores tortas
+            col = (70, 90, 70)
+            for yy in range(14, hz):
+                xx = tx + int(4 * math.sin(yy / 12 + i))
+                rect(img, xx, yy, 6, 1, col)
+            ellipse(img, tx + 3, 16, 22, 10, (84, 112, 76))
+            for k in range(4):
+                line(img, tx - 8 + k * 6, 18, tx - 8 + k * 6, 34 + k * 3, (100, 130, 80))
+        for (x0, x1, y) in [(0, 400, hz + 3)]:                          # água parada
+            for x in range(x0, x1):
+                for d in range(6):
+                    if bayer(x, y + d) < 0.5:
+                        put(img, x, y + d, (70, 110, 96))
+        for x in range(0, W, 9):                                        # névoa
+            for yy in range(hz - 12, hz):
+                if bayer(x, yy) < 0.2:
+                    put(img, x + (yy % 5), yy, (220, 230, 220))
+    elif kind == "ossorio":
+        for i, x0 in enumerate(range(0, W, 40)):                        # muralha e torres
+            h = 34 if i % 3 else 52
+            rect(img, x0, hz - h, 40, h, (176, 170, 164) if i % 2 else (166, 160, 154))
+            for k in range(0, 40, 8):
+                rect(img, x0 + k, hz - h - 5, 5, 5, (176, 170, 164))
+            for yy in range(hz - h + 6, hz, 8):
+                rect(img, x0, yy, 40, 1, (140, 134, 130))
+        for x0 in (90, 300):                                            # estandartes
+            rect(img, x0, hz - 46, 10, 22, (60, 80, 150))
+            rect(img, x0 + 3, hz - 40, 4, 4, (230, 200, 90))
+    elif kind == "picos":
+        for (cx, h, w) in [(40, 60, 90), (150, 74, 110), (260, 58, 90), (360, 70, 100)]:
+            for yy in range(h):
+                ww = int(w * (yy / h))
+                rect(img, cx - ww // 2, hz - h + yy, ww, 1, (150, 168, 196) if yy > 16 else (250, 252, 255))
+        for k in range(40):                                             # flocos
+            x = int(hash01(k, 3, 9) * W); y = int(hash01(k, 5, 9) * hz)
+            put(img, x, y, (255, 255, 255))
+    elif kind == "deserto":
+        ellipse(img, 320, 26, 16, 16, (255, 240, 200))
+        for (cx, h, w) in [(70, 18, 160), (230, 24, 200), (370, 14, 120)]:   # dunas
+            for xx in range(cx - w // 2, cx + w // 2):
+                hh = int(h * math.cos((xx - cx) / w * math.pi))
+                for yy in range(hz - hh, hz):
+                    if 0 <= xx < W:
+                        put(img, xx, yy, (230, 186, 120))
+        for x0 in (120, 280):                                           # colunas quebradas
+            rect(img, x0, hz - 40, 10, 40, (214, 190, 150))
+            rect(img, x0 - 2, hz - 42, 14, 3, (226, 204, 164))
+    elif kind == "castelo":
+        for i, x0 in enumerate(range(10, W, 64)):                       # colunas e vitrais
+            rect(img, x0, 10, 12, hz - 10, (90, 76, 104))
+            rect(img, x0 + 26, 20, 14, 30, (60, 50, 110))
+            ellipse(img, x0 + 33, 20, 7, 6, (60, 50, 110))
+            rect(img, x0 + 32, 22, 2, 26, (200, 170, 90))
+            rect(img, x0 + 27, 34, 12, 2, (200, 170, 90))
+        for x in range(0, W):                                           # tapete
+            for yy in range(hz, H):
+                if 170 <= x <= 230:
+                    put(img, x, yy, (140, 40, 54) if 174 < x < 226 else (220, 180, 80))
+    pl, pm, ph = P["plat"]
+
+    def platform(cx, cy, rx, ry):
+        ellipse(img, cx, cy + 3, rx, ry, pl)
+        ellipse(img, cx, cy, rx, ry, pm)
+        ellipse(img, cx, cy - 1, rx - 4, ry - 3, ph)
+        for k in range(16):
+            a = k / 16 * 2 * math.pi
+            px, py = cx + math.cos(a) * (rx - 2), cy + math.sin(a) * (ry - 1)
+            put(img, int(px), int(py), P["rim"] if k % 3 == 0 else pl)
+    platform(118, 130, 74, 15)
+    platform(282, 130, 74, 15)
+    return img
+
+
 # ------------------------------------------------------------------ bonecos
 TYPE_COLORS = {
     "fisico": ((214, 64, 64), (150, 36, 44)),
@@ -311,6 +433,8 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     battle_bg_forest().save(OUT / "bg_bosque.png")
     battle_bg().save(OUT / "bg_praia.png")
+    for kind in ("minas", "pantano", "ossorio", "picos", "deserto", "castelo"):
+        battle_bg_region(kind).save(OUT / f"bg_{kind}.png")
     for kind in TYPE_COLORS:
         front = dummy(kind)
         back = dummy(kind, True)

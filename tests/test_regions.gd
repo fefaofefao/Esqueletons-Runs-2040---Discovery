@@ -1,0 +1,197 @@
+extends "res://tests/test_case.gd"
+## Fase 4 (todas as regiões): regras das seções 6, 7 e 11 conferidas sobre os
+## mapas reais, a partir de data/routes.json, data/cities.json e dos roteiros.
+##   - toda rota: os caminhos de Domadores (oeste) e Selvagem (leste) chegam
+##     sozinhos à cidade seguinte (nenhum é obrigatório);
+##   - toda cidade: portas para Rancho, Loja e casas; Guardião alcançável;
+##   - todo Guardião: batalha de chefe, idades coerentes com o estágio e média
+##     igual à de data/balance.json.
+
+const GUARDIANS := {
+	"BTL_TAMER_RAMALHO": "bosque", "BTL_TAMER_FORNALHA": "minas", "BTL_TAMER_MUSGA": "pantano",
+	"BTL_TAMER_CALICO": "ossorio", "BTL_TAMER_ALVA": "picos", "BTL_TAMER_DUNA": "deserto",
+}
+
+var tree: SceneTree
+var host: Node
+
+
+func set_tree(t: SceneTree, h: Node) -> void:
+	tree = t
+	host = h
+
+
+func _reach(m: MapView, from: Vector2i, to: Vector2i, allow: Callable = Callable()) -> bool:
+	var seen := {from: true}
+	var q: Array[Vector2i] = [from]
+	while not q.is_empty():
+		var c: Vector2i = q.pop_front()
+		if c == to:
+			return true
+		for d in [Vector2i.UP, Vector2i.DOWN, Vector2i.LEFT, Vector2i.RIGHT]:
+			var n: Vector2i = c + d
+			if seen.has(n) or not m.in_bounds(n):
+				continue
+			if m.is_blocked(n) and m.npc_at(n) == null:
+				continue
+			if allow.is_valid() and not allow.call(n):
+				continue
+			seen[n] = true
+			q.append(n)
+	return false
+
+
+func _map(id: String) -> MapView:
+	var m := MapView.new()
+	host.add_child(m)
+	check(m.build(id), "%s monta" % id)
+	return m
+
+
+func test_routes_have_free_paths() -> void:
+	SaveGame.start_new("Téo")
+	for r in Data.load_json("res://data/routes.json").get("routes", []):
+		var m := _map(str(r.map))
+		var start := Vector2i(19, int(m.size.y) - 3)
+		var goal := Vector2i(19, 1)
+		check(_reach(m, start, goal), "%s: atravessa" % r.id)
+		check(_reach(m, start, goal, func(c: Vector2i) -> bool: return c.x <= 18 or c.y <= 13 or c.y >= 36),
+			"%s: Caminho dos Domadores sozinho chega" % r.id)
+		check(_reach(m, start, goal, func(c: Vector2i) -> bool: return c.x >= 21 or c.y <= 13 or c.y >= 36),
+			"%s: Caminho Selvagem sozinho chega" % r.id)
+		var tamers := 0
+		for n in m.all_npcs():
+			if not n.info.get("tamer", {}).is_empty():
+				tamers += 1
+		check(tamers >= 3, "%s: 3 domadores no caminho deles (%d)" % [r.id, tamers])
+		check(m.spawns.size() >= 4, "%s: selvagens visíveis" % r.id)
+		check(not m.props_of("sign").is_empty(), "%s: placa na bifurcação" % r.id)
+		m.queue_free()
+		await tree.process_frame
+
+
+func test_cities_complete() -> void:
+	SaveGame.start_new("Téo")
+	for c in Data.load_json("res://data/cities.json").get("cities", []):
+		var m := _map(str(c.map))
+		var doors := 0
+		for w in m.data.warps:
+			if Data.has_map(str(w.to)) and str(Data.map(str(w.to)).get("id", "")) != "" and str(w.get("sfx", "")) == "door":
+				doors += 1
+		check(doors >= 4, "%s: portas de Rancho, Loja e casas (%d)" % [c.id, doors])
+		check(Data.load_json("res://data/shops.json").shops.has(str(c.shop)), "%s: loja com estoque" % c.id)
+		m.queue_free()
+		await tree.process_frame
+
+
+func _battles(node_list: Array, out: Array) -> void:
+	for n in node_list:
+		if n is Dictionary and str(n.get("action", "")) == "battle" and str(n.get("kind", "")) == "boss":
+			out.append(n)
+
+
+func test_guardians_match_balance() -> void:
+	var targets := {}
+	for reg in Data.load_json("res://data/balance.json").regions:
+		targets[str(reg.id)] = float(reg.guardian_age)
+	var found := {}
+	for f in DirAccess.get_files_at("res://data/dialogs"):
+		if not f.ends_with(".json"):
+			continue
+		var d = Data.load_json("res://data/dialogs/" + f)
+		for key in d.get("dialogs", {}):
+			var bs: Array = []
+			_battles(d.dialogs[key], bs)
+			for b in bs:
+				var tk := str(b.tamer_key)
+				if not GUARDIANS.has(tk):
+					continue
+				found[tk] = true
+				var total := 0
+				for e in b.enemies:
+					var info := Data.species(str(e[0]))
+					var gl: Array = info.get("growth_levels", [])
+					var st := int(info.get("stage", 1))
+					total += int(e[1])
+					if gl.size() == 2:
+						var lo := 0 if st == 1 else int(gl[st - 2])
+						var hi := 999 if st == 3 else int(gl[st - 1]) - 1
+						check(int(e[1]) >= lo and int(e[1]) <= hi, "%s: %s com idade %d coerente com o estágio" % [tk, e[0], int(e[1])])
+				var avg := total / float(b.enemies.size())
+				var want: float = targets.get(GUARDIANS[tk], 0.0)
+				check(absf(avg - want) <= 2.0, "%s: média %.1f ≈ %.0f (balance.json)" % [tk, avg, want])
+	check(found.has("BTL_TAMER_RAMALHO") and found.has("BTL_TAMER_FORNALHA"), "Guardiões implementados conferidos")
+
+
+## Executa um roteiro escolhendo as opções dadas (sem batalhas no caminho).
+func _play(ref: String, choices: Array = []) -> void:
+	var done := [false]
+	var runner := func() -> void:
+		await Game.play_script(Data.dialog(ref))
+		done[0] = true
+	runner.call()
+	var start := Time.get_ticks_msec()
+	while not done[0] and Time.get_ticks_msec() - start < 8000:
+		await tree.process_frame
+		var top := Game.top_overlay()
+		if top is DialogBox:
+			var box := top as DialogBox
+			if box._waiting_choice and box._choice:
+				box._choice.index = int(choices.pop_front()) if not choices.is_empty() else 0
+				box._choice.activate_current()
+			elif box.accepts_input():
+				box._press()
+		elif top != null:
+			top.close()
+	check(done[0], "roteiro %s termina" % ref)
+
+
+func _price(shop: String, item: String) -> int:
+	var s := ShopMenu.new()
+	s.shop_id = shop
+	var p := s.price(item)
+	s.free()
+	return p
+
+
+func test_choice_minas() -> void:
+	SaveGame.start_new("Téo")
+	var base := _price("brasal", "pocao_g")
+	SaveGame.set_flag("fornalha_beaten")
+	await _play("minas/fornalha_escolha", [1])
+	check(SaveGame.get_flag("minas_negociou") and SaveGame.get_flag("red_minas"), "negociar: +1 Redenção")
+	check(SaveGame.get_flag("has_martelo_tia"), "negociar: Martelo da Tia")
+	check(_price("brasal", "pocao_g") < base, "negociar: desconto na loja")
+	SaveGame.start_new("Téo")
+	SaveGame.set_flag("fornalha_beaten")
+	await _play("minas/fornalha_escolha", [0])
+	check(SaveGame.get_flag("minas_quebrou") and not SaveGame.get_flag("red_minas"), "quebrar: sem Redenção")
+	check(_price("brasal", "pocao_g") > base, "quebrar: loja mais cara")
+	var m := _map("mina_funda")
+	var vago := false
+	for n in m.all_npcs():
+		vago = vago or n.npc_id == "vagonauta_npc"
+	check(vago, "quebrar: Vagonauta aparece na câmara sul")
+	m.queue_free()
+	await tree.process_frame
+
+
+func test_quest_carvao() -> void:
+	SaveGame.start_new("Téo")
+	await _play("minas/carvao_pede")
+	check(SaveGame.get_flag("carvao_quest"), "missão aberta")
+	await _play("minas/capacete")
+	check(SaveGame.get_flag("has_capacete_carvao"), "pegou o capacete")
+	await _play("minas/carvao_obrigado")
+	check(not SaveGame.get_flag("has_capacete_carvao"), "entregou o capacete")
+	check_eq(int(SaveGame.data.bag.get("pocao_g", 0)), 2, "2 Poções G")
+
+
+func test_quest_pirita() -> void:
+	SaveGame.start_new("Téo")
+	await _play("minas/pirita_pede")
+	await _play("minas/cristal_vela")
+	check(SaveGame.get_flag("has_cristal_vela"), "pegou o Cristal-vela")
+	await _play("minas/pirita_festa")
+	check(SaveGame.get_flag("pirita_done") and not SaveGame.get_flag("has_cristal_vela"), "festa feita, cristal entregue")
+	check_eq(int(SaveGame.data.bag.get("pocao_m", 0)), 2, "2 Poções M")

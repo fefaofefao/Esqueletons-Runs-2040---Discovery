@@ -1,0 +1,66 @@
+{
+ "id": "brasal_casa_bigorna",
+ "region": "minas",
+ "name_key": "MAP_BRASAL_CASA_BIGORNA",
+ "tileset": "overworld",
+ "legend": {
+  "T": "wall_top",
+  "w": "wall",
+  "n": "wall_window",
+  ".": "floor",
+  "m": "mat"
+ },
+ "ground": [
+  "TTTTTTTTTTTT",
+  "TwwnwwwwwnwT",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "TTTTTTmTTTTT"
+ ],
+ "spawn": {
+  "x": 6,
+  "y": 8,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "anvil",
+   "x": 3,
+   "y": 4
+  },
+  {
+   "type": "anvil",
+   "x": 9,
+   "y": 4
+  },
+  {
+   "type": "barrel",
+   "x": 10,
+   "y": 7
+  }
+ ],
+ "npcs": [
+  {
+   "id": "bigorna",
+   "x": 6,
+   "y": 3,
+   "facing": "down"
+  }
+ ],
+ "warps": [
+  {
+   "x": 6,
+   "y": 9,
+   "to": "brasal",
+   "tx": 8,
+   "ty": 21,
+   "facing": "down",
+   "sfx": "door"
+  }
+ ]
+}

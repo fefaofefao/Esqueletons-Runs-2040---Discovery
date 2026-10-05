@@ -1,0 +1,214 @@
+{
+ "id": "mina_funda",
+ "region": "minas",
+ "name_key": "MAP_MINA_FUNDA",
+ "tileset": "overworld",
+ "legend": {
+  "g": "ash",
+  "f": "stone",
+  "B": "rock",
+  "p": "path",
+  ".": "floor"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBBBBppppppppBBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBppppppppBBBBggggggggggggBBBB",
+  "BBBBBBppppppppBBBBggggggggggggpppp",
+  "BBBBBBpppppppppppppgggggggggggpppp",
+  "BBBBBBpppppppppppppgggggggggggpppp",
+  "BBBgggggggggggBBBBggggggggggggpppp",
+  "BBBgggggggggggBBBBggggggggggggBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+ ],
+ "spawn": {
+  "x": 31,
+  "y": 10,
+  "facing": "left"
+ },
+ "props": [
+  {
+   "type": "forge",
+   "x": 10,
+   "y": 1
+  },
+  {
+   "type": "anvil",
+   "x": 7,
+   "y": 3
+  },
+  {
+   "type": "anvil",
+   "x": 13,
+   "y": 3
+  },
+  {
+   "type": "chain_gate",
+   "x": 15,
+   "y": 5,
+   "if_not": "minas_quebrou"
+  },
+  {
+   "type": "mine_lamp",
+   "x": 18,
+   "y": 7
+  },
+  {
+   "type": "mine_lamp",
+   "x": 27,
+   "y": 8
+  },
+  {
+   "type": "crystal",
+   "x": 22,
+   "y": 13
+  },
+  {
+   "type": "crystal",
+   "x": 4,
+   "y": 19
+  },
+  {
+   "type": "beam_frame",
+   "x": 24,
+   "y": 9
+  },
+  {
+   "type": "rails",
+   "x": 8,
+   "y": 13
+  },
+  {
+   "type": "rails",
+   "x": 8,
+   "y": 14
+  },
+  {
+   "type": "rails",
+   "x": 8,
+   "y": 15
+  },
+  {
+   "type": "mine_cart",
+   "x": 10,
+   "y": 18
+  },
+  {
+   "type": "scarf",
+   "x": 5,
+   "y": 15,
+   "dialog": "minas/lenco_parceiro",
+   "if": "partner_taro",
+   "if_not": "lenco_visto"
+  },
+  {
+   "type": "helmet_lamp",
+   "x": 12,
+   "y": 17,
+   "dialog": "minas/capacete",
+   "if": "carvao_quest",
+   "if_not": "carvao_helmet_taken"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "fornalha",
+   "x": 10,
+   "y": 3,
+   "facing": "down"
+  },
+  {
+   "id": "bloqueio",
+   "x": 14,
+   "y": 10,
+   "facing": "right"
+  },
+  {
+   "id": "mineiro_forja",
+   "x": 4,
+   "y": 2,
+   "facing": "right",
+   "if_not": "minas_quebrou"
+  },
+  {
+   "id": "taro_mina",
+   "x": 6,
+   "y": 17,
+   "facing": "right",
+   "if": "partner_lia",
+   "if_not": "lenco_visto"
+  },
+  {
+   "id": "vagonauta_npc",
+   "x": 11,
+   "y": 14,
+   "facing": "left",
+   "if": "minas_quebrou"
+  }
+ ],
+ "warps": [
+  {
+   "x": 33,
+   "y": 10,
+   "to": "brasal",
+   "tx": 1,
+   "ty": 15,
+   "facing": "right",
+   "sfx": ""
+  },
+  {
+   "x": 33,
+   "y": 11,
+   "to": "brasal",
+   "tx": 1,
+   "ty": 16,
+   "facing": "right",
+   "sfx": ""
+  }
+ ],
+ "spawns": [
+  {
+   "id": "mina_salao",
+   "table": "mina_salao",
+   "x": 23,
+   "y": 11,
+   "radius": 3,
+   "count": 2
+  },
+  {
+   "id": "mina_sul",
+   "table": "mina_sul",
+   "x": 6,
+   "y": 14,
+   "radius": 2,
+   "count": 1
+  }
+ ],
+ "ambient": [
+  "ash"
+ ],
+ "tint": [
+  0.62,
+  0.56,
+  0.62
+ ],
+ "on_enter": [
+  {
+   "if_not": "mina_vista",
+   "dialog": "minas/chegada_mina"
+  }
+ ]
+}
