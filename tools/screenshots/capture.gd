@@ -24,6 +24,10 @@ func _ready() -> void:
 	await _shot("00_titulo_intro")
 	await _wait(1.6)
 	await _shot("01_titulo")
+	if "--phase3" in OS.get_cmdline_user_args():
+		await _phase3_shots()
+		get_tree().quit()
+		return
 	if "--battle" in OS.get_cmdline_user_args():
 		await _battle_shots()
 		get_tree().quit()
@@ -165,3 +169,61 @@ func _battle_shots() -> void:
 	Game.battle.debug_win()
 	await _wait(4.0)
 	await _shot("b9_fim")
+
+
+## Fase 3a: Golden, marcador e recrutamento, aniversário/crescimento, selvagens, Ossário e Rancho.
+func _phase3_shots() -> void:
+	Game.start_new_game("Téo")
+	await _wait(1.0)
+	SaveGame.data["party"] = [Monster.create("teste_broto_1", 5).to_dict(), Monster.create("teste_fisico", 12).to_dict()]
+	Ossuary.entry("teste_veneno")["marker"] = 75
+	Game.start_battle({"kind": "wild", "seed": 3, "enemies": [["teste_magico", 11, true], ["teste_veneno", 6]]})
+	await _wait(1.2)
+	await _shot("c1_golden_intro")
+	await _wait(3.0)
+	await _shot("c2_golden_batalha")
+	# a vitória dá XP: o Brotinho faz 6 anos e cresce ao voltar ao mapa
+	for m in Game.battle.engine.teams[BattleEngine.PLAYER]:
+		if m.species_id == "teste_broto_1":
+			m.gain_xp(Monster.xp_for_level(6) - m.xp - 2)
+	Game.battle.debug_win()
+	for i in 14:
+		await _wait(0.9)
+		if Game.top_overlay() is ChoiceBox:
+			await _shot("c3_recrutar")
+			Controls.tap_action("btn_a")
+			break
+		Controls.tap_action("btn_a")
+	await _wait(1.5)
+	await _shot("c4_recrutou")
+	for i in 30:
+		await _wait(0.25)
+		if Game.top_overlay() is GrowthCeremony:
+			break
+		Controls.tap_action("btn_a")
+	await _wait(2.2)
+	await _shot("c5_aniversario")
+	await _wait(3.2)
+	await _shot("c6_silhuetas")
+	await _wait(2.4)
+	await _shot("c7_cresceu")
+	for i in 20:
+		await _wait(0.5)
+		if not (Game.top_overlay() is GrowthCeremony):
+			break
+	var w := Game.world
+	var rng := RandomNumberGenerator.new()
+	rng.seed = 11
+	DebugDraw.force_golden = false
+	w.map.add_spawn(w, {"id": "cap", "table": "teste", "x": w.player.cell.x, "y": w.player.cell.y, "radius": 5, "count": 5}, rng)
+	DebugDraw.show_radii = true
+	await _wait(1.5)
+	await _shot("c8_selvagens")
+	DebugDraw.show_radii = false
+	Game.open_overlay(OssuaryScreen.new())
+	await _wait(0.4)
+	await _shot("c9_ossario")
+	Game.close_all_overlays()
+	Game.open_overlay(RanchMenu.new())
+	await _wait(0.4)
+	await _shot("c10_rancho")

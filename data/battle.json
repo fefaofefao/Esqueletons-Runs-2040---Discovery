@@ -102,5 +102,24 @@
  },
  "sintonia": {
   "bonus": 1.25
+ },
+ "golden": {
+  "chance": 0.025,
+  "stat_bonus": 0.1,
+  "marker_bonus": 99,
+  "_comment": "1 em 40 só para selvagens. Nunca para domadores, Guardiões, chefes ou o Rei."
+ },
+ "marker": {
+  "by_rarity": {
+   "comum": 30,
+   "incomum": 25,
+   "raro": 20,
+   "unico": 20
+  },
+  "per_level_above": 2,
+  "min": 20,
+  "max": 50,
+  "refuse_keeps": true,
+  "_comment": "Vitória sobre selvagem soma ao marcador da espécie (20–50%). Em 100% ele pede para entrar."
  }
 }

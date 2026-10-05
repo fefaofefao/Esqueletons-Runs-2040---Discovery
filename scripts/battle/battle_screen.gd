@@ -51,6 +51,8 @@ var _held := Vector2i.ZERO
 var _next_ms := 0
 var _ended := false
 var _debug_taps: Array[int] = []
+## Recrutas aceitos nesta batalha (o Game coloca na equipe ou no Rancho).
+var recruits: Array = []
 
 
 ## info: {"kind": "wild"|"tamer"|"boss", "enemies": [[species, idade, golden?], ...],
@@ -249,8 +251,15 @@ func _intro() -> void:
 		v.position = _slot_pos(m.side, engine.slot_of(m))
 		v.enter(false)
 	await get_tree().create_timer(0.4).timeout
+	for m in engine.teams[BattleEngine.ENEMY]:
+		Ossuary.mark_seen(m)
+		if engine.is_wild():
+			cards[m.uid].marker = int(Ossuary.entry(m.species_id).get("marker", 0))
 	for m in enemies:
 		_place_card(m)
+	if enemies.any(func(x: Monster) -> bool: return x.golden):
+		Audio.sfx("golden")
+		await _say("BTL_GOLDEN_APPEARS")
 	if engine.is_wild():
 		if enemies.size() > 1:
 			await _say("BTL_WILD_APPEARS_2", {"a": enemies[0].display_name(), "b": enemies[1].display_name()})
@@ -831,6 +840,9 @@ func _replacements() -> void:
 
 
 func _finish() -> void:
+	# debug_win pode chegar com uma ação no meio: só termina uma vez
+	if _ended:
+		return
 	_ended = true
 	_hide_menus()
 	match engine.result:
@@ -841,20 +853,66 @@ func _finish() -> void:
 			if reward > 0:
 				SaveGame.data["money"] = int(SaveGame.data.get("money", 0)) + reward
 				await _say("BTL_MONEY", {"n": reward})
+			if engine.is_wild():
+				await _markers_and_recruits()
+			else:
+				for m in engine.teams[BattleEngine.ENEMY]:
+					Ossuary.entry(m.species_id)["defeated"] = true
 		"lose":
 			await _say("BTL_LOSE")
 	finished.emit(engine.result)
 
 
-## Vence na hora (menu de debug).
-func debug_win() -> void:
+func _party_level() -> float:
+	var team: Array = engine.teams[BattleEngine.PLAYER]
+	var total := 0.0
+	for m in team:
+		total += m.level
+	return total / maxf(1.0, team.size())
+
+
+## Marcador de ossos de cada espécie derrotada e pedido para entrar em 100%.
+func _markers_and_recruits() -> void:
+	var party_size: int = engine.teams[BattleEngine.PLAYER].size()
 	for m in engine.teams[BattleEngine.ENEMY]:
-		m.hp = 0
+		if not m.is_fainted():
+			continue
+		var r := Ossuary.register_win(m, _party_level())
+		await _say("RECRUIT_MARKER", {"name": tr(str(m.info().get("name_key", ""))), "a": r.before, "b": r.after})
+		if not r.offer:
+			continue
+		Audio.sfx("recruit")
+		var preview := Monster.create(r.species, int(r.level), bool(r.golden))
+		var answer := await ChoiceBox.ask("RECRUIT_ASK", ["RECRUIT_ACCEPT", "RECRUIT_REFUSE"], {"name": preview.display_name()})
+		if answer == 0:
+			var rec := Ossuary.accept(r.species, int(r.level))
+			recruits.append(rec)
+			var to_party := party_size + recruits.size() <= int(engine.rules.get("party_size", 4))
+			await _say("RECRUIT_JOINED" if to_party else "RECRUIT_TO_RANCH", {"name": rec.display_name()})
+		else:
+			Ossuary.refuse(r.species)
+			await _say("RECRUIT_REFUSED", {"name": preview.display_name()})
+
+
+## Vence na hora (menu de debug).
+## Dá a XP normal dos inimigos (para testar aniversários e crescimento).
+func debug_win() -> void:
+	if _ended:
+		return
+	engine.events = []
+	for m in engine.teams[BattleEngine.ENEMY]:
+		if not m.is_fainted():
+			m.hp = 0
+			engine._award_xp(m)
+	var evs: Array = engine.events
+	engine.events = []
 	engine.result = "win"
+	_hide_menus()
 	state = "busy"
-	if not _ended:
-		_log.visible = true
-		await _finish()
+	_log.visible = true
+	for e in evs:
+		await _play_event(e)
+	await _finish()
 
 
 ## Três toques na timeline abrem o menu de debug (só em build de debug).

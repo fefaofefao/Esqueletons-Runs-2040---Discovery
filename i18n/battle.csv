@@ -98,3 +98,15 @@ BTL_DETAIL,{type} · Poder {p} · {acc}% · {weight},{type} · Power {p} · {acc
 BTL_WEIGHT_LIGHT,Leve,Light,Ligero
 BTL_WEIGHT_NORMAL,Normal,Normal,Normal
 BTL_WEIGHT_HEAVY,Pesado,Heavy,Pesado
+GOLDEN_SUFFIX_M,{name} Dourado,Golden {name},{name} Dorado
+GOLDEN_SUFFIX_F,{name} Dourada,Golden {name},{name} Dorada
+BTL_GOLDEN_APPEARS,Um brilho dourado! Este é raro!,A golden shine! This one is rare!,¡Un brillo dorado! ¡Este es raro!
+RECRUIT_MARKER,"Marcador de ossos de {name}: {a}% → {b}%","{name} bone marker: {a}% → {b}%","Marcador de huesos de {name}: {a}% → {b}%"
+RECRUIT_ASK,{name} quer andar com você. Aceita?,{name} wants to come along. Accept?,{name} quiere ir contigo. ¿Aceptas?
+RECRUIT_ACCEPT,Aceitar,Accept,Aceptar
+RECRUIT_REFUSE,Agora não,Not now,Ahora no
+RECRUIT_JOINED,{name} entrou para o time!,{name} joined the team!,¡{name} se unió al equipo!
+RECRUIT_TO_RANCH,"Time cheio: {name} foi para o Rancho.","Team full: {name} went to the Ranch.","Equipo lleno: {name} fue al Rancho."
+RECRUIT_REFUSED,{name} volta para o mato. O marcador continua cheio.,{name} heads back to the wild. The marker stays full.,{name} vuelve a la maleza. El marcador sigue lleno.
+GROW_BIRTHDAY,"Feliz aniversário, {name}!","Happy birthday, {name}!","¡Feliz cumpleaños, {name}!"
+GROW_DONE,{name} cresceu e virou {species}!,{name} grew up into {species}!,¡{name} creció y se convirtió en {species}!

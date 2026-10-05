@@ -6,12 +6,14 @@ signal answered(index: int)
 
 var question_key := ""
 var option_keys: Array = []
+var args: Dictionary = {}
 var _menu: MenuList
 
 
-func setup(question: String, options: Array) -> ChoiceBox:
+func setup(question: String, options: Array, format_args: Dictionary = {}) -> ChoiceBox:
 	question_key = question
 	option_keys = options
+	args = format_args
 	return self
 
 
@@ -20,7 +22,7 @@ func _ready() -> void:
 	var panel := centered_panel(220)
 	var box := VBoxContainer.new()
 	panel.add_child(box)
-	for line in TextFit.wrap_lines(tr(question_key), 206):
+	for line in TextFit.wrap_lines(tr(question_key).format(args), 206):
 		box.add_child(UiTheme.label(line))
 	box.add_child(Control.new())
 	_menu = MenuList.new()
@@ -39,8 +41,8 @@ func _answer(i: int) -> void:
 	close()
 
 
-static func ask(question: String, options: Array) -> int:
-	var box := ChoiceBox.new().setup(question, options)
+static func ask(question: String, options: Array, format_args: Dictionary = {}) -> int:
+	var box := ChoiceBox.new().setup(question, options, format_args)
 	Game.open_overlay(box)
 	var result: int = await box.answered
 	return result

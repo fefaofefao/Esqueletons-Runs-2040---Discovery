@@ -158,3 +158,26 @@ func item(id: String) -> Dictionary:
 func all_items() -> Dictionary:
 	var d = load_json("res://data/items.json")
 	return d.get("items", {}) if d is Dictionary else {}
+
+
+## Espécies de uma linha, em ordem de estágio (Bebê, Adolescente, Adulto).
+func line_stages(line_id: String) -> Array:
+	if _species_index.is_empty():
+		_build_species_index()
+	var out := []
+	for id in _species_index.keys():
+		var s: Dictionary = _species_index[id]
+		if str(s.get("line", "")) == line_id:
+			out.append(id)
+	out.sort_custom(func(a: String, b: String) -> bool: return int(_species_index[a].get("stage", 1)) < int(_species_index[b].get("stage", 1)))
+	return out
+
+
+## Tabela de encontros (data/encounters.json e, para testes, data/test/encounters_test.json).
+func encounter_table(id: String) -> Array:
+	for path in ["res://data/encounters.json", "res://data/test/encounters_test.json"]:
+		if FileAccess.file_exists(path):
+			var d = load_json(path)
+			if d is Dictionary and d.get("tables", {}).has(id):
+				return d["tables"][id]
+	return []

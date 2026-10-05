@@ -7,7 +7,8 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 |---|---|
 | 1 — Base | ✅ concluída (APK de debug pelo CI) |
 | 2 — Batalha | ✅ concluída |
-| 3a/3b/3c — Esqueletos | ⏳ próxima (3a) |
+| 3a — Sistemas dos esqueletos | ✅ concluída |
+| 3b/3c — Bestiário e balanceamento | ⏳ próxima (3b) |
 | 4a–4h — História e mundo | — |
 | 5 — Monetização e conformidade | — |
 | 6 — Polimento e publicação | — |
@@ -70,5 +71,38 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 - Espécies, golpes e números reais (substituem os bonecos de teste) e o simulador: fases 3b/3c.
 - Música de batalha: fase 6.
 
-### Próxima tarefa: Fase 3a — Sistemas dos esqueletos
-Crescimento + animação de aniversário, marcador de recrutamento, Golden (shader, chance 1/40, regra de 99%), Rancho e Ossário.
+### Depois da fase 2: idade e batalha nova (pedido do Fernando)
+- Nível exibido como **idade** (máx. 100; Rei 120), aniversário a cada idade, estágios Bebê/Adolescente/Adulto.
+- Batalha refeita em **turnos por tempo** (timeline de 8 ações, peso Leve/Normal/Pesado, Atraso, Sintonia +25%) e arena lateral. Detalhes em `docs/DECISOES.md`.
+
+## Fase 3a — Sistemas dos esqueletos (concluída)
+
+### Feito
+- **Crescimento por idade:** ao atingir a idade da linha, o esqueleto cresce para o próximo estágio ao voltar ao mapa. A proporção de PV é mantida e ele aprende o golpe exclusivo do estágio novo (escolhe qual esquecer se já sabe 4).
+- **Cerimônia "Aniversário e Crescimento"** (`scripts/systems/growth_ceremony.gd`): o esqueleto sai do chão ao lado do jogador; aparecem bolo com velas, confete e o balão "Feliz aniversário, X!"; ele sopra as velas; a silhueta alterna entre os estágios até um flash; por fim, a revelação. Respeita o 2x e não pode ser pulada.
+- **Marcador de ossos** (`scripts/systems/ossuary.gd`): cada vitória sobre um selvagem soma de 20% a 50% conforme a raridade e a diferença de idade. Em 100%, a espécie pede para entrar no time. Recusar mantém o marcador cheio. Time cheio manda o recruta para o Rancho.
+- **Golden:** chance de 1/40 só em selvagens, com shader dourado, brilho, faíscas, som ao entrar na tela e +10% de atributos. Derrotar um Golden deixa o marcador em 99%, e a próxima vitória sobre a espécie oferece a **versão Golden** (direito ao Golden).
+- **Selvagens visíveis no mapa** (`scripts/world/wild_skeleton.gd`) com comportamentos patrulha, ronda, persegue, tímido e rápido. Encostar inicia a batalha (30% de chance de vir um segundo). Fugir deixa o selvagem atordoado por 3 s; vencer o remove do mapa.
+- **Ossário** (menu de pausa): cada espécie aparece como vista, derrotada (○), recrutada (●) ou Golden (☆ vista / ★ recrutada), com o marcador e o % de conclusão.
+- **Rancho:** cura todos e troca esqueletos entre o time e o Rancho. No jogo, ele entra nas cidades da fase 4; por enquanto abre pelo debug.
+- **Debug:** Forçar Golden, Forçar crescimento, Time de crescimento, Selvagens de teste aqui, Abrir Rancho, Adicionar esqueleto. "Vencer batalha" agora dá a XP normal.
+- **Correção:** o fim da batalha não roda duas vezes quando "Vencer batalha" chega no meio de uma ação.
+- **Fonte:** novos glifos ● ○ ☆.
+
+### Verificação
+- `tests/run_tests.tscn`: 2985 verificações, 0 falhas. O novo `test_growth.gd` cobre:
+  - crescimento 6/12 anos e idade máxima 100;
+  - Golden em 1/40 ± 5% (100 mil sorteios) e domadores nunca Golden;
+  - marcador entre 20% e 50% (de 2 a 5 vitórias), além de recusar e aceitar;
+  - a regra dos 99%;
+  - time/Rancho e Ossário;
+  - a cerimônia completa;
+  - selvagens nascendo no mapa.
+- Capturas com `capture.tscn -- --phase3`: Golden na batalha, marcador e pedido para entrar, bolo/balão, silhuetas, revelação, selvagens com raios, Ossário e Rancho.
+
+### Pendências
+- Espécies reais, sprites de mapa e tabelas de encontro reais: fase 3b. O Ossário só lista os bonecos de teste até lá (em build de debug).
+- Rancho nas cidades: fase 4.
+
+### Próxima tarefa: Fase 3b — Bestiário
+24 linhas × 3 estágios + 7 únicos + Rei, nomes nos 3 idiomas, sprites de batalha e de mapa, `species.json` e folha de revisão.

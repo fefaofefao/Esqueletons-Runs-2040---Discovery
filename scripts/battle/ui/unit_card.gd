@@ -13,6 +13,8 @@ var ally := true
 var shown_hp := 0.0
 var acting := false
 var synced := false
+## Marcador de recrutamento (0–100) mostrado nos inimigos selvagens; -1 = esconder.
+var marker := -1
 var _name: Label
 var _age: Label
 var _hp_text: Label
@@ -63,7 +65,8 @@ static func age_text(n: int) -> String:
 func refresh() -> void:
 	if monster == null:
 		return
-	_name.text = monster.display_name()
+	_name.text = ("★" if monster.golden else "") + monster.display_name()
+	_name.add_theme_color_override("font_color", Color8(255, 210, 90) if monster.golden else (UiTheme.TEXT_DARK if ally else UiTheme.TEXT_LIGHT))
 	_age.text = age_text(monster.level)
 	_type.texture = load("res://assets/battle/type_%s.png" % monster.type())
 	_poison.visible = monster.is_poisoned()
@@ -103,6 +106,10 @@ func _draw() -> void:
 		draw_rect(r.grow(-1), col, false, 2.0)
 	var bw := (W - 54.0) if ally else (W - 14.0)
 	var bar := Rect2(7, 29, bw, 4)
+	if marker >= 0:
+		var mr := Rect2(7, 35, W - 14.0, 2)
+		draw_rect(mr, Color8(60, 40, 80))
+		draw_rect(Rect2(mr.position, Vector2(mr.size.x * marker / 100.0, 2)), Color8(230, 220, 255))
 	draw_rect(bar.grow(1), Color8(40, 30, 48))
 	draw_rect(bar, Color8(70, 60, 80))
 	var ratio := clampf(shown_hp / maxf(1.0, float(monster.max_hp())), 0.0, 1.0)

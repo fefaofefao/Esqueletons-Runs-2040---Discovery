@@ -68,10 +68,41 @@ func info() -> Dictionary:
 
 
 func display_name() -> String:
-	if nickname != "":
-		return nickname
-	var n := TranslationServer.translate(str(info().get("name_key", species_id)))
+	var n := nickname if nickname != "" else TranslationServer.translate(str(info().get("name_key", species_id)))
+	if golden:
+		var key := "GOLDEN_SUFFIX_F" if str(info().get("gender", "m")) == "f" else "GOLDEN_SUFFIX_M"
+		n = TranslationServer.translate(key).format({"name": n})
 	return n
+
+
+func stage() -> int:
+	return int(info().get("stage", 1))
+
+
+## Espécie para a qual este esqueleto cresce agora ("" se ainda não é a idade).
+func growth_target() -> String:
+	var inf := info()
+	var gl: Array = inf.get("growth_levels", [])
+	var st := stage()
+	if gl.size() < 2 or st >= 3 or not inf.has("line"):
+		return ""
+	if level < int(gl[st - 1]):
+		return ""
+	var stages: Array = Data.line_stages(str(inf["line"]))
+	return stages[st] if st < stages.size() else ""
+
+
+## Cresce para o próximo estágio. Mantém a proporção de PV e devolve
+## {"from", "to", "move"} (golpe exclusivo do novo estágio, se houver).
+func grow() -> Dictionary:
+	var target := growth_target()
+	if target == "":
+		return {}
+	var ratio := hp_ratio()
+	var from := species_id
+	species_id = target
+	hp = maxi(1, int(round(max_hp() * ratio))) if hp > 0 else 0
+	return {"from": from, "to": target, "move": str(info().get("growth_move", ""))}
 
 
 func type() -> String:
@@ -93,7 +124,7 @@ func stat(s: String) -> int:
 	else:
 		v = int(2 * b * level / 100.0) + int(rules.get("stat_add", 5))
 	if golden:
-		v = int(round(v * 1.1))
+		v = int(round(v * (1.0 + float(Data.battle_rules().get("golden", {}).get("stat_bonus", 0.1)))))
 	return v
 
 

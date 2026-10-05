@@ -66,6 +66,15 @@ def main():
     save("speed_on", render([(440, 880, 0.12, 0.002, 0.05)], duty=0.25, volume=0.25))
     save("speed_off", render([(880, 440, 0.12, 0.002, 0.05)], duty=0.25, volume=0.25))
     save("save", render([(784, 784, 0.06, 0.001, 0.03), (1047, 1047, 0.12, 0.001, 0.08)], wave_fn="tri", volume=0.4))
+    # Golden: arpejo brilhante
+    save("golden", render([(1047, 1047, 0.06, 0.001, 0.03), (1319, 1319, 0.06, 0.001, 0.03),
+                           (1568, 1568, 0.06, 0.001, 0.03), (2093, 2093, 0.22, 0.001, 0.18)], duty=0.125, volume=0.3))
+    # Aniversário: melodia curta original (não é a canção tradicional)
+    notes = [(523, 0.12), (659, 0.12), (784, 0.12), (1047, 0.24), (880, 0.12), (988, 0.12), (1047, 0.36)]
+    save("birthday", render([(f, f, d, 0.004, d * 0.5) for f, d in notes], wave_fn="tri", volume=0.45))
+    save("grow_flash", render([(200, 1800, 0.5, 0.01, 0.2)], duty=0.5, volume=0.25))
+    save("blow", render([(900, 300, 0.35, 0.02, 0.25)], wave_fn="noise", volume=0.25))
+    save("recruit", render([(659, 659, 0.08, 0.001, 0.04), (784, 784, 0.08, 0.001, 0.04), (1047, 1047, 0.2, 0.001, 0.15)], duty=0.25, volume=0.3))
     print("sfx gerados")
 
 

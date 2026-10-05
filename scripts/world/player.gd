@@ -94,6 +94,10 @@ func try_move(dir: Vector2i) -> bool:
 	facing = Controls.dir_name(dir)
 	sprite.face(facing)
 	var target := cell + dir
+	var wild := map.wild_at(target)
+	if wild:
+		world.on_touch_wild(wild)
+		return false
 	if map.is_blocked(target):
 		sprite.walk(0.5)
 		Audio.sfx("bump", BUMP_INTERVAL_MS)

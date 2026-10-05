@@ -130,3 +130,12 @@ Registro das escolhas feitas sem consulta (AGENTS.md, seção A). Cada item diz 
 - **Visual:** arena lateral (aliados à esquerda virados para a direita, inimigos espelhados à direita), timeline no topo, faixa de mensagens e detalhes logo abaixo, cartas de nome/idade/PV na base, lista de golpes no centro, etiquetas Forte/Normal/Fraco **sobre os próprios inimigos** e menu em anel em quem age.
 - **Repetir:** MENU repete a última ação de quem está agindo.
 - **A IA** pondera o valor do golpe pelo peso (valor ÷ √peso) e valoriza atrasar o inimigo.
+
+## Fase 3a — Sistemas dos esqueletos
+- **Crescimento acontece no mapa, depois da batalha**, um esqueleto por vez (não no meio do combate), para a cerimônia ter espaço. O aniversário de cada idade continua sendo anunciado na batalha.
+- **Marcador:** a base vem da raridade (comum 30%, incomum 25%, raro/único 20%), com +2% por ano que o selvagem tem acima da média do time, entre 20% e 50%. Assim são 2 a 5 vitórias por espécie, e vale a pena enfrentar selvagens mais velhos.
+- **Recusar** mantém o marcador em 100%, e a próxima vitória pergunta de novo (`refuse_keeps` em `battle.json`).
+- **Direito ao Golden:** guardado por espécie (`golden_right`). Ele só é usado quando o jogador aceita o recruta.
+- **Rancho** cura de graça ao abrir. Na troca, escolher o mesmo esqueleto duas vezes o guarda no Rancho; o time nunca fica vazio.
+- **Ossário** conta como concluídas só as espécies reais recrutadas; Golden é contado à parte (★).
+- **Selvagens no mapa** nascem por zona (`spawns` no JSON do mapa: `{id, table, x, y, radius, count, behavior?}`) e nunca a menos de 3 células do jogador.

@@ -2,7 +2,8 @@ class_name MenuList
 extends VBoxContainer
 ## Lista de opções navegável por D-pad/teclado/gamepad e por toque.
 ## Cada item: {id, key, enabled?, value?: Callable -> String, suffix?: String}
-## Itens com "value" aceitam esquerda/direita para trocar o valor.
+## Itens com "value" aceitam esquerda/direita para trocar o valor
+## (exceto com "fixed": true, que só exibe o valor).
 
 signal activated(id: String)
 signal cancelled
@@ -94,7 +95,7 @@ func refresh() -> void:
 		var vtext := ""
 		if item.has("value") and item["value"] is Callable:
 			var v := str((item["value"] as Callable).call())
-			vtext = "< %s >" % v if i == index else v
+			vtext = "< %s >" % v if i == index and not item.get("fixed", false) else v
 		(r.value as Label).text = vtext
 		(r.value as Label).add_theme_color_override("font_color", UiTheme.TEXT_VALUE if enabled else col)
 
@@ -181,7 +182,7 @@ func activate_current() -> void:
 	if not item.get("enabled", true):
 		Audio.sfx("bump")
 		return
-	if item.has("value"):
+	if item.has("value") and not item.get("fixed", false):
 		_step_value(1)
 		return
 	Audio.sfx("confirm")
@@ -193,7 +194,7 @@ func _step_value(dir: int) -> void:
 	if items.is_empty():
 		return
 	var item: Dictionary = items[index]
-	if not item.has("value") or not item.get("enabled", true):
+	if not item.has("value") or item.get("fixed", false) or not item.get("enabled", true):
 		return
 	Audio.sfx("cursor")
 	value_step.emit(str(item.get("id", "")), dir)

@@ -24,6 +24,9 @@ var _solid_props := {}
 var _interactions := {}
 var _warps := {}
 var _npcs := {}
+var _wilds := {}
+## Zonas de spawn de selvagens (dados do mapa + as criadas pelo debug).
+var spawns: Array = []
 var _tileset_id := ""
 
 
@@ -52,6 +55,7 @@ func build(map_id: String) -> bool:
 	_place_props()
 	_place_npcs()
 	_place_warps()
+	spawns = data.get("spawns", []).duplicate(true)
 	var sp: Dictionary = data.get("spawn", {})
 	spawn_cell = Vector2i(int(sp.get("x", 0)), int(sp.get("y", 0)))
 	spawn_facing = str(sp.get("facing", "down"))
@@ -264,6 +268,72 @@ func move_npc(npc: Npc, from: Vector2i, to: Vector2i) -> void:
 	_npcs[to] = npc
 
 
+## Cria os selvagens de todas as zonas (chamado pelo World depois do jogador).
+func spawn_wilds(world: World, rng: RandomNumberGenerator) -> void:
+	for sp in spawns:
+		_spawn_zone(world, sp, rng)
+
+
+func _spawn_zone(world: World, sp: Dictionary, rng: RandomNumberGenerator) -> void:
+	var table := Data.encounter_table(str(sp.get("table", "")))
+	if table.is_empty():
+		return
+	var center := Vector2i(int(sp.get("x", 0)), int(sp.get("y", 0)))
+	var r := int(sp.get("radius", 3))
+	for i in int(sp.get("count", 2)):
+		var cell := Vector2i(-1, -1)
+		for attempt in 30:
+			var c := center + Vector2i(rng.randi_range(-r, r), rng.randi_range(-r, r))
+			if absi(c.x - center.x) + absi(c.y - center.y) <= r and not is_blocked(c) and (world.player == null or c != world.player.cell) \
+					and (world.player == null or (c - world.player.cell).length() > 3):
+				cell = c
+				break
+		if cell.x < 0:
+			continue
+		var spec := pick_encounter(table, rng)
+		var w := WildSkeleton.new().setup(self, spec, cell, center, r, str(sp.get("behavior", "")))
+		w.world = world
+		w.spawn_id = "%s#%d" % [str(sp.get("id", "zona")), i]
+		entities.add_child(w)
+		_wilds[cell] = w
+
+
+## Sorteia espécie/idade/Golden de uma tabela (peso explícito ou pela raridade).
+static func pick_encounter(table: Array, rng: RandomNumberGenerator) -> Dictionary:
+	var rarity_w := {"comum": 60, "incomum": 30, "raro": 10, "unico": 4}
+	var total := 0
+	for e in table:
+		total += int(e.get("weight", rarity_w.get(str(e.get("rarity", "comum")), 30)))
+	var roll := rng.randi_range(0, maxi(total - 1, 0))
+	var pick: Dictionary = table[0]
+	for e in table:
+		roll -= int(e.get("weight", rarity_w.get(str(e.get("rarity", "comum")), 30)))
+		if roll < 0:
+			pick = e
+			break
+	var golden := DebugDraw.force_golden or Ossuary.roll_golden(rng)
+	return {"species": str(pick["species"]), "level": rng.randi_range(int(pick.get("min_level", 1)), int(pick.get("max_level", 1))), "golden": golden}
+
+
+func add_spawn(world: World, sp: Dictionary, rng: RandomNumberGenerator) -> void:
+	spawns.append(sp)
+	_spawn_zone(world, sp, rng)
+
+
+func move_wild(w: WildSkeleton, from: Vector2i, to: Vector2i) -> void:
+	_wilds.erase(from)
+	_wilds[to] = w
+
+
+func remove_wild(w: WildSkeleton) -> void:
+	_wilds.erase(w.cell)
+	w.queue_free()
+
+
+func wild_at(cell: Vector2i) -> WildSkeleton:
+	return _wilds.get(cell)
+
+
 func npc_at(cell: Vector2i) -> Npc:
 	return _npcs.get(cell)
 
@@ -279,7 +349,7 @@ func warp_at(cell: Vector2i) -> Dictionary:
 func is_blocked(cell: Vector2i) -> bool:
 	if not in_bounds(cell):
 		return true
-	if _solid_props.has(cell) or _npcs.has(cell):
+	if _solid_props.has(cell) or _npcs.has(cell) or _wilds.has(cell):
 		return true
 	var tname := terrain_at(cell)
 	var t: Dictionary = tileset_info(_tileset_id).desc["terrains"].get(tname, {})

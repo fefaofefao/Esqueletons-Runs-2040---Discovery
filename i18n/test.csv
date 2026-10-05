@@ -27,3 +27,6 @@ TEST_MOVE_CLEANSE,Limpeza,Cleanse,Limpieza
 TEST_MOVE_CLEANSE_DESC,Tira veneno da dupla.,Cures both allies.,Quita el veneno al dúo.
 TEST_MOVE_BULKUP,Fortalecer,Bulk Up,Fortalecer
 TEST_MOVE_BULKUP_DESC,ATQ e MAG +1.,ATK and MAG +1.,ATQ y MAG +1.
+TEST_SPROUT_1,Brotinho,Sproutlet,Brotecito
+TEST_SPROUT_2,Broto,Sprout,Brote
+TEST_SPROUT_3,Brotão,Big Sprout,Brotón

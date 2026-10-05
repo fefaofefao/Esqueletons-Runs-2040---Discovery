@@ -74,3 +74,15 @@ DBG_DELETE_SAVE,Apagar save,Delete save,Borrar partida
 DBG_SAVE_DELETED,Save apagado.,Save deleted.,Partida borrada.
 DBG_CLOSE,Fechar,Close,Cerrar
 DBG_PHASE,(fase {n}),(phase {n}),(fase {n})
+PAUSE_OSSUARY,Ossário,Ossuary,Osario
+OSS_HEADER,"Ossário {p}% · {r}/{t} · ★{g}","Ossuary {p}% · {r}/{t} · ★{g}","Osario {p}% · {r}/{t} · ★{g}"
+RANCH_TITLE,Rancho (todos curados),Ranch (everyone healed),Rancho (todos curados)
+RANCH_PICK_SWAP,Trocar com quem?,Swap with whom?,¿Cambiar con quién?
+RANCH_PARTY,— Time —,— Team —,— Equipo —
+RANCH_STORED,— No Rancho —,— At the Ranch —,— En el Rancho —
+RANCH_EMPTY,(vazio),(empty),(vacío)
+DBG_SPAWN_WILDS,Selvagens de teste aqui,Test wilds here,Salvajes de prueba aquí
+DBG_OPEN_RANCH,Abrir Rancho,Open Ranch,Abrir Rancho
+DBG_GROWTH_TEAM,Time de crescimento,Growth test team,Equipo de crecimiento
+DBG_NO_GROWTH,Ninguém no time pode crescer.,No one in the team can grow.,Nadie del equipo puede crecer.
+DBG_GROWTH_TEAM_GIVEN,"Brotinho (5 anos) e Broto (11 anos) no time. Vença uma batalha ou use Forçar crescimento.","Sproutlet (age 5) and Sprout (age 11) in the team. Win a battle or use Force growth.","Brotecito (5 años) y Brote (11 años) en el equipo. Gana una batalla o usa Forzar crecimiento."

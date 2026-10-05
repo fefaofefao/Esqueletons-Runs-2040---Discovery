@@ -35,7 +35,9 @@
      20,
      "teste_quebra_guarda"
     ]
-   ]
+   ],
+   "rarity": "comum",
+   "gender": "m"
   },
   "teste_magico": {
    "name_key": "TEST_DUMMY_MAGICO",
@@ -67,7 +69,9 @@
      16,
      "teste_quebra_guarda"
     ]
-   ]
+   ],
+   "rarity": "comum",
+   "gender": "m"
   },
   "teste_cura": {
    "name_key": "TEST_DUMMY_CURA",
@@ -103,7 +107,9 @@
      18,
      "teste_fortalecer"
     ]
-   ]
+   ],
+   "rarity": "comum",
+   "gender": "m"
   },
   "teste_veneno": {
    "name_key": "TEST_DUMMY_VENENO",
@@ -134,6 +140,114 @@
     [
      15,
      "teste_pancada"
+    ]
+   ],
+   "rarity": "comum",
+   "gender": "m"
+  },
+  "teste_broto_1": {
+   "name_key": "TEST_SPROUT_1",
+   "type": "cura",
+   "line": "teste_broto",
+   "stage": 1,
+   "growth_levels": [
+    6,
+    12
+   ],
+   "gender": "m",
+   "base": {
+    "hp": 50,
+    "atk": 40,
+    "mag": 50,
+    "def": 45,
+    "res": 50,
+    "spd": 45
+   },
+   "base_xp": 40,
+   "sprite": "res://assets/battle/dummy_cura.png",
+   "rarity": "comum",
+   "learnset": [
+    [
+     1,
+     "teste_faisca"
+    ],
+    [
+     1,
+     "teste_remendo"
+    ],
+    [
+     5,
+     "teste_fortalecer"
+    ]
+   ]
+  },
+  "teste_broto_2": {
+   "name_key": "TEST_SPROUT_2",
+   "type": "cura",
+   "line": "teste_broto",
+   "stage": 2,
+   "growth_levels": [
+    6,
+    12
+   ],
+   "gender": "m",
+   "base": {
+    "hp": 70,
+    "atk": 55,
+    "mag": 70,
+    "def": 60,
+    "res": 70,
+    "spd": 55
+   },
+   "base_xp": 60,
+   "sprite": "res://assets/battle/dummy_magico.png",
+   "rarity": "comum",
+   "growth_move": "teste_curativo",
+   "learnset": [
+    [
+     1,
+     "teste_faisca"
+    ],
+    [
+     1,
+     "teste_remendo"
+    ],
+    [
+     9,
+     "teste_limpeza"
+    ]
+   ]
+  },
+  "teste_broto_3": {
+   "name_key": "TEST_SPROUT_3",
+   "type": "cura",
+   "line": "teste_broto",
+   "stage": 3,
+   "growth_levels": [
+    6,
+    12
+   ],
+   "gender": "m",
+   "base": {
+    "hp": 90,
+    "atk": 70,
+    "mag": 90,
+    "def": 80,
+    "res": 90,
+    "spd": 65
+   },
+   "base_xp": 80,
+   "sprite": "res://assets/battle/dummy_fisico.png",
+   "rarity": "comum",
+   "growth_move": "teste_chuva_astral",
+   "learnset": [
+    [
+     1,
+     "teste_faisca"
+    ],
+    [
+     1,
+     "teste_remendo"
     ]
    ]
   }

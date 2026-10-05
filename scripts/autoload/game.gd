@@ -204,6 +204,8 @@ func start_battle(info: Dictionary) -> String:
 	transitioning = false
 	var result: String = await battle.finished
 	SaveGame.data["party"] = party.map(func(m: Monster) -> Dictionary: return m.to_dict())
+	for rec in battle.recruits:
+		Ossuary.add_to_team(rec)
 	if result == "lose":
 		_apply_defeat(party)
 	transitioning = true
@@ -228,7 +230,26 @@ func start_battle(info: Dictionary) -> String:
 	autosave()
 	if result == "lose":
 		await show_message("BTL_LOSE_MONEY", {"n": int(SaveGame.data.get("last_money_loss", 0))})
+	else:
+		await run_growths()
 	return result
+
+
+## Crescimentos pendentes acontecem ao voltar ao mapa, um de cada vez.
+func run_growths() -> void:
+	if world == null or world.player == null:
+		return
+	var party: Array = SaveGame.data.get("party", [])
+	for i in party.size():
+		var m := Monster.from_dict(party[i])
+		while m.growth_target() != "":
+			var pos := world.player.get_global_transform_with_canvas().origin
+			var c := GrowthCeremony.new().setup(m, pos)
+			open_overlay(c)
+			await c.closed
+			party[i] = m.to_dict()
+			SaveGame.data["party"] = party
+			autosave()
 
 
 func _battle_flash() -> void:

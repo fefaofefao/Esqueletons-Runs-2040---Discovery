@@ -16,6 +16,7 @@ var _banner: PanelContainer
 var _banner_label: Label
 var _banner_tween: Tween
 var _debug_draw: DebugDraw
+var _rng := RandomNumberGenerator.new()
 
 
 func _ready() -> void:
@@ -59,6 +60,8 @@ func load_map(id: String, cell: Vector2i, facing: String) -> void:
 	map.entities.add_child(player)
 	player.setup(self, map)
 	player.place(cell, facing)
+	_rng.randomize()
+	map.spawn_wilds(self, _rng)
 	var changed_region := region_id != map.region_id
 	map_id = id
 	region_id = map.region_id
@@ -129,6 +132,30 @@ func on_player_arrived(cell: Vector2i) -> void:
 	player.frozen = true
 	Audio.sfx(str(w.get("sfx", "door")))
 	await Game.warp(to, Vector2i(int(w.get("tx", -1)), int(w.get("ty", -1))), str(w.get("facing", player.facing)))
+
+
+## Um selvagem encostou no jogador (ou o jogador nele): começa a batalha.
+func on_touch_wild(w: WildSkeleton) -> void:
+	if not is_instance_valid(w) or w.stunned > 0.0 or Game.battle != null or Game.transitioning or not Game.world_input_enabled():
+		return
+	player.frozen = true
+	var enemies := [[w.species, w.level, w.golden]]
+	# às vezes vem uma dupla (outro da mesma zona)
+	var table: Array = []
+	for sp in map.spawns:
+		var c := Vector2i(int(sp.get("x", 0)), int(sp.get("y", 0)))
+		if (w.home - c).length() < 1.0:
+			table = Data.encounter_table(str(sp.get("table", "")))
+	if not table.is_empty() and _rng.randf() < 0.3:
+		var extra := MapView.pick_encounter(table, _rng)
+		enemies.append([extra.species, extra.level, extra.golden])
+	var result: String = await Game.start_battle({"kind": "wild", "enemies": enemies})
+	if player:
+		player.frozen = false
+	if result == "win" and is_instance_valid(w):
+		map.remove_wild(w)
+	elif result == "fled" and is_instance_valid(w):
+		w.stun(3.0)
 
 
 func interact(target: Vector2i, dir: Vector2i) -> void:

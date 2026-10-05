@@ -65,6 +65,12 @@ Referência: `"arquivo/id"`. Cada caixa tem no máximo 3 linhas; textos maiores 
 - **Espécie usada pelo motor:** `name_key`, `type`, `base` (`hp, atk, mag, def, res, spd`; na fase 3 pode se chamar `stats`), `base_xp`, `sprite` (folha 64×32: frente 0–31, costas 32–63) e `learnset` `[[nível, golpe], ...]`.
 - **Esqueleto no save** (`party`): `{uid, species, nickname, level, xp, hp, moves: [{id, pp}], poison_turns, golden}`. `bag`: `{item: quantidade}`. `respawn`: `{map, x, y, facing}`.
 
+## Esqueletos (fase 3a)
+- **Selvagens no mapa:** `spawns` no JSON do mapa, `[{id, table, x, y, radius, count, behavior?: patrol|circle|chase|shy|fast}]`. A tabela vem de `encounters.json` (teste: `data/test/encounters_test.json`), `[{species, min_level, max_level, rarity?, weight?}]`.
+- **Linha de crescimento:** cada estágio tem `line`, `stage` (1–3), `growth_levels` `[idade 1→2, idade 2→3]`, `growth_move` opcional (aprendido ao crescer), `gender` (`m`/`f`, para "Dourado/Dourada") e `rarity`.
+- **Save:** `ossuary` `{espécie: {seen, defeated, recruited, golden_seen, golden_recruited, marker, golden_right}}` e `ranch` (mesma forma de `party`).
+- `battle.json`: `golden {chance, stat_bonus, marker_bonus}` e `marker {by_rarity, per_level_above, min, max, refuse_keeps}`.
+
 ## Formatos das próximas fases (o validador já os confere)
 
 ### `data/species.json` (fases 3b/3c)

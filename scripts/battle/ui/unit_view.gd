@@ -34,6 +34,8 @@ func setup(m: Monster, enemy: bool) -> UnitView:
 	sprite.scale = Vector2(SCALE, SCALE)
 	sprite.offset = Vector2(-16, -32)
 	add_child(sprite)
+	if m.golden:
+		GoldenFX.apply(sprite, Vector2(16, 16), Vector2(12, 14))
 	_marker = UiTheme.label("▼", UiTheme.TEXT_ACCENT)
 	_marker.add_theme_color_override("font_outline_color", Color(1, 1, 1))
 	_marker.position = Vector2(-3, -76)

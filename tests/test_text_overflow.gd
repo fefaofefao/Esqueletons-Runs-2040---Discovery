@@ -5,9 +5,9 @@ extends "res://tests/test_case.gd"
 const LANGS := ["pt_BR", "en", "es"]
 ## Textos exibidos na caixa de diálogo (até 3 linhas de 288 px).
 const DIALOG_PREFIXES := ["DLG_", "SIGN_", "OBJ_", "MSG_", "CREDITS_"]
-const DIALOG_KEYS := ["DBG_TEAM_GIVEN", "SET_PRIVACY_INFO", "ABOUT_PRIVACY_PENDING", "DBG_TIMES_EMPTY", "DBG_SAVE_DELETED"]
+const DIALOG_KEYS := ["DBG_TEAM_GIVEN", "SET_PRIVACY_INFO", "ABOUT_PRIVACY_PENDING", "DBG_TIMES_EMPTY", "DBG_SAVE_DELETED", "DBG_GROWTH_TEAM_GIVEN"]
 ## Perguntas da ChoiceBox (206 px, até 4 linhas).
-const CHOICE_PREFIXES := ["CONFIRM_"]
+const CHOICE_PREFIXES := ["CONFIRM_", "RECRUIT_ASK"]
 ## Nomes de lugares (letreiro e teleporte do debug).
 const PLACE_PREFIXES := ["REGION_", "MAP_"]
 const PLACE_WIDTH := 240.0
@@ -18,7 +18,12 @@ const VALUE_PREFIXES := ["LANG_NAME_", "VAL_", "SET_TEXT_SLOW", "SET_TEXT_NORMAL
 const BATTLE_LOG_PREFIXES := ["BTL_WILD", "BTL_TAMER_", "BTL_GO", "BTL_COME", "BTL_USED", "BTL_MISS", "BTL_NO_", "BTL_CRIT",
 	"BTL_EFF_STRONG_MSG", "BTL_EFF_WEAK_MSG", "BTL_POISON", "BTL_ALREADY", "BTL_STAT_", "BTL_HEALED", "BTL_CURED",
 	"BTL_REVIVED", "BTL_ITEM_USED", "BTL_FAINT", "BTL_XP", "BTL_LEVEL_UP", "BTL_LEARNED", "BTL_LEARN_PROMPT",
-	"BTL_DID_NOT", "BTL_FLED", "BTL_FLEE", "BTL_CANT", "BTL_WIN", "BTL_MONEY", "BTL_LOSE", "BTL_SINTONIA", "BTL_DELAYED"]
+	"BTL_DID_NOT", "BTL_FLED", "BTL_FLEE", "BTL_CANT", "BTL_WIN", "BTL_MONEY", "BTL_LOSE", "BTL_SINTONIA", "BTL_DELAYED",
+	"BTL_GOLDEN_APPEARS", "RECRUIT_MARKER", "RECRUIT_JOINED", "RECRUIT_TO_RANCH", "RECRUIT_REFUSED"]
+## Cerimônia de crescimento: balão de uma linha e texto de até 2 linhas.
+const BALLOON_WIDTH := 240.0
+## Cabeçalho do Ossário (painel de 280 px).
+const OSS_HEADER_WIDTH := 260.0
 const PREVIEW_PREFIXES := ["TYPE_", "BTL_EFF_STRONG", "BTL_EFF_NORMAL", "BTL_EFF_WEAK", "BTL_TARGET_", "BTL_WEIGHT_", "BTL_DETAIL", "BTL_AGE"]
 ## Nome de esqueleto/golpe no pior caso para as mensagens da batalha.
 const WORST_UNIT := "Wwwwwwwwwww"
@@ -36,7 +41,8 @@ func _has_prefix(key: String, prefixes: Array) -> bool:
 
 func _fill(text: String) -> String:
 	return text.format({"player": WORST_NAME, "n": 30, "name": WORST_UNIT, "user": WORST_UNIT, "a": WORST_UNIT, "b": WORST_UNIT,
-		"move": "Wwwwwwwwwww", "item": "Wwwwwwwww", "tamer": "Wwwwwwwwwwwww", "stat": "WWW", "p": 100, "acc": 100})
+		"move": "Wwwwwwwwwww", "item": "Wwwwwwwww", "tamer": "Wwwwwwwwwwwww", "stat": "WWW", "p": 100, "acc": 100,
+		"species": WORST_UNIT, "r": 100, "t": 100, "g": 100})
 
 
 func test_texts_fit() -> void:
@@ -64,6 +70,13 @@ func test_texts_fit() -> void:
 				var worst := str(all[key][lang]).format({"type": _longest(all, ["TYPE_FISICO", "TYPE_MAGICO", "TYPE_CURA", "TYPE_VENENO"], lang),
 					"p": 120, "acc": 100, "weight": _longest(all, ["BTL_WEIGHT_LIGHT", "BTL_WEIGHT_NORMAL", "BTL_WEIGHT_HEAVY"], lang)})
 				_check_width(key, lang, worst, BattleLog.TEXT_WIDTH, is_pt)
+			elif key == "GROW_BIRTHDAY":
+				_check_width(key, lang, text, BALLOON_WIDTH, is_pt)
+			elif key == "GROW_DONE":
+				var lines := TextFit.wrap_lines(text, UiTheme.DIALOG_TEXT_WIDTH).size()
+				check(lines <= 2, "%s [%s] usa %d linhas na cerimônia" % [key, lang, lines])
+			elif key == "OSS_HEADER":
+				_check_width(key, lang, text, OSS_HEADER_WIDTH, false)
 			elif key.begins_with("BTL_AGE"):
 				_check_width(key, lang, text.replace("30", "100"), UnitCard.W - 34.0, false)
 			elif _has_prefix(key, PREVIEW_PREFIXES):

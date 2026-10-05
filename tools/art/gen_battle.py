@@ -221,6 +221,40 @@ def status_icon():
     return img
 
 
+def cake(frame):
+    """Bolo de aniversário 28x26: quadros 0 e 1 = velas acesas (chama tremendo), 2 = apagadas."""
+    img = new(28, 26)
+    # prato
+    ellipse(img, 14, 23, 13, 2.5, (220, 220, 232))
+    # massa em dois andares
+    rect(img, 4, 14, 20, 9, (196, 132, 84))
+    rect(img, 4, 17, 20, 2, (250, 214, 150))
+    rect(img, 7, 9, 14, 6, (214, 150, 100))
+    # cobertura
+    rect(img, 4, 13, 20, 2, (255, 170, 200))
+    for x in (6, 11, 16, 21):
+        put(img, x, 15, (255, 170, 200))
+    rect(img, 7, 8, 14, 2, (255, 240, 246))
+    for x in (8, 13, 18):
+        put(img, x, 10, (255, 240, 246))
+    # granulado
+    for (x, y, c) in [(6, 20, (120, 200, 255)), (12, 21, (255, 220, 90)), (19, 20, (150, 240, 140)), (15, 11, (255, 120, 140))]:
+        put(img, x, y, c)
+    # velas
+    for i, x in enumerate((9, 14, 19)):
+        rect(img, x, 3, 2, 5, [(120, 200, 255), (255, 120, 160), (150, 240, 140)][i])
+        if frame < 2:
+            fy = 0 if (frame + i) % 2 == 0 else 1
+            put(img, x, fy, (255, 240, 160))
+            put(img, x + 1, fy + 1, (255, 190, 80))
+            put(img, x, fy + 1, (255, 150, 60))
+            put(img, x + 1, fy, (255, 250, 220))
+        else:
+            put(img, x, 2, (90, 90, 100))
+    outline(img, OUTL)
+    return img
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     battle_bg().save(OUT / "bg_praia.png")
@@ -235,6 +269,10 @@ def main():
     for k in ["moves", "switch", "items", "flee"]:
         ring_icon(k).save(OUT / f"ring_{k}.png")
     status_icon().save(OUT / "status_poison.png")
+    sheet = new(28 * 3, 26)
+    for f in range(3):
+        sheet.alpha_composite(cake(f), (28 * f, 0))
+    sheet.save(OUT / "cake.png")
     print("arte de batalha gerada em", OUT)
 
 

@@ -34,7 +34,6 @@ func _ready() -> void:
 func _show_main() -> void:
 	_submenu = ""
 	_title.text = tr("DBG_TITLE")
-	var phase3 := tr("DBG_PHASE").format({"n": 3})
 	_menu.set_items([
 		{"id": "teleport", "key": "DBG_TELEPORT", "enabled": Game.world != null},
 		{"id": "speed10", "key": "DBG_SPEED10", "value": func() -> String: return _onoff(Speed.debug_multiplier > 1.0)},
@@ -46,9 +45,12 @@ func _show_main() -> void:
 		{"id": "team", "key": "DBG_TEST_TEAM", "enabled": Game.world != null and Game.battle == null},
 		{"id": "level", "key": "DBG_SET_LEVEL", "enabled": not SaveGame.data.get("party", []).is_empty() and Game.battle == null,
 			"value": func() -> String: return str(_party_level())},
-		{"id": "add", "key": "DBG_ADD_SKELETON", "enabled": false, "suffix": phase3},
-		{"id": "golden", "key": "DBG_FORCE_GOLDEN", "enabled": false, "suffix": phase3},
-		{"id": "growth", "key": "DBG_FORCE_GROWTH", "enabled": false, "suffix": phase3},
+		{"id": "add", "key": "DBG_ADD_SKELETON", "enabled": Game.world != null and Game.battle == null},
+		{"id": "golden", "key": "DBG_FORCE_GOLDEN", "value": func() -> String: return _onoff(DebugDraw.force_golden)},
+		{"id": "growth", "key": "DBG_FORCE_GROWTH", "enabled": Game.world != null and Game.battle == null and not SaveGame.data.get("party", []).is_empty()},
+		{"id": "wilds", "key": "DBG_SPAWN_WILDS", "enabled": Game.world != null and Game.battle == null},
+		{"id": "ranch", "key": "DBG_OPEN_RANCH", "enabled": Game.world != null and Game.battle == null},
+		{"id": "grow_team", "key": "DBG_GROWTH_TEAM", "enabled": Game.world != null and Game.battle == null},
 		{"id": "win", "key": "DBG_WIN_BATTLE", "enabled": Game.battle != null},
 		{"id": "save", "key": "DBG_SAVE_NOW", "enabled": Game.world != null},
 		{"id": "wipe", "key": "DBG_DELETE_SAVE"},
@@ -67,6 +69,34 @@ func _show_teleport() -> void:
 			if Data.has_map(map_id):
 				var key := str(Data.map(map_id).get("name_key", map_id))
 				items.append({"id": map_id, "key": key})
+	items.append({"id": "_back", "key": "SET_BACK"})
+	_menu.set_items(items)
+
+
+func _force_growth() -> void:
+	var party: Array = SaveGame.data["party"]
+	for i in party.size():
+		var m := Monster.from_dict(party[i])
+		var gl: Array = m.info().get("growth_levels", [])
+		if gl.size() == 2 and m.stage() < 3:
+			var need := int(gl[m.stage() - 1])
+			if m.level < need:
+				m.gain_xp(Monster.xp_for_level(need) - m.xp)
+			party[i] = m.to_dict()
+			close()
+			Game.run_growths()
+			return
+	await Game.show_message("DBG_NO_GROWTH")
+
+
+func _show_add() -> void:
+	_submenu = "add"
+	_title.text = tr("DBG_ADD_SKELETON")
+	var items := []
+	var ids := Data.all_species_ids()
+	ids.sort()
+	for id in ids:
+		items.append({"id": id, "key": str(Data.species(id).get("name_key", id))})
 	items.append({"id": "_back", "key": "SET_BACK"})
 	_menu.set_items(items)
 
@@ -138,6 +168,8 @@ func _on_value_step(id: String, dir: int) -> void:
 			_set_party_level(clampi(_party_level() + 10 * dir, 1, 100))
 		"speed10":
 			Speed.set_debug_multiplier(1.0 if Speed.debug_multiplier > 1.0 else 10.0)
+		"golden":
+			DebugDraw.force_golden = not DebugDraw.force_golden
 		"radii":
 			DebugDraw.show_radii = not DebugDraw.show_radii
 		"encounters":
@@ -149,6 +181,16 @@ func _on_value_step(id: String, dir: int) -> void:
 
 
 func _on_activated(id: String) -> void:
+	if _submenu == "add":
+		if id == "_back":
+			_show_main()
+			return
+		var m := Monster.create(id, maxi(5, _party_level()), DebugDraw.force_golden)
+		var where := Ossuary.add_to_team(m)
+		Ossuary.mark_seen(m)
+		Ossuary.entry(id)["recruited"] = true
+		await Game.show_message("RECRUIT_JOINED" if where == "party" else "RECRUIT_TO_RANCH", {"name": m.display_name()})
+		return
 	if _submenu == "battle":
 		if id == "_back":
 			_show_main()
@@ -169,6 +211,26 @@ func _on_activated(id: String) -> void:
 			_show_teleport()
 		"battle":
 			_show_battles()
+		"growth":
+			_force_growth()
+		"wilds":
+			close()
+			var w := Game.world
+			var rng := RandomNumberGenerator.new()
+			rng.randomize()
+			w.map.add_spawn(w, {"id": "debug", "table": "teste", "x": w.player.cell.x, "y": w.player.cell.y, "radius": 4, "count": 4}, rng)
+		"ranch":
+			close()
+			Game.open_overlay(RanchMenu.new())
+		"add":
+			_show_add()
+		"grow_team":
+			var party := []
+			for lvl in [5, 11]:
+				party.append(Monster.create("teste_broto_1" if lvl == 5 else "teste_broto_2", lvl).to_dict())
+			SaveGame.data["party"] = party
+			await Game.show_message("DBG_GROWTH_TEAM_GIVEN")
+			_show_main()
 		"team":
 			_give_test_team()
 			await Game.show_message("DBG_TEAM_GIVEN")

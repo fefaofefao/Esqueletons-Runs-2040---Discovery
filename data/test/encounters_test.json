@@ -1,0 +1,31 @@
+{
+ "_comment": "Tabela de teste (só debug).",
+ "tables": {
+  "teste": [
+   {
+    "species": "teste_broto_1",
+    "stage": 1,
+    "min_level": 2,
+    "max_level": 5,
+    "rarity": "comum",
+    "weight": 3
+   },
+   {
+    "species": "teste_veneno",
+    "stage": 1,
+    "min_level": 3,
+    "max_level": 6,
+    "rarity": "comum",
+    "weight": 2
+   },
+   {
+    "species": "teste_magico",
+    "stage": 1,
+    "min_level": 3,
+    "max_level": 6,
+    "rarity": "incomum",
+    "weight": 1
+   }
+  ]
+ }
+}
