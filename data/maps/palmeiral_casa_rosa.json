@@ -42,6 +42,12 @@
    "type": "stool",
    "x": 3,
    "y": 6
+  },
+  {
+   "type": "bookshelf",
+   "x": 3,
+   "y": 3,
+   "dialog": "extras/livro_estrelas"
   }
  ],
  "npcs": [

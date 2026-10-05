@@ -264,6 +264,12 @@
    "x": 28,
    "y": 25,
    "facing": "down"
+  },
+  {
+   "id": "romeiro_cinza",
+   "x": 12,
+   "y": 44,
+   "facing": "right"
   }
  ],
  "warps": [

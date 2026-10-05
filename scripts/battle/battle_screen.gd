@@ -726,7 +726,8 @@ func _play_event(e: Dictionary) -> void:
 		"heal":
 			_sparkles(_view(int(e.target)).center())
 			await cards[int(e.target)].animate_hp(int(e.hp))
-			await _say("BTL_HEALED", {"name": _name(int(e.target)), "n": int(e.amount)})
+			if int(e.amount) > 0:
+				await _say("BTL_HEALED", {"name": _name(int(e.target)), "n": int(e.amount)})
 		"cured":
 			cards[int(e.target)].refresh()
 			await _say("BTL_CURED", {"name": _name(int(e.target))})

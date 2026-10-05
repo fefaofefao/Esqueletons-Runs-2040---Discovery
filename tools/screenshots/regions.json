@@ -547,5 +547,104 @@
     "after_shot_at": 3
    }
   ]
+ },
+ "castelo": {
+  "flags": [
+   "intro_done",
+   "bento_met",
+   "has_partner",
+   "partner_taro",
+   "tut_battle",
+   "tut_marker",
+   "bras_beaten",
+   "ramalho_beaten",
+   "vigia_lasca_ok",
+   "fornalha_beaten",
+   "musga_beaten",
+   "calico_beaten",
+   "alva_beaten",
+   "duna_beaten",
+   "ossorio_revelou",
+   "red_minas",
+   "red_ossorio",
+   "has_carta_alva"
+  ],
+  "party": [
+   [
+    "grumete_3",
+    88,
+    "Taro"
+   ],
+   [
+    "sentinela_3",
+    86
+   ],
+   [
+    "lavadeira_3",
+    85
+   ],
+   [
+    "domador_escorpioes_3",
+    85
+   ]
+  ],
+  "steps": [
+   {
+    "map": "castelo_portao",
+    "x": 19,
+    "y": 20,
+    "f": "up",
+    "shot": "c1_portao",
+    "no_wait_warp": true,
+    "shot_at": 2
+   },
+   {
+    "map": "castelo_portao",
+    "x": 19,
+    "y": 13,
+    "f": "up",
+    "shot": "c2_pais",
+    "step": "up",
+    "shot_at": 1,
+    "battle": true
+   },
+   {
+    "map": "castelo_salao",
+    "x": 14,
+    "y": 12,
+    "f": "up",
+    "shot": "c3_salao",
+    "flags": [
+     "ebano_beaten",
+     "arauto_beaten",
+     "tempero_beaten"
+    ]
+   },
+   {
+    "map": "castelo_salao",
+    "x": 14,
+    "y": 6,
+    "f": "up",
+    "shot": "c4_degustor",
+    "step": "up",
+    "shot_at": 0,
+    "battle": true
+   },
+   {
+    "map": "sala_trono",
+    "x": 9,
+    "y": 14,
+    "f": "up",
+    "shot": "c5_trono",
+    "no_wait_warp": true,
+    "shot_at": 6,
+    "choices": [
+     1
+    ],
+    "battle": true,
+    "after_shot": "c6_final",
+    "after_shot_at": 12
+   }
+  ]
  }
 }

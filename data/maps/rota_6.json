@@ -245,6 +245,12 @@
    "x": 36,
    "y": 24,
    "facing": "left"
+  },
+  {
+   "id": "colecionador_eco",
+   "x": 12,
+   "y": 44,
+   "facing": "right"
   }
  ],
  "warps": [

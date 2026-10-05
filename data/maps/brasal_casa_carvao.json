@@ -48,6 +48,12 @@
    "type": "lamp",
    "x": 1,
    "y": 7
+  },
+  {
+   "type": "bookshelf",
+   "x": 3,
+   "y": 3,
+   "dialog": "extras/livro_sino"
   }
  ],
  "npcs": [

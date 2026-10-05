@@ -255,6 +255,12 @@
    "facing": "left",
    "if": "partner_taro",
    "if_not": "rival_picos_done"
+  },
+  {
+   "id": "pastora_neve",
+   "x": 12,
+   "y": 44,
+   "facing": "right"
   }
  ],
  "warps": [

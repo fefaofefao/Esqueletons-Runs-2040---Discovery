@@ -268,6 +268,28 @@ R.d("registro", [say("DLG_O_REC_1"), say("DLG_O_REC_2"), say("DLG_O_REC_3"), say
 R.d("registro_de_novo", [say("DLG_O_REC_AGAIN")])
 R.d("livro_farol", [say("DLG_O_BOOK_1"), lia("DLG_O_BOOK_L1"), lia("DLG_O_BOOK_L2"), taro("DLG_O_BOOK_T1"), flag("livro_farol_lido")])
 R.d("lia_arquivo", [say("DLG_O_LIA_ARQ_1", "SPK_LIA"), say("DLG_O_LIA_ARQ_2", "SPK_LIA"), flag("lia_arquivo_visto"), act("hide_npc", id="lia_arquivo")])
+t("DLG_O_CRON_0", "Crônicas da Família Real, volume único. As páginas cheiram a poeira e a mar.",
+  "Chronicles of the Royal Family, single volume. The pages smell of dust and sea.", "Crónicas de la Familia Real, volumen único. Las páginas huelen a polvo y a mar.")
+t("DLG_O_CRON_1", "\"Ramalho, primo do rei, lenhador. Perdia toda queda de braço e ria mais alto que o vencedor.\"",
+  "\"Ramalho, the king's cousin, woodcutter. Lost every arm-wrestling match and laughed louder than the winner.\"",
+  "\"Ramalho, primo del rey, leñador. Perdía todos los pulsos y se reía más fuerte que el ganador.\"")
+t("DLG_O_CRON_2", "\"Fornalha, tia do rei, ferreira. Forjou o sino de Brasal e criou o príncipe quando a mãe dele adoeceu.\"",
+  "\"Furnace, the king's aunt, blacksmith. Forged the bell of Embervale and raised the prince when his mother fell ill.\"",
+  "\"Fragua, tía del rey, herrera. Forjó la campana de Brasal y crió al príncipe cuando su madre enfermó.\"")
+t("DLG_O_CRON_3", "\"Musga, sobrinha do rei, herbalista. Curava a corte inteira; ninguém lembrava de visitá-la na torre.\"",
+  "\"Musga, the king's niece, herbalist. She healed the whole court; nobody remembered to visit her in the tower.\"",
+  "\"Musga, sobrina del rey, herbolaria. Curaba a toda la corte; nadie se acordaba de visitarla en la torre.\"")
+t("DLG_O_CRON_4", "\"Caliço, irmão do rei, capitão. Jurou nunca abandonar a família. Cumpriu até depois do fim.\"",
+  "\"Caliço, the king's brother, captain. Swore never to abandon the family. He kept it even after the end.\"",
+  "\"Caliço, hermano del rey, capitán. Juró nunca abandonar a la familia. Lo cumplió incluso después del final.\"")
+t("DLG_O_CRON_5", "\"Duna, a rainha, veio do deserto com tambores. Ergueu o farol. Alva, a filha, nasceu na noite em que ele acendeu.\"",
+  "\"Duna, the queen, came from the desert with drums. She raised the lighthouse. Alva, their daughter, was born the night it was first lit.\"",
+  "\"Duna, la reina, vino del desierto con tambores. Levantó el faro. Alva, su hija, nació la noche en que se encendió.\"")
+t("DLG_O_CRON_6", "A última página está em branco. Alguém escreveu a lápis, com letra de menino: \"Volta.\"",
+  "The last page is blank. Someone wrote in pencil, in a boy's handwriting: \"Come back.\"",
+  "La última página está en blanco. Alguien escribió a lápiz, con letra de niño: \"Vuelve.\"")
+R.d("cronicas", [say("DLG_O_CRON_0"), say("DLG_O_CRON_1"), say("DLG_O_CRON_2"), say("DLG_O_CRON_3"), say("DLG_O_CRON_4"),
+                 say("DLG_O_CRON_5"), say("DLG_O_CRON_6")])
 R.NPCS["lia_arquivo"] = skel("skel_faroleira_3", "SPK_LIA", [{"dialog": ref("lia_arquivo")}])
 
 # ------------------------------------------------------------------ Quartel: capanga, Bufardo, Guardião Caliço
@@ -393,7 +415,7 @@ lair = make_lair("quartel", "ossorio", "MAP_QUARTEL", {"g": "stone", "p": "path"
 lair["on_enter"] = [{"if_not": "quartel_visto", "dialog": R.ref("chegada_quartel")}]
 
 arquivo = room("ossorio_arquivo", "ossorio", "MAP_ARQUIVO", "ossorio", (14, 27),
-               [{"type": "bookshelf", "x": 3, "y": 2, "dialog": R.ref("livro_farol")}, {"type": "bookshelf", "x": 11, "y": 2},
+               [{"type": "bookshelf", "x": 3, "y": 2, "dialog": R.ref("livro_farol")}, {"type": "bookshelf", "x": 10, "y": 2, "dialog": R.ref("cronicas")},
                 {"type": "lectern", "x": 6, "y": 5, "dialog": R.ref("registro"), "if_not": "pista_5"},
                 {"type": "lectern", "x": 6, "y": 5, "dialog": R.ref("registro_de_novo"), "if": "pista_5"},
                 {"type": "portrait", "x": 8, "y": 1, "dialog": R.ref("registro_de_novo")}, {"type": "candelabra", "x": 1, "y": 7},

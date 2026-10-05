@@ -70,6 +70,13 @@ func test_texts_fit() -> void:
 				var worst := str(all[key][lang]).format({"type": _longest(all, ["TYPE_FISICO", "TYPE_MAGICO", "TYPE_CURA", "TYPE_VENENO"], lang),
 					"p": 120, "acc": 100, "weight": _longest(all, ["BTL_WEIGHT_LIGHT", "BTL_WEIGHT_NORMAL", "BTL_WEIGHT_HEAVY"], lang)})
 				_check_width(key, lang, worst, BattleLog.TEXT_WIDTH, is_pt)
+			elif key.begins_with("GROW_PARTNER_"):
+				# fala do parceiro na cerimônia: até 2 linhas, com folga de 30% em PT
+				var lines := TextFit.wrap_lines(text, UiTheme.DIALOG_TEXT_WIDTH).size()
+				check(lines <= 2, "%s [%s] usa %d linhas na cerimônia" % [key, lang, lines])
+				if is_pt:
+					var slack := TextFit.wrap_lines(text, UiTheme.DIALOG_TEXT_WIDTH / UiTheme.TEXT_GROWTH).size()
+					check(slack <= 2, "%s [pt_BR] sem 30%% de folga na cerimônia" % key)
 			elif key == "GROW_BIRTHDAY":
 				_check_width(key, lang, text, BALLOON_WIDTH, is_pt)
 			elif key == "GROW_DONE":

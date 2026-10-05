@@ -17,7 +17,7 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 | 4e — Cidade Murada de Ossório | ✅ concluída |
 | 4f — Picos Gelados | ✅ concluída |
 | 4g — Deserto dos Ecos | ✅ concluída |
-| 4h — Castelo, finais e pós-jogo | ⏳ próxima |
+| 4h — Castelo, finais e pós-jogo | ✅ concluída |
 | 5 — Monetização e conformidade | — |
 | 6 — Polimento e publicação | — |
 
@@ -347,3 +347,25 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 ### Verificação
 - `tests/run_tests.tscn`: 10217 verificações, 0 falhas. `tools/validate_data.py`: OK. `tools/simulate.py --check`: 0 critérios falhando.
 - Capturas: `capture.tscn -- --region=deserto`.
+
+## Fase 4h — Castelo, finais e pós-jogo (concluída)
+
+### Feito
+- **`docs/roteiro/08_castelo.md`** (gerado por `tools/maps/castelo.py`):
+  - **Portão:** os pais do Taro guardam a porta e não o reconhecem (batalha); o Caliço cura a equipe se Ossório soube do registro (escolha 4).
+  - **Grande Salão:** Ébano, Arauto, Tempero, selvagens, a fonte (cura e ponto de volta) e o **Provador Real Degustor** (chefe; no pós-jogo vira o único Degustor recrutável).
+  - **Sala do Trono:** o parceiro acende as velas; o Rei pede "Coloque. Fique."; colocar a coroa é impedido pelo parceiro; batalha final (Rei 120 + escolta 78).
+  - **Final A (Redimir):** exige a Carta da Alva + 2 de 3 Redenções. O Rei lê a carta, quebra a coroa, a família se despede (uma fala de cada Guardião) e ele pede para seguir o herdeiro.
+  - **Final B (Derrotar):** a coroa se parte no golpe, a família some sem despedida, o Rei entra em silêncio.
+  - **Nos dois:** o marcador do Rei enche até 100% e ele entra na equipe (idade 100); os pais reconhecem o Taro, que perdoa; Lia acende o farol; epílogo no **Museu de 2040** (vitrine vazia, "Peça em restauração"); créditos; pós-jogo na Praia com o farol aceso.
+- **Pós-jogo:** os 6 Guardiões viram **ecos** para revanche (idades 95–100), Degustor recrutável, Lia no farol e a família do Taro na Vila Maré, falas novas em todas as cidades.
+- **`docs/roteiro/09_extras.md`** (gerado por `tools/maps/extras.py`): o mundo reage à história — comentários do parceiro no Prólogo e no Bosque, NPCs que mudam depois do Brás e do Ramalho, **cartas do Bento** em cada Rancho, conversa com o parceiro na cama de cada Rancho, viajantes com lore em cada rota, 4 moradores novos, livros de lore, a 2ª missão de Geada (eleição do Prefeito de neve) e de Palmeiral (o ritmo dos tambores), fala do parceiro quando ele cresce.
+- **Crônicas da Família Real** no Arquivo de Ossório (a primeira vida de cada Guardião).
+- `tools/maps/build_all.py` regera todas as regiões na ordem certa.
+- Sistema: ação `warp` (com `hide_player`); a batalha não mostra mais "recuperou 0 PV"; piso do castelo mais claro que as paredes.
+- **Volume de texto:** 12.040 palavras PT-BR no jogo (meta 12–18 mil).
+
+### Verificação
+- `tests/run_tests.tscn`: 12125 verificações, 0 falhas (condição dos finais, Final A e B completos, o Rei na equipe com marcador 100%, ecos no pós-jogo).
+- `tools/validate_data.py`: OK. `tools/simulate.py --check`: 174 min, 0 critérios falhando.
+- Captura `capture.tscn -- --region=castelo`: portão, pais do Taro, salão, Provador Real, trono e o Final A.

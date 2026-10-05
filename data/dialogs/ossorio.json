@@ -655,6 +655,29 @@
     "id": "lia_arquivo"
    }
   ],
+  "cronicas": [
+   {
+    "say": "DLG_O_CRON_0"
+   },
+   {
+    "say": "DLG_O_CRON_1"
+   },
+   {
+    "say": "DLG_O_CRON_2"
+   },
+   {
+    "say": "DLG_O_CRON_3"
+   },
+   {
+    "say": "DLG_O_CRON_4"
+   },
+   {
+    "say": "DLG_O_CRON_5"
+   },
+   {
+    "say": "DLG_O_CRON_6"
+   }
+  ],
   "chegada_quartel": [
    {
     "say": "DLG_O_ARR_Q_L",

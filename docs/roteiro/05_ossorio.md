@@ -236,6 +236,15 @@ Fase 4e. **Gerado por `tools/maps/ossorio.py`**, a mesma fonte que grava os mapa
 - *[flag lia_arquivo_visto = True]*
 - *[ação hide_npc: {"id": "lia_arquivo"}]*
 
+### `ossorio/cronicas`
+- *(narração)* Crônicas da Família Real, volume único. As páginas cheiram a poeira e a mar.
+- *(narração)* "Ramalho, primo do rei, lenhador. Perdia toda queda de braço e ria mais alto que o vencedor."
+- *(narração)* "Fornalha, tia do rei, ferreira. Forjou o sino de Brasal e criou o príncipe quando a mãe dele adoeceu."
+- *(narração)* "Musga, sobrinha do rei, herbalista. Curava a corte inteira; ninguém lembrava de visitá-la na torre."
+- *(narração)* "Caliço, irmão do rei, capitão. Jurou nunca abandonar a família. Cumpriu até depois do fim."
+- *(narração)* "Duna, a rainha, veio do deserto com tambores. Ergueu o farol. Alva, a filha, nasceu na noite em que ele acendeu."
+- *(narração)* A última página está em branco. Alguém escreveu a lápis, com letra de menino: "Volta."
+
 ### `ossorio/chegada_quartel`
 - **SPK_LIA:** Todo mundo no mesmo passo... parece música sem melodia. *(if partner_lia)*
 - **SPK_TARO:** Disciplina. Meu pai ia gostar. Eu não. *(if partner_taro)*
@@ -273,4 +282,4 @@ Fase 4e. **Gerado por `tools/maps/ossorio.py`**, a mesma fonte que grava os mapa
 - **Comandante Caliço:** Honra exige verdade. Mesmo a verdade que dói. *(if_none ossorio_revelou, ossorio_segredo)*
 
 ## 10. Contagem
-Cerca de **917 palavras** de texto de jogo em PT-BR nesta região.
+Cerca de **1033 palavras** de texto de jogo em PT-BR nesta região.

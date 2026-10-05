@@ -130,5 +130,12 @@
  ],
  "ambient": [
   "leaves"
+ ],
+ "on_enter": [
+  {
+   "if": "has_partner",
+   "if_not": "x_bosque_velho_visto",
+   "dialog": "extras/chegada_bosque_velho"
+  }
  ]
 }

@@ -387,5 +387,12 @@
  ],
  "ambient": [
   "leaves"
+ ],
+ "on_enter": [
+  {
+   "if": "has_partner",
+   "if_not": "x_rota_1_visto",
+   "dialog": "extras/chegada_rota_1"
+  }
  ]
 }

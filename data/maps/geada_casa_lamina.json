@@ -42,6 +42,12 @@
    "type": "lamp",
    "x": 10,
    "y": 7
+  },
+  {
+   "type": "bookshelf",
+   "x": 9,
+   "y": 3,
+   "dialog": "extras/livro_neve"
   }
  ],
  "npcs": [

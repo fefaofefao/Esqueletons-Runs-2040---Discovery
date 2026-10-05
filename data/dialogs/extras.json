@@ -1,0 +1,945 @@
+{
+ "_comment": "Gerado por tools/maps/extras.py (fonte única do roteiro).",
+ "dialogs": {
+  "chegada_vila_mare": [
+   {
+    "say": "DLG_X_ARR_VILA_L0",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_X_ARR_VILA_T0",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "x_vila_mare_visto",
+    "value": true
+   }
+  ],
+  "chegada_rota_1": [
+   {
+    "say": "DLG_X_ARR_ROTA1_L0",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_X_ARR_ROTA1_L1",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_X_ARR_ROTA1_T0",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "x_rota_1_visto",
+    "value": true
+   }
+  ],
+  "chegada_raizal": [
+   {
+    "say": "DLG_X_ARR_RAIZAL_L0",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_X_ARR_RAIZAL_T0",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "x_raizal_visto",
+    "value": true
+   }
+  ],
+  "chegada_bosque_velho": [
+   {
+    "say": "DLG_X_ARR_BVELHO_L0",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_X_ARR_BVELHO_T0",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "x_bosque_velho_visto",
+    "value": true
+   }
+  ],
+  "reage_marola": [
+   {
+    "say": "DLG_X_REACT_MAROLA",
+    "speaker": "SPK_MAROLA"
+   },
+   {
+    "goto": "vila_mare/marola"
+   }
+  ],
+  "reage_anzol": [
+   {
+    "say": "DLG_X_REACT_ANZOL",
+    "speaker": "SPK_ANZOL"
+   },
+   {
+    "goto": "vila_mare/anzol"
+   }
+  ],
+  "reage_pipa": [
+   {
+    "say": "DLG_X_REACT_PIPA",
+    "speaker": "SPK_PIPA"
+   },
+   {
+    "goto": "vila_mare/pipa"
+   }
+  ],
+  "reage_cascalho": [
+   {
+    "say": "DLG_X_REACT_CASCALHO",
+    "speaker": "SPK_CASCALHO"
+   },
+   {
+    "goto": "vila_mare/cascalho"
+   }
+  ],
+  "reage_tilia": [
+   {
+    "say": "DLG_X_REACT_TILIA",
+    "speaker": "SPK_TILIA"
+   },
+   {
+    "goto": "bosque/tilia"
+   }
+  ],
+  "reage_toco": [
+   {
+    "say": "DLG_X_REACT_TOCO",
+    "speaker": "SPK_TOCO"
+   },
+   {
+    "goto": "bosque/toco"
+   }
+  ],
+  "reage_graveto": [
+   {
+    "say": "DLG_X_REACT_GRAVETO",
+    "speaker": "SPK_GRAVETO"
+   },
+   {
+    "goto": "bosque/graveto"
+   }
+  ],
+  "reage_hera": [
+   {
+    "say": "DLG_X_REACT_HERA",
+    "speaker": "SPK_HERA"
+   },
+   {
+    "goto": "bosque/hera"
+   }
+  ],
+  "reage_lenhador_velho": [
+   {
+    "say": "DLG_X_REACT_LENHADOR_VELHO",
+    "speaker": "SPK_LENHADOR_VELHO"
+   },
+   {
+    "goto": "bosque/velho"
+   }
+  ],
+  "carta_1": [
+   {
+    "say": "DLG_X_LETTER",
+    "speaker": "SPK_TILIA"
+   },
+   {
+    "say": "DLG_X_LETTER_1A"
+   },
+   {
+    "say": "DLG_X_LETTER_1B"
+   },
+   {
+    "set_flag": "carta_bento_1",
+    "value": true
+   },
+   {
+    "goto": "bosque/tilia"
+   }
+  ],
+  "carta_2": [
+   {
+    "say": "DLG_X_LETTER",
+    "speaker": "SPK_RUBI"
+   },
+   {
+    "say": "DLG_X_LETTER_2A"
+   },
+   {
+    "say": "DLG_X_LETTER_2B"
+   },
+   {
+    "set_flag": "carta_bento_2",
+    "value": true
+   },
+   {
+    "goto": "minas/rubi"
+   }
+  ],
+  "carta_3": [
+   {
+    "say": "DLG_X_LETTER",
+    "speaker": "SPK_GARCA"
+   },
+   {
+    "say": "DLG_X_LETTER_3A"
+   },
+   {
+    "say": "DLG_X_LETTER_3B"
+   },
+   {
+    "set_flag": "carta_bento_3",
+    "value": true
+   },
+   {
+    "goto": "pantano/garca"
+   }
+  ],
+  "carta_4": [
+   {
+    "say": "DLG_X_LETTER",
+    "speaker": "SPK_AMEIA"
+   },
+   {
+    "say": "DLG_X_LETTER_4A"
+   },
+   {
+    "say": "DLG_X_LETTER_4B"
+   },
+   {
+    "set_flag": "carta_bento_4",
+    "value": true
+   },
+   {
+    "goto": "ossorio/ameia"
+   }
+  ],
+  "carta_5": [
+   {
+    "say": "DLG_X_LETTER",
+    "speaker": "SPK_LAREIRA"
+   },
+   {
+    "say": "DLG_X_LETTER_5A"
+   },
+   {
+    "say": "DLG_X_LETTER_5B"
+   },
+   {
+    "set_flag": "carta_bento_5",
+    "value": true
+   },
+   {
+    "goto": "picos/lareira"
+   }
+  ],
+  "carta_6": [
+   {
+    "say": "DLG_X_LETTER",
+    "speaker": "SPK_MORINGA"
+   },
+   {
+    "say": "DLG_X_LETTER_6A"
+   },
+   {
+    "say": "DLG_X_LETTER_6B"
+   },
+   {
+    "set_flag": "carta_bento_6",
+    "value": true
+   },
+   {
+    "goto": "deserto/moringa"
+   }
+  ],
+  "pos_cascalho": [
+   {
+    "say": "DLG_X_POST_CASCALHO",
+    "speaker": "SPK_CASCALHO"
+   }
+  ],
+  "pos_hera": [
+   {
+    "say": "DLG_X_POST_HERA",
+    "speaker": "SPK_HERA"
+   }
+  ],
+  "pos_turmalina": [
+   {
+    "say": "DLG_X_POST_TURMALINA",
+    "speaker": "SPK_TURMALINA"
+   }
+  ],
+  "pos_sape": [
+   {
+    "say": "DLG_X_POST_SAPE",
+    "speaker": "SPK_SAPE"
+   }
+  ],
+  "pos_brasao": [
+   {
+    "say": "DLG_X_POST_BRASAO",
+    "speaker": "SPK_BRASAO"
+   }
+  ],
+  "pos_pinhao": [
+   {
+    "say": "DLG_X_POST_PINHAO",
+    "speaker": "SPK_PINHAO"
+   }
+  ],
+  "pos_miragem": [
+   {
+    "say": "DLG_X_POST_MIRAGEM",
+    "speaker": "SPK_MIRAGEM"
+   }
+  ],
+  "lia_farol": [
+   {
+    "say": "DLG_X_LIA_FAROL_1",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "say": "DLG_X_LIA_FAROL_2",
+    "speaker": "SPK_LIA"
+   }
+  ],
+  "pais_vila": [
+   {
+    "say": "DLG_X_PAIS_1",
+    "speaker": "SPK_MAE_TARO"
+   },
+   {
+    "say": "DLG_X_PAIS_2",
+    "speaker": "SPK_PAI_TARO"
+   }
+  ],
+  "taro_vila": [
+   {
+    "say": "DLG_X_TARO_VILA",
+    "speaker": "SPK_TARO"
+   }
+  ],
+  "romeiro_cinza": [
+   {
+    "say": "DLG_X_ROMEIRO_CINZA_0",
+    "speaker": "SPK_X_ROMEIRO_CINZA"
+   },
+   {
+    "say": "DLG_X_ROMEIRO_CINZA_1",
+    "speaker": "SPK_X_ROMEIRO_CINZA"
+   }
+  ],
+  "barqueira_lua": [
+   {
+    "say": "DLG_X_BARQUEIRA_LUA_0",
+    "speaker": "SPK_X_BARQUEIRA_LUA"
+   },
+   {
+    "say": "DLG_X_BARQUEIRA_LUA_1",
+    "speaker": "SPK_X_BARQUEIRA_LUA"
+   }
+  ],
+  "historiadora_pena": [
+   {
+    "say": "DLG_X_HISTORIADORA_PENA_0",
+    "speaker": "SPK_X_HISTORIADORA_PENA"
+   },
+   {
+    "say": "DLG_X_HISTORIADORA_PENA_1",
+    "speaker": "SPK_X_HISTORIADORA_PENA"
+   }
+  ],
+  "pastora_neve": [
+   {
+    "say": "DLG_X_PASTORA_NEVE_0",
+    "speaker": "SPK_X_PASTORA_NEVE"
+   },
+   {
+    "say": "DLG_X_PASTORA_NEVE_1",
+    "speaker": "SPK_X_PASTORA_NEVE"
+   }
+  ],
+  "colecionador_eco": [
+   {
+    "say": "DLG_X_COLECIONADOR_ECO_0",
+    "speaker": "SPK_X_COLECIONADOR_ECO"
+   },
+   {
+    "say": "DLG_X_COLECIONADOR_ECO_1",
+    "speaker": "SPK_X_COLECIONADOR_ECO"
+   }
+  ],
+  "salina": [
+   {
+    "say": "DLG_X_SALINA_0",
+    "speaker": "SPK_X_SALINA"
+   },
+   {
+    "say": "DLG_X_SALINA_1",
+    "speaker": "SPK_X_SALINA"
+   }
+  ],
+  "siri": [
+   {
+    "say": "DLG_X_SIRI_0",
+    "speaker": "SPK_X_SIRI"
+   }
+  ],
+  "seiva": [
+   {
+    "say": "DLG_X_SEIVA_0",
+    "speaker": "SPK_X_SEIVA"
+   },
+   {
+    "say": "DLG_X_SEIVA_1",
+    "speaker": "SPK_X_SEIVA"
+   }
+  ],
+  "cavaco": [
+   {
+    "say": "DLG_X_CAVACO_0",
+    "speaker": "SPK_X_CAVACO"
+   },
+   {
+    "say": "DLG_X_CAVACO_1",
+    "speaker": "SPK_X_CAVACO"
+   }
+  ],
+  "livro_sino": [
+   {
+    "say": "OBJ_X_BOOK_SINO_T"
+   },
+   {
+    "say": "OBJ_X_BOOK_SINO_0"
+   }
+  ],
+  "livro_musga": [
+   {
+    "say": "OBJ_X_BOOK_MUSGA_T"
+   },
+   {
+    "say": "OBJ_X_BOOK_MUSGA_0"
+   },
+   {
+    "say": "OBJ_X_BOOK_MUSGA_1"
+   }
+  ],
+  "livro_neve": [
+   {
+    "say": "OBJ_X_BOOK_NEVE_T"
+   },
+   {
+    "say": "OBJ_X_BOOK_NEVE_0"
+   }
+  ],
+  "livro_estrelas": [
+   {
+    "say": "OBJ_X_BOOK_ESTRELAS_T"
+   },
+   {
+    "say": "OBJ_X_BOOK_ESTRELAS_0"
+   },
+   {
+    "say": "OBJ_X_BOOK_ESTRELAS_1"
+   }
+  ],
+  "floq_pede": [
+   {
+    "say": "DLG_PI_FLOQUINHO_AFTER",
+    "speaker": "SPK_FLOQUINHO",
+    "if": "alva_beaten"
+   },
+   {
+    "say": "DLG_PI_FLOQUINHO",
+    "speaker": "SPK_FLOQUINHO",
+    "if_not": "alva_beaten"
+   },
+   {
+    "say": "DLG_X_FLOQ_ASK",
+    "speaker": "SPK_FLOQUINHO"
+   },
+   {
+    "set_flag": "eleicao_quest",
+    "value": true
+   }
+  ],
+  "floq_espera": [
+   {
+    "say": "DLG_X_FLOQ_WAIT",
+    "speaker": "SPK_FLOQUINHO"
+   }
+  ],
+  "floq_ganhou": [
+   {
+    "say": "DLG_X_FLOQ_WIN",
+    "speaker": "SPK_FLOQUINHO"
+   },
+   {
+    "action": "give_item",
+    "item": "reviver",
+    "n": 1
+   },
+   {
+    "action": "give_item",
+    "item": "pocao_g",
+    "n": 1
+   },
+   {
+    "set_flag": "eleicao_done",
+    "value": true
+   }
+  ],
+  "floq_depois": [
+   {
+    "say": "DLG_X_FLOQ_DONE",
+    "speaker": "SPK_FLOQUINHO"
+   }
+  ],
+  "voto_lareira": [
+   {
+    "say": "DLG_X_VOTE_LAREIRA",
+    "speaker": "SPK_LAREIRA"
+   },
+   {
+    "set_flag": "voto_lareira",
+    "value": true
+   },
+   {
+    "goto": "picos/lareira"
+   }
+  ],
+  "voto_pinhao": [
+   {
+    "say": "DLG_X_VOTE_PINHAO",
+    "speaker": "SPK_PINHAO"
+   },
+   {
+    "set_flag": "voto_pinhao",
+    "value": true
+   },
+   {
+    "goto": "picos/pinhao"
+   }
+  ],
+  "voto_degelo": [
+   {
+    "say": "DLG_X_VOTE_DEGELO",
+    "speaker": "SPK_DEGELO"
+   },
+   {
+    "set_flag": "voto_degelo",
+    "value": true
+   },
+   {
+    "goto": "picos/degelo"
+   }
+  ],
+  "grao_pede": [
+   {
+    "say": "DLG_X_GRAO_ASK",
+    "speaker": "SPK_GRAO"
+   },
+   {
+    "set_flag": "ritmo_quest",
+    "value": true
+   }
+  ],
+  "grao_feito": [
+   {
+    "say": "DLG_X_GRAO_DONE",
+    "speaker": "SPK_GRAO"
+   },
+   {
+    "action": "sfx",
+    "name": "birthday"
+   },
+   {
+    "action": "give_item",
+    "item": "pocao_g",
+    "n": 2
+   },
+   {
+    "set_flag": "ritmo_done",
+    "value": true
+   }
+  ],
+  "grao_depois": [
+   {
+    "say": "DLG_X_GRAO_AFTER",
+    "speaker": "SPK_GRAO"
+   }
+  ],
+  "batuque_ritmo": [
+   {
+    "say": "DLG_X_BATUQUE_RHYTHM",
+    "speaker": "SPK_BATUQUE"
+   },
+   {
+    "set_flag": "ritmo_aprendido",
+    "value": true
+   }
+  ],
+  "cama_vila": [
+   {
+    "say": "DLG_X_BED_VILA_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_X_BED_VILA_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   }
+  ],
+  "cama_raizal": [
+   {
+    "say": "DLG_X_BED_RAIZAL_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_X_BED_RAIZAL_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   }
+  ],
+  "cama_brasal": [
+   {
+    "say": "DLG_X_BED_BRASAL_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_X_BED_BRASAL_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   }
+  ],
+  "cama_brejo": [
+   {
+    "say": "DLG_X_BED_BREJO_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_X_BED_BREJO_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   }
+  ],
+  "cama_ossorio": [
+   {
+    "say": "DLG_X_BED_OSSORIO_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_X_BED_OSSORIO_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   }
+  ],
+  "cama_geada": [
+   {
+    "say": "DLG_X_BED_GEADA_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_X_BED_GEADA_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   }
+  ],
+  "cama_palmeiral": [
+   {
+    "say": "DLG_X_BED_PALMEIRAL_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_X_BED_PALMEIRAL_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   }
+  ],
+  "pos_marola": [
+   {
+    "say": "DLG_X_POST_MAROLA",
+    "speaker": "SPK_MAROLA"
+   },
+   {
+    "goto": "vila_mare/marola"
+   }
+  ],
+  "pos_tilia": [
+   {
+    "say": "DLG_X_POST_TILIA",
+    "speaker": "SPK_TILIA"
+   },
+   {
+    "goto": "bosque/tilia"
+   }
+  ],
+  "pos_rubi": [
+   {
+    "say": "DLG_X_POST_RUBI",
+    "speaker": "SPK_RUBI"
+   },
+   {
+    "goto": "minas/rubi"
+   }
+  ],
+  "pos_garca": [
+   {
+    "say": "DLG_X_POST_GARCA",
+    "speaker": "SPK_GARCA"
+   },
+   {
+    "goto": "pantano/garca"
+   }
+  ],
+  "pos_ameia": [
+   {
+    "say": "DLG_X_POST_AMEIA",
+    "speaker": "SPK_AMEIA"
+   },
+   {
+    "goto": "ossorio/ameia"
+   }
+  ],
+  "pos_lareira": [
+   {
+    "say": "DLG_X_POST_LAREIRA",
+    "speaker": "SPK_LAREIRA"
+   },
+   {
+    "goto": "picos/lareira"
+   }
+  ],
+  "pos_moringa": [
+   {
+    "say": "DLG_X_POST_MORINGA",
+    "speaker": "SPK_MORINGA"
+   },
+   {
+    "goto": "deserto/moringa"
+   }
+  ],
+  "pos_anzol": [
+   {
+    "say": "DLG_X_POST_ANZOL",
+    "speaker": "SPK_ANZOL"
+   },
+   {
+    "goto": "vila_mare/anzol"
+   }
+  ],
+  "pos_toco": [
+   {
+    "say": "DLG_X_POST_TOCO",
+    "speaker": "SPK_TOCO"
+   },
+   {
+    "goto": "bosque/toco"
+   }
+  ],
+  "pos_cobre": [
+   {
+    "say": "DLG_X_POST_COBRE",
+    "speaker": "SPK_COBRE"
+   },
+   {
+    "goto": "minas/cobre"
+   }
+  ],
+  "pos_junco": [
+   {
+    "say": "DLG_X_POST_JUNCO",
+    "speaker": "SPK_JUNCO"
+   },
+   {
+    "goto": "pantano/junco"
+   }
+  ],
+  "pos_dobrao": [
+   {
+    "say": "DLG_X_POST_DOBRAO",
+    "speaker": "SPK_DOBRAO"
+   },
+   {
+    "goto": "ossorio/dobrao"
+   }
+  ],
+  "pos_cachecol": [
+   {
+    "say": "DLG_X_POST_CACHECOL",
+    "speaker": "SPK_CACHECOL"
+   },
+   {
+    "goto": "picos/cachecol"
+   }
+  ],
+  "pos_canela": [
+   {
+    "say": "DLG_X_POST_CANELA",
+    "speaker": "SPK_CANELA"
+   },
+   {
+    "goto": "deserto/canela"
+   }
+  ],
+  "pos_jurema": [
+   {
+    "say": "DLG_X_POST_JUREMA",
+    "speaker": "SPK_JUREMA"
+   }
+  ],
+  "pos_seu_remo": [
+   {
+    "say": "DLG_X_POST_SEU_REMO",
+    "speaker": "SPK_REMO"
+   }
+  ],
+  "pos_vo_concha": [
+   {
+    "say": "DLG_X_POST_VO_CONCHA",
+    "speaker": "SPK_CONCHA"
+   }
+  ],
+  "pos_irmao_galho": [
+   {
+    "say": "DLG_X_POST_IRMAO_GALHO",
+    "speaker": "SPK_GALHO"
+   }
+  ],
+  "pos_pai_musgo": [
+   {
+    "say": "DLG_X_POST_PAI_MUSGO",
+    "speaker": "SPK_MUSGO"
+   }
+  ],
+  "pos_bigorna": [
+   {
+    "say": "DLG_X_POST_BIGORNA",
+    "speaker": "SPK_BIGORNA"
+   }
+  ],
+  "pos_viseira": [
+   {
+    "say": "DLG_X_POST_VISEIRA",
+    "speaker": "SPK_VISEIRA"
+   }
+  ],
+  "pos_tamara": [
+   {
+    "say": "DLG_X_POST_TAMARA",
+    "speaker": "SPK_TAMARA"
+   }
+  ],
+  "pos_agata": [
+   {
+    "say": "DLG_X_POST_AGATA",
+    "speaker": "SPK_AGATA"
+   }
+  ],
+  "pos_bagre": [
+   {
+    "say": "DLG_X_POST_BAGRE",
+    "speaker": "SPK_BAGRE"
+   }
+  ],
+  "pos_lamina": [
+   {
+    "say": "DLG_X_POST_LAMINA",
+    "speaker": "SPK_LAMINA"
+   }
+  ],
+  "pos_batuque": [
+   {
+    "say": "DLG_X_POST_BATUQUE",
+    "speaker": "SPK_BATUQUE"
+   }
+  ],
+  "pos_bras_depois": [
+   {
+    "say": "DLG_X_POST_BRAS_DEPOIS",
+    "speaker": "SPK_BRAS"
+   }
+  ],
+  "pos_bloqueio": [
+   {
+    "say": "DLG_X_POST_BLOQUEIO",
+    "speaker": "SPK_BLOQUEIO"
+   }
+  ],
+  "pos_fel": [
+   {
+    "say": "DLG_X_POST_FEL",
+    "speaker": "SPK_FEL"
+   }
+  ],
+  "pos_grade": [
+   {
+    "say": "DLG_X_POST_GRADE",
+    "speaker": "SPK_GRADE"
+   }
+  ],
+  "pos_pingente": [
+   {
+    "say": "DLG_X_POST_PINGENTE",
+    "speaker": "SPK_PINGENTE"
+   }
+  ],
+  "pos_sandalo": [
+   {
+    "say": "DLG_X_POST_SANDALO",
+    "speaker": "SPK_SANDALO"
+   }
+  ],
+  "obj_tr_portrait1": [
+   {
+    "say": "OBJ_X_TR_PORTRAIT1_0"
+   }
+  ],
+  "obj_tr_portrait2": [
+   {
+    "say": "OBJ_X_TR_PORTRAIT2_0"
+   }
+  ],
+  "obj_tr_throne": [
+   {
+    "say": "OBJ_X_TR_THRONE_0"
+   }
+  ],
+  "obj_mu_duna": [
+   {
+    "say": "OBJ_X_MU_DUNA_0"
+   }
+  ],
+  "obj_mu_king": [
+   {
+    "say": "OBJ_X_MU_KING_0"
+   }
+  ],
+  "obj_mu_map": [
+   {
+    "say": "OBJ_X_MU_MAP_0"
+   }
+  ]
+ }
+}

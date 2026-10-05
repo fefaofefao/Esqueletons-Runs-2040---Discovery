@@ -1,0 +1,1086 @@
+{
+ "_comment": "Gerado por tools/maps/castelo.py (fonte única do roteiro).",
+ "dialogs": {
+  "chegada_portao": [
+   {
+    "say": "DLG_C_ARR_P_T1",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "say": "DLG_C_ARR_P_T2",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "say": "DLG_C_ARR_P_N",
+    "if": "partner_taro"
+   },
+   {
+    "say": "DLG_C_ARR_P_T3",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "say": "DLG_C_ARR_P_T4",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "say": "DLG_C_ARR_P_R1",
+    "speaker": "SPK_TARO",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_C_ARR_P_R2",
+    "speaker": "SPK_TARO",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_C_ARR_P_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_C_ARR_P_R3",
+    "speaker": "SPK_TARO",
+    "if": "partner_lia"
+   },
+   {
+    "set_flag": "portao_visto",
+    "value": true
+   }
+  ],
+  "taro_portao": [
+   {
+    "say": "DLG_C_TARO_WAIT",
+    "speaker": "SPK_TARO"
+   }
+  ],
+  "guardas": [
+   {
+    "say": "DLG_C_GUARDS_1"
+   },
+   {
+    "say": "DLG_C_GUARDS_2",
+    "speaker": "SPK_GUARDAS"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_GUARDAS",
+    "enemies": [
+     [
+      "grumete_3",
+      88
+     ],
+     [
+      "grumete_3",
+      87
+     ]
+    ],
+    "reward": 1200,
+    "win_flag": "pais_beaten"
+   },
+   {
+    "say": "DLG_C_GUARDS_3"
+   },
+   {
+    "say": "DLG_C_GUARDS_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "action": "hide_npc",
+    "id": "pai_taro"
+   },
+   {
+    "action": "hide_npc",
+    "id": "mae_taro"
+   }
+  ],
+  "calico_aliado": [
+   {
+    "say": "DLG_C_CAL_1",
+    "speaker": "SPK_CALICO"
+   },
+   {
+    "say": "DLG_C_CAL_2",
+    "speaker": "SPK_CALICO"
+   },
+   {
+    "action": "heal"
+   }
+  ],
+  "ebano": [
+   {
+    "say": "DLG_C_EBANO_1",
+    "speaker": "SPK_EBANO"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_EBANO",
+    "enemies": [
+     [
+      "sentinela_3",
+      86
+     ],
+     [
+      "ferreiro_3",
+      86
+     ]
+    ],
+    "reward": 1000,
+    "win_flag": "ebano_beaten"
+   },
+   {
+    "say": "DLG_C_EBANO_2",
+    "speaker": "SPK_EBANO"
+   }
+  ],
+  "ebano_depois": [
+   {
+    "say": "DLG_C_EBANO_2",
+    "speaker": "SPK_EBANO"
+   }
+  ],
+  "arauto": [
+   {
+    "say": "DLG_C_ARAUTO_1",
+    "speaker": "SPK_ARAUTO"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_ARAUTO",
+    "enemies": [
+     [
+      "escriba_3",
+      86
+     ],
+     [
+      "domador_escorpioes_3",
+      86
+     ]
+    ],
+    "reward": 1000,
+    "win_flag": "arauto_beaten"
+   },
+   {
+    "say": "DLG_C_ARAUTO_2",
+    "speaker": "SPK_ARAUTO"
+   }
+  ],
+  "arauto_depois": [
+   {
+    "say": "DLG_C_ARAUTO_2",
+    "speaker": "SPK_ARAUTO"
+   }
+  ],
+  "tempero": [
+   {
+    "say": "DLG_C_TEMPERO_1",
+    "speaker": "SPK_TEMPERO"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_TEMPERO",
+    "enemies": [
+     [
+      "chazeiro_3",
+      87
+     ],
+     [
+      "domador_escorpioes_3",
+      86
+     ]
+    ],
+    "reward": 1050,
+    "win_flag": "tempero_beaten",
+    "items": [
+     [
+      "pocao_g",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_C_TEMPERO_2",
+    "speaker": "SPK_TEMPERO"
+   }
+  ],
+  "tempero_depois": [
+   {
+    "say": "DLG_C_TEMPERO_2",
+    "speaker": "SPK_TEMPERO"
+   }
+  ],
+  "fonte": [
+   {
+    "say": "OBJ_C_FOUNTAIN"
+   },
+   {
+    "action": "heal"
+   },
+   {
+    "action": "respawn"
+   }
+  ],
+  "degustor": [
+   {
+    "say": "DLG_C_DEG_1",
+    "speaker": "SPK_DEGUSTOR"
+   },
+   {
+    "say": "DLG_C_DEG_2",
+    "speaker": "SPK_DEGUSTOR"
+   },
+   {
+    "action": "battle",
+    "kind": "boss",
+    "tamer_key": "BTL_TAMER_DEGUSTOR",
+    "enemies": [
+     [
+      "degustor",
+      90
+     ],
+     [
+      "sentinela_3",
+      89
+     ],
+     [
+      "escriba_3",
+      90
+     ],
+     [
+      "chazeiro_3",
+      89
+     ]
+    ],
+    "reward": 2500,
+    "win_flag": "degustor_beaten"
+   },
+   {
+    "say": "DLG_C_DEG_WIN",
+    "speaker": "SPK_DEGUSTOR"
+   },
+   {
+    "say": "DLG_C_DEG_AFTER",
+    "speaker": "SPK_DEGUSTOR"
+   },
+   {
+    "action": "refresh_map"
+   }
+  ],
+  "degustor_depois": [
+   {
+    "say": "DLG_C_DEG_AFTER",
+    "speaker": "SPK_DEGUSTOR"
+   }
+  ],
+  "degustor_livre": [
+   {
+    "say": "DLG_C_DEG_FREE",
+    "choice": [
+     {
+      "text": "OPT_C_TASTE",
+      "goto": "castelo/degustor_luta"
+     },
+     {
+      "text": "OPT_P_NOT_NOW"
+     }
+    ],
+    "speaker": "SPK_DEGUSTOR"
+   }
+  ],
+  "degustor_luta": [
+   {
+    "action": "battle",
+    "kind": "wild",
+    "tamer_key": "",
+    "enemies": [
+     [
+      "degustor",
+      88
+     ]
+    ],
+    "reward": 0
+   }
+  ],
+  "trono": [
+   {
+    "say": "DLG_C_T_0"
+   },
+   {
+    "say": "DLG_C_T_L1",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_C_T_LN",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_C_T_L2",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_C_T_TN",
+    "if": "partner_taro"
+   },
+   {
+    "say": "DLG_C_T_T1",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "trono_iluminado",
+    "value": true
+   },
+   {
+    "say": "DLG_C_REI_1",
+    "speaker": "SPK_REI"
+   },
+   {
+    "say": "DLG_C_REI_2",
+    "speaker": "SPK_REI"
+   },
+   {
+    "say": "DLG_C_REI_3"
+   },
+   {
+    "goto": "castelo/trono_coroa"
+   }
+  ],
+  "trono_de_novo": [
+   {
+    "say": "DLG_C_REI_AGAIN",
+    "speaker": "SPK_REI"
+   },
+   {
+    "goto": "castelo/trono_coroa"
+   }
+  ],
+  "trono_coroa": [
+   {
+    "say": "DLG_C_REI_4",
+    "choice": [
+     {
+      "text": "OPT_C_CROWN",
+      "goto": "castelo/coroa_tentar"
+     },
+     {
+      "text": "OPT_C_REFUSE",
+      "goto": "castelo/recusar"
+     }
+    ],
+    "speaker": "SPK_REI"
+   }
+  ],
+  "coroa_tentar": [
+   {
+    "say": "DLG_C_TRY_0"
+   },
+   {
+    "say": "DLG_C_TRY_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_C_TRY_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "say": "DLG_C_TRY_1"
+   },
+   {
+    "goto": "castelo/recusar"
+   }
+  ],
+  "recusar": [
+   {
+    "say": "DLG_C_REI_5",
+    "speaker": "SPK_REI"
+   },
+   {
+    "say": "DLG_C_REI_6",
+    "speaker": "SPK_REI"
+   },
+   {
+    "set_flag": "rei_falou",
+    "value": true
+   },
+   {
+    "action": "battle",
+    "kind": "boss",
+    "tamer_key": "BTL_TAMER_REI",
+    "enemies": [
+     [
+      "rei_esqueleto",
+      120
+     ],
+     [
+      "jardineiro_lirios_3",
+      78
+     ]
+    ],
+    "reward": 0,
+    "win_flag": "rei_beaten"
+   },
+   {
+    "say": "DLG_C_REI_DOWN"
+   },
+   {
+    "say": "DLG_C_REI_DOWN2",
+    "speaker": "SPK_REI"
+   },
+   {
+    "goto": "castelo/final_a",
+    "if": "has_carta_alva",
+    "if_count": {
+     "flags": [
+      "red_minas",
+      "red_pantano",
+      "red_ossorio"
+     ],
+     "min": 2
+    }
+   },
+   {
+    "goto": "castelo/final_b"
+   }
+  ],
+  "final_a": [
+   {
+    "say": "DLG_C_A_1"
+   },
+   {
+    "action": "take_item",
+    "item": "carta_alva",
+    "n": 1
+   },
+   {
+    "say": "DLG_C_A_2",
+    "speaker": "SPK_REI"
+   },
+   {
+    "say": "DLG_C_A_3"
+   },
+   {
+    "say": "DLG_C_A_4"
+   },
+   {
+    "say": "DLG_C_A_5",
+    "speaker": "SPK_REI"
+   },
+   {
+    "say": "DLG_C_A_RM",
+    "speaker": "SPK_REI",
+    "if": "red_minas"
+   },
+   {
+    "say": "DLG_C_A_RP",
+    "speaker": "SPK_REI",
+    "if": "red_pantano"
+   },
+   {
+    "say": "DLG_C_A_RO",
+    "speaker": "SPK_REI",
+    "if": "red_ossorio"
+   },
+   {
+    "say": "DLG_C_A_6",
+    "speaker": "SPK_REI"
+   },
+   {
+    "say": "DLG_C_A_7"
+   },
+   {
+    "say": "DLG_C_A_8",
+    "speaker": "SPK_REI"
+   },
+   {
+    "action": "sfx",
+    "name": "golden"
+   },
+   {
+    "say": "DLG_C_A_9"
+   },
+   {
+    "say": "DLG_C_A_10"
+   },
+   {
+    "say": "DLG_C_BYE_RAM",
+    "speaker": "SPK_RAMALHO"
+   },
+   {
+    "say": "DLG_C_BYE_FOR",
+    "speaker": "SPK_FORNALHA"
+   },
+   {
+    "say": "DLG_C_BYE_MUS",
+    "speaker": "SPK_MUSGA"
+   },
+   {
+    "say": "DLG_C_BYE_CAL",
+    "speaker": "SPK_CALICO"
+   },
+   {
+    "say": "DLG_C_BYE_ALV",
+    "speaker": "SPK_ALVA"
+   },
+   {
+    "say": "DLG_C_BYE_DUN",
+    "speaker": "SPK_DUNA"
+   },
+   {
+    "say": "DLG_C_A_11"
+   },
+   {
+    "say": "DLG_C_A_12",
+    "speaker": "SPK_REI"
+   },
+   {
+    "say": "DLG_C_A_13",
+    "speaker": "SPK_REI"
+   },
+   {
+    "set_flag": "final_a",
+    "value": true
+   },
+   {
+    "goto": "castelo/rei_entra"
+   }
+  ],
+  "final_b": [
+   {
+    "say": "DLG_C_B_1"
+   },
+   {
+    "action": "sfx",
+    "name": "grow_flash"
+   },
+   {
+    "say": "DLG_C_B_2"
+   },
+   {
+    "say": "DLG_C_B_3",
+    "speaker": "SPK_REI"
+   },
+   {
+    "say": "DLG_C_B_4"
+   },
+   {
+    "say": "DLG_C_B_5",
+    "speaker": "SPK_REI"
+   },
+   {
+    "say": "DLG_C_B_6"
+   },
+   {
+    "say": "DLG_C_B_7",
+    "speaker": "SPK_REI"
+   },
+   {
+    "say": "DLG_C_B_8"
+   },
+   {
+    "set_flag": "final_b",
+    "value": true
+   },
+   {
+    "goto": "castelo/rei_entra"
+   }
+  ],
+  "rei_entra": [
+   {
+    "say": "DLG_C_KING_MARK"
+   },
+   {
+    "action": "marker",
+    "species": "rei_esqueleto",
+    "amount": 100
+   },
+   {
+    "action": "give_monster",
+    "species": "rei_esqueleto",
+    "age": 100
+   },
+   {
+    "set_flag": "rei_recrutado",
+    "value": true
+   },
+   {
+    "action": "hide_npc",
+    "id": "rei"
+   },
+   {
+    "goto": "castelo/final_comum"
+   }
+  ],
+  "final_comum": [
+   {
+    "say": "DLG_C_E_1"
+   },
+   {
+    "say": "DLG_C_E_PAI",
+    "speaker": "SPK_PAI_TARO"
+   },
+   {
+    "say": "DLG_C_E_MAE",
+    "speaker": "SPK_MAE_TARO"
+   },
+   {
+    "say": "DLG_C_E_T1",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "say": "DLG_C_E_PAI2",
+    "speaker": "SPK_PAI_TARO"
+   },
+   {
+    "say": "DLG_C_E_T2",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_C_E_T3",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_C_E_L1",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_C_E_L2",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_C_E_TL",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "action": "fade",
+    "out": true
+   },
+   {
+    "action": "wait",
+    "s": 0.6
+   },
+   {
+    "action": "warp",
+    "map": "museu_2040",
+    "x": 7,
+    "y": 6,
+    "facing": "up",
+    "hide_player": true
+   },
+   {
+    "say": "DLG_C_M_1"
+   },
+   {
+    "say": "DLG_C_M_2"
+   },
+   {
+    "say": "DLG_C_M_3"
+   },
+   {
+    "say": "DLG_C_M_4"
+   },
+   {
+    "set_flag": "game_cleared",
+    "value": true
+   },
+   {
+    "action": "credits"
+   },
+   {
+    "action": "heal_all"
+   },
+   {
+    "action": "warp",
+    "map": "praia_despertar",
+    "x": 10,
+    "y": 17,
+    "facing": "left"
+   }
+  ],
+  "vitrine": [
+   {
+    "say": "OBJ_C_VITRINE"
+   }
+  ],
+  "epilogo_praia": [
+   {
+    "say": "DLG_C_EP_0"
+   },
+   {
+    "say": "DLG_C_EP_B1",
+    "speaker": "SPK_BENTO"
+   },
+   {
+    "say": "DLG_C_EP_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_C_EP_B2",
+    "speaker": "SPK_BENTO",
+    "if": "partner_taro"
+   },
+   {
+    "say": "DLG_C_EP_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "say": "DLG_C_EP_KA",
+    "speaker": "SPK_REI",
+    "if": "final_a"
+   },
+   {
+    "say": "DLG_C_EP_KB",
+    "if": "final_b"
+   },
+   {
+    "say": "DLG_C_EP_B3",
+    "speaker": "SPK_BENTO"
+   },
+   {
+    "say": "DLG_C_EP_B4",
+    "speaker": "SPK_BENTO"
+   },
+   {
+    "set_flag": "epilogo_visto",
+    "value": true
+   },
+   {
+    "action": "respawn"
+   }
+  ],
+  "bento_final": [
+   {
+    "say": "DLG_C_BENTO_POST",
+    "speaker": "SPK_BENTO"
+   },
+   {
+    "say": "DLG_C_EP_B3",
+    "speaker": "SPK_BENTO"
+   }
+  ],
+  "farol_aceso": [
+   {
+    "say": "OBJ_C_LIGHTHOUSE_LIT"
+   }
+  ],
+  "eco_ramalho": [
+   {
+    "say": "DLG_C_ECO_RAMALHO",
+    "choice": [
+     {
+      "text": "OPT_P_FIGHT",
+      "goto": "castelo/eco_ramalho_luta"
+     },
+     {
+      "text": "OPT_P_NOT_NOW"
+     }
+    ],
+    "speaker": "SPK_RAMALHO"
+   }
+  ],
+  "eco_ramalho_luta": [
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_ECO_RAMALHO",
+    "enemies": [
+     [
+      "lenhador_3",
+      95
+     ],
+     [
+      "flautista_3",
+      95
+     ],
+     [
+      "herborista_3",
+      95
+     ]
+    ],
+    "reward": 3000,
+    "win_flag": "eco_ramalho_vencido",
+    "items": [
+     [
+      "pocao_g",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_C_ECO_BYE"
+   }
+  ],
+  "eco_fornalha": [
+   {
+    "say": "DLG_C_ECO_FORNALHA",
+    "choice": [
+     {
+      "text": "OPT_P_FIGHT",
+      "goto": "castelo/eco_fornalha_luta"
+     },
+     {
+      "text": "OPT_P_NOT_NOW"
+     }
+    ],
+    "speaker": "SPK_FORNALHA"
+   }
+  ],
+  "eco_fornalha_luta": [
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_ECO_FORNALHA",
+    "enemies": [
+     [
+      "mineiro_3",
+      95
+     ],
+     [
+      "ferreiro_3",
+      95
+     ],
+     [
+      "gasista_3",
+      96
+     ],
+     [
+      "aguadeiro_3",
+      95
+     ]
+    ],
+    "reward": 3000,
+    "win_flag": "eco_fornalha_vencido",
+    "items": [
+     [
+      "pocao_g",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_C_ECO_BYE"
+   }
+  ],
+  "eco_musga": [
+   {
+    "say": "DLG_C_ECO_MUSGA",
+    "choice": [
+     {
+      "text": "OPT_P_FIGHT",
+      "goto": "castelo/eco_musga_luta"
+     },
+     {
+      "text": "OPT_P_NOT_NOW"
+     }
+    ],
+    "speaker": "SPK_MUSGA"
+   }
+  ],
+  "eco_musga_luta": [
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_ECO_MUSGA",
+    "enemies": [
+     [
+      "lavadeira_3",
+      96
+     ],
+     [
+      "palafiteiro_3",
+      95
+     ],
+     [
+      "jardineiro_lirios_3",
+      95
+     ],
+     [
+      "cogumeleiro_3",
+      96
+     ]
+    ],
+    "reward": 3000,
+    "win_flag": "eco_musga_vencido",
+    "items": [
+     [
+      "pocao_g",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_C_ECO_BYE"
+   }
+  ],
+  "eco_calico": [
+   {
+    "say": "DLG_C_ECO_CALICO",
+    "choice": [
+     {
+      "text": "OPT_P_FIGHT",
+      "goto": "castelo/eco_calico_luta"
+     },
+     {
+      "text": "OPT_P_NOT_NOW"
+     }
+    ],
+    "speaker": "SPK_CALICO"
+   }
+  ],
+  "eco_calico_luta": [
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_ECO_CALICO",
+    "enemies": [
+     [
+      "sentinela_3",
+      97
+     ],
+     [
+      "escriba_3",
+      96
+     ],
+     [
+      "sineiro_3",
+      96
+     ],
+     [
+      "lenhador_3",
+      97
+     ]
+    ],
+    "reward": 3000,
+    "win_flag": "eco_calico_vencido",
+    "items": [
+     [
+      "pocao_g",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_C_ECO_BYE"
+   }
+  ],
+  "eco_alva": [
+   {
+    "say": "DLG_C_ECO_ALVA",
+    "choice": [
+     {
+      "text": "OPT_P_FIGHT",
+      "goto": "castelo/eco_alva_luta"
+     },
+     {
+      "text": "OPT_P_NOT_NOW"
+     }
+    ],
+    "speaker": "SPK_ALVA"
+   }
+  ],
+  "eco_alva_luta": [
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_ECO_ALVA",
+    "enemies": [
+     [
+      "carregador_3",
+      98
+     ],
+     [
+      "escultor_3",
+      97
+     ],
+     [
+      "chazeiro_3",
+      98
+     ],
+     [
+      "mineiro_3",
+      97
+     ]
+    ],
+    "reward": 3000,
+    "win_flag": "eco_alva_vencido",
+    "items": [
+     [
+      "pocao_g",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_C_ECO_BYE"
+   }
+  ],
+  "eco_duna": [
+   {
+    "say": "DLG_C_ECO_DUNA",
+    "choice": [
+     {
+      "text": "OPT_P_FIGHT",
+      "goto": "castelo/eco_duna_luta"
+     },
+     {
+      "text": "OPT_P_NOT_NOW"
+     }
+    ],
+    "speaker": "SPK_DUNA"
+   }
+  ],
+  "eco_duna_luta": [
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_ECO_DUNA",
+    "enemies": [
+     [
+      "domador_escorpioes_3",
+      99
+     ],
+     [
+      "cartografo_3",
+      99
+     ],
+     [
+      "tamborileiro_3",
+      100
+     ],
+     [
+      "palafiteiro_3",
+      99
+     ]
+    ],
+    "reward": 3000,
+    "win_flag": "eco_duna_vencido",
+    "items": [
+     [
+      "pocao_g",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_C_ECO_BYE"
+   }
+  ]
+ }
+}

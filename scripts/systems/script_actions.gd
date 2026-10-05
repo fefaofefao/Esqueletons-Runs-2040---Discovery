@@ -14,6 +14,7 @@ extends RefCounted
 ##   fade {out}                escurece/clareia a tela · wait {s}
 ##   credits                   rola os créditos (e volta ao mapa)
 ##   heal_all                  cura time e Rancho
+##   warp {map,x,y,facing,hide_player}  troca de mapa no meio do roteiro
 ## run() devolve false se o roteiro deve parar (ex.: derrota na batalha).
 
 
@@ -101,6 +102,12 @@ static func run(n: Dictionary) -> bool:
 			Audio.sfx("recruit")
 			await Game.show_message("RECRUIT_JOINED" if where == "party" else "RECRUIT_TO_RANCH", {"name": m2.display_name()})
 			Game.autosave()
+		"warp":
+			# leva o jogador a outro mapa; "hide_player" esconde o protagonista
+			# (cenas sem ele, como o epílogo de 2040)
+			await Game.warp(str(n.map), Vector2i(int(n.get("x", -1)), int(n.get("y", -1))), str(n.get("facing", "down")))
+			if Game.world and Game.world.player:
+				Game.world.player.visible = not bool(n.get("hide_player", false))
 		"refresh_map":
 			if Game.world and Game.world.player:
 				await Game.warp(Game.world.map_id, Game.world.player.cell, Game.world.player.facing)

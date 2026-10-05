@@ -42,6 +42,12 @@
    "type": "table",
    "x": 7,
    "y": 5
+  },
+  {
+   "type": "bookshelf",
+   "x": 3,
+   "y": 6,
+   "dialog": "extras/livro_musga"
   }
  ],
  "npcs": [

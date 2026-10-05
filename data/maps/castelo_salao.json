@@ -1,0 +1,213 @@
+{
+ "id": "castelo_salao",
+ "region": "castelo",
+ "name_key": "MAP_CASTELO_SALAO",
+ "tileset": "overworld",
+ "legend": {
+  "W": "castle_wall",
+  "c": "castle_floor",
+  "p": "carpet"
+ },
+ "ground": [
+  "WWWWWWWWWWWWWWppWWWWWWWWWWWWWW",
+  "WWWWWWWWWWWWWWppWWWWWWWWWWWWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWcccccccccccppcccccccccccWWW",
+  "WWWWWWWWWWWWWWppWWWWWWWWWWWWWW",
+  "WWWWWWWWWWWWWWppWWWWWWWWWWWWWW"
+ ],
+ "spawn": {
+  "x": 14,
+  "y": 22,
+  "facing": "up"
+ },
+ "tint": [
+  0.72,
+  0.66,
+  0.8
+ ],
+ "props": [
+  {
+   "type": "pillar",
+   "x": 12,
+   "y": 6
+  },
+  {
+   "type": "pillar",
+   "x": 17,
+   "y": 6
+  },
+  {
+   "type": "pillar",
+   "x": 12,
+   "y": 13
+  },
+  {
+   "type": "pillar",
+   "x": 17,
+   "y": 13
+  },
+  {
+   "type": "pillar",
+   "x": 12,
+   "y": 19
+  },
+  {
+   "type": "pillar",
+   "x": 17,
+   "y": 19
+  },
+  {
+   "type": "candelabra",
+   "x": 4,
+   "y": 3
+  },
+  {
+   "type": "candelabra",
+   "x": 25,
+   "y": 3
+  },
+  {
+   "type": "candelabra",
+   "x": 4,
+   "y": 12
+  },
+  {
+   "type": "candelabra",
+   "x": 25,
+   "y": 12
+  },
+  {
+   "type": "fountain",
+   "x": 6,
+   "y": 20,
+   "dialog": "castelo/fonte"
+  },
+  {
+   "type": "table",
+   "x": 22,
+   "y": 4
+  },
+  {
+   "type": "barrel",
+   "x": 25,
+   "y": 6
+  },
+  {
+   "type": "kettle",
+   "x": 20,
+   "y": 4
+  }
+ ],
+ "npcs": [
+  {
+   "id": "ebano",
+   "x": 11,
+   "y": 16,
+   "facing": "right"
+  },
+  {
+   "id": "arauto",
+   "x": 18,
+   "y": 10,
+   "facing": "left"
+  },
+  {
+   "id": "tempero",
+   "x": 20,
+   "y": 6,
+   "facing": "left"
+  },
+  {
+   "id": "degustor",
+   "x": 14,
+   "y": 3,
+   "facing": "down",
+   "if_not": "degustor_beaten"
+  },
+  {
+   "id": "degustor_depois",
+   "x": 17,
+   "y": 3,
+   "facing": "left",
+   "if": "degustor_beaten"
+  }
+ ],
+ "warps": [
+  {
+   "x": 14,
+   "y": 23,
+   "to": "castelo_portao",
+   "tx": 19,
+   "ty": 9,
+   "facing": "down",
+   "sfx": "door"
+  },
+  {
+   "x": 15,
+   "y": 23,
+   "to": "castelo_portao",
+   "tx": 20,
+   "ty": 9,
+   "facing": "down",
+   "sfx": "door"
+  },
+  {
+   "x": 14,
+   "y": 0,
+   "to": "sala_trono",
+   "tx": 9,
+   "ty": 14,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 15,
+   "y": 0,
+   "to": "sala_trono",
+   "tx": 10,
+   "ty": 14,
+   "facing": "up",
+   "sfx": "door"
+  }
+ ],
+ "spawns": [
+  {
+   "id": "c_leste",
+   "table": "castelo_leste",
+   "x": 22,
+   "y": 15,
+   "radius": 3,
+   "count": 2
+  },
+  {
+   "id": "c_oeste",
+   "table": "castelo_oeste",
+   "x": 7,
+   "y": 8,
+   "radius": 2,
+   "count": 1
+  }
+ ],
+ "ambient": [
+  "embers"
+ ]
+}

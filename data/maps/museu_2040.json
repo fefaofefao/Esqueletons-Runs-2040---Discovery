@@ -1,0 +1,75 @@
+{
+ "id": "museu_2040",
+ "region": "castelo",
+ "name_key": "MAP_MUSEU",
+ "tileset": "overworld",
+ "legend": {
+  "T": "wall_top",
+  "w": "wall",
+  "n": "wall_window",
+  ".": "floor",
+  "m": "mat"
+ },
+ "ground": [
+  "TTTTTTTTTTTTTT",
+  "TwwnwwwwwwnwwT",
+  "T............T",
+  "T............T",
+  "T............T",
+  "T............T",
+  "T............T",
+  "T............T",
+  "TTTTTTTTTTTTTT"
+ ],
+ "spawn": {
+  "x": 7,
+  "y": 6,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "vitrine_empty",
+   "x": 7,
+   "y": 3,
+   "dialog": "castelo/vitrine"
+  },
+  {
+   "type": "portrait",
+   "x": 3,
+   "y": 1,
+   "dialog": "extras/obj_mu_duna"
+  },
+  {
+   "type": "portrait",
+   "x": 11,
+   "y": 1,
+   "dialog": "extras/obj_mu_king"
+  },
+  {
+   "type": "rug",
+   "x": 7,
+   "y": 6
+  },
+  {
+   "type": "plant",
+   "x": 1,
+   "y": 7
+  },
+  {
+   "type": "plant",
+   "x": 12,
+   "y": 7
+  },
+  {
+   "type": "map_board",
+   "x": 4,
+   "y": 4,
+   "dialog": "extras/obj_mu_map"
+  }
+ ],
+ "npcs": [],
+ "warps": [],
+ "ambient": [
+  "dust_motes"
+ ]
+}

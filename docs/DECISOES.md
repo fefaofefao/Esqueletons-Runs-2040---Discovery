@@ -178,3 +178,11 @@ Registro das escolhas feitas sem consulta (AGENTS.md, seção A). Cada item diz 
 - **Saídas com condição** (`if` no warp + `locked_message`) em vez de NPC bloqueando: o mundo abre por história sem paredes invisíveis.
 - **Escolha 2 sem "certo e errado" óbvio:** quebrar dá um único recrutável (Vagonauta) e encarece a loja; negociar dá atalho, desconto e Redenção. Os dois têm ganho.
 - **Clima por região** com uma única função de partículas (cinza, névoa, neve, areia, brasas), limitada pela área do mapa para manter 60 FPS.
+
+## Fases 4d–4h — Regiões, finais e pós-jogo
+- **Escolhas com custo dos dois lados.** Doar antídotos (escolha 3) só é possível se o jogador os tiver: a loja do Brejo não vende antídoto (a Musga compra todos), então a escolha pesa de verdade. Contar o registro (escolha 4) dá Redenção mas cria batalhas extras na Rota 5.
+- **A carta da Alva pode ser aceita depois.** Recusar não fecha o Final A para sempre; o jogador pode voltar ao Jardim de Gelo. A escolha continua sendo do jogador, sem punição por curiosidade.
+- **Colocar a coroa não é um terceiro final.** A especificação pede 2 finais; tentar colocar a coroa leva o parceiro a impedir, o que reforça o arco dele e evita um "game over" narrativo.
+- **Guardiões viram "ecos" no pós-jogo.** Nos dois finais a família descansa ou some; a revanche pedida pela seção 6 acontece com os ecos deles, coerente com a coroa do eco e o Deserto dos Ecos.
+- **O Rei entra com idade 100** (a idade máxima do jogo), não 120: o 120 é a idade dele como chefe.
+- **Texto transversal numa fonte só** (`extras.py`): reações do mundo, cartas do Bento e pós-jogo são acrescentadas às listas de diálogo dos NPCs, sem editar as fontes de cada região. `build_all.py` garante a ordem.

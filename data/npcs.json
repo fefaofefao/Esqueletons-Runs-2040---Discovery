@@ -40,6 +40,15 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_marola"
+    },
+    {
+     "if": "bras_beaten",
+     "if_not": "game_cleared",
+     "dialog": "extras/reage_marola"
+    },
+    {
      "dialog": "vila_mare/marola"
     }
    ]
@@ -57,6 +66,15 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_anzol"
+    },
+    {
+     "if": "bras_beaten",
+     "if_not": "game_cleared",
+     "dialog": "extras/reage_anzol"
+    },
     {
      "dialog": "vila_mare/anzol"
     }
@@ -76,6 +94,11 @@
    ],
    "dialog": [
     {
+     "if": "bras_beaten",
+     "if_not": "game_cleared",
+     "dialog": "extras/reage_pipa"
+    },
+    {
      "dialog": "vila_mare/pipa"
     }
    ]
@@ -94,6 +117,15 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_cascalho"
+    },
+    {
+     "if": "bras_beaten",
+     "if_not": "game_cleared",
+     "dialog": "extras/reage_cascalho"
+    },
+    {
      "dialog": "vila_mare/cascalho"
     }
    ]
@@ -110,6 +142,10 @@
     "down"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_jurema"
+    },
     {
      "if": "jurema_done",
      "dialog": "vila_mare/jurema_depois"
@@ -167,6 +203,10 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_seu_remo"
+    },
+    {
      "if": "remo_beaten",
      "dialog": "vila_mare/remo_depois"
     },
@@ -192,6 +232,10 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_vo_concha"
+    },
     {
      "if": "concha_beaten",
      "dialog": "vila_mare/concha_depois"
@@ -271,6 +315,10 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_bras_depois"
+    },
+    {
      "dialog": "vila_mare/bras_depois"
     }
    ]
@@ -288,6 +336,11 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "ramalho_beaten",
+     "if_not": "game_cleared",
+     "dialog": "extras/reage_lenhador_velho"
+    },
     {
      "dialog": "bosque/velho"
     }
@@ -385,6 +438,20 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_tilia"
+    },
+    {
+     "if": "ramalho_beaten",
+     "if_not": "carta_bento_1",
+     "dialog": "extras/carta_1"
+    },
+    {
+     "if": "ramalho_beaten",
+     "if_not": "game_cleared",
+     "dialog": "extras/reage_tilia"
+    },
+    {
      "dialog": "bosque/tilia"
     }
    ]
@@ -402,6 +469,15 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_toco"
+    },
+    {
+     "if": "ramalho_beaten",
+     "if_not": "game_cleared",
+     "dialog": "extras/reage_toco"
+    },
     {
      "dialog": "bosque/toco"
     }
@@ -451,6 +527,11 @@
    ],
    "dialog": [
     {
+     "if": "ramalho_beaten",
+     "if_not": "game_cleared",
+     "dialog": "extras/reage_graveto"
+    },
+    {
      "dialog": "bosque/graveto"
     }
    ]
@@ -468,6 +549,15 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_hera"
+    },
+    {
+     "if": "ramalho_beaten",
+     "if_not": "game_cleared",
+     "dialog": "extras/reage_hera"
+    },
     {
      "dialog": "bosque/hera"
     }
@@ -505,6 +595,10 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_irmao_galho"
+    },
+    {
      "if": "galho_beaten",
      "dialog": "bosque/galho_depois"
     },
@@ -530,6 +624,10 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_pai_musgo"
+    },
     {
      "if": "musgo_beaten",
      "dialog": "bosque/musgo_depois"
@@ -568,6 +666,10 @@
    "idle_fps": 2.0,
    "behavior": "stand",
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "castelo/eco_ramalho"
+    },
     {
      "dialog": "bosque/ramalho_depois"
     }
@@ -740,6 +842,15 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_rubi"
+    },
+    {
+     "if": "fornalha_beaten",
+     "if_not": "carta_bento_2",
+     "dialog": "extras/carta_2"
+    },
+    {
      "dialog": "minas/rubi"
     }
    ]
@@ -757,6 +868,10 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_cobre"
+    },
     {
      "dialog": "minas/cobre"
     }
@@ -824,6 +939,10 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_turmalina"
+    },
+    {
      "dialog": "minas/turmalina"
     }
    ]
@@ -872,6 +991,10 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_bigorna"
+    },
+    {
      "if": "bigorna_beaten",
      "dialog": "minas/bigorna_depois"
     },
@@ -897,6 +1020,10 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_agata"
+    },
     {
      "if": "agata_beaten",
      "dialog": "minas/agata_depois"
@@ -941,6 +1068,10 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_bloqueio"
+    },
     {
      "if": "bloqueio_beaten",
      "dialog": "minas/bloqueio_depois"
@@ -988,6 +1119,10 @@
    "idle_fps": 2.0,
    "behavior": "stand",
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "castelo/eco_fornalha"
+    },
     {
      "if_any": [
       "minas_quebrou",
@@ -1153,6 +1288,15 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_garca"
+    },
+    {
+     "if": "musga_beaten",
+     "if_not": "carta_bento_3",
+     "dialog": "extras/carta_3"
+    },
+    {
      "dialog": "pantano/garca"
     }
    ]
@@ -1170,6 +1314,10 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_junco"
+    },
     {
      "dialog": "pantano/junco"
     }
@@ -1206,6 +1354,10 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_sape"
+    },
     {
      "dialog": "pantano/sape"
     }
@@ -1299,6 +1451,10 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_bagre"
+    },
+    {
      "if": "bagre_beaten",
      "dialog": "pantano/bagre_depois"
     },
@@ -1364,6 +1520,10 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_fel"
+    },
+    {
      "if": "fel_beaten",
      "dialog": "pantano/fel_depois"
     },
@@ -1397,6 +1557,10 @@
    "idle_fps": 2.0,
    "behavior": "stand",
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "castelo/eco_musga"
+    },
     {
      "if": "musga_beaten",
      "dialog": "pantano/musga_depois"
@@ -1546,6 +1710,15 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_ameia"
+    },
+    {
+     "if": "calico_beaten",
+     "if_not": "carta_bento_4",
+     "dialog": "extras/carta_4"
+    },
+    {
      "dialog": "ossorio/ameia"
     }
    ]
@@ -1563,6 +1736,10 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_dobrao"
+    },
     {
      "dialog": "ossorio/dobrao"
     }
@@ -1599,6 +1776,10 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_brasao"
+    },
     {
      "dialog": "ossorio/brasao"
     }
@@ -1657,6 +1838,10 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_viseira"
+    },
     {
      "if": "viseira_beaten",
      "dialog": "ossorio/viseira_depois"
@@ -1723,6 +1908,10 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_grade"
+    },
+    {
      "if": "grade_beaten",
      "dialog": "ossorio/grade_depois"
     },
@@ -1756,6 +1945,10 @@
    "idle_fps": 2.0,
    "behavior": "stand",
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "castelo/eco_calico"
+    },
     {
      "if": "calico_beaten",
      "dialog": "ossorio/calico_depois"
@@ -1957,6 +2150,20 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_lareira"
+    },
+    {
+     "if": "alva_beaten",
+     "if_not": "carta_bento_5",
+     "dialog": "extras/carta_5"
+    },
+    {
+     "if": "eleicao_quest",
+     "if_not": "voto_lareira",
+     "dialog": "extras/voto_lareira"
+    },
+    {
      "dialog": "picos/lareira"
     }
    ]
@@ -1974,6 +2181,10 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_cachecol"
+    },
     {
      "dialog": "picos/cachecol"
     }
@@ -1993,6 +2204,26 @@
    ],
    "dialog": [
     {
+     "if": "eleicao_done",
+     "dialog": "extras/floq_depois"
+    },
+    {
+     "if_all": [
+      "voto_lareira",
+      "voto_pinhao",
+      "voto_degelo"
+     ],
+     "dialog": "extras/floq_ganhou"
+    },
+    {
+     "if": "eleicao_quest",
+     "dialog": "extras/floq_espera"
+    },
+    {
+     "if_not": "game_cleared",
+     "dialog": "extras/floq_pede"
+    },
+    {
      "dialog": "picos/floquinho"
     }
    ]
@@ -2011,6 +2242,15 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_pinhao"
+    },
+    {
+     "if": "eleicao_quest",
+     "if_not": "voto_pinhao",
+     "dialog": "extras/voto_pinhao"
+    },
+    {
      "dialog": "picos/pinhao"
     }
    ]
@@ -2028,6 +2268,11 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "eleicao_quest",
+     "if_not": "voto_degelo",
+     "dialog": "extras/voto_degelo"
+    },
     {
      "dialog": "picos/degelo"
     }
@@ -2076,6 +2321,10 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_lamina"
+    },
     {
      "if": "lamina_beaten",
      "dialog": "picos/lamina_depois"
@@ -2146,6 +2395,10 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_pingente"
+    },
+    {
      "if": "pingente_beaten",
      "dialog": "picos/pingente_depois"
     },
@@ -2166,6 +2419,10 @@
    "idle_fps": 2.0,
    "behavior": "stand",
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "castelo/eco_alva"
+    },
     {
      "if": "picos_carta",
      "dialog": "picos/alva_depois"
@@ -2315,6 +2572,15 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_moringa"
+    },
+    {
+     "if": "duna_beaten",
+     "if_not": "carta_bento_6",
+     "dialog": "extras/carta_6"
+    },
+    {
      "dialog": "deserto/moringa"
     }
    ]
@@ -2332,6 +2598,10 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_canela"
+    },
     {
      "dialog": "deserto/canela"
     }
@@ -2351,6 +2621,19 @@
    ],
    "dialog": [
     {
+     "if": "ritmo_done",
+     "dialog": "extras/grao_depois"
+    },
+    {
+     "if": "ritmo_aprendido",
+     "dialog": "extras/grao_feito"
+    },
+    {
+     "if": "duna_beaten",
+     "if_not": "ritmo_quest",
+     "dialog": "extras/grao_pede"
+    },
+    {
      "dialog": "deserto/grao"
     }
    ]
@@ -2368,6 +2651,10 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_miragem"
+    },
     {
      "dialog": "deserto/miragem"
     }
@@ -2420,6 +2707,10 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_tamara"
+    },
+    {
      "if": "tamara_beaten",
      "dialog": "deserto/tamara_depois"
     },
@@ -2446,6 +2737,15 @@
    ],
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "extras/pos_batuque"
+    },
+    {
+     "if": "ritmo_quest",
+     "if_not": "ritmo_aprendido",
+     "dialog": "extras/batuque_ritmo"
+    },
+    {
      "if": "batuque_beaten",
      "dialog": "deserto/batuque_depois"
     },
@@ -2471,6 +2771,10 @@
     "right"
    ],
    "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "extras/pos_sandalo"
+    },
     {
      "if": "sandalo_beaten",
      "dialog": "deserto/sandalo_depois"
@@ -2506,6 +2810,10 @@
    "behavior": "stand",
    "dialog": [
     {
+     "if": "game_cleared",
+     "dialog": "castelo/eco_duna"
+    },
+    {
      "if": "duna_beaten",
      "dialog": "deserto/duna_depois"
     },
@@ -2517,6 +2825,414 @@
     "vision": 3,
     "flag": "duna_beaten"
    }
+  },
+  "pai_taro": {
+   "name_key": "SPK_PAI_TARO",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_grumete_3.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "castelo/guardas"
+    }
+   ],
+   "tamer": {
+    "vision": 2,
+    "flag": "pais_beaten"
+   }
+  },
+  "mae_taro": {
+   "name_key": "SPK_MAE_TARO",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_grumete_3.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "castelo/guardas"
+    }
+   ],
+   "tamer": {
+    "vision": 2,
+    "flag": "pais_beaten"
+   }
+  },
+  "taro_portao": {
+   "name_key": "SPK_TARO",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_grumete_3.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "castelo/taro_portao"
+    }
+   ]
+  },
+  "calico_aliado": {
+   "name_key": "SPK_CALICO",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_calico.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "castelo/calico_aliado"
+    }
+   ]
+  },
+  "ebano": {
+   "name_key": "SPK_EBANO",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/elmo.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "ebano_beaten",
+     "dialog": "castelo/ebano_depois"
+    },
+    {
+     "dialog": "castelo/ebano"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "ebano_beaten"
+   }
+  },
+  "arauto": {
+   "name_key": "SPK_ARAUTO",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/clarim.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "arauto_beaten",
+     "dialog": "castelo/arauto_depois"
+    },
+    {
+     "dialog": "castelo/arauto"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "arauto_beaten"
+   }
+  },
+  "tempero": {
+   "name_key": "SPK_TEMPERO",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/cobre.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "tempero_beaten",
+     "dialog": "castelo/tempero_depois"
+    },
+    {
+     "dialog": "castelo/tempero"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "tempero_beaten"
+   }
+  },
+  "degustor": {
+   "name_key": "SPK_DEGUSTOR",
+   "role": "guardian",
+   "sprite": "res://assets/sprites/npc/skel_degustor.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "castelo/degustor"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "degustor_beaten"
+   }
+  },
+  "degustor_depois": {
+   "name_key": "SPK_DEGUSTOR",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_degustor.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "if": "game_cleared",
+     "dialog": "castelo/degustor_livre"
+    },
+    {
+     "dialog": "castelo/degustor_depois"
+    }
+   ]
+  },
+  "rei": {
+   "name_key": "SPK_REI",
+   "role": "guardian",
+   "sprite": "res://assets/sprites/npc/skel_rei.png",
+   "frames": 2,
+   "idle_fps": 1.5,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "if": "rei_falou",
+     "dialog": "castelo/trono_de_novo"
+    },
+    {
+     "dialog": "castelo/trono"
+    }
+   ]
+  },
+  "bento_final": {
+   "name_key": "SPK_BENTO",
+   "role": "lore",
+   "sprite": "res://assets/sprites/bento.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "castelo/bento_final"
+    }
+   ]
+  },
+  "lia_farol": {
+   "name_key": "SPK_LIA",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_faroleira_3.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "extras/lia_farol"
+    }
+   ]
+  },
+  "pais_vila": {
+   "name_key": "SPK_MAE_TARO",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_grumete_3.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "extras/pais_vila"
+    }
+   ]
+  },
+  "taro_vila": {
+   "name_key": "SPK_TARO",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_grumete_3.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "extras/taro_vila"
+    }
+   ]
+  },
+  "romeiro_cinza": {
+   "name_key": "SPK_X_ROMEIRO_CINZA",
+   "role": "lore",
+   "sprite": "res://assets/sprites/npc/seixo.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "extras/romeiro_cinza"
+    }
+   ]
+  },
+  "barqueira_lua": {
+   "name_key": "SPK_X_BARQUEIRA_LUA",
+   "role": "lore",
+   "sprite": "res://assets/sprites/npc/traira.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "extras/barqueira_lua"
+    }
+   ]
+  },
+  "historiadora_pena": {
+   "name_key": "SPK_X_HISTORIADORA_PENA",
+   "role": "lore",
+   "sprite": "res://assets/sprites/npc/rosa.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "extras/historiadora_pena"
+    }
+   ]
+  },
+  "pastora_neve": {
+   "name_key": "SPK_X_PASTORA_NEVE",
+   "role": "lore",
+   "sprite": "res://assets/sprites/npc/camelia.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "extras/pastora_neve"
+    }
+   ]
+  },
+  "colecionador_eco": {
+   "name_key": "SPK_X_COLECIONADOR_ECO",
+   "role": "lore",
+   "sprite": "res://assets/sprites/npc/pa.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "extras/colecionador_eco"
+    }
+   ]
+  },
+  "salina": {
+   "name_key": "SPK_X_SALINA",
+   "role": "lore",
+   "sprite": "res://assets/sprites/npc/moringa.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "extras/salina"
+    }
+   ]
+  },
+  "siri": {
+   "name_key": "SPK_X_SIRI",
+   "role": "humor",
+   "sprite": "res://assets/sprites/npc/girino.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "extras/siri"
+    }
+   ]
+  },
+  "seiva": {
+   "name_key": "SPK_X_SEIVA",
+   "role": "lore",
+   "sprite": "res://assets/sprites/npc/camelia.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "extras/seiva"
+    }
+   ]
+  },
+  "cavaco": {
+   "name_key": "SPK_X_CAVACO",
+   "role": "humor",
+   "sprite": "res://assets/sprites/npc/cobre.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "extras/cavaco"
+    }
+   ]
   }
  }
 }

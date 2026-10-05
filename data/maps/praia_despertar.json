@@ -171,7 +171,8 @@
    "type": "lighthouse",
    "x": 6,
    "y": 15,
-   "dialog": "prologo/farol"
+   "dialog": "prologo/farol",
+   "if_not": "game_cleared"
   },
   {
    "type": "net_snag",
@@ -190,6 +191,13 @@
    "type": "rock_small",
    "x": 41,
    "y": 20
+  },
+  {
+   "type": "lighthouse_lit",
+   "x": 6,
+   "y": 15,
+   "dialog": "castelo/farol_aceso",
+   "if": "game_cleared"
   }
  ],
  "npcs": [
@@ -199,6 +207,23 @@
    "y": 14,
    "facing": "left",
    "if_not": "has_partner"
+  },
+  {
+   "id": "bento_final",
+   "x": 12,
+   "y": 17,
+   "facing": "left",
+   "if": "epilogo_visto"
+  },
+  {
+   "id": "lia_farol",
+   "x": 8,
+   "y": 17,
+   "facing": "down",
+   "if_all": [
+    "game_cleared",
+    "partner_taro"
+   ]
   }
  ],
  "warps": [
@@ -235,6 +260,11 @@
   "leaves"
  ],
  "on_enter": [
+  {
+   "if": "game_cleared",
+   "if_not": "epilogo_visto",
+   "dialog": "castelo/epilogo_praia"
+  },
   {
    "if_not": "intro_done",
    "dialog": "prologo/despertar"

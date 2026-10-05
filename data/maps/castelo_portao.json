@@ -1,0 +1,179 @@
+{
+ "id": "castelo_portao",
+ "region": "castelo",
+ "name_key": "MAP_CASTELO_PORTAO",
+ "tileset": "overworld",
+ "legend": {
+  "s": "sand",
+  "B": "sandstone",
+  "W": "castle_wall",
+  "c": "castle_floor",
+  "p": "carpet"
+ },
+ "ground": [
+  "BBBBWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWBBBB",
+  "BsssWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWsssB",
+  "BsssWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWsssB",
+  "BsssWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWsssB",
+  "BsssWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWsssB",
+  "BsssWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWsssB",
+  "BsssWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWsssB",
+  "BsssWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWsssB",
+  "BsssWWWWWWWWWWWWWWWppWWWWWWWWWWWWWWWsssB",
+  "BssssscccccccccccccppcccccccccccccsssssB",
+  "BssssscccccccccccccppcccccccccccccsssssB",
+  "BssssscccccccccccccppcccccccccccccsssssB",
+  "BssssscccccccccccccppcccccccccccccsssssB",
+  "BssssscccccccccccccppcccccccccccccsssssB",
+  "BssssscccccccccccccppcccccccccccccsssssB",
+  "BssssscccccccccccccppcccccccccccccsssssB",
+  "BssssscccccccccccccppcccccccccccccsssssB",
+  "BssssscccccccccccccppcccccccccccccsssssB",
+  "BssssscccccccccccccppcccccccccccccsssssB",
+  "BssssscccccccccccccppcccccccccccccsssssB",
+  "BssssscccccccccccccppcccccccccccccsssssB",
+  "BssssscccccccccccccppcccccccccccccsssssB",
+  "BssssscccccccccccccppcccccccccccccsssssB",
+  "BssssscccccccccccccppcccccccccccccsssssB",
+  "BssssscccccccccccccppcccccccccccccsssssB",
+  "BssssscccccccccccccppcccccccccccccsssssB",
+  "BssssscccccccccccccppcccccccccccccsssssB",
+  "BssssssssssssssssssppssssssssssssssssssB",
+  "BssssssssssssssssssppssssssssssssssssssB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
+ ],
+ "spawn": {
+  "x": 19,
+  "y": 27,
+  "facing": "up"
+ },
+ "tint": [
+  0.85,
+  0.8,
+  0.9
+ ],
+ "props": [
+  {
+   "type": "castle_door",
+   "x": 20,
+   "y": 7
+  },
+  {
+   "type": "pillar",
+   "x": 9,
+   "y": 11
+  },
+  {
+   "type": "pillar",
+   "x": 30,
+   "y": 11
+  },
+  {
+   "type": "pillar",
+   "x": 9,
+   "y": 20
+  },
+  {
+   "type": "pillar",
+   "x": 30,
+   "y": 20
+  },
+  {
+   "type": "torch",
+   "x": 16,
+   "y": 9
+  },
+  {
+   "type": "torch",
+   "x": 23,
+   "y": 9
+  },
+  {
+   "type": "statue_prince",
+   "x": 13,
+   "y": 23
+  },
+  {
+   "type": "statue_prince",
+   "x": 26,
+   "y": 23
+  }
+ ],
+ "npcs": [
+  {
+   "id": "pai_taro",
+   "x": 19,
+   "y": 10,
+   "facing": "down"
+  },
+  {
+   "id": "mae_taro",
+   "x": 20,
+   "y": 10,
+   "facing": "down"
+  },
+  {
+   "id": "taro_portao",
+   "x": 23,
+   "y": 12,
+   "facing": "left",
+   "if": "partner_lia",
+   "if_not": "game_cleared"
+  },
+  {
+   "id": "calico_aliado",
+   "x": 14,
+   "y": 15,
+   "facing": "right",
+   "if": "ossorio_revelou",
+   "if_not": "game_cleared"
+  }
+ ],
+ "warps": [
+  {
+   "x": 19,
+   "y": 29,
+   "to": "palmeiral",
+   "tx": 19,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 29,
+   "to": "palmeiral",
+   "tx": 20,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 19,
+   "y": 8,
+   "to": "castelo_salao",
+   "tx": 14,
+   "ty": 22,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 20,
+   "y": 8,
+   "to": "castelo_salao",
+   "tx": 15,
+   "ty": 22,
+   "facing": "up",
+   "sfx": "door"
+  }
+ ],
+ "on_enter": [
+  {
+   "if_not": "portao_visto",
+   "dialog": "castelo/chegada_portao"
+  }
+ ],
+ "ambient": [
+  "embers"
+ ]
+}

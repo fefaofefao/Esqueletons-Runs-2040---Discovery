@@ -247,6 +247,18 @@
    "y": 3,
    "facing": "left",
    "if": "ramalho_beaten"
+  },
+  {
+   "id": "seiva",
+   "x": 25,
+   "y": 24,
+   "facing": "down"
+  },
+  {
+   "id": "cavaco",
+   "x": 12,
+   "y": 24,
+   "facing": "down"
   }
  ],
  "warps": [
@@ -356,5 +368,12 @@
  ],
  "ambient": [
   "leaves"
+ ],
+ "on_enter": [
+  {
+   "if": "has_partner",
+   "if_not": "x_raizal_visto",
+   "dialog": "extras/chegada_raizal"
+  }
  ]
 }

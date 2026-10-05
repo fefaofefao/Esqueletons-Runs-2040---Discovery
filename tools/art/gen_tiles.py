@@ -542,7 +542,7 @@ def main():
     terrain("snow_rock", [tile_blocks((120, 128, 144), (156, 164, 180), (70, 76, 92), 380, snow=True)], True)
     terrain("dune", [tile_noise((232, 196, 128), (246, 216, 150), (204, 166, 102), 390, ripples=6), tile_noise((228, 192, 124), (244, 212, 146), (200, 162, 98), 391, ripples=5)], False, weights=[2, 1])
     terrain("sandstone", [tile_blocks((198, 140, 88), (222, 170, 112), (130, 86, 54), 400)], True)
-    terrain("castle_floor", [tile_cobble((92, 84, 112), (120, 110, 140), (54, 48, 70), 410)], False)
+    terrain("castle_floor", [tile_cobble((150, 140, 160), (176, 166, 186), (96, 88, 108), 410)], False)
     terrain("castle_wall", [tile_blocks((70, 62, 88), (98, 88, 118), (36, 30, 48), 420)], True)
     terrain("carpet", [tile_carpet()], False)
 

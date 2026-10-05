@@ -831,6 +831,45 @@
     "max_level": 73,
     "rarity": "incomum"
    }
+  ],
+  "castelo_leste": [
+   {
+    "species": "sentinela_3",
+    "stage": 3,
+    "min_level": 79,
+    "max_level": 82,
+    "rarity": "comum"
+   },
+   {
+    "species": "escriba_3",
+    "stage": 3,
+    "min_level": 80,
+    "max_level": 83,
+    "rarity": "raro"
+   },
+   {
+    "species": "ferreiro_3",
+    "stage": 3,
+    "min_level": 79,
+    "max_level": 82,
+    "rarity": "incomum"
+   }
+  ],
+  "castelo_oeste": [
+   {
+    "species": "domador_escorpioes_3",
+    "stage": 3,
+    "min_level": 81,
+    "max_level": 84,
+    "rarity": "comum"
+   },
+   {
+    "species": "sentinela_3",
+    "stage": 3,
+    "min_level": 81,
+    "max_level": 84,
+    "rarity": "comum"
+   }
   ]
  }
 }

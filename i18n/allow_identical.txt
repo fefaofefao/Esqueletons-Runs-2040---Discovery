@@ -81,6 +81,15 @@ BTL_TAMER_BRISA
 # --- região deserto (nomes próprios iguais nos idiomas) ---
 SPK_ROSA
 # --- fim deserto ---
+# --- região castelo (nomes próprios iguais nos idiomas) ---
+BTL_TAMER_ECO_RAMALHO
+BTL_TAMER_ECO_MUSGA
+BTL_TAMER_ECO_CALICO
+BTL_TAMER_ECO_ALVA
+# --- fim castelo ---
+# --- região extras (nomes próprios iguais nos idiomas) ---
+SPK_X_HISTORIADORA_PENA
+# --- fim extras ---
 # --- gerado por tools/bestiary/build.py (descrições de golpes) ---
 MOVE_CHUTE_NA_CANELA_DESC
 MOVE_RANGER_OS_DENTES_DESC

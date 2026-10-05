@@ -1,0 +1,157 @@
+{
+ "id": "sala_trono",
+ "region": "castelo",
+ "name_key": "MAP_SALA_TRONO",
+ "tileset": "overworld",
+ "legend": {
+  "W": "castle_wall",
+  "c": "castle_floor",
+  "p": "carpet"
+ },
+ "ground": [
+  "WWWWWWWWWWWWWWWWWWWW",
+  "WWWWWWWWWWWWWWWWWWWW",
+  "WWccccccccccccccccWW",
+  "WWccccccccccccccccWW",
+  "WWcccccccppcccccccWW",
+  "WWcccccccppcccccccWW",
+  "WWcccccccppcccccccWW",
+  "WWcccccccppcccccccWW",
+  "WWcccccccppcccccccWW",
+  "WWcccccccppcccccccWW",
+  "WWcccccccppcccccccWW",
+  "WWcccccccppcccccccWW",
+  "WWcccccccppcccccccWW",
+  "WWcccccccppcccccccWW",
+  "WWcccccccppcccccccWW",
+  "WWWWWWWWWppWWWWWWWWW"
+ ],
+ "spawn": {
+  "x": 9,
+  "y": 14,
+  "facing": "up"
+ },
+ "tint": [
+  0.6,
+  0.55,
+  0.7
+ ],
+ "props": [
+  {
+   "type": "throne",
+   "x": 10,
+   "y": 3,
+   "dialog": "extras/obj_tr_throne"
+  },
+  {
+   "type": "crown_pedestal",
+   "x": 13,
+   "y": 4,
+   "if_not": "rei_beaten"
+  },
+  {
+   "type": "pillar",
+   "x": 3,
+   "y": 7
+  },
+  {
+   "type": "pillar",
+   "x": 16,
+   "y": 7
+  },
+  {
+   "type": "pillar",
+   "x": 3,
+   "y": 12
+  },
+  {
+   "type": "pillar",
+   "x": 16,
+   "y": 12
+  },
+  {
+   "type": "candelabra",
+   "x": 5,
+   "y": 4,
+   "if": "trono_iluminado"
+  },
+  {
+   "type": "candelabra",
+   "x": 15,
+   "y": 4,
+   "if": "trono_iluminado"
+  },
+  {
+   "type": "candelabra",
+   "x": 5,
+   "y": 10,
+   "if": "trono_iluminado"
+  },
+  {
+   "type": "candelabra",
+   "x": 14,
+   "y": 10,
+   "if": "trono_iluminado"
+  },
+  {
+   "type": "table",
+   "x": 7,
+   "y": 7
+  },
+  {
+   "type": "portrait",
+   "x": 6,
+   "y": 1,
+   "dialog": "extras/obj_tr_portrait1"
+  },
+  {
+   "type": "portrait",
+   "x": 13,
+   "y": 1,
+   "dialog": "extras/obj_tr_portrait2"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "rei",
+   "x": 10,
+   "y": 4,
+   "facing": "down",
+   "if_not": "rei_recrutado"
+  }
+ ],
+ "warps": [
+  {
+   "x": 9,
+   "y": 15,
+   "to": "castelo_salao",
+   "tx": 14,
+   "ty": 1,
+   "facing": "down",
+   "sfx": "door"
+  },
+  {
+   "x": 10,
+   "y": 15,
+   "to": "castelo_salao",
+   "tx": 15,
+   "ty": 1,
+   "facing": "down",
+   "sfx": "door"
+  }
+ ],
+ "on_enter": [
+  {
+   "if": "rei_falou",
+   "if_not": "rei_beaten",
+   "dialog": "castelo/trono_de_novo"
+  },
+  {
+   "if_not": "rei_beaten",
+   "dialog": "castelo/trono"
+  }
+ ],
+ "ambient": [
+  "embers"
+ ]
+}

@@ -255,6 +255,12 @@
    "facing": "down",
    "if": "partner_taro",
    "if_not": "rival_ossorio_done"
+  },
+  {
+   "id": "historiadora_pena",
+   "x": 12,
+   "y": 44,
+   "facing": "right"
   }
  ],
  "warps": [

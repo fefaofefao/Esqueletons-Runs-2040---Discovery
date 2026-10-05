@@ -10,6 +10,7 @@ extends "res://tests/test_case.gd"
 const GUARDIANS := {
 	"BTL_TAMER_RAMALHO": "bosque", "BTL_TAMER_FORNALHA": "minas", "BTL_TAMER_MUSGA": "pantano",
 	"BTL_TAMER_CALICO": "ossorio", "BTL_TAMER_ALVA": "picos", "BTL_TAMER_DUNA": "deserto",
+	"BTL_TAMER_DEGUSTOR": "castelo",
 }
 
 var tree: SceneTree
@@ -322,3 +323,57 @@ func test_deserto_clue_and_quest() -> void:
 	check(MapView.condition_ok(castle), "estrada do castelo abre depois da Duna")
 	m.queue_free()
 	await tree.process_frame
+
+
+
+func _king_owned() -> bool:
+	for key in ["party", "ranch"]:
+		for m in SaveGame.data.get(key, []):
+			if str(m.get("species", "")) == "rei_esqueleto":
+				return true
+	return false
+
+
+func test_endings() -> void:
+	# a decisão do final é uma condição no roteiro "recusar"
+	var gate: Dictionary = {}
+	for n in Data.dialog("castelo/recusar"):
+		if str(n.get("goto", "")) == "castelo/final_a":
+			gate = n
+	check(not gate.is_empty(), "roteiro final tem o desvio para o Final A")
+	SaveGame.start_new("Téo")
+	SaveGame.set_flag("has_carta_alva")
+	SaveGame.set_flag("red_minas")
+	check(not MapView.condition_ok(gate), "carta + 1 Redenção: ainda Final B")
+	SaveGame.set_flag("red_ossorio")
+	check(MapView.condition_ok(gate), "carta + 2 Redenções: Final A")
+	SaveGame.set_flag("has_carta_alva", false)
+	check(not MapView.condition_ok(gate), "sem a carta: Final B, mesmo com Redenção")
+	# Final A completo (sem mapa: as trocas de mapa são ignoradas fora do jogo)
+	SaveGame.start_new("Téo")
+	SaveGame.data["bag"] = {"carta_alva": 1}
+	SaveGame.set_flag("has_carta_alva")
+	await _play("castelo/final_a")
+	check(SaveGame.get_flag("final_a") and SaveGame.get_flag("game_cleared"), "Final A: zerado")
+	check(not SaveGame.get_flag("has_carta_alva"), "Final A: carta entregue ao Rei")
+	check(_king_owned(), "Final A: o Rei entra na equipe")
+	check_eq(int(Ossuary.entry("rei_esqueleto")["marker"]), 100, "Final A: marcador do Rei em 100%")
+	SaveGame.start_new("Téo")
+	await _play("castelo/final_b")
+	check(SaveGame.get_flag("final_b") and SaveGame.get_flag("game_cleared"), "Final B: zerado")
+	check(_king_owned(), "Final B: o Rei entra na equipe")
+
+
+func test_postgame() -> void:
+	SaveGame.start_new("Téo")
+	var praia := _map("praia_despertar")
+	check(not praia.props_of("lighthouse").is_empty(), "farol existe")
+	praia.queue_free()
+	await tree.process_frame
+	for nid in ["ramalho_depois", "fornalha", "musga", "calico", "alva", "duna"]:
+		var d: Array = Data.npc(nid).get("dialog", [])
+		check(not d.is_empty() and str(d[0].get("if", "")) == "game_cleared" and str(d[0].get("dialog", "")).begins_with("castelo/eco_"),
+			"%s vira eco para revanche no pós-jogo" % nid)
+	SaveGame.set_flag("game_cleared")
+	await _play("castelo/eco_duna", [1])
+	check(true, "eco pode ser recusado")

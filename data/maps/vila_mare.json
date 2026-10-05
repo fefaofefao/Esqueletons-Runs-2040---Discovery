@@ -303,6 +303,35 @@
    "facing": "left",
    "if": "partner_lia",
    "if_not": "rival_vila_done"
+  },
+  {
+   "id": "pais_vila",
+   "x": 23,
+   "y": 15,
+   "facing": "down",
+   "if": "game_cleared"
+  },
+  {
+   "id": "taro_vila",
+   "x": 24,
+   "y": 15,
+   "facing": "down",
+   "if_all": [
+    "game_cleared",
+    "partner_lia"
+   ]
+  },
+  {
+   "id": "salina",
+   "x": 25,
+   "y": 22,
+   "facing": "down"
+  },
+  {
+   "id": "siri",
+   "x": 14,
+   "y": 22,
+   "facing": "down"
   }
  ],
  "warps": [
@@ -382,5 +411,12 @@
  "ambient": [
   "sea_sparkle",
   "leaves"
+ ],
+ "on_enter": [
+  {
+   "if": "has_partner",
+   "if_not": "x_vila_mare_visto",
+   "dialog": "extras/chegada_vila_mare"
+  }
  ]
 }

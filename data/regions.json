@@ -170,9 +170,12 @@
    ],
    "music": "",
    "maps": [
-    "castelo_portao"
+    "castelo_portao",
+    "castelo_salao",
+    "sala_trono",
+    "museu_2040"
    ],
-   "battle_bg": "res://assets/battle/bg_praia.png"
+   "battle_bg": "res://assets/battle/bg_castelo.png"
   }
  }
 }
