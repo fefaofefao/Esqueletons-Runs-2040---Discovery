@@ -78,6 +78,7 @@ func _ready() -> void:
 	_font.variation_opentype = {TextServerManager.get_primary_interface().name_to_tag("wght"): 850}
 	_build_stage()
 	_build_ui()
+	Audio.play_music(Audio.theme("title"))
 	_build_menu()
 	get_viewport().size_changed.connect(_layout)
 	_layout()

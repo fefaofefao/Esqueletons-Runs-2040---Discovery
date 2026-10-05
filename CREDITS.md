@@ -15,6 +15,7 @@ Todo o conteúdo abaixo é **original**, criado para este projeto. Nenhum pack o
 | `assets/skeletons/*` (80 espécies, batalha e mapa), `assets/battle/*` | `tools/art/gen_skeletons.py` + `tools/art/skel.py`, `tools/art/gen_battle.py` | Original do projeto |
 | `assets/shaders/golden.gdshader` | escrito para o jogo | Original do projeto |
 | `assets/sfx/*.wav` | `tools/art/gen_sfx.py` (síntese chiptune) | Original do projeto |
+| `assets/music/*.ogg` | `tools/audio/gen_music.py` (composição e síntese chiptune: 2 pulsos, triângulo e ruído; OGG via ffmpeg) | Original do projeto |
 | Textos e traduções (`i18n/*.csv`) | escritos para o jogo | Original do projeto |
 
 Música: ainda não há (fase 6). Toda faixa adicionada deve ser registrada aqui, com origem e licença (original ou CC0).

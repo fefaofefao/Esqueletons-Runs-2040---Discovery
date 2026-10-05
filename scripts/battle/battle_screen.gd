@@ -260,7 +260,7 @@ func _intro() -> void:
 	for m in enemies:
 		_place_card(m)
 	if enemies.any(func(x: Monster) -> bool: return x.golden):
-		Audio.sfx("golden")
+		Audio.play_jingle(Audio.theme("golden"))
 		await _say("BTL_GOLDEN_APPEARS")
 	if engine.is_wild():
 		if enemies.size() > 1:

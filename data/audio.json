@@ -1,0 +1,11 @@
+{
+ "_comment": "Temas fora dos mapas (a música de cada região fica em regions.json). Faixas originais geradas por tools/audio/gen_music.py.",
+ "title": "res://assets/music/titulo.ogg",
+ "credits": "res://assets/music/titulo.ogg",
+ "battle": "res://assets/music/batalha.ogg",
+ "boss": "res://assets/music/chefe.ogg",
+ "king": "res://assets/music/rei.ogg",
+ "king_species": "rei_esqueleto",
+ "birthday": "res://assets/music/aniversario.ogg",
+ "golden": "res://assets/music/golden.ogg"
+}

@@ -8,7 +8,7 @@
     0.97,
     0.92
    ],
-   "music": "",
+   "music": "res://assets/music/praia.ogg",
    "maps": [
     "praia_despertar",
     "cabana_bento"
@@ -23,7 +23,7 @@
     0.98,
     0.94
    ],
-   "music": "",
+   "music": "res://assets/music/praia.ogg",
    "maps": [
     "vila_mare",
     "vila_rancho",
@@ -41,7 +41,7 @@
     1.0,
     0.9
    ],
-   "music": "",
+   "music": "res://assets/music/bosque.ogg",
    "maps": [
     "rota_1",
     "tunel_raizes",
@@ -63,7 +63,7 @@
     0.82,
     0.9
    ],
-   "music": "",
+   "music": "res://assets/music/minas.ogg",
    "maps": [
     "rota_2",
     "brasal",
@@ -84,7 +84,7 @@
     0.95,
     0.82
    ],
-   "music": "",
+   "music": "res://assets/music/pantano.ogg",
    "maps": [
     "rota_3",
     "brejo",
@@ -105,7 +105,7 @@
     0.95,
     0.9
    ],
-   "music": "",
+   "music": "res://assets/music/ossorio.ogg",
    "maps": [
     "rota_4",
     "ossorio",
@@ -126,7 +126,7 @@
     0.95,
     1.05
    ],
-   "music": "",
+   "music": "res://assets/music/picos.ogg",
    "maps": [
     "rota_5",
     "geada",
@@ -147,7 +147,7 @@
     0.95,
     0.85
    ],
-   "music": "",
+   "music": "res://assets/music/deserto.ogg",
    "maps": [
     "rota_6",
     "palmeiral",
@@ -168,7 +168,7 @@
     0.75,
     0.9
    ],
-   "music": "",
+   "music": "res://assets/music/castelo.ogg",
    "maps": [
     "castelo_portao",
     "castelo_salao",

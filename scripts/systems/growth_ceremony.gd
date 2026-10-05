@@ -92,7 +92,7 @@ func _play() -> void:
 	tw.tween_property(_sprite, "position:y", 6.0, 0.8).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	await tw.finished
 	# 2. bolo, confete, balão e música
-	Audio.sfx("birthday")
+	Audio.play_jingle(Audio.theme("birthday"))
 	var tc := create_tween()
 	tc.tween_property(_cake, "scale", Vector2.ONE, 0.3).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	_confetti(anchor + Vector2(40, -40))

@@ -212,6 +212,7 @@ func start_battle(info: Dictionary) -> String:
 		SaveGame.data["bag"] = {}
 	transitioning = true
 	Controls.clear()
+	Audio.push_music(Audio.battle_theme(info))
 	await _battle_flash()
 	if not info.has("bg"):
 		info["bg"] = str(Data.region(world.region_id).get("battle_bg", "res://assets/battle/bg_praia.png"))
@@ -239,6 +240,7 @@ func start_battle(info: Dictionary) -> String:
 	await tw2.finished
 	battle.queue_free()
 	battle = null
+	Audio.pop_music()
 	world.visible = true
 	if touch:
 		touch.set_battle_mode(false)

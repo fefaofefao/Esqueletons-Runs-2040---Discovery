@@ -15,6 +15,7 @@ func _init() -> void:
 
 
 func _ready() -> void:
+	Audio.play_music(Audio.theme("credits"))
 	var bg := ColorRect.new()
 	bg.color = Color(0.05, 0.04, 0.08, 1.0)
 	bg.set_anchors_preset(Control.PRESET_FULL_RECT)
