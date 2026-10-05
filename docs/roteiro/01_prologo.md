@@ -102,7 +102,7 @@ Não há Guardião no Prólogo. O **Fiscal Brás**, capanga de Ramalho, antecipa
 - **Brás (antes):** Alto lá! Ordem do Rei: ninguém sai, ninguém se perde. Nem barco, nem peixe, nem você.
 - **Brás (vitória do jogador):** Tá bom, tá bom! O cais tá aberto. Mas o Ramalho não vai gostar nada disso.
 - **Brás (depois):** O Ramalho é primo do Rei. Lá no Bosque ele te ensina a esperar.
-- **Equipe:** Mariscote (6) e Lasquinho (7). **Recompensa:** 150 moedas.
+- **Equipe:** Mariscote (7) e Lasquinho (8). **Recompensa:** 150 moedas.
 
 ### Casa da Família Remo — domador (tema: golpes leves)
 - **Dono:** Seu Remo, pai de três. "Aqui em casa todo mundo é rápido. Até a sopa esfria correndo."

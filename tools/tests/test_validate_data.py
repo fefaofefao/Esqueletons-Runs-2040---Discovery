@@ -92,5 +92,18 @@ class ValidateDataTest(unittest.TestCase):
         self.assertIn("prop_que_nao_existe", errs)
 
 
+    def test_progression_rules(self):
+        path = self.tmp / "data" / "encounters.json"
+        enc = json.loads(path.read_text(encoding="utf-8"))
+        for t in ("rota1_sul", "rota1_oeste", "rota1_campo", "rota1_norte", "tunel"):
+            for e in enc["tables"][t]:  # salto logo depois do Brás
+                e["min_level"], e["max_level"] = 13, 14
+        enc["tables"]["tunel"][0]["max_level"] = 21      # quase a idade do Ramalho
+        path.write_text(json.dumps(enc))
+        code, errs = self.run_validator()
+        self.assertEqual(code, 1)
+        self.assertIn("bosque começa com selvagens de", errs)
+        self.assertIn("tunel tem flautista_1 com 21 anos", errs)
+
 if __name__ == "__main__":
     unittest.main()

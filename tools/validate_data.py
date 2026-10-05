@@ -530,6 +530,80 @@ def check_balance():
                 err(f"balance.json: {r.get('id')} usa linha inexistente {ln}")
 
 
+def check_progression():
+    """Selvagens e domadores acompanham a história: cada região começa perto da
+    idade do último líder vencido e fica abaixo do próximo líder."""
+    b = load(DATA / "balance.json") or {}
+    pr = b.get("progression")
+    if not pr:
+        return
+    regions = (load(DATA / "regions.json") or {}).get("regions", {})
+    tables = (load(DATA / "encounters.json") or {}).get("tables", {})
+    skip = tuple(pr.get("skip_battles", []))
+
+    def battles(nodes):
+        if isinstance(nodes, dict):
+            if nodes.get("action") == "battle":
+                yield nodes
+            for v in nodes.values():
+                yield from battles(v)
+        elif isinstance(nodes, list):
+            for v in nodes:
+                yield from battles(v)
+
+    dialogs = {}
+    for f in (DATA / "dialogs").glob("*.json"):
+        dialogs[f.stem] = (load(f) or {}).get("dialogs", {})
+
+    def leader_ages(ref):
+        f, did = ref.split("/")
+        ages = [int(e[1]) for bt in battles(dialogs.get(f, {}).get(did, [])) for e in bt.get("enemies", [])]
+        if not ages:
+            err(f"balance.json: líder {ref} sem batalha")
+        return ages or [0]
+
+    # tabelas e arquivos de diálogo de cada região da história
+    region_tables = {}
+    region_files = {}
+    for rid, reg in regions.items():
+        bid = pr.get("map_region", {}).get(rid, rid)
+        region_files.setdefault(bid, set()).add(rid)
+        for mid in reg.get("maps", []):
+            m = load(DATA / "maps" / f"{mid}.json") or {}
+            for sp in m.get("spawns", []):
+                if sp.get("table"):
+                    region_tables.setdefault(bid, set()).add(sp["table"])
+    prev = int(pr.get("start_age", 5))
+    for r in b.get("regions", []):
+        rid = r["id"]
+        nxt = min(leader_ages(r["leader"]))
+        lv = [(t, e) for t in sorted(region_tables.get(rid, [])) for e in tables.get(t, [])]
+        if lv:
+            low = min(e["min_level"] for _, e in lv)
+            if low > prev + int(pr["entry_above_prev_leader"]):
+                err(f"progressão: {rid} começa com selvagens de {low} anos, mas o último líder tinha {prev} (máx. {prev + int(pr['entry_above_prev_leader'])})")
+            limit = nxt - int(pr["wild_below_next_leader"]) if rid != "prologo" else nxt
+            for t, e in lv:
+                if e["max_level"] > limit:
+                    err(f"progressão: {t} tem {e['species']} com {e['max_level']} anos; o próximo líder ({r['leader']}) tem {nxt} (máx. {limit})")
+        lead_top = max(leader_ages(r["leader"]))
+        lead_file, lead_id = r["leader"].split("/")
+        files = region_files.get(rid, set()) | {lead_file}
+        if rid == "prologo":
+            files |= {"prologo", "vila_mare"}
+        for f in files:
+            for did, nodes in dialogs.get(f, {}).items():
+                if did == lead_id or did.startswith(skip):
+                    continue
+                for bt in battles(nodes):
+                    if bt.get("kind") == "wild":
+                        continue
+                    top = max(int(e[1]) for e in bt.get("enemies", [[0, 0]]))
+                    if top > lead_top - int(pr["tamer_below_next_leader"]):
+                        err(f"progressão: domador {f}/{did} com {top} anos; o mais velho do próximo líder ({r['leader']}) tem {lead_top}")
+        prev = max(leader_ages(r["leader"]))
+
+
 def check_battle(keys):
     """Regras de batalha, itens e dados de teste da fase 2."""
     b = load(DATA / "battle.json") or {}
@@ -597,6 +671,7 @@ def main():
     check_cities(keys)
     check_routes()
     check_balance()
+    check_progression()
     check_battle(keys)
     check_publisher()
     infos.append(f"{len(keys)} chaves de tradução × {len(LANGS)} idiomas")

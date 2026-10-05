@@ -33,11 +33,11 @@
     "enemies": [
      [
       "lenhador_1",
-      12
+      9
      ],
      [
       "cogumeleiro_1",
-      12
+      9
      ]
     ],
     "reward": 300,
@@ -66,11 +66,11 @@
     "enemies": [
      [
       "mineiro_1",
-      13
+      10
      ],
      [
       "lenhador_1",
-      13
+      10
      ]
     ],
     "reward": 320,
@@ -99,11 +99,11 @@
     "enemies": [
      [
       "herborista_1",
-      14
+      11
      ],
      [
       "cogumeleiro_1",
-      14
+      11
      ]
     ],
     "reward": 350,
@@ -388,11 +388,11 @@
     "enemies": [
      [
       "lenhador_1",
-      17
+      14
      ],
      [
       "herborista_1",
-      16
+      13
      ]
     ],
     "reward": 400,
@@ -427,11 +427,11 @@
     "enemies": [
      [
       "cogumeleiro_1",
-      16
+      13
      ],
      [
       "herborista_1",
-      16
+      13
      ]
     ],
     "reward": 350,
@@ -470,7 +470,7 @@
     "enemies": [
      [
       "lenhador_2",
-      22
+      21
      ],
      [
       "flautista_2",
@@ -478,7 +478,7 @@
      ],
      [
       "herborista_2",
-      23
+      21
      ]
     ],
     "reward": 800,
@@ -545,7 +545,7 @@
     "enemies": [
      [
       "raizerno",
-      20
+      16
      ]
     ],
     "reward": 0

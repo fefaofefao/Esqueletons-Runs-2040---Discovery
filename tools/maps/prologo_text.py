@@ -224,7 +224,7 @@ V = {
                         {"action": "give_item", "item": "antidoto", "n": 1}, {"set_flag": "jurema_done"}],
     "jurema_depois": [say("DLG_P_JUREMA_AFTER", "SPK_JUREMA")],
     "bras": [say("DLG_P_BRAS_1", "SPK_BRAS"),
-             {"action": "battle", "kind": "tamer", "tamer_key": "BTL_TAMER_BRAS", "enemies": [["marisqueiro_1", 6], ["lenhador_1", 7]],
+             {"action": "battle", "kind": "tamer", "tamer_key": "BTL_TAMER_BRAS", "enemies": [["marisqueiro_1", 7], ["lenhador_1", 8]],
               "reward": 150, "win_flag": "bras_beaten"},
              say("DLG_P_BRAS_WIN", "SPK_BRAS"), {"action": "hide_npc", "id": "bras"}],
     "bras_depois": [say("DLG_P_BRAS_AFTER", "SPK_BRAS")],

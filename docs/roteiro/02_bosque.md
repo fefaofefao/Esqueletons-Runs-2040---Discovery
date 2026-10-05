@@ -2,7 +2,7 @@
 
 Fase 4b. Implementado exatamente como está aqui. Falas em `i18n/dialogue.csv` (prefixo `DLG_B_`), roteiros em `data/dialogs/bosque.json`, mapas gerados por `tools/maps/make_bosque.py`.
 
-**Duração alvo:** 25 min. **Idades** (`balance.json`): chegada 10–18; selvagens 10–15; domadores até 17; Guardião ~22.
+**Duração alvo:** 25 min. **Idades** (`balance.json`): chegada 8–18; selvagens em rampa de 7–9 (logo depois do Fiscal Brás, 7–8) até 12–14 no Túnel; domadores 9–14; Guardião ~21.
 
 ## 1. Problema local
 A vila **Raizal** vive de ervas e madeira. Por ordem do Guardião **Ramalho**, os esqueletos lenhadores **trançaram raízes em todas as trilhas** ("Ninguém sai, ninguém se perde"). Os mercadores não chegam, e a erva-de-febre que a curandeira Sálvia usa está acabando. A vila só respira de novo quando Ramalho perde e manda desfazer o trançado.
@@ -21,7 +21,7 @@ No **Bosque Velho**, atrás da vila, o esqueleto único **Raizerno** dorme fundi
 - **Personalidade:** brincalhão, competitivo e barulhento; fala alto e conta vantagem.
 - **Motivo:** **dívida**. Foi o primeiro primo que o Rei trouxe de volta e acha que deve a segunda vida a ele.
 - **Mecânica-tema: Atraso.** A equipe usa golpes pesados que **empurram o turno** do jogador (Golpe de Tora, Investida). Ensina a **ler a timeline** e a responder com golpes **leves**.
-- **Equipe** (idade ~22): Toreiro (22, Golpe de Tora), Vagalú (22) e Raizela (23).
+- **Equipe** (idade ~21): Toreiro (21, Golpe de Tora), Vagalú (22) e Raizela (21).
 - **Arena:** a Clareira do Machado, no norte de Raizal.
 - **Recompensa:** 800 moedas, o item-chave **Lasca de Raiz** (o passe que o vigia da Rota 2 pede na fase 4c) e as raízes da estrada principal se desfazem (caminho direto entre a Vila Maré e Raizal).
 
@@ -74,7 +74,7 @@ No **Bosque Velho**, atrás da vila, o esqueleto único **Raizerno** dorme fundi
 - **Casa da Família Musgo (tema: veneno leve):** Pai Musgo: "Esporo aqui é tempero." → *Fungote 16, Brotim 16* · 350 moedas + 2 Antídotos · Depois: "Leva antídoto pras Minas. Lá o ar é pior."
 
 ### Bosque Velho
-- **Raizerno (interagir):** narração: "Um esqueleto enorme dorme fundido ao tronco. Na casca, um brasão: uma coroa sobre uma onda." / "O desenho é igual ao do ingresso do museu." / (escolha) "Acordar" / "Deixar dormir" → **batalha selvagem** contra Raizerno (idade 20). O marcador funciona como em qualquer selvagem; ele volta a dormir no lugar depois de sair e voltar.
+- **Raizerno (interagir):** narração: "Um esqueleto enorme dorme fundido ao tronco. Na casca, um brasão: uma coroa sobre uma onda." / "O desenho é igual ao do ingresso do museu." / (escolha) "Acordar" / "Deixar dormir" → **batalha selvagem** contra Raizerno (idade 16, desafio opcional). O marcador funciona como em qualquer selvagem; ele volta a dormir no lugar depois de sair e voltar.
 - **Erva-de-febre (objeto, com a missão):** "Você colheu a erva-de-febre de flor azul."
 
 ## 7. Escolhas e consequências

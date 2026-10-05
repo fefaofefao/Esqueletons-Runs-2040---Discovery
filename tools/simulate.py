@@ -42,6 +42,8 @@ ADJUSTMENTS = [
      "Bosque com um de cada tipo (o Pântano continua temático de Veneno); Ossório +4 anos, Deserto +5, Pântano +2; Rei com uma escolta de suporte."),
     ("Os dois iniciais juntos (+5%)", "Com Lia e Taro na equipe desde o Prólogo, a equipe vencia 100% dos Guardiões, perdia menos e chegava 4–7 anos acima da meta; Remada Dupla passou de 30% de uso.",
      "`xp.reward_div` 18 → 21; Guardiões com +7% em todos os atributos (`enemy_bonus.boss`, o Rei fica de fora); Remada Dupla 2×50/15 PP → 2×40/12 PP."),
+    ("Progressão dos selvagens (pedido do Fernando)", "A Rota 1 começava com selvagens de 10–12 anos e domadores de 12–14 logo depois do Fiscal Brás (6–7); o Túnel tinha 16–17.",
+     "Rampa a partir do último líder: Rota 1 7–9 → 12–14 no Túnel, domadores 9–14, Brás 7–8, Ramalho 21–22. `validate_data.py` agora confere a regra em todas as regiões."),
 ]
 
 

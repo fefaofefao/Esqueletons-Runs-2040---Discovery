@@ -37,15 +37,15 @@
    {
     "species": "lenhador_1",
     "stage": 1,
-    "min_level": 10,
-    "max_level": 12,
+    "min_level": 7,
+    "max_level": 9,
     "rarity": "comum"
    },
    {
     "species": "herborista_1",
     "stage": 1,
-    "min_level": 10,
-    "max_level": 12,
+    "min_level": 7,
+    "max_level": 9,
     "rarity": "comum"
    }
   ],
@@ -53,8 +53,8 @@
    {
     "species": "lenhador_1",
     "stage": 1,
-    "min_level": 11,
-    "max_level": 13,
+    "min_level": 8,
+    "max_level": 10,
     "rarity": "comum"
    }
   ],
@@ -62,29 +62,29 @@
    {
     "species": "herborista_1",
     "stage": 1,
-    "min_level": 11,
-    "max_level": 14,
+    "min_level": 9,
+    "max_level": 11,
     "rarity": "comum"
    },
    {
     "species": "cogumeleiro_1",
     "stage": 1,
-    "min_level": 11,
-    "max_level": 14,
+    "min_level": 9,
+    "max_level": 11,
     "rarity": "incomum"
    },
    {
     "species": "flautista_1",
     "stage": 1,
-    "min_level": 12,
-    "max_level": 15,
+    "min_level": 10,
+    "max_level": 12,
     "rarity": "raro"
    },
    {
     "species": "rendeira_1",
     "stage": 1,
-    "min_level": 11,
-    "max_level": 13,
+    "min_level": 9,
+    "max_level": 11,
     "rarity": "incomum"
    }
   ],
@@ -92,15 +92,15 @@
    {
     "species": "lenhador_1",
     "stage": 1,
-    "min_level": 13,
-    "max_level": 15,
+    "min_level": 10,
+    "max_level": 12,
     "rarity": "comum"
    },
    {
     "species": "cogumeleiro_1",
     "stage": 1,
-    "min_level": 13,
-    "max_level": 15,
+    "min_level": 10,
+    "max_level": 12,
     "rarity": "incomum"
    }
   ],
@@ -108,16 +108,16 @@
    {
     "species": "flautista_1",
     "stage": 1,
-    "min_level": 16,
-    "max_level": 17,
+    "min_level": 12,
+    "max_level": 14,
     "rarity": "raro",
     "weight": 60
    },
    {
     "species": "cogumeleiro_1",
     "stage": 1,
-    "min_level": 16,
-    "max_level": 17,
+    "min_level": 12,
+    "max_level": 14,
     "rarity": "incomum",
     "weight": 40
    }

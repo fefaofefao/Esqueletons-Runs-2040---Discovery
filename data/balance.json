@@ -43,7 +43,8 @@
     "rendeira"
    ],
    "tamer_age": 8,
-   "guardian": []
+   "guardian": [],
+   "leader": "vila_mare/bras"
   },
   {
    "id": "bosque",
@@ -64,29 +65,30 @@
     "marisqueiro"
    ],
    "wild_age": [
-    10,
-    15
+    7,
+    14
    ],
    "team": [
     "@starters",
     "rendeira",
     "lenhador"
    ],
-   "tamer_age": 17,
+   "tamer_age": 12,
    "guardian": [
     [
      "lenhador",
-     22
-    ],
-    [
-     "flautista",
      21
     ],
     [
+     "flautista",
+     22
+    ],
+    [
      "herborista",
-     23
+     21
     ]
-   ]
+   ],
+   "leader": "bosque/ramalho"
   },
   {
    "id": "minas",
@@ -133,7 +135,8 @@
      "aguadeiro",
      34
     ]
-   ]
+   ],
+   "leader": "minas/fornalha"
   },
   {
    "id": "pantano",
@@ -180,7 +183,8 @@
      "cogumeleiro",
      48
     ]
-   ]
+   ],
+   "leader": "pantano/musga"
   },
   {
    "id": "ossorio",
@@ -227,7 +231,8 @@
      "lenhador",
      63
     ]
-   ]
+   ],
+   "leader": "ossorio/calico"
   },
   {
    "id": "picos",
@@ -274,7 +279,8 @@
      "mineiro",
      72
     ]
-   ]
+   ],
+   "leader": "picos/alva"
   },
   {
    "id": "deserto",
@@ -321,7 +327,8 @@
      "palafiteiro",
      85
     ]
-   ]
+   ],
+   "leader": "deserto/duna"
   },
   {
    "id": "castelo",
@@ -377,7 +384,24 @@
      "jardineiro_lirios",
      78
     ]
-   ]
+   ],
+   "leader": "castelo/degustor"
   }
- ]
+ ],
+ "progression": {
+  "_comment": "Progressão dos selvagens e domadores (pedido do Fernando): cada rota começa perto da idade do último líder vencido e fica abaixo do próximo líder. Conferido por tools/validate_data.py.",
+  "start_age": 5,
+  "entry_above_prev_leader": 2,
+  "wild_below_next_leader": 4,
+  "tamer_below_next_leader": 1,
+  "map_region": {
+   "praia": "prologo",
+   "vila_mare": "prologo"
+  },
+  "skip_battles": [
+   "rival_",
+   "eco_",
+   "recusar"
+  ]
+ }
 }
