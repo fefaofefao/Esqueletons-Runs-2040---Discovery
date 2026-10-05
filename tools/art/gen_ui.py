@@ -256,7 +256,6 @@ def main():
     icon_menu().save(UI / "btn_menu.png")
     icon_speed(False).save(UI / "btn_speed_1x.png")
     icon_speed(True).save(UI / "btn_speed_2x.png")
-    logo().save(UI / "logo.png")
     for name, img in particles().items():
         img.save(UI / f"particle_{name}.png")
     icons = ROOT / "assets" / "icons"
