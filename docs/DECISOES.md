@@ -71,3 +71,10 @@ Registro das escolhas feitas sem consulta (AGENTS.md, seção A). Cada item diz 
 
 ### Créditos e marcas
 - O jogo cita o Godot nos créditos (licença MIT, que exige o aviso de copyright). É obrigação de licença, não propaganda de marca. O texto completo da licença entra na tela de créditos/licenças na fase 6.
+
+## Tela inicial HD (pedido do Fernando após a fase 1)
+- **A tela inicial não é pixel art:** logo e cenário em alta resolução, para servir de vitrine da série. Enquanto ela está aberta, a janela usa `CONTENT_SCALE_MODE_CANVAS_ITEMS` (desenha na resolução nativa); ao sair, volta para `VIEWPORT` e o mundo segue pixel-perfect em 320×180. As telas sobrepostas (configurações, Sobre, nome) continuam no estilo pixel do jogo.
+- **Logo:** "ESQUELETONS" em osso com uma caveira de viseira ciana no lugar do "O" (a mesma do ícone), "RUNS" em fogo com linhas de velocidade, "2040" em neon e a faixa "EDITION · DISCOVERY" em dourado. Tudo com contorno, extrusão 3D, bisel e brilho. O nome da edição fica em inglês, como marca da série. Gerado por `tools/art/gen_title.py` em 1600 px de largura, com mipmaps.
+- **Cenário:** pôr do sol retrô "2040" com sol listrado, mar com reflexo ondulando (shader), ilha com o castelo do Rei Esqueleto (janelas acesas), nuvens em parallax, coqueiros em contraluz, raios de sol girando, brasas subindo e estrela cadente de vez em quando. As camadas têm 2400×1080 e cobrem telas 16:9 a 20:9.
+- **Botões modernos** (`TitleButton`): vidro escuro com borda fina e antialiasing; o principal (Continuar/Novo jogo) é laranja e o selecionado ganha brilho ciano pulsando. Há animação de entrada (logo com quique e flash, botões subindo), que A ou um toque pulam.
+- **Fontes OFL:** Nunito no jogo; Lilita One e Orbitron só para desenhar o logo, então não vão no pacote. A especificação pede assets próprios ou CC0. Fontes OFL são o padrão do mercado e permitem uso comercial e empacotamento; a origem está registrada em `CREDITS.md`. Se o Fernando quiser 100% CC0, troco a Nunito por uma fonte CC0.

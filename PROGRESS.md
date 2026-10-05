@@ -36,6 +36,9 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 - **APK de debug gerado pelo GitHub Actions** (execução nº 3, verde), com páginas de 16 KB conferidas e manifesto verificado no CI (package, minSdk 24, targetSdk ≥ 35, só as 3 permissões). O APK não é gerado localmente porque o Android SDK (`dl.google.com`) é bloqueado neste ambiente.
 - O job do AAB de release ainda não rodou: ele precisa dos Secrets do keystore e do `publisher.json` sem placeholders (ver `docs/BUILD.md`).
 
+### Ajuste pós-fase 1: tela inicial HD
+- Logo HD novo ("ESQUELETONS RUNS 2040" + "EDITION · DISCOVERY") e tela inicial moderna em alta resolução, com cenário animado e botões novos. Detalhes em `docs/DECISOES.md`.
+
 ### Pendências e observações
 - **Package name** `com.fsamplabs.esqueletonsruns2040.discovery`: confirmar antes da primeira publicação (não muda depois).
 - `config/publisher.json` ainda tem placeholders (produtora, sobrenome, e-mail, site). O release fica bloqueado até preencher.
