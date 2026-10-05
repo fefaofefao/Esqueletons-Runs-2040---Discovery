@@ -251,7 +251,7 @@ func _place_props() -> void:
 
 
 ## Condição de flag (mapas, NPCs e diálogos):
-##   "if": flag · "if_not": flag · "if_all": [flags] · "if_any": [flags]
+##   "if": flag · "if_not": flag · "if_all": [flags] · "if_any": [flags] · "if_none": [flags]
 ##   "if_count": {"flags": [...], "min": n}  (ex.: pontos de Redenção)
 static func condition_ok(entry: Dictionary) -> bool:
 	if entry.has("if") and not SaveGame.get_flag(str(entry["if"])):
@@ -260,6 +260,9 @@ static func condition_ok(entry: Dictionary) -> bool:
 		return false
 	for f in entry.get("if_all", []):
 		if not SaveGame.get_flag(str(f)):
+			return false
+	for f in entry.get("if_none", []):
+		if SaveGame.get_flag(str(f)):
 			return false
 	if entry.has("if_any"):
 		var any := false

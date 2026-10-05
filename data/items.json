@@ -83,6 +83,14 @@
    "price": 0,
    "battle": false,
    "target": "none"
+  },
+  "malote": {
+   "name_key": "ITEM_MAILBAG",
+   "desc_key": "ITEM_MAILBAG_TEXT",
+   "kind": "key",
+   "price": 0,
+   "battle": false,
+   "target": "none"
   }
  }
 }

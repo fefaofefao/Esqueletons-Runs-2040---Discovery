@@ -60,6 +60,21 @@ NPCS = {
     "fuligem": dict(skin=(190, 140, 100), hair=(50, 50, 50), style="short", shirt=(100, 110, 80), legs=(60, 60, 50), glasses=True),
     "cascudo": dict(skin=(200, 150, 110), hair=(40, 30, 30), style="short", shirt=(90, 130, 170), legs=(70, 60, 50), small=True, hat=("cap", (200, 90, 60))),
     "bloqueio": dict(skin=(214, 160, 120), hair=(60, 40, 30), style="short", shirt=(90, 90, 100), legs=(60, 60, 70), hat=("cap", (230, 190, 60)), badge=True),
+    # pântano (4d)
+    "garca": dict(skin=(214, 160, 120), hair=(236, 236, 240), style="bun", shirt=(220, 230, 236), legs=(110, 130, 150), skirt=True, apron=(150, 200, 170)),
+    "junco": dict(skin=(190, 140, 100), hair=(70, 60, 40), style="short", shirt=(120, 140, 80), legs=(80, 70, 50), hat=("straw", (200, 180, 110)), beard=(70, 60, 40)),
+    "taboa": dict(skin=(232, 186, 150), hair=(130, 80, 50), style="pigtails", shirt=(150, 110, 70), legs=(90, 110, 70), skirt=True),
+    "bagre": dict(skin=(170, 112, 80), hair=(40, 40, 40), style="bald", shirt=(70, 110, 130), legs=(60, 70, 60), beard=(80, 80, 80), hat=("cap", (90, 120, 90))),
+    "neblina": dict(skin=(226, 190, 170), hair=(220, 226, 230), style="long", shirt=(170, 190, 200), legs=(120, 130, 150), skirt=True, cane=True),
+    "girino": dict(skin=(200, 150, 110), hair=(50, 40, 30), style="short", shirt=(120, 190, 110), legs=(70, 90, 120), small=True),
+    "sape": dict(skin=(190, 140, 100), hair=(200, 200, 190), style="bald", shirt=(140, 120, 90), legs=(90, 80, 60), beard=(200, 200, 190), cane=True),
+    "lodo": dict(skin=(214, 160, 120), hair=(90, 70, 50), style="short", shirt=(100, 90, 70), legs=(70, 60, 50), glasses=True, apron=(150, 130, 90)),
+    "pena": dict(skin=(232, 186, 150), hair=(60, 40, 40), style="bun", shirt=(70, 90, 160), legs=(60, 70, 110), hat=("cap", (70, 90, 160)), badge=True),
+    "traira": dict(skin=(200, 150, 110), hair=(30, 30, 40), style="long", shirt=(90, 130, 110), legs=(60, 70, 60), hat=("straw", (190, 170, 110))),
+    "canico": dict(skin=(232, 186, 150), hair=(170, 120, 60), style="short", shirt=(160, 160, 90), legs=(80, 80, 60)),
+    "marreco": dict(skin=(214, 160, 120), hair=(60, 40, 30), style="short", shirt=(70, 120, 90), legs=(70, 60, 50), hat=("cap", (60, 110, 70)), beard=(60, 40, 30)),
+    "remanso": dict(skin=(170, 112, 80), hair=(220, 220, 220), style="short", shirt=(120, 100, 80), legs=(70, 60, 50), hat=("straw", (210, 190, 120)), beard=(220, 220, 220)),
+    "fel": dict(skin=(200, 170, 140), hair=(100, 140, 80), style="short", shirt=(80, 110, 70), legs=(50, 60, 50), glasses=True, badge=True),
     "vo_concha": dict(skin=(232, 190, 160), hair=(236, 236, 240), style="bun", shirt=(150, 110, 180), legs=(120, 90, 140), skirt=True, glasses=True, cane=True),
 }
 
@@ -153,6 +168,22 @@ def draw_npc(r, view, breath=0):
                 d.rectangle([1, hy - 2, 6, hy - 1], fill=dk(c))
             elif view == "right":
                 d.rectangle([9, hy - 2, 14, hy - 1], fill=dk(c))
+        elif kind == "hood":
+            d.chord([2, hy - 6, 13, hy + 4], 180, 360, fill=c)
+            d.rectangle([2, hy - 1, 3, hy + 5], fill=c)
+            d.rectangle([12, hy - 1, 13, hy + 5], fill=c)
+            d.rectangle([3, hy - 2, 12, hy - 2], fill=(240, 240, 240))
+        elif kind == "wrap":
+            d.chord([3, hy - 7, 12, hy], 180, 360, fill=c)
+            d.rectangle([3, hy - 3, 12, hy - 2], fill=dk(c))
+            if view in ("left", "right"):
+                tx = 12 if view == "left" else 2
+                d.rectangle([tx, hy - 2, tx + 1, hy + 4], fill=c)
+        elif kind == "helm":
+            d.chord([3, hy - 6, 12, hy + 1], 180, 360, fill=c)
+            d.rectangle([7, hy - 8, 8, hy - 6], fill=(200, 60, 60))
+            if view == "down":
+                d.rectangle([7, hy - 2, 8, hy + 1], fill=dk(c))
         elif kind == "straw":
             d.ellipse([0, hy - 4, 15, hy - 1], fill=c)
             d.chord([4, hy - 8, 11, hy - 1], 180, 360, fill=lt(c, 0.1))

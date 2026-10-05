@@ -195,3 +195,46 @@ func test_quest_pirita() -> void:
 	await _play("minas/pirita_festa")
 	check(SaveGame.get_flag("pirita_done") and not SaveGame.get_flag("has_cristal_vela"), "festa feita, cristal entregue")
 	check_eq(int(SaveGame.data.bag.get("pocao_m", 0)), 2, "2 Poções M")
+
+
+func test_choice_pantano() -> void:
+	SaveGame.start_new("Téo")
+	SaveGame.data["bag"] = {"antidoto": 5}
+	SaveGame.set_flag("has_antidoto")
+	await _play("pantano/garca", [0, 1])
+	check(SaveGame.get_flag("pantano_doou") and SaveGame.get_flag("red_pantano"), "doar: +1 Redenção")
+	check_eq(int(SaveGame.data.bag.get("antidoto", 0)), 2, "doar: entrega 3 antídotos")
+	var town := _map("brejo")
+	var door: Dictionary = {}
+	for w in town.data.warps:
+		if str(w.to) == "brejo_casa_neblina":
+			door = w
+	check(MapView.condition_ok(door), "doar: a casa da Vó Neblina abre")
+	town.queue_free()
+	var m := _map("caldeirao")
+	var found := false
+	for n in m.all_npcs():
+		found = found or n.npc_id == "brumaga_npc"
+	check(found, "doar: Brumaga aparece no Caldeirão")
+	m.queue_free()
+	await tree.process_frame
+	SaveGame.start_new("Téo")
+	SaveGame.data["bag"] = {"antidoto": 5}
+	SaveGame.set_flag("has_antidoto")
+	await _play("pantano/garca", [1, 1])
+	check(SaveGame.get_flag("pantano_guardou") and not SaveGame.get_flag("red_pantano"), "guardar: sem Redenção")
+	check_eq(int(SaveGame.data.bag.get("antidoto", 0)), 5, "guardar: mantém os antídotos")
+	check(not MapView.condition_ok({"if": "pantano_doou"}), "guardar: casa da Neblina fechada")
+	SaveGame.start_new("Téo")
+	await _play("pantano/garca", [1])
+	check(not SaveGame.get_flag("pantano_escolheu"), "sem antídotos, a escolha fica para depois")
+
+
+func test_quest_pena() -> void:
+	SaveGame.start_new("Téo")
+	await _play("pantano/pena_pede")
+	await _play("pantano/malote")
+	check(SaveGame.get_flag("has_malote"), "pegou o malote")
+	await _play("pantano/pena_obrigada")
+	check(SaveGame.get_flag("pena_done") and not SaveGame.get_flag("has_malote"), "malote entregue")
+	check_eq(int(SaveGame.data.bag.get("antidoto", 0)), 2, "2 antídotos de recompensa")

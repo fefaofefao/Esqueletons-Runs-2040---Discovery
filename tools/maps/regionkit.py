@@ -296,7 +296,7 @@ class Region:
         for k in ("if", "if_not"):
             if k in n:
                 cond.append(f"{k} {n[k]}")
-        for k in ("if_all", "if_any"):
+        for k in ("if_all", "if_any", "if_none"):
             if k in n:
                 cond.append(f"{k} {', '.join(n[k])}")
         if "if_count" in n:

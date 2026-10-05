@@ -1,0 +1,170 @@
+{
+ "id": "caldeirao",
+ "region": "pantano",
+ "name_key": "MAP_CALDEIRAO",
+ "tileset": "overworld",
+ "legend": {
+  "g": "mud",
+  "f": "grass",
+  "B": "swamp",
+  "p": "dock",
+  ".": "floor"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBBBBppppppppBBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBppppppppBBBBggggggggggggBBBB",
+  "BBBBBBppppppppBBBBggggggggggggpppp",
+  "BBBBBBpppppppppppppgggggggggggpppp",
+  "BBBBBBpppppppppppppgggggggggggpppp",
+  "BBBgggggggggggBBBBggggggggggggpppp",
+  "BBBgggggggggggBBBBggggggggggggBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+ ],
+ "spawn": {
+  "x": 31,
+  "y": 10,
+  "facing": "left"
+ },
+ "props": [
+  {
+   "type": "cauldron",
+   "x": 10,
+   "y": 1
+  },
+  {
+   "type": "willow",
+   "x": 5,
+   "y": 3
+  },
+  {
+   "type": "dead_tree",
+   "x": 15,
+   "y": 3
+  },
+  {
+   "type": "swamp_lantern",
+   "x": 18,
+   "y": 7
+  },
+  {
+   "type": "swamp_lantern",
+   "x": 27,
+   "y": 8
+  },
+  {
+   "type": "reeds",
+   "x": 22,
+   "y": 13
+  },
+  {
+   "type": "reeds",
+   "x": 4,
+   "y": 19
+  },
+  {
+   "type": "reeds",
+   "x": 12,
+   "y": 18
+  },
+  {
+   "type": "lilypad",
+   "x": 2,
+   "y": 15
+  },
+  {
+   "type": "mail_bag",
+   "x": 26,
+   "y": 12,
+   "dialog": "pantano/malote",
+   "if": "pena_quest",
+   "if_not": "malote_pego"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "musga",
+   "x": 10,
+   "y": 3,
+   "facing": "down"
+  },
+  {
+   "id": "fel",
+   "x": 14,
+   "y": 10,
+   "facing": "right"
+  },
+  {
+   "id": "brumaga_npc",
+   "x": 9,
+   "y": 15,
+   "facing": "left",
+   "if": "pantano_doou"
+  }
+ ],
+ "warps": [
+  {
+   "x": 33,
+   "y": 10,
+   "to": "brejo",
+   "tx": 1,
+   "ty": 15,
+   "facing": "right",
+   "sfx": ""
+  },
+  {
+   "x": 33,
+   "y": 11,
+   "to": "brejo",
+   "tx": 1,
+   "ty": 16,
+   "facing": "right",
+   "sfx": ""
+  }
+ ],
+ "spawns": [
+  {
+   "id": "cald_salao",
+   "table": "caldeirao_salao",
+   "x": 23,
+   "y": 10,
+   "radius": 3,
+   "count": 2
+  },
+  {
+   "id": "cald_sul",
+   "table": "caldeirao_sul",
+   "x": 6,
+   "y": 15,
+   "radius": 2,
+   "count": 1
+  }
+ ],
+ "ambient": [
+  "mist"
+ ],
+ "tint": [
+  0.7,
+  0.82,
+  0.7
+ ],
+ "on_enter": [
+  {
+   "if_not": "caldeirao_visto",
+   "dialog": "pantano/chegada_caldeirao"
+  }
+ ]
+}

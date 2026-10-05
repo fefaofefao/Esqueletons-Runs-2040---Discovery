@@ -86,9 +86,16 @@
    ],
    "music": "",
    "maps": [
-    "rota_3"
+    "rota_3",
+    "brejo",
+    "caldeirao",
+    "brejo_rancho",
+    "brejo_loja",
+    "brejo_casa_taboa",
+    "brejo_casa_bagre",
+    "brejo_casa_neblina"
    ],
-   "battle_bg": "res://assets/battle/bg_praia.png"
+   "battle_bg": "res://assets/battle/bg_pantano.png"
   },
   "ossorio": {
    "name_key": "REGION_OSSORIO",
@@ -99,7 +106,9 @@
     0.9
    ],
    "music": "",
-   "maps": [],
+   "maps": [
+    "rota_4"
+   ],
    "battle_bg": "res://assets/battle/bg_praia.png"
   },
   "picos": {

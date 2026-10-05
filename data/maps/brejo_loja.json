@@ -1,0 +1,71 @@
+{
+ "id": "brejo_loja",
+ "region": "pantano",
+ "name_key": "MAP_BREJO_LOJA",
+ "tileset": "overworld",
+ "legend": {
+  "T": "wall_top",
+  "w": "wall",
+  "n": "wall_window",
+  ".": "floor",
+  "m": "mat"
+ },
+ "ground": [
+  "TTTTTTTTTTTT",
+  "TwwnwwwwwnwT",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "TTTTTTmTTTTT"
+ ],
+ "spawn": {
+  "x": 6,
+  "y": 8,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "shelf",
+   "x": 3,
+   "y": 2
+  },
+  {
+   "type": "shelf",
+   "x": 10,
+   "y": 2
+  },
+  {
+   "type": "table",
+   "x": 7,
+   "y": 4
+  },
+  {
+   "type": "barrel",
+   "x": 1,
+   "y": 7
+  }
+ ],
+ "npcs": [
+  {
+   "id": "junco",
+   "x": 6,
+   "y": 3,
+   "facing": "down"
+  }
+ ],
+ "warps": [
+  {
+   "x": 6,
+   "y": 9,
+   "to": "brejo",
+   "tx": 27,
+   "ty": 11,
+   "facing": "down",
+   "sfx": "door"
+  }
+ ]
+}

@@ -1659,10 +1659,1575 @@
    "layer": "y",
    "interactive": true
   },
-  "raizerno_tree": {
+  "reeds": {
+   "rect": [
+    214,
+    488,
+    16,
+    22
+   ],
+   "frames": 2,
+   "fps": 1.2,
+   "origin": [
+    8,
+    21
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "lilypad": {
    "rect": [
     0,
     523,
+    16,
+    12
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    8,
+    11
+   ],
+   "collision": [],
+   "layer": "ground",
+   "interactive": false
+  },
+  "willow": {
+   "rect": [
+    17,
+    523,
+    44,
+    56
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    22,
+    54
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ],
+    [
+     -1,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "dead_tree": {
+   "rect": [
+    62,
+    523,
+    30,
+    40
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    15,
+    39
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "cauldron": {
+   "rect": [
+    93,
+    523,
+    26,
+    26
+   ],
+   "frames": 2,
+   "fps": 2.5,
+   "origin": [
+    13,
+    25
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ],
+    [
+     -1,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true,
+   "light": {
+    "radius": 30,
+    "color": [
+     0.6,
+     1.0,
+     0.5
+    ],
+    "intensity": 0.35,
+    "offset": [
+     0,
+     -10
+    ]
+   }
+  },
+  "stilt_house": {
+   "rect": [
+    146,
+    523,
+    64,
+    62
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    32,
+    61
+   ],
+   "collision": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "stilt_house_ranch": {
+   "rect": [
+    0,
+    586,
+    80,
+    70
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    40,
+    69
+   ],
+   "collision": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ],
+    [
+     2,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "stilt_house_shop": {
+   "rect": [
+    81,
+    586,
+    80,
+    70
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    40,
+    69
+   ],
+   "collision": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ],
+    [
+     2,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "mail_bag": {
+   "rect": [
+    162,
+    586,
+    16,
+    14
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    8,
+    13
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "swamp_lantern": {
+   "rect": [
+    179,
+    586,
+    12,
+    28
+   ],
+   "frames": 2,
+   "fps": 1.5,
+   "origin": [
+    6,
+    27
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false,
+   "light": {
+    "radius": 32,
+    "color": [
+     0.7,
+     1.0,
+     0.6
+    ],
+    "intensity": 0.35,
+    "offset": [
+     0,
+     -22
+    ]
+   }
+  },
+  "townhouse": {
+   "rect": [
+    0,
+    657,
+    64,
+    70
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    32,
+    69
+   ],
+   "collision": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "townhouse_ranch": {
+   "rect": [
+    65,
+    657,
+    80,
+    74
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    40,
+    73
+   ],
+   "collision": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ],
+    [
+     2,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "townhouse_shop": {
+   "rect": [
+    146,
+    657,
+    80,
+    74
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    40,
+    73
+   ],
+   "collision": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ],
+    [
+     2,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "banner_blue": {
+   "rect": [
+    227,
+    657,
+    12,
+    34
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    6,
+    33
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "statue_prince": {
+   "rect": [
+    0,
+    732,
+    24,
+    44
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    12,
+    43
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "fountain": {
+   "rect": [
+    25,
+    732,
+    40,
+    30
+   ],
+   "frames": 2,
+   "fps": 3.0,
+   "origin": [
+    20,
+    27
+   ],
+   "collision": [
+    [
+     -1,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "city_gate": {
+   "rect": [
+    106,
+    732,
+    64,
+    56
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    32,
+    55
+   ],
+   "collision": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "bookshelf": {
+   "rect": [
+    171,
+    732,
+    30,
+    34
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    15,
+    33
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ],
+    [
+     -1,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "lectern": {
+   "rect": [
+    202,
+    732,
+    16,
+    22
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    8,
+    21
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "portrait": {
+   "rect": [
+    219,
+    732,
+    22,
+    26
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    11,
+    25
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "bell_tower": {
+   "rect": [
+    0,
+    789,
+    26,
+    44
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    13,
+    43
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ],
+    [
+     -1,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "torch": {
+   "rect": [
+    27,
+    789,
+    10,
+    22
+   ],
+   "frames": 2,
+   "fps": 6.0,
+   "origin": [
+    5,
+    21
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false,
+   "light": {
+    "radius": 34,
+    "color": [
+     1.0,
+     0.7,
+     0.4
+    ],
+    "intensity": 0.35,
+    "offset": [
+     0,
+     -14
+    ]
+   }
+  },
+  "snow_pine": {
+   "rect": [
+    48,
+    789,
+    28,
+    46
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    14,
+    44
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "chalet": {
+   "rect": [
+    77,
+    789,
+    64,
+    62
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    32,
+    61
+   ],
+   "collision": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "chalet_ranch": {
+   "rect": [
+    142,
+    789,
+    80,
+    70
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    40,
+    69
+   ],
+   "collision": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ],
+    [
+     2,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "chalet_shop": {
+   "rect": [
+    0,
+    860,
+    80,
+    70
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    40,
+    69
+   ],
+   "collision": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ],
+    [
+     2,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "snowman": {
+   "rect": [
+    81,
+    860,
+    18,
+    26
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    9,
+    25
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "prayer_flags": {
+   "rect": [
+    100,
+    860,
+    48,
+    16
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    24,
+    15
+   ],
+   "collision": [],
+   "layer": "y",
+   "interactive": false
+  },
+  "kettle": {
+   "rect": [
+    149,
+    860,
+    20,
+    20
+   ],
+   "frames": 2,
+   "fps": 2.0,
+   "origin": [
+    10,
+    19
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false,
+   "light": {
+    "radius": 20,
+    "color": [
+     1.0,
+     0.7,
+     0.5
+    ],
+    "intensity": 0.25,
+    "offset": [
+     0,
+     -4
+    ]
+   }
+  },
+  "letter": {
+   "rect": [
+    190,
+    860,
+    12,
+    10
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    6,
+    9
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "monastery_gate": {
+   "rect": [
+    0,
+    931,
+    56,
+    48
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    28,
+    47
+   ],
+   "collision": [
+    [
+     -1,
+     0
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     1,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "cactus": {
+   "rect": [
+    57,
+    931,
+    18,
+    26
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    9,
+    25
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "tent": {
+   "rect": [
+    76,
+    931,
+    64,
+    52
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    32,
+    51
+   ],
+   "collision": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "tent_ranch": {
+   "rect": [
+    141,
+    931,
+    80,
+    60
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    40,
+    59
+   ],
+   "collision": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ],
+    [
+     2,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "tent_shop": {
+   "rect": [
+    0,
+    992,
+    80,
+    60
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    40,
+    59
+   ],
+   "collision": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ],
+    [
+     2,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "broken_column": {
+   "rect": [
+    81,
+    992,
+    16,
+    36
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    8,
+    35
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "hourglass": {
+   "rect": [
+    98,
+    992,
+    24,
+    38
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    12,
+    37
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "drum": {
+   "rect": [
+    123,
+    992,
+    16,
+    16
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    8,
+    15
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "oasis_pool": {
+   "rect": [
+    140,
+    992,
+    48,
+    28
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    24,
+    27
+   ],
+   "collision": [
+    [
+     -1,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ]
+   ],
+   "layer": "ground",
+   "interactive": false
+  },
+  "throne": {
+   "rect": [
+    189,
+    992,
+    34,
+    44
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    17,
+    43
+   ],
+   "collision": [
+    [
+     -1,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "pillar": {
+   "rect": [
+    224,
+    992,
+    20,
+    48
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    10,
+    47
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "candelabra": {
+   "rect": [
+    0,
+    1053,
+    18,
+    30
+   ],
+   "frames": 2,
+   "fps": 5.0,
+   "origin": [
+    9,
+    29
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false,
+   "light": {
+    "radius": 40,
+    "color": [
+     1.0,
+     0.75,
+     0.45
+    ],
+    "intensity": 0.4,
+    "offset": [
+     0,
+     -24
+    ]
+   }
+  },
+  "castle_door": {
+   "rect": [
+    37,
+    1053,
+    48,
+    52
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    24,
+    51
+   ],
+   "collision": [
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "crown_pedestal": {
+   "rect": [
+    86,
+    1053,
+    22,
+    30
+   ],
+   "frames": 2,
+   "fps": 1.0,
+   "origin": [
+    11,
+    29
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true,
+   "light": {
+    "radius": 30,
+    "color": [
+     0.85,
+     0.6,
+     1.0
+    ],
+    "intensity": 0.35,
+    "offset": [
+     0,
+     -20
+    ]
+   }
+  },
+  "vitrine_empty": {
+   "rect": [
+    131,
+    1053,
+    32,
+    36
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    16,
+    35
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ],
+    [
+     -1,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "lighthouse_lit": {
+   "rect": [
+    0,
+    1106,
+    72,
+    92
+   ],
+   "frames": 2,
+   "fps": 1.0,
+   "origin": [
+    36,
+    91
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": true,
+   "light": {
+    "radius": 64,
+    "color": [
+     1.0,
+     0.95,
+     0.7
+    ],
+    "intensity": 0.45,
+    "offset": [
+     0,
+     -80
+    ]
+   }
+  },
+  "raizerno_tree": {
+   "rect": [
+    145,
+    1106,
     56,
     64
    ],

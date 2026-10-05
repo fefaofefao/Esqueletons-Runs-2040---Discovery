@@ -42,6 +42,27 @@
      "note": "Galeria Velha: curta, com um selvagem forte"
     }
    ]
+  },
+  {
+   "id": "rota_3",
+   "map": "rota_3",
+   "from": "brasal",
+   "to": "brejo",
+   "paths": [
+    {
+     "kind": "domadores",
+     "required": false
+    },
+    {
+     "kind": "selvagem",
+     "required": false
+    },
+    {
+     "kind": "atalho",
+     "required": false,
+     "note": "Passagem do Desmoronamento: exige o Martelo da Tia (escolha 2)"
+    }
+   ]
   }
  ]
 }

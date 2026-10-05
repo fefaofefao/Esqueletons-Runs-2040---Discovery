@@ -63,6 +63,11 @@ SPK_AGATA
 BTL_TAMER_AGATA
 MAP_BRASAL
 # --- fim minas ---
+# --- região pantano (nomes próprios iguais nos idiomas) ---
+SPK_BAGRE
+SPK_MUSGA
+BTL_TAMER_BAGRE
+# --- fim pantano ---
 # --- gerado por tools/bestiary/build.py (descrições de golpes) ---
 MOVE_CHUTE_NA_CANELA_DESC
 MOVE_RANGER_OS_DENTES_DESC

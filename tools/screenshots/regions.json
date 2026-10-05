@@ -108,5 +108,122 @@
     "after_shot_at": 3
    }
   ]
+ },
+ "pantano": {
+  "flags": [
+   "intro_done",
+   "bento_met",
+   "has_partner",
+   "partner_lia",
+   "tut_battle",
+   "tut_marker",
+   "bras_beaten",
+   "ramalho_beaten",
+   "vigia_lasca_ok",
+   "fornalha_beaten",
+   "minas_negociou",
+   "has_martelo_tia"
+  ],
+  "party": [
+   [
+    "faroleira_2",
+    44,
+    "Lia"
+   ],
+   [
+    "lenhador_3",
+    43
+   ],
+   [
+    "mineiro_2",
+    43
+   ],
+   [
+    "herborista_3",
+    42
+   ]
+  ],
+  "steps": [
+   {
+    "map": "rota_3",
+    "x": 19,
+    "y": 43,
+    "f": "up",
+    "shot": "pa1_rota3",
+    "no_wait_warp": true,
+    "shot_at": 0
+   },
+   {
+    "map": "rota_3",
+    "x": 31,
+    "y": 28,
+    "f": "up",
+    "shot": "pa2_capinzal"
+   },
+   {
+    "map": "rota_3",
+    "x": 19,
+    "y": 30,
+    "f": "up",
+    "shot": "pa3_atalho"
+   },
+   {
+    "map": "brejo",
+    "x": 19,
+    "y": 24,
+    "f": "up",
+    "shot": "pa4_brejo",
+    "no_wait_warp": true,
+    "shot_at": 0
+   },
+   {
+    "map": "brejo",
+    "x": 19,
+    "y": 12,
+    "f": "up",
+    "shot": "pa5_brejo_norte"
+   },
+   {
+    "map": "brejo_rancho",
+    "x": 7,
+    "y": 4,
+    "f": "up",
+    "interact": [
+     7,
+     3
+    ],
+    "shot": "pa6_garca",
+    "shot_at": 2,
+    "flags": [
+     "has_antidoto"
+    ],
+    "choices": [
+     1,
+     1
+    ]
+   },
+   {
+    "map": "caldeirao",
+    "x": 24,
+    "y": 11,
+    "f": "left",
+    "shot": "pa7_caldeirao",
+    "no_wait_warp": true,
+    "shot_at": 0
+   },
+   {
+    "map": "caldeirao",
+    "x": 10,
+    "y": 7,
+    "f": "up",
+    "flags": [
+     "fel_beaten"
+    ],
+    "step": "up",
+    "shot": "pa8_musga",
+    "shot_at": 1,
+    "battle": true
+   }
+  ]
  }
 }

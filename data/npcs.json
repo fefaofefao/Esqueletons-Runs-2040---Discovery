@@ -1042,6 +1042,373 @@
      "dialog": "minas/cascudo"
     }
    ]
+  },
+  "remanso": {
+   "name_key": "SPK_REMANSO",
+   "role": "hint",
+   "sprite": "res://assets/sprites/npc/remanso.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "pantano/remanso"
+    }
+   ]
+  },
+  "traira": {
+   "name_key": "SPK_TRAIRA",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/traira.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "traira_beaten",
+     "dialog": "pantano/traira_depois"
+    },
+    {
+     "dialog": "pantano/traira"
+    }
+   ],
+   "tamer": {
+    "vision": 4,
+    "flag": "traira_beaten"
+   }
+  },
+  "canico": {
+   "name_key": "SPK_CANICO",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/canico.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "canico_beaten",
+     "dialog": "pantano/canico_depois"
+    },
+    {
+     "dialog": "pantano/canico"
+    }
+   ],
+   "tamer": {
+    "vision": 4,
+    "flag": "canico_beaten"
+   }
+  },
+  "marreco": {
+   "name_key": "SPK_MARRECO",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/marreco.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "marreco_beaten",
+     "dialog": "pantano/marreco_depois"
+    },
+    {
+     "dialog": "pantano/marreco"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "marreco_beaten"
+   }
+  },
+  "garca": {
+   "name_key": "SPK_GARCA",
+   "role": "ranch",
+   "sprite": "res://assets/sprites/npc/garca.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "pantano/garca"
+    }
+   ]
+  },
+  "junco": {
+   "name_key": "SPK_JUNCO",
+   "role": "shop",
+   "sprite": "res://assets/sprites/npc/junco.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "pantano/junco"
+    }
+   ]
+  },
+  "girino": {
+   "name_key": "SPK_GIRINO",
+   "role": "humor",
+   "sprite": "res://assets/sprites/npc/girino.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "pantano/girino"
+    }
+   ]
+  },
+  "sape": {
+   "name_key": "SPK_SAPE",
+   "role": "lore",
+   "sprite": "res://assets/sprites/npc/sape.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "pantano/sape"
+    }
+   ]
+  },
+  "lodo": {
+   "name_key": "SPK_LODO",
+   "role": "hint",
+   "sprite": "res://assets/sprites/npc/lodo.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "pantano/lodo"
+    }
+   ]
+  },
+  "pena": {
+   "name_key": "SPK_PENA",
+   "role": "quest",
+   "sprite": "res://assets/sprites/npc/pena.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "pena_done",
+     "dialog": "pantano/pena_depois"
+    },
+    {
+     "if": "has_malote",
+     "dialog": "pantano/pena_obrigada"
+    },
+    {
+     "if": "pena_quest",
+     "dialog": "pantano/pena_onde"
+    },
+    {
+     "dialog": "pantano/pena_pede"
+    }
+   ]
+  },
+  "taboa": {
+   "name_key": "SPK_TABOA",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/taboa.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "taboa_beaten",
+     "dialog": "pantano/taboa_depois"
+    },
+    {
+     "dialog": "pantano/taboa"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "taboa_beaten"
+   }
+  },
+  "bagre": {
+   "name_key": "SPK_BAGRE",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/bagre.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "bagre_beaten",
+     "dialog": "pantano/bagre_depois"
+    },
+    {
+     "dialog": "pantano/bagre"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "bagre_beaten"
+   }
+  },
+  "neblina": {
+   "name_key": "SPK_NEBLINA",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/neblina.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "neblina_beaten",
+     "dialog": "pantano/neblina_depois"
+    },
+    {
+     "dialog": "pantano/neblina"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "neblina_beaten"
+   }
+  },
+  "taro_brejo": {
+   "name_key": "SPK_TARO",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_taro.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "pantano/taro_brejo"
+    }
+   ]
+  },
+  "fel": {
+   "name_key": "SPK_FEL",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/fel.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "fel_beaten",
+     "dialog": "pantano/fel_depois"
+    },
+    {
+     "dialog": "pantano/fel"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "fel_beaten"
+   }
+  },
+  "brumaga_npc": {
+   "name_key": "SPECIES_BRUMAGA",
+   "role": "wild",
+   "sprite": "res://assets/sprites/npc/skel_brumaga.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "pantano/brumaga"
+    }
+   ]
+  },
+  "musga": {
+   "name_key": "SPK_MUSGA",
+   "role": "guardian",
+   "sprite": "res://assets/sprites/npc/skel_musga.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "if": "musga_beaten",
+     "dialog": "pantano/musga_depois"
+    },
+    {
+     "dialog": "pantano/musga"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "musga_beaten"
+   }
   }
  }
 }

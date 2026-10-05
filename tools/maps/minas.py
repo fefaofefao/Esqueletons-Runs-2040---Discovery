@@ -459,11 +459,11 @@ town = make_town("brasal", "minas", "MAP_BRASAL", dict(LEG, s="stone"),
                  houses=["house_stone_ranch", "house_stone_shop", "house_stone", "house_stone", "house_stone"],
                  npcs=[{"id": "pirita", "x": 16, "y": 16, "facing": "right"}, {"id": "fagulha", "x": 23, "y": 14, "facing": "down"},
                        {"id": "turmalina", "x": 25, "y": 18, "facing": "left"},
-                       {"id": "guarda_estrada", "x": 21, "y": 2, "facing": "left", "if_not": "fornalha_beaten"}],
+                       {"id": "guarda_estrada", "x": 21, "y": 4, "facing": "left", "if_not": "fornalha_beaten"}],
                  props=[{"type": "sign", "x": 18, "y": 28, "dialog": R.ref("placa_brasal")}, {"type": "sign", "x": 3, "y": 14, "dialog": R.ref("placa_mina")},
                         {"type": "anvil", "x": 22, "y": 16}, {"type": "mine_lamp", "x": 13, "y": 13}, {"type": "mine_lamp", "x": 26, "y": 13},
                         {"type": "rails", "x": 5, "y": 15}, {"type": "rails", "x": 6, "y": 15}, {"type": "mine_cart", "x": 7, "y": 13},
-                        {"type": "chain_gate", "x": 20, "y": 1, "if_not": "fornalha_beaten"}],
+                        {"type": "chain_gate", "x": 20, "y": 3, "if_not": "fornalha_beaten"}],
                  deco=("rock_small", "rock_big", "crystal"), north_guard=None, tint=[0.9, 0.84, 0.82], seed=31, plaza="s")
 for w in town["warps"]:
     if w["to"] == "rota_3":

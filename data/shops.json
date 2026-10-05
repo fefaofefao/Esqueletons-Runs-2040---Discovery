@@ -24,6 +24,11 @@
     "minas_quebrou": 1.25,
     "minas_negociou": 0.9
    }
-  }
+  },
+  "brejo": [
+   "pocao_m",
+   "pocao_g",
+   "reviver"
+  ]
  }
 }

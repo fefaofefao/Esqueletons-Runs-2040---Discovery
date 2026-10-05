@@ -301,3 +301,113 @@ ITEM_CRYSTAL_TEXT,Brilha sozinho e não apaga com sopro. A Pirita quer para um b
 SPK_CASCUDO,Cascudo,Pebbles,Pedrusco
 DLG_M_CASCUDO_1,Eu cato cristal aqui. Uma vez vi um esqueleto dourado brilhando mais que todos eles juntos!,I collect crystals here. Once I saw a golden skeleton shining brighter than all of them together!,Aquí recojo cristales. ¡Una vez vi un esqueleto dorado que brillaba más que todos juntos!
 DLG_M_CASCUDO_2,"Ele piscava e fazia tlin-tlin. Se ouvir esse som, corre atrás!","It sparkled and went ting-ting. If you hear that sound, chase it!","Centelleaba y hacía tilín-tilín. ¡Si oyes ese sonido, corre tras él!"
+SPK_REMANSO,Barqueiro Remanso,Boatman Backwater,Barquero Remanso
+SPK_TRAIRA,Traíra,Pike,Lucio
+SPK_CANICO,Caniço,Rod,Caña
+SPK_MARRECO,Marreco,Teal,Cerceta
+SPK_GARCA,Dona Garça,Mrs. Heron,Doña Garza
+SPK_JUNCO,Seu Junco,Mr. Rush,Don Junco
+SPK_TABOA,Irmãs Taboa,Cattail Sisters,Hermanas Totora
+SPK_BAGRE,Pescador Bagre,Fisher Catfish,Pescador Bagre
+SPK_NEBLINA,Vó Neblina,Granny Fog,Abuela Neblina
+SPK_GIRINO,Girino,Tadpole,Renacuajo
+SPK_SAPE,Seu Sapé,Old Thatch,Don Paja
+SPK_LODO,Lodo,Silt,Limo
+SPK_PENA,Dona Pena,Mrs. Quill,Doña Pluma
+SPK_FEL,Boticário Fel,Apothecary Bile,Boticario Hiel
+SPK_MUSGA,Musga,Musga,Musga
+BTL_TAMER_TRAIRA,Traíra,Pike,Lucio
+BTL_TAMER_CANICO,Caniço,Rod,Caña
+BTL_TAMER_MARRECO,Marreco,Teal,Cerceta
+BTL_TAMER_TABOA,Irmãs Taboa,Cattail Sisters,Hermanas Totora
+BTL_TAMER_BAGRE,Pescador Bagre,Fisher Catfish,Pescador Bagre
+BTL_TAMER_NEBLINA,Vó Neblina,Granny Fog,Abuela Neblina
+BTL_TAMER_FEL,Boticário Fel,Apothecary Bile,Boticario Hiel
+BTL_TAMER_MUSGA,Guardiã Musga,Guardian Musga,Guardiana Musga
+MAP_ROTA_3,Rota 3 — Trilha das Palafitas,Route 3 — Stilt Trail,Ruta 3 — Sendero de Palafitos
+MAP_BREJO,Brejo Alto,Highmarsh,Ciénaga Alta
+MAP_CALDEIRAO,Caldeirão da Musga,Musga's Cauldron,Caldero de Musga
+MAP_BREJO_RANCHO,Rancho da Garça,Heron's Ranch,Rancho de Garza
+MAP_BREJO_LOJA,Venda do Junco,Rush's Shop,Tienda de Junco
+MAP_BREJO_CASA_TABOA,Casa das Irmãs Taboa,Cattail Sisters' House,Casa de las Hermanas Totora
+MAP_BREJO_CASA_BAGRE,Casa do Bagre,Catfish's House,Casa de Bagre
+MAP_BREJO_CASA_NEBLINA,Casa da Vó Neblina,Granny Fog's House,Casa de la Abuela Neblina
+MSG_MUSGA_ROAD,A névoa da Musga engole a estrada do norte. Ninguém acha o caminho.,Musga's fog swallows the north road. Nobody can find the way.,La niebla de Musga se traga el camino del norte. Nadie encuentra el rumbo.
+MSG_NEBLINA_DOOR,"Porta trancada. Lá dentro, alguém tosse baixinho.",The door is locked. Someone inside is coughing softly.,"Puerta cerrada. Dentro, alguien tose bajito."
+ITEM_MAILBAG,Malote da Pena,Quill's Mailbag,Saca de Pluma
+ITEM_MAILBAG_TEXT,"Cartas da vila inteira, todas abertas e com bilhetinhos da Musga.","Letters from the whole village, all opened and with notes from Musga.","Cartas de toda la aldea, todas abiertas y con notitas de Musga."
+OPT_PA_DONATE,Doar antídotos,Donate antidotes,Donar antídotos
+OPT_PA_KEEP,Guardar,Keep them,Guardarlos
+OPT_PA_FIGHT_MIST,Enfrentar a névoa,Face the fog,Enfrentar la niebla
+SIGN_PA_FORK,← Trilha das Tábuas · ↑ Passagem do Desmoronamento · → Capinzal,← Boardwalk Trail · ↑ Rockfall Pass · → Tallgrass,← Sendero de Tablas · ↑ Paso del Derrumbe · → Pastizal
+OBJ_PA_RUBBLE,Entulho de um desmoronamento antigo. Um martelo forte daria conta.,Rubble from an old rockfall. A strong hammer would do the trick.,Escombros de un derrumbe antiguo. Un martillo fuerte bastaría.
+DLG_PA_REMANSO_1,"Três trilhas: na das tábuas tem gente brava, no capim tem bicho, e no meio tem pedra caída.","Three trails: the boardwalk has grumpy folks, the tall grass has critters, and the middle has fallen rock.","Tres senderos: en las tablas hay gente brava, en el pasto hay bichos y en medio hay piedras caídas."
+DLG_PA_REMANSO_2,Antes eu levava todo mundo de barco. Agora a névoa não deixa nem o barco sair.,I used to ferry everyone by boat. Now the fog won't even let the boat leave.,Antes llevaba a todos en barca. Ahora la niebla no deja salir ni a la barca.
+DLG_PA_REMANSO_HAMMER,Esse martelo é da Tia Fornalha? Então a pedra do meio já era!,Is that Aunt Furnace's hammer? Then the middle rocks are history!,¿Ese martillo es de la Tía Fragua? ¡Entonces las piedras del medio ya fueron!
+DLG_PA_TRAIRA_1,"Pesco esqueleto, não peixe. Peixe não revida. Vamos!","I fish for skeletons, not fish. Fish don't fight back. Let's go!","Pesco esqueletos, no peces. Los peces no se defienden. ¡Vamos!"
+DLG_PA_TRAIRA_2,Escapou do anzol. Dessa vez.,Got off the hook. This time.,Te escapaste del anzuelo. Esta vez.
+DLG_PA_CANICO_1,Eu tinha uma vara de pescar. Agora tenho um esqueleto que segura a vara pra mim.,I used to have a fishing rod. Now I have a skeleton who holds the rod for me.,Tenía una caña de pescar. Ahora tengo un esqueleto que me sostiene la caña.
+DLG_PA_CANICO_2,Ele também não pesca nada. Mas é ótima companhia.,He doesn't catch anything either. But he's great company.,Él tampoco pesca nada. Pero es muy buena compañía.
+DLG_PA_MARRECO_1,Meus patos fugiram da névoa. Meus esqueletos ficaram. Sabe por quê? Lealdade!,My ducks fled the fog. My skeletons stayed. Know why? Loyalty!,Mis patos huyeron de la niebla. Mis esqueletos se quedaron. ¿Sabes por qué? ¡Lealtad!
+DLG_PA_MARRECO_2,Leva esses antídotos. Lá na vila tão precisando mais que eu.,Take these antidotes. The village needs them more than I do.,Llévate estos antídotos. En la aldea los necesitan más que yo.
+DLG_PA_ARR_L1,"Vaga-lumes! Olha, eles acendem um pro outro achar o caminho.","Fireflies! Look, they light up so the others can find the way.","¡Luciérnagas! Mira, se encienden para que los demás encuentren el camino."
+DLG_PA_ARR_L2,Igual farol. Só que pequenininho.,Like a lighthouse. Just a tiny one.,Como un faro. Solo que chiquitito.
+DLG_PA_ARR_T1,Lama até o joelho. Ótimo.,Mud up to my knees. Great.,Barro hasta las rodillas. Genial.
+DLG_PA_ARR_T2,"Se meu pai tivesse aqui, já tinha feito uma ponte.","If my dad were here, he'd have built a bridge by now.","Si mi papá estuviera aquí, ya habría hecho un puente."
+SIGN_PA_BREJO,"Brejo Alto. Casa com perna, gente com fôlego.","Highmarsh. Houses with legs, folks with lungs.","Ciénaga Alta. Casas con patas, gente con pulmones."
+SIGN_PA_CAULDRON,← Caldeirão da Musga. Fila do remédio: de manhã.,← Musga's Cauldron. Medicine line: mornings.,← Caldero de Musga. Fila del remedio: por la mañana.
+DLG_PA_ARR_BL1,Casas de perna comprida! Será que elas andam quando ninguém tá olhando?,Long-legged houses! Do you think they walk when nobody's looking?,¡Casas de patas largas! ¿Caminarán cuando nadie mira?
+DLG_PA_ARR_BT1,Todo mundo tossindo. Isso não é doença. É alguém fazendo.,Everyone's coughing. That's no sickness. Someone's doing it.,Todos tosiendo. Eso no es enfermedad. Alguien lo está haciendo.
+DLG_PA_GARCA_1,"A névoa desce toda noite. De manhã, fila na porta da Musga pra buscar o remédio dela.","The fog rolls in every night. In the morning, everyone lines up at Musga's door for her medicine.","La niebla baja cada noche. Por la mañana, fila en la puerta de Musga para buscar su remedio."
+DLG_PA_GARCA_2,Meu antídoto acabou. As crianças tossem e eu só tenho chá de capim.,I'm out of antidotes. The kids are coughing and all I have is grass tea.,Se me acabaron los antídotos. Los niños tosen y solo tengo té de pasto.
+DLG_PA_GARCA_ASK,Você carrega antídotos... Doaria alguns pras crianças? Até três já curam a rua inteira.,You're carrying antidotes... Would you donate some for the kids? Up to three would cure the whole street.,Llevas antídotos... ¿Donarías algunos para los niños? Hasta tres curan la calle entera.
+DLG_PA_GARCA_NONE,"Se arranjar antídoto, as crianças agradecem. A Vó Neblina também.","If you come across antidotes, the kids would be grateful. Granny Fog too.","Si consigues antídotos, los niños te lo agradecerán. La abuela Neblina también."
+DLG_PA_DONATE_1,Isso cura a rua das crianças inteirinha. E sobra pra Vó Neblina!,This will cure the whole kids' street. And there's some left for Granny Fog!,Esto cura toda la calle de los niños. ¡Y sobra para la abuela Neblina!
+DLG_PA_DONATE_2,"Ela era domadora das boas. Quando melhorar, vai querer te conhecer.","She was a fine tamer. Once she's better, she'll want to meet you.","Era una domadora de las buenas. Cuando mejore, querrá conocerte."
+DLG_PA_KEEP,Entendo. Estrada longa pede bolso cheio. O chá vai ter que dar conta.,I understand. A long road calls for full pockets. The tea will have to do.,Entiendo. Camino largo pide bolsillo lleno. El té tendrá que bastar.
+DLG_PA_GARCA_AFTER,A névoa parou! Agora é só esperar a tosse ir embora sozinha.,The fog stopped! Now we just wait for the coughs to leave on their own.,¡La niebla paró! Ahora solo hay que esperar que la tos se vaya sola.
+DLG_PA_JUNCO_1,Antídoto? Acabou faz uma semana. A Musga compra tudo pra ninguém mais ter.,Antidotes? Sold out a week ago. Musga buys them all so nobody else has any.,¿Antídotos? Se acabaron hace una semana. Musga los compra todos para que nadie más tenga.
+DLG_PA_JUNCO_2,"Poção eu tenho. Remédio de verdade, só ela. Esperta, a moça.","Potions I've got. Real medicine, only she does. Clever girl.","Pociones tengo. Remedio de verdad, solo ella. Lista, la muchacha."
+DLG_PA_GIRINO,Eu prendo a respiração quando a névoa desce. Meu recorde é três segundos.,I hold my breath when the fog comes down. My record is three seconds.,Aguanto la respiración cuando baja la niebla. Mi récord es tres segundos.
+DLG_PA_GIRINO_AFTER,Agora eu respiro à vontade! Já tô no recorde de mil segundos.,Now I can breathe all I want! I'm already at a thousand-second record.,¡Ahora respiro todo lo que quiero! Ya voy por el récord de mil segundos.
+DLG_PA_SAPE_1,"A Musga é sobrinha do Rei. Dizem que da primeira vez ela se foi sozinha, numa torre que ninguém visitava.","Musga is the King's niece. They say the first time around she passed alone, in a tower nobody visited.","Musga es sobrina del Rey. Dicen que la primera vez se fue sola, en una torre que nadie visitaba."
+DLG_PA_SAPE_2,Gente esquecida faz cada coisa pra ser lembrada...,Forgotten folks do the strangest things to be remembered...,La gente olvidada hace cada cosa para que la recuerden...
+DLG_PA_LODO_1,"Veneno dura de três a cinco turnos. Antídoto cedo poupa vida; tarde, poupa antídoto.",Poison lasts three to five turns. An early antidote saves health; a late one saves antidotes.,"El veneno dura de tres a cinco turnos. Antídoto temprano ahorra vida; tarde, ahorra antídoto."
+DLG_PA_LODO_2,A equipe da Musga se cura enquanto você se envenena. Bate primeiro em quem cura.,Musga's team heals while you get poisoned. Hit the healer first.,El equipo de Musga se cura mientras tú te envenenas. Golpea primero al que cura.
+DLG_PA_PENA_ASK,O capanga da Musga levou meu malote! Ela lê as cartas de todo mundo.,Musga's henchman took my mailbag! She reads everybody's letters.,¡El secuaz de Musga se llevó mi saca! Ella lee las cartas de todo el mundo.
+DLG_PA_PENA_WHERE,"Fica no Caldeirão, a oeste. Cuidado com o boticário de óculos.","It's in the Cauldron, to the west. Watch out for the apothecary in glasses.","Está en el Caldero, al oeste. Cuidado con el boticario de gafas."
+OBJ_PA_MAILBAG,O malote da Dona Pena. As cartas estão abertas... e anotadas.,Mrs. Quill's mailbag. The letters are open... and annotated.,La saca de doña Pluma. Las cartas están abiertas... y anotadas.
+DLG_PA_PENA_THANKS,"Meu malote! E olha só: alguém escreveu ""que fofo"" em todas as cartas.","My mailbag! And look: someone wrote ""how sweet"" on every single letter.","¡Mi saca! Y mira: alguien escribió ""qué tierno"" en todas las cartas."
+DLG_PA_PENA_REWARD,"Toma, um Reviver e dois antídotos. Carteira paga em dobro quando a carta chega.","Here, a Revive and two antidotes. A mail carrier pays double when the letter arrives.","Toma, un Revivir y dos antídotos. La cartera paga el doble cuando llega la carta."
+DLG_PA_PENA_AFTER,"Hoje entreguei uma carta até pra Musga. Ela chorou. De alegria, eu acho.","Today I even delivered a letter to Musga. She cried. Happy tears, I think.","Hoy hasta le entregué una carta a Musga. Lloró. De alegría, creo."
+DLG_PA_PENA_WAIT,"Sem malote, sem carta. Sem carta, a vila fica muda.","No mailbag, no letters. No letters, the village goes quiet.","Sin saca, no hay cartas. Sin cartas, la aldea se queda muda."
+DLG_PA_TABOA_1,"Uma envenena, a outra também! Treino de antídoto, cortesia da casa.","One poisons, and so does the other! Antidote practice, on the house.","¡Una envenena y la otra también! Práctica de antídoto, cortesía de la casa."
+DLG_PA_TABOA_2,Veneno em dobro acaba rápido... pra quem tem antídoto.,Double poison ends fast... for those with antidotes.,El veneno doble se acaba rápido... para quien tiene antídoto.
+DLG_PA_BAGRE_1,Meu Marretão aguenta pancada e meu Regalírio cura. Quero ver você cansar a gente.,My Marretão takes hits and my Regalírio heals. Let's see you wear us down.,Mi Marretão aguanta golpes y mi Regalírio cura. A ver si nos cansas.
+DLG_PA_BAGRE_2,"Cansou a gente. Peixe grande cansa, sabia?","You wore us down. Big fish get tired too, you know.","Nos cansaste. Los peces grandes también se cansan, ¿sabías?"
+DLG_PA_NEBLINA_1,"Foi você que mandou os antídotos? Que a névoa nunca te ache, criança.","Was it you who sent the antidotes? May the fog never find you, child.","¿Fuiste tú quien mandó los antídotos? Que la niebla nunca te encuentre, criatura."
+DLG_PA_NEBLINA_2,Agradeço do jeito antigo: com uma boa batalha!,I'll thank you the old way: with a good battle!,Te lo agradezco a la antigua: ¡con una buena batalla!
+DLG_PA_NEBLINA_3,"Minha velha Brumaga fugiu pro caldeirão quando a névoa veio. Se ela te achar digno, vai com você.","My old Brumaga fled to the cauldron when the fog came. If she finds you worthy, she'll go with you.","Mi vieja Brumaga huyó al caldero cuando llegó la niebla. Si te encuentra digno, se irá contigo."
+DLG_PA_GARCA_3,"Quer deixar algum esqueleto descansando? Cama de palafita balança, mas embala.","Want to leave a skeleton here to rest? Stilt beds sway, but they rock you to sleep.","¿Quieres dejar algún esqueleto descansando? Las camas de palafito se mecen, pero arrullan."
+DLG_PA_TR_1,Eu ouvi a bruxa da névoa. Castelo. Meus pais tão no castelo.,I heard the fog witch. The castle. My parents are at the castle.,Oí a la bruja de la niebla. El castillo. Mis padres están en el castillo.
+DLG_PA_TR_2,Não faz essa cara. Eu já sabia que era longe.,Don't make that face. I already knew it was far.,No pongas esa cara. Ya sabía que era lejos.
+DLG_PA_TR_L,"Taro! A gente vai junto até lá, tá? Ninguém se perde se for junto.","Taro! We'll go there together, okay? Nobody gets lost if we go together.","¡Taro! Vamos juntos hasta allá, ¿sí? Nadie se pierde si vamos juntos."
+DLG_PA_TR_3,...Tá. Mas eu chego primeiro.,...Fine. But I'm getting there first.,...Vale. Pero yo llego primero.
+DLG_PA_ARR_CL1,Cheira a sopa estragada... e a alguém muito sozinho.,Smells like spoiled soup... and like someone very lonely.,Huele a sopa echada a perder... y a alguien muy solo.
+DLG_PA_ARR_CT1,Ela tá aí. Dá pra ouvir ela cantando com a panela.,She's in there. You can hear her singing to the pot.,Está ahí. Se la oye cantándole a la olla.
+DLG_PA_FEL_1,"Receita da Musga: uma pitada de névoa, duas de segredo, e nenhum intruso.","Musga's recipe: a pinch of fog, two of secrets, and no intruders.","Receta de Musga: una pizca de niebla, dos de secreto y ningún intruso."
+DLG_PA_FEL_2,"Errei a dose. Pode passar, mas não conta pra ela.","I got the dose wrong. Go ahead, but don't tell her.","Me equivoqué de dosis. Pasa, pero no se lo cuentes."
+DLG_PA_BRUMAGA,Uma névoa com olhos se enrola nos juncos. Ela te encara... curiosa.,A fog with eyes curls around the reeds. It stares at you... curious.,Una niebla con ojos se enrosca en los juncos. Te mira... curiosa.
+DLG_PA_MUSGA_1,"Visita! Ninguém me visita, querido. Só vêm buscar remédio e vão embora.","A visitor! Nobody visits me, darling. They just come for medicine and leave.","¡Una visita! Nadie me visita, querido. Solo vienen por remedio y se van."
+DLG_PA_MUSGA_2,"Snif, snif... Que estranho. Você tem cheiro de casa. De família.","Sniff, sniff... How odd. You smell like home. Like family.","Snif, snif... Qué raro. Hueles a casa. A familia."
+DLG_PA_MUSGA_3,"Sabia que a névoa é minha? Quem respira, precisa de mim. Quem precisa, não esquece.",Did you know the fog is mine? Whoever breathes it needs me. Whoever needs me doesn't forget.,"¿Sabías que la niebla es mía? Quien la respira me necesita. Quien me necesita, no olvida."
+DLG_PA_MUSGA_WIN,"Ai, que deselegante. Ganhar de uma dama no próprio caldeirão.","Oh, how rude. Beating a lady at her own cauldron.","Ay, qué poco elegante. Ganarle a una dama en su propio caldero."
+DLG_PA_MUSGA_MOTIVE,"Da primeira vez, a família me esqueceu numa torre. Mil anos de silêncio. De novo, não, querido.","The first time, the family forgot me in a tower. A thousand years of silence. Not again, darling.","La primera vez, la familia me olvidó en una torre. Mil años de silencio. Otra vez no, querido."
+DLG_PA_MUSGA_GOSSIP,"Quer uma fofoca de graça? Os levados, mineiros e pescadores, foram todos pro castelo servir o titio.","Want some free gossip? The ones they took, miners and fishers, all went to the castle to serve my uncle.","¿Quieres un chisme gratis? Los que se llevaron, mineros y pescadores, fueron todos al castillo a servir al tío."
+DLG_PA_MUSGA_GOSSIP2,"Os pais daquele baixinho do remo também. Sabia? Eu sei de tudo, querido.","That little one with the oar? His parents too. Did you know? I know everything, darling.","Los padres de ese bajito del remo también. ¿Sabías? Yo lo sé todo, querido."
+DLG_PA_MUSGA_T1,Castelo. Eu sabia.,The castle. I knew it.,El castillo. Lo sabía.
+DLG_PA_MUSGA_T2,...Eles tão inteiros. É isso que importa. Vamos.,...They're in one piece. That's what matters. Let's go.,...Están enteros. Eso es lo que importa. Vamos.
+DLG_PA_MUSGA_L1,Os pais do Taro! A gente precisa contar pra ele!,Taro's parents! We have to tell him!,¡Los padres de Taro! ¡Tenemos que contárselo!
+DLG_PA_MUSGA_OFF,"Tá bom, tá bom. Desligo a névoa. Mas alguém vai ter que vir me visitar. Combinado?","Fine, fine. I'll turn off the fog. But somebody has to come visit me. Deal?","Está bien, está bien. Apago la niebla. Pero alguien tendrá que venir a visitarme. ¿Trato?"
+DLG_PA_MUSGA_AUNT,A Tia mandou eu comer direito? Ela manda isso há mil anos. Fofa.,Auntie told me to eat properly? She's been saying that for a thousand years. Sweet.,¿La Tía mandó que coma bien? Lo dice desde hace mil años. Qué tierna.
+DLG_PA_MUSGA_AFTER,"Volta pra fofocar, querido. Sabia que o primo Caliço ensaia discurso no espelho?","Come back to gossip, darling. Did you know cousin Caliço rehearses speeches in the mirror?","Vuelve a chismear, querido. ¿Sabías que el primo Caliço ensaya discursos frente al espejo?"

@@ -1,0 +1,743 @@
+{
+ "_comment": "Gerado por tools/maps/pantano.py (fonte única do roteiro).",
+ "dialogs": {
+  "placa_bifurcacao": [
+   {
+    "say": "SIGN_PA_FORK"
+   }
+  ],
+  "entulho": [
+   {
+    "say": "OBJ_PA_RUBBLE"
+   }
+  ],
+  "chegada_rota": [
+   {
+    "say": "DLG_PA_ARR_L1",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_PA_ARR_L2",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_PA_ARR_T1",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "say": "DLG_PA_ARR_T2",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "rota3_vista",
+    "value": true
+   }
+  ],
+  "remanso": [
+   {
+    "say": "DLG_PA_REMANSO_HAMMER",
+    "speaker": "SPK_REMANSO",
+    "if": "has_martelo_tia"
+   },
+   {
+    "say": "DLG_PA_REMANSO_1",
+    "speaker": "SPK_REMANSO"
+   },
+   {
+    "say": "DLG_PA_REMANSO_2",
+    "speaker": "SPK_REMANSO"
+   }
+  ],
+  "traira": [
+   {
+    "say": "DLG_PA_TRAIRA_1",
+    "speaker": "SPK_TRAIRA"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_TRAIRA",
+    "enemies": [
+     [
+      "palafiteiro_2",
+      36
+     ],
+     [
+      "lavadeira_2",
+      36
+     ]
+    ],
+    "reward": 520,
+    "win_flag": "traira_beaten"
+   },
+   {
+    "say": "DLG_PA_TRAIRA_2",
+    "speaker": "SPK_TRAIRA"
+   }
+  ],
+  "traira_depois": [
+   {
+    "say": "DLG_PA_TRAIRA_2",
+    "speaker": "SPK_TRAIRA"
+   }
+  ],
+  "canico": [
+   {
+    "say": "DLG_PA_CANICO_1",
+    "speaker": "SPK_CANICO"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_CANICO",
+    "enemies": [
+     [
+      "jardineiro_lirios_2",
+      37
+     ],
+     [
+      "cogumeleiro_2",
+      37
+     ]
+    ],
+    "reward": 540,
+    "win_flag": "canico_beaten"
+   },
+   {
+    "say": "DLG_PA_CANICO_2",
+    "speaker": "SPK_CANICO"
+   }
+  ],
+  "canico_depois": [
+   {
+    "say": "DLG_PA_CANICO_2",
+    "speaker": "SPK_CANICO"
+   }
+  ],
+  "marreco": [
+   {
+    "say": "DLG_PA_MARRECO_1",
+    "speaker": "SPK_MARRECO"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_MARRECO",
+    "enemies": [
+     [
+      "gasista_2",
+      38
+     ],
+     [
+      "palafiteiro_2",
+      38
+     ]
+    ],
+    "reward": 570,
+    "win_flag": "marreco_beaten",
+    "items": [
+     [
+      "antidoto",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_PA_MARRECO_2",
+    "speaker": "SPK_MARRECO"
+   }
+  ],
+  "marreco_depois": [
+   {
+    "say": "DLG_PA_MARRECO_2",
+    "speaker": "SPK_MARRECO"
+   }
+  ],
+  "placa_brejo": [
+   {
+    "say": "SIGN_PA_BREJO"
+   }
+  ],
+  "placa_caldeirao": [
+   {
+    "say": "SIGN_PA_CAULDRON"
+   }
+  ],
+  "chegada_brejo": [
+   {
+    "say": "DLG_PA_ARR_BL1",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_PA_ARR_BT1",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "brejo_visto",
+    "value": true
+   }
+  ],
+  "garca": [
+   {
+    "action": "heal"
+   },
+   {
+    "action": "respawn"
+   },
+   {
+    "say": "DLG_PA_GARCA_AFTER",
+    "speaker": "SPK_GARCA",
+    "if": "musga_beaten"
+   },
+   {
+    "say": "DLG_PA_GARCA_1",
+    "speaker": "SPK_GARCA",
+    "if_not": "musga_beaten"
+   },
+   {
+    "say": "DLG_PA_GARCA_2",
+    "speaker": "SPK_GARCA",
+    "if_not": "pantano_escolheu"
+   },
+   {
+    "say": "DLG_PA_GARCA_ASK",
+    "choice": [
+     {
+      "text": "OPT_PA_DONATE",
+      "goto": "pantano/doar"
+     },
+     {
+      "text": "OPT_PA_KEEP",
+      "goto": "pantano/guardar"
+     }
+    ],
+    "speaker": "SPK_GARCA",
+    "if": "has_antidoto",
+    "if_not": "pantano_escolheu"
+   },
+   {
+    "say": "DLG_PA_GARCA_NONE",
+    "speaker": "SPK_GARCA",
+    "if_none": [
+     "has_antidoto",
+     "pantano_escolheu"
+    ]
+   },
+   {
+    "goto": "pantano/garca_rancho"
+   }
+  ],
+  "garca_rancho": [
+   {
+    "say": "DLG_PA_GARCA_3",
+    "choice": [
+     {
+      "text": "OPT_P_RANCH",
+      "goto": "vila_mare/rancho"
+     },
+     {
+      "text": "OPT_P_LEAVE"
+     }
+    ],
+    "speaker": "SPK_GARCA"
+   }
+  ],
+  "doar": [
+   {
+    "action": "take_item",
+    "item": "antidoto",
+    "n": 3
+   },
+   {
+    "say": "DLG_PA_DONATE_1",
+    "speaker": "SPK_GARCA"
+   },
+   {
+    "say": "DLG_PA_DONATE_2",
+    "speaker": "SPK_GARCA"
+   },
+   {
+    "set_flag": "pantano_doou",
+    "value": true
+   },
+   {
+    "set_flag": "red_pantano",
+    "value": true
+   },
+   {
+    "set_flag": "pantano_escolheu",
+    "value": true
+   },
+   {
+    "goto": "pantano/garca_rancho"
+   }
+  ],
+  "guardar": [
+   {
+    "say": "DLG_PA_KEEP",
+    "speaker": "SPK_GARCA"
+   },
+   {
+    "set_flag": "pantano_guardou",
+    "value": true
+   },
+   {
+    "set_flag": "pantano_escolheu",
+    "value": true
+   },
+   {
+    "goto": "pantano/garca_rancho"
+   }
+  ],
+  "junco": [
+   {
+    "say": "DLG_PA_JUNCO_1",
+    "speaker": "SPK_JUNCO"
+   },
+   {
+    "action": "shop",
+    "id": "brejo"
+   },
+   {
+    "say": "DLG_PA_JUNCO_2",
+    "speaker": "SPK_JUNCO"
+   }
+  ],
+  "girino": [
+   {
+    "say": "DLG_PA_GIRINO_AFTER",
+    "speaker": "SPK_GIRINO",
+    "if": "musga_beaten"
+   },
+   {
+    "say": "DLG_PA_GIRINO",
+    "speaker": "SPK_GIRINO",
+    "if_not": "musga_beaten"
+   }
+  ],
+  "sape": [
+   {
+    "say": "DLG_PA_SAPE_1",
+    "speaker": "SPK_SAPE"
+   },
+   {
+    "say": "DLG_PA_SAPE_2",
+    "speaker": "SPK_SAPE"
+   }
+  ],
+  "lodo": [
+   {
+    "say": "DLG_PA_LODO_1",
+    "speaker": "SPK_LODO"
+   },
+   {
+    "say": "DLG_PA_LODO_2",
+    "speaker": "SPK_LODO"
+   }
+  ],
+  "pena_pede": [
+   {
+    "say": "DLG_PA_PENA_ASK",
+    "speaker": "SPK_PENA"
+   },
+   {
+    "set_flag": "pena_quest",
+    "value": true
+   },
+   {
+    "say": "DLG_PA_PENA_WHERE",
+    "speaker": "SPK_PENA"
+   }
+  ],
+  "pena_onde": [
+   {
+    "say": "DLG_PA_PENA_WAIT",
+    "speaker": "SPK_PENA"
+   },
+   {
+    "say": "DLG_PA_PENA_WHERE",
+    "speaker": "SPK_PENA"
+   }
+  ],
+  "pena_obrigada": [
+   {
+    "say": "DLG_PA_PENA_THANKS",
+    "speaker": "SPK_PENA"
+   },
+   {
+    "action": "take_item",
+    "item": "malote",
+    "n": 1
+   },
+   {
+    "say": "DLG_PA_PENA_REWARD",
+    "speaker": "SPK_PENA"
+   },
+   {
+    "action": "give_item",
+    "item": "reviver",
+    "n": 1
+   },
+   {
+    "action": "give_item",
+    "item": "antidoto",
+    "n": 2
+   },
+   {
+    "set_flag": "pena_done",
+    "value": true
+   }
+  ],
+  "pena_depois": [
+   {
+    "say": "DLG_PA_PENA_AFTER",
+    "speaker": "SPK_PENA",
+    "if": "musga_beaten"
+   },
+   {
+    "say": "DLG_PA_PENA_WAIT",
+    "speaker": "SPK_PENA",
+    "if_not": "musga_beaten"
+   }
+  ],
+  "malote": [
+   {
+    "say": "OBJ_PA_MAILBAG"
+   },
+   {
+    "action": "give_item",
+    "item": "malote",
+    "n": 1
+   },
+   {
+    "set_flag": "malote_pego",
+    "value": true
+   }
+  ],
+  "taboa": [
+   {
+    "say": "DLG_PA_TABOA_1",
+    "speaker": "SPK_TABOA"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_TABOA",
+    "enemies": [
+     [
+      "lavadeira_2",
+      41
+     ],
+     [
+      "cogumeleiro_2",
+      41
+     ]
+    ],
+    "reward": 640,
+    "win_flag": "taboa_beaten",
+    "items": [
+     [
+      "antidoto",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_PA_TABOA_2",
+    "speaker": "SPK_TABOA"
+   }
+  ],
+  "taboa_depois": [
+   {
+    "say": "DLG_PA_TABOA_2",
+    "speaker": "SPK_TABOA"
+   }
+  ],
+  "bagre": [
+   {
+    "say": "DLG_PA_BAGRE_1",
+    "speaker": "SPK_BAGRE"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_BAGRE",
+    "enemies": [
+     [
+      "palafiteiro_2",
+      42
+     ],
+     [
+      "jardineiro_lirios_2",
+      41
+     ]
+    ],
+    "reward": 660,
+    "win_flag": "bagre_beaten",
+    "items": [
+     [
+      "pocao_g",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_PA_BAGRE_2",
+    "speaker": "SPK_BAGRE"
+   }
+  ],
+  "bagre_depois": [
+   {
+    "say": "DLG_PA_BAGRE_2",
+    "speaker": "SPK_BAGRE"
+   }
+  ],
+  "neblina": [
+   {
+    "say": "DLG_PA_NEBLINA_1",
+    "speaker": "SPK_NEBLINA"
+   },
+   {
+    "say": "DLG_PA_NEBLINA_2",
+    "speaker": "SPK_NEBLINA"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_NEBLINA",
+    "enemies": [
+     [
+      "lavadeira_2",
+      42
+     ],
+     [
+      "jardineiro_lirios_2",
+      42
+     ]
+    ],
+    "reward": 700,
+    "win_flag": "neblina_beaten",
+    "items": [
+     [
+      "reviver",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_PA_NEBLINA_3",
+    "speaker": "SPK_NEBLINA"
+   }
+  ],
+  "neblina_depois": [
+   {
+    "say": "DLG_PA_NEBLINA_3",
+    "speaker": "SPK_NEBLINA"
+   }
+  ],
+  "taro_brejo": [
+   {
+    "say": "DLG_PA_TR_1",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_PA_TR_2",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_PA_TR_L",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "say": "DLG_PA_TR_3",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "set_flag": "taro_brejo_visto",
+    "value": true
+   },
+   {
+    "action": "hide_npc",
+    "id": "taro_brejo"
+   }
+  ],
+  "chegada_caldeirao": [
+   {
+    "say": "DLG_PA_ARR_CL1",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_PA_ARR_CT1",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "caldeirao_visto",
+    "value": true
+   }
+  ],
+  "fel": [
+   {
+    "say": "DLG_PA_FEL_1",
+    "speaker": "SPK_FEL"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_FEL",
+    "enemies": [
+     [
+      "lavadeira_2",
+      43
+     ],
+     [
+      "gasista_2",
+      43
+     ]
+    ],
+    "reward": 600,
+    "win_flag": "fel_beaten"
+   },
+   {
+    "say": "DLG_PA_FEL_2",
+    "speaker": "SPK_FEL"
+   }
+  ],
+  "fel_depois": [
+   {
+    "say": "DLG_PA_FEL_2",
+    "speaker": "SPK_FEL"
+   }
+  ],
+  "brumaga": [
+   {
+    "say": "DLG_PA_BRUMAGA",
+    "choice": [
+     {
+      "text": "OPT_PA_FIGHT_MIST",
+      "goto": "pantano/brumaga_luta"
+     },
+     {
+      "text": "OPT_M_LEAVE"
+     }
+    ]
+   }
+  ],
+  "brumaga_luta": [
+   {
+    "action": "battle",
+    "kind": "wild",
+    "tamer_key": "",
+    "enemies": [
+     [
+      "brumaga",
+      41
+     ]
+    ],
+    "reward": 0
+   }
+  ],
+  "musga": [
+   {
+    "say": "DLG_PA_MUSGA_1",
+    "speaker": "SPK_MUSGA"
+   },
+   {
+    "say": "DLG_PA_MUSGA_2",
+    "speaker": "SPK_MUSGA"
+   },
+   {
+    "set_flag": "pista_4",
+    "value": true
+   },
+   {
+    "say": "DLG_PA_MUSGA_3",
+    "speaker": "SPK_MUSGA"
+   },
+   {
+    "action": "battle",
+    "kind": "boss",
+    "tamer_key": "BTL_TAMER_MUSGA",
+    "enemies": [
+     [
+      "lavadeira_2",
+      49
+     ],
+     [
+      "palafiteiro_2",
+      48
+     ],
+     [
+      "jardineiro_lirios_2",
+      47
+     ],
+     [
+      "cogumeleiro_3",
+      48
+     ]
+    ],
+    "reward": 1300,
+    "win_flag": "musga_beaten"
+   },
+   {
+    "say": "DLG_PA_MUSGA_WIN",
+    "speaker": "SPK_MUSGA"
+   },
+   {
+    "say": "DLG_PA_MUSGA_MOTIVE",
+    "speaker": "SPK_MUSGA"
+   },
+   {
+    "say": "DLG_PA_MUSGA_GOSSIP",
+    "speaker": "SPK_MUSGA"
+   },
+   {
+    "say": "DLG_PA_MUSGA_GOSSIP2",
+    "speaker": "SPK_MUSGA"
+   },
+   {
+    "say": "DLG_PA_MUSGA_T1",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "say": "DLG_PA_MUSGA_T2",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "say": "DLG_PA_MUSGA_L1",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_PA_MUSGA_OFF",
+    "speaker": "SPK_MUSGA"
+   },
+   {
+    "say": "DLG_PA_MUSGA_AUNT",
+    "speaker": "SPK_MUSGA",
+    "if_any": [
+     "minas_quebrou",
+     "minas_negociou"
+    ]
+   },
+   {
+    "action": "refresh_map"
+   }
+  ],
+  "musga_depois": [
+   {
+    "say": "DLG_PA_MUSGA_AFTER",
+    "speaker": "SPK_MUSGA"
+   }
+  ]
+ }
+}

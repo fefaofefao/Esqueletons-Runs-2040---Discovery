@@ -1,0 +1,375 @@
+{
+ "id": "rota_3",
+ "region": "pantano",
+ "name_key": "MAP_ROTA_3",
+ "tileset": "overworld",
+ "legend": {
+  "g": "mud",
+  "f": "grass",
+  "B": "swamp",
+  "p": "dock",
+  ".": "floor"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppggffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppggffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffggffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffggffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfffffffggpffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfffffffggpffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfffffggfppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfffffggfppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfffffggfppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfffffggggpffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfffffffggpffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggppppppppppppppppppppppppppgggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
+ ],
+ "spawn": {
+  "x": 19,
+  "y": 47,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "swamp_lantern",
+   "x": 18,
+   "y": 37
+  },
+  {
+   "type": "swamp_lantern",
+   "x": 21,
+   "y": 13
+  },
+  {
+   "type": "lilypad",
+   "x": 12,
+   "y": 20
+  },
+  {
+   "type": "lilypad",
+   "x": 15,
+   "y": 28
+  },
+  {
+   "type": "lilypad",
+   "x": 23,
+   "y": 22
+  },
+  {
+   "type": "lilypad",
+   "x": 11,
+   "y": 33
+  },
+  {
+   "type": "willow",
+   "x": 30,
+   "y": 25
+  },
+  {
+   "type": "reeds",
+   "x": 36,
+   "y": 14
+  },
+  {
+   "type": "reeds",
+   "x": 27,
+   "y": 35
+  },
+  {
+   "type": "rubble",
+   "if_not": "has_martelo_tia",
+   "dialog": "pantano/entulho",
+   "x": 20,
+   "y": 35
+  },
+  {
+   "type": "rubble",
+   "if_not": "has_martelo_tia",
+   "dialog": "pantano/entulho",
+   "x": 20,
+   "y": 15
+  },
+  {
+   "type": "sign",
+   "x": 18,
+   "y": 42,
+   "dialog": "pantano/placa_bifurcacao"
+  },
+  {
+   "type": "reeds",
+   "x": 10,
+   "y": 43
+  },
+  {
+   "type": "willow",
+   "x": 8,
+   "y": 47
+  },
+  {
+   "type": "reeds",
+   "x": 5,
+   "y": 43
+  },
+  {
+   "type": "reeds",
+   "x": 35,
+   "y": 47
+  },
+  {
+   "type": "willow",
+   "x": 15,
+   "y": 47
+  },
+  {
+   "type": "dead_tree",
+   "x": 24,
+   "y": 45
+  },
+  {
+   "type": "reeds",
+   "x": 27,
+   "y": 43
+  },
+  {
+   "type": "reeds",
+   "x": 32,
+   "y": 47
+  },
+  {
+   "type": "dead_tree",
+   "x": 5,
+   "y": 4
+  },
+  {
+   "type": "reeds",
+   "x": 32,
+   "y": 4
+  },
+  {
+   "type": "willow",
+   "x": 26,
+   "y": 6
+  },
+  {
+   "type": "reeds",
+   "x": 28,
+   "y": 3
+  },
+  {
+   "type": "dead_tree",
+   "x": 12,
+   "y": 2
+  },
+  {
+   "type": "willow",
+   "x": 35,
+   "y": 8
+  },
+  {
+   "type": "dead_tree",
+   "x": 35,
+   "y": 4
+  },
+  {
+   "type": "dead_tree",
+   "x": 6,
+   "y": 8
+  },
+  {
+   "type": "reeds",
+   "x": 32,
+   "y": 8
+  },
+  {
+   "type": "dead_tree",
+   "x": 8,
+   "y": 15
+  },
+  {
+   "type": "dead_tree",
+   "x": 4,
+   "y": 12
+  },
+  {
+   "type": "reeds",
+   "x": 3,
+   "y": 36
+  },
+  {
+   "type": "reeds",
+   "x": 7,
+   "y": 33
+  },
+  {
+   "type": "reeds",
+   "x": 3,
+   "y": 15
+  }
+ ],
+ "npcs": [
+  {
+   "id": "traira",
+   "x": 6,
+   "y": 30,
+   "facing": "left"
+  },
+  {
+   "id": "canico",
+   "x": 3,
+   "y": 20,
+   "facing": "right"
+  },
+  {
+   "id": "marreco",
+   "x": 12,
+   "y": 9,
+   "facing": "down"
+  },
+  {
+   "id": "remanso",
+   "x": 22,
+   "y": 42,
+   "facing": "left"
+  }
+ ],
+ "warps": [
+  {
+   "x": 19,
+   "y": 49,
+   "to": "brasal",
+   "tx": 19,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 49,
+   "to": "brasal",
+   "tx": 20,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 19,
+   "y": 0,
+   "to": "brejo",
+   "tx": 19,
+   "ty": 30,
+   "facing": "up",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 0,
+   "to": "brejo",
+   "tx": 20,
+   "ty": 30,
+   "facing": "up",
+   "sfx": ""
+  }
+ ],
+ "spawns": [
+  {
+   "id": "r3_sul",
+   "table": "rota3_sul",
+   "x": 10,
+   "y": 45,
+   "radius": 3,
+   "count": 2
+  },
+  {
+   "id": "r3_oeste",
+   "table": "rota3_oeste",
+   "x": 5,
+   "y": 25,
+   "radius": 2,
+   "count": 1
+  },
+  {
+   "id": "r3_campo_a",
+   "table": "rota3_campo",
+   "x": 30,
+   "y": 32,
+   "radius": 4,
+   "count": 3
+  },
+  {
+   "id": "r3_campo_b",
+   "table": "rota3_campo",
+   "x": 30,
+   "y": 18,
+   "radius": 4,
+   "count": 3
+  },
+  {
+   "id": "r3_atalho",
+   "table": "rota3_atalho",
+   "x": 19,
+   "y": 25,
+   "radius": 2,
+   "count": 1
+  },
+  {
+   "id": "r3_norte",
+   "table": "rota3_norte",
+   "x": 10,
+   "y": 6,
+   "radius": 3,
+   "count": 2
+  }
+ ],
+ "ambient": [
+  "mist"
+ ],
+ "tint": [
+  0.84,
+  0.94,
+  0.84
+ ],
+ "on_enter": [
+  {
+   "if_not": "rota3_vista",
+   "dialog": "pantano/chegada_rota"
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "id": "brejo_casa_bagre",
+ "region": "pantano",
+ "name_key": "MAP_BREJO_CASA_BAGRE",
+ "tileset": "overworld",
+ "legend": {
+  "T": "wall_top",
+  "w": "wall",
+  "n": "wall_window",
+  ".": "floor",
+  "m": "mat"
+ },
+ "ground": [
+  "TTTTTTTTTTTT",
+  "TwwnwwwwwnwT",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "TTTTTTmTTTTT"
+ ],
+ "spawn": {
+  "x": 6,
+  "y": 8,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "rod_rack",
+   "x": 2,
+   "y": 3
+  },
+  {
+   "type": "barrel",
+   "x": 10,
+   "y": 7
+  },
+  {
+   "type": "table",
+   "x": 7,
+   "y": 5
+  }
+ ],
+ "npcs": [
+  {
+   "id": "bagre",
+   "x": 6,
+   "y": 3,
+   "facing": "down"
+  }
+ ],
+ "warps": [
+  {
+   "x": 6,
+   "y": 9,
+   "to": "brejo",
+   "tx": 31,
+   "ty": 21,
+   "facing": "down",
+   "sfx": "door"
+  }
+ ]
+}

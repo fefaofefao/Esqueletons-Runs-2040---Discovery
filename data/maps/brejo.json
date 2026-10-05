@@ -1,15 +1,15 @@
 {
- "id": "brasal",
- "region": "minas",
- "name_key": "MAP_BRASAL",
+ "id": "brejo",
+ "region": "pantano",
+ "name_key": "MAP_BREJO",
  "tileset": "overworld",
  "legend": {
-  "g": "ash",
-  "f": "mud",
-  "B": "rock",
-  "p": "path",
+  "g": "mud",
+  "f": "grass",
+  "B": "swamp",
+  "p": "dock",
   ".": "floor",
-  "s": "stone"
+  "s": "dock"
  },
  "ground": [
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
@@ -52,27 +52,27 @@
  },
  "props": [
   {
-   "type": "house_stone_ranch",
+   "type": "stilt_house_ranch",
    "x": 12,
    "y": 10
   },
   {
-   "type": "house_stone_shop",
+   "type": "stilt_house_shop",
    "x": 27,
    "y": 10
   },
   {
-   "type": "house_stone",
+   "type": "stilt_house",
    "x": 8,
    "y": 20
   },
   {
-   "type": "house_stone",
+   "type": "stilt_house",
    "x": 31,
    "y": 20
   },
   {
-   "type": "house_stone",
+   "type": "stilt_house",
    "x": 14,
    "y": 27
   },
@@ -80,153 +80,152 @@
    "type": "sign",
    "x": 18,
    "y": 28,
-   "dialog": "minas/placa_brasal"
+   "dialog": "pantano/placa_brejo"
   },
   {
    "type": "sign",
    "x": 3,
    "y": 14,
-   "dialog": "minas/placa_mina"
+   "dialog": "pantano/placa_caldeirao"
   },
   {
-   "type": "anvil",
-   "x": 22,
-   "y": 16
-  },
-  {
-   "type": "mine_lamp",
+   "type": "swamp_lantern",
    "x": 13,
    "y": 13
   },
   {
-   "type": "mine_lamp",
+   "type": "swamp_lantern",
    "x": 26,
    "y": 13
   },
   {
-   "type": "rails",
+   "type": "well",
+   "x": 22,
+   "y": 15
+  },
+  {
+   "type": "boat",
    "x": 5,
-   "y": 15
+   "y": 27
   },
   {
-   "type": "rails",
-   "x": 6,
-   "y": 15
+   "type": "lilypad",
+   "x": 34,
+   "y": 26
   },
   {
-   "type": "mine_cart",
-   "x": 7,
-   "y": 13
+   "type": "reeds",
+   "x": 5,
+   "y": 3
   },
   {
-   "type": "chain_gate",
-   "x": 20,
-   "y": 3,
-   "if_not": "fornalha_beaten"
-  },
-  {
-   "type": "rock_small",
-   "x": 2,
-   "y": 8
-  },
-  {
-   "type": "crystal",
+   "type": "dead_tree",
    "x": 8,
-   "y": 3
-  },
-  {
-   "type": "rock_small",
-   "x": 2,
-   "y": 3
-  },
-  {
-   "type": "crystal",
-   "x": 10,
    "y": 8
   },
   {
-   "type": "rock_small",
-   "x": 29,
-   "y": 4
+   "type": "willow",
+   "x": 11,
+   "y": 6
   },
   {
-   "type": "rock_big",
+   "type": "reeds",
+   "x": 2,
+   "y": 2
+  },
+  {
+   "type": "dead_tree",
    "x": 32,
-   "y": 4
+   "y": 1
   },
   {
-   "type": "rock_small",
+   "type": "willow",
+   "x": 36,
+   "y": 8
+  },
+  {
+   "type": "dead_tree",
+   "x": 33,
+   "y": 8
+  },
+  {
+   "type": "dead_tree",
    "x": 28,
    "y": 1
   },
   {
-   "type": "rock_big",
-   "x": 28,
-   "y": 8
-  },
-  {
-   "type": "crystal",
+   "type": "reeds",
    "x": 11,
-   "y": 24
-  },
-  {
-   "type": "rock_big",
-   "x": 5,
    "y": 29
   },
   {
-   "type": "crystal",
-   "x": 9,
-   "y": 28
-  },
-  {
-   "type": "crystal",
-   "x": 33,
+   "type": "dead_tree",
+   "x": 10,
    "y": 25
   },
   {
-   "type": "rock_small",
-   "x": 25,
+   "type": "reeds",
+   "x": 2,
    "y": 29
   },
   {
-   "type": "rock_big",
-   "x": 25,
+   "type": "dead_tree",
+   "x": 27,
    "y": 26
+  },
+  {
+   "type": "reeds",
+   "x": 32,
+   "y": 26
+  },
+  {
+   "type": "reeds",
+   "x": 36,
+   "y": 24
   }
  ],
  "npcs": [
   {
-   "id": "pirita",
+   "id": "girino",
    "x": 16,
    "y": 16,
    "facing": "right"
   },
   {
-   "id": "fagulha",
-   "x": 23,
-   "y": 14,
+   "id": "sape",
+   "x": 24,
+   "y": 13,
    "facing": "down"
   },
   {
-   "id": "turmalina",
-   "x": 25,
+   "id": "lodo",
+   "x": 22,
    "y": 18,
    "facing": "left"
   },
   {
-   "id": "guarda_estrada",
+   "id": "pena",
+   "x": 17,
+   "y": 22,
+   "facing": "down"
+  },
+  {
+   "id": "taro_brejo",
    "x": 21,
-   "y": 4,
-   "facing": "left",
-   "if_not": "fornalha_beaten"
+   "y": 3,
+   "facing": "down",
+   "if_all": [
+    "partner_lia",
+    "musga_beaten"
+   ],
+   "if_not": "taro_brejo_visto"
   }
  ],
  "warps": [
   {
    "x": 19,
    "y": 31,
-   "to": "rota_2",
+   "to": "rota_3",
    "tx": 19,
    "ty": 1,
    "facing": "down",
@@ -235,7 +234,7 @@
   {
    "x": 20,
    "y": 31,
-   "to": "rota_2",
+   "to": "rota_3",
    "tx": 20,
    "ty": 1,
    "facing": "down",
@@ -244,29 +243,29 @@
   {
    "x": 19,
    "y": 0,
-   "to": "rota_3",
+   "to": "rota_4",
    "tx": 19,
    "ty": 48,
    "facing": "up",
    "sfx": "",
-   "if": "fornalha_beaten",
-   "locked_message": "MSG_FORNALHA_ROAD"
+   "if": "musga_beaten",
+   "locked_message": "MSG_MUSGA_ROAD"
   },
   {
    "x": 20,
    "y": 0,
-   "to": "rota_3",
+   "to": "rota_4",
    "tx": 20,
    "ty": 48,
    "facing": "up",
    "sfx": "",
-   "if": "fornalha_beaten",
-   "locked_message": "MSG_FORNALHA_ROAD"
+   "if": "musga_beaten",
+   "locked_message": "MSG_MUSGA_ROAD"
   },
   {
    "x": 0,
    "y": 15,
-   "to": "mina_funda",
+   "to": "caldeirao",
    "tx": 32,
    "ty": 10,
    "facing": "left",
@@ -275,7 +274,7 @@
   {
    "x": 0,
    "y": 16,
-   "to": "mina_funda",
+   "to": "caldeirao",
    "tx": 32,
    "ty": 11,
    "facing": "left",
@@ -284,7 +283,7 @@
   {
    "x": 12,
    "y": 10,
-   "to": "brasal_rancho",
+   "to": "brejo_rancho",
    "tx": 6,
    "ty": 8,
    "facing": "up",
@@ -293,7 +292,7 @@
   {
    "x": 27,
    "y": 10,
-   "to": "brasal_loja",
+   "to": "brejo_loja",
    "tx": 6,
    "ty": 8,
    "facing": "up",
@@ -302,7 +301,7 @@
   {
    "x": 8,
    "y": 20,
-   "to": "brasal_casa_bigorna",
+   "to": "brejo_casa_taboa",
    "tx": 6,
    "ty": 8,
    "facing": "up",
@@ -311,7 +310,7 @@
   {
    "x": 31,
    "y": 20,
-   "to": "brasal_casa_agata",
+   "to": "brejo_casa_bagre",
    "tx": 6,
    "ty": 8,
    "facing": "up",
@@ -320,25 +319,27 @@
   {
    "x": 14,
    "y": 27,
-   "to": "brasal_casa_carvao",
+   "to": "brejo_casa_neblina",
    "tx": 6,
    "ty": 8,
    "facing": "up",
-   "sfx": "door"
+   "sfx": "door",
+   "if": "pantano_doou",
+   "locked_message": "MSG_NEBLINA_DOOR"
   }
  ],
  "ambient": [
-  "ash"
+  "mist"
  ],
  "tint": [
-  0.9,
-  0.84,
-  0.82
+  0.82,
+  0.92,
+  0.84
  ],
  "on_enter": [
   {
-   "if_not": "brasal_visto",
-   "dialog": "minas/chegada_brasal"
+   "if_not": "brejo_visto",
+   "dialog": "pantano/chegada_brejo"
   }
  ]
 }

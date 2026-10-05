@@ -13,7 +13,8 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 | 4a — Arco e Prólogo | ✅ concluída |
 | 4b — Bosque das Raízes | ✅ concluída |
 | 4c — Minas de Cinzas | ✅ concluída |
-| 4d–4h — Regiões, Castelo e finais | ⏳ próxima (4d) |
+| 4d — Pântano Verde-Musgo | ✅ concluída |
+| 4e–4h — Regiões, Castelo e finais | ⏳ próxima (4e) |
 | 5 — Monetização e conformidade | — |
 | 6 — Polimento e publicação | — |
 
@@ -273,3 +274,23 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 
 ### Pendências
 - O volume de texto do Prólogo (~690) e do Bosque (~490) está abaixo do orçamento do arco; será completado na revisão de texto da fase 6, junto com as regiões novas, para atingir 12–18 mil palavras no total.
+
+## Fase 4d — Pântano Verde-Musgo (concluída)
+
+### Feito
+- **`docs/roteiro/04_pantano.md`** (gerado por `tools/maps/pantano.py`):
+  - problema local: a névoa do caldeirão da Musga adoece Brejo Alto toda noite, e só ela tem o remédio;
+  - pista nº 4: a Musga sente "cheiro de casa, de família" no protagonista;
+  - Taro descobre pela fofoca da Musga que os pais estão no castelo (parceiro ou recorrente); Lia vê os vaga-lumes;
+  - Guardiã Musga (Veneno e cura) e a **escolha 3** (doar ou guardar os antídotos).
+- **Rota 3** com 3 caminhos: Trilha das Tábuas (Traíra, Caniço, Marreco), Capinzal e a Passagem do Desmoronamento, que só abre com o **Martelo da Tia** (escolha 2).
+- **Brejo Alto** (palafitas): Rancho da Garça (onde acontece a escolha), Loja sem antídoto, casas das Irmãs Taboa e do Bagre, casa da Vó Neblina (abre se você doar), missão do malote, NPCs de dica, humor e lore.
+- **Caldeirão da Musga:** Boticário Fel, malote roubado, Brumaga (se você doou) e a Guardiã.
+- **Escolha 3:** doar (até 3 antídotos; +1 Redenção, 3ª casa de domadores e Brumaga recrutável) ou guardar.
+- **Arte:** juncos, vitórias-régias, salgueiro, árvore seca, caldeirão animado com luz verde, casas de palafita, lampião do pântano, malote; 14 NPCs; props das regiões seguintes (Ossório, Picos, Deserto, Castelo e epílogo) já desenhados.
+- **Sistema:** condição `if_none` (nenhuma das flags).
+
+### Verificação
+- `tests/run_tests.tscn`: 7842 verificações, 0 falhas (inclui as duas opções da escolha 3, a escolha adiada sem antídotos e a missão do malote).
+- `tools/validate_data.py`: OK. `tools/simulate.py --check`: 174 min, 0 critérios falhando.
+- Capturas: `capture.tscn -- --region=pantano`.

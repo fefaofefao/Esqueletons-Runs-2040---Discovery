@@ -1,0 +1,71 @@
+{
+ "id": "brejo_rancho",
+ "region": "pantano",
+ "name_key": "MAP_BREJO_RANCHO",
+ "tileset": "overworld",
+ "legend": {
+  "T": "wall_top",
+  "w": "wall",
+  "n": "wall_window",
+  ".": "floor",
+  "m": "mat"
+ },
+ "ground": [
+  "TTTTTTTTTTTT",
+  "TwwnwwwwwnwT",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "TTTTTTmTTTTT"
+ ],
+ "spawn": {
+  "x": 6,
+  "y": 8,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "bed",
+   "x": 2,
+   "y": 3
+  },
+  {
+   "type": "bed",
+   "x": 4,
+   "y": 3
+  },
+  {
+   "type": "plant",
+   "x": 10,
+   "y": 2
+  },
+  {
+   "type": "rug",
+   "x": 6,
+   "y": 6
+  }
+ ],
+ "npcs": [
+  {
+   "id": "garca",
+   "x": 7,
+   "y": 3,
+   "facing": "down"
+  }
+ ],
+ "warps": [
+  {
+   "x": 6,
+   "y": 9,
+   "to": "brejo",
+   "tx": 12,
+   "ty": 11,
+   "facing": "down",
+   "sfx": "door"
+  }
+ ]
+}

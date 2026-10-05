@@ -57,6 +57,27 @@
     "carvao",
     "pirita"
    ]
+  },
+  {
+   "id": "brejo",
+   "map": "brejo",
+   "ranch": "garca",
+   "shop": "brejo",
+   "tamer_houses": [
+    "taboa",
+    "bagre",
+    "neblina"
+   ],
+   "npcs": [
+    "girino",
+    "sape",
+    "lodo",
+    "pena"
+   ],
+   "quests": [
+    "pena",
+    "garca"
+   ]
   }
  ]
 }
