@@ -14,11 +14,29 @@ func _ready() -> void:
 	SaveGame.save_path = "user://capture_save.json"
 	SaveGame.backup_path = "user://capture_save.bak.json"
 	SaveGame.delete_save()
+	if "--with-save" in OS.get_cmdline_user_args():
+		SaveGame.start_new("Téo")
+		SaveGame.save_game()
 	Settings.set_value("language", "pt_BR")
 	Settings.set_value("touch_controls", "off")
 	Game.boot(self)
-	await _wait(1.2)
+	await _wait(0.75)
+	await _shot("00_titulo_intro")
+	await _wait(1.6)
 	await _shot("01_titulo")
+	if "--only-title" in OS.get_cmdline_user_args():
+		Controls.tap_action("move_down")
+		await _wait(0.4)
+		await _shot("01b_titulo_selecao")
+		Settings.set_value("language", "es")
+		await _wait(0.3)
+		await _shot("01c_titulo_es")
+		Settings.set_value("language", "pt_BR")
+		Game.open_overlay(SettingsMenu.new())
+		await _wait(0.3)
+		await _shot("01d_titulo_config")
+		get_tree().quit()
+		return
 	var entry := NameEntry.new()
 	Game.open_overlay(entry)
 	await _wait(0.3)
