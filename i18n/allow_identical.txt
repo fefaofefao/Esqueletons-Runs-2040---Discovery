@@ -68,6 +68,10 @@ SPK_BAGRE
 SPK_MUSGA
 BTL_TAMER_BAGRE
 # --- fim pantano ---
+# --- região ossorio (nomes próprios iguais nos idiomas) ---
+SPK_CALICO
+ITEM_RECORD
+# --- fim ossorio ---
 # --- gerado por tools/bestiary/build.py (descrições de golpes) ---
 MOVE_CHUTE_NA_CANELA_DESC
 MOVE_RANGER_OS_DENTES_DESC

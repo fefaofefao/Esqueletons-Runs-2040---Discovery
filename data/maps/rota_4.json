@@ -1,0 +1,362 @@
+{
+ "id": "rota_4",
+ "region": "ossorio",
+ "name_key": "MAP_ROTA_4",
+ "tileset": "overworld",
+ "legend": {
+  "g": "grass",
+  "f": "flowers",
+  "B": "bush",
+  "p": "stone",
+  ".": "floor"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffggffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffgggfffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffggppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffggppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffggppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffggppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfggfffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfggfffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggggggggggggppggggffffffggppffffB",
+  "BBggppgggggggggggggppggggffffffggppffffB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggppppppppppppppppppppppppppgggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
+ ],
+ "spawn": {
+  "x": 19,
+  "y": 47,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "banner_blue",
+   "x": 18,
+   "y": 36
+  },
+  {
+   "type": "banner_blue",
+   "x": 21,
+   "y": 36
+  },
+  {
+   "type": "banner_blue",
+   "x": 18,
+   "y": 13
+  },
+  {
+   "type": "banner_blue",
+   "x": 21,
+   "y": 13
+  },
+  {
+   "type": "broken_column",
+   "x": 22,
+   "y": 30
+  },
+  {
+   "type": "broken_column",
+   "x": 17,
+   "y": 20
+  },
+  {
+   "type": "sign",
+   "x": 18,
+   "y": 42,
+   "dialog": "ossorio/placa_bifurcacao"
+  },
+  {
+   "type": "tree_oak2",
+   "x": 14,
+   "y": 43
+  },
+  {
+   "type": "rock_small",
+   "x": 32,
+   "y": 45
+  },
+  {
+   "type": "tree_oak2",
+   "x": 13,
+   "y": 47
+  },
+  {
+   "type": "banner_blue",
+   "x": 10,
+   "y": 43
+  },
+  {
+   "type": "tree_oak2",
+   "x": 4,
+   "y": 45
+  },
+  {
+   "type": "banner_blue",
+   "x": 23,
+   "y": 47
+  },
+  {
+   "type": "rock_small",
+   "x": 28,
+   "y": 45
+  },
+  {
+   "type": "tree_oak",
+   "x": 36,
+   "y": 43
+  },
+  {
+   "type": "rock_small",
+   "x": 31,
+   "y": 5
+  },
+  {
+   "type": "tree_oak2",
+   "x": 8,
+   "y": 2
+  },
+  {
+   "type": "tree_oak",
+   "x": 22,
+   "y": 8
+  },
+  {
+   "type": "tree_oak2",
+   "x": 17,
+   "y": 7
+  },
+  {
+   "type": "rock_small",
+   "x": 24,
+   "y": 3
+  },
+  {
+   "type": "tree_oak2",
+   "x": 4,
+   "y": 2
+  },
+  {
+   "type": "tree_oak",
+   "x": 16,
+   "y": 2
+  },
+  {
+   "type": "tree_oak",
+   "x": 13,
+   "y": 6
+  },
+  {
+   "type": "banner_blue",
+   "x": 28,
+   "y": 8
+  },
+  {
+   "type": "tree_oak2",
+   "x": 7,
+   "y": 12
+  },
+  {
+   "type": "tree_oak2",
+   "x": 8,
+   "y": 36
+  },
+  {
+   "type": "banner_blue",
+   "x": 3,
+   "y": 14
+  },
+  {
+   "type": "banner_blue",
+   "x": 7,
+   "y": 16
+  },
+  {
+   "type": "tree_oak",
+   "x": 7,
+   "y": 19
+  }
+ ],
+ "npcs": [
+  {
+   "id": "elmo",
+   "x": 6,
+   "y": 30,
+   "facing": "left"
+  },
+  {
+   "id": "malva",
+   "x": 3,
+   "y": 20,
+   "facing": "right"
+  },
+  {
+   "id": "bigode",
+   "x": 12,
+   "y": 9,
+   "facing": "down"
+  },
+  {
+   "id": "trote",
+   "x": 22,
+   "y": 42,
+   "facing": "left"
+  },
+  {
+   "id": "rival_taro_o",
+   "x": 24,
+   "y": 6,
+   "facing": "down",
+   "if": "partner_lia",
+   "if_not": "rival_ossorio_done"
+  },
+  {
+   "id": "rival_lia_o",
+   "x": 24,
+   "y": 6,
+   "facing": "down",
+   "if": "partner_taro",
+   "if_not": "rival_ossorio_done"
+  }
+ ],
+ "warps": [
+  {
+   "x": 19,
+   "y": 49,
+   "to": "brejo",
+   "tx": 19,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 49,
+   "to": "brejo",
+   "tx": 20,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 19,
+   "y": 0,
+   "to": "ossorio",
+   "tx": 19,
+   "ty": 30,
+   "facing": "up",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 0,
+   "to": "ossorio",
+   "tx": 20,
+   "ty": 30,
+   "facing": "up",
+   "sfx": ""
+  }
+ ],
+ "spawns": [
+  {
+   "id": "r4_sul",
+   "table": "rota4_sul",
+   "x": 10,
+   "y": 45,
+   "radius": 3,
+   "count": 2
+  },
+  {
+   "id": "r4_oeste",
+   "table": "rota4_oeste",
+   "x": 5,
+   "y": 25,
+   "radius": 2,
+   "count": 1
+  },
+  {
+   "id": "r4_campo_a",
+   "table": "rota4_campo",
+   "x": 30,
+   "y": 32,
+   "radius": 4,
+   "count": 3
+  },
+  {
+   "id": "r4_campo_b",
+   "table": "rota4_campo",
+   "x": 30,
+   "y": 18,
+   "radius": 4,
+   "count": 3
+  },
+  {
+   "id": "r4_aqueduto",
+   "table": "rota4_aqueduto",
+   "x": 19,
+   "y": 25,
+   "radius": 2,
+   "count": 1
+  },
+  {
+   "id": "r4_norte",
+   "table": "rota4_norte",
+   "x": 10,
+   "y": 6,
+   "radius": 3,
+   "count": 2
+  }
+ ],
+ "ambient": [
+  "leaves"
+ ],
+ "tint": [
+  0.98,
+  0.97,
+  1.0
+ ],
+ "on_enter": [
+  {
+   "if_not": "rota4_vista",
+   "dialog": "ossorio/chegada_rota"
+  }
+ ]
+}

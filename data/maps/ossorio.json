@@ -1,0 +1,342 @@
+{
+ "id": "ossorio",
+ "region": "ossorio",
+ "name_key": "MAP_OSSORIO",
+ "tileset": "overworld",
+ "legend": {
+  "g": "stone",
+  "p": "path",
+  "B": "city_wall",
+  "s": "path",
+  "f": "flowers"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggppppppppppppppppppppppggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "pppppppppppppppsssssssssssggggpggggggggB",
+  "pppppppppppppppsssssssssssggggpggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "BggggggggpgggggggggppgggggggggpggggggggB",
+  "BggggggggpgggggggggppgggggggggpggggggggB",
+  "BgggggppppppppppppppppppppppppppppgggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
+ ],
+ "spawn": {
+  "x": 19,
+  "y": 29,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "townhouse_ranch",
+   "x": 12,
+   "y": 10
+  },
+  {
+   "type": "townhouse_shop",
+   "x": 27,
+   "y": 10
+  },
+  {
+   "type": "townhouse",
+   "x": 8,
+   "y": 20
+  },
+  {
+   "type": "townhouse",
+   "x": 31,
+   "y": 20
+  },
+  {
+   "type": "townhouse",
+   "x": 14,
+   "y": 27
+  },
+  {
+   "type": "sign",
+   "x": 18,
+   "y": 28,
+   "dialog": "ossorio/placa_cidade"
+  },
+  {
+   "type": "sign",
+   "x": 3,
+   "y": 14,
+   "dialog": "ossorio/placa_quartel"
+  },
+  {
+   "type": "fountain",
+   "x": 20,
+   "y": 16
+  },
+  {
+   "type": "statue_prince",
+   "x": 17,
+   "y": 13,
+   "dialog": "ossorio/estatua"
+  },
+  {
+   "type": "bell_tower",
+   "x": 27,
+   "y": 16
+  },
+  {
+   "type": "banner_blue",
+   "x": 13,
+   "y": 12
+  },
+  {
+   "type": "banner_blue",
+   "x": 26,
+   "y": 12
+  },
+  {
+   "type": "torch",
+   "x": 18,
+   "y": 2
+  },
+  {
+   "type": "torch",
+   "x": 21,
+   "y": 2
+  },
+  {
+   "type": "barrel",
+   "x": 7,
+   "y": 1
+  },
+  {
+   "type": "barrel",
+   "x": 4,
+   "y": 4
+  },
+  {
+   "type": "torch",
+   "x": 10,
+   "y": 1
+  },
+  {
+   "type": "crate",
+   "x": 10,
+   "y": 6
+  },
+  {
+   "type": "barrel",
+   "x": 29,
+   "y": 3
+  },
+  {
+   "type": "barrel",
+   "x": 36,
+   "y": 6
+  },
+  {
+   "type": "barrel",
+   "x": 37,
+   "y": 3
+  },
+  {
+   "type": "torch",
+   "x": 31,
+   "y": 7
+  },
+  {
+   "type": "crate",
+   "x": 6,
+   "y": 23
+  },
+  {
+   "type": "crate",
+   "x": 11,
+   "y": 24
+  },
+  {
+   "type": "banner_blue",
+   "x": 6,
+   "y": 27
+  },
+  {
+   "type": "banner_blue",
+   "x": 34,
+   "y": 27
+  },
+  {
+   "type": "barrel",
+   "x": 30,
+   "y": 23
+  },
+  {
+   "type": "torch",
+   "x": 27,
+   "y": 29
+  }
+ ],
+ "npcs": [
+  {
+   "id": "fivela",
+   "x": 16,
+   "y": 16,
+   "facing": "right"
+  },
+  {
+   "id": "brasao",
+   "x": 24,
+   "y": 18,
+   "facing": "left"
+  },
+  {
+   "id": "clarim",
+   "x": 22,
+   "y": 13,
+   "facing": "down"
+  },
+  {
+   "id": "selo",
+   "x": 16,
+   "y": 24,
+   "facing": "up"
+  }
+ ],
+ "warps": [
+  {
+   "x": 19,
+   "y": 31,
+   "to": "rota_4",
+   "tx": 19,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 31,
+   "to": "rota_4",
+   "tx": 20,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 19,
+   "y": 0,
+   "to": "rota_5",
+   "tx": 19,
+   "ty": 48,
+   "facing": "up",
+   "sfx": "",
+   "if": "calico_beaten",
+   "locked_message": "MSG_CALICO_ROAD"
+  },
+  {
+   "x": 20,
+   "y": 0,
+   "to": "rota_5",
+   "tx": 20,
+   "ty": 48,
+   "facing": "up",
+   "sfx": "",
+   "if": "calico_beaten",
+   "locked_message": "MSG_CALICO_ROAD"
+  },
+  {
+   "x": 0,
+   "y": 15,
+   "to": "quartel",
+   "tx": 32,
+   "ty": 10,
+   "facing": "left",
+   "sfx": ""
+  },
+  {
+   "x": 0,
+   "y": 16,
+   "to": "quartel",
+   "tx": 32,
+   "ty": 11,
+   "facing": "left",
+   "sfx": ""
+  },
+  {
+   "x": 12,
+   "y": 10,
+   "to": "ossorio_rancho",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 27,
+   "y": 10,
+   "to": "ossorio_loja",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 8,
+   "y": 20,
+   "to": "ossorio_casa_viseira",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 31,
+   "y": 20,
+   "to": "ossorio_casa_elo",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 14,
+   "y": 27,
+   "to": "ossorio_arquivo",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door",
+   "if": "calico_beaten",
+   "locked_message": "MSG_ARCHIVE_SEALED"
+  }
+ ],
+ "ambient": [],
+ "tint": [
+  0.98,
+  0.96,
+  0.98
+ ],
+ "on_enter": [
+  {
+   "if_not": "ossorio_visto",
+   "dialog": "ossorio/chegada_cidade"
+  }
+ ]
+}

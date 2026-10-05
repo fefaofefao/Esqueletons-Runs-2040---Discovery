@@ -91,9 +91,11 @@ func _battles(node_list: Array, out: Array) -> void:
 
 
 func test_guardians_match_balance() -> void:
-	var targets := {}
+	## A equipe do roteiro tem de ser a mesma que o simulador usa (balance.json):
+	## mesmas linhas, idades a ±1 e estágio coerente com a idade.
+	var protos := {}
 	for reg in Data.load_json("res://data/balance.json").regions:
-		targets[str(reg.id)] = float(reg.guardian_age)
+		protos[str(reg.id)] = reg.get("guardian", [])
 	var found := {}
 	for f in DirAccess.get_files_at("res://data/dialogs"):
 		if not f.ends_with(".json"):
@@ -107,21 +109,22 @@ func test_guardians_match_balance() -> void:
 				if not GUARDIANS.has(tk):
 					continue
 				found[tk] = true
-				var total := 0
+				var proto: Array = protos.get(GUARDIANS[tk], [])
+				check_eq(b.enemies.size(), proto.size(), "%s: tamanho da equipe igual ao balance.json" % tk)
 				for e in b.enemies:
 					var info := Data.species(str(e[0]))
 					var gl: Array = info.get("growth_levels", [])
 					var st := int(info.get("stage", 1))
-					total += int(e[1])
 					if gl.size() == 2:
 						var lo := 0 if st == 1 else int(gl[st - 2])
 						var hi := 999 if st == 3 else int(gl[st - 1]) - 1
 						check(int(e[1]) >= lo and int(e[1]) <= hi, "%s: %s com idade %d coerente com o estágio" % [tk, e[0], int(e[1])])
-				var avg := total / float(b.enemies.size())
-				var want: float = targets.get(GUARDIANS[tk], 0.0)
-				check(absf(avg - want) <= 2.0, "%s: média %.1f ≈ %.0f (balance.json)" % [tk, avg, want])
+					var line := str(info.get("line", e[0]))
+					var ok := false
+					for pr in proto:
+						ok = ok or (str(pr[0]) == line and absi(int(pr[1]) - int(e[1])) <= 1)
+					check(ok, "%s: %s %d está no protótipo do balance.json" % [tk, line, int(e[1])])
 	check(found.has("BTL_TAMER_RAMALHO") and found.has("BTL_TAMER_FORNALHA"), "Guardiões implementados conferidos")
-
 
 ## Executa um roteiro escolhendo as opções dadas (sem batalhas no caminho).
 func _play(ref: String, choices: Array = []) -> void:
@@ -238,3 +241,31 @@ func test_quest_pena() -> void:
 	await _play("pantano/pena_obrigada")
 	check(SaveGame.get_flag("pena_done") and not SaveGame.get_flag("has_malote"), "malote entregue")
 	check_eq(int(SaveGame.data.bag.get("antidoto", 0)), 2, "2 antídotos de recompensa")
+
+
+func test_revelation_and_choice_ossorio() -> void:
+	SaveGame.start_new("Téo")
+	SaveGame.set_flag("partner_lia")
+	await _play("ossorio/registro")
+	check(SaveGame.get_flag("pista_5") and SaveGame.get_flag("has_registro_real"), "Arquivo: pista 5 e Registro Real")
+	await _play("ossorio/clarim", [0])
+	check(SaveGame.get_flag("ossorio_revelou") and SaveGame.get_flag("red_ossorio"), "contar: +1 Redenção")
+	SaveGame.start_new("Téo")
+	await _play("ossorio/registro")
+	await _play("ossorio/clarim", [1])
+	check(SaveGame.get_flag("ossorio_segredo") and not SaveGame.get_flag("red_ossorio"), "segredo: sem Redenção")
+	SaveGame.start_new("Téo")
+	await _play("ossorio/clarim")
+	check(not SaveGame.get_flag("ossorio_revelou") and not SaveGame.get_flag("ossorio_segredo"), "sem o registro, nada a decidir")
+
+
+func test_quiz_selo() -> void:
+	SaveGame.start_new("Téo")
+	SaveGame.set_flag("calico_beaten")
+	await _play("ossorio/selo")
+	check(not SaveGame.get_flag("selo_done"), "sem ler o diário, sem pergunta")
+	await _play("ossorio/livro_farol")
+	await _play("ossorio/selo", [0])
+	check(not SaveGame.get_flag("selo_done"), "resposta errada não premia")
+	await _play("ossorio/selo", [1])
+	check(SaveGame.get_flag("selo_done"), "Rainha Duna é a resposta certa")

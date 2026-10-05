@@ -1,0 +1,66 @@
+{
+ "id": "ossorio_casa_viseira",
+ "region": "ossorio",
+ "name_key": "MAP_OSSORIO_CASA_VISEIRA",
+ "tileset": "overworld",
+ "legend": {
+  "T": "wall_top",
+  "w": "wall",
+  "n": "wall_window",
+  ".": "floor",
+  "m": "mat"
+ },
+ "ground": [
+  "TTTTTTTTTTTT",
+  "TwwnwwwwwnwT",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "TTTTTTmTTTTT"
+ ],
+ "spawn": {
+  "x": 6,
+  "y": 8,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "banner_blue",
+   "x": 2,
+   "y": 2
+  },
+  {
+   "type": "table",
+   "x": 7,
+   "y": 5
+  },
+  {
+   "type": "barrel",
+   "x": 10,
+   "y": 7
+  }
+ ],
+ "npcs": [
+  {
+   "id": "viseira",
+   "x": 6,
+   "y": 3,
+   "facing": "down"
+  }
+ ],
+ "warps": [
+  {
+   "x": 6,
+   "y": 9,
+   "to": "ossorio",
+   "tx": 8,
+   "ty": 21,
+   "facing": "down",
+   "sfx": "door"
+  }
+ ]
+}

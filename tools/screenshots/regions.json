@@ -225,5 +225,119 @@
     "battle": true
    }
   ]
+ },
+ "ossorio": {
+  "flags": [
+   "intro_done",
+   "bento_met",
+   "has_partner",
+   "partner_lia",
+   "tut_battle",
+   "tut_marker",
+   "bras_beaten",
+   "ramalho_beaten",
+   "vigia_lasca_ok",
+   "fornalha_beaten",
+   "musga_beaten",
+   "rota4_vista"
+  ],
+  "party": [
+   [
+    "faroleira_3",
+    56,
+    "Lia"
+   ],
+   [
+    "lenhador_3",
+    55
+   ],
+   [
+    "mineiro_3",
+    55
+   ],
+   [
+    "lavadeira_3",
+    54
+   ]
+  ],
+  "steps": [
+   {
+    "map": "rota_4",
+    "x": 19,
+    "y": 43,
+    "f": "up",
+    "shot": "o1_rota4"
+   },
+   {
+    "map": "rota_4",
+    "x": 24,
+    "y": 8,
+    "f": "up",
+    "shot": "o2_rival",
+    "interact": [
+     24,
+     6
+    ],
+    "shot_at": 0,
+    "choices": [
+     1
+    ],
+    "step": "up"
+   },
+   {
+    "map": "ossorio",
+    "x": 19,
+    "y": 24,
+    "f": "up",
+    "shot": "o3_ossorio",
+    "no_wait_warp": true,
+    "shot_at": 0
+   },
+   {
+    "map": "ossorio",
+    "x": 19,
+    "y": 19,
+    "f": "up",
+    "shot": "o4_praca"
+   },
+   {
+    "map": "quartel",
+    "x": 10,
+    "y": 7,
+    "f": "up",
+    "flags": [
+     "grade_beaten",
+     "quartel_visto"
+    ],
+    "step": "up",
+    "shot": "o5_calico",
+    "shot_at": 1,
+    "battle": true
+   },
+   {
+    "map": "ossorio_arquivo",
+    "x": 6,
+    "y": 6,
+    "f": "up",
+    "interact": [
+     6,
+     5
+    ],
+    "shot": "o6_revelacao",
+    "shot_at": 2
+   },
+   {
+    "map": "ossorio_arquivo",
+    "x": 3,
+    "y": 3,
+    "f": "up",
+    "interact": [
+     3,
+     2
+    ],
+    "shot": "o7_diario",
+    "shot_at": 1
+   }
+  ]
  }
 }

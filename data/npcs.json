@@ -1409,6 +1409,365 @@
     "vision": 3,
     "flag": "musga_beaten"
    }
+  },
+  "trote": {
+   "name_key": "SPK_TROTE",
+   "role": "hint",
+   "sprite": "res://assets/sprites/npc/trote.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "ossorio/trote"
+    }
+   ]
+  },
+  "elmo": {
+   "name_key": "SPK_ELMO",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/elmo.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "elmo_beaten",
+     "dialog": "ossorio/elmo_depois"
+    },
+    {
+     "dialog": "ossorio/elmo"
+    }
+   ],
+   "tamer": {
+    "vision": 4,
+    "flag": "elmo_beaten"
+   }
+  },
+  "malva": {
+   "name_key": "SPK_MALVA",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/malva.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "malva_beaten",
+     "dialog": "ossorio/malva_depois"
+    },
+    {
+     "dialog": "ossorio/malva"
+    }
+   ],
+   "tamer": {
+    "vision": 4,
+    "flag": "malva_beaten"
+   }
+  },
+  "bigode": {
+   "name_key": "SPK_BIGODE",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/bigode.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "bigode_beaten",
+     "dialog": "ossorio/bigode_depois"
+    },
+    {
+     "dialog": "ossorio/bigode"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "bigode_beaten"
+   }
+  },
+  "rival_taro_o": {
+   "name_key": "SPK_TARO",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_grumete_3.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "ossorio/rival_taro"
+    }
+   ]
+  },
+  "rival_lia_o": {
+   "name_key": "SPK_LIA",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_faroleira_3.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "ossorio/rival_lia"
+    }
+   ]
+  },
+  "ameia": {
+   "name_key": "SPK_AMEIA",
+   "role": "ranch",
+   "sprite": "res://assets/sprites/npc/ameia.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "ossorio/ameia"
+    }
+   ]
+  },
+  "dobrao": {
+   "name_key": "SPK_DOBRAO",
+   "role": "shop",
+   "sprite": "res://assets/sprites/npc/dobrao.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "ossorio/dobrao"
+    }
+   ]
+  },
+  "fivela": {
+   "name_key": "SPK_FIVELA",
+   "role": "humor",
+   "sprite": "res://assets/sprites/npc/fivela.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "ossorio/fivela"
+    }
+   ]
+  },
+  "brasao": {
+   "name_key": "SPK_BRASAO",
+   "role": "lore",
+   "sprite": "res://assets/sprites/npc/brasao.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "ossorio/brasao"
+    }
+   ]
+  },
+  "clarim": {
+   "name_key": "SPK_CLARIM",
+   "role": "quest",
+   "sprite": "res://assets/sprites/npc/clarim.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "ossorio/clarim"
+    }
+   ]
+  },
+  "selo": {
+   "name_key": "SPK_SELO",
+   "role": "quest",
+   "sprite": "res://assets/sprites/npc/selo.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "selo_done",
+     "dialog": "ossorio/selo_depois"
+    },
+    {
+     "dialog": "ossorio/selo"
+    }
+   ]
+  },
+  "viseira": {
+   "name_key": "SPK_VISEIRA",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/viseira.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "viseira_beaten",
+     "dialog": "ossorio/viseira_depois"
+    },
+    {
+     "dialog": "ossorio/viseira"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "viseira_beaten"
+   }
+  },
+  "elo": {
+   "name_key": "SPK_ELO",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/elo.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "elo_beaten",
+     "dialog": "ossorio/elo_depois"
+    },
+    {
+     "dialog": "ossorio/elo"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "elo_beaten"
+   }
+  },
+  "lia_arquivo": {
+   "name_key": "SPK_LIA",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_faroleira_3.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "ossorio/lia_arquivo"
+    }
+   ]
+  },
+  "grade": {
+   "name_key": "SPK_GRADE",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/grade.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "grade_beaten",
+     "dialog": "ossorio/grade_depois"
+    },
+    {
+     "dialog": "ossorio/grade"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "grade_beaten"
+   }
+  },
+  "bufardo_npc": {
+   "name_key": "SPECIES_BUFARDO",
+   "role": "wild",
+   "sprite": "res://assets/sprites/npc/skel_bufardo.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "ossorio/bufardo"
+    }
+   ]
+  },
+  "calico": {
+   "name_key": "SPK_CALICO",
+   "role": "guardian",
+   "sprite": "res://assets/sprites/npc/skel_calico.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "if": "calico_beaten",
+     "dialog": "ossorio/calico_depois"
+    },
+    {
+     "dialog": "ossorio/calico"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "calico_beaten"
+   }
   }
  }
 }

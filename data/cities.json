@@ -78,6 +78,26 @@
     "pena",
     "garca"
    ]
+  },
+  {
+   "id": "ossorio",
+   "map": "ossorio",
+   "ranch": "ameia",
+   "shop": "ossorio",
+   "tamer_houses": [
+    "viseira",
+    "elo"
+   ],
+   "npcs": [
+    "fivela",
+    "brasao",
+    "clarim",
+    "selo"
+   ],
+   "quests": [
+    "selo",
+    "clarim"
+   ]
   }
  ]
 }

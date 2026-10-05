@@ -107,9 +107,16 @@
    ],
    "music": "",
    "maps": [
-    "rota_4"
+    "rota_4",
+    "ossorio",
+    "quartel",
+    "ossorio_arquivo",
+    "ossorio_rancho",
+    "ossorio_loja",
+    "ossorio_casa_viseira",
+    "ossorio_casa_elo"
    ],
-   "battle_bg": "res://assets/battle/bg_praia.png"
+   "battle_bg": "res://assets/battle/bg_ossorio.png"
   },
   "picos": {
    "name_key": "REGION_PICOS",
@@ -120,7 +127,9 @@
     1.05
    ],
    "music": "",
-   "maps": [],
+   "maps": [
+    "rota_5"
+   ],
    "battle_bg": "res://assets/battle/bg_praia.png"
   },
   "deserto": {

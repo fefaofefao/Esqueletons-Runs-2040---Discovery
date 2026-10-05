@@ -302,6 +302,10 @@ func _advance(choices: Array = [], shot_name: String = "", shot_at: int = -1, ma
 	var n := 0
 	for i in max_steps:
 		await _wait(0.25)
+		if Game.battle and Game.battle.state == "list" and Game.battle._list_mode == "learn":
+			Game.battle._list_panel.visible = false
+			Game.battle._list_cb.call("-1")  # "não aprender" para seguir as capturas
+			continue
 		var top := Game.top_overlay()
 		if top == null:
 			if Game.battle == null and not Game.transitioning:
@@ -322,6 +326,8 @@ func _advance(choices: Array = [], shot_name: String = "", shot_at: int = -1, ma
 			else:
 				box._press()
 			n += 1
+		else:
+			top.close()  # aprender golpe, recruta etc.: as capturas seguem em frente
 
 
 func _goto(map_id: String, cell: Vector2i, facing: String) -> void:

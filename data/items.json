@@ -91,6 +91,14 @@
    "price": 0,
    "battle": false,
    "target": "none"
+  },
+  "registro_real": {
+   "name_key": "ITEM_RECORD",
+   "desc_key": "ITEM_RECORD_TEXT",
+   "kind": "key",
+   "price": 0,
+   "battle": false,
+   "target": "none"
   }
  }
 }

@@ -1,0 +1,94 @@
+{
+ "id": "ossorio_arquivo",
+ "region": "ossorio",
+ "name_key": "MAP_ARQUIVO",
+ "tileset": "overworld",
+ "legend": {
+  "T": "wall_top",
+  "w": "wall",
+  "n": "wall_window",
+  ".": "carpet",
+  "m": "mat"
+ },
+ "ground": [
+  "TTTTTTTTTTTT",
+  "TwwnwwwwwnwT",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "TTTTTTmTTTTT"
+ ],
+ "spawn": {
+  "x": 6,
+  "y": 8,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "bookshelf",
+   "x": 3,
+   "y": 2,
+   "dialog": "ossorio/livro_farol"
+  },
+  {
+   "type": "bookshelf",
+   "x": 11,
+   "y": 2
+  },
+  {
+   "type": "lectern",
+   "x": 6,
+   "y": 5,
+   "dialog": "ossorio/registro",
+   "if_not": "pista_5"
+  },
+  {
+   "type": "lectern",
+   "x": 6,
+   "y": 5,
+   "dialog": "ossorio/registro_de_novo",
+   "if": "pista_5"
+  },
+  {
+   "type": "portrait",
+   "x": 8,
+   "y": 1,
+   "dialog": "ossorio/registro_de_novo"
+  },
+  {
+   "type": "candelabra",
+   "x": 1,
+   "y": 7
+  },
+  {
+   "type": "candelabra",
+   "x": 10,
+   "y": 7
+  }
+ ],
+ "npcs": [
+  {
+   "id": "lia_arquivo",
+   "x": 4,
+   "y": 4,
+   "facing": "up",
+   "if": "partner_taro",
+   "if_not": "lia_arquivo_visto"
+  }
+ ],
+ "warps": [
+  {
+   "x": 6,
+   "y": 9,
+   "to": "ossorio",
+   "tx": 14,
+   "ty": 28,
+   "facing": "down",
+   "sfx": "door"
+  }
+ ]
+}

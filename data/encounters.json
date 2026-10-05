@@ -405,6 +405,148 @@
     "max_level": 39,
     "rarity": "comum"
    }
+  ],
+  "rota4_sul": [
+   {
+    "species": "sentinela_2",
+    "stage": 2,
+    "min_level": 45,
+    "max_level": 47,
+    "rarity": "comum"
+   },
+   {
+    "species": "lavadeira_2",
+    "stage": 2,
+    "min_level": 45,
+    "max_level": 47,
+    "rarity": "comum"
+   }
+  ],
+  "rota4_oeste": [
+   {
+    "species": "sentinela_2",
+    "stage": 2,
+    "min_level": 46,
+    "max_level": 48,
+    "rarity": "comum"
+   },
+   {
+    "species": "ferreiro_3",
+    "stage": 3,
+    "min_level": 46,
+    "max_level": 48,
+    "rarity": "incomum"
+   }
+  ],
+  "rota4_campo": [
+   {
+    "species": "sentinela_2",
+    "stage": 2,
+    "min_level": 46,
+    "max_level": 48,
+    "rarity": "comum"
+   },
+   {
+    "species": "sineiro_2",
+    "stage": 2,
+    "min_level": 46,
+    "max_level": 48,
+    "rarity": "incomum"
+   },
+   {
+    "species": "escriba_2",
+    "stage": 2,
+    "min_level": 47,
+    "max_level": 49,
+    "rarity": "raro"
+   },
+   {
+    "species": "lavadeira_2",
+    "stage": 2,
+    "min_level": 46,
+    "max_level": 48,
+    "rarity": "comum"
+   },
+   {
+    "species": "ferreiro_3",
+    "stage": 3,
+    "min_level": 47,
+    "max_level": 49,
+    "rarity": "incomum"
+   }
+  ],
+  "rota4_aqueduto": [
+   {
+    "species": "escriba_2",
+    "stage": 2,
+    "min_level": 54,
+    "max_level": 55,
+    "rarity": "raro",
+    "weight": 60
+   },
+   {
+    "species": "sineiro_2",
+    "stage": 2,
+    "min_level": 54,
+    "max_level": 55,
+    "rarity": "incomum",
+    "weight": 40
+   }
+  ],
+  "rota4_norte": [
+   {
+    "species": "sentinela_2",
+    "stage": 2,
+    "min_level": 48,
+    "max_level": 50,
+    "rarity": "comum"
+   },
+   {
+    "species": "sineiro_2",
+    "stage": 2,
+    "min_level": 48,
+    "max_level": 50,
+    "rarity": "incomum"
+   }
+  ],
+  "quartel_salao": [
+   {
+    "species": "sentinela_2",
+    "stage": 2,
+    "min_level": 49,
+    "max_level": 51,
+    "rarity": "comum"
+   },
+   {
+    "species": "escriba_2",
+    "stage": 2,
+    "min_level": 49,
+    "max_level": 51,
+    "rarity": "raro"
+   },
+   {
+    "species": "ferreiro_3",
+    "stage": 3,
+    "min_level": 49,
+    "max_level": 51,
+    "rarity": "incomum"
+   }
+  ],
+  "quartel_sul": [
+   {
+    "species": "sineiro_2",
+    "stage": 2,
+    "min_level": 50,
+    "max_level": 51,
+    "rarity": "incomum"
+   },
+   {
+    "species": "sentinela_2",
+    "stage": 2,
+    "min_level": 50,
+    "max_level": 51,
+    "rarity": "comum"
+   }
   ]
  }
 }

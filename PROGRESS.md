@@ -14,7 +14,8 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 | 4b — Bosque das Raízes | ✅ concluída |
 | 4c — Minas de Cinzas | ✅ concluída |
 | 4d — Pântano Verde-Musgo | ✅ concluída |
-| 4e–4h — Regiões, Castelo e finais | ⏳ próxima (4e) |
+| 4e — Cidade Murada de Ossório | ✅ concluída |
+| 4f–4h — Regiões, Castelo e finais | ⏳ próxima (4f) |
 | 5 — Monetização e conformidade | — |
 | 6 — Polimento e publicação | — |
 
@@ -294,3 +295,23 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 - `tests/run_tests.tscn`: 7842 verificações, 0 falhas (inclui as duas opções da escolha 3, a escolha adiada sem antídotos e a missão do malote).
 - `tools/validate_data.py`: OK. `tools/simulate.py --check`: 174 min, 0 critérios falhando.
 - Capturas: `capture.tscn -- --region=pantano`.
+
+## Fase 4e — Cidade Murada de Ossório (concluída)
+
+### Feito
+- **`docs/roteiro/05_ossorio.md`** (gerado por `tools/maps/ossorio.py`):
+  - problema local: lei marcial do Caliço (toque de recolher, moradores de guarda na muralha) e o Arquivo Real lacrado pelo Rei;
+  - **pista nº 5, a revelação de 2040:** o registro "Quando a coroa rachar, o eco chamará o último do sangue, onde o farol virar museu" e o retrato do príncipe com o rosto do protagonista;
+  - Lia: o diário da Rainha Duna (ela ergueu o farol); "o Rei só tem medo do escuro, igual eu tinha";
+  - recorrente com batalha opcional (Lia/Taro já no estágio adulto);
+  - Guardião Caliço (Sintonia) e a **escolha 4** (contar o registro à cidade ou guardar segredo).
+- **Rota 4** (Cadetes, Campo das Bandeiras, Aqueduto Velho), **Ossório** (Rancho, Empório, casas da Viseira e dos Elo, Arquivo Real, praça com chafariz, estátua e torre do sino), **Quartel** (Sargento Grade, Bufardo, Caliço).
+- **Missão do Selo:** uma pergunta sobre o diário (só acerta quem leu).
+- **Escolha 4:** contar (+1 Redenção, guardas leais na Rota 5, Caliço aliado no Castelo) ou segredo.
+- 13 NPCs novos; chapéus novos (elmo, capuz, turbante).
+- Testes: o guardião precisa ter a mesma equipe que o `balance.json` (linha e idade ±1), para o simulador simular a luta real. Capturas: o roteiro de capturas agora fecha telas de "aprender golpe" e outras sobreposições.
+
+### Verificação
+- `tests/run_tests.tscn`: 0 falhas (revelação, escolha 4 nos dois sentidos, missão do Selo).
+- `tools/validate_data.py`: OK. `tools/simulate.py --check`: 0 critérios falhando.
+- Capturas: `capture.tscn -- --region=ossorio` (Rota 4, recorrente, cidade, Caliço, revelação, diário).

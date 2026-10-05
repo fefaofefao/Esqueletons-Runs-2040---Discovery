@@ -75,6 +75,20 @@ NPCS = {
     "marreco": dict(skin=(214, 160, 120), hair=(60, 40, 30), style="short", shirt=(70, 120, 90), legs=(70, 60, 50), hat=("cap", (60, 110, 70)), beard=(60, 40, 30)),
     "remanso": dict(skin=(170, 112, 80), hair=(220, 220, 220), style="short", shirt=(120, 100, 80), legs=(70, 60, 50), hat=("straw", (210, 190, 120)), beard=(220, 220, 220)),
     "fel": dict(skin=(200, 170, 140), hair=(100, 140, 80), style="short", shirt=(80, 110, 70), legs=(50, 60, 50), glasses=True, badge=True),
+    # Ossório (4e)
+    "trote": dict(skin=(232, 186, 150), hair=(150, 100, 50), style="short", shirt=(60, 80, 150), legs=(220, 210, 190), hat=("cap", (60, 80, 150)), badge=True),
+    "elmo": dict(skin=(214, 160, 120), hair=(60, 40, 30), style="short", shirt=(150, 156, 170), legs=(60, 70, 110), hat=("helm", (170, 176, 190))),
+    "malva": dict(skin=(200, 150, 110), hair=(140, 60, 120), style="long", shirt=(150, 156, 170), legs=(60, 70, 110), hat=("helm", (170, 176, 190))),
+    "bigode": dict(skin=(232, 186, 150), hair=(90, 60, 30), style="short", shirt=(70, 90, 150), legs=(60, 60, 80), beard=(90, 60, 30), hat=("helm", (150, 156, 170))),
+    "ameia": dict(skin=(226, 176, 136), hair=(200, 200, 200), style="bun", shirt=(240, 236, 226), legs=(60, 80, 150), skirt=True, apron=(200, 70, 70)),
+    "dobrao": dict(skin=(190, 140, 100), hair=(40, 30, 30), style="short", shirt=(120, 60, 120), legs=(60, 50, 60), apron=(220, 190, 90), beard=(40, 30, 30)),
+    "viseira": dict(skin=(214, 160, 120), hair=(220, 180, 90), style="bun", shirt=(60, 80, 150), legs=(60, 60, 80), badge=True, hat=("helm", (220, 190, 90))),
+    "elo": dict(skin=(232, 186, 150), hair=(30, 30, 40), style="short", shirt=(170, 60, 60), legs=(60, 60, 80), small=True),
+    "clarim": dict(skin=(200, 150, 110), hair=(110, 70, 40), style="short", shirt=(200, 60, 60), legs=(220, 200, 160), hat=("cap", (60, 80, 150)), beard=(110, 70, 40)),
+    "fivela": dict(skin=(244, 202, 166), hair=(240, 200, 90), style="pigtails", shirt=(90, 150, 210), legs=(70, 70, 120), small=True, skirt=True),
+    "selo": dict(skin=(232, 190, 160), hair=(230, 230, 230), style="bald", shirt=(90, 70, 110), legs=(60, 50, 70), glasses=True, beard=(230, 230, 230)),
+    "brasao": dict(skin=(190, 140, 100), hair=(200, 200, 200), style="short", shirt=(60, 80, 150), legs=(80, 70, 60), cane=True, beard=(200, 200, 200)),
+    "grade": dict(skin=(170, 112, 80), hair=(40, 40, 40), style="bald", shirt=(150, 156, 170), legs=(60, 70, 110), hat=("helm", (130, 136, 150)), beard=(40, 40, 40)),
     "vo_concha": dict(skin=(232, 190, 160), hair=(236, 236, 240), style="bun", shirt=(150, 110, 180), legs=(120, 90, 140), skirt=True, glasses=True, cane=True),
 }
 

@@ -1,0 +1,814 @@
+{
+ "_comment": "Gerado por tools/maps/ossorio.py (fonte única do roteiro).",
+ "dialogs": {
+  "placa_bifurcacao": [
+   {
+    "say": "SIGN_O_FORK"
+   }
+  ],
+  "chegada_rota": [
+   {
+    "say": "DLG_O_ARR_R_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_O_ARR_R_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "rota4_vista",
+    "value": true
+   }
+  ],
+  "trote": [
+   {
+    "say": "DLG_O_TROTE_1",
+    "speaker": "SPK_TROTE"
+   },
+   {
+    "say": "DLG_O_TROTE_2",
+    "speaker": "SPK_TROTE"
+   }
+  ],
+  "elmo": [
+   {
+    "say": "DLG_O_ELMO_1",
+    "speaker": "SPK_ELMO"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_ELMO",
+    "enemies": [
+     [
+      "sentinela_2",
+      48
+     ],
+     [
+      "escriba_2",
+      48
+     ]
+    ],
+    "reward": 640,
+    "win_flag": "elmo_beaten"
+   },
+   {
+    "say": "DLG_O_ELMO_2",
+    "speaker": "SPK_ELMO"
+   }
+  ],
+  "elmo_depois": [
+   {
+    "say": "DLG_O_ELMO_2",
+    "speaker": "SPK_ELMO"
+   }
+  ],
+  "malva": [
+   {
+    "say": "DLG_O_MALVA_1",
+    "speaker": "SPK_MALVA"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_MALVA",
+    "enemies": [
+     [
+      "sentinela_2",
+      49
+     ],
+     [
+      "sineiro_2",
+      49
+     ]
+    ],
+    "reward": 660,
+    "win_flag": "malva_beaten"
+   },
+   {
+    "say": "DLG_O_MALVA_2",
+    "speaker": "SPK_MALVA"
+   }
+  ],
+  "malva_depois": [
+   {
+    "say": "DLG_O_MALVA_2",
+    "speaker": "SPK_MALVA"
+   }
+  ],
+  "bigode": [
+   {
+    "say": "DLG_O_BIGODE_1",
+    "speaker": "SPK_BIGODE"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_BIGODE",
+    "enemies": [
+     [
+      "ferreiro_3",
+      50
+     ],
+     [
+      "sentinela_2",
+      50
+     ]
+    ],
+    "reward": 700,
+    "win_flag": "bigode_beaten",
+    "items": [
+     [
+      "pocao_g",
+      1
+     ]
+    ]
+   },
+   {
+    "say": "DLG_O_BIGODE_2",
+    "speaker": "SPK_BIGODE"
+   }
+  ],
+  "bigode_depois": [
+   {
+    "say": "DLG_O_BIGODE_2",
+    "speaker": "SPK_BIGODE"
+   }
+  ],
+  "rival_taro": [
+   {
+    "say": "DLG_O_RIV_T",
+    "choice": [
+     {
+      "text": "OPT_P_FIGHT",
+      "goto": "ossorio/rival_taro_luta"
+     },
+     {
+      "text": "OPT_P_NOT_NOW"
+     }
+    ],
+    "speaker": "SPK_TARO"
+   }
+  ],
+  "rival_taro_luta": [
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_TARO",
+    "enemies": [
+     [
+      "grumete_3",
+      52
+     ],
+     [
+      "sentinela_2",
+      51
+     ]
+    ],
+    "reward": 700,
+    "win_flag": "rival_ossorio_done",
+    "marker": {
+     "species": "grumete_3",
+     "amount": 10
+    }
+   },
+   {
+    "say": "DLG_O_RIV_T_BYE",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "action": "hide_npc",
+    "id": "rival_taro_o"
+   }
+  ],
+  "rival_lia": [
+   {
+    "say": "DLG_O_RIV_L",
+    "choice": [
+     {
+      "text": "OPT_P_FIGHT",
+      "goto": "ossorio/rival_lia_luta"
+     },
+     {
+      "text": "OPT_P_NOT_NOW"
+     }
+    ],
+    "speaker": "SPK_LIA"
+   }
+  ],
+  "rival_lia_luta": [
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_LIA",
+    "enemies": [
+     [
+      "faroleira_3",
+      52
+     ],
+     [
+      "marisqueiro_3",
+      51
+     ]
+    ],
+    "reward": 700,
+    "win_flag": "rival_ossorio_done",
+    "marker": {
+     "species": "faroleira_3",
+     "amount": 10
+    }
+   },
+   {
+    "say": "DLG_O_RIV_L_BYE",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "action": "hide_npc",
+    "id": "rival_lia_o"
+   }
+  ],
+  "placa_cidade": [
+   {
+    "say": "SIGN_O_CITY"
+   }
+  ],
+  "placa_quartel": [
+   {
+    "say": "SIGN_O_BARRACKS"
+   }
+  ],
+  "estatua": [
+   {
+    "say": "OBJ_O_STATUE"
+   }
+  ],
+  "chegada_cidade": [
+   {
+    "say": "DLG_O_ARR_C_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_O_ARR_C_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "ossorio_visto",
+    "value": true
+   }
+  ],
+  "ameia": [
+   {
+    "action": "heal"
+   },
+   {
+    "action": "respawn"
+   },
+   {
+    "say": "DLG_O_AMEIA_AFTER",
+    "speaker": "SPK_AMEIA",
+    "if": "calico_beaten"
+   },
+   {
+    "say": "DLG_O_AMEIA_1",
+    "speaker": "SPK_AMEIA",
+    "if_not": "calico_beaten"
+   },
+   {
+    "say": "DLG_O_AMEIA_2",
+    "choice": [
+     {
+      "text": "OPT_P_RANCH",
+      "goto": "vila_mare/rancho"
+     },
+     {
+      "text": "OPT_P_LEAVE"
+     }
+    ],
+    "speaker": "SPK_AMEIA"
+   }
+  ],
+  "dobrao": [
+   {
+    "say": "DLG_O_DOBRAO_1",
+    "speaker": "SPK_DOBRAO"
+   },
+   {
+    "action": "shop",
+    "id": "ossorio"
+   },
+   {
+    "say": "DLG_O_DOBRAO_2",
+    "speaker": "SPK_DOBRAO"
+   }
+  ],
+  "fivela": [
+   {
+    "say": "DLG_O_FIVELA_AFTER",
+    "speaker": "SPK_FIVELA",
+    "if": "calico_beaten"
+   },
+   {
+    "say": "DLG_O_FIVELA",
+    "speaker": "SPK_FIVELA",
+    "if_not": "calico_beaten"
+   }
+  ],
+  "brasao": [
+   {
+    "say": "DLG_O_BRASAO_1",
+    "speaker": "SPK_BRASAO"
+   },
+   {
+    "say": "DLG_O_BRASAO_2",
+    "speaker": "SPK_BRASAO"
+   }
+  ],
+  "clarim": [
+   {
+    "say": "DLG_O_CLARIM_TOLD",
+    "speaker": "SPK_CLARIM",
+    "if": "ossorio_revelou"
+   },
+   {
+    "say": "DLG_O_CLARIM_KEPT",
+    "speaker": "SPK_CLARIM",
+    "if": "ossorio_segredo"
+   },
+   {
+    "say": "DLG_O_CLARIM_ASK",
+    "choice": [
+     {
+      "text": "OPT_O_TELL",
+      "goto": "ossorio/contar"
+     },
+     {
+      "text": "OPT_O_SECRET",
+      "goto": "ossorio/segredo"
+     }
+    ],
+    "speaker": "SPK_CLARIM",
+    "if": "has_registro_real",
+    "if_none": [
+     "ossorio_revelou",
+     "ossorio_segredo"
+    ]
+   },
+   {
+    "say": "DLG_O_CLARIM_1",
+    "speaker": "SPK_CLARIM",
+    "if_none": [
+     "has_registro_real",
+     "ossorio_revelou",
+     "ossorio_segredo"
+    ]
+   },
+   {
+    "say": "DLG_O_CLARIM_2",
+    "speaker": "SPK_CLARIM",
+    "if_none": [
+     "has_registro_real",
+     "ossorio_revelou",
+     "ossorio_segredo"
+    ]
+   }
+  ],
+  "contar": [
+   {
+    "say": "DLG_O_TELL_1",
+    "speaker": "SPK_CLARIM"
+   },
+   {
+    "action": "sfx",
+    "name": "exclaim"
+   },
+   {
+    "say": "DLG_O_TELL_2"
+   },
+   {
+    "say": "DLG_O_TELL_3"
+   },
+   {
+    "set_flag": "ossorio_revelou",
+    "value": true
+   },
+   {
+    "set_flag": "red_ossorio",
+    "value": true
+   }
+  ],
+  "segredo": [
+   {
+    "say": "DLG_O_SECRET",
+    "speaker": "SPK_CLARIM"
+   },
+   {
+    "set_flag": "ossorio_segredo",
+    "value": true
+   }
+  ],
+  "selo": [
+   {
+    "say": "DLG_O_SELO_1",
+    "speaker": "SPK_SELO",
+    "if_not": "calico_beaten"
+   },
+   {
+    "say": "DLG_O_SELO_OPEN",
+    "speaker": "SPK_SELO",
+    "if": "calico_beaten",
+    "if_not": "livro_farol_lido"
+   },
+   {
+    "say": "DLG_O_SELO_QUIZ",
+    "choice": [
+     {
+      "text": "OPT_O_KING",
+      "goto": "ossorio/selo_rei"
+     },
+     {
+      "text": "OPT_O_DUNA",
+      "goto": "ossorio/selo_certo"
+     },
+     {
+      "text": "OPT_O_AUNT",
+      "goto": "ossorio/selo_tia"
+     }
+    ],
+    "speaker": "SPK_SELO",
+    "if": "livro_farol_lido"
+   }
+  ],
+  "selo_certo": [
+   {
+    "say": "DLG_O_SELO_RIGHT",
+    "speaker": "SPK_SELO"
+   },
+   {
+    "action": "give_item",
+    "item": "pocao_g",
+    "n": 2
+   },
+   {
+    "action": "give_item",
+    "item": "reviver",
+    "n": 1
+   },
+   {
+    "set_flag": "selo_done",
+    "value": true
+   }
+  ],
+  "selo_rei": [
+   {
+    "say": "DLG_O_SELO_WRONG_KING",
+    "speaker": "SPK_SELO"
+   }
+  ],
+  "selo_tia": [
+   {
+    "say": "DLG_O_SELO_WRONG_AUNT",
+    "speaker": "SPK_SELO"
+   }
+  ],
+  "selo_depois": [
+   {
+    "say": "DLG_O_SELO_AFTER",
+    "speaker": "SPK_SELO"
+   }
+  ],
+  "viseira": [
+   {
+    "say": "DLG_O_VISEIRA_1",
+    "speaker": "SPK_VISEIRA"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_VISEIRA",
+    "enemies": [
+     [
+      "sentinela_2",
+      53
+     ],
+     [
+      "sineiro_2",
+      53
+     ]
+    ],
+    "reward": 760,
+    "win_flag": "viseira_beaten",
+    "items": [
+     [
+      "pocao_g",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_O_VISEIRA_2",
+    "speaker": "SPK_VISEIRA"
+   }
+  ],
+  "viseira_depois": [
+   {
+    "say": "DLG_O_VISEIRA_2",
+    "speaker": "SPK_VISEIRA"
+   }
+  ],
+  "elo": [
+   {
+    "say": "DLG_O_ELO_1",
+    "speaker": "SPK_ELO"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_ELO",
+    "enemies": [
+     [
+      "escriba_2",
+      53
+     ],
+     [
+      "escriba_2",
+      52
+     ]
+    ],
+    "reward": 740,
+    "win_flag": "elo_beaten",
+    "items": [
+     [
+      "reviver",
+      1
+     ],
+     [
+      "antidoto",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_O_ELO_2",
+    "speaker": "SPK_ELO"
+   }
+  ],
+  "elo_depois": [
+   {
+    "say": "DLG_O_ELO_2",
+    "speaker": "SPK_ELO"
+   }
+  ],
+  "registro": [
+   {
+    "say": "DLG_O_REC_1"
+   },
+   {
+    "say": "DLG_O_REC_2"
+   },
+   {
+    "say": "DLG_O_REC_3"
+   },
+   {
+    "say": "DLG_O_REC_4"
+   },
+   {
+    "say": "DLG_O_REC_5"
+   },
+   {
+    "say": "DLG_O_REC_L1",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_O_REC_L2",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_O_REC_T1",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "say": "DLG_O_REC_T2",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "pista_5",
+    "value": true
+   },
+   {
+    "action": "give_item",
+    "item": "registro_real",
+    "n": 1
+   }
+  ],
+  "registro_de_novo": [
+   {
+    "say": "DLG_O_REC_AGAIN"
+   }
+  ],
+  "livro_farol": [
+   {
+    "say": "DLG_O_BOOK_1"
+   },
+   {
+    "say": "DLG_O_BOOK_L1",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_O_BOOK_L2",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_O_BOOK_T1",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "livro_farol_lido",
+    "value": true
+   }
+  ],
+  "lia_arquivo": [
+   {
+    "say": "DLG_O_LIA_ARQ_1",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "say": "DLG_O_LIA_ARQ_2",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "set_flag": "lia_arquivo_visto",
+    "value": true
+   },
+   {
+    "action": "hide_npc",
+    "id": "lia_arquivo"
+   }
+  ],
+  "chegada_quartel": [
+   {
+    "say": "DLG_O_ARR_Q_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_O_ARR_Q_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "quartel_visto",
+    "value": true
+   }
+  ],
+  "grade": [
+   {
+    "say": "DLG_O_GRADE_1",
+    "speaker": "SPK_GRADE"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_GRADE",
+    "enemies": [
+     [
+      "sentinela_2",
+      55
+     ],
+     [
+      "escriba_2",
+      54
+     ]
+    ],
+    "reward": 720,
+    "win_flag": "grade_beaten"
+   },
+   {
+    "say": "DLG_O_GRADE_2",
+    "speaker": "SPK_GRADE"
+   }
+  ],
+  "grade_depois": [
+   {
+    "say": "DLG_O_GRADE_2",
+    "speaker": "SPK_GRADE"
+   }
+  ],
+  "bufardo": [
+   {
+    "say": "DLG_O_BUFARDO",
+    "choice": [
+     {
+      "text": "OPT_O_TRUMPET",
+      "goto": "ossorio/bufardo_luta"
+     },
+     {
+      "text": "OPT_M_LEAVE"
+     }
+    ]
+   }
+  ],
+  "bufardo_luta": [
+   {
+    "action": "battle",
+    "kind": "wild",
+    "tamer_key": "",
+    "enemies": [
+     [
+      "bufardo",
+      53
+     ]
+    ],
+    "reward": 0
+   }
+  ],
+  "calico": [
+   {
+    "say": "DLG_O_CAL_1",
+    "speaker": "SPK_CALICO"
+   },
+   {
+    "say": "DLG_O_CAL_2",
+    "speaker": "SPK_CALICO"
+   },
+   {
+    "say": "DLG_O_CAL_3",
+    "speaker": "SPK_CALICO"
+   },
+   {
+    "action": "battle",
+    "kind": "boss",
+    "tamer_key": "BTL_TAMER_CALICO",
+    "enemies": [
+     [
+      "sentinela_3",
+      62
+     ],
+     [
+      "escriba_2",
+      61
+     ],
+     [
+      "sineiro_3",
+      62
+     ],
+     [
+      "lenhador_3",
+      63
+     ]
+    ],
+    "reward": 1600,
+    "win_flag": "calico_beaten"
+   },
+   {
+    "say": "DLG_O_CAL_WIN",
+    "speaker": "SPK_CALICO"
+   },
+   {
+    "say": "DLG_O_CAL_MOTIVE",
+    "speaker": "SPK_CALICO"
+   },
+   {
+    "say": "DLG_O_CAL_OPEN",
+    "speaker": "SPK_CALICO"
+   },
+   {
+    "say": "DLG_O_CAL_OPEN2",
+    "speaker": "SPK_CALICO"
+   },
+   {
+    "action": "refresh_map"
+   }
+  ],
+  "calico_depois": [
+   {
+    "say": "DLG_O_CAL_TOLD",
+    "speaker": "SPK_CALICO",
+    "if": "ossorio_revelou"
+   },
+   {
+    "say": "DLG_O_CAL_KEPT",
+    "speaker": "SPK_CALICO",
+    "if": "ossorio_segredo"
+   },
+   {
+    "say": "DLG_O_CAL_OPEN2",
+    "speaker": "SPK_CALICO",
+    "if_none": [
+     "ossorio_revelou",
+     "ossorio_segredo"
+    ]
+   }
+  ]
+ }
+}

@@ -63,6 +63,27 @@
      "note": "Passagem do Desmoronamento: exige o Martelo da Tia (escolha 2)"
     }
    ]
+  },
+  {
+   "id": "rota_4",
+   "map": "rota_4",
+   "from": "brejo",
+   "to": "ossorio",
+   "paths": [
+    {
+     "kind": "domadores",
+     "required": false
+    },
+    {
+     "kind": "selvagem",
+     "required": false
+    },
+    {
+     "kind": "atalho",
+     "required": false,
+     "note": "Aqueduto Velho: curto, com um selvagem forte"
+    }
+   ]
   }
  ]
 }

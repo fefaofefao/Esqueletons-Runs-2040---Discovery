@@ -411,3 +411,121 @@ DLG_PA_MUSGA_L1,Os pais do Taro! A gente precisa contar pra ele!,Taro's parents!
 DLG_PA_MUSGA_OFF,"Tá bom, tá bom. Desligo a névoa. Mas alguém vai ter que vir me visitar. Combinado?","Fine, fine. I'll turn off the fog. But somebody has to come visit me. Deal?","Está bien, está bien. Apago la niebla. Pero alguien tendrá que venir a visitarme. ¿Trato?"
 DLG_PA_MUSGA_AUNT,A Tia mandou eu comer direito? Ela manda isso há mil anos. Fofa.,Auntie told me to eat properly? She's been saying that for a thousand years. Sweet.,¿La Tía mandó que coma bien? Lo dice desde hace mil años. Qué tierna.
 DLG_PA_MUSGA_AFTER,"Volta pra fofocar, querido. Sabia que o primo Caliço ensaia discurso no espelho?","Come back to gossip, darling. Did you know cousin Caliço rehearses speeches in the mirror?","Vuelve a chismear, querido. ¿Sabías que el primo Caliço ensaya discursos frente al espejo?"
+SPK_TROTE,Mensageiro Trote,Courier Trot,Mensajero Trote
+SPK_ELMO,Cadete Elmo,Cadet Helm,Cadete Yelmo
+SPK_MALVA,Escudeira Malva,Squire Mallow,Escudera Malva
+SPK_BIGODE,Recruta Bigode,Recruit Whiskers,Recluta Bigotes
+SPK_AMEIA,Dona Ameia,Mrs. Merlon,Doña Almena
+SPK_DOBRAO,Mercador Dobrão,Merchant Doubloon,Mercader Doblón
+SPK_VISEIRA,Capitã Viseira,Captain Visor,Capitana Visera
+SPK_ELO,Gêmeos Elo,Link Twins,Gemelos Eslabón
+SPK_CLARIM,Pregoeiro Clarim,Crier Bugle,Pregonero Clarín
+SPK_FIVELA,Fivela,Buckle,Hebilla
+SPK_SELO,Arquivista Selo,Archivist Seal,Archivero Sello
+SPK_BRASAO,Velho Brasão,Old Crest,Viejo Blasón
+SPK_GRADE,Sargento Grade,Sergeant Bars,Sargento Reja
+SPK_CALICO,Comandante Caliço,Commander Caliço,Comandante Caliço
+BTL_TAMER_ELMO,Cadete Elmo,Cadet Helm,Cadete Yelmo
+BTL_TAMER_MALVA,Escudeira Malva,Squire Mallow,Escudera Malva
+BTL_TAMER_BIGODE,Recruta Bigode,Recruit Whiskers,Recluta Bigotes
+BTL_TAMER_VISEIRA,Capitã Viseira,Captain Visor,Capitana Visera
+BTL_TAMER_ELO,Gêmeos Elo,Link Twins,Gemelos Eslabón
+BTL_TAMER_GRADE,Sargento Grade,Sergeant Bars,Sargento Reja
+BTL_TAMER_CALICO,Guardião Caliço,Guardian Caliço,Guardián Caliço
+MAP_ROTA_4,Rota 4 — Estrada dos Estandartes,Route 4 — Banner Road,Ruta 4 — Camino de los Estandartes
+MAP_OSSORIO,"Ossório, a Cidade Murada","Ossório, the Walled City","Ossório, la Ciudad Amurallada"
+MAP_QUARTEL,Quartel de Ossório,Ossório Barracks,Cuartel de Ossório
+MAP_OSSORIO_RANCHO,Rancho da Ameia,Merlon's Ranch,Rancho de Almena
+MAP_OSSORIO_LOJA,Empório do Dobrão,Doubloon's Emporium,Emporio de Doblón
+MAP_OSSORIO_CASA_VISEIRA,Casa da Capitã Viseira,Captain Visor's House,Casa de la Capitana Visera
+MAP_OSSORIO_CASA_ELO,Casa dos Gêmeos Elo,Link Twins' House,Casa de los Gemelos Eslabón
+MAP_ARQUIVO,Arquivo Real,Royal Archive,Archivo Real
+MSG_CALICO_ROAD,Guardas em formação fecham o portão norte. Ordem do Comandante Caliço.,Guards in formation block the north gate. Commander Caliço's orders.,Guardias en formación cierran la puerta norte. Orden del Comandante Caliço.
+MSG_ARCHIVE_SEALED,O Arquivo Real está lacrado com o selo do Rei.,The Royal Archive is sealed with the King's seal.,El Archivo Real está sellado con el sello del Rey.
+ITEM_RECORD,Registro Real,Royal Record,Registro Real
+ITEM_RECORD_TEXT,"""Quando a coroa rachar, o eco chamará o último do sangue, onde o farol virar museu.""","""When the crown cracks, the echo will call the last of the blood, where the lighthouse becomes a museum.""","""Cuando la corona se agriete, el eco llamará al último de la sangre, donde el faro se vuelva museo."""
+OPT_O_TELL,Contar à cidade,Tell the city,Contarlo a la ciudad
+OPT_O_SECRET,Guardar segredo,Keep it secret,Guardar el secreto
+OPT_O_DUNA,A Rainha Duna,Queen Duna,La Reina Duna
+OPT_O_KING,O próprio Rei,The King himself,El propio Rey
+OPT_O_AUNT,A Tia Fornalha,Aunt Furnace,La Tía Fragua
+OPT_O_TRUMPET,Ouvir o toque,Listen to the call,Escuchar el toque
+SIGN_O_FORK,← Caminho dos Cadetes · ↑ Aqueduto Velho · → Campo das Bandeiras,← Cadets' Path · ↑ Old Aqueduct · → Banner Field,← Camino de los Cadetes · ↑ Acueducto Viejo · → Campo de Banderas
+DLG_O_ARR_R_L,Bandeiras azuis em todo canto! Alguém muito importante morava aqui.,Blue banners everywhere! Someone very important lived here.,¡Banderas azules por todas partes! Aquí vivía alguien muy importante.
+DLG_O_ARR_R_T,"Estrada de pedra, gasta no meio. Muita gente marchou por aqui.","A stone road, worn down the middle. Lots of people marched here.","Camino de piedra, gastado en el medio. Mucha gente marchó por aquí."
+DLG_O_TROTE_1,"Três caminhos pra Ossório: o dos cadetes, o do campo e o aqueduto. No aqueduto mora coisa velha.","Three paths to Ossório: the cadets', the field, and the aqueduct. Something old lives in the aqueduct.","Tres caminos a Ossório: el de los cadetes, el del campo y el acueducto. En el acueducto vive algo viejo."
+DLG_O_TROTE_2,Eu levo recado pro quartel. Ninguém responde. Só carimbam e devolvem.,I carry messages to the barracks. Nobody answers. They just stamp them and send them back.,Llevo recados al cuartel. Nadie responde. Solo los sellan y los devuelven.
+DLG_O_ELMO_1,"Cadete Elmo, em serviço! Identificação ou batalha!","Cadet Helm, on duty! Identification or battle!","¡Cadete Yelmo, de servicio! ¡Identificación o batalla!"
+DLG_O_ELMO_2,Identificação aceita... por derrota.,Identification accepted... by defeat.,Identificación aceptada... por derrota.
+DLG_O_MALVA_1,"Escudo pra cima, esqueleto pra frente. É assim que se marcha em Ossório!","Shield up, skeleton forward. That's how we march in Ossório!","Escudo arriba, esqueleto al frente. ¡Así se marcha en Ossório!"
+DLG_O_MALVA_2,Marchei pra trás. Acontece com as melhores.,I marched backward. It happens to the best of us.,Marché hacia atrás. Le pasa a las mejores.
+DLG_O_BIGODE_1,Três semanas de guarda e nenhuma aventura. Você é minha aventura!,Three weeks on guard and not a single adventure. You're my adventure!,Tres semanas de guardia y ninguna aventura. ¡Tú eres mi aventura!
+DLG_O_BIGODE_2,"Melhor aventura da semana. Única, mas a melhor.","Best adventure of the week. The only one, but the best.","La mejor aventura de la semana. La única, pero la mejor."
+DLG_O_RIV_T,Ossório tem soldado em cada esquina. Vou passar por todos. Começando por você.,Ossório has a soldier on every corner. I'll get past all of them. Starting with you.,Ossório tiene un soldado en cada esquina. Pasaré por todos. Empezando por ti.
+DLG_O_RIV_L,"Ossório tem um arquivo com todos os livros do reino! Mas antes, uma batalha. Pra dar coragem!","Ossório has an archive with every book in the kingdom! But first, a battle. For courage!","¡Ossório tiene un archivo con todos los libros del reino! Pero antes, una batalla. ¡Para darme valor!"
+DLG_O_RIV_T_BYE,...Vai na frente. Só hoje.,...You go first. Just today.,...Ve tú delante. Solo hoy.
+DLG_O_RIV_L_BYE,Te vejo no arquivo! Quer dizer... se um dia abrirem.,See you at the archive! I mean... if they ever open it.,¡Nos vemos en el archivo! Bueno... si algún día lo abren.
+SIGN_O_CITY,Ossório. Antiga capital do reino. Toque de recolher ao pôr do sol.,Ossório. Old capital of the kingdom. Curfew at sunset.,Ossório. Antigua capital del reino. Toque de queda al atardecer.
+SIGN_O_BARRACKS,← Quartel. Proibida a entrada de civis.,← Barracks. No civilians allowed.,← Cuartel. Prohibida la entrada de civiles.
+OBJ_O_STATUE,"Estátua do príncipe Ossárion, ainda menino. O tempo apagou o rosto.",A statue of Prince Ossárion as a boy. Time has worn away the face.,"Estatua del príncipe Ossárion, todavía niño. El tiempo le borró la cara."
+DLG_O_ARR_C_L,Uma cidade inteira de muralha. Eles têm medo de quê?,A whole city made of walls. What are they so afraid of?,Una ciudad entera de murallas. ¿De qué tienen tanto miedo?
+DLG_O_ARR_C_T,"Soldado na muralha, soldado no portão. Eles esperam uma guerra.","Soldiers on the wall, soldiers at the gate. They're expecting a war.","Soldados en la muralla, soldados en la puerta. Esperan una guerra."
+DLG_O_AMEIA_1,Toque de recolher ao pôr do sol. Até os esqueletos do Rancho dormem em formação.,Curfew at sunset. Even the Ranch skeletons sleep in formation.,Toque de queda al atardecer. Hasta los esqueletos del Rancho duermen en formación.
+DLG_O_AMEIA_AFTER,Sem toque de recolher! Hoje o Rancho fica aberto até tarde.,No more curfew! Tonight the Ranch stays open late.,¡Sin toque de queda! Hoy el Rancho abre hasta tarde.
+DLG_O_AMEIA_2,Quer deixar alguém descansando? Aqui ninguém dorme fora de hora... mas eu deixo.,Want to leave someone here to rest? Nobody sleeps off-schedule here... but I'll allow it.,¿Quieres dejar a alguien descansando? Aquí nadie duerme fuera de hora... pero lo permito.
+DLG_O_DOBRAO_1,Comércio só com autorização do quartel. Eu tenho autorização. Custou caro.,Trading requires a barracks permit. I have one. It cost a fortune.,Comerciar requiere permiso del cuartel. Yo tengo uno. Me costó caro.
+DLG_O_DOBRAO_2,"Volte quando quiser. Em fila, de preferência.","Come back anytime. In line, preferably.","Vuelve cuando quieras. En fila, de preferencia."
+DLG_O_FIVELA,Meu pai monta guarda na muralha faz três semanas. Esperando inimigo. O único inimigo é o tédio.,My dad's been guarding the wall for three weeks. Waiting for an enemy. The only enemy is boredom.,Mi papá vigila la muralla desde hace tres semanas. Esperando al enemigo. El único enemigo es el aburrimiento.
+DLG_O_FIVELA_AFTER,Meu pai voltou da muralha! Ele disse que o inimigo era a gente mesmo. Não entendi.,My dad came back from the wall! He said the enemy was us all along. I didn't get it.,¡Mi papá volvió de la muralla! Dijo que el enemigo éramos nosotros. No entendí.
+DLG_O_BRASAO_1,"Varri este pátio no tempo do reino. O príncipe era um menino tristinho, sempre olhando o mar.","I swept this courtyard back in the kingdom days. The prince was a sad little boy, always looking at the sea.","Barría este patio en tiempos del reino. El príncipe era un niño tristón, siempre mirando el mar."
+DLG_O_BRASAO_2,Dizem que ele virou o Rei. Eu digo que ele nunca parou de olhar o mar.,They say he became the King. I say he never stopped looking at the sea.,Dicen que se volvió el Rey. Yo digo que nunca dejó de mirar el mar.
+DLG_O_SELO_1,O Arquivo guarda mil anos de história. O Rei mandou lacrar tudo. Ninguém lê o passado.,The Archive holds a thousand years of history. The King had it all sealed. Nobody reads the past.,El Archivo guarda mil años de historia. El Rey mandó sellarlo todo. Nadie lee el pasado.
+DLG_O_SELO_OPEN,O Comandante abriu o Arquivo! Leia com cuidado. Livro velho morde.,The Commander opened the Archive! Read carefully. Old books bite.,¡El Comandante abrió el Archivo! Lee con cuidado. Los libros viejos muerden.
+DLG_O_SELO_QUIZ,Leu o diário da estante? Então me diga: quem ergueu o farol da praia?,Did you read the diary on the shelf? Then tell me: who built the beach lighthouse?,¿Leíste el diario del estante? Entonces dime: ¿quién levantó el faro de la playa?
+DLG_O_SELO_RIGHT,"Exato! A Rainha Duna. Quem lê, merece. Tome, para a viagem.","Exactly! Queen Duna. Those who read deserve a reward. Here, for the road.","¡Exacto! La Reina Duna. Quien lee, merece. Toma, para el viaje."
+DLG_O_SELO_WRONG_KING,Errado. O Rei só olhava o mar. Quem construiu foi outra pessoa. Volte a ler.,Wrong. The King only gazed at the sea. Someone else built it. Read again.,Error. El Rey solo miraba el mar. Lo construyó otra persona. Vuelve a leer.
+DLG_O_SELO_WRONG_AUNT,"A Fornalha forja sinos, não faróis. Volte a ler, jovem.","Furnace forges bells, not lighthouses. Read again, young one.","La Fragua forja campanas, no faros. Vuelve a leer, joven."
+DLG_O_SELO_AFTER,"Mil anos de livros, e ninguém lia. Agora tem fila. Fila de leitor!","A thousand years of books, and nobody read them. Now there's a line. A line of readers!",Mil años de libros y nadie los leía. Ahora hay fila. ¡Fila de lectores!
+DLG_O_CLARIM_1,"Ouçam, ouçam! Toque de recolher ao pôr do sol, por ordem do Comandante Caliço!","Hear ye, hear ye! Curfew at sunset, by order of Commander Caliço!","¡Oíd, oíd! ¡Toque de queda al atardecer, por orden del Comandante Caliço!"
+DLG_O_CLARIM_2,"Desculpa, é força do hábito. Eu grito até pra pedir pão.","Sorry, force of habit. I even shout when I ask for bread.","Perdón, es la costumbre. Grito hasta para pedir pan."
+DLG_O_CLARIM_ASK,Esse papel tem o selo real! Quer que eu leia na praça? A cidade inteira vai ouvir.,That paper has the royal seal! Want me to read it in the square? The whole city will hear.,¡Ese papel tiene el sello real! ¿Quieres que lo lea en la plaza? Toda la ciudad lo oirá.
+DLG_O_TELL_1,"Ouçam, ouçam! ""Quando a coroa rachar, o eco chamará o último do sangue...""","Hear ye, hear ye! ""When the crown cracks, the echo will call the last of the blood...""","¡Oíd, oíd! ""Cuando la corona se agriete, el eco llamará al último de la sangre..."""
+DLG_O_TELL_2,"A praça cochicha, depois grita. No alto da muralha, guardas tiram o elmo e descem.","The square whispers, then shouts. Up on the wall, guards take off their helmets and come down.","La plaza murmura, luego grita. En lo alto de la muralla, los guardias se quitan el yelmo y bajan."
+DLG_O_TELL_3,"Agora todo mundo sabe que o Rei procura um herdeiro. Alguns vão ficar do seu lado. Outros, do lado dele.","Now everyone knows the King is looking for an heir. Some will side with you. Others, with him.","Ahora todos saben que el Rey busca un heredero. Algunos estarán de tu lado. Otros, del suyo."
+DLG_O_SECRET,Segredo de Estado. Meu clarim fica mudo. Pela primeira vez na vida.,A state secret. My bugle stays silent. For the first time in my life.,Secreto de Estado. Mi clarín se queda mudo. Por primera vez en mi vida.
+DLG_O_CLARIM_TOLD,A cidade inteira sabe. E ninguém foi pra casa dormir!,The whole city knows. And nobody went home to sleep!,Toda la ciudad lo sabe. ¡Y nadie se fue a dormir!
+DLG_O_CLARIM_KEPT,"Meu clarim continua mudo. Combinamos, né?","My bugle is still silent. That was the deal, right?","Mi clarín sigue mudo. Ese fue el trato, ¿no?"
+DLG_O_VISEIRA_1,"Em Ossório, dois agem como um. Sintonia é disciplina! Vamos ver a sua.","In Ossório, two act as one. Sync is discipline! Let's see yours.","En Ossório, dos actúan como uno. ¡La Sintonía es disciplina! Veamos la tuya."
+DLG_O_VISEIRA_2,Quebrou nossa fileira com atraso. Isso é que é estudar o inimigo.,You broke our line with delays. Now that's studying the enemy.,Rompiste nuestra fila con retrasos. Eso es estudiar al enemigo.
+DLG_O_ELO_1,"A gente fala junto, luta junto, perde... separado?","We talk together, fight together, lose... separately?","Hablamos juntos, peleamos juntos, perdemos... ¿por separado?"
+DLG_O_ELO_2,Ensaiamos tudo. Menos perder.,We rehearsed everything. Except losing.,Ensayamos todo. Menos perder.
+DLG_O_REC_1,"Um livro de registros, aberto há mil anos na mesma página.","A book of records, open on the same page for a thousand years.","Un libro de registros, abierto en la misma página desde hace mil años."
+DLG_O_REC_2,"""Quando a coroa rachar, o eco chamará o último do sangue, onde o farol virar museu.""","""When the crown cracks, the echo will call the last of the blood, where the lighthouse becomes a museum.""","""Cuando la corona se agriete, el eco llamará al último de la sangre, donde el faro se vuelva museo."""
+DLG_O_REC_3,"Ao lado, o retrato do príncipe Ossárion, menino. O rosto é o seu.","Beside it, a portrait of Prince Ossárion as a boy. The face is yours.","Al lado, el retrato del príncipe Ossárion, de niño. La cara es la tuya."
+DLG_O_REC_4,O vidro vibrando. A coroa cantando na vitrine. Agora você lembra: você veio de 2040.,The glass trembling. The crown singing in its case. Now you remember: you came from 2040.,El cristal vibrando. La corona cantando en la vitrina. Ahora lo recuerdas: viniste de 2040.
+DLG_O_REC_5,E foi chamado porque é do sangue do Rei.,And you were called because you are of the King's blood.,Y te llamaron porque eres de la sangre del Rey.
+DLG_O_REC_L1,Esse menino... é você? Mas o quadro tem mil anos!,That boy... is you? But the painting is a thousand years old!,Ese niño... ¿eres tú? ¡Pero el cuadro tiene mil años!
+DLG_O_REC_L2,Onde o farol virar museu... O meu farol vira museu um dia?,Where the lighthouse becomes a museum... My lighthouse becomes a museum someday?,Donde el faro se vuelva museo... ¿Mi faro se vuelve museo algún día?
+DLG_O_REC_T1,Tá. Isso é estranho até pra mim.,Okay. That's weird even for me.,Vale. Esto es raro hasta para mí.
+DLG_O_REC_T2,Se você é da família dele... ele te quer pra quê?,If you're his family... what does he want you for?,Si eres de su familia... ¿para qué te quiere?
+DLG_O_REC_AGAIN,"""...onde o farol virar museu."" O retrato continua olhando pra você.","""...where the lighthouse becomes a museum."" The portrait keeps looking at you.","""...donde el faro se vuelva museo."" El retrato sigue mirándote."
+DLG_O_BOOK_1,"Diário da Rainha Duna: ""Ergui o farol para que meu marido, quando saísse ao mar, sempre achasse o caminho de casa.""","Queen Duna's diary: ""I raised the lighthouse so my husband, whenever he went to sea, would always find his way home.""","Diario de la Reina Duna: ""Levanté el faro para que mi esposo, cuando saliera al mar, siempre encontrara el camino a casa."""
+DLG_O_BOOK_L1,A família do Rei construiu o farol! Eles também queriam que ninguém se perdesse.,The King's family built the lighthouse! They didn't want anyone to get lost either.,¡La familia del Rey construyó el faro! Ellos tampoco querían que nadie se perdiera.
+DLG_O_BOOK_L2,Então o Rei não é mau. Ele só tem medo do escuro. Igual eu tinha.,So the King isn't evil. He's just afraid of the dark. Like I used to be.,Entonces el Rey no es malo. Solo le teme a la oscuridad. Como me pasaba a mí.
+DLG_O_BOOK_T1,Farol. A Lia ia gostar de ler isso.,A lighthouse. Lia would love reading this.,Un faro. A Lia le encantaría leer esto.
+DLG_O_LIA_ARQ_1,Lê o diário da estante! A rainha construiu o farol pro marido sempre voltar pra casa!,Read the diary on the shelf! The queen built the lighthouse so her husband would always come home!,¡Lee el diario del estante! ¡La reina construyó el faro para que su esposo siempre volviera a casa!
+DLG_O_LIA_ARQ_2,Eu vou acender ele. Pra todo mundo voltar pra casa. Até o Rei.,I'm going to light it. So everyone can come home. Even the King.,Voy a encenderlo. Para que todos vuelvan a casa. Hasta el Rey.
+DLG_O_ARR_Q_L,Todo mundo no mesmo passo... parece música sem melodia.,Everyone in step... it's like music without a tune.,Todos al mismo paso... parece música sin melodía.
+DLG_O_ARR_Q_T,Disciplina. Meu pai ia gostar. Eu não.,Discipline. My dad would like it. I don't.,Disciplina. A mi papá le gustaría. A mí no.
+DLG_O_GRADE_1,Ninguém passa da grade sem senha. A senha é: vencer o Sargento Grade.,Nobody gets past the bars without the password. The password is: beat Sergeant Bars.,Nadie pasa la reja sin contraseña. La contraseña es: vencer al Sargento Reja.
+DLG_O_GRADE_2,Senha correta. Infelizmente.,Password correct. Unfortunately.,Contraseña correcta. Por desgracia.
+DLG_O_BUFARDO,"Um esqueleto corneteiro, de bochechas infladas, ensaia um toque que ninguém ouve há mil anos.",A bugler skeleton with puffed-up cheeks rehearses a call nobody has heard in a thousand years.,"Un esqueleto corneta, de mejillas infladas, ensaya un toque que nadie oye desde hace mil años."
+DLG_O_CAL_1,Atenção! Civil não entra no quartel! Identifique-se!,Attention! No civilians in the barracks! Identify yourself!,¡Atención! ¡Ningún civil entra al cuartel! ¡Identifíquese!
+DLG_O_CAL_2,"Sou Caliço, irmão do Rei. A família não abandona a família. Nunca.","I am Caliço, the King's brother. Family does not abandon family. Ever.","Soy Caliço, hermano del Rey. La familia no abandona a la familia. Nunca."
+DLG_O_CAL_3,Em formação! Vamos ver se você sabe quebrar uma fileira.,Fall in! Let's see if you know how to break a line.,¡En formación! Veamos si sabes romper una fila.
+DLG_O_CAL_WIN,Fileira rompida... Recuar com honra!,Line broken... Retreat with honor!,Fila rota... ¡Retirada con honor!
+DLG_O_CAL_MOTIVE,Meu irmão perdeu todos uma vez. Eu jurei que ele nunca mais perderia ninguém.,My brother lost everyone once. I swore he would never lose anyone again.,Mi hermano perdió a todos una vez. Juré que nunca volvería a perder a nadie.
+DLG_O_CAL_OPEN,Regra do quartel: o vencedor tem direito ao Arquivo. Leia o que meu irmão escondeu.,Barracks rule: the victor earns the Archive. Read what my brother hid.,Regla del cuartel: el vencedor tiene derecho al Archivo. Lee lo que mi hermano escondió.
+DLG_O_CAL_OPEN2,Honra exige verdade. Mesmo a verdade que dói.,Honor demands truth. Even the truth that hurts.,El honor exige verdad. Incluso la verdad que duele.
+DLG_O_CAL_TOLD,"Você contou à cidade. Insubordinação... e verdade. Quando chegar a hora, conte comigo.","You told the city. Insubordination... and truth. When the time comes, count on me.","Se lo contaste a la ciudad. Insubordinación... y verdad. Cuando llegue la hora, cuenta conmigo."
+DLG_O_CAL_KEPT,Você guardou o segredo. Discrição. Um soldado agradece.,You kept the secret. Discretion. A soldier is grateful.,Guardaste el secreto. Discreción. Un soldado lo agradece.
