@@ -1,0 +1,163 @@
+name: Build
+
+# - Todo push/PR: validações, testes headless e APK de debug (artefato).
+# - Tag v* ou execução manual com "release": AAB assinado (keystore via Secrets).
+
+on:
+  push:
+    branches: ["**"]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: "Gerar também o AAB de release assinado"
+        type: boolean
+        default: false
+
+env:
+  GODOT_VERSION: "4.7.2"
+  GODOT_RELEASE: "4.7.2-stable"
+  TEMPLATES_DIR: "4.7.2.stable"
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Validação e testes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Dados (validate_data.py)
+        run: python3 tools/validate_data.py
+
+      - name: Autoteste do validador
+        run: python3 -m unittest discover -s tools/tests
+
+      - name: publisher.json sincronizado
+        run: python3 tools/sync_publisher.py --check
+
+      - name: Placeholders (aviso no debug)
+        run: python3 tools/check_placeholders.py
+
+      - name: Cache do Godot
+        id: godot-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/godot
+          key: godot-${{ env.GODOT_VERSION }}
+
+      - name: Baixar Godot
+        if: steps.godot-cache.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p ~/godot
+          curl -fsSL --retry 4 -o /tmp/godot.zip "https://github.com/godotengine/godot/releases/download/${GODOT_RELEASE}/Godot_v${GODOT_RELEASE}_linux.x86_64.zip"
+          unzip -q /tmp/godot.zip -d ~/godot
+          mv ~/godot/Godot_v${GODOT_RELEASE}_linux.x86_64 ~/godot/godot
+
+      - name: Importar projeto (headless)
+        run: ~/godot/godot --headless --import
+
+      - name: Testes (headless)
+        run: ~/godot/godot --headless res://tests/run_tests.tscn
+
+  android-debug:
+    name: APK de debug
+    needs: checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-godot-android
+
+      - name: Keystore de debug (gerado no CI)
+        run: |
+          keytool -genkeypair -v -keystore "$RUNNER_TEMP/debug.keystore" -storepass android -keypass android \
+            -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 \
+            -dname "CN=Android Debug,O=Android,C=US"
+          echo "GODOT_ANDROID_KEYSTORE_DEBUG_PATH=$RUNNER_TEMP/debug.keystore" >> "$GITHUB_ENV"
+          echo "GODOT_ANDROID_KEYSTORE_DEBUG_USER=androiddebugkey" >> "$GITHUB_ENV"
+          echo "GODOT_ANDROID_KEYSTORE_DEBUG_PASSWORD=android" >> "$GITHUB_ENV"
+
+      - name: Versão
+        run: python3 tools/sync_publisher.py --version-code ${{ github.run_number }}
+
+      - name: Exportar APK de debug
+        run: |
+          mkdir -p build
+          ~/godot/godot --headless --install-android-build-template --export-debug "Android Debug" build/esqueletons-debug.apk
+          test -f build/esqueletons-debug.apk
+
+      - name: Páginas de 16 KB
+        run: python3 tools/check_16kb.py build/esqueletons-debug.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: esqueletons-debug-apk
+          path: build/esqueletons-debug.apk
+          retention-days: 14
+
+  android-release:
+    name: AAB de release
+    needs: checks
+    if: startsWith(github.ref, 'refs/tags/v') || (github.event_name == 'workflow_dispatch' && inputs.release)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sem placeholders no release
+        run: python3 tools/check_placeholders.py --release
+
+      - name: Conferir Secrets
+        env:
+          KS: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          KS_PASS: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KS_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+        run: |
+          missing=""
+          [ -z "$KS" ] && missing="$missing ANDROID_KEYSTORE_BASE64"
+          [ -z "$KS_PASS" ] && missing="$missing ANDROID_KEYSTORE_PASSWORD"
+          [ -z "$KS_ALIAS" ] && missing="$missing ANDROID_KEY_ALIAS"
+          if [ -n "$missing" ]; then echo "::error::Secrets ausentes:$missing (veja docs/BUILD.md)"; exit 1; fi
+
+      - uses: ./.github/actions/setup-godot-android
+
+      - name: Keystore de release (Secrets)
+        env:
+          KS: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          KS_PASS: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KS_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+        run: |
+          echo "$KS" | base64 -d > "$RUNNER_TEMP/release.keystore"
+          echo "GODOT_ANDROID_KEYSTORE_RELEASE_PATH=$RUNNER_TEMP/release.keystore" >> "$GITHUB_ENV"
+          echo "GODOT_ANDROID_KEYSTORE_RELEASE_USER=$KS_ALIAS" >> "$GITHUB_ENV"
+          echo "::add-mask::$KS_PASS"
+          echo "GODOT_ANDROID_KEYSTORE_RELEASE_PASSWORD=$KS_PASS" >> "$GITHUB_ENV"
+
+      - name: Versão
+        run: python3 tools/sync_publisher.py --version-code ${{ github.run_number }}
+
+      - name: Exportar AAB de release
+        run: |
+          mkdir -p build
+          ~/godot/godot --headless --install-android-build-template --export-release "Android Release" build/esqueletons-release.aab
+          test -f build/esqueletons-release.aab
+
+      - name: Páginas de 16 KB
+        run: python3 tools/check_16kb.py build/esqueletons-release.aab
+
+      - name: Apagar keystore
+        if: always()
+        run: rm -f "$RUNNER_TEMP/release.keystore"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: esqueletons-release-aab
+          path: build/esqueletons-release.aab
+          retention-days: 30
