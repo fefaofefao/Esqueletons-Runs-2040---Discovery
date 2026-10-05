@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Sincroniza config/publisher.json -> export_presets.cfg e project.godot.
+"""Sincroniza config/publisher.json -> export_presets.cfg, project.godot e os
+documentos da loja (política, app-ads.txt, fichas e PLAY_CONSOLE.md).
 
   python3 tools/sync_publisher.py                  # aplica
   python3 tools/sync_publisher.py --check          # só confere (falha se divergir)
@@ -8,6 +9,7 @@
 import argparse
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -42,6 +44,10 @@ def main():
     presets_path.write_text(new_presets, encoding="utf-8")
     project_path.write_text(new_project, encoding="utf-8")
     print("sync_publisher: aplicado" if changed else "sync_publisher: nada a mudar")
+    # documentos gerados a partir do publisher.json (política, app-ads.txt, ficha da loja, Play Console)
+    for gen in ["tools/store/gen_store_docs.py", "tools/store/gen_play_console.py"]:
+        if subprocess.run([sys.executable, str(ROOT / gen)], cwd=ROOT).returncode != 0:
+            return 1
     return 0
 
 

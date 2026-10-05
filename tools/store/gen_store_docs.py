@@ -66,7 +66,7 @@ L = {
         "short": "Faça amizade com esqueletos, celebre aniversários e descubra o mistério de 2040.",
         "long": """Você acorda numa praia com um ingresso de museu no bolso: 12/10/2040. O continente foi tomado por esqueletos, e o Rei Esqueleto quer você no castelo. Por quê?
 
-Esqueletons Runs 2040 — Edição Discovery é um RPG de aventura em pixel art, o primeiro jogo da série. Escolha a Lia ou o Taro como parceiro e atravesse seis regiões, cada uma com um Guardião da família do Rei.
+Esqueletons Runs 2040 — Edição Discovery é um RPG de aventura em pixel art, o primeiro jogo da série. Viaje com a Lia e o Taro, seus dois parceiros, por seis regiões, cada uma com um Guardião da família do Rei.
 
 ESQUELETOS QUE CRESCEM
 • 80 espécies para descobrir no Ossário, todas originais.
@@ -99,7 +99,7 @@ Gratuito, com anúncios opcionais e não intrusivos.""",
         "short": "Befriend skeletons, celebrate their birthdays and uncover the mystery of 2040.",
         "long": """You wake up on a beach with a museum ticket in your pocket: 10/12/2040. The continent is ruled by skeletons, and the Skeleton King wants you at his castle. Why?
 
-Esqueletons Runs 2040 — Discovery Edition is a pixel-art adventure RPG and the first game in the series. Pick Lia or Taro as your partner and cross six regions, each guarded by a member of the King's family.
+Esqueletons Runs 2040 — Discovery Edition is a pixel-art adventure RPG and the first game in the series. Travel with Lia and Taro, your two partners, across six regions, each guarded by a member of the King's family.
 
 SKELETONS THAT GROW UP
 • 80 original species to discover in the Ossuary.
@@ -132,7 +132,7 @@ Free, with optional, non-intrusive ads.""",
         "short": "Hazte amigo de esqueletos, celebra cumpleaños y descubre el misterio de 2040.",
         "long": """Despiertas en una playa con una entrada de museo en el bolsillo: 12/10/2040. El continente está dominado por esqueletos, y el Rey Esqueleto te quiere en su castillo. ¿Por qué?
 
-Esqueletons Runs 2040 — Edición Discovery es un RPG de aventura en pixel art, el primer juego de la serie. Elige a Lia o a Taro como compañero y cruza seis regiones, cada una con un Guardián de la familia del Rey.
+Esqueletons Runs 2040 — Edición Discovery es un RPG de aventura en pixel art, el primer juego de la serie. Viaja con Lia y Taro, tus dos compañeros, por seis regiones, cada una con un Guardián de la familia del Rey.
 
 ESQUELETOS QUE CRECEN
 • 80 especies originales para descubrir en el Osario.

@@ -397,4 +397,21 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
   falha até que sejam preenchidos (`check_placeholders.py`).
 
 ### Próximo
-- Fase 6: música, polimento, `PLAY_CONSOLE.md`, checklist final e AAB de release.
+- Fase 6 (abaixo).
+
+## Lia e Taro juntos na equipe (pedido do Fernando, concluído)
+- Bento entrega os dois no Prólogo (sem escolha); os dois são iniciais fixos com +5% em todos os atributos.
+- Falas revisadas para a dupla; cenas de "recorrente" só em saves antigos (save v2 migra o parceiro único).
+- Balanceamento refeito: XP `reward_div` 21, Guardiões +7% (o Rei fica de fora), Remada Dupla 2×40. Simulador: todos os critérios OK.
+
+## Fase 6 — Polimento e publicação (em andamento)
+
+### Feito
+- **Música original** (`tools/audio/gen_music.py`): título, 7 temas de região, batalha, Guardião, Rei e vinhetas de aniversário e Golden. A música do mapa volta de onde parou depois da batalha. `tests/test_audio.gd`.
+- **`PLAY_CONSOLE.md`** gerado do `publisher.json` (segurança dos dados, anúncios, IARC, público 13+, acesso sem login, ID de publicidade, teste fechado de 12 testadores por 14 dias).
+- `tools/sync_publisher.py` agora regera todos os documentos da loja.
+- **`docs/CHECKLIST_FINAL.md`** com o estado de cada item da seção 17.
+
+### Pendências
+- Do Fernando: site, ID de editor do AdMob, Secrets (keystore e IDs reais) e a tag `v0.1.0` (ver `docs/CHECKLIST_FINAL.md`).
+- Ouvir as músicas e revisar as traduções no teste fechado (anotar em `docs/FEEDBACK.md`).

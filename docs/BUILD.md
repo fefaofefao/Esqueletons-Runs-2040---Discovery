@@ -28,7 +28,7 @@ Use a mesma senha para o keystore e a chave. Nunca faça commit do keystore: o `
 
 ## Antes do primeiro release
 1. Preencha `config/publisher.json` (produtora, sobrenome, e-mail, site). O release falha enquanto houver `[PLACEHOLDER]`.
-2. Rode `python3 tools/sync_publisher.py` e faça o commit.
+2. Rode `python3 tools/sync_publisher.py` (também regera a política, o `app-ads.txt`, as fichas da loja e o `PLAY_CONSOLE.md`) e faça o commit.
 3. Crie a tag: `git tag v0.1.0 && git push origin v0.1.0`.
 
 ## Rodar localmente

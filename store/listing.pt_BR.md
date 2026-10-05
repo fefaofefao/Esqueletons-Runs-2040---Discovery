@@ -6,10 +6,10 @@ Esqueletons Runs 2040
 ## Descrição curta (80/80)
 Faça amizade com esqueletos, celebre aniversários e descubra o mistério de 2040.
 
-## Descrição longa (1449/4000)
+## Descrição longa (1450/4000)
 Você acorda numa praia com um ingresso de museu no bolso: 12/10/2040. O continente foi tomado por esqueletos, e o Rei Esqueleto quer você no castelo. Por quê?
 
-Esqueletons Runs 2040 — Edição Discovery é um RPG de aventura em pixel art, o primeiro jogo da série. Escolha a Lia ou o Taro como parceiro e atravesse seis regiões, cada uma com um Guardião da família do Rei.
+Esqueletons Runs 2040 — Edição Discovery é um RPG de aventura em pixel art, o primeiro jogo da série. Viaje com a Lia e o Taro, seus dois parceiros, por seis regiões, cada uma com um Guardião da família do Rei.
 
 ESQUELETOS QUE CRESCEM
 • 80 espécies para descobrir no Ossário, todas originais.

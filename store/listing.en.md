@@ -6,10 +6,10 @@ Esqueletons Runs 2040
 ## Descrição curta (78/80)
 Befriend skeletons, celebrate their birthdays and uncover the mystery of 2040.
 
-## Descrição longa (1376/4000)
+## Descrição longa (1385/4000)
 You wake up on a beach with a museum ticket in your pocket: 10/12/2040. The continent is ruled by skeletons, and the Skeleton King wants you at his castle. Why?
 
-Esqueletons Runs 2040 — Discovery Edition is a pixel-art adventure RPG and the first game in the series. Pick Lia or Taro as your partner and cross six regions, each guarded by a member of the King's family.
+Esqueletons Runs 2040 — Discovery Edition is a pixel-art adventure RPG and the first game in the series. Travel with Lia and Taro, your two partners, across six regions, each guarded by a member of the King's family.
 
 SKELETONS THAT GROW UP
 • 80 original species to discover in the Ossuary.
