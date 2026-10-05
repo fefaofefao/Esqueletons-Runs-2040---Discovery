@@ -689,6 +689,148 @@
     "max_level": 63,
     "rarity": "incomum"
    }
+  ],
+  "rota6_sul": [
+   {
+    "species": "domador_escorpioes_3",
+    "stage": 3,
+    "min_level": 68,
+    "max_level": 69,
+    "rarity": "comum"
+   },
+   {
+    "species": "palafiteiro_3",
+    "stage": 3,
+    "min_level": 67,
+    "max_level": 69,
+    "rarity": "comum"
+   }
+  ],
+  "rota6_oeste": [
+   {
+    "species": "domador_escorpioes_3",
+    "stage": 3,
+    "min_level": 68,
+    "max_level": 70,
+    "rarity": "comum"
+   },
+   {
+    "species": "escultor_3",
+    "stage": 3,
+    "min_level": 68,
+    "max_level": 70,
+    "rarity": "incomum"
+   }
+  ],
+  "rota6_campo": [
+   {
+    "species": "domador_escorpioes_3",
+    "stage": 3,
+    "min_level": 68,
+    "max_level": 70,
+    "rarity": "comum"
+   },
+   {
+    "species": "tamborileiro_3",
+    "stage": 3,
+    "min_level": 68,
+    "max_level": 70,
+    "rarity": "incomum"
+   },
+   {
+    "species": "cartografo_3",
+    "stage": 3,
+    "min_level": 70,
+    "max_level": 71,
+    "rarity": "raro"
+   },
+   {
+    "species": "escultor_3",
+    "stage": 3,
+    "min_level": 68,
+    "max_level": 70,
+    "rarity": "incomum"
+   },
+   {
+    "species": "palafiteiro_3",
+    "stage": 3,
+    "min_level": 68,
+    "max_level": 70,
+    "rarity": "comum"
+   }
+  ],
+  "rota6_eco": [
+   {
+    "species": "cartografo_3",
+    "stage": 3,
+    "min_level": 76,
+    "max_level": 77,
+    "rarity": "raro",
+    "weight": 60
+   },
+   {
+    "species": "tamborileiro_3",
+    "stage": 3,
+    "min_level": 76,
+    "max_level": 77,
+    "rarity": "incomum",
+    "weight": 40
+   }
+  ],
+  "rota6_norte": [
+   {
+    "species": "tamborileiro_3",
+    "stage": 3,
+    "min_level": 70,
+    "max_level": 72,
+    "rarity": "incomum"
+   },
+   {
+    "species": "domador_escorpioes_3",
+    "stage": 3,
+    "min_level": 70,
+    "max_level": 72,
+    "rarity": "comum"
+   }
+  ],
+  "templo_salao": [
+   {
+    "species": "domador_escorpioes_3",
+    "stage": 3,
+    "min_level": 71,
+    "max_level": 73,
+    "rarity": "comum"
+   },
+   {
+    "species": "cartografo_3",
+    "stage": 3,
+    "min_level": 71,
+    "max_level": 73,
+    "rarity": "raro"
+   },
+   {
+    "species": "tamborileiro_3",
+    "stage": 3,
+    "min_level": 71,
+    "max_level": 73,
+    "rarity": "incomum"
+   }
+  ],
+  "templo_sul": [
+   {
+    "species": "cartografo_2",
+    "stage": 2,
+    "min_level": 67,
+    "max_level": 69,
+    "rarity": "raro"
+   },
+   {
+    "species": "escultor_3",
+    "stage": 3,
+    "min_level": 72,
+    "max_level": 73,
+    "rarity": "incomum"
+   }
   ]
  }
 }

@@ -1,0 +1,581 @@
+{
+ "_comment": "Gerado por tools/maps/deserto.py (fonte única do roteiro).",
+ "dialogs": {
+  "placa_bifurcacao": [
+   {
+    "say": "SIGN_D_FORK"
+   }
+  ],
+  "chegada_rota": [
+   {
+    "say": "DLG_D_ARR_R_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_D_ARR_R_L2",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_D_ARR_R_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "rota6_vista",
+    "value": true
+   }
+  ],
+  "cantil": [
+   {
+    "say": "DLG_D_CANTIL_1",
+    "speaker": "SPK_CANTIL"
+   },
+   {
+    "say": "DLG_D_CANTIL_2",
+    "speaker": "SPK_CANTIL"
+   }
+  ],
+  "corcova": [
+   {
+    "say": "DLG_D_CORCOVA_1",
+    "speaker": "SPK_CORCOVA"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_CORCOVA",
+    "enemies": [
+     [
+      "domador_escorpioes_3",
+      72
+     ],
+     [
+      "palafiteiro_3",
+      72
+     ]
+    ],
+    "reward": 860,
+    "win_flag": "corcova_beaten"
+   },
+   {
+    "say": "DLG_D_CORCOVA_2",
+    "speaker": "SPK_CORCOVA"
+   }
+  ],
+  "corcova_depois": [
+   {
+    "say": "DLG_D_CORCOVA_2",
+    "speaker": "SPK_CORCOVA"
+   }
+  ],
+  "veu": [
+   {
+    "say": "DLG_D_VEU_1",
+    "speaker": "SPK_VEU"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_VEU",
+    "enemies": [
+     [
+      "tamborileiro_3",
+      73
+     ],
+     [
+      "escultor_3",
+      73
+     ]
+    ],
+    "reward": 880,
+    "win_flag": "veu_beaten"
+   },
+   {
+    "say": "DLG_D_VEU_2",
+    "speaker": "SPK_VEU"
+   }
+  ],
+  "veu_depois": [
+   {
+    "say": "DLG_D_VEU_2",
+    "speaker": "SPK_VEU"
+   }
+  ],
+  "pa": [
+   {
+    "say": "DLG_D_PA_1",
+    "speaker": "SPK_PA"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_PA",
+    "enemies": [
+     [
+      "cartografo_3",
+      74
+     ],
+     [
+      "domador_escorpioes_3",
+      74
+     ]
+    ],
+    "reward": 900,
+    "win_flag": "pa_beaten",
+    "items": [
+     [
+      "pocao_g",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_D_PA_2",
+    "speaker": "SPK_PA"
+   }
+  ],
+  "pa_depois": [
+   {
+    "say": "DLG_D_PA_2",
+    "speaker": "SPK_PA"
+   }
+  ],
+  "alforje": [
+   {
+    "say": "DLG_D_ALFORJE_1",
+    "speaker": "SPK_ALFORJE"
+   },
+   {
+    "say": "DLG_D_ALFORJE_2",
+    "speaker": "SPK_ALFORJE"
+   },
+   {
+    "set_flag": "alforje_achado",
+    "value": true
+   }
+  ],
+  "alforje_depois": [
+   {
+    "say": "DLG_D_ALFORJE_3",
+    "speaker": "SPK_ALFORJE"
+   }
+  ],
+  "placa_cidade": [
+   {
+    "say": "SIGN_D_TOWN"
+   }
+  ],
+  "placa_templo": [
+   {
+    "say": "SIGN_D_TEMPLE"
+   }
+  ],
+  "chegada_cidade": [
+   {
+    "say": "DLG_D_ARR_C_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_D_ARR_C_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "palmeiral_visto",
+    "value": true
+   }
+  ],
+  "fogueira": [
+   {
+    "say": "OBJ_D_CAMPFIRE"
+   },
+   {
+    "say": "DLG_D_FIRE_L1",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_D_FIRE_L2",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_D_FIRE_T1",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "say": "DLG_D_FIRE_T2",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   }
+  ],
+  "moringa": [
+   {
+    "action": "heal"
+   },
+   {
+    "action": "respawn"
+   },
+   {
+    "say": "DLG_D_MORINGA_AFTER",
+    "speaker": "SPK_MORINGA",
+    "if": "duna_beaten"
+   },
+   {
+    "say": "DLG_D_MORINGA_1",
+    "speaker": "SPK_MORINGA",
+    "if_not": "duna_beaten"
+   },
+   {
+    "say": "DLG_D_MORINGA_2",
+    "choice": [
+     {
+      "text": "OPT_P_RANCH",
+      "goto": "vila_mare/rancho"
+     },
+     {
+      "text": "OPT_P_LEAVE"
+     }
+    ],
+    "speaker": "SPK_MORINGA"
+   }
+  ],
+  "canela": [
+   {
+    "say": "DLG_D_CANELA_1",
+    "speaker": "SPK_CANELA"
+   },
+   {
+    "action": "shop",
+    "id": "palmeiral"
+   },
+   {
+    "say": "DLG_D_CANELA_2",
+    "speaker": "SPK_CANELA"
+   }
+  ],
+  "grao": [
+   {
+    "say": "DLG_D_GRAO_AFTER",
+    "speaker": "SPK_GRAO",
+    "if": "duna_beaten"
+   },
+   {
+    "say": "DLG_D_GRAO",
+    "speaker": "SPK_GRAO",
+    "if_not": "duna_beaten"
+   }
+  ],
+  "miragem": [
+   {
+    "say": "DLG_D_MIRAGEM_1",
+    "speaker": "SPK_MIRAGEM"
+   },
+   {
+    "say": "DLG_D_MIRAGEM_2",
+    "speaker": "SPK_MIRAGEM"
+   }
+  ],
+  "rosa_pede": [
+   {
+    "say": "DLG_D_ROSA_ASK",
+    "speaker": "SPK_ROSA"
+   },
+   {
+    "say": "DLG_D_ROSA_ASK2",
+    "speaker": "SPK_ROSA"
+   },
+   {
+    "set_flag": "rosa_quest",
+    "value": true
+   }
+  ],
+  "rosa_onde": [
+   {
+    "say": "DLG_D_ROSA_WAIT",
+    "speaker": "SPK_ROSA"
+   }
+  ],
+  "rosa_obrigada": [
+   {
+    "say": "DLG_D_ROSA_THANKS",
+    "speaker": "SPK_ROSA"
+   },
+   {
+    "say": "DLG_D_ROSA_REWARD",
+    "speaker": "SPK_ROSA"
+   },
+   {
+    "action": "give_item",
+    "item": "reviver",
+    "n": 2
+   },
+   {
+    "action": "give_item",
+    "item": "pocao_g",
+    "n": 2
+   },
+   {
+    "set_flag": "rosa_done",
+    "value": true
+   }
+  ],
+  "rosa_depois": [
+   {
+    "say": "DLG_D_ROSA_AFTER",
+    "speaker": "SPK_ROSA"
+   }
+  ],
+  "tamara": [
+   {
+    "say": "DLG_D_TAMARA_1",
+    "speaker": "SPK_TAMARA"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_TAMARA",
+    "enemies": [
+     [
+      "domador_escorpioes_3",
+      77
+     ],
+     [
+      "tamborileiro_3",
+      76
+     ]
+    ],
+    "reward": 940,
+    "win_flag": "tamara_beaten",
+    "items": [
+     [
+      "pocao_g",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_D_TAMARA_2",
+    "speaker": "SPK_TAMARA"
+   }
+  ],
+  "tamara_depois": [
+   {
+    "say": "DLG_D_TAMARA_2",
+    "speaker": "SPK_TAMARA"
+   }
+  ],
+  "batuque": [
+   {
+    "say": "DLG_D_BATUQUE_1",
+    "speaker": "SPK_BATUQUE"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_BATUQUE",
+    "enemies": [
+     [
+      "tamborileiro_3",
+      77
+     ],
+     [
+      "cartografo_3",
+      76
+     ]
+    ],
+    "reward": 960,
+    "win_flag": "batuque_beaten",
+    "items": [
+     [
+      "reviver",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_D_BATUQUE_2",
+    "speaker": "SPK_BATUQUE"
+   }
+  ],
+  "batuque_depois": [
+   {
+    "say": "DLG_D_BATUQUE_2",
+    "speaker": "SPK_BATUQUE"
+   }
+  ],
+  "chegada_templo": [
+   {
+    "say": "DLG_D_ARR_T_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_D_ARR_T_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "templo_visto",
+    "value": true
+   }
+  ],
+  "sandalo": [
+   {
+    "say": "DLG_D_SAND_1",
+    "speaker": "SPK_SANDALO"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_SANDALO",
+    "enemies": [
+     [
+      "cartografo_3",
+      78
+     ],
+     [
+      "tamborileiro_3",
+      78
+     ]
+    ],
+    "reward": 980,
+    "win_flag": "sandalo_beaten"
+   },
+   {
+    "say": "DLG_D_SAND_2",
+    "speaker": "SPK_SANDALO"
+   }
+  ],
+  "sandalo_depois": [
+   {
+    "say": "DLG_D_SAND_2",
+    "speaker": "SPK_SANDALO"
+   }
+  ],
+  "ampulhor": [
+   {
+    "say": "DLG_D_AMP",
+    "choice": [
+     {
+      "text": "OPT_D_HOURGLASS",
+      "goto": "deserto/ampulhor_luta"
+     },
+     {
+      "text": "OPT_M_LEAVE"
+     }
+    ]
+   }
+  ],
+  "ampulhor_luta": [
+   {
+    "action": "battle",
+    "kind": "wild",
+    "tamer_key": "",
+    "enemies": [
+     [
+      "ampulhor",
+      75
+     ]
+    ],
+    "reward": 0
+   }
+  ],
+  "duna": [
+   {
+    "say": "DLG_D_DUNA_1",
+    "speaker": "SPK_DUNA"
+   },
+   {
+    "say": "DLG_D_DUNA_2",
+    "speaker": "SPK_DUNA"
+   },
+   {
+    "say": "DLG_D_DUNA_3",
+    "speaker": "SPK_DUNA"
+   },
+   {
+    "action": "battle",
+    "kind": "boss",
+    "tamer_key": "BTL_TAMER_DUNA",
+    "enemies": [
+     [
+      "domador_escorpioes_3",
+      85
+     ],
+     [
+      "cartografo_3",
+      84
+     ],
+     [
+      "tamborileiro_3",
+      86
+     ],
+     [
+      "palafiteiro_3",
+      85
+     ]
+    ],
+    "reward": 2200,
+    "win_flag": "duna_beaten"
+   },
+   {
+    "say": "DLG_D_DUNA_WIN",
+    "speaker": "SPK_DUNA"
+   },
+   {
+    "say": "DLG_D_DUNA_WHY1",
+    "speaker": "SPK_DUNA"
+   },
+   {
+    "say": "DLG_D_DUNA_WHY2",
+    "speaker": "SPK_DUNA"
+   },
+   {
+    "say": "DLG_D_DUNA_WHY3",
+    "speaker": "SPK_DUNA"
+   },
+   {
+    "set_flag": "pista_7",
+    "value": true
+   },
+   {
+    "say": "DLG_D_DUNA_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_D_DUNA_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "say": "DLG_D_DUNA_LETTER",
+    "speaker": "SPK_DUNA",
+    "if": "has_carta_alva"
+   },
+   {
+    "say": "DLG_D_DUNA_NOLETTER",
+    "speaker": "SPK_DUNA",
+    "if_not": "has_carta_alva"
+   },
+   {
+    "say": "DLG_D_DUNA_STORM",
+    "speaker": "SPK_DUNA"
+   },
+   {
+    "action": "refresh_map"
+   }
+  ],
+  "duna_depois": [
+   {
+    "say": "DLG_D_DUNA_AFTER",
+    "speaker": "SPK_DUNA"
+   }
+  ]
+ }
+}

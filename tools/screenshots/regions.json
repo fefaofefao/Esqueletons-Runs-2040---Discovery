@@ -455,5 +455,97 @@
     "after_shot_at": 5
    }
   ]
+ },
+ "deserto": {
+  "flags": [
+   "intro_done",
+   "bento_met",
+   "has_partner",
+   "partner_lia",
+   "tut_battle",
+   "tut_marker",
+   "bras_beaten",
+   "ramalho_beaten",
+   "vigia_lasca_ok",
+   "fornalha_beaten",
+   "musga_beaten",
+   "calico_beaten",
+   "alva_beaten",
+   "has_carta_alva"
+  ],
+  "party": [
+   [
+    "faroleira_3",
+    78,
+    "Lia"
+   ],
+   [
+    "sentinela_3",
+    77
+   ],
+   [
+    "lavadeira_3",
+    76
+   ],
+   [
+    "carregador_3",
+    76
+   ]
+  ],
+  "steps": [
+   {
+    "map": "rota_6",
+    "x": 19,
+    "y": 43,
+    "f": "up",
+    "shot": "d1_rota6",
+    "no_wait_warp": true,
+    "shot_at": 0
+   },
+   {
+    "map": "rota_6",
+    "x": 31,
+    "y": 28,
+    "f": "up",
+    "shot": "d2_dunas"
+   },
+   {
+    "map": "palmeiral",
+    "x": 19,
+    "y": 24,
+    "f": "up",
+    "shot": "d3_palmeiral",
+    "no_wait_warp": true,
+    "shot_at": 0
+   },
+   {
+    "map": "palmeiral",
+    "x": 22,
+    "y": 20,
+    "f": "up",
+    "interact": [
+     22,
+     19
+    ],
+    "shot": "d4_fogueira",
+    "shot_at": 1
+   },
+   {
+    "map": "templo_areias",
+    "x": 10,
+    "y": 7,
+    "f": "up",
+    "flags": [
+     "sandalo_beaten",
+     "templo_visto"
+    ],
+    "step": "up",
+    "shot": "d5_duna",
+    "shot_at": 1,
+    "battle": true,
+    "after_shot": "d6_pista7",
+    "after_shot_at": 3
+   }
+  ]
  }
 }

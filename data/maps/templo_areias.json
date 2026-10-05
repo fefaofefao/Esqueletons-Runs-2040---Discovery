@@ -1,0 +1,160 @@
+{
+ "id": "templo_areias",
+ "region": "deserto",
+ "name_key": "MAP_TEMPLO",
+ "tileset": "overworld",
+ "legend": {
+  "g": "sand",
+  "p": "path",
+  "B": "sandstone",
+  "f": "carpet"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBBBBppppppppBBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBppppppppBBBBggggggggggggBBBB",
+  "BBBBBBppppppppBBBBggggggggggggpppp",
+  "BBBBBBpppppppppppppgggggggggggpppp",
+  "BBBBBBpppppppppppppgggggggggggpppp",
+  "BBBgggggggggggBBBBggggggggggggpppp",
+  "BBBgggggggggggBBBBggggggggggggBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+ ],
+ "spawn": {
+  "x": 31,
+  "y": 10,
+  "facing": "left"
+ },
+ "props": [
+  {
+   "type": "broken_column",
+   "x": 4,
+   "y": 2
+  },
+  {
+   "type": "broken_column",
+   "x": 16,
+   "y": 2
+  },
+  {
+   "type": "hourglass",
+   "x": 7,
+   "y": 2
+  },
+  {
+   "type": "hourglass",
+   "x": 13,
+   "y": 2
+  },
+  {
+   "type": "torch",
+   "x": 18,
+   "y": 8
+  },
+  {
+   "type": "torch",
+   "x": 28,
+   "y": 8
+  },
+  {
+   "type": "drum",
+   "x": 22,
+   "y": 13
+  },
+  {
+   "type": "cactus",
+   "x": 4,
+   "y": 19
+  },
+  {
+   "type": "broken_column",
+   "x": 12,
+   "y": 18
+  }
+ ],
+ "npcs": [
+  {
+   "id": "duna",
+   "x": 10,
+   "y": 3,
+   "facing": "down"
+  },
+  {
+   "id": "sandalo",
+   "x": 14,
+   "y": 10,
+   "facing": "right"
+  },
+  {
+   "id": "ampulhor_npc",
+   "x": 9,
+   "y": 15,
+   "facing": "left"
+  }
+ ],
+ "warps": [
+  {
+   "x": 33,
+   "y": 10,
+   "to": "palmeiral",
+   "tx": 1,
+   "ty": 15,
+   "facing": "right",
+   "sfx": ""
+  },
+  {
+   "x": 33,
+   "y": 11,
+   "to": "palmeiral",
+   "tx": 1,
+   "ty": 16,
+   "facing": "right",
+   "sfx": ""
+  }
+ ],
+ "spawns": [
+  {
+   "id": "t_salao",
+   "table": "templo_salao",
+   "x": 23,
+   "y": 10,
+   "radius": 3,
+   "count": 2
+  },
+  {
+   "id": "t_sul",
+   "table": "templo_sul",
+   "x": 6,
+   "y": 15,
+   "radius": 2,
+   "count": 1
+  }
+ ],
+ "ambient": [
+  "sand"
+ ],
+ "tint": [
+  1.0,
+  0.92,
+  0.84
+ ],
+ "on_enter": [
+  {
+   "if_not": "templo_visto",
+   "dialog": "deserto/chegada_templo"
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "id": "palmeiral_loja",
+ "region": "deserto",
+ "name_key": "MAP_PALMEIRAL_LOJA",
+ "tileset": "overworld",
+ "legend": {
+  "T": "sandstone",
+  "w": "sandstone",
+  "n": "sandstone",
+  ".": "sand",
+  "m": "mat"
+ },
+ "ground": [
+  "TTTTTTTTTTTT",
+  "TwwnwwwwwnwT",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "TTTTTTmTTTTT"
+ ],
+ "spawn": {
+  "x": 6,
+  "y": 8,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "stall",
+   "x": 4,
+   "y": 3
+  },
+  {
+   "type": "barrel",
+   "x": 10,
+   "y": 2
+  },
+  {
+   "type": "crate",
+   "x": 10,
+   "y": 7
+  }
+ ],
+ "npcs": [
+  {
+   "id": "canela",
+   "x": 6,
+   "y": 4,
+   "facing": "down"
+  }
+ ],
+ "warps": [
+  {
+   "x": 6,
+   "y": 9,
+   "to": "palmeiral",
+   "tx": 27,
+   "ty": 11,
+   "facing": "down",
+   "sfx": "door"
+  }
+ ]
+}

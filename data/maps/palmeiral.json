@@ -1,0 +1,330 @@
+{
+ "id": "palmeiral",
+ "region": "deserto",
+ "name_key": "MAP_PALMEIRAL",
+ "tileset": "overworld",
+ "legend": {
+  "g": "sand",
+  "p": "path",
+  "B": "sandstone",
+  "s": "path",
+  "f": "dune"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggppppppppppppppppppppppggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "pppppppppppppppsssssssssssggggpggggggggB",
+  "pppppppppppppppsssssssssssggggpggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "BggggggggpgggggggggppgggggggggpggggggggB",
+  "BggggggggpgggggggggppgggggggggpggggggggB",
+  "BgggggppppppppppppppppppppppppppppgggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
+ ],
+ "spawn": {
+  "x": 19,
+  "y": 29,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "tent_ranch",
+   "x": 12,
+   "y": 10
+  },
+  {
+   "type": "tent_shop",
+   "x": 27,
+   "y": 10
+  },
+  {
+   "type": "tent",
+   "x": 8,
+   "y": 20
+  },
+  {
+   "type": "tent",
+   "x": 31,
+   "y": 20
+  },
+  {
+   "type": "tent",
+   "x": 14,
+   "y": 27
+  },
+  {
+   "type": "sign",
+   "x": 18,
+   "y": 28,
+   "dialog": "deserto/placa_cidade"
+  },
+  {
+   "type": "sign",
+   "x": 3,
+   "y": 14,
+   "dialog": "deserto/placa_templo"
+  },
+  {
+   "type": "oasis_pool",
+   "x": 20,
+   "y": 16
+  },
+  {
+   "type": "palm",
+   "x": 16,
+   "y": 13
+  },
+  {
+   "type": "palm",
+   "x": 24,
+   "y": 15
+  },
+  {
+   "type": "campfire",
+   "x": 22,
+   "y": 19,
+   "dialog": "deserto/fogueira"
+  },
+  {
+   "type": "drum",
+   "x": 13,
+   "y": 14
+  },
+  {
+   "type": "drum",
+   "x": 26,
+   "y": 17
+  },
+  {
+   "type": "well",
+   "x": 28,
+   "y": 24
+  },
+  {
+   "type": "cactus",
+   "x": 5,
+   "y": 6
+  },
+  {
+   "type": "rock_small",
+   "x": 8,
+   "y": 3
+  },
+  {
+   "type": "rock_small",
+   "x": 8,
+   "y": 7
+  },
+  {
+   "type": "cactus",
+   "x": 11,
+   "y": 8
+  },
+  {
+   "type": "rock_small",
+   "x": 35,
+   "y": 5
+  },
+  {
+   "type": "palm",
+   "x": 30,
+   "y": 6
+  },
+  {
+   "type": "palm",
+   "x": 36,
+   "y": 8
+  },
+  {
+   "type": "palm",
+   "x": 32,
+   "y": 1
+  },
+  {
+   "type": "rock_small",
+   "x": 2,
+   "y": 28
+  },
+  {
+   "type": "cactus",
+   "x": 6,
+   "y": 23
+  },
+  {
+   "type": "palm",
+   "x": 10,
+   "y": 25
+  },
+  {
+   "type": "palm",
+   "x": 28,
+   "y": 27
+  },
+  {
+   "type": "palm",
+   "x": 34,
+   "y": 23
+  },
+  {
+   "type": "rock_small",
+   "x": 33,
+   "y": 27
+  }
+ ],
+ "npcs": [
+  {
+   "id": "grao",
+   "x": 16,
+   "y": 16,
+   "facing": "right"
+  },
+  {
+   "id": "miragem",
+   "x": 24,
+   "y": 18,
+   "facing": "left"
+  }
+ ],
+ "warps": [
+  {
+   "x": 19,
+   "y": 31,
+   "to": "rota_6",
+   "tx": 19,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 31,
+   "to": "rota_6",
+   "tx": 20,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 19,
+   "y": 0,
+   "to": "castelo_portao",
+   "tx": 19,
+   "ty": 28,
+   "facing": "up",
+   "sfx": "",
+   "if": "duna_beaten",
+   "locked_message": "MSG_STORM_ROAD"
+  },
+  {
+   "x": 20,
+   "y": 0,
+   "to": "castelo_portao",
+   "tx": 20,
+   "ty": 28,
+   "facing": "up",
+   "sfx": "",
+   "if": "duna_beaten",
+   "locked_message": "MSG_STORM_ROAD"
+  },
+  {
+   "x": 0,
+   "y": 15,
+   "to": "templo_areias",
+   "tx": 32,
+   "ty": 10,
+   "facing": "left",
+   "sfx": ""
+  },
+  {
+   "x": 0,
+   "y": 16,
+   "to": "templo_areias",
+   "tx": 32,
+   "ty": 11,
+   "facing": "left",
+   "sfx": ""
+  },
+  {
+   "x": 12,
+   "y": 10,
+   "to": "palmeiral_rancho",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 27,
+   "y": 10,
+   "to": "palmeiral_loja",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 8,
+   "y": 20,
+   "to": "palmeiral_casa_tamara",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 31,
+   "y": 20,
+   "to": "palmeiral_casa_batuque",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 14,
+   "y": 27,
+   "to": "palmeiral_casa_rosa",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  }
+ ],
+ "ambient": [
+  "sand"
+ ],
+ "tint": [
+  1.0,
+  0.97,
+  0.9
+ ],
+ "on_enter": [
+  {
+   "if_not": "palmeiral_visto",
+   "dialog": "deserto/chegada_cidade"
+  }
+ ]
+}

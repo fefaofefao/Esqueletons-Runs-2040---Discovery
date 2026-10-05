@@ -301,3 +301,24 @@ func test_ossorio_consequence_on_route5() -> void:
 	check_eq(leais, 2, "contou: 2 Guardas Leais na Rota 5")
 	m2.queue_free()
 	await tree.process_frame
+
+
+func test_deserto_clue_and_quest() -> void:
+	SaveGame.start_new("Téo")
+	await _play("deserto/rosa_pede")
+	check(SaveGame.get_flag("rosa_quest"), "missão da caravana aberta")
+	await _play("deserto/alforje")
+	check(SaveGame.get_flag("alforje_achado"), "Alforje encontrado nas dunas")
+	await _play("deserto/rosa_obrigada")
+	check(SaveGame.get_flag("rosa_done"), "missão concluída")
+	check_eq(int(SaveGame.data.bag.get("reviver", 0)), 2, "2 Reviver")
+	var m := _map("palmeiral")
+	var castle: Dictionary = {}
+	for w in m.data.warps:
+		if str(w.to) == "castelo_portao":
+			castle = w
+	check(not MapView.condition_ok(castle), "estrada do castelo fechada antes da Duna")
+	SaveGame.set_flag("duna_beaten")
+	check(MapView.condition_ok(castle), "estrada do castelo abre depois da Duna")
+	m.queue_free()
+	await tree.process_frame

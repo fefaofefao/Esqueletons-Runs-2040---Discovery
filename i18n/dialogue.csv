@@ -644,3 +644,95 @@ DLG_PI_ALVA_THANKS,Obrigada. Diz que a filha dele está esperando. Que sempre es
 DLG_PI_ALVA_NO,"Entendo. Ninguém gosta de carregar a tristeza dos outros. Se mudar de ideia, ela fica aqui.","I understand. Nobody likes carrying someone else's sadness. If you change your mind, it'll be here.","Lo entiendo. A nadie le gusta cargar la tristeza ajena. Si cambias de idea, aquí estará."
 DLG_PI_ALVA_THAW,O gelo da estrada vai derreter. Lá embaixo fica o deserto. Minha mãe mora lá.,The ice on the road will melt. Down below is the desert. My mother lives there.,El hielo del camino se derretirá. Allá abajo está el desierto. Mi madre vive allí.
 DLG_PI_ALVA_AFTER,Diz pra minha mãe que eu tô bem. Mais ou menos bem.,Tell my mother I'm all right. More or less.,Dile a mi madre que estoy bien. Más o menos.
+SPK_CANTIL,Velho Cantil,Old Canteen,Viejo Cantimplora
+SPK_CORCOVA,Cameleiro Corcova,Drover Hump,Camellero Joroba
+SPK_VEU,Dançarina Véu,Dancer Veil,Bailarina Velo
+SPK_PA,Arqueólogo Pá,Archaeologist Spade,Arqueólogo Pala
+SPK_MORINGA,Dona Moringa,Mrs. Jug,Doña Botijo
+SPK_CANELA,Mercadora Canela,Merchant Cinnamon,Mercadera Canela
+SPK_TAMARA,Cameleira Tâmara,Drover Date,Camellera Dátil
+SPK_BATUQUE,Irmãos Batuque,Drumbeat Brothers,Hermanos Tamborrada
+SPK_ROSA,Cartógrafa Rosa,Cartographer Rose,Cartógrafa Rosa
+SPK_ALFORJE,Seu Alforje,Mr. Saddlebag,Don Alforja
+SPK_GRAO,Grão,Grain,Grano
+SPK_MIRAGEM,Vó Miragem,Granny Mirage,Abuela Espejismo
+SPK_SANDALO,Camareiro Sândalo,Chamberlain Sandal,Chambelán Sándalo
+SPK_DUNA,Rainha Duna,Queen Duna,Reina Duna
+BTL_TAMER_CORCOVA,Cameleiro Corcova,Drover Hump,Camellero Joroba
+BTL_TAMER_VEU,Dançarina Véu,Dancer Veil,Bailarina Velo
+BTL_TAMER_PA,Arqueólogo Pá,Archaeologist Spade,Arqueólogo Pala
+BTL_TAMER_TAMARA,Cameleira Tâmara,Drover Date,Camellera Dátil
+BTL_TAMER_BATUQUE,Irmãos Batuque,Drumbeat Brothers,Hermanos Tamborrada
+BTL_TAMER_SANDALO,Camareiro Sândalo,Chamberlain Sandal,Chambelán Sándalo
+BTL_TAMER_DUNA,Guardiã Rainha Duna,Guardian Queen Duna,Guardiana Reina Duna
+MAP_ROTA_6,Rota 6 — Mar de Dunas,Route 6 — Sea of Dunes,Ruta 6 — Mar de Dunas
+MAP_PALMEIRAL,Palmeiral,Palmgrove,Palmeral
+MAP_TEMPLO,Templo das Areias,Temple of Sands,Templo de las Arenas
+MAP_PALMEIRAL_RANCHO,Rancho da Moringa,Jug's Ranch,Rancho de Botijo
+MAP_PALMEIRAL_LOJA,Tenda da Canela,Cinnamon's Tent,Tienda de Canela
+MAP_PALMEIRAL_CASA_TAMARA,Tenda da Tâmara,Date's Tent,Tienda de Dátil
+MAP_PALMEIRAL_CASA_BATUQUE,Tenda dos Batuque,Drumbeat Tent,Tienda de los Tamborrada
+MAP_PALMEIRAL_CASA_ROSA,Tenda da Cartógrafa,Cartographer's Tent,Tienda de la Cartógrafa
+MSG_STORM_ROAD,Uma tempestade de areia sem fim esconde a estrada do castelo.,An endless sandstorm hides the road to the castle.,Una tormenta de arena sin fin oculta el camino al castillo.
+OPT_D_HOURGLASS,Virar a ampulheta,Turn the hourglass,Girar el reloj de arena
+SIGN_D_FORK,← Trilha das Caravanas · ↑ Passagem do Eco · → Dunas Altas,← Caravan Trail · ↑ Echo Pass · → High Dunes,← Senda de Caravanas · ↑ Paso del Eco · → Dunas Altas
+DLG_D_ARR_R_L,Oi! ...Oi... oi... O deserto repete tudo que a gente fala!,Hello! ...Hello... hello... The desert repeats everything we say!,¡Hola! ...Hola... hola... ¡El desierto repite todo lo que decimos!
+DLG_D_ARR_R_L2,Será que ele também fica sozinho?,Do you think it gets lonely too?,¿Se sentirá solo él también?
+DLG_D_ARR_R_T,Areia na bota. Areia no osso. Areia em tudo.,Sand in my boots. Sand in my bones. Sand in everything.,Arena en las botas. Arena en los huesos. Arena en todo.
+DLG_D_CANTIL_1,"Caravana vai pelo oeste, bicho anda pelas dunas altas, e no meio... o eco engana. Siga a parede.","Caravans go west, critters roam the high dunes, and in the middle... the echo fools you. Follow the wall.","Las caravanas van por el oeste, los bichos por las dunas altas, y en medio... el eco engaña. Sigue la pared."
+DLG_D_CANTIL_2,"Antes, os tambores guiavam a gente. A rainha mandou calar todos. Agora só o vento fala.",The drums used to guide us. The queen silenced them all. Now only the wind speaks.,"Antes, los tambores nos guiaban. La reina mandó callarlos. Ahora solo habla el viento."
+DLG_D_CORCOVA_1,Meu camelo fugiu e me deixou os esqueletos. Troca justa? Vamos descobrir!,My camel ran off and left me the skeletons. A fair trade? Let's find out!,Mi camello se fue y me dejó los esqueletos. ¿Cambio justo? ¡Vamos a ver!
+DLG_D_CORCOVA_2,Troca justa. Meio injusta pra mim.,A fair trade. Slightly unfair for me.,Cambio justo. Un poco injusto para mí.
+DLG_D_VEU_1,Danço pra espantar a tempestade. Ainda não funcionou. Talvez com uma batalha!,I dance to chase off the storm. Hasn't worked yet. Maybe with a battle!,Bailo para espantar la tormenta. Aún no funcionó. ¡Quizá con una batalla!
+DLG_D_VEU_2,A tempestade ficou. Mas eu me diverti.,The storm stayed. But I had fun.,La tormenta se quedó. Pero me divertí.
+DLG_D_PA_1,Cavo atrás do reino antigo. Achei três colheres e um esqueleto bravo. Quer conhecer?,I dig for the ancient kingdom. Found three spoons and an angry skeleton. Want to meet it?,Excavo buscando el reino antiguo. Encontré tres cucharas y un esqueleto enojado. ¿Quieres conocerlo?
+DLG_D_PA_2,Vou catalogar essa derrota. Peça número quatro.,I'll catalog this defeat. Item number four.,Catalogaré esta derrota. Pieza número cuatro.
+DLG_D_ALFORJE_1,"Água! ...Ah, não é água. É gente. Também serve! Me perdi seguindo o meu próprio eco.","Water! ...Oh, it's not water. It's people. That works too! I got lost following my own echo.","¡Agua! ...Ah, no es agua. Es gente. ¡También sirve! Me perdí siguiendo mi propio eco."
+DLG_D_ALFORJE_2,"Diz pra Rosa, lá em Palmeiral, que eu tô vivo. E que o mapa dela tava certo. Eu é que tava errado.","Tell Rose, back in Palmgrove, that I'm alive. And that her map was right. I was the one who was wrong.","Dile a Rosa, en Palmeral, que estoy vivo. Y que su mapa tenía razón. El equivocado era yo."
+DLG_D_ALFORJE_3,Vou esperar a tempestade baixar. Sentadinho. Sem eco.,I'll wait for the storm to die down. Sitting still. No echoes.,Esperaré a que amaine la tormenta. Sentadito. Sin eco.
+SIGN_D_TOWN,"Palmeiral. Água, sombra e notícia velha.","Palmgrove. Water, shade and old news.","Palmeral. Agua, sombra y noticias viejas."
+SIGN_D_TEMPLE,← Templo das Areias. Silêncio: a rainha descansa.,← Temple of Sands. Silence: the queen is resting.,← Templo de las Arenas. Silencio: la reina descansa.
+DLG_D_ARR_C_L,Um lago no meio do deserto! Parece um farol de água.,A lake in the middle of the desert! It's like a lighthouse made of water.,¡Un lago en medio del desierto! Parece un faro de agua.
+DLG_D_ARR_C_T,Tambores pendurados e ninguém tocando. Isso tá errado.,Drums hanging everywhere and nobody playing. That's wrong.,Tambores colgados y nadie tocando. Eso está mal.
+DLG_D_MORINGA_1,"Bebe água primeiro, conversa depois. Seus esqueletos também: osso seco racha.","Drink water first, talk later. Your skeletons too: dry bones crack.","Primero bebe agua, luego hablamos. Tus esqueletos también: el hueso seco se agrieta."
+DLG_D_MORINGA_AFTER,Tão tocando tambor lá fora! Faz um ano que eu não durmo com barulho bom.,They're playing drums outside! I haven't fallen asleep to good noise in a year.,¡Están tocando tambores afuera! Hace un año que no duermo con ruido bonito.
+DLG_D_MORINGA_2,Quer deixar alguém aqui na sombra? Eu rego direitinho.,Want to leave someone here in the shade? I'll water them properly.,¿Quieres dejar a alguien aquí a la sombra? Lo riego bien.
+DLG_D_CANELA_1,"Tempero, tecido e poção. A caravana não chega, então o preço é o da saudade.","Spices, cloth and potions. The caravan doesn't come anymore, so prices are set by longing.","Especias, telas y pociones. La caravana no llega, así que el precio es el de la nostalgia."
+DLG_D_CANELA_2,Volte com sede de compras.,Come back thirsty for shopping.,Vuelve con sed de compras.
+DLG_D_GRAO,Eu contei os grãos de areia da praça. Deu um monte. Amanhã eu conto de novo pra conferir.,I counted the grains of sand in the square. It came out to a lot. Tomorrow I'll count again to check.,Conté los granos de arena de la plaza. Salieron un montón. Mañana los cuento otra vez para comprobar.
+DLG_D_GRAO_AFTER,"Com a tempestade embora, dá pra ver o castelo! Ele é mais feio de perto?","With the storm gone, you can see the castle! Is it uglier up close?",¡Sin la tormenta se ve el castillo! ¿Es más feo de cerca?
+DLG_D_MIRAGEM_1,"A rainha Duna era a mais gentil da corte. Quando o Rei voltou triste, ela levantou a tempestade pra ninguém incomodar.","Queen Duna was the kindest of the court. When the King came back sad, she raised the storm so nobody would bother him.","La reina Duna era la más amable de la corte. Cuando el Rey volvió triste, levantó la tormenta para que nadie lo molestara."
+DLG_D_MIRAGEM_2,Amor também constrói muralha. Só que de areia.,Love builds walls too. Only they're made of sand.,El amor también levanta murallas. Solo que de arena.
+DLG_D_ROSA_ASK,"O Alforje saiu com a caravana e sumiu na Rota 6. Meu mapa diz que ele tá nas dunas altas, mas ninguém acredita em mapa.","Saddlebag left with the caravan and vanished on Route 6. My map says he's in the high dunes, but nobody believes maps.","Alforja salió con la caravana y desapareció en la Ruta 6. Mi mapa dice que está en las dunas altas, pero nadie cree en los mapas."
+DLG_D_ROSA_ASK2,"Você acredita? Procura ele pra mim, nas dunas do leste.","Do you? Find him for me, in the eastern dunes.","¿Tú crees? Búscalo por mí, en las dunas del este."
+DLG_D_ROSA_WAIT,"Dunas altas, a leste da Rota 6. Ele usa um turbante cor de areia. Ou seja: boa sorte.","High dunes, east of Route 6. He wears a sand-colored turban. In other words: good luck.","Dunas altas, al este de la Ruta 6. Lleva un turbante color arena. O sea: buena suerte."
+DLG_D_ROSA_THANKS,Ele disse que meu mapa tava certo? Ele disse isso? Vou emoldurar a frase.,He said my map was right? He actually said that? I'm framing that sentence.,¿Dijo que mi mapa tenía razón? ¿Dijo eso? Voy a enmarcar la frase.
+DLG_D_ROSA_REWARD,Toma: dois Reviver e o meu mapa das estrelas. Quem acha gente perdida merece.,Here: two Revives and my star chart. Anyone who finds lost people deserves it.,Toma: dos Revivir y mi mapa de estrellas. Quien encuentra a los perdidos lo merece.
+DLG_D_ROSA_AFTER,"Mapa certo, marido errado. Mas é o meu marido errado.","Right map, wrong husband. But he's my wrong husband.","Mapa correcto, marido equivocado. Pero es mi marido equivocado."
+DLG_D_TAMARA_1,"No deserto, quem não troca de montaria morre de cansaço. Troca de esqueleto na hora certa, vamos ver!","In the desert, whoever doesn't switch mounts drops from exhaustion. Switch skeletons at the right time, let's see!","En el desierto, quien no cambia de montura cae de cansancio. ¡Cambia de esqueleto a tiempo, a ver!"
+DLG_D_TAMARA_2,Trocou no tempo certo. A rainha luta assim.,You switched at the right time. The queen fights like that.,Cambiaste en el momento justo. La reina pelea así.
+DLG_D_BATUQUE_1,Proibiram o tambor. Não proibiram a batalha! Tum-tum-PÁ!,They banned drums. They didn't ban battles! Boom-boom-BAP!,Prohibieron el tambor. ¡No prohibieron las batallas! ¡Pum-pum-PAM!
+DLG_D_BATUQUE_2,Perdemos no ritmo. Acontece.,We lost the beat. It happens.,Perdimos el ritmo. Pasa.
+OBJ_D_CAMPFIRE,A fogueira estala. O céu do deserto tem mais estrelas do que você lembrava.,The campfire crackles. The desert sky has more stars than you remember.,La hoguera chisporrotea. El cielo del desierto tiene más estrellas de lo que recordabas.
+DLG_D_FIRE_L1,Quando isso tudo acabar... você volta pra 2040?,When all this is over... will you go back to 2040?,Cuando todo esto termine... ¿volverás a 2040?
+DLG_D_FIRE_L2,"Se voltar, acende o farol de lá também. Aí eu vou saber que você chegou.","If you do, light the lighthouse there too. Then I'll know you made it.","Si vuelves, enciende también el faro de allá. Así sabré que llegaste."
+DLG_D_FIRE_T1,Quando isso acabar... você vai embora?,When this is over... are you leaving?,Cuando esto termine... ¿te vas a ir?
+DLG_D_FIRE_T2,...Tanto faz. Quer dizer. Não tanto faz.,...Whatever. I mean. Not whatever.,...Me da igual. Digo. No me da igual.
+DLG_D_ARR_T_L,Que silêncio... Até meus passos têm medo de fazer barulho.,So quiet... Even my footsteps are afraid to make noise.,Qué silencio... Hasta mis pasos tienen miedo de hacer ruido.
+DLG_D_ARR_T_T,Templo bonito. Bonito demais pra alguém triste morar.,Pretty temple. Too pretty for someone sad to live in.,Templo bonito. Demasiado bonito para que viva alguien triste.
+DLG_D_SAND_1,A rainha não recebe ninguém. Eu recebo por ela. Com batalha.,The queen receives no one. I receive them for her. With a battle.,La reina no recibe a nadie. Yo recibo por ella. Con batalla.
+DLG_D_SAND_2,Recebido. Pode passar. Tire as sandálias.,Received. You may pass. Take off your sandals.,Recibido. Puede pasar. Quítese las sandalias.
+DLG_D_AMP,Um esqueleto-ampulheta conta grãos de areia. Perdeu a conta mil vezes e recomeçou mil e uma.,An hourglass skeleton counts grains of sand. It has lost count a thousand times and started over a thousand and one.,Un esqueleto-reloj de arena cuenta granos. Perdió la cuenta mil veces y empezó de nuevo mil y una.
+DLG_D_DUNA_1,"Um herdeiro no meu deserto. Eu senti você chegando, como se sente a chuva.","An heir in my desert. I felt you coming, the way one feels the rain.","Un heredero en mi desierto. Te sentí llegar, como se siente la lluvia."
+DLG_D_DUNA_2,"Sou Duna, esposa do Rei. Ergui o farol para ele voltar pra casa. Ele voltou... e nunca mais saiu.","I am Duna, the King's wife. I raised the lighthouse so he'd come home. He came back... and never left again.","Soy Duna, esposa del Rey. Levanté el faro para que volviera a casa. Volvió... y nunca más salió."
+DLG_D_DUNA_3,"Se eu partir, ele fica sozinho de vez. Então eu fico. E você também fica, até me vencer.","If I go, he'll be alone for good. So I stay. And you stay too, until you beat me.","Si me voy, se quedará solo para siempre. Así que me quedo. Y tú también, hasta que me venzas."
+DLG_D_DUNA_WIN,Você troca de lugar com os seus na hora certa. Como uma família.,You swap places with your own at just the right moment. Like a family.,Cambias de lugar con los tuyos en el momento justo. Como una familia.
+DLG_D_DUNA_WHY1,Você precisa saber por que ele te chamou.,You need to know why he called you.,Necesitas saber por qué te llamó.
+DLG_D_DUNA_WHY2,A coroa só se refaz na cabeça de alguém do sangue. E prende quem a usa no trono. Para sempre.,The crown only mends itself on the head of someone of the blood. And it binds whoever wears it to the throne. Forever.,La corona solo se repara en la cabeza de alguien de la sangre. Y ata a quien la lleva al trono. Para siempre.
+DLG_D_DUNA_WHY3,Ele vai pedir que você a coloque. Não por crueldade. Ele só não aguenta perder a família de novo.,He will ask you to put it on. Not out of cruelty. He simply can't bear to lose his family again.,Te pedirá que te la pongas. No por crueldad. Simplemente no soporta perder otra vez a su familia.
+DLG_D_DUNA_L,Ninguém devia ficar preso pra sempre. Nem você... nem o Rei.,Nobody should be trapped forever. Not you... and not the King.,Nadie debería quedar atrapado para siempre. Ni tú... ni el Rey.
+DLG_D_DUNA_T,"Se você colocar essa coroa, eu mesmo tiro ela da sua cabeça.","If you put that crown on, I'll pull it off your head myself.","Si te pones esa corona, yo mismo te la quito de la cabeza."
+DLG_D_DUNA_LETTER,Você traz uma carta da nossa filha? ...Então ainda há esperança para ele.,You carry a letter from our daughter? ...Then there's still hope for him.,¿Traes una carta de nuestra hija? ...Entonces aún hay esperanza para él.
+DLG_D_DUNA_NOLETTER,Você viu a Alva? Ela está bem? ...Que bom. Ela sempre esperou demais por ele.,Did you see Alva? Is she well? ...Good. She has always waited too long for him.,¿Viste a Alva? ¿Está bien? ...Qué bien. Siempre lo esperó demasiado.
+DLG_D_DUNA_STORM,"A tempestade vai baixar. O castelo fica ao norte. Cuida dele por mim, herdeiro. Mesmo que seja dizendo não.","The storm will die down. The castle lies to the north. Look after him for me, heir. Even if it means saying no.","La tormenta amainará. El castillo está al norte. Cuídalo por mí, heredero. Aunque sea diciéndole que no."
+DLG_D_DUNA_AFTER,Os tambores voltaram. Ele vai ouvir lá do castelo. Talvez lembre de quando dançava.,The drums are back. He'll hear them from the castle. Maybe he'll remember when he used to dance.,Volvieron los tambores. Los oirá desde el castillo. Quizá recuerde cuando bailaba.

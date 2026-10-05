@@ -1,0 +1,66 @@
+{
+ "id": "palmeiral_casa_batuque",
+ "region": "deserto",
+ "name_key": "MAP_PALMEIRAL_CASA_BATUQUE",
+ "tileset": "overworld",
+ "legend": {
+  "T": "sandstone",
+  "w": "sandstone",
+  "n": "sandstone",
+  ".": "sand",
+  "m": "mat"
+ },
+ "ground": [
+  "TTTTTTTTTTTT",
+  "TwwnwwwwwnwT",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "TTTTTTmTTTTT"
+ ],
+ "spawn": {
+  "x": 6,
+  "y": 8,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "drum",
+   "x": 3,
+   "y": 4
+  },
+  {
+   "type": "drum",
+   "x": 9,
+   "y": 4
+  },
+  {
+   "type": "drum",
+   "x": 3,
+   "y": 7
+  }
+ ],
+ "npcs": [
+  {
+   "id": "batuque",
+   "x": 6,
+   "y": 3,
+   "facing": "down"
+  }
+ ],
+ "warps": [
+  {
+   "x": 6,
+   "y": 9,
+   "to": "palmeiral",
+   "tx": 31,
+   "ty": 21,
+   "facing": "down",
+   "sfx": "door"
+  }
+ ]
+}

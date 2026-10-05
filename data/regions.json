@@ -149,9 +149,16 @@
    ],
    "music": "",
    "maps": [
-    "rota_6"
+    "rota_6",
+    "palmeiral",
+    "templo_areias",
+    "palmeiral_rancho",
+    "palmeiral_loja",
+    "palmeiral_casa_tamara",
+    "palmeiral_casa_batuque",
+    "palmeiral_casa_rosa"
    ],
-   "battle_bg": "res://assets/battle/bg_praia.png"
+   "battle_bg": "res://assets/battle/bg_deserto.png"
   },
   "castelo": {
    "name_key": "REGION_CASTELO",
@@ -162,7 +169,9 @@
     0.9
    ],
    "music": "",
-   "maps": [],
+   "maps": [
+    "castelo_portao"
+   ],
    "battle_bg": "res://assets/battle/bg_praia.png"
   }
  }

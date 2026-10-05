@@ -16,7 +16,8 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 | 4d — Pântano Verde-Musgo | ✅ concluída |
 | 4e — Cidade Murada de Ossório | ✅ concluída |
 | 4f — Picos Gelados | ✅ concluída |
-| 4g–4h — Deserto, Castelo e finais | ⏳ próxima (4g) |
+| 4g — Deserto dos Ecos | ✅ concluída |
+| 4h — Castelo, finais e pós-jogo | ⏳ próxima |
 | 5 — Monetização e conformidade | — |
 | 6 — Polimento e publicação | — |
 
@@ -332,3 +333,17 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 ### Verificação
 - `tests/run_tests.tscn`: 9535 verificações, 0 falhas (carta aceita depois de recusar, pista 6, Guardas Leais só com a escolha 4).
 - `tools/validate_data.py`: OK. Capturas: `capture.tscn -- --region=picos`.
+
+## Fase 4g — Deserto dos Ecos (concluída)
+
+### Feito
+- **`docs/roteiro/07_deserto.md`** (gerado por `tools/maps/deserto.py`):
+  - problema local: a tempestade de areia da Rainha Duna esconde o castelo e os tambores-guia foram calados; as caravanas se perdem no eco;
+  - pista nº 7: a Duna conta para que o Rei quer o herdeiro (a coroa se refaz na cabeça dele e o prende no trono para sempre);
+  - fogueira de Palmeiral: Lia e Taro perguntam se o protagonista vai embora;
+  - Guardiã Rainha Duna (Resistência: trocas e cura em grupo); ela reage à Carta da Alva.
+- **Rota 6** (Caravanas, Dunas Altas, Passagem do Eco), **Palmeiral** (oásis de tendas, 2 casas, missão de encontrar o Seu Alforje perdido nas dunas), **Templo das Areias** (Sândalo, Ampulhor, Duna). 13 NPCs.
+
+### Verificação
+- `tests/run_tests.tscn`: 10217 verificações, 0 falhas. `tools/validate_data.py`: OK. `tools/simulate.py --check`: 0 critérios falhando.
+- Capturas: `capture.tscn -- --region=deserto`.

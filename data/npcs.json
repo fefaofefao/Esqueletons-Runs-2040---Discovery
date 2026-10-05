@@ -2182,6 +2182,341 @@
     "vision": 3,
     "flag": "alva_beaten"
    }
+  },
+  "cantil": {
+   "name_key": "SPK_CANTIL",
+   "role": "hint",
+   "sprite": "res://assets/sprites/npc/cantil.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "deserto/cantil"
+    }
+   ]
+  },
+  "corcova": {
+   "name_key": "SPK_CORCOVA",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/corcova.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "corcova_beaten",
+     "dialog": "deserto/corcova_depois"
+    },
+    {
+     "dialog": "deserto/corcova"
+    }
+   ],
+   "tamer": {
+    "vision": 4,
+    "flag": "corcova_beaten"
+   }
+  },
+  "veu": {
+   "name_key": "SPK_VEU",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/veu.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "veu_beaten",
+     "dialog": "deserto/veu_depois"
+    },
+    {
+     "dialog": "deserto/veu"
+    }
+   ],
+   "tamer": {
+    "vision": 4,
+    "flag": "veu_beaten"
+   }
+  },
+  "pa": {
+   "name_key": "SPK_PA",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/pa.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "pa_beaten",
+     "dialog": "deserto/pa_depois"
+    },
+    {
+     "dialog": "deserto/pa"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "pa_beaten"
+   }
+  },
+  "alforje": {
+   "name_key": "SPK_ALFORJE",
+   "role": "quest",
+   "sprite": "res://assets/sprites/npc/alforje.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "alforje_achado",
+     "dialog": "deserto/alforje_depois"
+    },
+    {
+     "dialog": "deserto/alforje"
+    }
+   ]
+  },
+  "moringa": {
+   "name_key": "SPK_MORINGA",
+   "role": "ranch",
+   "sprite": "res://assets/sprites/npc/moringa.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "deserto/moringa"
+    }
+   ]
+  },
+  "canela": {
+   "name_key": "SPK_CANELA",
+   "role": "shop",
+   "sprite": "res://assets/sprites/npc/canela.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "deserto/canela"
+    }
+   ]
+  },
+  "grao": {
+   "name_key": "SPK_GRAO",
+   "role": "humor",
+   "sprite": "res://assets/sprites/npc/grao.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "deserto/grao"
+    }
+   ]
+  },
+  "miragem": {
+   "name_key": "SPK_MIRAGEM",
+   "role": "lore",
+   "sprite": "res://assets/sprites/npc/miragem.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "deserto/miragem"
+    }
+   ]
+  },
+  "rosa": {
+   "name_key": "SPK_ROSA",
+   "role": "quest",
+   "sprite": "res://assets/sprites/npc/rosa.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "rosa_done",
+     "dialog": "deserto/rosa_depois"
+    },
+    {
+     "if_all": [
+      "rosa_quest",
+      "alforje_achado"
+     ],
+     "dialog": "deserto/rosa_obrigada"
+    },
+    {
+     "if": "rosa_quest",
+     "dialog": "deserto/rosa_onde"
+    },
+    {
+     "dialog": "deserto/rosa_pede"
+    }
+   ]
+  },
+  "tamara": {
+   "name_key": "SPK_TAMARA",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/tamara.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "tamara_beaten",
+     "dialog": "deserto/tamara_depois"
+    },
+    {
+     "dialog": "deserto/tamara"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "tamara_beaten"
+   }
+  },
+  "batuque": {
+   "name_key": "SPK_BATUQUE",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/batuque.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "batuque_beaten",
+     "dialog": "deserto/batuque_depois"
+    },
+    {
+     "dialog": "deserto/batuque"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "batuque_beaten"
+   }
+  },
+  "sandalo": {
+   "name_key": "SPK_SANDALO",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/sandalo.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "sandalo_beaten",
+     "dialog": "deserto/sandalo_depois"
+    },
+    {
+     "dialog": "deserto/sandalo"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "sandalo_beaten"
+   }
+  },
+  "ampulhor_npc": {
+   "name_key": "SPECIES_AMPULHOR",
+   "role": "wild",
+   "sprite": "res://assets/sprites/npc/skel_ampulhor.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "deserto/ampulhor"
+    }
+   ]
+  },
+  "duna": {
+   "name_key": "SPK_DUNA",
+   "role": "guardian",
+   "sprite": "res://assets/sprites/npc/skel_duna.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "if": "duna_beaten",
+     "dialog": "deserto/duna_depois"
+    },
+    {
+     "dialog": "deserto/duna"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "duna_beaten"
+   }
   }
  }
 }

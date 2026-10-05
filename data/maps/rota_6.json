@@ -1,0 +1,352 @@
+{
+ "id": "rota_6",
+ "region": "deserto",
+ "name_key": "MAP_ROTA_6",
+ "tileset": "overworld",
+ "legend": {
+  "g": "dune",
+  "f": "sand",
+  "B": "sandstone",
+  "p": "path",
+  ".": "floor"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffggffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffggffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppggffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppggffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffggffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffggffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppfggfB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppfggfB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffggffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffggffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggppppppppppppppppppppppppppgggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
+ ],
+ "spawn": {
+  "x": 19,
+  "y": 47,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "broken_column",
+   "x": 18,
+   "y": 36
+  },
+  {
+   "type": "broken_column",
+   "x": 21,
+   "y": 36
+  },
+  {
+   "type": "broken_column",
+   "x": 18,
+   "y": 13
+  },
+  {
+   "type": "broken_column",
+   "x": 21,
+   "y": 13
+  },
+  {
+   "type": "cactus",
+   "x": 28,
+   "y": 20
+  },
+  {
+   "type": "drum",
+   "x": 35,
+   "y": 25
+  },
+  {
+   "type": "sign",
+   "x": 18,
+   "y": 42,
+   "dialog": "deserto/placa_bifurcacao"
+  },
+  {
+   "type": "broken_column",
+   "x": 12,
+   "y": 47
+  },
+  {
+   "type": "cactus",
+   "x": 30,
+   "y": 47
+  },
+  {
+   "type": "rock_small",
+   "x": 36,
+   "y": 47
+  },
+  {
+   "type": "rock_small",
+   "x": 27,
+   "y": 46
+  },
+  {
+   "type": "cactus",
+   "x": 35,
+   "y": 44
+  },
+  {
+   "type": "palm",
+   "x": 6,
+   "y": 44
+  },
+  {
+   "type": "broken_column",
+   "x": 11,
+   "y": 44
+  },
+  {
+   "type": "palm",
+   "x": 30,
+   "y": 44
+  },
+  {
+   "type": "rock_small",
+   "x": 32,
+   "y": 7
+  },
+  {
+   "type": "cactus",
+   "x": 7,
+   "y": 6
+  },
+  {
+   "type": "broken_column",
+   "x": 27,
+   "y": 5
+  },
+  {
+   "type": "rock_small",
+   "x": 8,
+   "y": 3
+  },
+  {
+   "type": "rock_small",
+   "x": 4,
+   "y": 2
+  },
+  {
+   "type": "rock_small",
+   "x": 36,
+   "y": 4
+  },
+  {
+   "type": "palm",
+   "x": 29,
+   "y": 8
+  },
+  {
+   "type": "rock_small",
+   "x": 17,
+   "y": 8
+  },
+  {
+   "type": "palm",
+   "x": 36,
+   "y": 8
+  },
+  {
+   "type": "rock_small",
+   "x": 7,
+   "y": 36
+  },
+  {
+   "type": "cactus",
+   "x": 3,
+   "y": 37
+  },
+  {
+   "type": "rock_small",
+   "x": 3,
+   "y": 15
+  },
+  {
+   "type": "rock_small",
+   "x": 7,
+   "y": 13
+  },
+  {
+   "type": "palm",
+   "x": 7,
+   "y": 21
+  }
+ ],
+ "npcs": [
+  {
+   "id": "corcova",
+   "x": 6,
+   "y": 30,
+   "facing": "left"
+  },
+  {
+   "id": "veu",
+   "x": 3,
+   "y": 20,
+   "facing": "right"
+  },
+  {
+   "id": "pa",
+   "x": 12,
+   "y": 9,
+   "facing": "down"
+  },
+  {
+   "id": "cantil",
+   "x": 22,
+   "y": 42,
+   "facing": "left"
+  },
+  {
+   "id": "alforje",
+   "x": 36,
+   "y": 24,
+   "facing": "left"
+  }
+ ],
+ "warps": [
+  {
+   "x": 19,
+   "y": 49,
+   "to": "geada",
+   "tx": 19,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 49,
+   "to": "geada",
+   "tx": 20,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 19,
+   "y": 0,
+   "to": "palmeiral",
+   "tx": 19,
+   "ty": 30,
+   "facing": "up",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 0,
+   "to": "palmeiral",
+   "tx": 20,
+   "ty": 30,
+   "facing": "up",
+   "sfx": ""
+  }
+ ],
+ "spawns": [
+  {
+   "id": "r6_sul",
+   "table": "rota6_sul",
+   "x": 10,
+   "y": 45,
+   "radius": 3,
+   "count": 2
+  },
+  {
+   "id": "r6_oeste",
+   "table": "rota6_oeste",
+   "x": 5,
+   "y": 25,
+   "radius": 2,
+   "count": 1
+  },
+  {
+   "id": "r6_campo_a",
+   "table": "rota6_campo",
+   "x": 30,
+   "y": 32,
+   "radius": 4,
+   "count": 3
+  },
+  {
+   "id": "r6_campo_b",
+   "table": "rota6_campo",
+   "x": 30,
+   "y": 18,
+   "radius": 4,
+   "count": 3
+  },
+  {
+   "id": "r6_eco",
+   "table": "rota6_eco",
+   "x": 19,
+   "y": 25,
+   "radius": 2,
+   "count": 1
+  },
+  {
+   "id": "r6_norte",
+   "table": "rota6_norte",
+   "x": 10,
+   "y": 6,
+   "radius": 3,
+   "count": 2
+  }
+ ],
+ "ambient": [
+  "sand"
+ ],
+ "tint": [
+  1.0,
+  0.96,
+  0.9
+ ],
+ "on_enter": [
+  {
+   "if_not": "rota6_vista",
+   "dialog": "deserto/chegada_rota"
+  }
+ ]
+}

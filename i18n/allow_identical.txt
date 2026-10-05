@@ -78,6 +78,9 @@ SPK_NEVASCO
 SPK_ALVA
 BTL_TAMER_BRISA
 # --- fim picos ---
+# --- região deserto (nomes próprios iguais nos idiomas) ---
+SPK_ROSA
+# --- fim deserto ---
 # --- gerado por tools/bestiary/build.py (descrições de golpes) ---
 MOVE_CHUTE_NA_CANELA_DESC
 MOVE_RANGER_OS_DENTES_DESC

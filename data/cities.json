@@ -118,6 +118,24 @@
    "quests": [
     "camelia"
    ]
+  },
+  {
+   "id": "palmeiral",
+   "map": "palmeiral",
+   "ranch": "moringa",
+   "shop": "palmeiral",
+   "tamer_houses": [
+    "tamara",
+    "batuque"
+   ],
+   "npcs": [
+    "grao",
+    "miragem",
+    "rosa"
+   ],
+   "quests": [
+    "rosa"
+   ]
   }
  ]
 }
