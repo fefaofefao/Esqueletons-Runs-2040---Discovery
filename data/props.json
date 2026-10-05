@@ -1,0 +1,517 @@
+{
+ "_comment": "Gerado por tools/art/gen_props.py. N\u00e3o editar \u00e0 m\u00e3o.",
+ "texture": "res://assets/props/props.png",
+ "props": {
+  "palm": {
+   "rect": [
+    0,
+    0,
+    40,
+    52
+   ],
+   "frames": 2,
+   "fps": 0.8,
+   "origin": [
+    20,
+    50
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "rock_small": {
+   "rect": [
+    81,
+    0,
+    16,
+    14
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    8,
+    13
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "rock_big": {
+   "rect": [
+    98,
+    0,
+    30,
+    22
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    23,
+    21
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ],
+    [
+     -1,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "hut": {
+   "rect": [
+    129,
+    0,
+    80,
+    66
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    40,
+    65
+   ],
+   "collision": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ],
+    [
+     2,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "boat": {
+   "rect": [
+    0,
+    67,
+    48,
+    26
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    24,
+    22
+   ],
+   "collision": [
+    [
+     -1,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "sign": {
+   "rect": [
+    49,
+    67,
+    16,
+    18
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    8,
+    17
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "barrel": {
+   "rect": [
+    66,
+    67,
+    14,
+    16
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    7,
+    15
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "crate": {
+   "rect": [
+    81,
+    67,
+    16,
+    16
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    8,
+    15
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "net_rack": {
+   "rect": [
+    98,
+    67,
+    32,
+    24
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    24,
+    23
+   ],
+   "collision": [
+    [
+     -1,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "driftwood": {
+   "rect": [
+    131,
+    67,
+    30,
+    12
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    15,
+    11
+   ],
+   "collision": [],
+   "layer": "ground",
+   "interactive": false
+  },
+  "starfish": {
+   "rect": [
+    162,
+    67,
+    12,
+    12
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    6,
+    10
+   ],
+   "collision": [],
+   "layer": "ground",
+   "interactive": false
+  },
+  "campfire": {
+   "rect": [
+    175,
+    67,
+    16,
+    16
+   ],
+   "frames": 2,
+   "fps": 6.0,
+   "origin": [
+    8,
+    15
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false,
+   "light": {
+    "radius": 44,
+    "color": [
+     1.0,
+     0.6,
+     0.3
+    ],
+    "intensity": 0.3,
+    "offset": [
+     0,
+     -6
+    ]
+   }
+  },
+  "bed": {
+   "rect": [
+    208,
+    67,
+    16,
+    30
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    8,
+    29
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "table": {
+   "rect": [
+    0,
+    98,
+    32,
+    22
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    24,
+    21
+   ],
+   "collision": [
+    [
+     -1,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "stool": {
+   "rect": [
+    33,
+    98,
+    12,
+    12
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    6,
+    11
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "shelf": {
+   "rect": [
+    46,
+    98,
+    32,
+    30
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    24,
+    29
+   ],
+   "collision": [
+    [
+     -1,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "plant": {
+   "rect": [
+    79,
+    98,
+    14,
+    18
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    7,
+    17
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "lamp": {
+   "rect": [
+    94,
+    98,
+    10,
+    16
+   ],
+   "frames": 2,
+   "fps": 3.0,
+   "origin": [
+    5,
+    15
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false,
+   "light": {
+    "radius": 40,
+    "color": [
+     1.0,
+     0.82,
+     0.5
+    ],
+    "intensity": 0.35,
+    "offset": [
+     0,
+     -9
+    ]
+   }
+  },
+  "rug": {
+   "rect": [
+    115,
+    98,
+    48,
+    30
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    24,
+    29
+   ],
+   "collision": [],
+   "layer": "ground",
+   "interactive": false
+  },
+  "rod_rack": {
+   "rect": [
+    164,
+    98,
+    16,
+    28
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    8,
+    27
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  }
+ }
+}
