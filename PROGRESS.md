@@ -369,3 +369,32 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 - `tests/run_tests.tscn`: 12125 verificações, 0 falhas (condição dos finais, Final A e B completos, o Rei na equipe com marcador 100%, ecos no pós-jogo).
 - `tools/validate_data.py`: OK. `tools/simulate.py --check`: 174 min, 0 critérios falhando.
 - Captura `capture.tscn -- --region=castelo`: portão, pais do Taro, salão, Provador Real, trono e o Final A.
+
+## Correção urgente — conversa que recomeçava sozinha (concluída)
+
+- Causa: no celular, um toque no botão A virtual também gerava um clique de mouse
+  emulado. O clique fechava o diálogo e o A em seguida falava de novo com o NPC.
+- Correção: os controles de toque descartam o clique emulado sobre os botões
+  virtuais, e o A no mapa espera 0,3 s depois de fechar qualquer diálogo.
+  Teste de regressão: `tests/test_player.gd`.
+- Jogada de ponta a ponta verificada por captura (`--prologo` e `--bosque`): da praia
+  até Vila Maré, Brás, Rota 1, Túnel, Raizal, Ramalho e o brasão do Raizerno, sem travar.
+
+## Fase 5 — Monetização e conformidade (concluída, falta preencher dados reais)
+
+### Feito
+- AdMob 5.1.0 (Poing Studios, MIT) com UMP antes do SDK; regras da seção 14 no autoload `Ads`.
+- Premiados opcionais: dobrar a XP, +25% no marcador, reviver sem perder moedas.
+- Política de privacidade em 3 idiomas (`privacy/`), `app-ads.txt`, fichas da loja
+  (`store/listing.*.md`), ícone 512, gráfico 1024×500 e 7 capturas por idioma.
+- Exportação remove permissões extras (AD_ID duplicada, READ_BASIC_PHONE_STATE,
+  ACCESS_ADSERVICES_*); o `tools/check_manifest.py` confere o APK no CI.
+
+### Pendências do Fernando
+- Secrets do release: `ADMOB_APP_ID`, `ADMOB_BANNER_ID`, `ADMOB_INTERSTITIAL_ID`,
+  `ADMOB_REWARDED_ID` e a keystore.
+- `config/publisher.json`: `[URL]` do site e `[ADMOB_PUB_ID]`. O build de release
+  falha até que sejam preenchidos (`check_placeholders.py`).
+
+### Próximo
+- Fase 6: música, polimento, `PLAY_CONSOLE.md`, checklist final e AAB de release.
