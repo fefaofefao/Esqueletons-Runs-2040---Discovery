@@ -1,0 +1,12 @@
+{
+ "dialogs": {
+  "creditos": [
+   {
+    "say": "CREDITS_1"
+   },
+   {
+    "say": "CREDITS_2"
+   }
+  ]
+ }
+}

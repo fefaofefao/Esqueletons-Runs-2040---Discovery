@@ -1,0 +1,76 @@
+keys,pt_BR,en,es
+MENU_CONTINUE,Continuar,Continue,Continuar
+MENU_NEW_GAME,Novo jogo,New game,Nueva partida
+MENU_SETTINGS,Configurações,Settings,Ajustes
+MENU_ABOUT,Sobre,About,Acerca de
+CONFIRM_OVERWRITE,Já existe um jogo salvo. Começar de novo apaga esse progresso. Começar mesmo assim?,There's already a saved game. Starting over erases that progress. Start anyway?,Ya hay una partida guardada. Empezar de nuevo borra ese progreso. ¿Empezar igualmente?
+OPT_YES,Sim,Yes,Sí
+OPT_NO,Não,No,No
+NAME_TITLE,Qual é o seu nome?,What's your name?,¿Cómo te llamas?
+NAME_DELETE,Apagar,Delete,Borrar
+NAME_OK,Pronto,Done,Listo
+NAME_CASE,A/a,A/a,A/a
+NAME_DEFAULT,Téo,Theo,Teo
+PAUSE_TITLE,Pausa,Paused,Pausa
+PAUSE_RESUME,Voltar ao jogo,Resume,Reanudar
+PAUSE_SAVE_QUIT,Salvar e sair,Save and quit,Guardar y salir
+SET_TITLE,Configurações,Settings,Ajustes
+SET_LANGUAGE,Idioma,Language,Idioma
+SET_MUSIC,Música,Music,Música
+SET_SFX,Efeitos,Sound effects,Efectos
+SET_TEXT_SPEED,Velocidade do texto,Text speed,Velocidad del texto
+SET_TEXT_SLOW,Lenta,Slow,Lenta
+SET_TEXT_NORMAL,Normal,Normal,Normal
+SET_TEXT_FAST,Rápida,Fast,Rápida
+SET_FAST_DEFAULT,2x por padrão,2x by default,2x por defecto
+SET_VIBRATION,Vibração,Vibration,Vibración
+SET_PRIVACY,Privacidade e anúncios,Privacy and ads,Privacidad y anuncios
+SET_PRIVACY_INFO,"Esta versão ainda não exibe anúncios. Quando exibir, você poderá revisar seu consentimento aqui.","This version doesn't show ads yet. Once it does, you can review your consent here.","Esta versión aún no muestra anuncios. Cuando lo haga, podrás revisar tu consentimiento aquí."
+SET_BACK,Voltar,Back,Volver
+VAL_ON,Sim,On,Sí
+VAL_OFF,Não,Off,No
+VAL_AUTO,Auto,Auto,Auto
+LANG_NAME_pt_BR,Português,Português,Português
+LANG_NAME_en,English,English,English
+LANG_NAME_es,Español,Español,Español
+ABOUT_VERSION,Versão {v},Version {v},Versión {v}
+ABOUT_PRODUCER,Produtora: {v},Studio: {v},Estudio: {v}
+ABOUT_CONTACT,Contato: {v},Contact: {v},Contacto: {v}
+ABOUT_SITE,Site: {v},Website: {v},Sitio web: {v}
+ABOUT_PRIVACY,Política de privacidade,Privacy policy,Política de privacidad
+ABOUT_CREDITS,Créditos,Credits,Créditos
+ABOUT_PRIVACY_PENDING,A política de privacidade será publicada no site da produtora antes do lançamento.,The privacy policy will be published on the studio's website before launch.,La política de privacidad se publicará en el sitio del estudio antes del lanzamiento.
+MSG_SAVED,Jogo salvo.,Game saved.,Partida guardada.
+MSG_AREA_LOCKED,A trilha para a Vila Maré ainda está fechada nesta versão de teste.,The trail to Tidemark Village is still closed in this test build.,El sendero a Villa Marea sigue cerrado en esta versión de prueba.
+REGION_PRAIA,Praia do Despertar,Awakening Beach,Playa del Despertar
+REGION_VILA_MARE,Vila Maré,Tidemark Village,Villa Marea
+REGION_BOSQUE,Bosque das Raízes,Rootwood Forest,Bosque de las Raíces
+REGION_MINAS,Minas de Cinzas,Ashen Mines,Minas de Ceniza
+REGION_PANTANO,Pântano Verde-Musgo,Mossgreen Marsh,Pantano Verdemusgo
+REGION_OSSORIO,Cidade Murada de Ossório,Walled City of Ossorio,Ciudad Amurallada de Osorio
+REGION_PICOS,Picos Gelados,Frostbite Peaks,Picos Helados
+REGION_DESERTO,Deserto dos Ecos,Desert of Echoes,Desierto de los Ecos
+REGION_CASTELO,Castelo do Rei Esqueleto,Skeleton King's Castle,Castillo del Rey Esqueleto
+MAP_CABANA_BENTO,Cabana do Bento,Bento's Hut,Cabaña de Bento
+DBG_TITLE,Depuração,Debug,Depuración
+DBG_TELEPORT,Teleportar,Teleport,Teletransportar
+DBG_SPEED10,Velocidade 10x,10x speed,Velocidad 10x
+DBG_RADII,Raios de patrulha,Patrol radii,Radios de patrulla
+DBG_ENCOUNTERS,Tabelas de encontro,Encounter tables,Tablas de encuentros
+DBG_TOUCH,Controles de toque,Touch controls,Controles táctiles
+DBG_TIMES,Tempo por região,Time per region,Tiempo por región
+DBG_TIMES_BODY,"Tempo por região:
+{lines}","Time per region:
+{lines}","Tiempo por región:
+{lines}"
+DBG_TIMES_EMPTY,Nenhum tempo registrado ainda.,No time recorded yet.,Aún no hay tiempo registrado.
+DBG_SET_LEVEL,Definir nível,Set level,Fijar nivel
+DBG_ADD_SKELETON,Adicionar esqueleto,Add skeleton,Añadir esqueleto
+DBG_FORCE_GOLDEN,Forçar Golden,Force Golden,Forzar Golden
+DBG_FORCE_GROWTH,Forçar crescimento,Force growth,Forzar crecimiento
+DBG_WIN_BATTLE,Vencer batalha,Win battle,Ganar batalla
+DBG_SAVE_NOW,Salvar agora,Save now,Guardar ahora
+DBG_DELETE_SAVE,Apagar save,Delete save,Borrar partida
+DBG_SAVE_DELETED,Save apagado.,Save deleted.,Partida borrada.
+DBG_CLOSE,Fechar,Close,Cerrar
+DBG_PHASE,(fase {n}),(phase {n}),(fase {n})

@@ -1,0 +1,26 @@
+{
+ "npcs": {
+  "bento": {
+   "name_key": "SPK_BENTO",
+   "role": "lore",
+   "sprite": "res://assets/sprites/bento.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "left",
+    "down",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if_not": "bento_met",
+     "dialog": "prologo/bento_primeira"
+    },
+    {
+     "dialog": "prologo/bento_repete"
+    }
+   ]
+  }
+ }
+}

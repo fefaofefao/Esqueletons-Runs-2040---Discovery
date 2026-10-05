@@ -1,0 +1,212 @@
+{
+ "id": "praia_despertar",
+ "region": "praia",
+ "name_key": "REGION_PRAIA",
+ "tileset": "overworld",
+ "legend": {
+  ".": "sand",
+  "g": "grass",
+  "f": "flowers",
+  "B": "bush",
+  "p": "path",
+  "~": "water",
+  "W": "deep",
+  "=": "dock"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBgggggBBBBppgBBBBBBBBBBBBBBBggggBBB",
+  "BBBBBggggggBgggggggggggppggBBBBBgggggBBgggggggBB",
+  "BBggggggggggggffgggggggppgggggggggggggfgggggggBB",
+  "BBgggfgggggggggggggggggppgggggfgggggggggggggggBB",
+  "BBggggfggggggggggggfgggppggggg...gggggggggffggBB",
+  "BBggggg....ggggggggggggppgg.........ggggggggg.BB",
+  "BBgg..........gggggggggpp...............gg....BB",
+  "BB..............gggggggpp.....................BB",
+  "BB.....................pp.....................BB",
+  "BB.....................pp.....................BB",
+  "B......................pp......................B",
+  "B......................p.......................B",
+  "B..............................................B",
+  "................................................",
+  "................................................",
+  "................................................",
+  "........==......................................",
+  "........==...................~~~~~..............",
+  "........==..~~~~~..........~~~~~~~~~............",
+  "........==~~~~~~~~~~~...~~~~~WWWW~~~~~.......~~~",
+  "~~......==~~~~~~~~~~~~~~~~~~~WWWWW~~~~~~~~~~~~~~",
+  "~~~~~~~~==~~~~WWWWWW~~~~~~~WWWWWWWWW~~~~~~~~~~~~",
+  "~~~~~~~~==~~WWWWWWWWW~~~~~~WWWWWWWWW~~~~~~WWWWWW",
+  "~W~~WWWW==WWWWWWWWWWWWW~WWWWWWWWWWWWWW~WWWWWWWWW",
+  "WWWWWWWW==WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+  "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+  "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+  "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
+ ],
+ "spawn": {
+  "x": 22,
+  "y": 18,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "palm",
+   "x": 4,
+   "y": 12
+  },
+  {
+   "type": "palm",
+   "x": 12,
+   "y": 10
+  },
+  {
+   "type": "palm",
+   "x": 17,
+   "y": 13
+  },
+  {
+   "type": "palm",
+   "x": 28,
+   "y": 11
+  },
+  {
+   "type": "palm",
+   "x": 41,
+   "y": 13
+  },
+  {
+   "type": "palm",
+   "x": 44,
+   "y": 16
+  },
+  {
+   "type": "palm",
+   "x": 3,
+   "y": 16
+  },
+  {
+   "type": "palm",
+   "x": 20,
+   "y": 9
+  },
+  {
+   "type": "rock_big",
+   "x": 3,
+   "y": 19
+  },
+  {
+   "type": "rock_small",
+   "x": 14,
+   "y": 19
+  },
+  {
+   "type": "rock_small",
+   "x": 43,
+   "y": 19
+  },
+  {
+   "type": "rock_small",
+   "x": 38,
+   "y": 17
+  },
+  {
+   "type": "boat",
+   "x": 30,
+   "y": 18
+  },
+  {
+   "type": "hut",
+   "x": 35,
+   "y": 10
+  },
+  {
+   "type": "net_rack",
+   "x": 40,
+   "y": 11
+  },
+  {
+   "type": "barrel",
+   "x": 32,
+   "y": 11
+  },
+  {
+   "type": "crate",
+   "x": 38,
+   "y": 10
+  },
+  {
+   "type": "barrel",
+   "x": 10,
+   "y": 17
+  },
+  {
+   "type": "campfire",
+   "x": 31,
+   "y": 14
+  },
+  {
+   "type": "sign",
+   "x": 25,
+   "y": 12,
+   "dialog": "prologo/placa_vila"
+  },
+  {
+   "type": "driftwood",
+   "x": 20,
+   "y": 17
+  },
+  {
+   "type": "starfish",
+   "x": 13,
+   "y": 17
+  },
+  {
+   "type": "starfish",
+   "x": 36,
+   "y": 19
+  }
+ ],
+ "npcs": [
+  {
+   "id": "bento",
+   "x": 33,
+   "y": 14,
+   "facing": "left"
+  }
+ ],
+ "warps": [
+  {
+   "x": 35,
+   "y": 10,
+   "to": "cabana_bento",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 23,
+   "y": 0,
+   "to": "vila_mare",
+   "tx": -1,
+   "ty": -1,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 24,
+   "y": 0,
+   "to": "vila_mare",
+   "tx": -1,
+   "ty": -1,
+   "facing": "up",
+   "sfx": "door"
+  }
+ ],
+ "ambient": [
+  "sea_sparkle",
+  "leaves"
+ ]
+}

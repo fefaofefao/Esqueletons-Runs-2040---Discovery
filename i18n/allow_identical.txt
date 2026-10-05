@@ -1,0 +1,17 @@
+# Chaves cujo texto em EN ou ES pode ser igual ao PT-BR (não é esquecimento).
+# Uma chave por linha. Usado por tools/validate_data.py.
+MENU_CONTINUE
+NAME_CASE
+PAUSE_TITLE
+SET_LANGUAGE
+SET_MUSIC
+SET_TEXT_SLOW
+SET_TEXT_NORMAL
+SET_TEXT_FAST
+VAL_AUTO
+LANG_NAME_pt_BR
+LANG_NAME_en
+LANG_NAME_es
+ABOUT_CREDITS
+DBG_PHASE
+SPK_BENTO

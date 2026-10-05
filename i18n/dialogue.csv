@@ -1,0 +1,26 @@
+keys,pt_BR,en,es
+SPK_BENTO,Bento,Bento,Bento
+DLG_BENTO_01,"Ora, ora. Acordou! Achei que a maré tinha me trazido mais um tronco.","Well, well. You're awake! Thought the tide had dragged in another log.","Vaya, vaya. ¡Despertaste! Pensé que la marea me había traído otro tronco."
+DLG_BENTO_02,"Sou Bento. Pesco nesta praia desde que o mar era raso. E você, quem é?",Name's Bento. Been fishing this beach since the sea was shallow. And who are you?,Soy Bento. Pesco en esta playa desde que el mar era bajito. ¿Y tú quién eres?
+DLG_BENTO_03,{player}? Nome curioso. Combina com essa roupa cheia de luzinhas.,"{player}? Odd name. Goes with those clothes, all covered in little lights.",¿{player}? Nombre curioso. Pega con esa ropa llena de lucecitas.
+DLG_BENTO_04,Escute bem: o continente foi tomado por esqueletos. Ninguém anda mais sozinho por aí.,Listen close: skeletons have taken the mainland. Nobody walks alone out there anymore.,Escucha bien: los esqueletos se adueñaron del continente. Ya nadie anda solo por ahí.
+DLG_BENTO_05,Dizem que quem dá as ordens é o Rei Esqueleto. Eu nunca vi. Nem quero ver.,They say the Skeleton King gives the orders. Never seen him. Don't plan to.,Dicen que el que manda es el Rey Esqueleto. Nunca lo he visto. Ni quiero.
+DLG_BENTO_06,"Perguntas, você deve ter um monte. Eu só sei responder uma ou duas.",You must have a pile of questions. I can only answer one or two.,Seguro que tienes un montón de preguntas. Yo solo sé responder una o dos.
+OPT_BENTO_ASK_KING,Quem é esse Rei?,Who is this King?,¿Quién es ese Rey?
+OPT_BENTO_THANKS,"Valeu, Bento.","Thanks, Bento.","Gracias, Bento."
+DLG_BENTO_KING_01,"Ninguém sabe ao certo. Uns dizem que ele já foi gente. Outros, que nunca foi.",Nobody knows for sure. Some say he used to be a person. Others say he never was.,"Nadie lo sabe bien. Unos dicen que antes era persona. Otros, que nunca lo fue."
+DLG_BENTO_07,"Quando estiver pronto, a trilha ao norte leva à Vila Maré. Vá com calma.","When you're ready, the trail north leads to Tidemark Village. Take it easy.","Cuando estés listo, el sendero al norte lleva a Villa Marea. Ve con calma."
+DLG_BENTO_R1,A Vila Maré fica trilha acima. Lá tem gente que entende de esqueleto.,Tidemark Village is up the trail. Folks there know skeletons.,Villa Marea está sendero arriba. Allí hay gente que sabe de esqueletos.
+DLG_BENTO_R2,Eu? Eu entendo de peixe. E de quem fica parado na frente da minha fogueira.,Me? I know fish. And people who stand in front of my campfire.,¿Yo? Yo sé de peces. Y de gente que se planta delante de mi fogata.
+SIGN_VILA_MARE,"↑ Vila Maré
+Proibido pescar na trilha.
+(Ninguém sabe por quê.)","↑ Tidemark Village
+No fishing on the trail.
+(Nobody knows why.)","↑ Villa Marea
+Prohibido pescar en el sendero.
+(Nadie sabe por qué.)"
+OBJ_BENTO_BED,A cama do Bento. Ela range só de você olhar.,Bento's bed. It creaks if you so much as look at it.,La cama de Bento. Cruje con solo mirarla.
+OBJ_BENTO_SHELF,"Potes de sal, anzóis e uma lata com o aviso: “Bento, isso não é biscoito.”","Salt jars, hooks and a tin with a note: “Bento, these are not cookies.”","Frascos de sal, anzuelos y una lata con un aviso: “Bento, esto no son galletas.”"
+OBJ_BENTO_RODS,Três varas de pesca. A do meio tem tanto remendo que já é outra vara.,Three fishing rods. The middle one has so many patches it's a whole new rod.,Tres cañas de pescar. La del medio tiene tantos remiendos que ya es otra caña.
+CREDITS_1,"Esqueletons Runs 2040 — Edição Discovery. Arte, sons, fonte e textos originais.","Esqueletons Runs 2040 — Discovery Edition. Original art, sounds, font and writing.","Esqueletons Runs 2040 — Edición Discovery. Arte, sonidos, fuente y textos originales."
+CREDITS_2,Feito com o motor Godot (licença MIT). Obrigado por jogar!,Made with the Godot Engine (MIT license). Thanks for playing!,Hecho con el motor Godot (licencia MIT). ¡Gracias por jugar!

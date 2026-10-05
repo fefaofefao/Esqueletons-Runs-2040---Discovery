@@ -1,0 +1,90 @@
+{
+ "_comment": "Provisório da fase 1 (sistema de diálogo). O roteiro definitivo do Prólogo vem na fase 4a (docs/roteiro/).",
+ "dialogs": {
+  "bento_primeira": [
+   {
+    "speaker": "SPK_BENTO",
+    "say": "DLG_BENTO_01"
+   },
+   {
+    "speaker": "SPK_BENTO",
+    "say": "DLG_BENTO_02"
+   },
+   {
+    "speaker": "SPK_BENTO",
+    "say": "DLG_BENTO_03"
+   },
+   {
+    "speaker": "SPK_BENTO",
+    "say": "DLG_BENTO_04"
+   },
+   {
+    "speaker": "SPK_BENTO",
+    "say": "DLG_BENTO_05"
+   },
+   {
+    "speaker": "SPK_BENTO",
+    "choice": [
+     {
+      "text": "OPT_BENTO_ASK_KING",
+      "goto": "prologo/bento_rei"
+     },
+     {
+      "text": "OPT_BENTO_THANKS"
+     }
+    ],
+    "say": "DLG_BENTO_06"
+   },
+   {
+    "set_flag": "bento_met"
+   },
+   {
+    "speaker": "SPK_BENTO",
+    "say": "DLG_BENTO_07"
+   }
+  ],
+  "bento_rei": [
+   {
+    "speaker": "SPK_BENTO",
+    "say": "DLG_BENTO_KING_01"
+   },
+   {
+    "set_flag": "bento_met"
+   },
+   {
+    "speaker": "SPK_BENTO",
+    "say": "DLG_BENTO_07"
+   }
+  ],
+  "bento_repete": [
+   {
+    "speaker": "SPK_BENTO",
+    "say": "DLG_BENTO_R1"
+   },
+   {
+    "speaker": "SPK_BENTO",
+    "say": "DLG_BENTO_R2"
+   }
+  ],
+  "placa_vila": [
+   {
+    "say": "SIGN_VILA_MARE"
+   }
+  ],
+  "cama_bento": [
+   {
+    "say": "OBJ_BENTO_BED"
+   }
+  ],
+  "estante_bento": [
+   {
+    "say": "OBJ_BENTO_SHELF"
+   }
+  ],
+  "varas_bento": [
+   {
+    "say": "OBJ_BENTO_RODS"
+   }
+  ]
+ }
+}
