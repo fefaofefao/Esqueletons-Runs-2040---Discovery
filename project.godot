@@ -68,3 +68,7 @@ textures/canvas_textures/default_texture_filter=0
 2d/snap/snap_2d_vertices_to_pixel=true
 environment/defaults/default_clear_color=Color(0.0627451, 0.0470588, 0.0784314, 1)
 textures/vram_compression/import_etc2_astc=true
+
+[editor]
+
+import/use_multiple_threads=false
