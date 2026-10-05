@@ -1,0 +1,89 @@
+{
+ "_comment": "Regras de batalha (AGENTS.md seção 9). O balanceamento por região fica em balance.json (fase 3c).",
+ "level_max": 50,
+ "party_size": 4,
+ "active_per_side": 2,
+ "damage": {
+  "level_mul": 2,
+  "level_div": 5,
+  "level_add": 2,
+  "div": 50,
+  "add": 2,
+  "stab": 1.25,
+  "variance": [
+   0.85,
+   1.0
+  ],
+  "crit_chance": 0.0625,
+  "crit_mul": 1.5
+ },
+ "types": [
+  "fisico",
+  "magico",
+  "cura",
+  "veneno"
+ ],
+ "type_chart": {
+  "strong": 1.5,
+  "weak": 0.75,
+  "beats": {
+   "fisico": "magico",
+   "magico": "veneno",
+   "veneno": "fisico"
+  }
+ },
+ "stat_formula": {
+  "hp_add_level": 1,
+  "hp_add": 10,
+  "stat_add": 5
+ },
+ "stages": {
+  "min": -3,
+  "max": 3
+ },
+ "poison": {
+  "turns": [
+   3,
+   5
+  ],
+  "fraction": 0.0834,
+  "min_damage": 1
+ },
+ "priority": {
+  "switch": 6,
+  "item": 5,
+  "flee": 7
+ },
+ "xp": {
+  "curve_k": 0.8,
+  "trainer_mul": 1.5,
+  "participant_share": 1.0,
+  "reserve_share": 0.5
+ },
+ "flee": {
+  "base": 0.5,
+  "speed_k": 0.4,
+  "attempt_bonus": 0.12,
+  "min": 0.15,
+  "max": 0.95
+ },
+ "defeat": {
+  "money_loss": 0.1
+ },
+ "ai": {
+  "heal_below": 0.35,
+  "wild_random": 0.25
+ },
+ "struggle": {
+  "name_key": "BTL_STRUGGLE",
+  "desc_key": "BTL_STRUGGLE_DESC",
+  "type": "",
+  "category": "physical",
+  "power": 30,
+  "accuracy": 100,
+  "pp": 1,
+  "target": "enemy",
+  "priority": 0,
+  "effects": []
+ }
+}

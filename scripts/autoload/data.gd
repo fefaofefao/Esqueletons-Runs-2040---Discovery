@@ -81,3 +81,80 @@ func dialog(ref: String) -> Array:
 		return d["dialogs"][parts[1]]
 	push_error("Data: diálogo '%s' não encontrado" % ref)
 	return []
+
+
+# ------------------------------------------------------------------ batalha
+var _species_index: Dictionary = {}
+var _moves_index: Dictionary = {}
+
+
+func battle_rules() -> Dictionary:
+	var d = load_json("res://data/battle.json")
+	return d if d is Dictionary else {}
+
+
+## Índice de espécies: data/species.json (fase 3, linhas achatadas por estágio)
+## + data/test/species_test.json (bonecos de treino da fase 2).
+func species(id: String) -> Dictionary:
+	if _species_index.is_empty():
+		_build_species_index()
+	return _species_index.get(id, {})
+
+
+func all_species_ids(include_test: bool = true) -> Array:
+	if _species_index.is_empty():
+		_build_species_index()
+	return _species_index.keys().filter(func(k: String) -> bool: return include_test or not bool(_species_index[k].get("test", false)))
+
+
+func _build_species_index() -> void:
+	if FileAccess.file_exists("res://data/species.json"):
+		var d = load_json("res://data/species.json")
+		for line in d.get("lines", []):
+			for i in line.get("stages", []).size():
+				var st: Dictionary = line["stages"][i].duplicate(true)
+				for k in ["type", "region", "rarity", "growth_levels", "signature_move"]:
+					if line.has(k) and not st.has(k):
+						st[k] = line[k]
+				st["line"] = line.get("id", "")
+				st["stage"] = i + 1
+				_species_index[str(st["id"])] = st
+		for u in d.get("uniques", []):
+			_species_index[str(u["id"])] = u
+		if d.get("king"):
+			_species_index[str(d["king"]["id"])] = d["king"]
+	var t = load_json("res://data/test/species_test.json")
+	if t is Dictionary:
+		for id in t.get("species", {}).keys():
+			var s: Dictionary = t["species"][id].duplicate(true)
+			s["id"] = id
+			s["test"] = true
+			_species_index[id] = s
+
+
+func move(id: String) -> Dictionary:
+	if _moves_index.is_empty():
+		for path in ["res://data/moves.json", "res://data/test/moves_test.json"]:
+			if not FileAccess.file_exists(path):
+				continue
+			var d = load_json(path)
+			var list = d.get("moves", {})
+			if list is Array:
+				for m in list:
+					_moves_index[str(m["id"])] = m
+			else:
+				for k in list.keys():
+					var m: Dictionary = list[k].duplicate(true)
+					m["id"] = k
+					_moves_index[k] = m
+	return _moves_index.get(id, {})
+
+
+func item(id: String) -> Dictionary:
+	var d = load_json("res://data/items.json")
+	return d.get("items", {}).get(id, {}) if d is Dictionary else {}
+
+
+func all_items() -> Dictionary:
+	var d = load_json("res://data/items.json")
+	return d.get("items", {}) if d is Dictionary else {}

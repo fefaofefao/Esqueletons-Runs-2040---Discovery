@@ -1,0 +1,48 @@
+{
+ "items": {
+  "pocao_p": {
+   "name_key": "ITEM_POTION_S",
+   "desc_key": "ITEM_POTION_S_DESC",
+   "kind": "heal",
+   "amount": 30,
+   "price": 150,
+   "battle": true,
+   "target": "ally"
+  },
+  "pocao_m": {
+   "name_key": "ITEM_POTION_M",
+   "desc_key": "ITEM_POTION_M_DESC",
+   "kind": "heal",
+   "amount": 80,
+   "price": 400,
+   "battle": true,
+   "target": "ally"
+  },
+  "pocao_g": {
+   "name_key": "ITEM_POTION_L",
+   "desc_key": "ITEM_POTION_L_DESC",
+   "kind": "heal",
+   "amount": 200,
+   "price": 900,
+   "battle": true,
+   "target": "ally"
+  },
+  "antidoto": {
+   "name_key": "ITEM_ANTIDOTE",
+   "desc_key": "ITEM_ANTIDOTE_DESC",
+   "kind": "cure",
+   "price": 120,
+   "battle": true,
+   "target": "ally"
+  },
+  "reviver": {
+   "name_key": "ITEM_REVIVE",
+   "desc_key": "ITEM_REVIVE_DESC",
+   "kind": "revive",
+   "fraction": 0.5,
+   "price": 1200,
+   "battle": true,
+   "target": "fainted_ally"
+  }
+ }
+}

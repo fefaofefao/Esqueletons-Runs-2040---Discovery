@@ -1,0 +1,141 @@
+{
+ "_comment": "Só para testar a batalha (fase 2). Não aparecem no jogo; a fase 3 traz as 80 espécies reais.",
+ "species": {
+  "teste_fisico": {
+   "name_key": "TEST_DUMMY_FISICO",
+   "type": "fisico",
+   "base": {
+    "hp": 70,
+    "atk": 85,
+    "mag": 40,
+    "def": 70,
+    "res": 50,
+    "spd": 60
+   },
+   "base_xp": 60,
+   "sprite": "res://assets/battle/dummy_fisico.png",
+   "learnset": [
+    [
+     1,
+     "teste_soco"
+    ],
+    [
+     1,
+     "teste_golpe_rapido"
+    ],
+    [
+     8,
+     "teste_fortalecer"
+    ],
+    [
+     14,
+     "teste_pancada"
+    ],
+    [
+     20,
+     "teste_quebra_guarda"
+    ]
+   ]
+  },
+  "teste_magico": {
+   "name_key": "TEST_DUMMY_MAGICO",
+   "type": "magico",
+   "base": {
+    "hp": 60,
+    "atk": 40,
+    "mag": 90,
+    "def": 50,
+    "res": 75,
+    "spd": 62
+   },
+   "base_xp": 60,
+   "sprite": "res://assets/battle/dummy_magico.png",
+   "learnset": [
+    [
+     1,
+     "teste_faisca"
+    ],
+    [
+     1,
+     "teste_golpe_rapido"
+    ],
+    [
+     10,
+     "teste_chuva_astral"
+    ],
+    [
+     16,
+     "teste_quebra_guarda"
+    ]
+   ]
+  },
+  "teste_cura": {
+   "name_key": "TEST_DUMMY_CURA",
+   "type": "cura",
+   "base": {
+    "hp": 85,
+    "atk": 45,
+    "mag": 70,
+    "def": 65,
+    "res": 75,
+    "spd": 40
+   },
+   "base_xp": 60,
+   "sprite": "res://assets/battle/dummy_cura.png",
+   "learnset": [
+    [
+     1,
+     "teste_faisca"
+    ],
+    [
+     1,
+     "teste_remendo"
+    ],
+    [
+     6,
+     "teste_curativo"
+    ],
+    [
+     12,
+     "teste_limpeza"
+    ],
+    [
+     18,
+     "teste_fortalecer"
+    ]
+   ]
+  },
+  "teste_veneno": {
+   "name_key": "TEST_DUMMY_VENENO",
+   "type": "veneno",
+   "base": {
+    "hp": 65,
+    "atk": 60,
+    "mag": 70,
+    "def": 55,
+    "res": 60,
+    "spd": 70
+   },
+   "base_xp": 60,
+   "sprite": "res://assets/battle/dummy_veneno.png",
+   "learnset": [
+    [
+     1,
+     "teste_ferrao"
+    ],
+    [
+     1,
+     "teste_golpe_rapido"
+    ],
+    [
+     9,
+     "teste_nevoa_toxica"
+    ],
+    [
+     15,
+     "teste_pancada"
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,208 @@
+{
+ "_comment": "Golpes de teste da fase 2. A fase 3c cria os 56 golpes reais.",
+ "moves": {
+  "teste_soco": {
+   "name_key": "TEST_MOVE_PUNCH",
+   "desc_key": "TEST_MOVE_PUNCH_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 40,
+   "accuracy": 100,
+   "pp": 30,
+   "target": "enemy",
+   "priority": 0,
+   "effects": []
+  },
+  "teste_pancada": {
+   "name_key": "TEST_MOVE_SLAM",
+   "desc_key": "TEST_MOVE_SLAM_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 80,
+   "accuracy": 85,
+   "pp": 10,
+   "target": "enemy",
+   "priority": 0,
+   "effects": []
+  },
+  "teste_golpe_rapido": {
+   "name_key": "TEST_MOVE_QUICK",
+   "desc_key": "TEST_MOVE_QUICK_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 30,
+   "accuracy": 100,
+   "pp": 25,
+   "target": "enemy",
+   "priority": 1,
+   "effects": []
+  },
+  "teste_quebra_guarda": {
+   "name_key": "TEST_MOVE_GUARDBREAK",
+   "desc_key": "TEST_MOVE_GUARDBREAK_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 50,
+   "accuracy": 95,
+   "pp": 15,
+   "target": "enemy",
+   "priority": 0,
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "def",
+     "stages": -1,
+     "chance": 50,
+     "on": "target"
+    }
+   ]
+  },
+  "teste_faisca": {
+   "name_key": "TEST_MOVE_SPARK",
+   "desc_key": "TEST_MOVE_SPARK_DESC",
+   "type": "magico",
+   "category": "magical",
+   "power": 40,
+   "accuracy": 100,
+   "pp": 30,
+   "target": "enemy",
+   "priority": 0,
+   "effects": []
+  },
+  "teste_chuva_astral": {
+   "name_key": "TEST_MOVE_STARRAIN",
+   "desc_key": "TEST_MOVE_STARRAIN_DESC",
+   "type": "magico",
+   "category": "magical",
+   "power": 35,
+   "accuracy": 95,
+   "pp": 15,
+   "target": "all_enemies",
+   "priority": 0,
+   "effects": []
+  },
+  "teste_ferrao": {
+   "name_key": "TEST_MOVE_STING",
+   "desc_key": "TEST_MOVE_STING_DESC",
+   "type": "veneno",
+   "category": "magical",
+   "power": 25,
+   "accuracy": 100,
+   "pp": 25,
+   "target": "enemy",
+   "priority": 0,
+   "effects": [
+    {
+     "kind": "poison",
+     "chance": 60,
+     "on": "target"
+    }
+   ]
+  },
+  "teste_nevoa_toxica": {
+   "name_key": "TEST_MOVE_TOXICFOG",
+   "desc_key": "TEST_MOVE_TOXICFOG_DESC",
+   "type": "veneno",
+   "category": "status",
+   "power": 0,
+   "accuracy": 85,
+   "pp": 15,
+   "target": "all_enemies",
+   "priority": 0,
+   "effects": [
+    {
+     "kind": "poison",
+     "chance": 100,
+     "on": "target"
+    },
+    {
+     "kind": "stat",
+     "stat": "spd",
+     "stages": -1,
+     "chance": 100,
+     "on": "target"
+    }
+   ]
+  },
+  "teste_remendo": {
+   "name_key": "TEST_MOVE_PATCH",
+   "desc_key": "TEST_MOVE_PATCH_DESC",
+   "type": "cura",
+   "category": "status",
+   "power": 0,
+   "accuracy": 100,
+   "pp": 15,
+   "target": "self",
+   "priority": 0,
+   "effects": [
+    {
+     "kind": "heal",
+     "percent": 35,
+     "on": "target"
+    }
+   ]
+  },
+  "teste_curativo": {
+   "name_key": "TEST_MOVE_MEND",
+   "desc_key": "TEST_MOVE_MEND_DESC",
+   "type": "cura",
+   "category": "status",
+   "power": 0,
+   "accuracy": 100,
+   "pp": 10,
+   "target": "ally",
+   "priority": 0,
+   "effects": [
+    {
+     "kind": "heal",
+     "percent": 40,
+     "on": "target"
+    }
+   ]
+  },
+  "teste_limpeza": {
+   "name_key": "TEST_MOVE_CLEANSE",
+   "desc_key": "TEST_MOVE_CLEANSE_DESC",
+   "type": "cura",
+   "category": "status",
+   "power": 0,
+   "accuracy": 100,
+   "pp": 10,
+   "target": "all_allies",
+   "priority": 0,
+   "effects": [
+    {
+     "kind": "cure",
+     "on": "target"
+    }
+   ]
+  },
+  "teste_fortalecer": {
+   "name_key": "TEST_MOVE_BULKUP",
+   "desc_key": "TEST_MOVE_BULKUP_DESC",
+   "type": "cura",
+   "category": "status",
+   "power": 0,
+   "accuracy": 100,
+   "pp": 15,
+   "target": "self",
+   "priority": 0,
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "atk",
+     "stages": 1,
+     "chance": 100,
+     "on": "target"
+    },
+    {
+     "kind": "stat",
+     "stat": "mag",
+     "stages": 1,
+     "chance": 100,
+     "on": "target"
+    }
+   ]
+  }
+ }
+}
