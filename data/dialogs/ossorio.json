@@ -630,7 +630,8 @@
    {
     "say": "DLG_O_BOOK_T1",
     "speaker": "SPK_TARO",
-    "if": "partner_taro"
+    "if": "partner_taro",
+    "if_not": "partner_lia"
    },
    {
     "set_flag": "livro_farol_lido",

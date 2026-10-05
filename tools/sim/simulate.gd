@@ -5,7 +5,7 @@ extends Node
 ##
 ## Jogada típica por região: o jogador enfrenta ~70% dos selvagens que cruzam a
 ## rota e todos os domadores do caminho, com a equipe recrutada mais provável
-## (balance.json "team"; "@starter" alterna Grumete/Faroleira entre as rodadas).
+## (balance.json "team"; "@starters" = Lia e Taro, os dois iniciais, com +5%).
 ## A IA do jogador é a simples (melhor dano esperado, cura abaixo de 35% de PV),
 ## sem erros aleatórios; os selvagens erram 25% das vezes, como no jogo. Após
 ## cada batalha a equipe é curada (poções/Rancho) e os crescimentos acontecem.
@@ -17,6 +17,7 @@ extends Node
 var rules: Dictionary
 var bal: Dictionary
 var rng := RandomNumberGenerator.new()
+const STARTERS := ["faroleira", "grumete"]
 var move_usage := {}
 var move_total := 0
 
@@ -42,10 +43,9 @@ func _ready() -> void:
 	var acc := []
 	for r in regions:
 		acc.append({"id": r.id, "arrive_age": 0.0, "guardian_age": 0.0, "wins": 0, "trials": 0, "boss_wins": 0, "boss_trials": 0,
-			"battles": 0, "lost": 0, "battle_seconds": 0.0, "guardian_seconds": 0.0, "by_starter": {}})
+			"battles": 0, "lost": 0, "battle_seconds": 0.0, "guardian_seconds": 0.0})
 	for run in runs:
-		var starter := "grumete" if run % 2 == 0 else "faroleira"
-		_playthrough(starter, regions, acc, trials)
+		_playthrough(regions, acc, trials)
 	var report := {"runs": runs, "trials": trials, "regions": [], "move_usage": {}, "types": _type_duels(), "time": bal["time"]}
 	report["type_pairs"] = pair_rates
 	for i in regions.size():
@@ -58,7 +58,7 @@ func _ready() -> void:
 			"arrive_age": a.arrive_age / runs, "guardian_age": a.guardian_age / runs,
 			"winrate": float(a.wins) / maxf(1, a.trials), "boss_winrate": float(a.boss_wins) / maxf(1, a.boss_trials) if a.boss_trials > 0 else -1.0,
 			"battles": float(a.battles) / runs, "lost": float(a.lost) / runs, "minutes": minutes,
-			"battle_minutes": a.battle_seconds / runs / 60.0, "by_starter": a.by_starter})
+			"battle_minutes": a.battle_seconds / runs / 60.0})
 	for k in move_usage.keys():
 		report.move_usage[k] = float(move_usage[k]) / maxf(1, move_total)
 	var f := FileAccess.open(out, FileAccess.WRITE)
@@ -83,16 +83,19 @@ func make(line: String, age: int) -> Monster:
 
 
 # ------------------------------------------------------------------ jogada
-func _playthrough(starter: String, regions: Array, acc: Array, trials: int) -> void:
+func _playthrough(regions: Array, acc: Array, trials: int) -> void:
 	var owned := {}
 	for i in regions.size():
 		var r: Dictionary = regions[i]
 		var a: Dictionary = acc[i]
 		var party: Array = []
+		var lines := []
 		for ln in r.team:
-			var line := starter if ln == "@starter" else str(ln)
+			lines.append_array(STARTERS if ln == "@starters" else [str(ln)])
+		for line in lines.slice(0, 4):
 			if not owned.has(line):
 				owned[line] = make(line, int(r.wild_age[0]) if i > 0 else int(r.arrive[0]))
+				owned[line].starter = line in STARTERS
 			party.append(owned[line])
 		a.arrive_age += _avg_age(party)
 		var fights := int(round(float(r.wild_crossings) * 0.7))
@@ -136,11 +139,6 @@ func _playthrough(starter: String, regions: Array, acc: Array, trials: int) -> v
 			if key == "guardian":
 				a.wins += wins
 				a.trials += trials
-				var bs: Dictionary = a.by_starter
-				if not bs.has(starter):
-					bs[starter] = [0, 0]
-				bs[starter][0] += wins
-				bs[starter][1] += trials
 			else:
 				a.boss_wins += wins
 				a.boss_trials += trials

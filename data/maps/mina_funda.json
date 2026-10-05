@@ -149,7 +149,10 @@
    "y": 17,
    "facing": "right",
    "if": "partner_lia",
-   "if_not": "lenco_visto"
+   "if_none": [
+    "partner_taro",
+    "lenco_visto"
+   ]
   },
   {
    "id": "vagonauta_npc",

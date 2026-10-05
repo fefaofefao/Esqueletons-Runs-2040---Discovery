@@ -69,8 +69,8 @@ t("DLG_C_CAL_1", "Prometi e cumpro. Estou aqui.", "I promised, and I keep my wor
 t("DLG_C_CAL_2", "Deixe-me cuidar dos seus. Um soldado também sabe tratar feridas.", "Let me tend to your team. A soldier knows how to treat wounds too.",
   "Déjame atender a los tuyos. Un soldado también sabe curar heridas.")
 R.d("chegada_portao", [taro("DLG_C_ARR_P_T1"), taro("DLG_C_ARR_P_T2"), nar("DLG_C_ARR_P_N", **{"if": "partner_taro"}), taro("DLG_C_ARR_P_T3"),
-                       taro("DLG_C_ARR_P_T4"), say("DLG_C_ARR_P_R1", "SPK_TARO") | {"if": "partner_lia"},
-                       say("DLG_C_ARR_P_R2", "SPK_TARO") | {"if": "partner_lia"}, lia("DLG_C_ARR_P_L"),
+                       taro("DLG_C_ARR_P_T4"), say("DLG_C_ARR_P_R1", "SPK_TARO") | {"if": "partner_lia", "if_not": "partner_taro"},
+                       say("DLG_C_ARR_P_R2", "SPK_TARO") | {"if": "partner_lia", "if_not": "partner_taro"}, lia("DLG_C_ARR_P_L"),
                        say("DLG_C_ARR_P_R3", "SPK_TARO") | {"if": "partner_lia"}, flag("portao_visto")])
 R.d("taro_portao", [say("DLG_C_TARO_WAIT", "SPK_TARO")])
 R.d("guardas", [say("DLG_C_GUARDS_1"), say("DLG_C_GUARDS_2", "SPK_GUARDAS"),
@@ -143,6 +143,7 @@ t("DLG_C_T_TN", "Taro acende as velas com raiva, uma por uma. A sala inteira apa
   "Taro angrily lights the candles one by one. The whole room appears: portraits, toys, a table set for seven.",
   "Taro enciende las velas con rabia, una por una. Aparece toda la sala: retratos, juguetes, una mesa puesta para siete.")
 t("DLG_C_T_T1", "Pronto. Agora olha pra gente.", "There. Now look at us.", "Listo. Ahora míranos.")
+t("DLG_C_T_T2", "E olha pra gente também. A gente não é quadro na parede.", "And look at us too. We're not paintings on a wall.", "Y míranos a nosotros también. No somos cuadros en la pared.")
 t("DLG_C_REI_1", "Então você veio. O último do meu sangue, de mil anos depois.", "So you came. The last of my blood, from a thousand years ahead.",
   "Así que viniste. El último de mi sangre, de mil años después.")
 t("DLG_C_REI_2", "Eu sou Ossárion. Perdi minha família uma vez. Não vou perder de novo.", "I am Ossárion. I lost my family once. I will not lose them again.",
@@ -153,7 +154,7 @@ t("DLG_C_REI_4", "Coloque a coroa. Fique. Ninguém mais se perde.", "Put on the 
 t("DLG_C_TRY_0", "Você estende a mão para a coroa...", "You reach out for the crown...", "Extiendes la mano hacia la corona...")
 t("DLG_C_TRY_L", "Não! Se você colocar, nunca mais sai daqui!", "No! If you put it on, you'll never leave this place!", "¡No! ¡Si te la pones, nunca saldrás de aquí!")
 t("DLG_C_TRY_T", "Eu avisei. Eu mesmo tiro ela da sua cabeça.", "I warned you. I'll pull it off your head myself.", "Te lo advertí. Yo mismo te la quito de la cabeza.")
-t("DLG_C_TRY_1", "Você recua a mão. Seu parceiro não solta a sua.", "You pull your hand back. Your partner won't let go of it.", "Retiras la mano. Tu compañero no suelta la tuya.")
+t("DLG_C_TRY_1", "Você recua a mão. Seus parceiros não soltam a sua.", "You pull your hand back. Your partners won't let go of it.", "Retiras la mano. Tus compañeros no sueltan la tuya.")
 t("DLG_C_REI_5", "Então você é igual a todos. Vai embora e me deixa sozinho.", "Then you're like all the rest. You'll leave and let me be alone.",
   "Entonces eres como todos. Te irás y me dejarás solo.")
 t("DLG_C_REI_6", "Não. Desta vez, ninguém sai.", "No. This time, no one leaves.", "No. Esta vez, nadie sale.")
@@ -254,7 +255,8 @@ t("OBJ_C_VITRINE", "\"Coroa de osso, Reino de Ossório. Peça em restauração.\
 
 RED = {"flags": ["red_minas", "red_pantano", "red_ossorio"], "min": 2}
 R.d("trono", [say("DLG_C_T_0"), lia("DLG_C_T_L1"), nar("DLG_C_T_LN", **{"if": "partner_lia"}), lia("DLG_C_T_L2"),
-              nar("DLG_C_T_TN", **{"if": "partner_taro"}), taro("DLG_C_T_T1"), flag("trono_iluminado"),
+              nar("DLG_C_T_TN", **{"if": "partner_taro", "if_not": "partner_lia"}), taro("DLG_C_T_T1") | {"if_not": "partner_lia"},
+              say("DLG_C_T_T2", "SPK_TARO") | {"if_all": ["partner_lia", "partner_taro"]}, flag("trono_iluminado"),
               say("DLG_C_REI_1", "SPK_REI"), say("DLG_C_REI_2", "SPK_REI"), say("DLG_C_REI_3"), goto(ref("trono_coroa"))])
 R.d("trono_de_novo", [say("DLG_C_REI_AGAIN", "SPK_REI"), goto(ref("trono_coroa"))])
 R.d("trono_coroa", [ask("DLG_C_REI_4", "SPK_REI", [("OPT_C_CROWN", ref("coroa_tentar")), ("OPT_C_REFUSE", ref("recusar"))])])
@@ -278,7 +280,7 @@ R.d("rei_entra", [say("DLG_C_KING_MARK"), act("marker", species="rei_esqueleto",
                   act("give_monster", species="rei_esqueleto", age=100), flag("rei_recrutado"), act("hide_npc", id="rei"), goto(ref("final_comum"))])
 R.d("final_comum", [say("DLG_C_E_1"), say("DLG_C_E_PAI", "SPK_PAI_TARO"), say("DLG_C_E_MAE", "SPK_MAE_TARO"),
                     taro("DLG_C_E_T1"), say("DLG_C_E_PAI2", "SPK_PAI_TARO"), say("DLG_C_E_T2", "SPK_TARO"), say("DLG_C_E_T3", "SPK_TARO"),
-                    lia("DLG_C_E_L1"), lia("DLG_C_E_L2"), taro("DLG_C_E_TL"),
+                    lia("DLG_C_E_L1"), lia("DLG_C_E_L2"), taro("DLG_C_E_TL") | {"if_not": "partner_lia"},
                     act("fade", out=True), act("wait", s=0.6),
                     act("warp", map="museu_2040", x=7, y=6, facing="up", hide_player=True),
                     say("DLG_C_M_1"), say("DLG_C_M_2"), say("DLG_C_M_3"), say("DLG_C_M_4"),
@@ -315,7 +317,7 @@ t("OBJ_C_LIGHTHOUSE_LIT", "O farol está aceso. A luz gira devagar sobre o mar, 
   "The lighthouse is lit. The light turns slowly over the sea, as if searching for someone.",
   "El faro está encendido. La luz gira despacio sobre el mar, como quien busca a alguien.")
 R.d("epilogo_praia", [say("DLG_C_EP_0"), say("DLG_C_EP_B1", "SPK_BENTO"), lia("DLG_C_EP_L"),
-                      say("DLG_C_EP_B2", "SPK_BENTO") | {"if": "partner_taro"}, taro("DLG_C_EP_T"),
+                      say("DLG_C_EP_B2", "SPK_BENTO") | {"if": "partner_taro", "if_not": "partner_lia"}, taro("DLG_C_EP_T"),
                       say("DLG_C_EP_KA", "SPK_REI") | {"if": "final_a"}, say("DLG_C_EP_KB") | {"if": "final_b"},
                       say("DLG_C_EP_B3", "SPK_BENTO"), say("DLG_C_EP_B4", "SPK_BENTO"), flag("epilogo_visto"), act("respawn")])
 R.d("bento_final", [say("DLG_C_BENTO_POST", "SPK_BENTO"), say("DLG_C_EP_B3", "SPK_BENTO")])
@@ -388,7 +390,7 @@ portao = {"id": "castelo_portao", "region": "castelo", "name_key": "MAP_CASTELO_
                     {"type": "pillar", "x": 9, "y": 20}, {"type": "pillar", "x": 30, "y": 20}, {"type": "torch", "x": 16, "y": 9},
                     {"type": "torch", "x": 23, "y": 9}, {"type": "statue_prince", "x": 13, "y": 23}, {"type": "statue_prince", "x": 26, "y": 23}],
           "npcs": [{"id": "pai_taro", "x": 19, "y": 10, "facing": "down"}, {"id": "mae_taro", "x": 20, "y": 10, "facing": "down"},
-                   {"id": "taro_portao", "x": 23, "y": 12, "facing": "left", "if": "partner_lia", "if_not": "game_cleared"},
+                   {"id": "taro_portao", "x": 23, "y": 12, "facing": "left", "if": "partner_lia", "if_none": ["partner_taro", "game_cleared"]},
                    {"id": "calico_aliado", "x": 14, "y": 15, "facing": "right", "if": "ossorio_revelou", "if_not": "game_cleared"}],
           "warps": [{"x": 19, "y": 29, "to": "palmeiral", "tx": 19, "ty": 1, "facing": "down", "sfx": ""},
                     {"x": 20, "y": 29, "to": "palmeiral", "tx": 20, "ty": 1, "facing": "down", "sfx": ""},
@@ -467,7 +469,7 @@ R.DOC = {
     "moment": ["**Portão:** os pais do Taro guardam a porta e não o reconhecem. Parceiro: \"Então eu vou quebrar essa coroa.\" Recorrente: Taro chegou primeiro e espera ali.",
                "**Sala do trono:** o parceiro acende as velas (Lia com coragem; Taro com raiva) para o Rei ver o que perdeu.",
                "**Final:** quando a coroa se quebra, os pais reconhecem o Taro; ele **perdoa** (os pais e o Rei). A Lia acende o farol da Praia nos dois finais.",
-               "Arcos fechados: Lia medo → coragem → **luz para os outros**; Taro raiva → entendimento → **perdão**."],
+               "Lia e Taro estão os dois na equipe (decisão do Fernando): tocam as falas de parceiro dos dois; as cenas de \"recorrente\" só aparecem em saves antigos, com um parceiro só.", "Arcos fechados: Lia medo → coragem → **luz para os outros**; Taro raiva → entendimento → **perdão**."],
     "guardian": {"name": "Provador Real Degustor e o Rei Ossárion", "kin": "Degustor serve o Rei; Ossárion é o patriarca da família",
                  "personality": "Degustor: guloso e dedicado (prova a comida do Rei todo dia, há mil anos). Rei: solitário, imponente, ferido.",
                  "motive": "O Rei não quer perder a família de novo; a lei \"Ninguém sai, ninguém se perde\" nasceu desse medo.",

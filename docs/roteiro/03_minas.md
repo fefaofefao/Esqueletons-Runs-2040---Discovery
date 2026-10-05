@@ -12,6 +12,7 @@ Na casa do **Seu Carvão** há um **mapa antigo** da costa: três baías lado a 
 
 ## 3. Momento de Lia e Taro
 - **Taro** acha o **lenço da mãe** preso numa viga da Mina Funda (câmara sul). Parceiro: ele segura o choro e pede para irem mais rápido. Recorrente (parceira Lia): Taro já está lá, conta que os levados passaram pela mina rumo ao norte; Lia promete ajudar a procurar.
+- Lia e Taro estão os dois na equipe (decisão do Fernando): tocam as falas de parceiro dos dois; as cenas de "recorrente" só aparecem em saves antigos, com um parceiro só.
 - Arco de Taro: raiva → primeiro sinal de esperança ("ela tá inteira").
 
 ## 4. Guardião: Tia Fornalha (tia do Rei)

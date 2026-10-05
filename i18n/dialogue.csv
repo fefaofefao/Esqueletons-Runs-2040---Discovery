@@ -33,13 +33,11 @@ DLG_P_LIA_1,"Oi! Eu sou a Lia. Acordei sozinha, no escuro. Agora eu não largo m
 DLG_P_LIA_2,Um dia eu vou acender o farol velho da praia. Aí ninguém mais se perde no mar!,Someday I'll light the old lighthouse on the beach. Then no one will get lost at sea!,¡Un día voy a encender el faro viejo de la playa! Así nadie más se pierde en el mar.
 DLG_P_TARO_1,Taro. Levaram meus pais pro castelo. Eu vou buscar.,Taro. They took my parents to the castle. I'm getting them back.,Taro. Se llevaron a mis padres al castillo. Voy a buscarlos.
 DLG_P_TARO_2,"Se você for pro norte, eu vou junto. Se não for, vou sozinho mesmo.","If you're heading north, I'm coming. If not, I'll go alone.","Si vas al norte, voy contigo. Si no, voy solo."
-DLG_P_CHOOSE,"Esqueleto sozinho não vai longe. Gente sozinha, menos ainda. Escolhe um, {player}.","A skeleton alone won't get far. A person alone, even less. Pick one, {player}.","Un esqueleto solo no llega lejos. Una persona sola, menos. Elige uno, {player}."
-OPT_P_LIA,Lia,Lia,Lia
-OPT_P_TARO,Taro,Taro,Taro
+DLG_P_CHOOSE,"Esqueleto sozinho não vai longe. Gente sozinha, menos ainda. Leva os dois, {player}.","A skeleton alone won't get far. A person alone, even less. Take them both, {player}.","Un esqueleto solo no llega lejos. Una persona sola, menos aún. Llévate a los dos, {player}."
 DLG_P_LIA_YES,"Sério?! Eu vou iluminar o caminho, prometo!","Really?! I'll light the way, I promise!","¡¿En serio?! ¡Voy a iluminar el camino, lo prometo!"
-DLG_P_TARO_BYE,Tá. Eu vou na frente então. A gente se vê no caminho.,"Fine. I'll go on ahead, then. See you on the road.",Vale. Entonces voy adelante. Nos vemos en el camino.
 DLG_P_TARO_YES,...Valeu. Não fica pra trás.,...Thanks. Don't fall behind.,...Gracias. No te quedes atrás.
-DLG_P_LIA_BYE,"Tudo bem! Eu vou procurar o farol. Se você se perder, olha pra luz!","That's okay! I'll go find the lighthouse. If you get lost, look for the light!","¡Está bien! Voy a buscar el faro. Si te pierdes, ¡busca la luz!"
+DLG_P_DUO_LIA,"Eu ilumino, você corre, Taro. Combinado?","I'll light the way, you run, Taro. Deal?","Yo ilumino y tú corres, Taro. ¿Trato?"
+DLG_P_DUO_TARO,Tá. Mas eu vou na frente.,Fine. But I'm going first.,Vale. Pero yo voy delante.
 DLG_P_POTIONS,Toma três poções. Esqueleto também rala o joelho.,Take three potions. Skeletons scrape their knees too.,Toma tres pociones. Los esqueletos también se raspan las rodillas.
 DLG_P_WILD,"Na praia tem esqueleto selvagem. Encosta num, que ele vem brigar. Treina um pouco antes da vila.",There are wild skeletons on the beach. Bump into one and it'll fight. Train a bit before the village.,En la playa hay esqueletos salvajes. Choca con uno y vendrá a pelear. Entrena antes de ir a la villa.
 DLG_P_MARK_1,Viu aquela barrinha de ossos? É o marcador. Cada vitória sobre uma espécie enche um pouco.,See that little bone bar? That's the marker. Every win over a species fills it a bit.,¿Viste esa barrita de huesos? Es el marcador. Cada victoria sobre una especie lo llena un poco.
@@ -407,6 +405,7 @@ DLG_PA_MUSGA_GOSSIP,"Quer uma fofoca de graça? Os levados, mineiros e pescadore
 DLG_PA_MUSGA_GOSSIP2,"Os pais daquele baixinho do remo também. Sabia? Eu sei de tudo, querido.","That little one with the oar? His parents too. Did you know? I know everything, darling.","Los padres de ese bajito del remo también. ¿Sabías? Yo lo sé todo, querido."
 DLG_PA_MUSGA_T1,Castelo. Eu sabia.,The castle. I knew it.,El castillo. Lo sabía.
 DLG_PA_MUSGA_T2,...Eles tão inteiros. É isso que importa. Vamos.,...They're in one piece. That's what matters. Let's go.,...Están enteros. Eso es lo que importa. Vamos.
+DLG_PA_MUSGA_LT,"Ouviu, Taro? Inteiros! A gente vai junto até o castelo.","Hear that, Taro? In one piece! We'll go to the castle together.","¿Oíste, Taro? ¡Enteros! Vamos juntos hasta el castillo."
 DLG_PA_MUSGA_L1,Os pais do Taro! A gente precisa contar pra ele!,Taro's parents! We have to tell him!,¡Los padres de Taro! ¡Tenemos que contárselo!
 DLG_PA_MUSGA_OFF,"Tá bom, tá bom. Desligo a névoa. Mas alguém vai ter que vir me visitar. Combinado?","Fine, fine. I'll turn off the fog. But somebody has to come visit me. Deal?","Está bien, está bien. Apago la niebla. Pero alguien tendrá que venir a visitarme. ¿Trato?"
 DLG_PA_MUSGA_AUNT,A Tia mandou eu comer direito? Ela manda isso há mil anos. Fofa.,Auntie told me to eat properly? She's been saying that for a thousand years. Sweet.,¿La Tía mandó que coma bien? Lo dice desde hace mil años. Qué tierna.
@@ -640,6 +639,9 @@ DLG_PI_ARR_J_L,"Tá tudo branco. Segue a minha luz, eu vou na frente!","Everythi
 DLG_PI_ARR_J_T,Estátuas de gelo de todo mundo da cidade. Que coisa triste.,Ice statues of everyone in town. How sad.,Estatuas de hielo de toda la gente del pueblo. Qué cosa más triste.
 DLG_PI_PING_1,"A princesa não recebe visitas. Ordem dela. E minha também, que eu tô com frio.","The princess receives no visitors. Her orders. Mine too, because I'm cold.","La princesa no recibe visitas. Orden suya. Y mía también, que tengo frío."
 DLG_PI_PING_2,"Tá, passa. Mas fala baixo, ela tá cantando.","Fine, go. But keep it down, she's singing.","Vale, pasa. Pero habla bajito, está cantando."
+DLG_PI_DUO_T1,"Eu tenho medo, sabia? De chegar no castelo e meus pais me olharem igual essas estátuas.","I'm scared, you know? Of reaching the castle and my parents looking at me like these statues.","Tengo miedo, ¿sabes? De llegar al castillo y que mis padres me miren como estas estatuas."
+DLG_PI_DUO_L1,"Eles vão lembrar, Taro. Quem faz falta não vira estátua.","They'll remember, Taro. Someone who's missed doesn't turn into a statue.","Se acordarán, Taro. Quien hace falta no se vuelve estatua."
+DLG_PI_DUO_T2,"...Falei em voz alta. Pronto. Agora anda, antes que eu me arrependa.","...I said it out loud. There. Now move, before I regret it.","...Lo dije en voz alta. Listo. Ahora camina, antes de que me arrepienta."
 DLG_PI_ALVA_1,Você veio de muito longe. Dá pra ver nos seus olhos.,You've come from very far away. I can see it in your eyes.,Vienes de muy lejos. Se te nota en los ojos.
 DLG_PI_ALVA_2,"Sou Alva, filha do Rei. Meu pai está triste há mil anos. Se nada mudar, talvez ele melhore.","I'm Alva, the King's daughter. My father has been sad for a thousand years. If nothing changes, maybe he'll get better.","Soy Alva, hija del Rey. Mi padre lleva mil años triste. Si nada cambia, quizá mejore."
 DLG_PI_ALVA_3,Por isso congelei tudo aqui em cima. Desculpa. Não posso deixar você passar.,That's why I froze everything up here. I'm sorry. I can't let you through.,Por eso congelé todo aquí arriba. Lo siento. No puedo dejarte pasar.
@@ -798,6 +800,7 @@ DLG_C_T_LN,"Lia acende as velas, uma por uma. A sala inteira aparece: retratos, 
 DLG_C_T_L2,Pronto. Agora o senhor consegue ver o que perdeu?,There. Now can you see what you lost?,Listo. ¿Ahora puede ver lo que perdió?
 DLG_C_T_TN,"Taro acende as velas com raiva, uma por uma. A sala inteira aparece: retratos, brinquedos, uma mesa posta para sete.","Taro angrily lights the candles one by one. The whole room appears: portraits, toys, a table set for seven.","Taro enciende las velas con rabia, una por una. Aparece toda la sala: retratos, juguetes, una mesa puesta para siete."
 DLG_C_T_T1,Pronto. Agora olha pra gente.,There. Now look at us.,Listo. Ahora míranos.
+DLG_C_T_T2,E olha pra gente também. A gente não é quadro na parede.,And look at us too. We're not paintings on a wall.,Y míranos a nosotros también. No somos cuadros en la pared.
 DLG_C_REI_1,"Então você veio. O último do meu sangue, de mil anos depois.","So you came. The last of my blood, from a thousand years ahead.","Así que viniste. El último de mi sangre, de mil años después."
 DLG_C_REI_2,Eu sou Ossárion. Perdi minha família uma vez. Não vou perder de novo.,I am Ossárion. I lost my family once. I will not lose them again.,Soy Ossárion. Perdí a mi familia una vez. No la perderé de nuevo.
 DLG_C_REI_3,"A coroa racha mais um pouco, com um som de vidro. O mesmo som do museu.","The crown cracks a little more, with a sound like glass. The same sound as in the museum.","La corona se agrieta un poco más, con un sonido de cristal. El mismo sonido del museo."
@@ -805,7 +808,7 @@ DLG_C_REI_4,Coloque a coroa. Fique. Ninguém mais se perde.,Put on the crown. St
 DLG_C_TRY_0,Você estende a mão para a coroa...,You reach out for the crown...,Extiendes la mano hacia la corona...
 DLG_C_TRY_L,"Não! Se você colocar, nunca mais sai daqui!","No! If you put it on, you'll never leave this place!","¡No! ¡Si te la pones, nunca saldrás de aquí!"
 DLG_C_TRY_T,Eu avisei. Eu mesmo tiro ela da sua cabeça.,I warned you. I'll pull it off your head myself.,Te lo advertí. Yo mismo te la quito de la cabeza.
-DLG_C_TRY_1,Você recua a mão. Seu parceiro não solta a sua.,You pull your hand back. Your partner won't let go of it.,Retiras la mano. Tu compañero no suelta la tuya.
+DLG_C_TRY_1,Você recua a mão. Seus parceiros não soltam a sua.,You pull your hand back. Your partners won't let go of it.,Retiras la mano. Tus compañeros no sueltan la tuya.
 DLG_C_REI_5,Então você é igual a todos. Vai embora e me deixa sozinho.,Then you're like all the rest. You'll leave and let me be alone.,Entonces eres como todos. Te irás y me dejarás solo.
 DLG_C_REI_6,"Não. Desta vez, ninguém sai.","No. This time, no one leaves.","No. Esta vez, nadie sale."
 DLG_C_REI_AGAIN,Voltou. A coroa ainda espera por você.,You've returned. The crown is still waiting for you.,Volviste. La corona aún te espera.

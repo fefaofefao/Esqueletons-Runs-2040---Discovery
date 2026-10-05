@@ -29,12 +29,14 @@
    {
     "say": "DLG_C_ARR_P_R1",
     "speaker": "SPK_TARO",
-    "if": "partner_lia"
+    "if": "partner_lia",
+    "if_not": "partner_taro"
    },
    {
     "say": "DLG_C_ARR_P_R2",
     "speaker": "SPK_TARO",
-    "if": "partner_lia"
+    "if": "partner_lia",
+    "if_not": "partner_taro"
    },
    {
     "say": "DLG_C_ARR_P_L",
@@ -329,12 +331,22 @@
    },
    {
     "say": "DLG_C_T_TN",
-    "if": "partner_taro"
+    "if": "partner_taro",
+    "if_not": "partner_lia"
    },
    {
     "say": "DLG_C_T_T1",
     "speaker": "SPK_TARO",
-    "if": "partner_taro"
+    "if": "partner_taro",
+    "if_not": "partner_lia"
+   },
+   {
+    "say": "DLG_C_T_T2",
+    "speaker": "SPK_TARO",
+    "if_all": [
+     "partner_lia",
+     "partner_taro"
+    ]
    },
    {
     "set_flag": "trono_iluminado",
@@ -664,7 +676,8 @@
    {
     "say": "DLG_C_E_TL",
     "speaker": "SPK_TARO",
-    "if": "partner_taro"
+    "if": "partner_taro",
+    "if_not": "partner_lia"
    },
    {
     "action": "fade",
@@ -733,7 +746,8 @@
    {
     "say": "DLG_C_EP_B2",
     "speaker": "SPK_BENTO",
-    "if": "partner_taro"
+    "if": "partner_taro",
+    "if_not": "partner_lia"
    },
    {
     "say": "DLG_C_EP_T",

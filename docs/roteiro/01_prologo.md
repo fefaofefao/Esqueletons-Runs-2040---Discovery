@@ -11,7 +11,7 @@ Os barcos de Vila Maré **não podem sair**. Os esqueletos do porto obedecem à 
 O **ingresso do museu** no bolso: "Museu do Litoral — O Reino Perdido de Ossório — 12/10/2040". Aparece ao acordar. Bento não sabe o que é "museu". Pode ser relido no menu (item-chave **Ingresso Amassado**).
 
 ## 3. Momento de Lia e Taro
-Os dois batem na porta da cabana do Bento. Cada um diz por que quer um parceiro, e o jogador escolhe um. O outro se despede com uma frase que já mostra o arco dele. Na saída da vila, o recorrente oferece uma **batalha opcional**.
+Os dois batem na porta da cabana do Bento. Cada um diz por que quer um parceiro, e Bento manda o protagonista levar **os dois** (decisão do Fernando: começar com um só deixava o Prólogo difícil). Os dois entram na equipe com +5% em todos os atributos, e já combinam o jeito da dupla: Lia ilumina, Taro corre na frente.
 
 ## 4. Guardião
 Não há Guardião no Prólogo. O **Fiscal Brás**, capanga de Ramalho, antecipa a mecânica do Bosque (um golpe pesado que atrasa) e é a primeira batalha contra domador.
@@ -19,12 +19,11 @@ Não há Guardião no Prólogo. O **Fiscal Brás**, capanga de Ramalho, antecipa
 ## 5. Sequência
 1. **Despertar** (Praia): ao entrar no jogo pela 1ª vez, o protagonista acorda e acha o ingresso.
 2. **Bento** (Praia, perto da cabana): explica o mundo e convida para a cabana.
-3. **Cabana:** Lia e Taro batem na porta. Escolha do parceiro. Bento dá 3 Poções P.
-4. **1ª batalha** (Praia): selvagens aparecem depois da escolha. Bento dá 3 dicas no começo da 1ª batalha (timeline, peso, Sintonia).
+3. **Cabana:** Lia e Taro batem na porta e os dois entram na equipe. Bento dá 3 Poções P.
+4. **1ª batalha** (Praia): selvagens aparecem depois da cabana. Bento dá 3 dicas no começo da 1ª batalha (timeline, peso, Sintonia).
 5. **Marcador:** depois da 1ª vitória, Bento explica o marcador de ossos.
 6. **Vila Maré:** Rancho, Loja, 2 casas de domadores, NPCs e a missão da rede.
 7. **Cais:** Fiscal Brás (obrigatório). Vencer abre a estrada do norte.
-8. **Saída norte:** o recorrente oferece a luta (opcional).
 
 ## 6. Falas
 
@@ -51,12 +50,11 @@ Não há Guardião no Prólogo. O **Fiscal Brás**, capanga de Ramalho, antecipa
 - **Lia:** Um dia eu vou acender o farol velho da praia. Aí ninguém mais se perde no mar!
 - **Taro:** Taro. Levaram meus pais pro castelo. Eu vou buscar.
 - **Taro:** Se você for pro norte, eu vou junto. Se não for, vou sozinho mesmo.
-- **Bento:** Esqueleto sozinho não vai longe. Gente sozinha, menos ainda. Escolhe um.
-- **(escolha)** "Lia" / "Taro"
-  - **Lia escolhida → Lia:** Sério?! Eu vou iluminar o caminho, prometo!
-  - **Lia escolhida → Taro:** Tá. Eu vou na frente então. A gente se vê no caminho.
-  - **Taro escolhido → Taro:** ...Valeu. Não fica pra trás.
-  - **Taro escolhido → Lia:** Tudo bem! Eu vou procurar o farol. Se você se perder, olha pra luz!
+- **Bento:** Esqueleto sozinho não vai longe. Gente sozinha, menos ainda. Leva os dois, {player}.
+- **Lia:** Sério?! Eu vou iluminar o caminho, prometo!
+- **Taro:** ...Valeu. Não fica pra trás.
+- **Lia:** Eu ilumino, você corre, Taro. Combinado?
+- **Taro:** Tá. Mas eu vou na frente.
 - **Bento:** Toma três poções. Esqueleto também rala o joelho.
 - **Bento:** Na praia tem esqueleto selvagem. Encosta num, que ele vem brigar. Treina um pouco antes da vila.
 
@@ -116,20 +114,14 @@ Não há Guardião no Prólogo. O **Fiscal Brás**, capanga de Ramalho, antecipa
 - **Equipe:** Novelita (7) e Mariscote (7). **Recompensa:** 1 Reviver e 150 moedas.
 - **Depois:** "Volta pra comer bolo. Aniversário de esqueleto é toda semana aqui."
 
-### Recorrente (saída norte, opcional)
-- **Taro (se o parceiro é Lia):** Você demorou. Vamos ver se essa luz aguenta um soco. *(Remito 7)*
-- **Lia (se o parceiro é Taro):** Antes de ir: deixa eu ver se você me acha no escuro! *(Lumiça 7)*
-- **(escolha)** "Lutar" / "Agora não"
-- **Depois (vitória):** "A gente se vê no Bosque. Não se perde, hein!"
-- **Recompensa:** 100 moedas e +10% no marcador da espécie do recorrente.
+### Recorrente (legado)
+A luta opcional contra o recorrente na saída norte só aparece em saves antigos, de quando havia um parceiro só.
 
 ## 7. Escolhas e consequências
 
 | Escolha | Opções | Consequência |
 |---|---|---|
-| Parceiro | Lia / Taro | Parceiro fixo (não pode ser liberado). O outro vira o recorrente, e as falas mudam pelo jogo todo |
 | Missão da rede | Fazer / ignorar | 2 Poções P + 1 Antídoto |
-| Recorrente | Lutar / recusar | 100 moedas e marcador; a recusa não tem penalidade |
 
 ## 8. NPCs e motivo de existir
 | NPC | Função | Por que existe |

@@ -11,6 +11,8 @@ A vila **Raizal** vive de ervas e madeira. Por ordem do Guardião **Ramalho**, o
 No **Bosque Velho**, atrás da vila, o esqueleto único **Raizerno** dorme fundido ao tronco mais antigo. Um **brasão** está entalhado na casca: **uma coroa sobre uma onda**, o mesmo desenho do ingresso do museu. O jogo mostra o ingresso ao lado ("O desenho é igual ao do ingresso.").
 
 ## 3. Momento de Lia (e do recorrente)
+
+> **Atualização:** Lia e Taro estão os dois na equipe desde o Prólogo (decisão do Fernando). No Túnel toca a cena da Lia parceira; as cenas de recorrente abaixo só aparecem em saves antigos.
 - **Lia parceira:** no **Túnel das Raízes** (o atalho da rota), está escuro demais. Lia treme, mas acende a lamparina e diz que vai na frente. Primeiro passo do arco "medo → luz".
 - **Lia recorrente (parceiro Taro):** você a encontra **parada na boca do túnel**, com medo. Taro empurra: "Vai logo." Ela entra mesmo assim. Batalha opcional na saída do túnel.
 - **Taro recorrente (parceiro Lia):** espera na saída do túnel, impaciente; batalha opcional. "Ramalho sabe pra onde levaram os mais velhos. Eu vou perguntar do meu jeito."

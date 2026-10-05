@@ -266,7 +266,7 @@ R.d("registro", [say("DLG_O_REC_1"), say("DLG_O_REC_2"), say("DLG_O_REC_3"), say
                  lia("DLG_O_REC_L1"), lia("DLG_O_REC_L2"), taro("DLG_O_REC_T1"), taro("DLG_O_REC_T2"),
                  flag("pista_5"), act("give_item", item="registro_real", n=1)])
 R.d("registro_de_novo", [say("DLG_O_REC_AGAIN")])
-R.d("livro_farol", [say("DLG_O_BOOK_1"), lia("DLG_O_BOOK_L1"), lia("DLG_O_BOOK_L2"), taro("DLG_O_BOOK_T1"), flag("livro_farol_lido")])
+R.d("livro_farol", [say("DLG_O_BOOK_1"), lia("DLG_O_BOOK_L1"), lia("DLG_O_BOOK_L2"), taro("DLG_O_BOOK_T1") | {"if_not": "partner_lia"}, flag("livro_farol_lido")])
 R.d("lia_arquivo", [say("DLG_O_LIA_ARQ_1", "SPK_LIA"), say("DLG_O_LIA_ARQ_2", "SPK_LIA"), flag("lia_arquivo_visto"), act("hide_npc", id="lia_arquivo")])
 t("DLG_O_CRON_0", "Crônicas da Família Real, volume único. As páginas cheiram a poeira e a mar.",
   "Chronicles of the Royal Family, single volume. The pages smell of dust and sea.", "Crónicas de la Familia Real, volumen único. Las páginas huelen a polvo y a mar.")
@@ -370,8 +370,8 @@ rota = make_route("rota_4", "ossorio", "MAP_ROTA_4", LEG, ("brejo", 19, 1), ("os
                           {"id": "r4_campo_b", "table": "rota4_campo", "x": 30, "y": 18, "radius": 4, "count": 3},
                           {"id": "r4_aqueduto", "table": "rota4_aqueduto", "x": 19, "y": 25, "radius": 2, "count": 1},
                           {"id": "r4_norte", "table": "rota4_norte", "x": 10, "y": 6, "radius": 3, "count": 2}],
-                  extra_npcs=[{"id": "rival_taro_o", "x": 24, "y": 6, "facing": "down", "if": "partner_lia", "if_not": "rival_ossorio_done"},
-                              {"id": "rival_lia_o", "x": 24, "y": 6, "facing": "down", "if": "partner_taro", "if_not": "rival_ossorio_done"}],
+                  extra_npcs=[{"id": "rival_taro_o", "x": 24, "y": 6, "facing": "down", "if": "partner_lia", "if_none": ["partner_taro", "rival_ossorio_done"]},
+                              {"id": "rival_lia_o", "x": 24, "y": 6, "facing": "down", "if": "partner_taro", "if_none": ["partner_lia", "rival_ossorio_done"]}],
                   extra_props=[{"type": "banner_blue", "x": 18, "y": 36}, {"type": "banner_blue", "x": 21, "y": 36},
                                {"type": "banner_blue", "x": 18, "y": 13}, {"type": "banner_blue", "x": 21, "y": 13},
                                {"type": "broken_column", "x": 22, "y": 30}, {"type": "broken_column", "x": 17, "y": 20}],
@@ -420,7 +420,7 @@ arquivo = room("ossorio_arquivo", "ossorio", "MAP_ARQUIVO", "ossorio", (14, 27),
                 {"type": "lectern", "x": 6, "y": 5, "dialog": R.ref("registro_de_novo"), "if": "pista_5"},
                 {"type": "portrait", "x": 8, "y": 1, "dialog": R.ref("registro_de_novo")}, {"type": "candelabra", "x": 1, "y": 7},
                 {"type": "candelabra", "x": 10, "y": 7}],
-               [{"id": "lia_arquivo", "x": 4, "y": 4, "facing": "up", "if": "partner_taro", "if_not": "lia_arquivo_visto"}],
+               [{"id": "lia_arquivo", "x": 4, "y": 4, "facing": "up", "if": "partner_taro", "if_none": ["partner_lia", "lia_arquivo_visto"]}],
                floor="carpet")
 R.MAPS.update({
     "rota_4": rota, "ossorio": town, "quartel": lair, "ossorio_arquivo": arquivo,
@@ -459,7 +459,7 @@ R.DOC = {
                "Parceira: \"Então o Rei não é mau. Ele só tem medo do escuro. Igual eu tinha.\" Recorrente: ela está no Arquivo e promete acender o farol \"até pro Rei\".",
                "**Recorrente:** batalha opcional no norte da Rota 4 (Taro: \"vou passar por todos\"; Lia: \"uma batalha pra dar coragem\"). "
                "Depois, Taro deixa o jogador ir na frente \"só hoje\" — primeiro sinal de confiança.",
-               "Arco de Lia: medo → coragem → começa a ver o Rei como alguém com medo, e não como vilão."],
+               "Lia e Taro estão os dois na equipe (decisão do Fernando): tocam as falas de parceiro dos dois; as cenas de \"recorrente\" só aparecem em saves antigos, com um parceiro só.", "Arco de Lia: medo → coragem → começa a ver o Rei como alguém com medo, e não como vilão."],
     "guardian": {"name": "Comandante Caliço (irmão do Rei)", "kin": "irmão",
                  "personality": "orgulhoso, militar, honrado; fala em ordens (\"Atenção!\", \"Em formação!\")",
                  "motive": "**Honra:** \"A família não abandona a família.\" Jurou que o irmão nunca mais perderia ninguém.",

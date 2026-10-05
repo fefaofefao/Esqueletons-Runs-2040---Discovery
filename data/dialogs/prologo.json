@@ -106,26 +106,14 @@
    },
    {
     "say": "DLG_P_CHOOSE",
-    "speaker": "SPK_BENTO",
-    "choice": [
-     {
-      "text": "OPT_P_LIA",
-      "goto": "prologo/escolhe_lia"
-     },
-     {
-      "text": "OPT_P_TARO",
-      "goto": "prologo/escolhe_taro"
-     }
-    ]
-   }
-  ],
-  "escolhe_lia": [
+    "speaker": "SPK_BENTO"
+   },
    {
     "say": "DLG_P_LIA_YES",
     "speaker": "SPK_LIA"
    },
    {
-    "say": "DLG_P_TARO_BYE",
+    "say": "DLG_P_TARO_YES",
     "speaker": "SPK_TARO"
    },
    {
@@ -136,24 +124,19 @@
     "flag": "partner_lia"
    },
    {
-    "goto": "prologo/depois_escolha"
-   }
-  ],
-  "escolhe_taro": [
-   {
-    "say": "DLG_P_TARO_YES",
-    "speaker": "SPK_TARO"
-   },
-   {
-    "say": "DLG_P_LIA_BYE",
-    "speaker": "SPK_LIA"
-   },
-   {
     "action": "give_partner",
     "species": "grumete_1",
     "age": 5,
     "nickname": "Taro",
     "flag": "partner_taro"
+   },
+   {
+    "say": "DLG_P_DUO_LIA",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "say": "DLG_P_DUO_TARO",
+    "speaker": "SPK_TARO"
    },
    {
     "goto": "prologo/depois_escolha"

@@ -223,7 +223,8 @@
    "if_all": [
     "game_cleared",
     "partner_taro"
-   ]
+   ],
+   "if_not": "partner_lia"
   }
  ],
  "warps": [

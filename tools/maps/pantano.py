@@ -285,6 +285,8 @@ t("DLG_PA_MUSGA_GOSSIP2", "Os pais daquele baixinho do remo também. Sabia? Eu s
 t("DLG_PA_MUSGA_T1", "Castelo. Eu sabia.", "The castle. I knew it.", "El castillo. Lo sabía.")
 t("DLG_PA_MUSGA_T2", "...Eles tão inteiros. É isso que importa. Vamos.", "...They're in one piece. That's what matters. Let's go.",
   "...Están enteros. Eso es lo que importa. Vamos.")
+t("DLG_PA_MUSGA_LT", "Ouviu, Taro? Inteiros! A gente vai junto até o castelo.", "Hear that, Taro? In one piece! We'll go to the castle together.",
+  "¿Oíste, Taro? ¡Enteros! Vamos juntos hasta el castillo.")
 t("DLG_PA_MUSGA_L1", "Os pais do Taro! A gente precisa contar pra ele!", "Taro's parents! We have to tell him!", "¡Los padres de Taro! ¡Tenemos que contárselo!")
 t("DLG_PA_MUSGA_OFF", "Tá bom, tá bom. Desligo a névoa. Mas alguém vai ter que vir me visitar. Combinado?",
   "Fine, fine. I'll turn off the fog. But somebody has to come visit me. Deal?", "Está bien, está bien. Apago la niebla. Pero alguien tendrá que venir a visitarme. ¿Trato?")
@@ -297,7 +299,7 @@ MUSGA_TEAM = team([("lavadeira", 49), ("palafiteiro", 48), ("jardineiro_lirios",
 R.d("musga", [say("DLG_PA_MUSGA_1", "SPK_MUSGA"), say("DLG_PA_MUSGA_2", "SPK_MUSGA"), flag("pista_4"), say("DLG_PA_MUSGA_3", "SPK_MUSGA"),
               battle("BTL_TAMER_MUSGA", MUSGA_TEAM, 1300, "musga_beaten", kind="boss"),
               say("DLG_PA_MUSGA_WIN", "SPK_MUSGA"), say("DLG_PA_MUSGA_MOTIVE", "SPK_MUSGA"), say("DLG_PA_MUSGA_GOSSIP", "SPK_MUSGA"), say("DLG_PA_MUSGA_GOSSIP2", "SPK_MUSGA"),
-              taro("DLG_PA_MUSGA_T1"), taro("DLG_PA_MUSGA_T2"), lia("DLG_PA_MUSGA_L1"),
+              taro("DLG_PA_MUSGA_T1"), taro("DLG_PA_MUSGA_T2"), lia("DLG_PA_MUSGA_L1") | {"if_not": "partner_taro"}, say("DLG_PA_MUSGA_LT", "SPK_LIA") | {"if_all": ["partner_lia", "partner_taro"]},
               say("DLG_PA_MUSGA_OFF", "SPK_MUSGA"), {"say": "DLG_PA_MUSGA_AUNT", "speaker": "SPK_MUSGA", "if_any": ["minas_quebrou", "minas_negociou"]},
               act("refresh_map")])
 R.d("musga_depois", [say("DLG_PA_MUSGA_AFTER", "SPK_MUSGA")])
@@ -350,7 +352,7 @@ town = make_town("brejo", "pantano", "MAP_BREJO", dict(LEG, s="dock"),
                  houses=["stilt_house_ranch", "stilt_house_shop", "stilt_house", "stilt_house", "stilt_house"],
                  npcs=[{"id": "girino", "x": 16, "y": 16, "facing": "right"}, {"id": "sape", "x": 24, "y": 13, "facing": "down"},
                        {"id": "lodo", "x": 22, "y": 18, "facing": "left"}, {"id": "pena", "x": 17, "y": 22, "facing": "down"},
-                       {"id": "taro_brejo", "x": 21, "y": 3, "facing": "down", "if_all": ["partner_lia", "musga_beaten"], "if_not": "taro_brejo_visto"}],
+                       {"id": "taro_brejo", "x": 21, "y": 3, "facing": "down", "if_all": ["partner_lia", "musga_beaten"], "if_none": ["partner_taro", "taro_brejo_visto"]}],
                  props=[{"type": "sign", "x": 18, "y": 28, "dialog": R.ref("placa_brejo")}, {"type": "sign", "x": 3, "y": 14, "dialog": R.ref("placa_caldeirao")},
                         {"type": "swamp_lantern", "x": 13, "y": 13}, {"type": "swamp_lantern", "x": 26, "y": 13}, {"type": "well", "x": 22, "y": 15},
                         {"type": "boat", "x": 5, "y": 27}, {"type": "lilypad", "x": 34, "y": 26}],
@@ -419,7 +421,7 @@ R.DOC = {
     "moment": ["**Taro** descobre pela fofoca da Musga que os levados (inclusive os pais dele) estão **no castelo**. Parceiro: \"Castelo. Eu sabia... Eles tão inteiros.\" "
                "Recorrente (parceira Lia): Lia quer contar a ele; Taro aparece na saída norte, já sabendo, e aceita seguir junto (\"Mas eu chego primeiro\").",
                "**Lia** (parceira) vê os vaga-lumes da Rota 3: \"acendem um pro outro achar o caminho\", o mesmo desejo do farol.",
-               "Arco de Taro: raiva → entendimento começa (os pais estão vivos, servindo, como a família do Rei)."],
+               "Lia e Taro estão os dois na equipe (decisão do Fernando): tocam as falas de parceiro dos dois; as cenas de \"recorrente\" só aparecem em saves antigos, com um parceiro só.", "Arco de Taro: raiva → entendimento começa (os pais estão vivos, servindo, como a família do Rei)."],
     "guardian": {"name": "Musga (sobrinha do Rei)", "kin": "sobrinha",
                  "personality": "irônica, fofoqueira, solitária; chama todo mundo de \"querido\" e solta fofocas (o tique dela)",
                  "motive": "**Medo** de ser esquecida de novo: da primeira vez morreu sozinha numa torre. \"Quem precisa de mim não me esquece.\"",

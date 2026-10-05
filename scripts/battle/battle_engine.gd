@@ -52,6 +52,12 @@ func setup(player_team: Array, enemy_team: Array, battle_kind: String = "wild", 
 		for m in teams[side]:
 			m.reset_battle_state()
 			m.side = side
+			if side == 1:
+				# Guardiões e chefes vêm mais fortes (a equipe tem os dois iniciais, +5%)
+				var ratio: float = m.hp_ratio()
+				var eb: Dictionary = rules.get("enemy_bonus", {})
+				m.battle_bonus = 0.0 if m.species_id in eb.get("exempt", []) else float(eb.get(kind, 0.0))
+				m.hp = maxi(1, int(round(m.max_hp() * ratio))) if m.hp > 0 else 0
 		var slot := 0
 		for i in teams[side].size():
 			if slot >= per:

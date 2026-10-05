@@ -67,8 +67,8 @@ npcs = [
     {"id": "jurema", "x": 31, "y": 13, "facing": "left"},
     {"id": "bras", "x": 19, "y": 4, "facing": "down", "if_not": "bras_beaten"},
     {"id": "bras_depois", "x": 22, "y": 3, "facing": "left", "if": "bras_beaten"},
-    {"id": "rival_lia", "x": 20, "y": 2, "facing": "left", "if": "partner_taro", "if_not": "rival_vila_done"},
-    {"id": "rival_taro", "x": 20, "y": 2, "facing": "left", "if": "partner_lia", "if_not": "rival_vila_done"},
+    {"id": "rival_lia", "x": 20, "y": 2, "facing": "left", "if": "partner_taro", "if_none": ["partner_lia", "rival_vila_done"]},
+    {"id": "rival_taro", "x": 20, "y": 2, "facing": "left", "if": "partner_lia", "if_none": ["partner_taro", "rival_vila_done"]},
 ]
 warps = [
     {"x": 12, "y": 10, "to": "vila_rancho", "tx": 6, "ty": 8, "facing": "up", "sfx": "door"},

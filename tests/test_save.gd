@@ -59,3 +59,14 @@ func test_play_time_by_region() -> void:
 	var t: Dictionary = SaveGame.region_times()["praia"]
 	check(is_equal_approx(float(t.game), 1.0), "tempo de jogo (equivalente a 1x) conta o delta escalado")
 	check(is_equal_approx(float(t.real), 0.5), "tempo real desconta o 2x")
+
+
+func test_migration_single_partner_to_list() -> void:
+	var old := {"version": 1, "player": {"name": "Rui"}, "partner_uid": 7,
+		"party": [{"uid": 7, "species": "faroleira_2", "nickname": "Lia", "level": 30}, {"uid": 9, "species": "lenhador_1", "level": 20}]}
+	var d := SaveGame.migrate(old)
+	check_eq(int(d.version), SaveGame.VERSION, "migra até a versão atual")
+	check(not d.has("partner_uid"), "parceiro único sai")
+	check_eq(d.partner_uids, [7], "vira lista de parceiros")
+	check(bool(d.party[0].get("starter", false)), "parceiro antigo ganha o bônus de inicial")
+	check(not bool(d.party[1].get("starter", false)), "os outros não")

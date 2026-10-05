@@ -715,7 +715,16 @@
    {
     "say": "DLG_PA_MUSGA_L1",
     "speaker": "SPK_LIA",
-    "if": "partner_lia"
+    "if": "partner_lia",
+    "if_not": "partner_taro"
+   },
+   {
+    "say": "DLG_PA_MUSGA_LT",
+    "speaker": "SPK_LIA",
+    "if_all": [
+     "partner_lia",
+     "partner_taro"
+    ]
    },
    {
     "say": "DLG_PA_MUSGA_OFF",

@@ -11,7 +11,8 @@ Faz um ano que é inverno em **Geada**. A Guardiã **Alva**, filha do Rei, conge
 No **Mosteiro do Eco**, o monge-esqueleto **Nevasco** explica que o eco da coroa **atravessa o tempo**: quem a ouviu cantar foi chamado. O protagonista lembra do vidro do museu vibrando: alguém o chamou de propósito. (Para quê? A resposta está no deserto.)
 
 ## 3. Momento de Lia e Taro
-- **Reencontro com o recorrente** (batalha opcional; a cena acontece mesmo sem lutar):
+- **Jardim de Gelo (dupla):** diante das estátuas, Taro admite: "Eu tenho medo... de meus pais me olharem igual essas estátuas." Lia: "Quem faz falta não vira estátua." Taro: "Falei em voz alta. Pronto." Depois Lia vai na frente: "Segue a minha luz!" (o medo dela virou coragem).
+- **Saves antigos (recorrente):** reencontro com batalha opcional na Rota 5:
 - Taro (parceira Lia) chega brigando e depois admite: "Tenho medo de chegar no castelo e meus pais não lembrarem de mim." Lia: "Ninguém esquece quem faz falta."
 - Lia (parceiro Taro) guia pela nevasca e ensina: "Quando a neve fecha tudo, olha pra luz. É só seguir a luz." Depois vai acender o farol.
 - Parceira Lia, no Jardim de Gelo: "Segue a minha luz, eu vou na frente!" (o medo virou coragem).
@@ -247,8 +248,11 @@ No **Mosteiro do Eco**, o monge-esqueleto **Nevasco** explica que o eco da coroa
 - *[batalha wild: Nevasco 64]*
 
 ### `picos/chegada_jardim`
-- **SPK_LIA:** Tá tudo branco. Segue a minha luz, eu vou na frente! *(if partner_lia)*
 - **SPK_TARO:** Estátuas de gelo de todo mundo da cidade. Que coisa triste. *(if partner_taro)*
+- **SPK_TARO:** Eu tenho medo, sabia? De chegar no castelo e meus pais me olharem igual essas estátuas. *(if_all partner_lia, partner_taro)*
+- **SPK_LIA:** Eles vão lembrar, Taro. Quem faz falta não vira estátua. *(if_all partner_lia, partner_taro)*
+- **SPK_TARO:** ...Falei em voz alta. Pronto. Agora anda, antes que eu me arrependa. *(if_all partner_lia, partner_taro)*
+- **SPK_LIA:** Tá tudo branco. Segue a minha luz, eu vou na frente! *(if partner_lia)*
 - *[flag jardim_visto = True]*
 
 ### `picos/pingente`
@@ -288,4 +292,4 @@ No **Mosteiro do Eco**, o monge-esqueleto **Nevasco** explica que o eco da coroa
 - **Alva:** Diz pra minha mãe que eu tô bem. Mais ou menos bem.
 
 ## 10. Contagem
-Cerca de **893 palavras** de texto de jogo em PT-BR nesta região.
+Cerca de **931 palavras** de texto de jogo em PT-BR nesta região.

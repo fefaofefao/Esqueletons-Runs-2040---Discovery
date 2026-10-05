@@ -86,7 +86,10 @@
    "y": 11,
    "facing": "up",
    "if": "partner_taro",
-   "if_not": "tunel_visto"
+   "if_none": [
+    "partner_lia",
+    "tunel_visto"
+   ]
   }
  ],
  "warps": [
@@ -145,7 +148,10 @@
   },
   {
    "if": "partner_taro",
-   "if_not": "tunel_visto",
+   "if_none": [
+    "partner_lia",
+    "tunel_visto"
+   ],
    "dialog": "bosque/tunel_taro"
   }
  ]

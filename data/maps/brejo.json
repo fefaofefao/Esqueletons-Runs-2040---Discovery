@@ -218,7 +218,10 @@
     "partner_lia",
     "musga_beaten"
    ],
-   "if_not": "taro_brejo_visto"
+   "if_none": [
+    "partner_taro",
+    "taro_brejo_visto"
+   ]
   }
  ],
  "warps": [

@@ -14,6 +14,7 @@ O Rei confirma tudo: o herdeiro foi chamado de 2040 para colocar a coroa e prend
 - **Portão:** os pais do Taro guardam a porta e não o reconhecem. Parceiro: "Então eu vou quebrar essa coroa." Recorrente: Taro chegou primeiro e espera ali.
 - **Sala do trono:** o parceiro acende as velas (Lia com coragem; Taro com raiva) para o Rei ver o que perdeu.
 - **Final:** quando a coroa se quebra, os pais reconhecem o Taro; ele **perdoa** (os pais e o Rei). A Lia acende o farol da Praia nos dois finais.
+- Lia e Taro estão os dois na equipe (decisão do Fernando): tocam as falas de parceiro dos dois; as cenas de "recorrente" só aparecem em saves antigos, com um parceiro só.
 - Arcos fechados: Lia medo → coragem → **luz para os outros**; Taro raiva → entendimento → **perdão**.
 
 ## 4. Guardião: Provador Real Degustor e o Rei Ossárion
@@ -65,8 +66,8 @@ O Rei confirma tudo: o herdeiro foi chamado de 2040 para colocar a coroa e prend
 - *(narração)* Os dois guardas olham através dele, como se ele fosse vento. *(if partner_taro)*
 - **SPK_TARO:** ...Eles não lembram. A coroa apagou eles. *(if partner_taro)*
 - **SPK_TARO:** Então eu vou quebrar essa coroa. *(if partner_taro)*
-- **SPK_TARO:** Cheguei primeiro. Como eu disse. *(if partner_lia)*
-- **SPK_TARO:** Aqueles dois no portão... são meus pais. Eles não me reconhecem. *(if partner_lia)*
+- **SPK_TARO:** Cheguei primeiro. Como eu disse. *(if partner_lia; if_not partner_taro)*
+- **SPK_TARO:** Aqueles dois no portão... são meus pais. Eles não me reconhecem. *(if partner_lia; if_not partner_taro)*
 - **SPK_LIA:** Taro... a gente vai consertar isso. Juntos. *(if partner_lia)*
 - **SPK_TARO:** ...Juntos. Tá. *(if partner_lia)*
 - *[flag portao_visto = True]*
@@ -140,8 +141,9 @@ O Rei confirma tudo: o herdeiro foi chamado de 2040 para colocar a coroa e prend
 - **SPK_LIA:** Tá escuro aqui. Deixa eu acender. *(if partner_lia)*
 - *(narração)* Lia acende as velas, uma por uma. A sala inteira aparece: retratos, brinquedos, uma mesa posta para sete. *(if partner_lia)*
 - **SPK_LIA:** Pronto. Agora o senhor consegue ver o que perdeu? *(if partner_lia)*
-- *(narração)* Taro acende as velas com raiva, uma por uma. A sala inteira aparece: retratos, brinquedos, uma mesa posta para sete. *(if partner_taro)*
-- **SPK_TARO:** Pronto. Agora olha pra gente. *(if partner_taro)*
+- *(narração)* Taro acende as velas com raiva, uma por uma. A sala inteira aparece: retratos, brinquedos, uma mesa posta para sete. *(if partner_taro; if_not partner_lia)*
+- **SPK_TARO:** Pronto. Agora olha pra gente. *(if partner_taro; if_not partner_lia)*
+- **SPK_TARO:** E olha pra gente também. A gente não é quadro na parede. *(if_all partner_lia, partner_taro)*
 - *[flag trono_iluminado = True]*
 - **Rei Ossárion:** Então você veio. O último do meu sangue, de mil anos depois.
 - **Rei Ossárion:** Eu sou Ossárion. Perdi minha família uma vez. Não vou perder de novo.
@@ -160,7 +162,7 @@ O Rei confirma tudo: o herdeiro foi chamado de 2040 para colocar a coroa e prend
 - *(narração)* Você estende a mão para a coroa...
 - **SPK_LIA:** Não! Se você colocar, nunca mais sai daqui! *(if partner_lia)*
 - **SPK_TARO:** Eu avisei. Eu mesmo tiro ela da sua cabeça. *(if partner_taro)*
-- *(narração)* Você recua a mão. Seu parceiro não solta a sua.
+- *(narração)* Você recua a mão. Seus parceiros não soltam a sua.
 - *[vai para `castelo/recusar`]*
 
 ### `castelo/recusar`
@@ -232,7 +234,7 @@ O Rei confirma tudo: o herdeiro foi chamado de 2040 para colocar a coroa e prend
 - **SPK_TARO:** Tá perdoado. Mas vocês me devem uns cem bolos de aniversário.
 - **SPK_LIA:** O Taro achou eles! Agora só falta o meu farol. *(if partner_lia)*
 - **SPK_LIA:** Vamos pra casa? Eu quero acender o farol com você do lado. *(if partner_lia)*
-- **SPK_TARO:** A Lia prometeu acender o farol. Aposto que já tá lá em cima, toda orgulhosa. *(if partner_taro)*
+- **SPK_TARO:** A Lia prometeu acender o farol. Aposto que já tá lá em cima, toda orgulhosa. *(if partner_taro; if_not partner_lia)*
 - *[ação fade: {"out": true}]*
 - *[ação wait: {"s": 0.6}]*
 - *[ação warp: {"map": "museu_2040", "x": 7, "y": 6, "facing": "up", "hide_player": true}]*
@@ -252,7 +254,7 @@ O Rei confirma tudo: o herdeiro foi chamado de 2040 para colocar a coroa e prend
 - *(narração)* Praia do Despertar. O farol está aceso, girando devagar sobre o mar.
 - **SPK_BENTO:** Olha só quem voltou! E olha o farol: aceso, depois de mil anos.
 - **SPK_LIA:** Eu disse que ia acender! Agora ninguém se perde no mar. *(if partner_lia)*
-- **SPK_BENTO:** Foi a pequena da lamparina. Subiu lá ontem à noite, toda orgulhosa. *(if partner_taro)*
+- **SPK_BENTO:** Foi a pequena da lamparina. Subiu lá ontem à noite, toda orgulhosa. *(if partner_taro; if_not partner_lia)*
 - **SPK_TARO:** Ela conseguiu. ...Não conta pra ela que eu fiquei feliz. *(if partner_taro)*
 - **Rei Ossárion:** Minha Duna ergueu este farol. Ela ia gostar de vê-lo aceso. *(if final_a)*
 - *(narração)* O Rei olha para o farol em silêncio, por muito tempo. *(if final_b)*
@@ -317,4 +319,4 @@ O Rei confirma tudo: o herdeiro foi chamado de 2040 para colocar a coroa e prend
 - *(narração)* O eco sorri e se desfaz no vento... até a próxima.
 
 ## 10. Contagem
-Cerca de **1188 palavras** de texto de jogo em PT-BR nesta região.
+Cerca de **1200 palavras** de texto de jogo em PT-BR nesta região.

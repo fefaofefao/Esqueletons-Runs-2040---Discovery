@@ -39,7 +39,7 @@
     6
    ],
    "team": [
-    "@starter",
+    "@starters",
     "rendeira"
    ],
    "tamer_age": 8,
@@ -68,10 +68,9 @@
     15
    ],
    "team": [
-    "@starter",
+    "@starters",
     "rendeira",
-    "lenhador",
-    "herborista"
+    "lenhador"
    ],
    "tamer_age": 17,
    "guardian": [
@@ -112,8 +111,7 @@
     27
    ],
    "team": [
-    "@starter",
-    "lenhador",
+    "@starters",
     "herborista",
     "mineiro"
    ],
@@ -160,9 +158,8 @@
     39
    ],
    "team": [
-    "@starter",
+    "@starters",
     "mineiro",
-    "herborista",
     "palafiteiro"
    ],
    "tamer_age": 41,
@@ -208,8 +205,7 @@
     51
    ],
    "team": [
-    "@starter",
-    "mineiro",
+    "@starters",
     "lavadeira",
     "sentinela"
    ],
@@ -256,9 +252,8 @@
     63
    ],
    "team": [
-    "@starter",
+    "@starters",
     "sentinela",
-    "lavadeira",
     "carregador"
    ],
    "tamer_age": 65,
@@ -304,9 +299,8 @@
     73
    ],
    "team": [
-    "@starter",
+    "@starters",
     "carregador",
-    "lavadeira",
     "domador_escorpioes"
    ],
    "tamer_age": 75,
@@ -351,8 +345,7 @@
     84
    ],
    "team": [
-    "@starter",
-    "carregador",
+    "@starters",
     "domador_escorpioes",
     "tamborileiro"
    ],

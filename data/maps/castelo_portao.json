@@ -118,7 +118,10 @@
    "y": 12,
    "facing": "left",
    "if": "partner_lia",
-   "if_not": "game_cleared"
+   "if_none": [
+    "partner_taro",
+    "game_cleared"
+   ]
   },
   {
    "id": "calico_aliado",

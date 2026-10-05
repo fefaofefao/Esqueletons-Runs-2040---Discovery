@@ -17,6 +17,10 @@ var hp := 1
 var moves: Array = []  # [{"id": String, "pp": int}]
 var poison_turns := 0
 var golden := false
+## Lia e Taro (os dois iniciais): +5% em todos os atributos
+var starter := false
+## Bônus da batalha (Guardiões e chefes; battle.json "enemy_bonus"). Não vai para o save.
+var battle_bonus := 0.0
 ## Só durante a batalha
 var stages := {}
 var side := 0
@@ -50,6 +54,7 @@ static func from_dict(d: Dictionary) -> Monster:
 	m.level = int(d.get("level", 1))
 	m.xp = int(d.get("xp", xp_for_level(m.level)))
 	m.golden = bool(d.get("golden", false))
+	m.starter = bool(d.get("starter", false))
 	m.moves = []
 	for mv in d.get("moves", []):
 		m.moves.append({"id": str(mv["id"]), "pp": int(mv.get("pp", 0))})
@@ -60,7 +65,7 @@ static func from_dict(d: Dictionary) -> Monster:
 
 func to_dict() -> Dictionary:
 	return {"uid": uid, "species": species_id, "nickname": nickname, "level": level, "xp": xp,
-		"hp": hp, "moves": moves.duplicate(true), "poison_turns": poison_turns, "golden": golden}
+		"hp": hp, "moves": moves.duplicate(true), "poison_turns": poison_turns, "golden": golden, "starter": starter}
 
 
 func info() -> Dictionary:
@@ -119,7 +124,7 @@ func base_stat(stat: String) -> int:
 	return int(base.get(stat, 50))
 
 
-## Atributo calculado pelo nível (sem estágios). Golden: +10% em todos.
+## Atributo calculado pelo nível (sem estágios). Golden: +10% em todos; iniciais: +5%.
 func stat(s: String) -> int:
 	var rules: Dictionary = Data.battle_rules().get("stat_formula", {})
 	var b := base_stat(s)
@@ -128,8 +133,13 @@ func stat(s: String) -> int:
 		v = int(2 * b * level / 100.0) + level * int(rules.get("hp_add_level", 1)) + int(rules.get("hp_add", 10))
 	else:
 		v = int(2 * b * level / 100.0) + int(rules.get("stat_add", 5))
+	var bonus := battle_bonus
 	if golden:
-		v = int(round(v * (1.0 + float(Data.battle_rules().get("golden", {}).get("stat_bonus", 0.1)))))
+		bonus += float(Data.battle_rules().get("golden", {}).get("stat_bonus", 0.1))
+	if starter:
+		bonus += float(Data.battle_rules().get("starter", {}).get("stat_bonus", 0.05))
+	if bonus > 0.0:
+		v = int(round(v * (1.0 + bonus)))
 	return v
 
 

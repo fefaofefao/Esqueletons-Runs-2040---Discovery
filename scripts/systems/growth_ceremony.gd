@@ -141,7 +141,7 @@ func _play() -> void:
 	await _say(tr("GROW_DONE").format({"name": _base_name(result.get("from", "")), "species": species_name}))
 	# o parceiro (Lia ou Taro) comenta o próprio crescimento: marco do arco dele
 	var pk := "GROW_PARTNER_" + str(result.get("to", "")).to_upper()
-	if str(monster.uid) == str(SaveGame.data.get("partner_uid", "")) and tr(pk) != pk:
+	if SaveGame.is_partner(monster.uid) and tr(pk) != pk:
 		await _say(tr(pk))
 	Ossuary.mark_seen(monster)
 	Ossuary.entry(monster.species_id)["recruited"] = true

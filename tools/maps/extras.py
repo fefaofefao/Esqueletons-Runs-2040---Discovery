@@ -189,9 +189,9 @@ R.d("taro_vila", [say("DLG_X_TARO_VILA", "SPK_TARO")])
 R.NPCS["lia_farol"] = skel("skel_faroleira_3", "SPK_LIA", [{"dialog": ref("lia_farol")}])
 R.NPCS["pais_vila"] = skel("skel_grumete_3", "SPK_MAE_TARO", [{"dialog": ref("pais_vila")}])
 R.NPCS["taro_vila"] = skel("skel_grumete_3", "SPK_TARO", [{"dialog": ref("taro_vila")}])
-MAP_NPCS["praia_despertar"] = [{"id": "lia_farol", "x": 8, "y": 17, "facing": "down", "if_all": ["game_cleared", "partner_taro"]}]
+MAP_NPCS["praia_despertar"] = [{"id": "lia_farol", "x": 8, "y": 17, "facing": "down", "if_all": ["game_cleared", "partner_taro"], "if_not": "partner_lia"}]
 MAP_NPCS["vila_mare"] = [{"id": "pais_vila", "x": 23, "y": 15, "facing": "down", "if": "game_cleared"},
-                         {"id": "taro_vila", "x": 24, "y": 15, "facing": "down", "if_all": ["game_cleared", "partner_lia"]}]
+                         {"id": "taro_vila", "x": 24, "y": 15, "facing": "down", "if_all": ["game_cleared", "partner_lia"], "if_not": "partner_taro"}]
 
 # ------------------------------------------------------------------ células livres para os NPCs e objetos novos
 _TS = json.loads((ROOT / "data/tilesets/overworld.json").read_text())["terrains"]

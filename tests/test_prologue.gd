@@ -34,29 +34,50 @@ func _play(ref: String, choices: Array = []) -> void:
 	check(done[0], "roteiro %s termina" % ref)
 
 
-func test_partner_choice_lia() -> void:
+func test_both_starters_join() -> void:
 	SaveGame.start_new("Téo")
 	await _play("prologo/despertar")
 	check(SaveGame.get_flag("intro_done"), "despertar marca intro_done")
 	check_eq(int(SaveGame.data.get("bag", {}).get("ingresso", 0)), 1, "ganha o Ingresso Amassado")
 	await _play("prologo/bento_primeira", [1])
 	check(SaveGame.get_flag("bento_met"), "conhece o Bento")
-	await _play("prologo/escolha", [0])
+	await _play("prologo/escolha")
 	var party: Array = SaveGame.data.get("party", [])
-	check_eq(party.size(), 1, "um parceiro")
+	check_eq(party.size(), 2, "os dois iniciais entram na equipe")
 	check_eq(str(party[0].species), "faroleira_1", "Lia é Faroleira bebê")
 	check_eq(str(party[0].nickname), "Lia", "apelido Lia")
+	check_eq(str(party[1].species), "grumete_1", "Taro é Grumete bebê")
+	check_eq(str(party[1].nickname), "Taro", "apelido Taro")
 	check_eq(int(party[0].level), 5, "5 anos")
-	check(SaveGame.get_flag("partner_lia") and SaveGame.get_flag("has_partner"), "flags do parceiro")
+	check(bool(party[0].get("starter", false)) and bool(party[1].get("starter", false)), "marcados como iniciais")
+	check(SaveGame.get_flag("partner_lia") and SaveGame.get_flag("partner_taro") and SaveGame.get_flag("has_partner"), "flags dos parceiros")
+	check(SaveGame.is_partner(int(party[0].uid)) and SaveGame.is_partner(int(party[1].uid)), "os dois contam como parceiros")
 	check(SaveGame.get_flag("npc_gone_lia_cabana") and SaveGame.get_flag("npc_gone_taro_cabana"), "os dois saem da cabana")
 	check_eq(int(SaveGame.data.bag.get("pocao_p", 0)), 3, "3 Poções P do Bento")
 
 
-func test_partner_choice_taro() -> void:
+func test_starter_bonus() -> void:
+	var a := Monster.create("faroleira_1", 20)
+	var b := Monster.create("faroleira_1", 20)
+	b.starter = true
+	var bonus := float(Data.battle_rules().get("starter", {}).get("stat_bonus", 0.0))
+	check_eq(bonus, 0.05, "bônus de inicial em battle.json")
+	for s in Monster.STATS:
+		check_eq(b.stat(s), int(round(a.stat(s) * 1.05)), "inicial +5%% em %s" % s)
+	var c := Monster.from_dict(b.to_dict())
+	check(c.starter, "bônus de inicial sobrevive ao save")
+
+
+func test_legacy_rival_hidden_with_both() -> void:
+	# Com os dois na equipe, as aparições do "recorrente" (versão antiga) somem.
 	SaveGame.start_new("Téo")
-	await _play("prologo/escolha", [1])
-	check_eq(str(SaveGame.data.party[0].species), "grumete_1", "Taro é Grumete bebê")
-	check(SaveGame.get_flag("partner_taro"), "flag partner_taro")
+	for f in ["partner_lia", "partner_taro"]:
+		SaveGame.set_flag(f)
+	for m in ["vila_mare", "rota_1", "rota_4", "rota_5", "tunel_raizes", "mina_funda", "ossorio_arquivo", "brejo", "castelo_portao"]:
+		for n in Data.map(m).get("npcs", []):
+			var id := str(n.get("id", ""))
+			if id.begins_with("rival_") or id in ["lia_tunel", "taro_mina", "lia_arquivo", "taro_brejo", "taro_portao"]:
+				check(not MapView.condition_ok(n), "%s some com os dois iniciais" % id)
 
 
 func test_jurema_quest() -> void:

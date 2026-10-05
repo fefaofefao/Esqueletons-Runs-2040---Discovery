@@ -406,11 +406,15 @@ func _bosque_shots() -> void:
 	Game.start_new_game("Téo")
 	await _wait(1.0)
 	await _advance()
-	for f in ["intro_done", "bento_met", "has_partner", "partner_lia", "tut_battle", "tut_marker", "bras_beaten"]:
+	for f in ["intro_done", "bento_met", "has_partner", "partner_lia", "partner_taro", "tut_battle", "tut_marker", "bras_beaten"]:
 		SaveGame.set_flag(f)
 	var lia := Monster.create("faroleira_2", 20)
 	lia.nickname = "Lia"
-	SaveGame.data["party"] = [lia.to_dict(), Monster.create("lenhador_2", 20).to_dict(), Monster.create("rendeira_2", 19).to_dict()]
+	lia.starter = true
+	var taro := Monster.create("grumete_2", 20)
+	taro.nickname = "Taro"
+	taro.starter = true
+	SaveGame.data["party"] = [lia.to_dict(), taro.to_dict(), Monster.create("lenhador_2", 20).to_dict(), Monster.create("rendeira_2", 19).to_dict()]
 	await _goto("rota_1", Vector2i(19, 43), "up")
 	await _wait(1.0)
 	await _shot("b1_rota_bifurcacao")
@@ -459,6 +463,7 @@ func _region_shots(rid: String) -> void:
 		var m := Monster.create(str(e[0]), int(e[1]))
 		if e.size() > 2:
 			m.nickname = str(e[2])
+			m.starter = m.nickname in ["Lia", "Taro"]
 		party.append(m.to_dict())
 	if not party.is_empty():
 		SaveGame.data["party"] = party
@@ -496,7 +501,7 @@ func _store_shots() -> void:
 	Game.start_new_game("Téo")
 	await _wait(1.0)
 	await _advance()
-	for f in ["intro_done", "bento_met", "has_partner", "partner_lia", "tut_battle", "tut_marker", "bras_beaten", "ramalho_beaten",
+	for f in ["intro_done", "bento_met", "has_partner", "partner_lia", "partner_taro", "tut_battle", "tut_marker", "bras_beaten", "ramalho_beaten",
 			"fornalha_beaten", "musga_beaten", "calico_beaten", "x_vila_mare_visto", "ossorio_visto", "rota4_vista", "portao_visto"]:
 		SaveGame.set_flag(f)
 	var lia := Monster.create("faroleira_3", 56)

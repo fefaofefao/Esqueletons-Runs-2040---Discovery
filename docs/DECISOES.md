@@ -189,3 +189,12 @@ Registro das escolhas feitas sem consulta (AGENTS.md, seção A). Cada item diz 
 
 ## Correção — toque duplo no celular
 - **Um toque, uma ação.** O Android emula um clique de mouse para cada toque; os botões virtuais ficam sobre a caixa de diálogo e os menus. Os controles de toque (que recebem a entrada antes da interface) descartam o clique emulado quando ele cai num botão virtual. Além disso, o A do mapa ignora toques nos 300 ms depois de fechar qualquer tela sobreposta, para nenhuma conversa reabrir sozinha.
+
+## Os dois iniciais na equipe (decisão do Fernando)
+
+- **Problema:** começar com um esqueleto só deixava o Prólogo difícil demais nas batalhas 2×2.
+- **Decisão:** Bento entrega **Lia e Taro juntos**; a escolha do Prólogo deixou de existir (o jogo continua com 4 escolhas relevantes: Minas, Pântano, Ossório e Picos). Os dois são parceiros fixos, marcados como `starter` no save, com **+5% em todos os atributos** (`battle.json → starter.stat_bonus`, somado ao +10% do Golden quando houver).
+- **Falas:** como as duas flags (`partner_lia` e `partner_taro`) ficam ligadas, as falas de parceiro dos dois tocam em todas as cenas. Revisamos as cenas em que um falava do outro como ausente (portão e trono do Castelo, epílogo, livro do farol em Ossório, revelação da Musga) e criamos 4 falas novas para a versão em dupla.
+- **Recorrente:** as aparições do "recorrente" (lutas opcionais na Vila, no Bosque, em Ossório e nos Picos; Lia no túnel e no arquivo; Taro na mina, no brejo e no portão; pós-jogo) só aparecem em saves antigos com um parceiro só (`if_none: [flag do próprio]`). Não somem do código para que esses saves continuem coerentes.
+- **Save v2:** `partner_uid` virou a lista `partner_uids`; a migração marca o parceiro antigo como inicial.
+- **Simulador:** a equipe típica passa a ser Lia + Taro + 2 recrutas da região (`balance.json → team` com `@starters`).

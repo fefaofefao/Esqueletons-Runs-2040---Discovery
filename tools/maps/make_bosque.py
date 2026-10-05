@@ -83,8 +83,8 @@ npc1 = [
     {"id": "rufo", "x": 6, "y": 30, "facing": "left"},
     {"id": "iris", "x": 3, "y": 20, "facing": "right"},
     {"id": "cipo", "x": 12, "y": 9, "facing": "down"},
-    {"id": "rival_lia_b", "x": 26, "y": 13, "facing": "left", "if": "partner_taro", "if_not": "rival_bosque_done"},
-    {"id": "rival_taro_b", "x": 26, "y": 13, "facing": "left", "if": "partner_lia", "if_not": "rival_bosque_done"},
+    {"id": "rival_lia_b", "x": 26, "y": 13, "facing": "left", "if": "partner_taro", "if_none": ["partner_lia", "rival_bosque_done"]},
+    {"id": "rival_taro_b", "x": 26, "y": 13, "facing": "left", "if": "partner_lia", "if_none": ["partner_taro", "rival_bosque_done"]},
 ]
 rota_1 = {"id": "rota_1", "region": "bosque", "name_key": "MAP_ROTA_1", "tileset": "overworld", "legend": LEG_OUT,
           "ground": r1.rows(), "spawn": {"x": 19, "y": 47, "facing": "up"}, "props": p1, "npcs": npc1,
@@ -110,14 +110,14 @@ tu.fill(10, 8, 14, 11, "p")  # salão do selvagem forte
 tunel = {"id": "tunel_raizes", "region": "bosque", "name_key": "MAP_TUNEL", "tileset": "overworld", "legend": LEG_OUT,
          "ground": tu.rows(), "tint": [0.42, 0.42, 0.58], "spawn": {"x": 3, "y": 12, "facing": "up"},
          "props": [{"type": "glow_shroom", "x": x, "y": y} for (x, y) in [(5, 9), (9, 10), (15, 9), (20, 7), (22, 4), (26, 5), (28, 2), (12, 11)]],
-         "npcs": [{"id": "lia_tunel", "x": 4, "y": 11, "facing": "up", "if": "partner_taro", "if_not": "tunel_visto"}],
+         "npcs": [{"id": "lia_tunel", "x": 4, "y": 11, "facing": "up", "if": "partner_taro", "if_none": ["partner_lia", "tunel_visto"]}],
          "warps": [{"x": 3, "y": 13, "to": "rota_1", "tx": 24, "ty": 38, "facing": "down", "sfx": "door"},
                    {"x": 4, "y": 13, "to": "rota_1", "tx": 24, "ty": 38, "facing": "down", "sfx": "door"},
                    {"x": 27, "y": 0, "to": "rota_1", "tx": 24, "ty": 13, "facing": "down", "sfx": "door"},
                    {"x": 28, "y": 0, "to": "rota_1", "tx": 24, "ty": 13, "facing": "down", "sfx": "door"}],
          "spawns": [{"id": "tunel", "table": "tunel", "x": 12, "y": 9, "radius": 1, "count": 1}],
          "on_enter": [{"if": "partner_lia", "if_not": "tunel_visto", "dialog": "bosque/tunel_lia"},
-                      {"if": "partner_taro", "if_not": "tunel_visto", "dialog": "bosque/tunel_taro"}]}
+                      {"if": "partner_taro", "if_none": ["partner_lia", "tunel_visto"], "dialog": "bosque/tunel_taro"}]}
 
 # ------------------------------------------------------------------ Raizal
 RW, RH = 40, 32

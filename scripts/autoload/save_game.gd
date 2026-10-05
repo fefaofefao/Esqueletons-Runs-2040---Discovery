@@ -6,7 +6,7 @@ extends Node
 signal saved
 signal loaded
 
-const VERSION := 1
+const VERSION := 2
 
 ## Caminhos (variáveis para os testes usarem arquivos próprios).
 var save_path := "user://save.json"
@@ -20,6 +20,7 @@ var tracking := false
 ## Migrações: versão de origem -> Callable(Dictionary) -> Dictionary.
 var _migrations := {
 	0: _migrate_0_to_1,
+	1: _migrate_1_to_2,
 }
 
 
@@ -146,6 +147,20 @@ func migrate(d: Dictionary) -> Dictionary:
 	return d
 
 
+## v1 → v2: os dois iniciais. O parceiro único vira lista e ganha o bônus de inicial.
+func _migrate_1_to_2(d: Dictionary) -> Dictionary:
+	var uids: Array = d.get("partner_uids", [])
+	if d.has("partner_uid") and not uids.has(int(d["partner_uid"])):
+		uids.append(int(d["partner_uid"]))
+	d.erase("partner_uid")
+	d["partner_uids"] = uids
+	for key in ["party", "ranch"]:
+		for m in d.get(key, []):
+			if m is Dictionary and uids.has(int(m.get("uid", 0))):
+				m["starter"] = true
+	return d
+
+
 ## v0 (protótipo): {"name", "map", "x", "y"} soltos na raiz.
 func _migrate_0_to_1(d: Dictionary) -> Dictionary:
 	var out := new_game_data(str(d.get("name", "")))
@@ -163,6 +178,14 @@ func _migrate_0_to_1(d: Dictionary) -> Dictionary:
 # ------------------------------------------------------------- acesso rápido
 func player_name() -> String:
 	return str(data.get("player", {}).get("name", ""))
+
+
+## Lia ou Taro (os iniciais): falas próprias ao crescer.
+func is_partner(uid: int) -> bool:
+	for u in data.get("partner_uids", []):
+		if int(u) == uid:
+			return true
+	return false
 
 
 func get_flag(flag: String) -> bool:

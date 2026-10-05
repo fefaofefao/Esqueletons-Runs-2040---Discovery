@@ -78,7 +78,10 @@
    "y": 4,
    "facing": "up",
    "if": "partner_taro",
-   "if_not": "lia_arquivo_visto"
+   "if_none": [
+    "partner_lia",
+    "lia_arquivo_visto"
+   ]
   }
  ],
  "warps": [

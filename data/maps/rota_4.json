@@ -246,7 +246,10 @@
    "y": 6,
    "facing": "down",
    "if": "partner_lia",
-   "if_not": "rival_ossorio_done"
+   "if_none": [
+    "partner_taro",
+    "rival_ossorio_done"
+   ]
   },
   {
    "id": "rival_lia_o",
@@ -254,7 +257,10 @@
    "y": 6,
    "facing": "down",
    "if": "partner_taro",
-   "if_not": "rival_ossorio_done"
+   "if_none": [
+    "partner_lia",
+    "rival_ossorio_done"
+   ]
   },
   {
    "id": "historiadora_pena",

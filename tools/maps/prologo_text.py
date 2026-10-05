@@ -74,15 +74,13 @@ T = {
     "DLG_P_TARO_2": ("Se você for pro norte, eu vou junto. Se não for, vou sozinho mesmo.",
                      "If you're heading north, I'm coming. If not, I'll go alone.",
                      "Si vas al norte, voy contigo. Si no, voy solo."),
-    "DLG_P_CHOOSE": ("Esqueleto sozinho não vai longe. Gente sozinha, menos ainda. Escolhe um, {player}.",
-                     "A skeleton alone won't get far. A person alone, even less. Pick one, {player}.",
-                     "Un esqueleto solo no llega lejos. Una persona sola, menos. Elige uno, {player}."),
-    "OPT_P_LIA": ("Lia", "Lia", "Lia"),
-    "OPT_P_TARO": ("Taro", "Taro", "Taro"),
+    "DLG_P_CHOOSE": ("Esqueleto sozinho não vai longe. Gente sozinha, menos ainda. Leva os dois, {player}.",
+                     "A skeleton alone won't get far. A person alone, even less. Take them both, {player}.",
+                     "Un esqueleto solo no llega lejos. Una persona sola, menos aún. Llévate a los dos, {player}."),
     "DLG_P_LIA_YES": ("Sério?! Eu vou iluminar o caminho, prometo!", "Really?! I'll light the way, I promise!", "¡¿En serio?! ¡Voy a iluminar el camino, lo prometo!"),
-    "DLG_P_TARO_BYE": ("Tá. Eu vou na frente então. A gente se vê no caminho.", "Fine. I'll go on ahead, then. See you on the road.", "Vale. Entonces voy adelante. Nos vemos en el camino."),
     "DLG_P_TARO_YES": ("...Valeu. Não fica pra trás.", "...Thanks. Don't fall behind.", "...Gracias. No te quedes atrás."),
-    "DLG_P_LIA_BYE": ("Tudo bem! Eu vou procurar o farol. Se você se perder, olha pra luz!", "That's okay! I'll go find the lighthouse. If you get lost, look for the light!", "¡Está bien! Voy a buscar el faro. Si te pierdes, ¡busca la luz!"),
+    "DLG_P_DUO_LIA": ("Eu ilumino, você corre, Taro. Combinado?", "I'll light the way, you run, Taro. Deal?", "Yo ilumino y tú corres, Taro. ¿Trato?"),
+    "DLG_P_DUO_TARO": ("Tá. Mas eu vou na frente.", "Fine. But I'm going first.", "Vale. Pero yo voy delante."),
     "DLG_P_POTIONS": ("Toma três poções. Esqueleto também rala o joelho.", "Take three potions. Skeletons scrape their knees too.", "Toma tres pociones. Los esqueletos también se raspan las rodillas."),
     "DLG_P_WILD": ("Na praia tem esqueleto selvagem. Encosta num, que ele vem brigar. Treina um pouco antes da vila.",
                    "There are wild skeletons on the beach. Bump into one and it'll fight. Train a bit before the village.",
@@ -189,14 +187,12 @@ P = {
     "escolha": [say("DLG_P_KNOCK"), say("DLG_P_BENTO_KIDS", "SPK_BENTO"),
                 say("DLG_P_LIA_1", "SPK_LIA"), say("DLG_P_LIA_2", "SPK_LIA"),
                 say("DLG_P_TARO_1", "SPK_TARO"), say("DLG_P_TARO_2", "SPK_TARO"),
-                {"say": "DLG_P_CHOOSE", "speaker": "SPK_BENTO",
-                 "choice": [{"text": "OPT_P_LIA", "goto": "prologo/escolhe_lia"}, {"text": "OPT_P_TARO", "goto": "prologo/escolhe_taro"}]}],
-    "escolhe_lia": [say("DLG_P_LIA_YES", "SPK_LIA"), say("DLG_P_TARO_BYE", "SPK_TARO"),
-                    {"action": "give_partner", "species": "faroleira_1", "age": 5, "nickname": "Lia", "flag": "partner_lia"},
-                    {"goto": "prologo/depois_escolha"}],
-    "escolhe_taro": [say("DLG_P_TARO_YES", "SPK_TARO"), say("DLG_P_LIA_BYE", "SPK_LIA"),
-                     {"action": "give_partner", "species": "grumete_1", "age": 5, "nickname": "Taro", "flag": "partner_taro"},
-                     {"goto": "prologo/depois_escolha"}],
+                say("DLG_P_CHOOSE", "SPK_BENTO"),
+                say("DLG_P_LIA_YES", "SPK_LIA"), say("DLG_P_TARO_YES", "SPK_TARO"),
+                {"action": "give_partner", "species": "faroleira_1", "age": 5, "nickname": "Lia", "flag": "partner_lia"},
+                {"action": "give_partner", "species": "grumete_1", "age": 5, "nickname": "Taro", "flag": "partner_taro"},
+                say("DLG_P_DUO_LIA", "SPK_LIA"), say("DLG_P_DUO_TARO", "SPK_TARO"),
+                {"goto": "prologo/depois_escolha"}],
     "depois_escolha": [{"set_flag": "has_partner"}, {"action": "hide_npc", "id": "lia_cabana"}, {"action": "hide_npc", "id": "taro_cabana"},
                        say("DLG_P_POTIONS", "SPK_BENTO"), {"action": "give_item", "item": "pocao_p", "n": 3},
                        say("DLG_P_WILD", "SPK_BENTO")],
@@ -264,7 +260,8 @@ def main():
     rows = list(csv.reader(open(path, encoding="utf-8")))
     header, body = rows[0], rows[1:]
     obsolete = {"DLG_BENTO_01", "DLG_BENTO_02", "DLG_BENTO_03", "DLG_BENTO_04", "DLG_BENTO_05", "DLG_BENTO_06", "DLG_BENTO_07",
-                "OPT_BENTO_ASK_KING", "OPT_BENTO_THANKS", "DLG_BENTO_KING_01", "DLG_BENTO_R1", "DLG_BENTO_R2", "SIGN_VILA_MARE"}
+                "OPT_BENTO_ASK_KING", "OPT_BENTO_THANKS", "DLG_BENTO_KING_01", "DLG_BENTO_R1", "DLG_BENTO_R2", "SIGN_VILA_MARE",
+                "OPT_P_LIA", "OPT_P_TARO", "DLG_P_TARO_BYE", "DLG_P_LIA_BYE"}
     body = [r for r in body if r and r[0] not in T and r[0] not in obsolete]
     body += [[k, *v] for k, v in T.items()]
     with open(path, "w", newline="", encoding="utf-8") as f:

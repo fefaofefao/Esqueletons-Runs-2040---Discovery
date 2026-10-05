@@ -70,7 +70,7 @@ MOVES = [
     mv("investida", "Investida", "Charge", "Embestida", F, P, 75, 95, 15, E, HEAVY, [delay(0.25)]),
     mv("soco_seco", "Soco Seco", "Dry Punch", "Puño Seco", F, P, 95, 90, 10, E, HEAVY,
        flavor=("Lento e brutal.", "Slow and brutal.", "Lento y brutal.")),
-    mv("remada_dupla", "Remada Dupla", "Double Stroke", "Remada Doble", F, P, 50, 95, 15, E, NORMAL, hits=2, sig="grumete"),
+    mv("remada_dupla", "Remada Dupla", "Double Stroke", "Remada Doble", F, P, 40, 95, 12, E, NORMAL, hits=2, sig="grumete"),
     mv("golpe_de_tora", "Golpe de Tora", "Log Slam", "Golpe de Tronco", F, P, 100, 90, 10, E, HEAVY, [delay(0.3)], sig="lenhador"),
     mv("desmoronar", "Desmoronar", "Cave-In", "Derrumbe", F, P, 65, 95, 10, AE, HEAVY, [stat("spd", -1, 30)], sig="mineiro"),
     mv("estaca_firme", "Estaca Firme", "Pile Driver", "Estaca Certera", F, P, 75, 95, 15, E, NORMAL, [stat("def", 1, 50, "self")], sig="palafiteiro"),

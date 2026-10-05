@@ -4,6 +4,7 @@
    "intro_done",
    "bento_met",
    "has_partner",
+   "partner_taro",
    "partner_lia",
    "tut_battle",
    "tut_marker",
@@ -19,15 +20,16 @@
     "Lia"
    ],
    [
+    "grumete_2",
+    32,
+    "Taro"
+   ],
+   [
     "lenhador_2",
     31
    ],
    [
     "mineiro_2",
-    30
-   ],
-   [
-    "herborista_2",
     30
    ]
   ],
@@ -114,6 +116,7 @@
    "intro_done",
    "bento_met",
    "has_partner",
+   "partner_taro",
    "partner_lia",
    "tut_battle",
    "tut_marker",
@@ -131,16 +134,17 @@
     "Lia"
    ],
    [
+    "grumete_2",
+    44,
+    "Taro"
+   ],
+   [
     "lenhador_3",
     43
    ],
    [
     "mineiro_2",
     43
-   ],
-   [
-    "herborista_3",
-    42
    ]
   ],
   "steps": [
@@ -231,6 +235,7 @@
    "intro_done",
    "bento_met",
    "has_partner",
+   "partner_taro",
    "partner_lia",
    "tut_battle",
    "tut_marker",
@@ -248,16 +253,17 @@
     "Lia"
    ],
    [
+    "grumete_3",
+    56,
+    "Taro"
+   ],
+   [
     "lenhador_3",
     55
    ],
    [
     "mineiro_3",
     55
-   ],
-   [
-    "lavadeira_3",
-    54
    ]
   ],
   "steps": [
@@ -345,6 +351,7 @@
    "intro_done",
    "bento_met",
    "has_partner",
+   "partner_lia",
    "partner_taro",
    "tut_battle",
    "tut_marker",
@@ -363,15 +370,16 @@
     "Taro"
    ],
    [
+    "faroleira_3",
+    68,
+    "Lia"
+   ],
+   [
     "sentinela_3",
     67
    ],
    [
     "lavadeira_3",
-    66
-   ],
-   [
-    "carregador_3",
     66
    ]
   ],
@@ -461,6 +469,7 @@
    "intro_done",
    "bento_met",
    "has_partner",
+   "partner_taro",
    "partner_lia",
    "tut_battle",
    "tut_marker",
@@ -480,15 +489,16 @@
     "Lia"
    ],
    [
+    "grumete_3",
+    78,
+    "Taro"
+   ],
+   [
     "sentinela_3",
     77
    ],
    [
     "lavadeira_3",
-    76
-   ],
-   [
-    "carregador_3",
     76
    ]
   ],
@@ -553,6 +563,7 @@
    "intro_done",
    "bento_met",
    "has_partner",
+   "partner_lia",
    "partner_taro",
    "tut_battle",
    "tut_marker",
@@ -576,15 +587,16 @@
     "Taro"
    ],
    [
+    "faroleira_3",
+    88,
+    "Lia"
+   ],
+   [
     "sentinela_3",
     86
    ],
    [
     "lavadeira_3",
-    85
-   ],
-   [
-    "domador_escorpioes_3",
     85
    ]
   ],

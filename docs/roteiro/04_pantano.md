@@ -13,6 +13,7 @@ Antes da luta, a Musga **cheira o ar** e diz: "Você tem cheiro de casa. De fam�
 ## 3. Momento de Lia e Taro
 - **Taro** descobre pela fofoca da Musga que os levados (inclusive os pais dele) estão **no castelo**. Parceiro: "Castelo. Eu sabia... Eles tão inteiros." Recorrente (parceira Lia): Lia quer contar a ele; Taro aparece na saída norte, já sabendo, e aceita seguir junto ("Mas eu chego primeiro").
 - **Lia** (parceira) vê os vaga-lumes da Rota 3: "acendem um pro outro achar o caminho", o mesmo desejo do farol.
+- Lia e Taro estão os dois na equipe (decisão do Fernando): tocam as falas de parceiro dos dois; as cenas de "recorrente" só aparecem em saves antigos, com um parceiro só.
 - Arco de Taro: raiva → entendimento começa (os pais estão vivos, servindo, como a família do Rei).
 
 ## 4. Guardião: Musga (sobrinha do Rei)
@@ -252,7 +253,8 @@ Antes da luta, a Musga **cheira o ar** e diz: "Você tem cheiro de casa. De fam�
 - **Musga:** Os pais daquele baixinho do remo também. Sabia? Eu sei de tudo, querido.
 - **SPK_TARO:** Castelo. Eu sabia. *(if partner_taro)*
 - **SPK_TARO:** ...Eles tão inteiros. É isso que importa. Vamos. *(if partner_taro)*
-- **SPK_LIA:** Os pais do Taro! A gente precisa contar pra ele! *(if partner_lia)*
+- **SPK_LIA:** Os pais do Taro! A gente precisa contar pra ele! *(if partner_lia; if_not partner_taro)*
+- **SPK_LIA:** Ouviu, Taro? Inteiros! A gente vai junto até o castelo. *(if_all partner_lia, partner_taro)*
 - **Musga:** Tá bom, tá bom. Desligo a névoa. Mas alguém vai ter que vir me visitar. Combinado?
 - **Musga:** A Tia mandou eu comer direito? Ela manda isso há mil anos. Fofa. *(if_any minas_quebrou, minas_negociou)*
 - *[ação refresh_map: {}]*
@@ -261,4 +263,4 @@ Antes da luta, a Musga **cheira o ar** e diz: "Você tem cheiro de casa. De fam�
 - **Musga:** Volta pra fofocar, querido. Sabia que o primo Caliço ensaia discurso no espelho?
 
 ## 10. Contagem
-Cerca de **838 palavras** de texto de jogo em PT-BR nesta região.
+Cerca de **848 palavras** de texto de jogo em PT-BR nesta região.

@@ -2,7 +2,7 @@
 
 Gerado por `tools/simulate.py` (simulador `tools/sim/simulate.gd`, que usa o motor e a IA reais da batalha e os dados reais). Metas em `data/balance.json`; regras em `data/battle.json`. Repita a simulação ao fim de cada tarefa das fases 3c e 4.
 
-**40 jogadas simuladas** (metade com Taro, metade com Lia), 10 tentativas por Guardião em cada jogada.
+**40 jogadas simuladas** (Lia e Taro juntos na equipe, com +5% de inicial), 10 tentativas por Guardião em cada jogada.
 
 ## Critérios de aceite
 
@@ -10,17 +10,17 @@ Gerado por `tools/simulate.py` (simulador `tools/sim/simulate.gd`, que usa o mot
 
 ## Por região
 
-| Região | Chegada (meta) | Idade no Guardião (meta) | Vitória contra o Guardião | Taro / Lia | Batalhas | Derrotas | Tempo (min) |
-|---|---|---|---|---|---|---|---|
-| Prólogo | 5.0 (5–5) | 9.6 (—) | — | — / — | 5 | 0.7 | 15.5 |
-| Bosque | 9.8 (10–18) | 20.4 (22.0) | 71% | 64% / 78% | 14 | 1.9 | 26.6 |
-| Minas | 21.6 (22–30) | 33.9 (34.0) | 76% | 68% / 84% | 14 | 1.2 | 22.5 |
-| Pântano | 35.2 (34–42) | 47.1 (46.0) | 85% | 80% / 89% | 13 | 0.5 | 22.1 |
-| Ossório | 49.8 (46–54) | 59.8 (58.0) | 84% | 84% / 84% | 11 | 0.4 | 22.5 |
-| Picos | 60.2 (58–66) | 70.1 (70.0) | 81% | 88% / 74% | 10 | 0.3 | 22.4 |
-| Deserto | 71.7 (68–76) | 81.0 (80.0) | 84% | 84% / 84% | 10 | 0.3 | 21.0 |
-| Castelo | 83.0 (80–86) | 88.5 (90.0) | 67% · Rei 64% | 77% / 56% | 7 | 0.2 | 21.8 |
-| **Total** | | | | | | | **174 min (2h54)** |
+| Região | Chegada (meta) | Idade no Guardião (meta) | Vitória contra o Guardião | Batalhas | Derrotas | Tempo (min) |
+|---|---|---|---|---|---|---|
+| Prólogo | 5.0 (5–5) | 9.5 (—) | — | 5 | 0.0 | 15.1 |
+| Bosque | 9.6 (10–18) | 20.5 (22.0) | 68% | 14 | 1.1 | 23.3 |
+| Minas | 22.6 (22–30) | 33.6 (34.0) | 74% | 14 | 0.8 | 22.8 |
+| Pântano | 36.1 (34–42) | 46.8 (46.0) | 81% | 13 | 0.2 | 20.9 |
+| Ossório | 50.4 (46–54) | 59.5 (58.0) | 66% | 11 | 0.1 | 22.5 |
+| Picos | 62.3 (58–66) | 71.1 (70.0) | 60% | 10 | 0.1 | 22.1 |
+| Deserto | 73.9 (68–76) | 82.3 (80.0) | 72% | 10 | 0.1 | 21.0 |
+| Castelo | 85.6 (80–86) | 90.4 (90.0) | 80% · Rei 68% | 7 | 0.1 | 21.6 |
+| **Total** | | | | | | **169 min (2h49)** |
 
 Tempo = batalhas × duração simulada (ação do jogador 4.5 s, do inimigo 2.4 s, +9 s de abertura/fim) + caminhada + leitura a 180 palavras/min. Caminhada e leitura são o **orçamento** de cada região para a fase 4 (mapas e roteiro ainda não existem); a fase 4 deve medir os valores reais e repetir a simulação.
 
@@ -28,10 +28,10 @@ Tempo = batalhas × duração simulada (ação do jogador 4.5 s, do inimigo 2.4 
 
 | Tipo | Vitória geral | vs Físico | vs Mágico | vs Cura | vs Veneno |
 |---|---|---|---|---|---|
-| Físico | 49% | — | 67% | 63% | 17% |
-| Mágico | 65% | 40% | — | 75% | 79% |
-| Cura/Suporte | 34% | 33% | 29% | — | 39% |
-| Veneno | 54% | 85% | 19% | 57% | — |
+| Físico | 48% | — | 67% | 62% | 16% |
+| Mágico | 65% | 41% | — | 75% | 79% |
+| Cura/Suporte | 35% | 35% | 31% | — | 38% |
+| Veneno | 54% | 86% | 19% | 57% | — |
 
 Ciclo de vantagem: Físico > Mágico > Veneno > Físico; Cura é neutra (vale ×1,35 / ×0,8). Cura perde duelos de dano por definição: é tipo de suporte e brilha em equipe mista.
 
@@ -39,16 +39,16 @@ Ciclo de vantagem: Físico > Mágico > Veneno > Físico; Cura é neutra (vale ×
 
 | Golpe | Uso |
 |---|---|
-| remada_dupla (fisico, normal) | 15.4% |
-| investida (fisico, heavy) | 7.1% |
-| chama_fria (magico, normal) | 6.5% |
-| chuva_de_brasas (magico, normal) | 5.8% |
-| facho_do_farol (magico, normal) | 5.8% |
-| avalanche_de_carga (fisico, heavy) | 4.6% |
-| curativo (cura, normal) | 4.4% |
-| osso_bumerangue (fisico, normal) | 4.3% |
-| explosao_arcana (magico, heavy) | 3.9% |
-| golpe_de_tora (fisico, heavy) | 3.5% |
+| remada_dupla (fisico, normal) | 27.3% |
+| facho_do_farol (magico, normal) | 11.5% |
+| chama_fria (magico, normal) | 10.3% |
+| chuva_de_brasas (magico, normal) | 8.6% |
+| explosao_arcana (magico, heavy) | 6.8% |
+| investida (fisico, heavy) | 5.5% |
+| soco_seco (fisico, heavy) | 3.2% |
+| cabecada (fisico, normal) | 2.8% |
+| osso_bumerangue (fisico, normal) | 2.7% |
+| raio_lunar (magico, heavy) | 2.7% |
 
 Limite: nenhum golpe acima de 30%.
 
@@ -72,3 +72,4 @@ Limite: nenhum golpe acima de 30%.
 | Cura/Suporte | Sem dano próprio, as linhas de cura só perdiam duelos. | Jato Fresco (drena) e Badalada Serena (atinge todos) viraram golpes de dano; as linhas de cura aprendem ataques do tipo secundário. |
 | Taro × Lia | Com a mesma equipe, Lia vencia ~100% dos Guardiões e Taro 0–50%. | Taro (Grumete) virou perfil tanque e ganhou Cura como secundário (como Lia); Remada Dupla 2×50, Facho do Farol 60. |
 | Guardiões (protótipos) | Bosque e Minas cheios de Veneno anulavam times físicos; os últimos Guardiões ficavam fáceis. | Bosque com um de cada tipo (o Pântano continua temático de Veneno); Ossório +4 anos, Deserto +5, Pântano +2; Rei com uma escolta de suporte. |
+| Os dois iniciais juntos (+5%) | Com Lia e Taro na equipe desde o Prólogo, a equipe vencia 100% dos Guardiões, perdia menos e chegava 4–7 anos acima da meta; Remada Dupla passou de 30% de uso. | `xp.reward_div` 18 → 21; Guardiões com +7% em todos os atributos (`enemy_bonus.boss`, o Rei fica de fora); Remada Dupla 2×50/15 PP → 2×40/12 PP. |

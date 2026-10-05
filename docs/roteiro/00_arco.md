@@ -23,17 +23,17 @@ Todas devem fazer sentido em retrospecto.
 | # | Região | Pista | O que parece na hora | O que significa no final |
 |---|---|---|---|---|
 | 1 | Prólogo | No bolso, um **ingresso amassado**: "Museu do Litoral — O Reino Perdido de Ossório — 12/10/2040". Bento não sabe o que é "museu". | Um papel estranho de outro lugar | O protagonista tocou a coroa naquela exposição |
-| 2 | Bosque | O tronco de Raizerno tem um **brasão** entalhado: uma coroa sobre uma onda. É o mesmo desenho do ingresso. | O ingresso tem a ver com este mundo | A exposição era sobre este reino |
-| 3 | Minas | Um **mapa antigo** dos mineiros mostra a costa com as mesmas três baías da cidade natal do protagonista, só que com outros nomes. | Coincidência? | Mesmo lugar, mil anos antes |
-| 4 | Pântano | A Guardiã Musga **cheira o ar** e diz: "Você tem cheiro de casa." Esqueletos da família sentem parentes. | Ela é estranha | O protagonista é do sangue real |
-| 5 | Ossório | **Revelação de 2040.** No arquivo real, um registro diz: "Quando a coroa rachar, o eco chamará o último do sangue, onde o farol virar museu". Há também um retrato do príncipe menino com o rosto do protagonista. | Ele é da família real e veio do futuro | O motivo de estar aqui |
+| 1 | Bosque | O tronco de Raizerno tem um **brasão** entalhado: uma coroa sobre uma onda. É o mesmo desenho do ingresso. | O ingresso tem a ver com este mundo | A exposição era sobre este reino |
+| 1 | Minas | Um **mapa antigo** dos mineiros mostra a costa com as mesmas três baías da cidade natal do protagonista, só que com outros nomes. | Coincidência? | Mesmo lugar, mil anos antes |
+| 2 | Pântano | A Guardiã Musga **cheira o ar** e diz: "Você tem cheiro de casa." Esqueletos da família sentem parentes. | Ela é estranha | O protagonista é do sangue real |
+| 3 | Ossório | **Revelação de 2040.** No arquivo real, um registro diz: "Quando a coroa rachar, o eco chamará o último do sangue, onde o farol virar museu". Há também um retrato do príncipe menino com o rosto do protagonista. | Ele é da família real e veio do futuro | O motivo de estar aqui |
 | 6 | Picos | O monge Nevasco explica que o eco da coroa **atravessa o tempo** e que quem a ouviu tocar foi chamado. O protagonista lembra do vidro vibrando. | Ele foi puxado de propósito | Alguém o chamou |
 | 7 | Deserto | A Rainha Duna conta **para que** o Rei quer o herdeiro: usar a coroa e ficar no trono para sempre. | O Rei quer prendê-lo | O dilema do final |
 | 8 | Castelo | O Rei confirma tudo. A coroa racha diante do herdeiro, e a escolha é dele. | — | Resolução |
 
 ## 3. Parceiros: Lia e Taro
 
-Os dois são bebês esqueletos que despertaram há pouco e estão sozinhos. O jogador escolhe um no Prólogo; o outro vira **recorrente**: aliado, rival amistoso e com batalhas opcionais. O arco emocional de cada um avança a cada região, nas duas versões (parceiro ou recorrente).
+Os dois são bebês esqueletos que despertaram há pouco e estão sozinhos. No Prólogo, Bento manda o protagonista levar **os dois** (decisão do Fernando): ambos entram na equipe como parceiros fixos, com +5% em todos os atributos. O arco emocional de cada um avança a cada região, e os dois comentam as cenas juntos.
 
 ### Lia (linha Faroleira, Mágica)
 - **Ferida:** despertou sozinha, no escuro, sem ninguém. Tem medo do escuro e de ser esquecida.
@@ -47,7 +47,7 @@ Os dois são bebês esqueletos que despertaram há pouco e estão sozinhos. O jo
 - **Arco:** raiva → entendimento → **perdão**. Ele descobre que os pais servem ao Rei presos pela coroa, como a família do próprio Rei, e entende que o Rei também só quer os pais de volta.
 - **Momentos:** Prólogo (quer partir sozinho, é impulsivo) · Minas (acha o lenço da mãe) · Pântano (descobre que os levados foram para o castelo) · Picos (reencontro: briga e depois admite medo) · Castelo (encontra os pais como guardas do portão; eles o reconhecem quando a coroa racha).
 
-**Recorrente:** batalhas opcionais na saída de Vila Maré, no Bosque, em Ossório e nos Picos. O recorrente usa o tipo que vence o do parceiro (Lia contra Taro, e vice-versa, com reforços). Ele sempre diz uma frase sobre o próprio arco antes da luta.
+**Recorrente (legado):** a versão antiga, com um parceiro e o outro como rival amistoso, só aparece em saves feitos antes da mudança. Em jogos novos, as lutas opcionais contra o recorrente não existem.
 
 ## 4. Os 6 Guardiões (família do Rei)
 
@@ -73,18 +73,17 @@ Pelo menos 3 decisões relevantes, que mudam diálogos, recompensas e recrutas:
 
 | # | Onde | Escolha | Consequência imediata | Peso no final |
 |---|---|---|---|---|
-| 1 | Prólogo | **Lia ou Taro** como parceiro | Muda o parceiro, o recorrente, as falas de todo o jogo e a cena do Castelo | Define quem acende o farol ou reencontra os pais |
-| 2 | Minas | **Quebrar a corrente** da forja (libertar os mineiros à força) **ou negociar** com a Tia Fornalha depois do duelo | Quebrar: os mineiros fogem, a loja fica mais cara e **Vagonauta** pode ser recrutado. Negociar: Fornalha dá o **Martelo da Tia** (item-chave de atalho) e a loja dá desconto | Negociar soma **+1 Redenção** |
-| 3 | Pântano | **Doar o estoque de antídotos** à vila envenenada **ou guardar** | Doar: a casa de domadores da Brumaga abre e **Brumaga** pode ser recrutada. Guardar: você fica com os itens | Doar soma **+1 Redenção** |
-| 4 | Ossório | **Revelar** o registro do arquivo à cidade **ou guardar segredo** | Revelar: a cidade se rebela, há mais batalhas no caminho e Caliço fica do seu lado no final. Segredo: menos batalhas, e Caliço fica neutro | Revelar soma **+1 Redenção** |
-| 5 | Picos | **Levar a carta de Alva** ao pai **ou não** | Levar: no Castelo, a carta pode ser entregue (diálogo exclusivo) | **Obrigatória** para o final de Redenção |
+| 1 | Minas | **Quebrar a corrente** da forja (libertar os mineiros à força) **ou negociar** com a Tia Fornalha depois do duelo | Quebrar: os mineiros fogem, a loja fica mais cara e **Vagonauta** pode ser recrutado. Negociar: Fornalha dá o **Martelo da Tia** (item-chave de atalho) e a loja dá desconto | Negociar soma **+1 Redenção** |
+| 2 | Pântano | **Doar o estoque de antídotos** à vila envenenada **ou guardar** | Doar: a casa de domadores da Brumaga abre e **Brumaga** pode ser recrutada. Guardar: você fica com os itens | Doar soma **+1 Redenção** |
+| 3 | Ossório | **Revelar** o registro do arquivo à cidade **ou guardar segredo** | Revelar: a cidade se rebela, há mais batalhas no caminho e Caliço fica do seu lado no final. Segredo: menos batalhas, e Caliço fica neutro | Revelar soma **+1 Redenção** |
+| 4 | Picos | **Levar a carta de Alva** ao pai **ou não** | Levar: no Castelo, a carta pode ser entregue (diálogo exclusivo) | **Obrigatória** para o final de Redenção |
 
 ## 6. Os 2 finais
 
 Na sala do trono, a coroa racha diante do herdeiro. O Rei pede: "Coloque. Fique. Ninguém mais se perde."
 
-- **Final A — Redimir o Rei.** Exige **a carta de Alva e pelo menos 2 pontos de Redenção**. Depois da batalha, o jogador entrega a carta. O Rei a lê, tira a coroa e a quebra **por vontade própria**. A família se despede; cada Guardião tem uma fala de adeus. Os esqueletos ficam livres (continuam vivos, mas sem obedecer a ninguém). O Rei, sem coroa e sem família, pede para seguir o herdeiro: **o marcador dele enche até 100% e ele entra na equipe**. Lia acende o farol, ou Taro reencontra os pais que o reconhecem.
-- **Final B — Derrotar o Rei.** Sem os requisitos, o Rei luta até o fim. A coroa **se parte com o golpe final**, a família desaparece de uma vez, sem despedida, e o Rei fica sozinho no chão do trono. O marcador dele enche até 100% e **ele entra na equipe** em silêncio ("Não tenho mais ninguém."). O parceiro ainda acende o farol ou reencontra os pais, mas a cena é mais triste.
+- **Final A — Redimir o Rei.** Exige **a carta de Alva e pelo menos 2 pontos de Redenção**. Depois da batalha, o jogador entrega a carta. O Rei a lê, tira a coroa e a quebra **por vontade própria**. A família se despede; cada Guardião tem uma fala de adeus. Os esqueletos ficam livres (continuam vivos, mas sem obedecer a ninguém). O Rei, sem coroa e sem família, pede para seguir o herdeiro: **o marcador dele enche até 100% e ele entra na equipe**. Taro reencontra os pais, que o reconhecem, e Lia acende o farol.
+- **Final B — Derrotar o Rei.** Sem os requisitos, o Rei luta até o fim. A coroa **se parte com o golpe final**, a família desaparece de uma vez, sem despedida, e o Rei fica sozinho no chão do trono. O marcador dele enche até 100% e **ele entra na equipe** em silêncio ("Não tenho mais ninguém."). Taro ainda reencontra os pais e Lia ainda acende o farol, mas a cena é mais triste.
 - **Nos dois finais**, o protagonista **não volta para 2040** de imediato: o eco precisa de uma coroa inteira. O último quadro mostra, em 2040, a vitrine do museu **vazia** e a placa "Peça em restauração". É um gancho para o próximo jogo da série.
 
 **Créditos, depois o pós-jogo livre:** usar o Rei, completar o Ossário, vencer as casas de domadores restantes e enfrentar os Guardiões de novo (revanche com equipes mais fortes).

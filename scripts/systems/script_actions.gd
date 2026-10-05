@@ -1,7 +1,7 @@
 class_name ScriptActions
 extends RefCounted
 ## Ações de roteiro usadas nos diálogos ({"action": ...}). Formato em docs/DADOS.md.
-##   give_partner {species, age, nickname, flag}  dá o parceiro inicial (fixo)
+##   give_partner {species, age, nickname, flag}  dá um dos dois iniciais (fixos, +5%)
 ##   battle {kind, enemies, tamer_key, reward, items, win_flag, tips, marker}
 ##   heal                                         cura toda a equipe
 ##   give_item {item, n}  ·  give_money {n}  ·  marker {species, amount}
@@ -23,10 +23,13 @@ static func run(n: Dictionary) -> bool:
 		"give_partner":
 			var m := Monster.create(str(n.species), int(n.get("age", 5)))
 			m.nickname = TranslationServer.translate(str(n.get("nickname", "")))
+			m.starter = true
 			var party: Array = SaveGame.data.get("party", [])
-			party.insert(0, m.to_dict())
+			party.append(m.to_dict())
 			SaveGame.data["party"] = party
-			SaveGame.data["partner_uid"] = m.uid
+			var uids: Array = SaveGame.data.get("partner_uids", [])
+			uids.append(m.uid)
+			SaveGame.data["partner_uids"] = uids
 			Ossuary.mark_seen(m)
 			Ossuary.entry(m.species_id)["recruited"] = true
 			if n.has("flag"):

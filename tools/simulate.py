@@ -40,6 +40,8 @@ ADJUSTMENTS = [
      "Taro (Grumete) virou perfil tanque e ganhou Cura como secundário (como Lia); Remada Dupla 2×50, Facho do Farol 60."),
     ("Guardiões (protótipos)", "Bosque e Minas cheios de Veneno anulavam times físicos; os últimos Guardiões ficavam fáceis.",
      "Bosque com um de cada tipo (o Pântano continua temático de Veneno); Ossório +4 anos, Deserto +5, Pântano +2; Rei com uma escolta de suporte."),
+    ("Os dois iniciais juntos (+5%)", "Com Lia e Taro na equipe desde o Prólogo, a equipe vencia 100% dos Guardiões, perdia menos e chegava 4–7 anos acima da meta; Remada Dupla passou de 30% de uso.",
+     "`xp.reward_div` 18 → 21; Guardiões com +7% em todos os atributos (`enemy_bonus.boss`, o Rei fica de fora); Remada Dupla 2×50/15 PP → 2×40/12 PP."),
 ]
 
 
@@ -94,7 +96,7 @@ def write_doc(d, bal, fails, total):
     L = ["# Balanceamento", "",
          "Gerado por `tools/simulate.py` (simulador `tools/sim/simulate.gd`, que usa o motor e a IA reais da batalha e os dados reais). "
          "Metas em `data/balance.json`; regras em `data/battle.json`. Repita a simulação ao fim de cada tarefa das fases 3c e 4.", "",
-         f"**{d['runs']} jogadas simuladas** (metade com Taro, metade com Lia), {d['trials']} tentativas por Guardião em cada jogada.", ""]
+         f"**{d['runs']} jogadas simuladas** (Lia e Taro juntos na equipe, com +5% de inicial), {d['trials']} tentativas por Guardião em cada jogada.", ""]
     L.append("## Critérios de aceite")
     L.append("")
     if fails:
@@ -104,21 +106,17 @@ def write_doc(d, bal, fails, total):
     L.append("")
     L.append("## Por região")
     L.append("")
-    L.append("| Região | Chegada (meta) | Idade no Guardião (meta) | Vitória contra o Guardião | Taro / Lia | Batalhas | Derrotas | Tempo (min) |")
-    L.append("|---|---|---|---|---|---|---|---|")
+    L.append("| Região | Chegada (meta) | Idade no Guardião (meta) | Vitória contra o Guardião | Batalhas | Derrotas | Tempo (min) |")
+    L.append("|---|---|---|---|---|---|---|")
     for r in d["regions"]:
-        bs = r.get("by_starter", {})
-        def pct(k):
-            v = bs.get(k)
-            return f"{v[0] / v[1]:.0%}" if v and v[1] else "—"
         win = f"{r['winrate']:.0%}" if r["guardian_target"] else "—"
         if r["boss_winrate"] >= 0:
             win += f" · Rei {r['boss_winrate']:.0%}"
         tgt = r["arrive_target"]
         L.append(f"| {NAMES[r['id']]} | {r['arrive_age']:.1f} ({tgt[0]:.0f}–{tgt[1]:.0f}) | "
-                 f"{r['guardian_age']:.1f} ({r['guardian_target'] or '—'}) | {win} | {pct('grumete')} / {pct('faroleira')} | "
+                 f"{r['guardian_age']:.1f} ({r['guardian_target'] or '—'}) | {win} | "
                  f"{r['battles']:.0f} | {r['lost']:.1f} | {r['minutes']:.1f} |")
-    L.append(f"| **Total** | | | | | | | **{total:.0f} min ({int(total // 60)}h{int(total % 60):02d})** |")
+    L.append(f"| **Total** | | | | | | **{total:.0f} min ({int(total // 60)}h{int(total % 60):02d})** |")
     L.append("")
     tm = bal["time"]
     L.append(f"Tempo = batalhas × duração simulada (ação do jogador {tm['seconds_per_player_action']} s, do inimigo {tm['seconds_per_enemy_action']} s, "

@@ -525,7 +525,7 @@ def check_balance():
             for e in r.get(key, []):
                 if e[0] not in known:
                     err(f"balance.json: {r.get('id')}.{key} usa espécie/linha inexistente {e[0]}")
-        for ln in r.get("wild_lines", []) + [x for x in r.get("team", []) if x != "@starter"]:
+        for ln in r.get("wild_lines", []) + [x for x in r.get("team", []) if x != "@starters"]:
             if ln not in known:
                 err(f"balance.json: {r.get('id')} usa linha inexistente {ln}")
 

@@ -55,7 +55,7 @@
   "trainer_mul": 1.5,
   "participant_share": 1.0,
   "reserve_share": 0.5,
-  "reward_div": 18.0
+  "reward_div": 21.0
  },
  "flee": {
   "base": 0.5,
@@ -103,6 +103,17 @@
  },
  "sintonia": {
   "bonus": 1.25
+ },
+ "enemy_bonus": {
+  "wild": 0.0,
+  "tamer": 0.0,
+  "boss": 0.07,
+  "exempt": ["rei_esqueleto"],
+  "_comment": "Bônus em todos os atributos dos inimigos por tipo de batalha. Compensa os dois iniciais na equipe. O Rei (atributos fixos ≈600) fica de fora."
+ },
+ "starter": {
+  "stat_bonus": 0.05,
+  "_comment": "Lia e Taro, os dois iniciais: +5% em todos os atributos (decisão do Fernando)."
  },
  "golden": {
   "chance": 0.025,

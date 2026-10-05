@@ -267,7 +267,17 @@ t("DLG_PI_ARR_J_T", "Estátuas de gelo de todo mundo da cidade. Que coisa triste
 t("DLG_PI_PING_1", "A princesa não recebe visitas. Ordem dela. E minha também, que eu tô com frio.",
   "The princess receives no visitors. Her orders. Mine too, because I'm cold.", "La princesa no recibe visitas. Orden suya. Y mía también, que tengo frío.")
 t("DLG_PI_PING_2", "Tá, passa. Mas fala baixo, ela tá cantando.", "Fine, go. But keep it down, she's singing.", "Vale, pasa. Pero habla bajito, está cantando.")
-R.d("chegada_jardim", [lia("DLG_PI_ARR_J_L"), taro("DLG_PI_ARR_J_T"), flag("jardim_visto")])
+# Com os dois na equipe, o "reencontro" dos Picos vira esta cena: Taro admite o medo e Lia guia pela neve.
+DUO = {"if_all": ["partner_lia", "partner_taro"]}
+t("DLG_PI_DUO_T1", "Eu tenho medo, sabia? De chegar no castelo e meus pais me olharem igual essas estátuas.",
+  "I'm scared, you know? Of reaching the castle and my parents looking at me like these statues.",
+  "Tengo miedo, ¿sabes? De llegar al castillo y que mis padres me miren como estas estatuas.")
+t("DLG_PI_DUO_L1", "Eles vão lembrar, Taro. Quem faz falta não vira estátua.", "They'll remember, Taro. Someone who's missed doesn't turn into a statue.",
+  "Se acordarán, Taro. Quien hace falta no se vuelve estatua.")
+t("DLG_PI_DUO_T2", "...Falei em voz alta. Pronto. Agora anda, antes que eu me arrependa.", "...I said it out loud. There. Now move, before I regret it.",
+  "...Lo dije en voz alta. Listo. Ahora camina, antes de que me arrepienta.")
+R.d("chegada_jardim", [taro("DLG_PI_ARR_J_T"), say("DLG_PI_DUO_T1", "SPK_TARO") | DUO, say("DLG_PI_DUO_L1", "SPK_LIA") | DUO,
+                       say("DLG_PI_DUO_T2", "SPK_TARO") | DUO, lia("DLG_PI_ARR_J_L"), flag("jardim_visto")])
 R.d("pingente", [say("DLG_PI_PING_1", "SPK_PINGENTE"), battle("BTL_TAMER_PINGENTE", team([("escultor", 67), ("carregador", 67)]), 840, "pingente_beaten"),
                  say("DLG_PI_PING_2", "SPK_PINGENTE")])
 R.d("pingente_depois", [say("DLG_PI_PING_2", "SPK_PINGENTE")])
@@ -343,8 +353,8 @@ rota = make_route("rota_5", "picos", "MAP_ROTA_5", LEG, ("ossorio", 19, 1), ("ge
                           {"id": "r5_norte", "table": "rota5_norte", "x": 10, "y": 6, "radius": 3, "count": 2}],
                   extra_npcs=[{"id": "leal_a", "x": 16, "y": 4, "facing": "right", "if": "ossorio_revelou"},
                               {"id": "leal_b", "x": 23, "y": 8, "facing": "left", "if": "ossorio_revelou"},
-                              {"id": "rival_taro_p", "x": 26, "y": 6, "facing": "left", "if": "partner_lia", "if_not": "rival_picos_done"},
-                              {"id": "rival_lia_p", "x": 26, "y": 6, "facing": "left", "if": "partner_taro", "if_not": "rival_picos_done"}],
+                              {"id": "rival_taro_p", "x": 26, "y": 6, "facing": "left", "if": "partner_lia", "if_none": ["partner_taro", "rival_picos_done"]},
+                              {"id": "rival_lia_p", "x": 26, "y": 6, "facing": "left", "if": "partner_taro", "if_none": ["partner_lia", "rival_picos_done"]}],
                   extra_props=[{"type": "prayer_flags", "x": 20, "y": 36}, {"type": "prayer_flags", "x": 20, "y": 14},
                                {"type": "snowman", "x": 24, "y": 44, "dialog": R.ref("boneco")}],
                   deco=("snow_pine", "snow_pine", "rock_small"), tint=[0.96, 0.98, 1.0], seed=81)
@@ -417,7 +427,9 @@ R.DOC = {
     "clue_n": 6,
     "clue": "No **Mosteiro do Eco**, o monge-esqueleto **Nevasco** explica que o eco da coroa **atravessa o tempo**: quem a ouviu cantar foi chamado. "
             "O protagonista lembra do vidro do museu vibrando: alguém o chamou de propósito. (Para quê? A resposta está no deserto.)",
-    "moment": ["**Reencontro com o recorrente** (batalha opcional; a cena acontece mesmo sem lutar):",
+    "moment": ["**Jardim de Gelo (dupla):** diante das estátuas, Taro admite: \"Eu tenho medo... de meus pais me olharem igual essas estátuas.\" Lia: \"Quem faz falta não vira estátua.\" "
+               "Taro: \"Falei em voz alta. Pronto.\" Depois Lia vai na frente: \"Segue a minha luz!\" (o medo dela virou coragem).",
+               "**Saves antigos (recorrente):** reencontro com batalha opcional na Rota 5:",
                "Taro (parceira Lia) chega brigando e depois admite: \"Tenho medo de chegar no castelo e meus pais não lembrarem de mim.\" Lia: \"Ninguém esquece quem faz falta.\"",
                "Lia (parceiro Taro) guia pela nevasca e ensina: \"Quando a neve fecha tudo, olha pra luz. É só seguir a luz.\" Depois vai acender o farol.",
                "Parceira Lia, no Jardim de Gelo: \"Segue a minha luz, eu vou na frente!\" (o medo virou coragem)."],

@@ -13,6 +13,7 @@ Fase 4e. **Gerado por `tools/maps/ossorio.py`**, a mesma fonte que grava os mapa
 ## 3. Momento de Lia e Taro
 - **Lia:** no Arquivo, o diário da Rainha Duna conta que ela ergueu o farol para o marido sempre achar o caminho de casa. Parceira: "Então o Rei não é mau. Ele só tem medo do escuro. Igual eu tinha." Recorrente: ela está no Arquivo e promete acender o farol "até pro Rei".
 - **Recorrente:** batalha opcional no norte da Rota 4 (Taro: "vou passar por todos"; Lia: "uma batalha pra dar coragem"). Depois, Taro deixa o jogador ir na frente "só hoje" — primeiro sinal de confiança.
+- Lia e Taro estão os dois na equipe (decisão do Fernando): tocam as falas de parceiro dos dois; as cenas de "recorrente" só aparecem em saves antigos, com um parceiro só.
 - Arco de Lia: medo → coragem → começa a ver o Rei como alguém com medo, e não como vilão.
 
 ## 4. Guardião: Comandante Caliço (irmão do Rei)
@@ -227,7 +228,7 @@ Fase 4e. **Gerado por `tools/maps/ossorio.py`**, a mesma fonte que grava os mapa
 - *(narração)* Diário da Rainha Duna: "Ergui o farol para que meu marido, quando saísse ao mar, sempre achasse o caminho de casa."
 - **SPK_LIA:** A família do Rei construiu o farol! Eles também queriam que ninguém se perdesse. *(if partner_lia)*
 - **SPK_LIA:** Então o Rei não é mau. Ele só tem medo do escuro. Igual eu tinha. *(if partner_lia)*
-- **SPK_TARO:** Farol. A Lia ia gostar de ler isso. *(if partner_taro)*
+- **SPK_TARO:** Farol. A Lia ia gostar de ler isso. *(if partner_taro; if_not partner_lia)*
 - *[flag livro_farol_lido = True]*
 
 ### `ossorio/lia_arquivo`

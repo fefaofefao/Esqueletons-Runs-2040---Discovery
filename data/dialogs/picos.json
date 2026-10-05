@@ -669,14 +669,38 @@
   ],
   "chegada_jardim": [
    {
-    "say": "DLG_PI_ARR_J_L",
-    "speaker": "SPK_LIA",
-    "if": "partner_lia"
-   },
-   {
     "say": "DLG_PI_ARR_J_T",
     "speaker": "SPK_TARO",
     "if": "partner_taro"
+   },
+   {
+    "say": "DLG_PI_DUO_T1",
+    "speaker": "SPK_TARO",
+    "if_all": [
+     "partner_lia",
+     "partner_taro"
+    ]
+   },
+   {
+    "say": "DLG_PI_DUO_L1",
+    "speaker": "SPK_LIA",
+    "if_all": [
+     "partner_lia",
+     "partner_taro"
+    ]
+   },
+   {
+    "say": "DLG_PI_DUO_T2",
+    "speaker": "SPK_TARO",
+    "if_all": [
+     "partner_lia",
+     "partner_taro"
+    ]
+   },
+   {
+    "say": "DLG_PI_ARR_J_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
    },
    {
     "set_flag": "jardim_visto",
