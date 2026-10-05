@@ -1,0 +1,70 @@
+; Engine configuration file.
+; Configuração do projeto Esqueletons Runs 2040 — Edição Discovery.
+
+config_version=5
+
+[application]
+
+config/name="Esqueletons Runs 2040: Discovery"
+config/description="RPG de coleta de esqueletos. Edição Discovery."
+config/version="0.1.0"
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/icon="res://icon.png"
+config/quit_on_go_back=false
+boot_splash/bg_color=Color(0.0627451, 0.0470588, 0.0784314, 1)
+boot_splash/show_image=false
+
+[audio]
+
+buses/default_bus_layout="res://default_bus_layout.tres"
+
+[autoload]
+
+Data="*res://scripts/autoload/data.gd"
+Settings="*res://scripts/autoload/settings.gd"
+Speed="*res://scripts/autoload/speed.gd"
+Controls="*res://scripts/autoload/controls.gd"
+SaveGame="*res://scripts/autoload/save_game.gd"
+Audio="*res://scripts/autoload/audio.gd"
+Haptics="*res://scripts/autoload/haptics.gd"
+Game="*res://scripts/autoload/game.gd"
+
+[debug]
+
+gdscript/warnings/untyped_declaration=0
+gdscript/warnings/inference_on_variant=0
+
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=180
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+window/stretch/scale_mode="integer"
+window/handheld/orientation=4
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://i18n/ui.pt_BR.translation", "res://i18n/ui.en.translation", "res://i18n/ui.es.translation", "res://i18n/dialogue.pt_BR.translation", "res://i18n/dialogue.en.translation", "res://i18n/dialogue.es.translation")
+locale/fallback="en"
+
+[physics]
+
+common/physics_ticks_per_second=60
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/canvas_textures/default_texture_filter=0
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true
+environment/defaults/default_clear_color=Color(0.0627451, 0.0470588, 0.0784314, 1)
+textures/vram_compression/import_etc2_astc=true
