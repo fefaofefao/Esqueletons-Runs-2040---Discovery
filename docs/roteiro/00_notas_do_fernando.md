@@ -5,7 +5,7 @@ incorporá-las; cada região (4b–4g) aplica a parte que lhe cabe. Registradas 
 foram ditas, com a interpretação proposta logo abaixo.
 
 ## 2026-10-05 — Os líderes são a família do Rei
-> "Bento vai indo cidade por cidade encontrando um Skeleton líder (encaixar na
+> "~~Bento~~ **o jogador** vai indo cidade por cidade encontrando um Skeleton líder (encaixar na
 > história que cada líder é um familiar do rei, cada cidade mais próxima do rei
 > na história tem um líder mais difícil e também seus capangas)."
 
@@ -15,5 +15,5 @@ Interpretação para o roteiro:
 - Cada Guardião precisa de um **motivo pessoal** para servir ao Rei, ligado ao laço familiar (lealdade, medo, ambição, dívida...). A seção 10 do AGENTS.md já exige esse motivo.
 - Ligação possível com o mistério de Taro: os pais desaparecidos podem estar presos ou ser servos de um desses parentes.
 
-### Pergunta em aberto
-- "Bento vai indo cidade por cidade": quem viaja é o **protagonista** (com Bento como mentor que reaparece) ou o **Bento acompanha** a jornada? Pela especificação atual, Bento é o pescador do Prólogo; o roteiro da fase 4a precisa dessa resposta.
+### Resolvido
+- "Bento vai indo cidade por cidade" foi engano do Fernando: quem viaja de cidade em cidade enfrentando os líderes é o **jogador** (o protagonista de 2040). Bento continua sendo o pescador do Prólogo, conforme o AGENTS.md.
