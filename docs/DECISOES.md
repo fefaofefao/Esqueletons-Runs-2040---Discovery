@@ -186,3 +186,6 @@ Registro das escolhas feitas sem consulta (AGENTS.md, seção A). Cada item diz 
 - **Guardiões viram "ecos" no pós-jogo.** Nos dois finais a família descansa ou some; a revanche pedida pela seção 6 acontece com os ecos deles, coerente com a coroa do eco e o Deserto dos Ecos.
 - **O Rei entra com idade 100** (a idade máxima do jogo), não 120: o 120 é a idade dele como chefe.
 - **Texto transversal numa fonte só** (`extras.py`): reações do mundo, cartas do Bento e pós-jogo são acrescentadas às listas de diálogo dos NPCs, sem editar as fontes de cada região. `build_all.py` garante a ordem.
+
+## Correção — toque duplo no celular
+- **Um toque, uma ação.** O Android emula um clique de mouse para cada toque; os botões virtuais ficam sobre a caixa de diálogo e os menus. Os controles de toque (que recebem a entrada antes da interface) descartam o clique emulado quando ele cai num botão virtual. Além disso, o A do mapa ignora toques nos 300 ms depois de fechar qualquer tela sobreposta, para nenhuma conversa reabrir sozinha.

@@ -18,12 +18,19 @@ func _ready() -> void:
 		SaveGame.start_new("Téo")
 		SaveGame.save_game()
 	Settings.set_value("language", "pt_BR")
+	for a in OS.get_cmdline_user_args():
+		if a.begins_with("--lang="):
+			Settings.set_value("language", a.substr(7))
 	Settings.set_value("touch_controls", "off")
 	Game.boot(self)
 	await _wait(0.75)
 	await _shot("00_titulo_intro")
 	await _wait(1.6)
 	await _shot("01_titulo")
+	if "--store" in OS.get_cmdline_user_args():
+		await _store_shots()
+		get_tree().quit()
+		return
 	for a in OS.get_cmdline_user_args():
 		if a.begins_with("--region="):
 			await _region_shots(a.substr(9))
@@ -326,8 +333,10 @@ func _advance(choices: Array = [], shot_name: String = "", shot_at: int = -1, ma
 			else:
 				box._press()
 			n += 1
+		elif top is ChoiceBox:
+			(top as ChoiceBox)._answer(int(choices.pop_front()) if not choices.is_empty() else 0)
 		else:
-			top.close()  # aprender golpe, recruta etc.: as capturas seguem em frente
+			top.close()  # aprender golpe, telas de menu etc.: as capturas seguem em frente
 
 
 func _goto(map_id: String, cell: Vector2i, facing: String) -> void:
@@ -470,3 +479,64 @@ func _region_shots(rid: String) -> void:
 				await _advance(st.get("after_choices", []).duplicate(), str(st.get("after_shot", "")), int(st.get("after_shot_at", 0)), 160)
 		else:
 			await _shot(str(st.shot))
+
+
+
+## Capturas da ficha da loja (paisagem), no idioma de --lang=. O título já
+## saiu em 01_titulo; aqui: vila com diálogo, batalha 2×2, aniversário,
+## Ossário, a revelação de 2040 e a sala do trono.
+func _store_shots() -> void:
+	Game.start_new_game("Téo")
+	await _wait(1.0)
+	await _advance()
+	for f in ["intro_done", "bento_met", "has_partner", "partner_lia", "tut_battle", "tut_marker", "bras_beaten", "ramalho_beaten",
+			"fornalha_beaten", "musga_beaten", "calico_beaten", "x_vila_mare_visto", "ossorio_visto", "rota4_vista", "portao_visto"]:
+		SaveGame.set_flag(f)
+	var lia := Monster.create("faroleira_3", 56)
+	lia.nickname = "Lia"
+	SaveGame.data["party"] = [lia.to_dict(), Monster.create("lenhador_2", 40).to_dict(), Monster.create("mineiro_3", 55).to_dict(),
+		Monster.create("lavadeira_3", 54).to_dict()]
+	var ids: Array = Data.all_species_ids(false)
+	for i in mini(46, ids.size()):
+		Ossuary.entry(str(ids[i]))["seen"] = true
+		Ossuary.entry(str(ids[i]))["defeated"] = true
+		if i % 3 == 0:
+			Ossuary.entry(str(ids[i]))["recruited"] = true
+	await _goto("vila_mare", Vector2i(17, 17), "up")
+	Game.world.interact(Vector2i(17, 16), Vector2i.UP)
+	await _wait(1.6)
+	await _shot("s2_vila")
+	Game.close_all_overlays()
+	await _goto("rota_4", Vector2i(30, 30), "up")
+	Game.start_battle({"kind": "wild", "enemies": [["sentinela_2", 47], ["escriba_2", 48]]})
+	await _wait(5.5)
+	await _shot("s3_batalha")
+	Game.battle.debug_win()
+	await _advance([], "", -1, 160)
+	await _wait(1.0)
+	for i in 30:
+		await _wait(0.25)
+		if Game.top_overlay() is GrowthCeremony:
+			break
+		if Game.top_overlay() is DialogBox:
+			Controls.tap_action("btn_a")
+	await _wait(1.3)
+	await _shot("s4_aniversario")
+	for i in 40:
+		await _wait(0.4)
+		if not (Game.top_overlay() is GrowthCeremony):
+			break
+	Game.close_all_overlays()
+	Game.open_overlay(OssuaryScreen.new())
+	await _wait(0.5)
+	await _shot("s5_ossario")
+	Game.close_all_overlays()
+	await _goto("ossorio_arquivo", Vector2i(6, 6), "up")
+	Game.world.interact(Vector2i(6, 5), Vector2i.UP)
+	await _advance([], "s6_revelacao", 2, 4)
+	Game.close_all_overlays()
+	await _wait(0.4)
+	SaveGame.set_flag("rei_falou")
+	Game.warp("sala_trono", Vector2i(10, 7), "up")
+	await _wait(1.8)
+	await _advance([], "s7_trono", 0, 2)

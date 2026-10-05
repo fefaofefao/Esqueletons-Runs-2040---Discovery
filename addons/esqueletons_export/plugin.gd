@@ -2,10 +2,13 @@
 extends EditorPlugin
 ## Ajusta o manifesto Android na exportação. A seção 14 permite só INTERNET,
 ## ACCESS_NETWORK_STATE e AD_ID; o SDK de anúncios acrescenta as permissões da
-## API Privacy Sandbox (ACCESS_ADSERVICES_*), que este jogo não usa. Elas são
+## API Privacy Sandbox (ACCESS_ADSERVICES_*), READ_BASIC_PHONE_STATE e uma
+## cópia errada "android.permission.AD_ID", que este jogo não usa. Elas são
 ## removidas com tools:node="remove". tools/check_manifest.py confere o APK.
 
 const REMOVED := [
+	"android.permission.READ_BASIC_PHONE_STATE",
+	"android.permission.AD_ID",
 	"android.permission.ACCESS_ADSERVICES_AD_ID",
 	"android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
 	"android.permission.ACCESS_ADSERVICES_TOPICS",

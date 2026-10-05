@@ -154,6 +154,14 @@ func _safe_insets(vp: Vector2) -> Vector2:
 func _input(event: InputEvent) -> void:
 	if not pad_visible():
 		return
+	# No celular, o Android também gera um clique de mouse "emulado" para cada
+	# toque. Se o toque foi num botão virtual (A, B, D-pad), esse clique não pode
+	# chegar aos menus/diálogos que estão por baixo do botão: senão o mesmo toque
+	# conta duas vezes (fecha o diálogo e, no mapa, o A abre a conversa de novo).
+	if (event is InputEventMouseButton or event is InputEventMouseMotion) and event.device == InputEvent.DEVICE_ID_EMULATION:
+		if _action_at(event.position) != "" or not _touches.is_empty():
+			get_viewport().set_input_as_handled()
+		return
 	if event is InputEventScreenTouch:
 		var t := event as InputEventScreenTouch
 		if t.pressed:

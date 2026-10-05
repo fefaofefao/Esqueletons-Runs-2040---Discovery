@@ -24,7 +24,9 @@
   ],
   "audience_min_age": 13,
   "admob": {
-    "_comment": "IDs reais entram só no release, via GitHub Secrets (ADMOB_APP_ID etc.). Fase 5.",
-    "app_id_secret": "ADMOB_APP_ID"
-  }
+    "_comment": "IDs reais entram só no release, via GitHub Secrets (ADMOB_APP_ID, ADMOB_BANNER_ID, ADMOB_INTERSTITIAL_ID, ADMOB_REWARDED_ID). O ID de editor (pub-...) é público e vai no app-ads.txt.",
+    "app_id_secret": "ADMOB_APP_ID",
+    "publisher_id": "[ADMOB_PUB_ID]"
+  },
+  "policy_effective_date": "2026-10-05"
 }

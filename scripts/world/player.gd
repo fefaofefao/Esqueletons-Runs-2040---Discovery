@@ -3,6 +3,8 @@ extends Node2D
 ## Protagonista: movimento em grade nas 4 direções. Um toque rápido numa
 ## direção nova só vira o personagem; segurar anda. Segurar B corre.
 
+## Tempo mínimo entre fechar um diálogo e o A do mapa falar de novo.
+const INTERACT_COOLDOWN_MS := 300
 const WALK_TIME := 0.26
 const RUN_TIME := 0.13
 const TURN_DELAY := 0.09
@@ -138,6 +140,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	if event.is_action_pressed("btn_a", false):
 		get_viewport().set_input_as_handled()
+		if Time.get_ticks_msec() - Game.last_overlay_closed_ms < INTERACT_COOLDOWN_MS:
+			return
 		world.interact(facing_cell(), Controls.dir_from_name(facing))
 
 

@@ -7,6 +7,9 @@ signal screen_changed(screen_name: String)
 
 const FADE_TIME := 0.22
 
+## Quando a última tela sobreposta fechou: o A do mapa espera um instante
+## para o mesmo toque que fechou um diálogo não abrir a conversa de novo.
+var last_overlay_closed_ms := -100000
 var main: Node = null
 var screen: Node = null
 var world: World = null
@@ -156,6 +159,7 @@ func open_overlay(o: Overlay) -> Overlay:
 
 
 func close_overlay(o: Overlay) -> void:
+	last_overlay_closed_ms = Time.get_ticks_msec()
 	if o.ad_banner:
 		Ads.banner_pop(o)
 	if not overlays.has(o):

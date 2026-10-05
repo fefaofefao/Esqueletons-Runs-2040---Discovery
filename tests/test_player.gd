@@ -80,3 +80,50 @@ func test_walk_turn_bump_and_door() -> void:
 	Game.world = null
 	w.queue_free()
 	await _wait(0.05)
+
+
+## Bug relatado no celular: ao fechar uma conversa, ela começava de novo
+## sozinha. O mesmo toque no A chegava duas vezes (clique emulado no diálogo +
+## ação btn_a no mapa). Aqui: fecha a conversa com A e manda outro A logo em
+## seguida — a conversa não pode reabrir. Depois do intervalo, A fala de novo.
+func test_dialog_does_not_reopen_after_closing() -> void:
+	SaveGame.start_new("Téo")
+	for f in ["intro_done", "bento_met", "has_partner", "partner_lia"]:
+		SaveGame.set_flag(f)
+	Speed.set_fast(false)
+	var w := World.new()
+	host.add_child(w)
+	Game.world = w
+	w.load_map("vila_mare", Vector2i(17, 17), "up")   # Pipa está em (17, 16)
+	await _wait(0.2)
+	var p := w.player
+	check(w.map.npc_at(Vector2i(17, 16)) != null, "há um NPC na frente")
+	_press("btn_a", true)
+	_press("btn_a", false)
+	await _wait(0.3)
+	check(Game.top_overlay() is DialogBox, "A abre a conversa")
+	# fecha a conversa (pode ter mais de uma caixa)
+	for i in 12:
+		if not (Game.top_overlay() is DialogBox):
+			break
+		var box := Game.top_overlay() as DialogBox
+		if box._typing:
+			box._press()
+		box._press()
+		await tree.process_frame
+	check(Game.top_overlay() == null, "conversa fechada")
+	# o "segundo" A do mesmo toque, logo depois de fechar
+	_press("btn_a", true)
+	_press("btn_a", false)
+	await _wait(0.1)
+	check(Game.top_overlay() == null, "a conversa NÃO reabre sozinha")
+	await _wait(0.4)
+	_press("btn_a", true)
+	_press("btn_a", false)
+	await _wait(0.2)
+	check(Game.top_overlay() is DialogBox, "depois do intervalo, A fala de novo normalmente")
+	Game.close_all_overlays()
+	check(p != null, "jogador existe")
+	Game.world = null
+	w.queue_free()
+	await tree.process_frame
