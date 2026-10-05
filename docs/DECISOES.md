@@ -1,0 +1,73 @@
+# Decisões técnicas
+
+Registro das escolhas feitas sem consulta (AGENTS.md, seção A). Cada item diz o quê, por quê e onde mexer se for preciso mudar.
+
+## Fase 1 — Base
+
+### Identidade
+- **Nome definido pelo Fernando:** *Esqueletons Runs 2040 — Edição Discovery*, primeiro jogo de uma série. O nome provisório "Reino dos Ossos" deixa de valer. `config/publisher.json` guarda `game_name`, `series` e `edition` (localizada: Edição/Discovery Edition/Edición). O logo diz "ESQUELETONS RUNS 2040" e a edição aparece como texto traduzido abaixo dele.
+- **Package name:** `com.fsamplabs.esqueletonsruns2040.discovery`. Cada edição da série vira um app separado na loja (`.discovery`, depois outras). **Atenção:** depois da primeira publicação o package não pode mudar. Se o Fernando preferir outro, a troca é só no `publisher.json` + `python3 tools/sync_publisher.py`.
+
+### Motor e projeto
+- **Godot 4.7.2** (estável mais recente em out/2026), GDScript, renderer Compatibility. A versão fica em `.github/workflows/build.yml`, `.github/actions/setup-godot-android/action.yml` e `tools/setup_codex.sh`.
+- **Resolução 320×180**, `stretch mode = viewport`, `aspect = expand`, `scale mode = integer`. Em celulares 20:9 a área visível vira ~400×180: o mundo aparece mais largo e os controles ficam nas laterais. Orientação: paisagem com sensor.
+- **Autoloads** (ordem importa): `Data` → `Settings` → `Speed` → `Controls` → `SaveGame` → `Audio` → `Haptics` → `Game`. O `Game` monta as camadas (tela, overlays, toque, fade) e controla o fluxo.
+- **UI construída em código**, com poucas cenas `.tscn`. Isso deixa os diffs legíveis e evita erros de edição manual de cenas.
+- **Tema aplicado em cada raiz de UI:** o tema do Godot não atravessa `CanvasLayer`, então `Overlay`, a tela de título e o letreiro do mundo recebem `UiTheme.build()` diretamente.
+
+### Arte, fonte e som
+- **Tudo é original e gerado por script** em `tools/art/` (Python + Pillow): fonte, tileset, transições, personagens, objetos, UI, ícones e efeitos sonoros. Nenhum pack externo foi usado. Para regenerar: `tools/art/gen_all.sh`.
+- **Fonte própria "OssosPixel"** em formato BMFont (`assets/fonts/pixel.fnt`), célula de 12 px, com acentos, ç, ñ, ¿, ¡, aspas curvas, setas e ★. É renderizada só em escala inteira (`FIXED_SIZE_SCALE_INTEGER_ONLY`).
+- **Transições de terreno automáticas:** espuma, areia molhada, franja de grama, borda da trilha e água funda são *overlays* com 46 máscaras canônicas (8 vizinhos), escolhidas em tempo de execução. Os mapas só descrevem o terreno.
+- **Animação de tiles e 2x:** as animações de tile usam o relógio do renderizador, que ignora `Engine.time_scale`. Por isso o `MapView` ajusta `set_tile_animation_speed` quando a velocidade muda.
+- **Iluminação simples:** `CanvasModulate` por região/mapa, brilho aditivo em lamparinas e fogueiras e sombra suave sob os personagens. Partículas: brilho na água, folhas dos coqueiros, poeira ao correr e poeira na luz em interiores.
+
+### Mapas e conteúdo
+- **Mapas em JSON com terreno em ASCII** (`data/maps/*.json`) + legenda. O `TileSet` é montado em código a partir de `data/tilesets/overworld.json`, que é gerado pelo `gen_tiles.py`. Objetos, NPCs, portas e partículas de ambiente ficam no mesmo JSON.
+- **Diálogos** em `data/dialogs/<arquivo>.json`, referenciados como `"arquivo/id"`, com nós `say`, `choice`, `set_flag`, `goto`, `if` e `if_not`. Os textos são chaves de tradução.
+- **Os diálogos da Praia são provisórios** e servem para testar o sistema. O roteiro definitivo do Prólogo sai na fase 4a (`docs/roteiro/`), que pode reescrevê-los.
+- **A saída norte para a Vila Maré** existe no mapa, mas o destino ainda não foi construído (fase 4a). Ao pisar nela, aparece a mensagem `MSG_AREA_LOCKED` e o jogador volta um passo. O validador aceita portas para mapas *planejados* em `data/regions.json`.
+
+### Controles
+- **Ações próprias** (`move_*`, `btn_a`, `btn_b`, `btn_menu`, `btn_speed`, `dbg_menu`), registradas em código (`Controls`). Os controles virtuais injetam `InputEventAction`, então o resto do jogo não distingue toque, teclado ou gamepad.
+- **Teclado:** setas/WASD; A = Z/Espaço/Enter; B = X/Backspace/Shift; MENU = Esc/C; 2x = F/Tab; debug = F1. **Gamepad:** D-pad/analógico; A/B; Start = MENU; RB = 2x; Select = debug.
+- **Toque:** D-pad à esquerda (deslizar troca a direção), A e B à direita, MENU e 2x no topo, com multitoque. O braço do D-pad tem 24 px de base: com a escala inteira, isso passa de 48dp nos aparelhos de referência (teste `test_touch_targets_48dp`). Os controles aparecem ao tocar e somem ao usar teclado ou gamepad (modo "auto"); o debug força "sim/não".
+- **Caixa de diálogo:** com os controles de toque visíveis, ela vai para o topo da tela, para não ficar embaixo do D-pad e dos botões. Sem toque, fica embaixo.
+- **Movimento estilo GBA:** um toque rápido numa direção nova só vira o personagem; segurar anda (0,26 s por tile); B segurado corre (0,13 s por tile).
+- **Botão voltar do Android:** num overlay, equivale a B; no mapa, abre a pausa; no título, sai. Ao ir para segundo plano, o jogo salva e abre a pausa.
+
+### Fast forward
+- **"2x padrão" e o estado do botão são a mesma configuração** (`fast_forward`). O botão alterna e salva, e a opção do menu mostra e muda o mesmo valor. Assim "o estado fica salvo" e "2x padrão" nunca se contradizem.
+- **Menus em tempo real:** a repetição do D-pad nos menus usa `Time.get_ticks_msec()`, então não acelera no 2x. Texto, caminhada, animações, partículas e fades usam o tempo escalado.
+- **Debug 10x substitui o 1x/2x** enquanto estiver ligado (não é salvo).
+
+### Vibração sem permissão extra (contradição resolvida)
+- A especificação pede a opção "Vibração" e restringe as permissões a INTERNET, ACCESS_NETWORK_STATE e AD_ID. `Input.vibrate_handheld` exigiria `VIBRATE`. **Solução:** `Haptics` usa `View.performHapticFeedback` via o singleton `AndroidRuntime` do Godot 4.4+, que não precisa de permissão. Respeita a opção do jogo e também a de toque do sistema.
+
+### Idiomas
+- CSV do Godot em `i18n/ui.csv` e `i18n/dialogue.csv` (`keys,pt_BR,en,es`). Os `.translation` são gerados na importação e não entram no git.
+- Idioma inicial = do aparelho (`pt*` → pt_BR, `es*` → es, `en*` → en; outros → en). A troca acontece na hora: menus e telas reagem a `NOTIFICATION_TRANSLATION_CHANGED`.
+- **Nomes de lugares localizados:** Vila Maré = *Tidemark Village* / *Villa Marea*; Bosque das Raízes = *Rootwood Forest* / *Bosque de las Raíces*; Minas de Cinzas = *Ashen Mines* / *Minas de Ceniza*; Pântano Verde-Musgo = *Mossgreen Marsh* / *Pantano Verdemusgo*; Cidade Murada de Ossório = *Walled City of Ossorio* / *Ciudad Amurallada de Osorio*; Picos Gelados = *Frostbite Peaks* / *Picos Helados*; Deserto dos Ecos = *Desert of Echoes* / *Desierto de los Ecos*.
+- **Espaço de texto:** diálogo = até 3 linhas de 288 px; rótulos de menu = 160 px; valores = 90 px. O teste `test_text_overflow` mede com a fonte real nos 3 idiomas e exige que o PT-BR caiba com 30% de folga. Palavras iguais em PT e EN/ES de propósito (ex.: "Continuar" em espanhol) ficam listadas em `i18n/allow_identical.txt`.
+
+### Save
+- `user://save.json` (JSON indentado, campo `version`). A gravação passa por `save.tmp`, e o save anterior vira `save.bak.json`. Se o principal estiver corrompido, o jogo carrega o backup. As migrações ficam em `SaveGame._migrations` (versão → função); já existe a v0 → v1 como modelo, com teste.
+- O save é automático ao trocar de mapa, ao ir para segundo plano, ao sair para o título e ao fechar o app. As fases 3a+ acrescentam crescimento e recrutamento.
+- **Tempo de jogo por região** em duas medidas: `real` (relógio) e `game` (equivalente a 1x, comparável ao simulador). O menu de debug mostra as duas.
+
+### Debug
+- Só em build de debug (`OS.is_debug_build()`). Abre com 3 toques no logo (título ou painel de pausa) ou F1/Select. Itens das fases 2 e 3 aparecem desativados e marcados com a fase.
+
+### Testes e validação
+- **Runner próprio, sem dependências** (`tests/run_tests.tscn`). Cada `tests/test_*.gd` herda de `test_case.gd`. Os testes usam arquivos próprios de save e configurações, sem tocar no save real.
+- `tools/validate_data.py` implementa todas as regras da seção 12. As regras de espécies, golpes, encontros, cidades e rotas já existem e passam a valer quando os arquivos forem criados (até lá aparecem como PENDENTE). O formato esperado está em `docs/DADOS.md`. `tools/tests/test_validate_data.py` quebra dados de propósito para provar que o validador pega os erros.
+
+### Build Android
+- **Gradle build** (necessário para AAB e para o plugin do AdMob na fase 5) com `min_sdk 24` e `target_sdk 36`, arquiteturas arm64-v8a e armeabi-v7a. O template de build é instalado no CI (`--install-android-build-template`) e não vai para o git.
+- **APK de debug** a cada push, assinado com um keystore de debug gerado no próprio CI. **AAB de release** em tag `v*` ou execução manual, com o keystore vindo de Secrets. O release falha se houver placeholders.
+- **Páginas de 16 KB:** `tools/check_16kb.py` lê os cabeçalhos ELF das `.so` de 64 bits dentro do APK/AAB e falha se algum segmento LOAD tiver alinhamento menor que 16 KB.
+- `config/publisher.json` → `export_presets.cfg`/`project.godot` via `tools/sync_publisher.py`. O CI confere com `--check` e define `version/code` = número do build.
+- **JSON no pacote:** `include_filter="*.json"` nos presets, e `tests/*` e `tools/*` excluídos.
+
+### Créditos e marcas
+- O jogo cita o Godot nos créditos (licença MIT, que exige o aviso de copyright). É obrigação de licença, não propaganda de marca. O texto completo da licença entra na tela de créditos/licenças na fase 6.
