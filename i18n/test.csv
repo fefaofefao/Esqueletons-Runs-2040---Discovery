@@ -1,0 +1,29 @@
+keys,pt_BR,en,es
+TEST_DUMMY_FISICO,Brigão,Brawler,Peleón
+TEST_DUMMY_MAGICO,Bruxo,Wizard,Brujo
+TEST_DUMMY_CURA,Enfermeiro,Medic,Enfermero
+TEST_DUMMY_VENENO,Peçonha,Venom,Ponzoña
+TEST_MOVE_PUNCH,Soco de Palha,Straw Punch,Puño de Paja
+TEST_MOVE_PUNCH_DESC,Golpe simples.,A basic hit.,Golpe sencillo.
+TEST_MOVE_SLAM,Pancada,Slam,Porrazo
+TEST_MOVE_SLAM_DESC,Forte; pode errar.,Strong; may miss.,Fuerte; puede fallar.
+TEST_MOVE_QUICK,Golpe Rápido,Quick Jab,Golpe Veloz
+TEST_MOVE_QUICK_DESC,Age primeiro.,Strikes first.,Ataca primero.
+TEST_MOVE_GUARDBREAK,Quebra-Guarda,Guard Break,Rompeguardia
+TEST_MOVE_GUARDBREAK_DESC,Baixa DEF (50%).,Lowers DEF (50%).,Baja DEF (50%).
+TEST_MOVE_SPARK,Faísca,Spark,Chispa
+TEST_MOVE_SPARK_DESC,Magia simples.,A basic spell.,Magia sencilla.
+TEST_MOVE_STARRAIN,Chuva Astral,Star Rain,Lluvia Astral
+TEST_MOVE_STARRAIN_DESC,Atinge os dois.,Hits both foes.,Golpea a ambos.
+TEST_MOVE_STING,Ferrão,Sting,Aguijón
+TEST_MOVE_STING_DESC,Envenena (60%).,Poisons (60%).,Envenena (60 %).
+TEST_MOVE_TOXICFOG,Névoa Tóxica,Toxic Fog,Niebla Tóxica
+TEST_MOVE_TOXICFOG_DESC,Envenena e baixa VEL.,"Poisons, lowers SPD.","Envenena, baja VEL."
+TEST_MOVE_PATCH,Remendo,Patch Up,Remiendo
+TEST_MOVE_PATCH_DESC,Cura 35% do PV.,Heals 35% HP.,Cura 35% de PS.
+TEST_MOVE_MEND,Curativo,Mend,Vendaje
+TEST_MOVE_MEND_DESC,Cura 40% de 1 aliado.,Heals an ally 40%.,Cura 40% a 1 aliado.
+TEST_MOVE_CLEANSE,Limpeza,Cleanse,Limpieza
+TEST_MOVE_CLEANSE_DESC,Tira o veneno da dupla.,Cures both allies.,Quita el veneno al dúo.
+TEST_MOVE_BULKUP,Fortalecer,Bulk Up,Fortalecer
+TEST_MOVE_BULKUP_DESC,ATQ e MAG +1.,ATK and MAG +1.,ATQ y MAG +1.

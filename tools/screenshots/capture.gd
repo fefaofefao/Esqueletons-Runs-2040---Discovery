@@ -24,6 +24,10 @@ func _ready() -> void:
 	await _shot("00_titulo_intro")
 	await _wait(1.6)
 	await _shot("01_titulo")
+	if "--battle" in OS.get_cmdline_user_args():
+		await _battle_shots()
+		get_tree().quit()
+		return
 	if "--only-title" in OS.get_cmdline_user_args():
 		Controls.tap_action("move_down")
 		await _wait(0.4)
@@ -115,3 +119,49 @@ func _shot(shot_name: String) -> void:
 	var img := get_viewport().get_texture().get_image()
 	img.save_png(out_dir.path_join(shot_name + ".png"))
 	print("captura: ", shot_name, " ", img.get_size())
+
+
+func _battle_shots() -> void:
+	Game.start_new_game("Téo")
+	await _wait(1.0)
+	var party := []
+	for sp in ["teste_fisico", "teste_magico", "teste_cura", "teste_veneno"]:
+		party.append(Monster.create(sp, 12).to_dict())
+	SaveGame.data["party"] = party
+	SaveGame.data["bag"] = {"pocao_p": 3, "antidoto": 2, "reviver": 1}
+	if "--touch" in OS.get_cmdline_user_args():
+		Settings.set_value("touch_controls", "on")
+	Game.start_battle({"kind": "wild", "seed": 5, "enemies": [["teste_magico", 11], ["teste_veneno", 12]]})
+	await _wait(1.0)
+	await _shot("b1_intro")
+	await _wait(4.0)
+	await _shot("b2_anel")
+	Controls.tap_action("move_right")
+	await _wait(0.3)
+	await _shot("b3_anel_itens")
+	Controls.tap_action("move_up")
+	await _wait(0.2)
+	Controls.tap_action("btn_a")
+	await _wait(0.4)
+	await _shot("b4_golpes")
+	Controls.tap_action("move_right")
+	await _wait(0.2)
+	Controls.tap_action("btn_a")
+	await _wait(0.4)
+	await _shot("b5_alvo")
+	Controls.tap_action("btn_a")
+	await _wait(0.5)
+	Controls.tap_action("btn_a")
+	await _wait(0.3)
+	Controls.tap_action("btn_a")
+	await _wait(0.3)
+	Controls.tap_action("btn_a")
+	await _wait(1.3)
+	await _shot("b6_rodada")
+	await _wait(2.5)
+	await _shot("b7_rodada2")
+	await _wait(10.0)
+	await _shot("b8_depois")
+	Game.battle.debug_win()
+	await _wait(4.0)
+	await _shot("b9_fim")

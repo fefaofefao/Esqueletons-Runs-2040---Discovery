@@ -52,7 +52,7 @@ pointing/emulate_touch_from_mouse=true
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://i18n/ui.pt_BR.translation", "res://i18n/ui.en.translation", "res://i18n/ui.es.translation", "res://i18n/dialogue.pt_BR.translation", "res://i18n/dialogue.en.translation", "res://i18n/dialogue.es.translation")
+locale/translations=PackedStringArray("res://i18n/ui.pt_BR.translation", "res://i18n/ui.en.translation", "res://i18n/ui.es.translation", "res://i18n/dialogue.pt_BR.translation", "res://i18n/dialogue.en.translation", "res://i18n/dialogue.es.translation", "res://i18n/battle.pt_BR.translation", "res://i18n/battle.en.translation", "res://i18n/battle.es.translation", "res://i18n/test.pt_BR.translation", "res://i18n/test.en.translation", "res://i18n/test.es.translation")
 locale/fallback="en"
 
 [physics]

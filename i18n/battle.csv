@@ -1,0 +1,93 @@
+keys,pt_BR,en,es
+BTL_WILD_APPEARS,Um {name} selvagem apareceu!,A wild {name} appeared!,¡Apareció un {name} salvaje!
+BTL_WILD_APPEARS_2,{a} e {b} selvagens apareceram!,Wild {a} and {b} appeared!,¡Aparecieron {a} y {b} salvajes!
+BTL_TAMER_CHALLENGE,{tamer} quer batalhar!,{tamer} wants to battle!,¡{tamer} quiere pelear!
+BTL_TAMER_SENDS,{tamer} enviou {name}!,{tamer} sent out {name}!,¡{tamer} sacó a {name}!
+BTL_TAMER_DEFAULT,O domador,The tamer,El domador
+BTL_GO,"Vai, {name}!","Go, {name}!","¡Adelante, {name}!"
+BTL_COME_BACK,"Volte, {name}!","Come back, {name}!","¡Vuelve, {name}!"
+BTL_USED,{user} usou {move}!,{user} used {move}!,¡{user} usó {move}!
+BTL_MISS,{user} errou!,{user} missed!,¡{user} falló!
+BTL_NO_TARGET,Não havia alvo.,There was no target.,No había objetivo.
+BTL_CRIT,Golpe crítico!,A critical hit!,¡Golpe crítico!
+BTL_EFF_STRONG_MSG,É forte!,It's strong!,¡Es fuerte!
+BTL_EFF_WEAK_MSG,Não foi muito eficaz…,It wasn't very effective…,No fue muy eficaz…
+BTL_POISONED,{name} foi envenenado!,{name} was poisoned!,¡{name} fue envenenado!
+BTL_ALREADY_POISONED,{name} já está envenenado.,{name} is already poisoned.,{name} ya está envenenado.
+BTL_POISON_TICK,{name} sofre com o veneno.,{name} is hurt by poison.,{name} sufre por el veneno.
+BTL_POISON_END,O veneno de {name} passou.,{name}'s poison wore off.,El veneno de {name} pasó.
+BTL_STAT_UP,{stat} de {name} subiu!,{name}'s {stat} rose!,¡{stat} de {name} subió!
+BTL_STAT_DOWN,{stat} de {name} caiu!,{name}'s {stat} fell!,¡{stat} de {name} bajó!
+BTL_STAT_MAX,{stat} de {name} não sobe mais.,{name}'s {stat} won't go higher.,{stat} de {name} no sube más.
+BTL_STAT_MIN,{stat} de {name} não cai mais.,{name}'s {stat} won't go lower.,{stat} de {name} no baja más.
+BTL_HEALED,{name} recuperou {n} PV.,{name} recovered {n} HP.,{name} recuperó {n} PS.
+BTL_CURED,{name} está livre do veneno.,{name} is free of poison.,{name} ya no está envenenado.
+BTL_REVIVED,{name} voltou à batalha!,{name} is back in the fight!,¡{name} volvió a la batalla!
+BTL_ITEM_USED,Você usou {item} em {name}.,You used {item} on {name}.,Usaste {item} en {name}.
+BTL_NO_ITEMS,Não foi possível usar o item.,The item couldn't be used.,No se pudo usar el objeto.
+BTL_FAINT,{name} caiu!,{name} went down!,¡{name} cayó!
+BTL_XP,{name} ganhou {n} de XP!,{name} gained {n} XP!,¡{name} ganó {n} de EXP!
+BTL_LEVEL_UP,{name} subiu para o nível {n}!,{name} grew to level {n}!,¡{name} subió al nivel {n}!
+BTL_LEARNED,{name} aprendeu {move}!,{name} learned {move}!,¡{name} aprendió {move}!
+BTL_LEARN_PROMPT,"{name} quer aprender {move}, mas já sabe 4 golpes.","{name} wants to learn {move}, but already knows 4 moves.","{name} quiere aprender {move}, pero ya sabe 4 golpes."
+BTL_LEARN_TITLE,Esquecer qual golpe?,Forget which move?,¿Qué golpe olvidar?
+BTL_LEARN_GIVE_UP,Não aprender,Don't learn,No aprender
+BTL_DID_NOT_LEARN,{name} não aprendeu {move}.,{name} did not learn {move}.,{name} no aprendió {move}.
+BTL_FLED,Fugiu sem problemas!,Got away safely!,¡Escapaste sin problemas!
+BTL_FLEE_FAILED,Não deu para fugir!,Couldn't get away!,¡No pudiste escapar!
+BTL_CANT_FLEE,Não dá para fugir de um domador!,You can't run from a tamer!,¡No puedes huir de un domador!
+BTL_WIN,Você venceu!,You won!,¡Ganaste!
+BTL_MONEY,Você recebeu {n} moedas.,You received {n} coins.,Recibiste {n} monedas.
+BTL_LOSE,Sua equipe caiu…,Your team went down…,Tu equipo cayó…
+BTL_LOSE_MONEY,Você perdeu {n} moedas e voltou para descansar.,You lost {n} coins and went back to rest.,Perdiste {n} monedas y volviste a descansar.
+BTL_NO_PARTY,Você ainda não tem esqueletos na equipe.,You don't have any skeletons on your team yet.,Aún no tienes esqueletos en tu equipo.
+BTL_RING_MOVES,Golpes,Moves,Golpes
+BTL_RING_ITEMS,Itens,Items,Objetos
+BTL_RING_SWITCH,Trocar,Switch,Cambiar
+BTL_RING_FLEE,Fugir,Run,Huir
+BTL_REPEAT,Repetir turno,Repeat turn,Repetir turno
+BTL_LEVEL_SHORT,Nv{n},Lv{n},Nv{n}
+BTL_PREVIEW_STATS,Poder {p} · {acc}%,Power {p} · {acc}%,Poder {p} · {acc}%
+BTL_EFF_STRONG,Forte,Strong,Fuerte
+BTL_EFF_NORMAL,Normal,Normal,Normal
+BTL_EFF_WEAK,Fraco,Weak,Débil
+BTL_TARGET_ENEMY,Alvo: 1 inimigo,Target: 1 foe,Blanco: 1 rival
+BTL_TARGET_ALL_ENEMIES,Alvo: inimigos,Target: all foes,Blanco: los rivales
+BTL_TARGET_SELF,Alvo: si mesmo,Target: self,Blanco: sí mismo
+BTL_TARGET_ALLY,Alvo: 1 aliado,Target: 1 ally,Blanco: 1 aliado
+BTL_TARGET_ALL_ALLIES,Alvo: a dupla,Target: both allies,Blanco: el dúo
+BTL_SWITCH_TITLE,Trocar por quem?,Switch to whom?,¿Cambiar por quién?
+BTL_CHOOSE_REPLACEMENT,Quem entra no lugar?,Who steps in?,¿Quién entra?
+BTL_ITEMS_TITLE,Usar qual item?,Use which item?,¿Qué objeto usar?
+BTL_ITEM_TARGET,Em quem?,On whom?,¿En quién?
+BTL_STRUGGLE,Debater-se,Flail,Forcejeo
+BTL_STRUGGLE_DESC,Sem PP: golpe fraco.,No PP: a weak hit.,Sin PP: golpe débil.
+TYPE_FISICO,Físico,Physical,Físico
+TYPE_MAGICO,Mágico,Magic,Mágico
+TYPE_CURA,Cura,Healing,Cura
+TYPE_VENENO,Veneno,Poison,Veneno
+STAT_HP,PV,HP,PS
+STAT_ATK,ATQ,ATK,ATQ
+STAT_MAG,MAG,MAG,MAG
+STAT_DEF,DEF,DEF,DEF
+STAT_RES,RES,RES,RES
+STAT_SPD,VEL,SPD,VEL
+ITEM_POTION_S,Poção P,Small Potion,Poción P
+ITEM_POTION_S_DESC,Cura 30 PV.,Heals 30 HP.,Cura 30 PS.
+ITEM_POTION_M,Poção M,Potion,Poción M
+ITEM_POTION_M_DESC,Cura 80 PV.,Heals 80 HP.,Cura 80 PS.
+ITEM_POTION_L,Poção G,Large Potion,Poción G
+ITEM_POTION_L_DESC,Cura 200 PV.,Heals 200 HP.,Cura 200 PS.
+ITEM_ANTIDOTE,Antídoto,Antidote,Antídoto
+ITEM_ANTIDOTE_DESC,Tira o veneno.,Cures poison.,Quita el veneno.
+ITEM_REVIVE,Reviver,Revive,Revivir
+ITEM_REVIVE_DESC,Revive com metade do PV.,Revives with half HP.,Revive con la mitad de PS.
+DBG_TEST_BATTLE,Batalha de teste,Test battle,Batalla de prueba
+DBG_TEST_TEAM,Equipe de teste,Test team,Equipo de prueba
+DBG_TEAM_GIVEN,Equipe de teste e itens na bolsa.,Test team and items added.,Equipo de prueba y objetos añadidos.
+DBG_BATTLE_WILD1,Selvagem (1),Wild (1),Salvaje (1)
+DBG_BATTLE_WILD2,Selvagens (2),Wild (2),Salvajes (2)
+DBG_BATTLE_TAMER,Domador (3),Tamer (3),Domador (3)
+DBG_BATTLE_BOSS,"Chefe (2, +4 níveis)","Boss (2, +4 levels)","Jefe (2, +4 niveles)"
+DBG_TAMER_NAME,Domador de Teste,Test Tamer,Domador de Prueba
+DBG_BOSS_NAME,Chefe de Teste,Test Boss,Jefe de Prueba

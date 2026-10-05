@@ -13,6 +13,8 @@ const MIN_DP := 48.0
 const MARGIN := 6.0
 
 var world_mode := false
+## Na batalha tudo é tocável: some o D-pad e o A/B, ficam MENU (repetir) e 2x.
+var battle_mode := false
 var ui_scale := 1
 
 var _dpad: TextureRect
@@ -73,6 +75,11 @@ func set_world_mode(value: bool) -> void:
 	_refresh_visibility()
 
 
+func set_battle_mode(value: bool) -> void:
+	battle_mode = value
+	_refresh_visibility()
+
+
 func pad_visible() -> bool:
 	return _dpad != null and _dpad.visible
 
@@ -89,7 +96,7 @@ func _want_pad() -> bool:
 func _refresh_visibility() -> void:
 	if _dpad == null:
 		return
-	var pad := world_mode and _want_pad()
+	var pad := world_mode and _want_pad() and not battle_mode
 	for n in [_dpad, _a, _b]:
 		n.visible = pad
 	_glow.visible = false

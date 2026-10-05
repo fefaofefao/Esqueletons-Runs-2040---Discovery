@@ -13,6 +13,7 @@ var world: World = null
 var overlays: Array[Overlay] = []
 var transitioning := false
 var touch: TouchControls = null
+var battle: BattleScreen = null
 
 var _screen_root: Node
 var _overlay_layer: CanvasLayer
@@ -171,7 +172,83 @@ func _update_pause() -> void:
 
 
 func world_input_enabled() -> bool:
-	return world != null and overlays.is_empty() and not transitioning
+	return world != null and overlays.is_empty() and not transitioning and battle == null
+
+
+# ------------------------------------------------------------------ batalha
+## Abre uma batalha por cima do mapa e espera o resultado ("win", "lose", "fled").
+## info: ver BattleScreen.setup. A equipe vem do save e volta para ele no fim.
+func start_battle(info: Dictionary) -> String:
+	if battle != null or world == null:
+		return ""
+	var party: Array = []
+	for d in SaveGame.data.get("party", []):
+		party.append(Monster.from_dict(d))
+	if party.filter(func(m: Monster) -> bool: return not m.is_fainted()).is_empty():
+		await show_message("BTL_NO_PARTY")
+		return ""
+	if not SaveGame.data.has("bag"):
+		SaveGame.data["bag"] = {}
+	transitioning = true
+	Controls.clear()
+	await _battle_flash()
+	battle = BattleScreen.new().setup(info, party, SaveGame.data["bag"])
+	world.visible = false
+	if touch:
+		touch.set_battle_mode(true)
+	main.add_child(battle)
+	var tw := create_tween()
+	tw.tween_property(_fade, "color:a", 0.0, FADE_TIME)
+	await tw.finished
+	_fade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	transitioning = false
+	var result: String = await battle.finished
+	SaveGame.data["party"] = party.map(func(m: Monster) -> Dictionary: return m.to_dict())
+	if result == "lose":
+		_apply_defeat(party)
+	transitioning = true
+	_fade.mouse_filter = Control.MOUSE_FILTER_STOP
+	var tw2 := create_tween()
+	tw2.tween_property(_fade, "color:a", 1.0, FADE_TIME)
+	await tw2.finished
+	battle.queue_free()
+	battle = null
+	world.visible = true
+	if touch:
+		touch.set_battle_mode(false)
+	if result == "lose":
+		var r: Dictionary = SaveGame.data.get("respawn", {})
+		var map_id := str(r.get("map", "praia_despertar"))
+		world.load_map(map_id, Vector2i(int(r.get("x", -1)), int(r.get("y", -1))), str(r.get("facing", "down")))
+	var tw3 := create_tween()
+	tw3.tween_property(_fade, "color:a", 0.0, FADE_TIME)
+	await tw3.finished
+	_fade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	transitioning = false
+	autosave()
+	if result == "lose":
+		await show_message("BTL_LOSE_MONEY", {"n": int(SaveGame.data.get("last_money_loss", 0))})
+	return result
+
+
+func _battle_flash() -> void:
+	_fade.mouse_filter = Control.MOUSE_FILTER_STOP
+	var tw := create_tween()
+	for i in 3:
+		tw.tween_property(_fade, "color", Color(1, 1, 1, 0.85), 0.06)
+		tw.tween_property(_fade, "color", Color(1, 1, 1, 0.0), 0.08)
+	tw.tween_property(_fade, "color", Color(0.06, 0.05, 0.08, 1.0), 0.22)
+	await tw.finished
+
+
+## Derrota: perde parte das moedas, a equipe é curada e volta ao último ponto seguro.
+func _apply_defeat(party: Array) -> void:
+	var loss := int(int(SaveGame.data.get("money", 0)) * float(Data.battle_rules().get("defeat", {}).get("money_loss", 0.1)))
+	SaveGame.data["money"] = int(SaveGame.data.get("money", 0)) - loss
+	SaveGame.data["last_money_loss"] = loss
+	for m in party:
+		m.heal_full()
+	SaveGame.data["party"] = party.map(func(m: Monster) -> Dictionary: return m.to_dict())
 
 
 # ------------------------------------------------------------------ atalhos
@@ -241,6 +318,8 @@ func _on_back() -> void:
 	var top := top_overlay()
 	if top:
 		top.on_back()
+	elif battle:
+		Controls.tap_action("btn_b")
 	elif world:
 		open_pause()
 	else:

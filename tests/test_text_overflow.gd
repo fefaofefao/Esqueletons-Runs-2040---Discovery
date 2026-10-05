@@ -5,7 +5,7 @@ extends "res://tests/test_case.gd"
 const LANGS := ["pt_BR", "en", "es"]
 ## Textos exibidos na caixa de diálogo (até 3 linhas de 288 px).
 const DIALOG_PREFIXES := ["DLG_", "SIGN_", "OBJ_", "MSG_", "CREDITS_"]
-const DIALOG_KEYS := ["SET_PRIVACY_INFO", "ABOUT_PRIVACY_PENDING", "DBG_TIMES_EMPTY", "DBG_SAVE_DELETED"]
+const DIALOG_KEYS := ["DBG_TEAM_GIVEN", "SET_PRIVACY_INFO", "ABOUT_PRIVACY_PENDING", "DBG_TIMES_EMPTY", "DBG_SAVE_DELETED"]
 ## Perguntas da ChoiceBox (206 px, até 4 linhas).
 const CHOICE_PREFIXES := ["CONFIRM_"]
 ## Nomes de lugares (letreiro e teleporte do debug).
@@ -14,7 +14,15 @@ const PLACE_WIDTH := 240.0
 ## Valores exibidos como "< valor >" na coluna de valores.
 const VALUE_PREFIXES := ["LANG_NAME_", "VAL_", "SET_TEXT_SLOW", "SET_TEXT_NORMAL", "SET_TEXT_FAST"]
 ## Fora do teste (texto montado com dados de fora ou só de debug).
-const SKIP_KEYS := ["DBG_TIMES_BODY", "ABOUT_VERSION", "ABOUT_PRODUCER", "ABOUT_CONTACT", "ABOUT_SITE", "NAME_DEFAULT", "SPK_BENTO"]
+## Batalha: mensagens (log de 3 linhas), prévia do golpe, descrições e listas.
+const BATTLE_LOG_PREFIXES := ["BTL_WILD", "BTL_TAMER_", "BTL_GO", "BTL_COME", "BTL_USED", "BTL_MISS", "BTL_NO_", "BTL_CRIT",
+	"BTL_EFF_STRONG_MSG", "BTL_EFF_WEAK_MSG", "BTL_POISON", "BTL_ALREADY", "BTL_STAT_", "BTL_HEALED", "BTL_CURED",
+	"BTL_REVIVED", "BTL_ITEM_USED", "BTL_FAINT", "BTL_XP", "BTL_LEVEL_UP", "BTL_LEARNED", "BTL_LEARN_PROMPT",
+	"BTL_DID_NOT", "BTL_FLED", "BTL_FLEE", "BTL_CANT", "BTL_WIN", "BTL_MONEY", "BTL_LOSE"]
+const PREVIEW_PREFIXES := ["TYPE_", "BTL_PREVIEW_STATS", "BTL_EFF_STRONG", "BTL_EFF_NORMAL", "BTL_EFF_WEAK", "BTL_TARGET_"]
+## Nome de esqueleto/golpe no pior caso para as mensagens da batalha.
+const WORST_UNIT := "Wwwwwwwwwww"
+const SKIP_KEYS := ["BTL_LOSE_MONEY", "BTL_NO_PARTY", "DBG_TIMES_BODY", "ABOUT_VERSION", "ABOUT_PRODUCER", "ABOUT_CONTACT", "ABOUT_SITE", "NAME_DEFAULT", "SPK_BENTO"]
 ## Pior caso do nome do jogador (10 caracteres largos).
 const WORST_NAME := "WWWWWWWWWW"
 
@@ -27,7 +35,8 @@ func _has_prefix(key: String, prefixes: Array) -> bool:
 
 
 func _fill(text: String) -> String:
-	return text.format({"player": WORST_NAME, "n": 3})
+	return text.format({"player": WORST_NAME, "n": 30, "name": WORST_UNIT, "user": WORST_UNIT, "a": WORST_UNIT, "b": WORST_UNIT,
+		"move": "Wwwwwwwwwww", "item": "Wwwwwwwww", "tamer": "Wwwwwwwwwwwww", "stat": "WWW", "p": 100, "acc": 100})
 
 
 func test_texts_fit() -> void:
@@ -38,7 +47,14 @@ func test_texts_fit() -> void:
 		for lang in LANGS:
 			var text := _fill(str(all[key][lang]))
 			var is_pt: bool = lang == "pt_BR"
-			if _has_prefix(key, DIALOG_PREFIXES) or key in DIALOG_KEYS:
+			if key.ends_with("_DESC"):
+				_check_width(key, lang, text, MovePanel.DESC_WIDTH, is_pt)
+			elif key.begins_with("BTL_EFF_") and key.ends_with("_MSG") or (_has_prefix(key, BATTLE_LOG_PREFIXES) and not _has_prefix(key, PREVIEW_PREFIXES)):
+				var lines := TextFit.wrap_lines(text, BattleLog.TEXT_WIDTH).size()
+				check(lines <= BattleLog.LINES, "%s [%s] usa %d linhas no log da batalha" % [key, lang, lines])
+			elif _has_prefix(key, PREVIEW_PREFIXES):
+				_check_width(key, lang, text, MovePanel.PREVIEW_TEXT_WIDTH - (11.0 if key.begins_with("TYPE_") else 0.0), is_pt)
+			elif _has_prefix(key, DIALOG_PREFIXES) or key in DIALOG_KEYS:
 				var lines := TextFit.wrap_lines(text, UiTheme.DIALOG_TEXT_WIDTH).size()
 				check(lines <= UiTheme.DIALOG_LINES, "%s [%s] usa %d linhas (máx. %d)" % [key, lang, lines, UiTheme.DIALOG_LINES])
 				if is_pt and not key.begins_with("DBG_"):
@@ -94,3 +110,13 @@ func test_title_buttons_fit() -> void:
 			check(w <= spec[2], "título: %s [%s] %.1f > %.1f" % [spec[0], lang, w, spec[2]])
 			if lang == "pt_BR":
 				check(w * UiTheme.TEXT_GROWTH <= spec[2], "título: %s [pt_BR] sem 30%% de folga (%.1f)" % [spec[0], w])
+
+
+## Nomes de esqueletos (bonecos de teste e, na fase 3, as espécies) cabem na caixa da batalha.
+func test_species_names_fit_panel() -> void:
+	var all := all_translations()
+	for id in Data.all_species_ids():
+		var key := str(Data.species(id).get("name_key", ""))
+		for lang in LANGS:
+			var name := str(all.get(key, {}).get(lang, ""))
+			check(UiTheme.text_width(name) <= UnitPanel.NAME_WIDTH, "nome %s [%s] '%s' não cabe na caixa (%.0f px)" % [id, lang, name, UiTheme.text_width(name)])

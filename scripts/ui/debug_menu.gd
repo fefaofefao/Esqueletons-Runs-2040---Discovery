@@ -34,7 +34,6 @@ func _ready() -> void:
 func _show_main() -> void:
 	_submenu = ""
 	_title.text = tr("DBG_TITLE")
-	var phase2 := tr("DBG_PHASE").format({"n": 2})
 	var phase3 := tr("DBG_PHASE").format({"n": 3})
 	_menu.set_items([
 		{"id": "teleport", "key": "DBG_TELEPORT", "enabled": Game.world != null},
@@ -43,11 +42,14 @@ func _show_main() -> void:
 		{"id": "encounters", "key": "DBG_ENCOUNTERS", "value": func() -> String: return _onoff(DebugDraw.show_encounters)},
 		{"id": "touch", "key": "DBG_TOUCH", "value": func() -> String: return tr("VAL_" + str(Settings.get_value("touch_controls")).to_upper())},
 		{"id": "times", "key": "DBG_TIMES"},
-		{"id": "level", "key": "DBG_SET_LEVEL", "enabled": false, "suffix": phase2},
+		{"id": "battle", "key": "DBG_TEST_BATTLE", "enabled": Game.world != null and Game.battle == null},
+		{"id": "team", "key": "DBG_TEST_TEAM", "enabled": Game.world != null and Game.battle == null},
+		{"id": "level", "key": "DBG_SET_LEVEL", "enabled": not SaveGame.data.get("party", []).is_empty() and Game.battle == null,
+			"value": func() -> String: return str(_party_level())},
 		{"id": "add", "key": "DBG_ADD_SKELETON", "enabled": false, "suffix": phase3},
 		{"id": "golden", "key": "DBG_FORCE_GOLDEN", "enabled": false, "suffix": phase3},
 		{"id": "growth", "key": "DBG_FORCE_GROWTH", "enabled": false, "suffix": phase3},
-		{"id": "win", "key": "DBG_WIN_BATTLE", "enabled": false, "suffix": phase2},
+		{"id": "win", "key": "DBG_WIN_BATTLE", "enabled": Game.battle != null},
 		{"id": "save", "key": "DBG_SAVE_NOW", "enabled": Game.world != null},
 		{"id": "wipe", "key": "DBG_DELETE_SAVE"},
 		{"id": "close", "key": "DBG_CLOSE"},
@@ -69,12 +71,71 @@ func _show_teleport() -> void:
 	_menu.set_items(items)
 
 
+func _show_battles() -> void:
+	_submenu = "battle"
+	_title.text = tr("DBG_TEST_BATTLE")
+	_menu.set_items([
+		{"id": "wild1", "key": "DBG_BATTLE_WILD1"},
+		{"id": "wild2", "key": "DBG_BATTLE_WILD2"},
+		{"id": "tamer", "key": "DBG_BATTLE_TAMER"},
+		{"id": "boss", "key": "DBG_BATTLE_BOSS"},
+		{"id": "_back", "key": "SET_BACK"},
+	])
+
+
+func _party_level() -> int:
+	var p: Array = SaveGame.data.get("party", [])
+	return int(p[0].get("level", 1)) if not p.is_empty() else 0
+
+
+const TEST_BATTLES := {
+	"wild1": {"kind": "wild", "enemies": [["teste_veneno", 0]]},
+	"wild2": {"kind": "wild", "enemies": [["teste_magico", 0], ["teste_fisico", -1]]},
+	"tamer": {"kind": "tamer", "tamer_key": "DBG_TAMER_NAME", "reward": 300,
+		"enemies": [["teste_fisico", 1], ["teste_cura", 0], ["teste_veneno", 1]]},
+	"boss": {"kind": "boss", "tamer_key": "DBG_BOSS_NAME", "reward": 1000,
+		"enemies": [["teste_magico", 4], ["teste_cura", 4]]},
+}
+
+
+func _start_test_battle(id: String) -> void:
+	var info: Dictionary = TEST_BATTLES[id].duplicate(true)
+	var lvl := maxi(2, _party_level())
+	for e in info.enemies:
+		e[1] = clampi(lvl + int(e[1]), 1, 50)
+	close()
+	Game.start_battle(info)
+
+
+func _give_test_team() -> void:
+	var lvl := maxi(_party_level(), 10)
+	var party := []
+	for sp in ["teste_fisico", "teste_magico", "teste_cura", "teste_veneno"]:
+		party.append(Monster.create(sp, lvl).to_dict())
+	SaveGame.data["party"] = party
+	var bag: Dictionary = SaveGame.data.get("bag", {})
+	for it in ["pocao_p", "pocao_m", "antidoto", "reviver"]:
+		bag[it] = int(bag.get(it, 0)) + 3
+	SaveGame.data["bag"] = bag
+
+
+func _set_party_level(lvl: int) -> void:
+	var party := []
+	for d in SaveGame.data.get("party", []):
+		var m := Monster.create(str(d.get("species", "")), lvl, bool(d.get("golden", false)))
+		m.uid = int(d.get("uid", m.uid))
+		party.append(m.to_dict())
+	SaveGame.data["party"] = party
+
+
 func _onoff(v: bool) -> String:
 	return tr("VAL_ON") if v else tr("VAL_OFF")
 
 
-func _on_value_step(id: String, _dir: int) -> void:
+func _on_value_step(id: String, dir: int) -> void:
 	match id:
+		"level":
+			_set_party_level(clampi(_party_level() + 5 * dir, 1, 50))
 		"speed10":
 			Speed.set_debug_multiplier(1.0 if Speed.debug_multiplier > 1.0 else 10.0)
 		"radii":
@@ -88,6 +149,12 @@ func _on_value_step(id: String, _dir: int) -> void:
 
 
 func _on_activated(id: String) -> void:
+	if _submenu == "battle":
+		if id == "_back":
+			_show_main()
+		else:
+			_start_test_battle(id)
+		return
 	if _submenu == "teleport":
 		if id == "_back":
 			_show_main()
@@ -100,6 +167,15 @@ func _on_activated(id: String) -> void:
 	match id:
 		"teleport":
 			_show_teleport()
+		"battle":
+			_show_battles()
+		"team":
+			_give_test_team()
+			await Game.show_message("DBG_TEAM_GIVEN")
+			_show_main()
+		"win":
+			close()
+			Game.battle.debug_win()
 		"times":
 			await Game.show_message("DBG_TIMES_BODY", {"lines": _times_text()})
 		"save":

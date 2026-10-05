@@ -64,6 +64,7 @@ static func new_game_data(player_name: String) -> Dictionary:
 		"bag": {},
 		"money": 0,
 		"ossuary": {},
+		"respawn": {"map": "praia_despertar", "x": -1, "y": -1, "facing": "down"},
 	}
 
 

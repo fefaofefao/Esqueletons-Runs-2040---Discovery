@@ -34,6 +34,7 @@ static func read_csv(path: String) -> Dictionary:
 
 static func all_translations() -> Dictionary:
 	var out := {}
-	for p in ["res://i18n/ui.csv", "res://i18n/dialogue.csv"]:
-		out.merge(read_csv(p))
+	for f in DirAccess.get_files_at("res://i18n"):
+		if f.ends_with(".csv"):
+			out.merge(read_csv("res://i18n/" + f))
 	return out
