@@ -45,9 +45,9 @@ Centralize tudo em **`config/publisher.json`**. Os campos de contato serão pree
 | Campo | Valor |
 |---|---|
 | Nome do jogo | Esqueletons Runs 2040 — Edição Discovery (1º jogo da série *Esqueletons Runs 2040*) |
-| Produtora / desenvolvedor | `[NOME DA PRODUTORA]` |
-| Responsável | Fernando `[SOBRENOME]` |
-| E-mail de contato e suporte | `[EMAIL]` |
+| Produtora / desenvolvedor | FSamp Labs |
+| Responsável | Fernando Martins Sampaio |
+| E-mail de contato e suporte | fe.m.sampaio@hotmail.com |
 | Site (app-ads.txt e política) | `[URL]` |
 | Package name | `com.fsamplabs.esqueletonsruns2040.discovery` |
 | Plataforma | Android / Google Play (AAB) |

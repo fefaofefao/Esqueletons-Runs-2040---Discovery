@@ -41,7 +41,7 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 
 ### Pendências e observações
 - **Package name** `com.fsamplabs.esqueletonsruns2040.discovery`: confirmar antes da primeira publicação (não muda depois).
-- `config/publisher.json` ainda tem placeholders (produtora, sobrenome, e-mail, site). O release fica bloqueado até preencher.
+- `config/publisher.json`: produtora (FSamp Labs), responsável e e-mail preenchidos. Falta só o **site** (usado na política de privacidade e no app-ads.txt). O release fica bloqueado até preencher.
 - Os diálogos do Bento e os objetos da cabana são provisórios. A fase 4a escreve `docs/roteiro/00_arco.md` e o roteiro do Prólogo, e eles podem ser substituídos.
 - Música: nenhuma ainda (fase 6). O sistema de áudio já tem barramentos Music/SFX e volume.
 - Vibração usa `performHapticFeedback` (sem permissão extra). Precisa ser conferida num aparelho real.
