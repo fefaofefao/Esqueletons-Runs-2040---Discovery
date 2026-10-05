@@ -16,6 +16,14 @@ ALLOWED = {
     "android.permission.ACCESS_NETWORK_STATE",
     "com.google.android.gms.permission.AD_ID",
 }
+# Permissões "normais" (sem pedido ao jogador, sem acesso a dados) que o
+# WorkManager, usado internamente pelo SDK de anúncios, declara. Removê-las pode
+# derrubar o app; ficam aceitas e listadas no aviso (ver docs/DECISOES.md).
+LIBRARY_NORMAL = {
+    "android.permission.WAKE_LOCK",
+    "android.permission.RECEIVE_BOOT_COMPLETED",
+    "android.permission.FOREGROUND_SERVICE",
+}
 
 
 def main():
@@ -36,7 +44,10 @@ def main():
     if min_sdk != 24:
         errors.append(f"minSdk {min_sdk} != 24")
     # permissões que o próprio Android adiciona a apps com targetSdk alto são internas do app
-    extra = {p for p in perms - ALLOWED if not p.endswith(".DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION")}
+    lib = perms & LIBRARY_NORMAL
+    if lib:
+        print("aviso: permissões normais de biblioteca:", ", ".join(sorted(lib)))
+    extra = {p for p in perms - ALLOWED - LIBRARY_NORMAL if not p.endswith(".DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION")}
     if extra:
         errors.append(f"permissões não permitidas: {sorted(extra)}")
     for e in errors:

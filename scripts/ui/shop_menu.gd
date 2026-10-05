@@ -15,6 +15,7 @@ func setup(id: String) -> ShopMenu:
 
 func _init() -> void:
 	super._init()
+	ad_banner = true
 	pauses_game = true
 
 

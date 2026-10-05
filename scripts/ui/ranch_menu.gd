@@ -11,6 +11,7 @@ var _picked := ""  # "p:i" ou "r:i" aguardando o par para trocar
 
 func _init() -> void:
 	super._init()
+	ad_banner = true
 	pauses_game = true
 
 

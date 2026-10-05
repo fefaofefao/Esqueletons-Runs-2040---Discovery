@@ -177,6 +177,9 @@ func on_touch_wild(w: WildSkeleton) -> void:
 		map.remove_wild(w)
 	elif result == "fled" and is_instance_valid(w):
 		w.stun(3.0)
+	if result == "win":
+		# intersticial: só aqui (vitória selvagem, já no mapa), com as regras de Ads
+		await Ads.maybe_interstitial()
 
 
 func interact(target: Vector2i, dir: Vector2i) -> void:

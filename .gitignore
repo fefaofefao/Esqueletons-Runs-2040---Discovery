@@ -13,3 +13,9 @@ secrets/
 # Python
 __pycache__/
 *.pyc
+
+# AdMob: binários nativos baixados pelo plugin no CI e IDs reais (Secrets)
+addons/admob/android/bin/
+addons/admob/ios/bin/
+addons/admob/downloads/
+config/admob.json

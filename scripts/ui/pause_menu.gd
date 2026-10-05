@@ -9,6 +9,7 @@ var _taps: Array[int] = []
 
 func _init() -> void:
 	super._init()
+	ad_banner = true
 	pauses_game = true
 
 

@@ -575,19 +575,24 @@ func _award_xp(enemy: Monster) -> void:
 		if m.is_fainted():
 			continue
 		var share := float(x.get("participant_share", 1.0)) if parts.has(m.uid) else float(x.get("reserve_share", 0.5))
-		var amount := maxi(1, int(total * share))
-		var old_level: int = m.level
-		var levels: Array = m.gain_xp(amount)
-		_ev("xp", {"target": m.uid, "amount": amount, "levels": levels, "from_level": old_level})
-		for lvl in levels:
-			for mid in Monster.moves_learned_at(m.species_id, lvl):
-				if m.knows(mid):
-					continue
-				if m.moves.size() < 4:
-					m.moves.append({"id": mid, "pp": int(Data.move(mid).get("pp", 10))})
-					_ev("learned", {"target": m.uid, "move": mid})
-				else:
-					_ev("learn_prompt", {"target": m.uid, "move": mid})
+		give_xp(m, maxi(1, int(total * share)))
+
+
+## Dá XP a um aliado (vitória ou o premiado "dobrar a XP"), com subida de idade
+## e golpes novos como eventos para a tela.
+func give_xp(m: Monster, amount: int) -> void:
+	var old_level: int = m.level
+	var levels: Array = m.gain_xp(amount)
+	_ev("xp", {"target": m.uid, "amount": amount, "levels": levels, "from_level": old_level})
+	for lvl in levels:
+		for mid in Monster.moves_learned_at(m.species_id, lvl):
+			if m.knows(mid):
+				continue
+			if m.moves.size() < 4:
+				m.moves.append({"id": mid, "pp": int(Data.move(mid).get("pp", 10))})
+				_ev("learned", {"target": m.uid, "move": mid})
+			else:
+				_ev("learn_prompt", {"target": m.uid, "move": mid})
 
 
 ## Resolve o pedido de aprender golpe (replace_index -1 = não aprender).

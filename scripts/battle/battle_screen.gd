@@ -21,6 +21,8 @@ const RIBBON_SIZE := Vector2(240, 34)
 
 var engine: BattleEngine
 var info: Dictionary = {}
+var _xp_gained: Dictionary = {}     # uid -> XP desta batalha (premiado "dobrar a XP")
+var _ad_offered := false           # no máximo uma oferta de premiado por batalha
 var views := {}
 var cards := {}
 var state := "busy"
@@ -768,6 +770,7 @@ func _play_event(e: Dictionary) -> void:
 			await _say("BTL_FAINT", {"name": _name(int(e.target))})
 		"xp":
 			var m := engine.find(int(e.target))
+			_xp_gained[m.uid] = int(_xp_gained.get(m.uid, 0)) + int(e.amount)
 			await _say("BTL_XP", {"name": m.display_name(), "n": int(e.amount)})
 			for lvl in e.get("levels", []):
 				Audio.sfx("save")
@@ -862,8 +865,11 @@ func _finish() -> void:
 			else:
 				for m in engine.teams[BattleEngine.ENEMY]:
 					Ossuary.entry(m.species_id)["defeated"] = true
+				if str(info.get("kind", "")) != "boss":
+					await _offer_double_xp()
 		"lose":
 			await _say("BTL_LOSE")
+			await _offer_revive()
 	finished.emit(engine.result)
 
 
@@ -884,6 +890,8 @@ func _markers_and_recruits() -> void:
 		var r := Ossuary.register_win(m, _party_level())
 		await _say("RECRUIT_MARKER", {"name": tr(str(m.info().get("name_key", ""))), "a": r.before, "b": r.after})
 		if not r.offer:
+			r = await _offer_marker_bonus(m, r)
+		if not r.offer:
 			continue
 		Audio.sfx("recruit")
 		var preview := Monster.create(r.species, int(r.level), bool(r.golden))
@@ -896,6 +904,56 @@ func _markers_and_recruits() -> void:
 		else:
 			Ossuary.refuse(r.species)
 			await _say("RECRUIT_REFUSED", {"name": preview.display_name()})
+
+
+# ------------------------------------------------------------------ anúncios premiados (sempre opcionais)
+## Pergunta se o jogador quer ver um premiado; true só se ele assistiu até o fim.
+func _ask_rewarded(question: String, args: Dictionary = {}) -> bool:
+	if _ad_offered or not Ads.rewarded_available():
+		return false
+	_ad_offered = true
+	var answer := await ChoiceBox.ask(question, ["AD_WATCH", "AD_SKIP"], args)
+	if answer != 0:
+		return false
+	var granted: bool = await Ads.show_rewarded()
+	if not granted:
+		await _say("AD_NOT_COMPLETED")
+	return granted
+
+
+func _offer_double_xp() -> void:
+	if _xp_gained.is_empty() or not await _ask_rewarded("AD_OFFER_XP"):
+		return
+	engine.events = []
+	for m in engine.teams[BattleEngine.PLAYER]:
+		if _xp_gained.has(m.uid) and not m.is_fainted():
+			engine.give_xp(m, int(_xp_gained[m.uid]))
+	var evs: Array = engine.events
+	engine.events = []
+	await _say("AD_XP_DOUBLED")
+	for e in evs:
+		await _play_event(e)
+
+
+## +25% no marcador da espécie derrotada (nunca mexe na chance de Golden).
+func _offer_marker_bonus(m: Monster, r: Dictionary) -> Dictionary:
+	var name := tr(str(m.info().get("name_key", "")))
+	if not await _ask_rewarded("AD_OFFER_MARKER", {"name": name}):
+		return r
+	var e := Ossuary.entry(m.species_id)
+	var before := int(e["marker"])
+	e["marker"] = mini(100, before + int(Ads.rules.get("rewarded", {}).get("marker_bonus", 25)))
+	await _say("RECRUIT_MARKER", {"name": name, "a": before, "b": int(e["marker"])})
+	r = r.duplicate()
+	r["after"] = int(e["marker"])
+	r["offer"] = int(e["marker"]) >= 100
+	return r
+
+
+func _offer_revive() -> void:
+	if await _ask_rewarded("AD_OFFER_REVIVE"):
+		info["ad_revive"] = true
+		await _say("AD_REVIVE_DONE")
 
 
 ## Vence na hora (menu de debug).

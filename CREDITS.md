@@ -34,3 +34,12 @@ O aviso completo da licença e as licenças de terceiros embutidas no motor ser�
 
 ## Ferramentas de desenvolvimento (não vão no jogo)
 - Python 3 e Pillow (HPND), usados só para gerar a arte.
+
+## Bibliotecas de terceiros
+
+| Biblioteca | Uso | Licença | Origem |
+|---|---|---|---|
+| Godot AdMob Plugin 5.1.0 (Poing Studios) | Anúncios e consentimento (UMP) no Android | MIT (`addons/admob/LICENSE`) | github.com/poing-studios/godot-admob-plugin |
+| Google Mobile Ads SDK e UMP SDK | Baixados pelo plugin no build (não ficam no repositório) | Termos do Google | Google |
+
+A cópia em `addons/admob` é a do release 5.1.0, sem os exemplos, a parte em C# e a documentação; a única mudança é desligar o download dos binários de iOS (só Android é publicado).

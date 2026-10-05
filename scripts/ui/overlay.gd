@@ -7,6 +7,9 @@ signal closed
 
 ## Pausa a árvore enquanto aberto (menu de pausa, configurações no mapa...).
 var pauses_game := false
+## Menu que pode exibir o banner (pausa, Ossário, Rancho, loja): o painel desce
+## para o banner no topo nunca ficar em cima de botões.
+var ad_banner := false
 ## Já fechou (o sinal closed pode ter saído antes de alguém esperar por ele).
 var is_closed := false
 var _opened_frame := -1
@@ -43,6 +46,8 @@ func centered_panel(min_width: float) -> PanelContainer:
 	var center := CenterContainer.new()
 	center.set_anchors_preset(Control.PRESET_FULL_RECT)
 	center.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	if ad_banner:
+		center.offset_top = Ads.banner_inset()
 	add_child(center)
 	var panel := PanelContainer.new()
 	panel.custom_minimum_size.x = min_width

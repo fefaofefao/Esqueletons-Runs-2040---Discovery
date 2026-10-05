@@ -11,6 +11,7 @@ var _ids: Array = []
 
 func _init() -> void:
 	super._init()
+	ad_banner = true
 	pauses_game = true
 
 

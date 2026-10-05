@@ -82,7 +82,12 @@ func _on_value_step(id: String, dir: int) -> void:
 func _on_activated(id: String) -> void:
 	match id:
 		"privacy":
-			# Fase 5: reabre o formulário de consentimento do UMP.
-			await Game.show_message("SET_PRIVACY_INFO")
+			# reabre o formulário de consentimento do UMP (quando o país exige)
+			if Ads.privacy_options_required():
+				await Ads.show_privacy_options()
+			elif Ads.active():
+				await Game.show_message("SET_PRIVACY_NOT_REQUIRED")
+			else:
+				await Game.show_message("SET_PRIVACY_INFO")
 		"back":
 			close()

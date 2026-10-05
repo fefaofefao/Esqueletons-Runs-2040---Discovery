@@ -130,8 +130,16 @@ jobs:
           KS: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
           KS_PASS: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
           KS_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ADMOB_APP_ID: ${{ secrets.ADMOB_APP_ID }}
+          ADMOB_BANNER_ID: ${{ secrets.ADMOB_BANNER_ID }}
+          ADMOB_INTERSTITIAL_ID: ${{ secrets.ADMOB_INTERSTITIAL_ID }}
+          ADMOB_REWARDED_ID: ${{ secrets.ADMOB_REWARDED_ID }}
         run: |
           missing=""
+          [ -z "$ADMOB_APP_ID" ] && missing="$missing ADMOB_APP_ID"
+          [ -z "$ADMOB_BANNER_ID" ] && missing="$missing ADMOB_BANNER_ID"
+          [ -z "$ADMOB_INTERSTITIAL_ID" ] && missing="$missing ADMOB_INTERSTITIAL_ID"
+          [ -z "$ADMOB_REWARDED_ID" ] && missing="$missing ADMOB_REWARDED_ID"
           [ -z "$KS" ] && missing="$missing ANDROID_KEYSTORE_BASE64"
           [ -z "$KS_PASS" ] && missing="$missing ANDROID_KEYSTORE_PASSWORD"
           [ -z "$KS_ALIAS" ] && missing="$missing ANDROID_KEY_ALIAS"
@@ -154,6 +162,14 @@ jobs:
       - name: Versão
         run: python3 tools/sync_publisher.py --version-code ${{ github.run_number }}
 
+      - name: IDs reais do AdMob (Secrets)
+        env:
+          ADMOB_APP_ID: ${{ secrets.ADMOB_APP_ID }}
+          ADMOB_BANNER_ID: ${{ secrets.ADMOB_BANNER_ID }}
+          ADMOB_INTERSTITIAL_ID: ${{ secrets.ADMOB_INTERSTITIAL_ID }}
+          ADMOB_REWARDED_ID: ${{ secrets.ADMOB_REWARDED_ID }}
+        run: python3 tools/admob_ids.py
+
       - name: Exportar AAB de release
         timeout-minutes: 25
         run: |
@@ -165,9 +181,9 @@ jobs:
       - name: Páginas de 16 KB
         run: python3 tools/check_16kb.py build/esqueletons-release.aab
 
-      - name: Apagar keystore
+      - name: Apagar keystore e IDs
         if: always()
-        run: rm -f "$RUNNER_TEMP/release.keystore"
+        run: rm -f "$RUNNER_TEMP/release.keystore" config/admob.json
 
       - uses: actions/upload-artifact@v4
         with:

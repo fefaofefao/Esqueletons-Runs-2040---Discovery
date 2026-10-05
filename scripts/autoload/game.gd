@@ -113,6 +113,8 @@ func _set_screen(node: Node, screen_name: String) -> void:
 
 ## Escurece (out = true) ou clareia a tela, para cenas do roteiro.
 func fade_screen(out: bool, seconds: float = 0.6) -> void:
+	if _fade == null:
+		return
 	_fade.mouse_filter = Control.MOUSE_FILTER_STOP if out else Control.MOUSE_FILTER_IGNORE
 	var tw := create_tween()
 	tw.tween_property(_fade, "color:a", 1.0 if out else 0.0, seconds)
@@ -141,6 +143,8 @@ func _transition(action: Callable, with_fade: bool = true) -> void:
 # ------------------------------------------------------------------ overlays
 func open_overlay(o: Overlay) -> Overlay:
 	o.mark_opened()
+	if o.ad_banner:
+		Ads.banner_push(o)
 	overlays.append(o)
 	if _overlay_layer:
 		_overlay_layer.add_child(o)
@@ -152,6 +156,8 @@ func open_overlay(o: Overlay) -> Overlay:
 
 
 func close_overlay(o: Overlay) -> void:
+	if o.ad_banner:
+		Ads.banner_pop(o)
 	if not overlays.has(o):
 		return
 	overlays.erase(o)
@@ -216,11 +222,12 @@ func start_battle(info: Dictionary) -> String:
 	_fade.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	transitioning = false
 	var result: String = await battle.finished
+	Ads.on_battle_finished()
 	SaveGame.data["party"] = party.map(func(m: Monster) -> Dictionary: return m.to_dict())
 	for rec in battle.recruits:
 		Ossuary.add_to_team(rec)
 	if result == "lose":
-		_apply_defeat(party)
+		_apply_defeat(party, bool(battle.info.get("ad_revive", false)))
 	transitioning = true
 	_fade.mouse_filter = Control.MOUSE_FILTER_STOP
 	var tw2 := create_tween()
@@ -241,7 +248,7 @@ func start_battle(info: Dictionary) -> String:
 	_fade.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	transitioning = false
 	autosave()
-	if result == "lose":
+	if result == "lose" and int(SaveGame.data.get("last_money_loss", 0)) > 0:
 		await show_message("BTL_LOSE_MONEY", {"n": int(SaveGame.data.get("last_money_loss", 0))})
 	else:
 		await run_growths()
@@ -276,8 +283,10 @@ func _battle_flash() -> void:
 
 
 ## Derrota: perde parte das moedas, a equipe é curada e volta ao último ponto seguro.
-func _apply_defeat(party: Array) -> void:
+func _apply_defeat(party: Array, keep_money: bool = false) -> void:
 	var loss := int(int(SaveGame.data.get("money", 0)) * float(Data.battle_rules().get("defeat", {}).get("money_loss", 0.1)))
+	if keep_money:
+		loss = 0  # premiado "reviver sem perder moedas"
 	SaveGame.data["money"] = int(SaveGame.data.get("money", 0)) - loss
 	SaveGame.data["last_money_loss"] = loss
 	for m in party:
