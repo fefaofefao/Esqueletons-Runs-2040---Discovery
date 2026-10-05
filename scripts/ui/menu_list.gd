@@ -8,6 +8,7 @@ extends VBoxContainer
 signal activated(id: String)
 signal cancelled
 signal value_step(id: String, direction: int)
+signal selection_changed(index: int)
 
 const REPEAT_DELAY_MS := 320
 const REPEAT_RATE_MS := 85
@@ -163,6 +164,7 @@ func move_cursor(dir: int) -> void:
 			break
 	if index != start:
 		Audio.sfx("cursor")
+		selection_changed.emit(index)
 	refresh()
 
 
@@ -209,6 +211,8 @@ func _on_row_input(event: InputEvent, i: int) -> void:
 		if not items[i].get("enabled", true):
 			Audio.sfx("bump")
 			return
-		index = i
+		if index != i:
+			index = i
+			selection_changed.emit(index)
 		refresh()
 		activate_current()

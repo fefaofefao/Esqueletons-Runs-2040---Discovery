@@ -89,7 +89,29 @@
    "y": 8
   }
  ],
- "npcs": [],
+ "npcs": [
+  {
+   "id": "bento",
+   "x": 8,
+   "y": 4,
+   "facing": "down",
+   "if": "bento_met"
+  },
+  {
+   "id": "lia_cabana",
+   "x": 5,
+   "y": 7,
+   "facing": "up",
+   "if_not": "has_partner"
+  },
+  {
+   "id": "taro_cabana",
+   "x": 7,
+   "y": 7,
+   "facing": "up",
+   "if_not": "has_partner"
+  }
+ ],
  "warps": [
   {
    "x": 6,
@@ -103,5 +125,12 @@
  ],
  "ambient": [
   "dust_motes"
+ ],
+ "on_enter": [
+  {
+   "if": "bento_met",
+   "if_not": "has_partner",
+   "dialog": "prologo/escolha"
+  }
  ]
 }

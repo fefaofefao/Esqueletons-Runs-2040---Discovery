@@ -71,6 +71,14 @@ Referência: `"arquivo/id"`. Cada caixa tem no máximo 3 linhas; textos maiores 
 - **Save:** `ossuary` `{espécie: {seen, defeated, recruited, golden_seen, golden_recruited, marker, golden_right}}` e `ranch` (mesma forma de `party`).
 - `battle.json`: `golden {chance, stat_bonus, marker_bonus}` e `marker {by_rarity, per_level_above, min, max, refuse_keeps}`.
 
+## Roteiro (fase 4a)
+- **Diálogos** (`data/dialogs/*.json`): nós `say`, `choice`, `set_flag`, `goto`, `if`/`if_not` e **ações** `{"action": ...}`:
+  `give_partner {species, age, nickname, flag}`, `battle {kind, enemies, tamer_key, reward, items, win_flag, tips, marker}`, `heal`, `give_item {item, n}`, `give_money {n}`, `marker {species, amount}`, `ranch`, `shop {id}`, `respawn`, `hide_npc {id}`, `sfx {name}`. A ação fecha a caixa, roda e o diálogo continua; se a batalha for perdida, o roteiro para.
+- **Mapas:** `on_enter: [{if, if_not, dialog}]` (evento ao entrar). `npcs`, `props` e `spawns` aceitam `if`/`if_not`. Um NPC some para sempre com a flag `npc_gone_<id>`.
+- **NPCs** (`data/npcs.json`): `tamer: {vision, flag}` para domadores com campo de visão; o diálogo da vitória fica nas entradas condicionais de `dialog`.
+- **Lojas** (`data/shops.json`): `{"shops": {id: [itens]}}`; o preço vem de `items.json`.
+- **Encontros** (`data/encounters.json`): `{"tables": {zona: [{species, stage, min_level, max_level, rarity}]}}`.
+
 ## Formatos das próximas fases (o validador já os confere)
 
 ### `data/species.json` (gerado por `tools/bestiary/build.py`)

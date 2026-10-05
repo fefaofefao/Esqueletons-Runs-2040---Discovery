@@ -7,6 +7,8 @@ signal closed
 
 ## Pausa a árvore enquanto aberto (menu de pausa, configurações no mapa...).
 var pauses_game := false
+## Já fechou (o sinal closed pode ter saído antes de alguém esperar por ele).
+var is_closed := false
 var _opened_frame := -1
 
 

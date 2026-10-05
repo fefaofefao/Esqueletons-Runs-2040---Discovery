@@ -144,4 +144,4 @@ Não há Guardião no Prólogo. O **Fiscal Brás**, capanga de Ramalho, antecipa
 | Seu Remo, Vó Concha | casas de domadores | Treino opcional com recompensa |
 
 ## 9. Contagem
-Cerca de **1.250 palavras** de texto de jogo em PT-BR (dentro do orçamento de ~1.500).
+Cerca de **690 palavras** de texto de jogo em PT-BR, medidas por `tools/maps/prologo_text.py` (orçamento ~1.500; o restante fica para revisões e cenas da 4h que voltam à Praia).

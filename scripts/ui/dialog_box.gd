@@ -8,11 +8,17 @@ extends Overlay
 ##   {"choice": [{"text": KEY, "goto": "arquivo/id"?, "set_flag": "flag"?}], "say": KEY?, "speaker": KEY?}
 ##   {"set_flag": "nome", "value": true?}
 ##   {"goto": "arquivo/id"}
+##   {"action": "nome", ...}  ação de roteiro (batalha, loja, dar parceiro...):
+##       a caixa fecha, o Game executa a ação e reabre o diálogo no nó seguinte
+##       (ver Game.play_script e docs/DADOS.md).
 ## Qualquer nó aceita "if": "flag" ou "if_not": "flag".
 
 signal choice_made(index: int)
 
 var _script: Array = []
+## Ação encontrada (o Game executa e continua com pending_rest).
+var pending_action: Dictionary = {}
+var pending_rest: Array = []
 var _node_i := -1
 var _pages := PackedStringArray()
 var _page_i := 0
@@ -36,6 +42,8 @@ func setup(script_nodes: Array) -> void:
 
 func _ready() -> void:
 	_build()
+	_panel.visible = false
+	_name_panel.visible = false
 	_advance_node()
 
 
@@ -150,6 +158,11 @@ func _advance_node() -> void:
 		if n.has("set_flag") and not n.has("say") and not n.has("choice"):
 			SaveGame.set_flag(str(n["set_flag"]), bool(n.get("value", true)))
 			continue
+		if n.has("action"):
+			pending_action = n
+			pending_rest = _script.slice(_node_i + 1)
+			close()
+			return
 		if n.has("goto"):
 			_jump(str(n["goto"]))
 			return
@@ -165,6 +178,7 @@ func _jump(ref: String) -> void:
 
 
 func _start_node(n: Dictionary) -> void:
+	_panel.visible = true
 	var speaker := str(n.get("speaker", ""))
 	_name_panel.visible = speaker != ""
 	_name_label.text = tr(speaker) if speaker != "" else ""

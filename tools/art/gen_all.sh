@@ -12,3 +12,4 @@ python3 gen_battle.py
 python3 gen_title.py
 python3 ../bestiary/build.py
 python3 gen_skeletons.py
+python3 gen_npcs.py

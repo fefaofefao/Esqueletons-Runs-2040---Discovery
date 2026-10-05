@@ -378,6 +378,157 @@ def rod_rack():
     return img
 
 
+# ------------------------------------------------------------- vila (fase 4a)
+def house(W, H, roof, roof_d, wall, wall_d, sign=None, seed=0):
+    """Casa de vila: telhado de telhas, paredes, porta central, 2 janelas e placa opcional."""
+    img = new(W, H)
+    wall_top = H - 30
+    for y in range(wall_top, H - 1):
+        for x in range(3, W - 3):
+            c = wall if (y // 4 + (x // 8)) % 2 else mix(wall, wall_d, 0.25)
+            if y >= H - 4:
+                c = wall_d
+            put(img, x, y, c)
+    rect(img, 3, wall_top, W - 6, 2, wall_d)
+    # telhado (trapézio com fileiras de telhas)
+    for y in range(2, wall_top + 3):
+        t = (y - 2) / max(1, wall_top)
+        half = W * 0.30 + t * (W * 0.22)
+        for x in range(int(W / 2 - half), int(W / 2 + half)):
+            row = (y - 2) // 4
+            c = roof if ((x + row * 3) // 6) % 2 else mix(roof, roof_d, 0.3)
+            if (y - 2) % 4 == 3:
+                c = roof_d
+            put(img, x, y, c)
+    rect(img, int(W * 0.2), 1, int(W * 0.6), 2, roof_d)
+    # chaminé
+    rect(img, int(W * 0.72), 0, 6, 10, (150, 110, 90))
+    rect(img, int(W * 0.72) - 1, 0, 8, 2, (120, 90, 74))
+    # porta
+    dx = W // 2 - 6
+    rect(img, dx, H - 17, 12, 16, (84, 54, 36))
+    rect(img, dx + 1, H - 16, 10, 15, (132, 86, 52))
+    put(img, dx + 8, H - 9, (240, 210, 120))
+    # janelas
+    for wx in (8, W - 20):
+        rect(img, wx, wall_top + 7, 12, 10, (84, 54, 36))
+        for yy in range(wall_top + 8, wall_top + 16):
+            for xx in range(wx + 1, wx + 11):
+                put(img, xx, yy, mix((150, 200, 230), (240, 248, 250), (yy - wall_top - 8) / 8))
+        rect(img, wx + 5, wall_top + 8, 1, 8, (84, 54, 36))
+        rect(img, wx - 1, wall_top + 17, 14, 2, wall_d)
+    if sign == "ranch":
+        rect(img, W // 2 - 7, wall_top + 3, 14, 9, (246, 240, 226))
+        rect(img, W // 2 - 1, wall_top + 4, 2, 7, (214, 70, 70))
+        rect(img, W // 2 - 3, wall_top + 6, 6, 3, (214, 70, 70))
+    elif sign == "shop":
+        rect(img, W // 2 - 7, wall_top + 3, 14, 9, (246, 240, 226))
+        ellipse(img, W // 2, wall_top + 7.5, 3.5, 3.5, (236, 190, 60))
+        put(img, W // 2, wall_top + 7, (180, 130, 40))
+    elif sign == "house":
+        ellipse(img, W // 2, wall_top + 7, 3, 3, (246, 240, 226))
+    outline(img, OUT_C)
+    return img
+
+
+def lighthouse():
+    W, H = 32, 92
+    img = new(W, H)
+    for y in range(22, H - 1):
+        t = (y - 22) / (H - 23)
+        half = 6 + t * 7
+        for x in range(int(16 - half), int(16 + half)):
+            band = ((y - 22) // 12) % 2
+            c = (236, 230, 220) if band == 0 else (196, 72, 64)
+            if x > 16 + half * 0.4:
+                c = mix(c, (80, 70, 80), 0.25)
+            put(img, x, y, c)
+    rect(img, 7, 18, 18, 5, (70, 70, 84))
+    rect(img, 9, 8, 14, 10, (70, 70, 84))
+    for yy in range(10, 17):
+        for xx in range(11, 21):
+            put(img, xx, yy, (120, 130, 140))  # lente apagada
+    for xx in (13, 16, 19):
+        rect(img, xx, 9, 1, 9, (70, 70, 84))
+    rect(img, 8, 6, 16, 2, (60, 60, 72))
+    for y in range(0, 6):
+        rect(img, 16 - (6 - y), y, 2 * (6 - y), 1, (196, 72, 64))
+    rect(img, 13, H - 14, 6, 13, (84, 54, 36))
+    outline(img, OUT_C)
+    return img
+
+
+def fence():
+    img = new(16, 16)
+    for x in (2, 13):
+        rect(img, x, 4, 2, 11, (170, 120, 76))
+    rect(img, 0, 6, 16, 2, (196, 146, 92))
+    rect(img, 0, 11, 16, 2, (196, 146, 92))
+    outline(img, OUT_C)
+    return img
+
+
+def lamp_post(frame):
+    img = new(10, 30)
+    rect(img, 4, 8, 2, 21, (70, 70, 84))
+    rect(img, 2, 27, 6, 2, (60, 60, 72))
+    rect(img, 1, 1, 8, 8, (70, 70, 84))
+    c = (255, 226, 140) if frame == 0 else (255, 210, 110)
+    rect(img, 2, 2, 6, 6, c)
+    outline(img, OUT_C)
+    return img
+
+
+def well():
+    img = new(26, 28)
+    ellipse(img, 13, 20, 11, 6, (150, 150, 160))
+    ellipse(img, 13, 19, 8, 4, (40, 60, 90))
+    for x in (3, 22):
+        rect(img, x, 4, 2, 16, (150, 104, 62))
+    rect(img, 1, 2, 24, 3, (196, 72, 64))
+    rect(img, 12, 5, 2, 7, (200, 190, 160))
+    rect(img, 10, 11, 6, 4, (150, 104, 62))
+    outline(img, OUT_C)
+    return img
+
+
+def stall():
+    img = new(48, 34)
+    rect(img, 4, 16, 40, 16, (176, 122, 74))
+    rect(img, 4, 14, 40, 3, (150, 104, 62))
+    for i, x in enumerate(range(8, 42, 7)):
+        ellipse(img, x + 2, 13, 3, 2.2, [(230, 120, 70), (120, 180, 220), (240, 200, 90), (150, 200, 120), (230, 120, 70)][i % 5])
+    for x in (5, 41):
+        rect(img, x, 2, 2, 14, (120, 80, 50))
+    for x in range(2, 46):
+        put(img, x, 2 + (x // 6) % 2, (196, 72, 64) if (x // 6) % 2 else (246, 240, 226))
+        rect(img, x, 3, 1, 4, (196, 72, 64) if (x // 6) % 2 else (246, 240, 226))
+    outline(img, OUT_C)
+    return img
+
+
+def flower_box():
+    img = new(16, 14)
+    rect(img, 1, 7, 14, 6, (150, 104, 62))
+    for i, x in enumerate(range(3, 14, 3)):
+        ellipse(img, x, 5, 1.8, 1.8, [(240, 120, 150), (250, 220, 90), (180, 140, 230), (240, 120, 150)][i % 4])
+        put(img, x, 7, (90, 150, 70))
+    outline(img, OUT_C)
+    return img
+
+
+def net_snag():
+    img = new(20, 14)
+    ellipse(img, 10, 9, 9, 5, (120, 120, 130))
+    for y in range(3, 10):
+        for x in range(4, 17):
+            if (x + y) % 3 == 0:
+                put(img, x, y, (226, 220, 196))
+    ellipse(img, 6, 4, 1.6, 1.6, (226, 76, 60))
+    outline(img, OUT_C)
+    return img
+
+
 # ------------------------------------------------------------- empacotamento
 PROPS = {
     # id: (função, quadros, fps, origem em px (pés), colisão [células relativas], camada, interativo)
@@ -403,6 +554,21 @@ PROPS = {
     "lamp": (lamp, 2, 3.0, (5, 15), [[0, 0]], "y", False),
     "rug": (lambda f: rug(), 1, 0, (24, 29), [], "ground", False),
     "rod_rack": (lambda f: rod_rack(), 1, 0, (8, 27), [[0, 0]], "y", True),
+    "house_ranch": (lambda f: house(80, 70, (200, 70, 70), (150, 46, 50), (240, 226, 196), (196, 176, 146), "ranch"), 1, 0, (40, 69),
+                    [[-2, 0], [-1, 0], [1, 0], [2, 0], [-2, -1], [-1, -1], [0, -1], [1, -1], [2, -1]], "y", False),
+    "house_shop": (lambda f: house(80, 70, (70, 110, 180), (46, 76, 130), (236, 222, 190), (190, 172, 140), "shop"), 1, 0, (40, 69),
+                   [[-2, 0], [-1, 0], [1, 0], [2, 0], [-2, -1], [-1, -1], [0, -1], [1, -1], [2, -1]], "y", False),
+    "house_a": (lambda f: house(64, 62, (214, 120, 60), (160, 84, 40), (240, 232, 210), (198, 184, 156), "house"), 1, 0, (32, 61),
+                [[-2, 0], [-1, 0], [1, 0], [-2, -1], [-1, -1], [0, -1], [1, -1]], "y", False),
+    "house_b": (lambda f: house(64, 62, (70, 150, 140), (46, 104, 98), (236, 226, 200), (190, 176, 150), "house"), 1, 0, (32, 61),
+                [[-2, 0], [-1, 0], [1, 0], [-2, -1], [-1, -1], [0, -1], [1, -1]], "y", False),
+    "lighthouse": (lambda f: lighthouse(), 1, 0, (16, 91), [[0, 0], [-1, 0], [0, -1], [-1, -1]], "y", True),
+    "fence": (lambda f: fence(), 1, 0, (8, 15), [[0, 0]], "y", False),
+    "lamp_post": (lamp_post, 2, 2.0, (5, 29), [[0, 0]], "y", False),
+    "well": (lambda f: well(), 1, 0, (13, 27), [[0, 0], [-1, 0]], "y", True),
+    "stall": (lambda f: stall(), 1, 0, (24, 33), [[-1, 0], [0, 0], [1, 0]], "y", False),
+    "flower_box": (lambda f: flower_box(), 1, 0, (8, 13), [[0, 0]], "y", False),
+    "net_snag": (lambda f: net_snag(), 1, 0, (10, 13), [[0, 0]], "y", True),
 }
 
 
@@ -410,6 +576,7 @@ PROPS = {
 LIGHTS = {
     "lamp": {"radius": 40, "color": [1.0, 0.82, 0.5], "intensity": 0.35, "offset": [0, -9]},
     "campfire": {"radius": 44, "color": [1.0, 0.6, 0.3], "intensity": 0.3, "offset": [0, -6]},
+    "lamp_post": {"radius": 36, "color": [1.0, 0.85, 0.55], "intensity": 0.28, "offset": [0, -25]},
 }
 
 

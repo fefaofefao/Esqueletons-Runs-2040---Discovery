@@ -8,7 +8,8 @@ Todo o conteúdo abaixo é **original**, criado para este projeto. Nenhum pack o
 | `assets/fonts/pixel.fnt`, `pixel.png` (fonte "OssosPixel") | `tools/art/gen_font.py`, glifos desenhados à mão | Original do projeto |
 | `assets/tiles/overworld.png`, `data/tilesets/overworld.json` | `tools/art/gen_tiles.py` | Original do projeto |
 | `assets/sprites/player.png`, `bento.png`, `shadow.png` | `tools/art/gen_chars.py`, pixel art em ASCII | Original do projeto |
-| `assets/props/props.png`, `data/props.json` | `tools/art/gen_props.py` | Original do projeto |
+| `assets/props/props.png`, `data/props.json` (inclui prédios, farol, poço, banca) | `tools/art/gen_props.py` | Original do projeto |
+| `assets/sprites/npc/*` (NPCs humanos, Lia/Taro no mapa) | `tools/art/gen_npcs.py` | Original do projeto |
 | `assets/ui/*`, `assets/icons/*`, `icon.png` | `tools/art/gen_ui.py` | Original do projeto |
 | `assets/title/*` (logo HD e camadas da tela inicial) | `tools/art/gen_title.py` (desenho procedural) | Original do projeto |
 | `assets/skeletons/*` (80 espécies, batalha e mapa), `assets/battle/*` | `tools/art/gen_skeletons.py` + `tools/art/skel.py`, `tools/art/gen_battle.py` | Original do projeto |

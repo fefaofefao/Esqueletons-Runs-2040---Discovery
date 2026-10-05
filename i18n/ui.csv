@@ -94,3 +94,23 @@ OSS_SEEN,Visto,Seen,Visto
 OSS_DEFEATED,Derrotado,Defeated,Derrotado
 OSS_RECRUITED,Recrutado,Recruited,Reclutado
 OSS_MARKER,Marcador de ossos: {p}%,Bone marker: {p}%,Marcador de huesos: {p}%
+PAUSE_TEAM,Equipe,Team,Equipo
+PAUSE_BAG,Mochila,Bag,Mochila
+SHOP_MONEY,Moedas: {n},Coins: {n},Monedas: {n}
+SHOP_NO_MONEY,Moedas insuficientes.,Not enough coins.,No tienes monedas suficientes.
+BAG_TITLE,Mochila,Bag,Mochila
+BAG_EMPTY,(vazia),(empty),(vacía)
+BAG_USE_ON,{item} em:,{item} on:,{item} en:
+BAG_NO_EFFECT,Não teria efeito.,It would have no effect.,No tendría efecto.
+TEAM_TITLE,Equipe,Team,Equipo
+TEAM_EMPTY,(ninguém ainda),(no one yet),(nadie aún)
+TEAM_GROWS_AT,Cresce aos {n} anos,Grows up at age {n},Crece a los {n} años
+TEAM_MAKE_LEAD,A: vira o 1º do time,A: make team leader,A: pasa a ser el 1.º
+MSG_GOT_ITEM,Você recebeu {item} ×{n}.,You got {item} ×{n}.,Recibiste {item} ×{n}.
+MSG_GOT_MONEY,Você recebeu {n} moedas.,You got {n} coins.,Recibiste {n} monedas.
+BAG_KEY_ITEM,Item-chave. A: ler.,Key item. A: read.,Objeto clave. A: leer.
+MAP_VILA_RANCHO,Rancho da Marola,Marola's Ranch,Rancho de Marola
+MAP_VILA_LOJA,Armazém do Anzol,Hook's General Store,Almacén Anzuelo
+MAP_VILA_CASA_REMO,Casa da Família Remo,The Oar Family House,Casa de la Familia Remo
+MAP_VILA_CASA_CONCHA,Casa da Vó Concha,Granny Shell's House,Casa de la Abuela Concha
+MAP_VILA_MARE,Vila Maré,Tidemark Village,Villa Marea

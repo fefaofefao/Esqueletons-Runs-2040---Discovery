@@ -24,7 +24,11 @@
    ],
    "music": "",
    "maps": [
-    "vila_mare"
+    "vila_mare",
+    "vila_rancho",
+    "vila_loja",
+    "vila_casa_remo",
+    "vila_casa_concha"
    ]
   },
   "bosque": {
@@ -36,7 +40,9 @@
     0.9
    ],
    "music": "",
-   "maps": []
+   "maps": [
+    "rota_1"
+   ]
   },
   "minas": {
    "name_key": "REGION_MINAS",

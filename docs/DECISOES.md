@@ -156,3 +156,11 @@ Registro das escolhas feitas sem consulta (AGENTS.md, seção A). Cada item diz 
 - **XP achatada por estágio** (60/68/68 × idade ÷ 18). A curva (n−1)^2,2 já cresce com a idade; a base por estágio não precisa crescer junto.
 - **Simulador em GDScript headless:** usa o mesmo `BattleEngine` e a mesma `BattleAI` do jogo, então um ajuste de regra entra na simulação sem duplicar código.
 - **Guardiões e tempo são protótipos.** As equipes, os mapas e o roteiro da fase 4 substituem os valores do `balance.json`, e a simulação é repetida a cada tarefa da fase 4.
+
+## Fase 4a — Arco e Prólogo
+- **Por que o protagonista veio de 2040:** ele é o último descendente do Rei. A coroa está rachando e só se refaz na cabeça de alguém do mesmo sangue; por isso o eco dela o puxou do museu onde ela estava exposta mil anos depois. Isso amarra o título, o farol de Lia (que em 2040 é o museu) e os Guardiões-família pedidos pelo Fernando.
+- **Esqueletos = segunda vida:** os mortos renascem bebês e envelhecem de novo, e isso explica "nível = idade" e os aniversários dentro da história.
+- **Ações dentro do diálogo** (em vez de cenas em código): todo o roteiro fica em JSON, e o Prólogo inteiro é dado. Novas regiões só precisam de mapas, NPCs e roteiros.
+- **Domador por linha de visão** (seção 7): enxerga N células à frente até o primeiro obstáculo; cada um luta uma vez só (flag).
+- **Parceiro inicial tem apelido** (Lia/Taro) e é uma espécie comum do Bestiário. O recorrente usa a outra linha.
+- **Estrada norte bloqueada pelo Brás** (arbusto + NPC numa célula só): obriga a 1ª batalha contra domador sem parede invisível.

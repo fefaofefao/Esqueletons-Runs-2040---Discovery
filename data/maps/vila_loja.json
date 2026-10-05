@@ -1,0 +1,81 @@
+{
+ "id": "vila_loja",
+ "region": "vila_mare",
+ "name_key": "MAP_VILA_LOJA",
+ "tileset": "overworld",
+ "legend": {
+  "T": "wall_top",
+  "w": "wall",
+  "n": "wall_window",
+  ".": "floor",
+  "m": "mat"
+ },
+ "ground": [
+  "TTTTTTTTTTTT",
+  "TwwnwwwwwnwT",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "TTTTTTmTTTTT"
+ ],
+ "spawn": {
+  "x": 6,
+  "y": 8,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "shelf",
+   "x": 3,
+   "y": 2
+  },
+  {
+   "type": "shelf",
+   "x": 10,
+   "y": 2
+  },
+  {
+   "type": "table",
+   "x": 7,
+   "y": 4
+  },
+  {
+   "type": "barrel",
+   "x": 1,
+   "y": 7
+  },
+  {
+   "type": "crate",
+   "x": 10,
+   "y": 7
+  },
+  {
+   "type": "rod_rack",
+   "x": 5,
+   "y": 2
+  }
+ ],
+ "npcs": [
+  {
+   "id": "anzol",
+   "x": 6,
+   "y": 3,
+   "facing": "down"
+  }
+ ],
+ "warps": [
+  {
+   "x": 6,
+   "y": 9,
+   "to": "vila_mare",
+   "tx": 27,
+   "ty": 11,
+   "facing": "down",
+   "sfx": "door"
+  }
+ ]
+}

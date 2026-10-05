@@ -76,6 +76,20 @@ func load_map(id: String, cell: Vector2i, facing: String) -> void:
 	_debug_draw.queue_redraw()
 
 
+## Evento de entrada do mapa ("on_enter": [{"if"/"if_not", "dialog"}]): roda o
+## primeiro que valer (ex.: o despertar na Praia, Lia e Taro na cabana).
+func run_on_enter() -> void:
+	if map == null:
+		return
+	for e in map.data.get("on_enter", []):
+		if MapView.condition_ok(e):
+			player.frozen = true
+			await Game.show_dialog(str(e["dialog"]))
+			if player:
+				player.frozen = false
+			return
+
+
 func _apply_lighting() -> void:
 	var region := Data.region(region_id)
 	var t: Array = map.data.get("tint", region.get("tint", [1, 1, 1]))
@@ -149,7 +163,14 @@ func on_touch_wild(w: WildSkeleton) -> void:
 	if not table.is_empty() and _rng.randf() < 0.3:
 		var extra := MapView.pick_encounter(table, _rng)
 		enemies.append([extra.species, extra.level, extra.golden])
-	var result: String = await Game.start_battle({"kind": "wild", "enemies": enemies})
+	var info := {"kind": "wild", "enemies": enemies}
+	if not SaveGame.get_flag("tut_battle"):
+		info["tips"] = ["BTL_TIP_TIMELINE", "BTL_TIP_WEIGHT", "BTL_TIP_SINTONIA"]
+		SaveGame.set_flag("tut_battle")
+	var result: String = await Game.start_battle(info)
+	if result == "win" and not SaveGame.get_flag("tut_marker"):
+		SaveGame.set_flag("tut_marker")
+		await Game.show_dialog("prologo/marcador")
 	if player:
 		player.frozen = false
 	if result == "win" and is_instance_valid(w):

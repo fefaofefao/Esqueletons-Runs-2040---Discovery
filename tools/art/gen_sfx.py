@@ -74,6 +74,9 @@ def main():
     save("birthday", render([(f, f, d, 0.004, d * 0.5) for f, d in notes], wave_fn="tri", volume=0.45))
     save("grow_flash", render([(200, 1800, 0.5, 0.01, 0.2)], duty=0.5, volume=0.25))
     save("blow", render([(900, 300, 0.35, 0.02, 0.25)], wave_fn="noise", volume=0.25))
+    save("heal", render([(523, 523, 0.06, 0.001, 0.03), (659, 659, 0.06, 0.001, 0.03), (784, 988, 0.16, 0.001, 0.12)], wave_fn="tri", volume=0.35))
+    save("buy", render([(988, 988, 0.05, 0.001, 0.02), (1319, 1319, 0.12, 0.001, 0.1)], duty=0.25, volume=0.28))
+    save("exclaim", render([(880, 1320, 0.09, 0.001, 0.03), (1320, 1320, 0.1, 0.001, 0.08)], duty=0.5, volume=0.3))
     save("recruit", render([(659, 659, 0.08, 0.001, 0.04), (784, 784, 0.08, 0.001, 0.04), (1047, 1047, 0.2, 0.001, 0.15)], duty=0.25, volume=0.3))
     print("sfx gerados")
 

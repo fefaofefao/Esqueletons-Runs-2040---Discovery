@@ -5,7 +5,7 @@ extends "res://tests/test_case.gd"
 const LANGS := ["pt_BR", "en", "es"]
 ## Textos exibidos na caixa de diálogo (até 3 linhas de 288 px).
 const DIALOG_PREFIXES := ["DLG_", "SIGN_", "OBJ_", "MSG_", "CREDITS_", "OSS_"]
-const DIALOG_KEYS := ["DBG_TEAM_GIVEN", "SET_PRIVACY_INFO", "ABOUT_PRIVACY_PENDING", "DBG_TIMES_EMPTY", "DBG_SAVE_DELETED", "DBG_GROWTH_TEAM_GIVEN"]
+const DIALOG_KEYS := ["DBG_TEAM_GIVEN", "SET_PRIVACY_INFO", "ABOUT_PRIVACY_PENDING", "DBG_TIMES_EMPTY", "DBG_SAVE_DELETED", "DBG_GROWTH_TEAM_GIVEN", "ITEM_TICKET_TEXT"]
 ## Perguntas da ChoiceBox (206 px, até 4 linhas).
 const CHOICE_PREFIXES := ["CONFIRM_", "RECRUIT_ASK"]
 ## Nomes de lugares (letreiro e teleporte do debug).
@@ -18,7 +18,7 @@ const VALUE_PREFIXES := ["LANG_NAME_", "VAL_", "SET_TEXT_SLOW", "SET_TEXT_NORMAL
 const BATTLE_LOG_PREFIXES := ["BTL_WILD", "BTL_TAMER_", "BTL_GO", "BTL_COME", "BTL_USED", "BTL_MISS", "BTL_NO_", "BTL_CRIT",
 	"BTL_EFF_STRONG_MSG", "BTL_EFF_WEAK_MSG", "BTL_POISON", "BTL_ALREADY", "BTL_STAT_", "BTL_HEALED", "BTL_CURED",
 	"BTL_REVIVED", "BTL_ITEM_USED", "BTL_FAINT", "BTL_XP", "BTL_LEVEL_UP", "BTL_LEARNED", "BTL_LEARN_PROMPT",
-	"BTL_DID_NOT", "BTL_FLED", "BTL_FLEE", "BTL_CANT", "BTL_WIN", "BTL_MONEY", "BTL_LOSE", "BTL_SINTONIA", "BTL_DELAYED",
+	"BTL_DID_NOT", "BTL_FLED", "BTL_FLEE", "BTL_CANT", "BTL_WIN", "BTL_MONEY", "BTL_LOSE", "BTL_SINTONIA", "BTL_DELAYED", "BTL_TIP_",
 	"BTL_GOLDEN_APPEARS", "RECRUIT_MARKER", "RECRUIT_JOINED", "RECRUIT_TO_RANCH", "RECRUIT_REFUSED"]
 ## Cerimônia de crescimento: balão de uma linha e texto de até 2 linhas.
 const BALLOON_WIDTH := 240.0

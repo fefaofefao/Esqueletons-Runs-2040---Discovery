@@ -18,7 +18,260 @@
      "dialog": "prologo/bento_primeira"
     },
     {
+     "if_not": "has_partner",
      "dialog": "prologo/bento_repete"
+    },
+    {
+     "dialog": "prologo/bento_depois"
+    }
+   ]
+  },
+  "marola": {
+   "name_key": "SPK_MAROLA",
+   "role": "ranch",
+   "sprite": "res://assets/sprites/npc/marola.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "vila_mare/marola"
+    }
+   ]
+  },
+  "anzol": {
+   "name_key": "SPK_ANZOL",
+   "role": "shop",
+   "sprite": "res://assets/sprites/npc/anzol.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "vila_mare/anzol"
+    }
+   ]
+  },
+  "pipa": {
+   "name_key": "SPK_PIPA",
+   "role": "hint",
+   "sprite": "res://assets/sprites/npc/pipa.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "vila_mare/pipa"
+    }
+   ]
+  },
+  "cascalho": {
+   "name_key": "SPK_CASCALHO",
+   "role": "lore",
+   "sprite": "res://assets/sprites/npc/cascalho.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "vila_mare/cascalho"
+    }
+   ]
+  },
+  "jurema": {
+   "name_key": "SPK_JUREMA",
+   "role": "quest",
+   "sprite": "res://assets/sprites/npc/jurema.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "left",
+    "down"
+   ],
+   "dialog": [
+    {
+     "if": "jurema_done",
+     "dialog": "vila_mare/jurema_depois"
+    },
+    {
+     "if": "jurema_net",
+     "dialog": "vila_mare/jurema_obrigada"
+    },
+    {
+     "if": "jurema_quest",
+     "dialog": "vila_mare/jurema_onde"
+    },
+    {
+     "dialog": "vila_mare/jurema_pede"
+    }
+   ]
+  },
+  "bras": {
+   "name_key": "SPK_BRAS",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/bras.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "bras_beaten",
+     "dialog": "vila_mare/bras_depois"
+    },
+    {
+     "dialog": "vila_mare/bras"
+    }
+   ],
+   "tamer": {
+    "vision": 4,
+    "flag": "bras_beaten"
+   }
+  },
+  "seu_remo": {
+   "name_key": "SPK_REMO",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/seu_remo.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "remo_beaten",
+     "dialog": "vila_mare/remo_depois"
+    },
+    {
+     "dialog": "vila_mare/remo"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "remo_beaten"
+   }
+  },
+  "vo_concha": {
+   "name_key": "SPK_CONCHA",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/vo_concha.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "concha_beaten",
+     "dialog": "vila_mare/concha_depois"
+    },
+    {
+     "dialog": "vila_mare/concha"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "concha_beaten"
+   }
+  },
+  "lia_cabana": {
+   "name_key": "SPK_LIA",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_lia.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "prologo/escolha"
+    }
+   ]
+  },
+  "taro_cabana": {
+   "name_key": "SPK_TARO",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_taro.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "prologo/escolha"
+    }
+   ]
+  },
+  "rival_lia": {
+   "name_key": "SPK_LIA",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_lia.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "vila_mare/rival_lia"
+    }
+   ]
+  },
+  "rival_taro": {
+   "name_key": "SPK_TARO",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_taro.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "vila_mare/rival_taro"
+    }
+   ]
+  },
+  "bras_depois": {
+   "name_key": "SPK_BRAS",
+   "role": "hint",
+   "sprite": "res://assets/sprites/npc/bras.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "vila_mare/bras_depois"
     }
    ]
   }

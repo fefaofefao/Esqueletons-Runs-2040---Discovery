@@ -24,6 +24,10 @@ func _ready() -> void:
 	await _shot("00_titulo_intro")
 	await _wait(1.6)
 	await _shot("01_titulo")
+	if "--prologo" in OS.get_cmdline_user_args():
+		await _prologo_shots()
+		get_tree().quit()
+		return
 	if "--bestiary" in OS.get_cmdline_user_args():
 		await _bestiary_shots()
 		get_tree().quit()
@@ -281,3 +285,87 @@ func _bestiary_shots() -> void:
 	Controls.tap_action("move_right")
 	await _wait(0.3)
 	await _shot("d5_golpes_reais")
+
+
+## Avança diálogos (A) até não haver overlay; escolhe as opções na ordem dada.
+## Tira uma foto no passo "shot_at" (contando caixas de fala).
+func _advance(choices: Array = [], shot_name: String = "", shot_at: int = -1, max_steps: int = 60) -> void:
+	var n := 0
+	for i in max_steps:
+		await _wait(0.25)
+		var top := Game.top_overlay()
+		if top == null:
+			if Game.battle == null and not Game.transitioning:
+				return
+			continue
+		if top is DialogBox:
+			var box := top as DialogBox
+			if box._typing:
+				box._press()
+				await _wait(0.1)
+			if n == shot_at and shot_name != "":
+				await _shot(shot_name)
+			if box._waiting_choice and box._choice:
+				box._choice.index = int(choices.pop_front()) if not choices.is_empty() else 0
+				box._choice.refresh()
+				await _wait(0.3)
+				box._choice.activate_current()
+			else:
+				box._press()
+			n += 1
+
+
+func _goto(map_id: String, cell: Vector2i, facing: String) -> void:
+	await Game.warp(map_id, cell, facing)
+	await _wait(0.6)
+
+
+func _prologo_shots() -> void:
+	Game.start_new_game("Téo")
+	await _wait(1.6)
+	await _shot("p1_despertar")
+	await _advance()
+	await _goto("praia_despertar", Vector2i(32, 14), "right")
+	Game.world.interact(Vector2i(33, 14), Vector2i.RIGHT)
+	await _advance([1], "p2_bento", 2)
+	Game.warp("cabana_bento", Vector2i(6, 8), "up")  # a cena de entrada espera o diálogo
+	await _wait(1.6)
+	await _advance([0], "p3_escolha", 6)
+	await _shot("p4_depois_escolha")
+	await _goto("praia_despertar", Vector2i(14, 13), "down")
+	await _wait(1.0)
+	await _shot("p5_praia_selvagens")
+	var w := Game.world
+	var wild: WildSkeleton = null
+	for c in w.map.entities.get_children():
+		if c is WildSkeleton:
+			wild = c
+	if wild:
+		w.on_touch_wild(wild)
+		await _wait(5.0)
+		await _shot("p6_dica_batalha")
+		Game.battle.debug_win()
+		await _advance([], "p7_marcador", 6, 120)
+	await _goto("vila_mare", Vector2i(19, 26), "up")
+	await _wait(1.2)
+	await _shot("p8_vila")
+	await _goto("vila_mare", Vector2i(19, 14), "up")
+	await _shot("p9_praca")
+	await _goto("vila_rancho", Vector2i(7, 4), "up")
+	Game.world.interact(Vector2i(7, 3), Vector2i.UP)
+	await _advance([1], "p10_marola", 1)
+	await _goto("vila_loja", Vector2i(6, 4), "up")
+	SaveGame.data["money"] = 500
+	Game.world.interact(Vector2i(6, 3), Vector2i.UP)
+	await _wait(1.0)
+	Controls.tap_action("btn_a")
+	await _wait(0.8)
+	await _shot("p11_loja")
+	Game.close_all_overlays()
+	await _wait(0.4)
+	await _goto("vila_mare", Vector2i(19, 9), "up")
+	await _wait(2.5)
+	await _shot("p12_bras")
+	Game.open_overlay(TeamMenu.new())
+	await _wait(0.4)
+	await _shot("p13_equipe")

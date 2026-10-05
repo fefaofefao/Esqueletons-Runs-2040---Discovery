@@ -85,6 +85,7 @@ func enter_world() -> void:
 		SaveGame.tracking = true
 	)
 	autosave()
+	await world.run_on_enter()
 
 
 ## Troca de mapa com fade e salvamento automático.
@@ -95,6 +96,7 @@ func warp(map_id: String, cell: Vector2i, facing: String) -> void:
 		world.load_map(map_id, cell, facing)
 	)
 	autosave()
+	await world.run_on_enter()
 
 
 func _set_screen(node: Node, screen_name: String) -> void:
@@ -145,6 +147,7 @@ func close_overlay(o: Overlay) -> void:
 	if not overlays.has(o):
 		return
 	overlays.erase(o)
+	o.is_closed = true
 	# o próximo overlay do topo ignora o quadro atual (o mesmo toque não o aciona)
 	if not overlays.is_empty():
 		overlays.back().mark_opened()
@@ -274,10 +277,24 @@ func _apply_defeat(party: Array) -> void:
 
 # ------------------------------------------------------------------ atalhos
 func show_dialog(ref: String) -> void:
-	var box := DialogBox.new()
-	box.setup(Data.dialog(ref))
-	open_overlay(box)
-	await box.closed
+	await play_script(Data.dialog(ref))
+
+
+## Roteiro com falas e ações: cada ação fecha a caixa, roda e o diálogo continua.
+func play_script(nodes: Array) -> void:
+	var rest := nodes
+	while not rest.is_empty():
+		var box := DialogBox.new()
+		box.setup(rest)
+		open_overlay(box)
+		if not box.is_closed:
+			await box.closed
+		var action: Dictionary = box.pending_action
+		rest = box.pending_rest
+		if action.is_empty():
+			return
+		if not await ScriptActions.run(action):
+			return
 
 
 func show_message(key: String, args: Dictionary = {}) -> void:

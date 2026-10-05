@@ -110,3 +110,8 @@ RECRUIT_TO_RANCH,"Time cheio: {name} foi para o Rancho.","Team full: {name} went
 RECRUIT_REFUSED,{name} volta para o mato. O marcador continua cheio.,{name} heads back to the wild. The marker stays full.,{name} vuelve a la maleza. El marcador sigue lleno.
 GROW_BIRTHDAY,"Feliz aniversário, {name}!","Happy birthday, {name}!","¡Feliz cumpleaños, {name}!"
 GROW_DONE,{name} cresceu e virou {species}!,{name} grew up into {species}!,¡{name} creció y se convirtió en {species}!
+ITEM_TICKET,Ingresso Amassado,Crumpled Ticket,Entrada Arrugada
+ITEM_TICKET_TEXT,"Museu do Litoral — O Reino Perdido de Ossório — 12/10/2040.","Coast Museum — The Lost Kingdom of Ossório — 10/12/2040.","Museo del Litoral — El Reino Perdido de Ossório — 12/10/2040."
+BTL_TIP_TIMELINE,"Bento: A fila lá em cima é a ordem de quem age. Quem é rápido aparece mais vezes.","Bento: The row up top is the turn order. Fast ones show up more often.","Bento: La fila de arriba es el orden de turnos. Los rápidos salen más veces."
+BTL_TIP_WEIGHT,"Bento: Golpe leve volta logo; pesado bate forte, mas demora. Olha a sombra na fila!","Bento: Light moves return fast; heavy ones hit hard but slowly. Watch the shadow!","Bento: Lo ligero vuelve pronto; lo pesado pega fuerte, pero tarda. ¡Mira la sombra!"
+BTL_TIP_SINTONIA,"Bento: Dois aliados seguidos na fila ganham Sintonia: o segundo bate mais forte.","Bento: Two allies in a row get Sync: the second one hits harder.","Bento: Dos aliados seguidos logran Sintonía: el segundo pega más fuerte."

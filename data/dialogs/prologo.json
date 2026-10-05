@@ -1,74 +1,215 @@
 {
- "_comment": "Provisório da fase 1 (sistema de diálogo). O roteiro definitivo do Prólogo vem na fase 4a (docs/roteiro/).",
+ "_comment": "Gerado por tools/maps/prologo_text.py a partir de docs/roteiro/01_prologo.md.",
  "dialogs": {
+  "despertar": [
+   {
+    "say": "DLG_P_WAKE_1"
+   },
+   {
+    "say": "DLG_P_WAKE_2"
+   },
+   {
+    "action": "give_item",
+    "item": "ingresso",
+    "n": 1
+   },
+   {
+    "set_flag": "intro_done"
+   }
+  ],
   "bento_primeira": [
    {
-    "speaker": "SPK_BENTO",
-    "say": "DLG_BENTO_01"
+    "say": "DLG_P_BENTO_1",
+    "speaker": "SPK_BENTO"
    },
    {
-    "speaker": "SPK_BENTO",
-    "say": "DLG_BENTO_02"
+    "say": "DLG_P_BENTO_2",
+    "speaker": "SPK_BENTO"
    },
    {
-    "speaker": "SPK_BENTO",
-    "say": "DLG_BENTO_03"
-   },
-   {
-    "speaker": "SPK_BENTO",
-    "say": "DLG_BENTO_04"
-   },
-   {
-    "speaker": "SPK_BENTO",
-    "say": "DLG_BENTO_05"
-   },
-   {
+    "say": "DLG_P_BENTO_3",
     "speaker": "SPK_BENTO",
     "choice": [
      {
-      "text": "OPT_BENTO_ASK_KING",
+      "text": "OPT_P_KING",
       "goto": "prologo/bento_rei"
      },
      {
-      "text": "OPT_BENTO_THANKS"
+      "text": "OPT_P_PAPER",
+      "goto": "prologo/bento_papel"
      }
-    ],
-    "say": "DLG_BENTO_06"
-   },
-   {
-    "set_flag": "bento_met"
-   },
-   {
-    "speaker": "SPK_BENTO",
-    "say": "DLG_BENTO_07"
+    ]
    }
   ],
   "bento_rei": [
    {
-    "speaker": "SPK_BENTO",
-    "say": "DLG_BENTO_KING_01"
+    "say": "DLG_P_BENTO_KING",
+    "speaker": "SPK_BENTO"
    },
+   {
+    "goto": "prologo/bento_convite"
+   }
+  ],
+  "bento_papel": [
+   {
+    "say": "DLG_P_BENTO_PAPER",
+    "speaker": "SPK_BENTO"
+   },
+   {
+    "goto": "prologo/bento_convite"
+   }
+  ],
+  "bento_convite": [
    {
     "set_flag": "bento_met"
    },
    {
-    "speaker": "SPK_BENTO",
-    "say": "DLG_BENTO_07"
+    "say": "DLG_P_BENTO_4",
+    "speaker": "SPK_BENTO"
    }
   ],
   "bento_repete": [
    {
-    "speaker": "SPK_BENTO",
-    "say": "DLG_BENTO_R1"
-   },
-   {
-    "speaker": "SPK_BENTO",
-    "say": "DLG_BENTO_R2"
+    "say": "DLG_P_BENTO_HUT",
+    "speaker": "SPK_BENTO"
    }
   ],
-  "placa_vila": [
+  "bento_depois": [
    {
-    "say": "SIGN_VILA_MARE"
+    "say": "DLG_P_BENTO_LATER",
+    "speaker": "SPK_BENTO"
+   }
+  ],
+  "escolha": [
+   {
+    "say": "DLG_P_KNOCK"
+   },
+   {
+    "say": "DLG_P_BENTO_KIDS",
+    "speaker": "SPK_BENTO"
+   },
+   {
+    "say": "DLG_P_LIA_1",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "say": "DLG_P_LIA_2",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "say": "DLG_P_TARO_1",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_P_TARO_2",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_P_CHOOSE",
+    "speaker": "SPK_BENTO",
+    "choice": [
+     {
+      "text": "OPT_P_LIA",
+      "goto": "prologo/escolhe_lia"
+     },
+     {
+      "text": "OPT_P_TARO",
+      "goto": "prologo/escolhe_taro"
+     }
+    ]
+   }
+  ],
+  "escolhe_lia": [
+   {
+    "say": "DLG_P_LIA_YES",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "say": "DLG_P_TARO_BYE",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "action": "give_partner",
+    "species": "faroleira_1",
+    "age": 5,
+    "nickname": "Lia",
+    "flag": "partner_lia"
+   },
+   {
+    "goto": "prologo/depois_escolha"
+   }
+  ],
+  "escolhe_taro": [
+   {
+    "say": "DLG_P_TARO_YES",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_P_LIA_BYE",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "action": "give_partner",
+    "species": "grumete_1",
+    "age": 5,
+    "nickname": "Taro",
+    "flag": "partner_taro"
+   },
+   {
+    "goto": "prologo/depois_escolha"
+   }
+  ],
+  "depois_escolha": [
+   {
+    "set_flag": "has_partner"
+   },
+   {
+    "action": "hide_npc",
+    "id": "lia_cabana"
+   },
+   {
+    "action": "hide_npc",
+    "id": "taro_cabana"
+   },
+   {
+    "say": "DLG_P_POTIONS",
+    "speaker": "SPK_BENTO"
+   },
+   {
+    "action": "give_item",
+    "item": "pocao_p",
+    "n": 3
+   },
+   {
+    "say": "DLG_P_WILD",
+    "speaker": "SPK_BENTO"
+   }
+  ],
+  "marcador": [
+   {
+    "say": "DLG_P_MARK_1",
+    "speaker": "SPK_BENTO"
+   },
+   {
+    "say": "DLG_P_MARK_2",
+    "speaker": "SPK_BENTO"
+   },
+   {
+    "say": "DLG_P_BENTO_LATER",
+    "speaker": "SPK_BENTO"
+   }
+  ],
+  "farol": [
+   {
+    "say": "OBJ_LIGHTHOUSE"
+   }
+  ],
+  "rede": [
+   {
+    "say": "OBJ_NET_FREED"
+   },
+   {
+    "set_flag": "jurema_net"
    }
   ],
   "cama_bento": [

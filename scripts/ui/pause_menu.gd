@@ -27,6 +27,8 @@ func _ready() -> void:
 	box.add_child(_menu)
 	_menu.set_items([
 		{"id": "resume", "key": "PAUSE_RESUME"},
+		{"id": "team", "key": "PAUSE_TEAM"},
+		{"id": "bag", "key": "PAUSE_BAG"},
 		{"id": "ossuary", "key": "PAUSE_OSSUARY"},
 		{"id": "settings", "key": "MENU_SETTINGS"},
 		{"id": "quit", "key": "PAUSE_SAVE_QUIT"},
@@ -39,6 +41,10 @@ func _on_activated(id: String) -> void:
 	match id:
 		"resume":
 			close()
+		"team":
+			Game.open_overlay(TeamMenu.new())
+		"bag":
+			Game.open_overlay(BagMenu.new())
 		"ossuary":
 			Game.open_overlay(OssuaryScreen.new())
 		"settings":

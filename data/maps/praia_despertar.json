@@ -147,12 +147,6 @@
    "y": 14
   },
   {
-   "type": "sign",
-   "x": 25,
-   "y": 12,
-   "dialog": "prologo/placa_vila"
-  },
-  {
    "type": "driftwood",
    "x": 20,
    "y": 17
@@ -166,6 +160,36 @@
    "type": "starfish",
    "x": 36,
    "y": 19
+  },
+  {
+   "type": "sign",
+   "x": 22,
+   "y": 3,
+   "dialog": "vila_mare/placa_entrada"
+  },
+  {
+   "type": "lighthouse",
+   "x": 6,
+   "y": 15,
+   "dialog": "prologo/farol"
+  },
+  {
+   "type": "net_snag",
+   "x": 43,
+   "y": 19,
+   "dialog": "prologo/rede",
+   "if": "jurema_quest",
+   "if_not": "jurema_net"
+  },
+  {
+   "type": "rock_big",
+   "x": 44,
+   "y": 18
+  },
+  {
+   "type": "rock_small",
+   "x": 41,
+   "y": 20
   }
  ],
  "npcs": [
@@ -173,7 +197,8 @@
    "id": "bento",
    "x": 33,
    "y": 14,
-   "facing": "left"
+   "facing": "left",
+   "if_not": "has_partner"
   }
  ],
  "warps": [
@@ -190,8 +215,8 @@
    "x": 23,
    "y": 0,
    "to": "vila_mare",
-   "tx": -1,
-   "ty": -1,
+   "tx": 19,
+   "ty": 29,
    "facing": "up",
    "sfx": "door"
   },
@@ -199,8 +224,8 @@
    "x": 24,
    "y": 0,
    "to": "vila_mare",
-   "tx": -1,
-   "ty": -1,
+   "tx": 20,
+   "ty": 29,
    "facing": "up",
    "sfx": "door"
   }
@@ -208,5 +233,31 @@
  "ambient": [
   "sea_sparkle",
   "leaves"
+ ],
+ "on_enter": [
+  {
+   "if_not": "intro_done",
+   "dialog": "prologo/despertar"
+  }
+ ],
+ "spawns": [
+  {
+   "id": "praia_oeste",
+   "table": "praia",
+   "x": 14,
+   "y": 15,
+   "radius": 4,
+   "count": 2,
+   "if": "has_partner"
+  },
+  {
+   "id": "praia_leste",
+   "table": "praia_rochas",
+   "x": 40,
+   "y": 15,
+   "radius": 4,
+   "count": 3,
+   "if": "has_partner"
+  }
  ]
 }

@@ -1,0 +1,356 @@
+{
+ "_comment": "Gerado por tools/maps/prologo_text.py a partir de docs/roteiro/01_prologo.md.",
+ "dialogs": {
+  "placa_entrada": [
+   {
+    "say": "SIGN_VILA_ENTRANCE"
+   }
+  ],
+  "placa_rancho": [
+   {
+    "say": "SIGN_VILA_RANCH"
+   }
+  ],
+  "placa_loja": [
+   {
+    "say": "SIGN_VILA_SHOP"
+   }
+  ],
+  "placa_cais": [
+   {
+    "say": "SIGN_VILA_DOCK"
+   }
+  ],
+  "placa_norte": [
+   {
+    "say": "SIGN_VILA_NORTH"
+   }
+  ],
+  "poco": [
+   {
+    "say": "OBJ_VILA_WELL"
+   }
+  ],
+  "marola": [
+   {
+    "action": "heal"
+   },
+   {
+    "action": "respawn"
+   },
+   {
+    "say": "DLG_P_MAROLA_1",
+    "speaker": "SPK_MAROLA"
+   },
+   {
+    "say": "DLG_P_MAROLA_2",
+    "speaker": "SPK_MAROLA",
+    "choice": [
+     {
+      "text": "OPT_P_RANCH",
+      "goto": "vila_mare/rancho"
+     },
+     {
+      "text": "OPT_P_LEAVE"
+     }
+    ]
+   }
+  ],
+  "rancho": [
+   {
+    "action": "ranch"
+   }
+  ],
+  "anzol": [
+   {
+    "say": "DLG_P_ANZOL_1",
+    "speaker": "SPK_ANZOL"
+   },
+   {
+    "action": "shop",
+    "id": "vila_mare"
+   },
+   {
+    "say": "DLG_P_ANZOL_2",
+    "speaker": "SPK_ANZOL"
+   }
+  ],
+  "pipa": [
+   {
+    "say": "DLG_P_PIPA_1",
+    "speaker": "SPK_PIPA"
+   },
+   {
+    "say": "DLG_P_PIPA_2",
+    "speaker": "SPK_PIPA"
+   }
+  ],
+  "cascalho": [
+   {
+    "say": "DLG_P_CASCALHO_1",
+    "speaker": "SPK_CASCALHO"
+   },
+   {
+    "say": "DLG_P_CASCALHO_2",
+    "speaker": "SPK_CASCALHO"
+   }
+  ],
+  "jurema_pede": [
+   {
+    "say": "DLG_P_JUREMA_ASK",
+    "speaker": "SPK_JUREMA"
+   },
+   {
+    "set_flag": "jurema_quest"
+   },
+   {
+    "say": "DLG_P_JUREMA_WHERE",
+    "speaker": "SPK_JUREMA"
+   }
+  ],
+  "jurema_onde": [
+   {
+    "say": "DLG_P_JUREMA_WHERE",
+    "speaker": "SPK_JUREMA"
+   }
+  ],
+  "jurema_obrigada": [
+   {
+    "say": "DLG_P_JUREMA_THANKS",
+    "speaker": "SPK_JUREMA"
+   },
+   {
+    "action": "give_item",
+    "item": "pocao_p",
+    "n": 2
+   },
+   {
+    "action": "give_item",
+    "item": "antidoto",
+    "n": 1
+   },
+   {
+    "set_flag": "jurema_done"
+   }
+  ],
+  "jurema_depois": [
+   {
+    "say": "DLG_P_JUREMA_AFTER",
+    "speaker": "SPK_JUREMA"
+   }
+  ],
+  "bras": [
+   {
+    "say": "DLG_P_BRAS_1",
+    "speaker": "SPK_BRAS"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_BRAS",
+    "enemies": [
+     [
+      "marisqueiro_1",
+      6
+     ],
+     [
+      "lenhador_1",
+      7
+     ]
+    ],
+    "reward": 150,
+    "win_flag": "bras_beaten"
+   },
+   {
+    "say": "DLG_P_BRAS_WIN",
+    "speaker": "SPK_BRAS"
+   },
+   {
+    "action": "hide_npc",
+    "id": "bras"
+   }
+  ],
+  "bras_depois": [
+   {
+    "say": "DLG_P_BRAS_AFTER",
+    "speaker": "SPK_BRAS"
+   }
+  ],
+  "remo": [
+   {
+    "say": "DLG_P_REMO_1",
+    "speaker": "SPK_REMO"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_REMO",
+    "enemies": [
+     [
+      "grumete_1",
+      6
+     ],
+     [
+      "rendeira_1",
+      6
+     ]
+    ],
+    "reward": 200,
+    "items": [
+     [
+      "pocao_p",
+      2
+     ]
+    ],
+    "win_flag": "remo_beaten"
+   },
+   {
+    "say": "DLG_P_REMO_AFTER",
+    "speaker": "SPK_REMO"
+   }
+  ],
+  "remo_depois": [
+   {
+    "say": "DLG_P_REMO_AFTER",
+    "speaker": "SPK_REMO"
+   }
+  ],
+  "concha": [
+   {
+    "say": "DLG_P_CONCHA_1",
+    "speaker": "SPK_CONCHA"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_CONCHA",
+    "enemies": [
+     [
+      "rendeira_1",
+      7
+     ],
+     [
+      "marisqueiro_1",
+      7
+     ]
+    ],
+    "reward": 150,
+    "items": [
+     [
+      "reviver",
+      1
+     ]
+    ],
+    "win_flag": "concha_beaten"
+   },
+   {
+    "say": "DLG_P_CONCHA_AFTER",
+    "speaker": "SPK_CONCHA"
+   }
+  ],
+  "concha_depois": [
+   {
+    "say": "DLG_P_CONCHA_AFTER",
+    "speaker": "SPK_CONCHA"
+   }
+  ],
+  "rival_taro": [
+   {
+    "say": "DLG_P_RIVAL_TARO",
+    "speaker": "SPK_TARO",
+    "choice": [
+     {
+      "text": "OPT_P_FIGHT",
+      "goto": "vila_mare/rival_taro_luta"
+     },
+     {
+      "text": "OPT_P_NOT_NOW",
+      "goto": "vila_mare/rival_depois_taro"
+     }
+    ]
+   }
+  ],
+  "rival_taro_luta": [
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_TARO",
+    "enemies": [
+     [
+      "grumete_1",
+      7
+     ]
+    ],
+    "reward": 100,
+    "win_flag": "rival_vila_done",
+    "marker": {
+     "species": "grumete_1",
+     "amount": 10
+    }
+   },
+   {
+    "say": "DLG_P_RIVAL_BYE",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "action": "hide_npc",
+    "id": "rival_taro"
+   }
+  ],
+  "rival_depois_taro": [
+   {
+    "say": "DLG_P_RIVAL_LATER",
+    "speaker": "SPK_TARO"
+   }
+  ],
+  "rival_lia": [
+   {
+    "say": "DLG_P_RIVAL_LIA",
+    "speaker": "SPK_LIA",
+    "choice": [
+     {
+      "text": "OPT_P_FIGHT",
+      "goto": "vila_mare/rival_lia_luta"
+     },
+     {
+      "text": "OPT_P_NOT_NOW",
+      "goto": "vila_mare/rival_depois_lia"
+     }
+    ]
+   }
+  ],
+  "rival_lia_luta": [
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_LIA",
+    "enemies": [
+     [
+      "faroleira_1",
+      7
+     ]
+    ],
+    "reward": 100,
+    "win_flag": "rival_vila_done",
+    "marker": {
+     "species": "faroleira_1",
+     "amount": 10
+    }
+   },
+   {
+    "say": "DLG_P_RIVAL_BYE",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "action": "hide_npc",
+    "id": "rival_lia"
+   }
+  ],
+  "rival_depois_lia": [
+   {
+    "say": "DLG_P_RIVAL_LATER",
+    "speaker": "SPK_LIA"
+   }
+  ]
+ }
+}

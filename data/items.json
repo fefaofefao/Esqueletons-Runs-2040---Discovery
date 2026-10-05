@@ -43,6 +43,14 @@
    "price": 1200,
    "battle": true,
    "target": "fainted_ally"
+  },
+  "ingresso": {
+   "name_key": "ITEM_TICKET",
+   "desc_key": "ITEM_TICKET_TEXT",
+   "kind": "key",
+   "price": 0,
+   "battle": false,
+   "target": "none"
   }
  }
 }

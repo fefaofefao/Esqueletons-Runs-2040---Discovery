@@ -225,6 +225,8 @@ func _place_props() -> void:
 	var defs := Data.props()
 	var tex: Texture2D = load(Data.props_texture())
 	for p in data.get("props", []):
+		if not condition_ok(p):
+			continue
 		var pid := str(p.get("type", ""))
 		if not defs.has(pid):
 			push_error("MapView: prop desconhecido '%s' em %s" % [pid, id])
@@ -248,8 +250,19 @@ func _place_props() -> void:
 				_interactions[cc] = {"dialog": str(p["dialog"])}
 
 
+## Condição de flag de um item do mapa ({"if": flag} / {"if_not": flag}).
+static func condition_ok(entry: Dictionary) -> bool:
+	if entry.has("if") and not SaveGame.get_flag(str(entry["if"])):
+		return false
+	if entry.has("if_not") and SaveGame.get_flag(str(entry["if_not"])):
+		return false
+	return true
+
+
 func _place_npcs() -> void:
 	for n in data.get("npcs", []):
+		if not condition_ok(n) or SaveGame.get_flag("npc_gone_" + str(n["id"])):
+			continue
 		var npc := Npc.new()
 		var cell := Vector2i(int(n["x"]), int(n["y"]))
 		npc.setup(str(n["id"]), n, self)
@@ -263,6 +276,18 @@ func _place_warps() -> void:
 		_warps[Vector2i(int(w["x"]), int(w["y"]))] = w
 
 
+func remove_npc(id: String) -> void:
+	for c in _npcs.keys():
+		var npc: Npc = _npcs[c]
+		if npc.npc_id == id:
+			_npcs.erase(c)
+			npc.queue_free()
+
+
+func all_npcs() -> Array:
+	return _npcs.values()
+
+
 func move_npc(npc: Npc, from: Vector2i, to: Vector2i) -> void:
 	_npcs.erase(from)
 	_npcs[to] = npc
@@ -271,7 +296,8 @@ func move_npc(npc: Npc, from: Vector2i, to: Vector2i) -> void:
 ## Cria os selvagens de todas as zonas (chamado pelo World depois do jogador).
 func spawn_wilds(world: World, rng: RandomNumberGenerator) -> void:
 	for sp in spawns:
-		_spawn_zone(world, sp, rng)
+		if condition_ok(sp):
+			_spawn_zone(world, sp, rng)
 
 
 func _spawn_zone(world: World, sp: Dictionary, rng: RandomNumberGenerator) -> void:

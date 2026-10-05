@@ -10,7 +10,8 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 | 3a — Sistemas dos esqueletos | ✅ concluída |
 | 3b — Bestiário | ✅ concluída |
 | 3c — Golpes e balanceamento | ✅ concluída |
-| 4a–4h — História e mundo | ⏳ próxima (4a) |
+| 4a — Arco e Prólogo | ✅ concluída |
+| 4b–4h — Regiões, Castelo e finais | ⏳ próxima (4b) |
 | 5 — Monetização e conformidade | — |
 | 6 — Polimento e publicação | — |
 
@@ -167,5 +168,44 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 ### Pendências
 - Os Guardiões são protótipos, e caminhada e leitura são orçamento. A fase 4 define as equipes do roteiro, mede os mapas reais e repete a simulação.
 
-### Próxima tarefa: Fase 4a — Arco da história
-`docs/roteiro/00_arco.md` com as notas do Fernando (Guardiões parentes do Rei, dificuldade crescente), as 3 decisões e os 2 finais.
+## Fase 4a — Arco da história e Prólogo (concluída)
+
+### Feito
+- **`docs/roteiro/00_arco.md`:**
+  - a verdade de 2040: o protagonista é o último herdeiro do Rei, puxado pelo eco da coroa;
+  - as 8 pistas em ordem;
+  - os arcos de Lia (medo → luz) e de Taro (raiva → perdão);
+  - os **6 Guardiões parentes do Rei**: primo, tia, sobrinha, irmão, filha e esposa, com motivo e mecânica-tema;
+  - 5 escolhas e os 2 finais, com o Rei entrando na equipe nos dois.
+- **`docs/roteiro/01_prologo.md`:** problema local (o cais fechado), pista (o ingresso do museu), momento de Lia e Taro, NPCs, domadores, escolhas e todas as falas.
+- **Sistemas de roteiro:**
+  - **ações no diálogo:** dar parceiro, batalha (com vitória, recompensa e marcador), curar, item, moedas, Rancho, loja, ponto de volta, sumir NPC;
+  - **eventos de entrada** no mapa;
+  - **condições de flag** em NPCs, objetos e zonas de selvagens;
+  - **domador com campo de visão** ("!", caminha até o jogador e desafia, uma vez só).
+- **Novas telas:** Loja, Mochila (usar poções fora da batalha; o ingresso é item-chave) e Equipe (ficha e ordem do time). Dicas do Bento na 1ª batalha e tutorial do marcador.
+- **Vila Maré:**
+  - cidade com Rancho, Loja, 2 casas de domadores, 4 NPCs de praça, a missão da rede da Jurema e o Fiscal Brás;
+  - o recorrente com batalha opcional;
+  - mapas gerados por `tools/maps/make_prologo.py`.
+- **Praia:** farol velho, selvagens bebês (depois da escolha do parceiro), rede da missão e o despertar.
+- **Arte nova:**
+  - prédios (Rancho, Loja, 2 casas), farol, cerca, poste com luz, poço, banca e floreira;
+  - 8 NPCs humanos (`tools/art/gen_npcs.py`) e Lia/Taro como NPC;
+  - sons de cura, compra e "!".
+- **Texto:** 82 chaves nos 3 idiomas (`tools/maps/prologo_text.py`), cerca de 690 palavras PT-BR.
+
+### Verificação
+- `tests/run_tests.tscn`: 0 falhas. O novo `test_prologue.gd` roda os roteiros de verdade:
+  - despertar, Bento, escolha de Lia e de Taro;
+  - missão da Jurema, ordem das falas dos NPCs;
+  - loja, mochila, condições de mapa e visão do Brás.
+- Captura `capture.tscn -- --prologo` joga o Prólogo inteiro: despertar, Bento, escolha, praia, dica da 1ª batalha, vila, Marola, Anzol, Brás e Equipe.
+- `validate_data.py`: OK (mapas, portas, NPCs, diálogos, encontros e traduções).
+
+### Pendências
+- A estrada norte leva à Rota 1, que é a fase 4b; por enquanto aparece uma mensagem de "próxima atualização".
+- Os tempos reais do Prólogo devem ser medidos e passados ao `balance.json` (orçamento atual: 15 min).
+
+### Próxima tarefa: Fase 4b — Bosque das Raízes
+`02_bosque.md`, Rota 1 com 2–3 caminhos, cidade do Bosque, Guardião Ramalho (mecânica de Atraso), pista do brasão e momento de Lia/Taro.

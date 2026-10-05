@@ -1,0 +1,37 @@
+{
+ "_comment": "Tabelas de encontro por zona (seção 7). Estágio sempre coerente com a idade de crescimento.",
+ "tables": {
+  "praia": [
+   {
+    "species": "rendeira_1",
+    "stage": 1,
+    "min_level": 3,
+    "max_level": 5,
+    "rarity": "comum"
+   },
+   {
+    "species": "marisqueiro_1",
+    "stage": 1,
+    "min_level": 3,
+    "max_level": 5,
+    "rarity": "comum"
+   }
+  ],
+  "praia_rochas": [
+   {
+    "species": "marisqueiro_1",
+    "stage": 1,
+    "min_level": 4,
+    "max_level": 6,
+    "rarity": "comum"
+   },
+   {
+    "species": "rendeira_1",
+    "stage": 1,
+    "min_level": 4,
+    "max_level": 6,
+    "rarity": "incomum"
+   }
+  ]
+ }
+}

@@ -273,6 +273,9 @@ func _intro() -> void:
 		v.enter(true)
 		_place_card(m)
 	await _say("BTL_GO", {"name": " & ".join(allies.map(func(x: Monster) -> String: return x.display_name()))})
+	# dicas de tutorial (1ª batalha do Prólogo)
+	for tip in info.get("tips", []):
+		await _say(str(tip))
 
 
 func _refresh_timeline(ghost_weight: float = -1.0) -> void:

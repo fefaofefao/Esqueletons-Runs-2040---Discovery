@@ -1,0 +1,378 @@
+{
+ "id": "vila_mare",
+ "region": "vila_mare",
+ "name_key": "MAP_VILA_MARE",
+ "tileset": "overworld",
+ "legend": {
+  "g": "grass",
+  "f": "flowers",
+  "B": "bush",
+  "p": "path",
+  "~": "water",
+  "W": "deep",
+  "=": "dock",
+  ".": "sand"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BBgggggggggggggggggppgggggggggggg~~~WWWW",
+  "BBgggggggggggggggggpBgggggggggggg~~~WWWW",
+  "BBgggggggggggggggggpBgggggggggggg~f~WWWW",
+  "BBgggggggggggggggggpBgggggggggggg~~~WWWW",
+  "BBgggggggggggggggggppgggggggggggg~~~WWWW",
+  "BBgggggggggggggggggppgggggggggggg~~~WWWW",
+  "BBgggggggggggggggggppgggggggggggg~~~WWWW",
+  "BBgggggggggggggggggppgggggggggg..~~~WWWW",
+  "BBgggggggggggggggggppgggggggggg..~~~WWWW",
+  "BBgggggggpppppppppppppppppppppp..~~~WWWW",
+  "BBgggggggpggggppppppppppppggggp..~~~WWWW",
+  "BBgggggggpggggpfppppppppfpggggp..~~~WWWW",
+  "BBgggggggpggggppppppppppppggggp..~~~WWWW",
+  "BBgggggggpggggppppppppppppppppppp======W",
+  "BBgggggggpggggppppppppppppppppppp======W",
+  "BBgggggggpggggpfppppppppfpggggp..~~~WWWW",
+  "BBgggggggpggggppppppppppppggggp..~~~WWWW",
+  "BBgggggggpgggggggggppgggggggggp..~~~WWWW",
+  "BBgggggggpgggggggggppgggggggggp..~~~WWWW",
+  "BBggggpppppppppppppppppppppppppppp~~WWWW",
+  "BBgggggggggggggggggppgggggggggg..~~~WWWW",
+  "BBgggggggggggggggggppgggggggggg..~~~WWWW",
+  "BBgggggggggggggggggppgggggggggg..~~~WWWW",
+  "BBgggggggggggggggggppgggggggggg..~~~WWWW",
+  "BBgggfgggggggggggggppgggggggggg..~~~WWWW",
+  "BBggggfggggggggggggppgggggggggggg~~~WWWW",
+  "BBggggggggggfggggggppggggggfggggg~~~WWWW",
+  "BBgggggggggggggggggppgggggggggggg~~~WWWW",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
+ ],
+ "spawn": {
+  "x": 19,
+  "y": 29,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "house_ranch",
+   "x": 12,
+   "y": 10
+  },
+  {
+   "type": "house_shop",
+   "x": 27,
+   "y": 10
+  },
+  {
+   "type": "house_a",
+   "x": 8,
+   "y": 20
+  },
+  {
+   "type": "house_b",
+   "x": 30,
+   "y": 20
+  },
+  {
+   "type": "well",
+   "x": 20,
+   "y": 15,
+   "dialog": "vila_mare/poco"
+  },
+  {
+   "type": "stall",
+   "x": 16,
+   "y": 19
+  },
+  {
+   "type": "lamp_post",
+   "x": 13,
+   "y": 13
+  },
+  {
+   "type": "lamp_post",
+   "x": 26,
+   "y": 13
+  },
+  {
+   "type": "lamp_post",
+   "x": 18,
+   "y": 25
+  },
+  {
+   "type": "lamp_post",
+   "x": 21,
+   "y": 6
+  },
+  {
+   "type": "flower_box",
+   "x": 10,
+   "y": 11
+  },
+  {
+   "type": "flower_box",
+   "x": 25,
+   "y": 11
+  },
+  {
+   "type": "sign",
+   "x": 18,
+   "y": 28,
+   "dialog": "vila_mare/placa_entrada"
+  },
+  {
+   "type": "sign",
+   "x": 14,
+   "y": 11,
+   "dialog": "vila_mare/placa_rancho"
+  },
+  {
+   "type": "sign",
+   "x": 29,
+   "y": 11,
+   "dialog": "vila_mare/placa_loja"
+  },
+  {
+   "type": "sign",
+   "x": 32,
+   "y": 14,
+   "dialog": "vila_mare/placa_cais"
+  },
+  {
+   "type": "sign",
+   "x": 18,
+   "y": 2,
+   "dialog": "vila_mare/placa_norte"
+  },
+  {
+   "type": "boat",
+   "x": 35,
+   "y": 18
+  },
+  {
+   "type": "boat",
+   "x": 36,
+   "y": 13
+  },
+  {
+   "type": "net_rack",
+   "x": 32,
+   "y": 23
+  },
+  {
+   "type": "barrel",
+   "x": 31,
+   "y": 17
+  },
+  {
+   "type": "crate",
+   "x": 32,
+   "y": 18
+  },
+  {
+   "type": "palm",
+   "x": 4,
+   "y": 6
+  },
+  {
+   "type": "palm",
+   "x": 30,
+   "y": 5
+  },
+  {
+   "type": "palm",
+   "x": 5,
+   "y": 15
+  },
+  {
+   "type": "palm",
+   "x": 26,
+   "y": 26
+  },
+  {
+   "type": "palm",
+   "x": 13,
+   "y": 27
+  },
+  {
+   "type": "fence",
+   "x": 3,
+   "y": 24
+  },
+  {
+   "type": "fence",
+   "x": 4,
+   "y": 24
+  },
+  {
+   "type": "fence",
+   "x": 5,
+   "y": 24
+  },
+  {
+   "type": "fence",
+   "x": 6,
+   "y": 24
+  },
+  {
+   "type": "fence",
+   "x": 7,
+   "y": 24
+  },
+  {
+   "type": "fence",
+   "x": 8,
+   "y": 24
+  },
+  {
+   "type": "fence",
+   "x": 23,
+   "y": 6
+  },
+  {
+   "type": "fence",
+   "x": 24,
+   "y": 6
+  },
+  {
+   "type": "fence",
+   "x": 25,
+   "y": 6
+  },
+  {
+   "type": "fence",
+   "x": 26,
+   "y": 6
+  },
+  {
+   "type": "fence",
+   "x": 27,
+   "y": 6
+  },
+  {
+   "type": "fence",
+   "x": 28,
+   "y": 6
+  }
+ ],
+ "npcs": [
+  {
+   "id": "pipa",
+   "x": 17,
+   "y": 16,
+   "facing": "right"
+  },
+  {
+   "id": "cascalho",
+   "x": 22,
+   "y": 13,
+   "facing": "down"
+  },
+  {
+   "id": "jurema",
+   "x": 31,
+   "y": 13,
+   "facing": "left"
+  },
+  {
+   "id": "bras",
+   "x": 19,
+   "y": 4,
+   "facing": "down",
+   "if_not": "bras_beaten"
+  },
+  {
+   "id": "bras_depois",
+   "x": 22,
+   "y": 3,
+   "facing": "left",
+   "if": "bras_beaten"
+  },
+  {
+   "id": "rival_lia",
+   "x": 20,
+   "y": 2,
+   "facing": "left",
+   "if": "partner_taro",
+   "if_not": "rival_vila_done"
+  },
+  {
+   "id": "rival_taro",
+   "x": 20,
+   "y": 2,
+   "facing": "left",
+   "if": "partner_lia",
+   "if_not": "rival_vila_done"
+  }
+ ],
+ "warps": [
+  {
+   "x": 12,
+   "y": 10,
+   "to": "vila_rancho",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 27,
+   "y": 10,
+   "to": "vila_loja",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 8,
+   "y": 20,
+   "to": "vila_casa_remo",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 30,
+   "y": 20,
+   "to": "vila_casa_concha",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 19,
+   "y": 31,
+   "to": "praia_despertar",
+   "tx": 23,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 31,
+   "to": "praia_despertar",
+   "tx": 24,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 19,
+   "y": 0,
+   "to": "rota_1",
+   "tx": -1,
+   "ty": -1,
+   "facing": "up",
+   "sfx": "",
+   "locked_message": "MSG_ROUTE1_LOCKED"
+  }
+ ],
+ "ambient": [
+  "sea_sparkle",
+  "leaves"
+ ]
+}

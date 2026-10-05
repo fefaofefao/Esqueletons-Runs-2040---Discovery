@@ -59,7 +59,7 @@ func test_collision_rules() -> void:
 	check(m.is_blocked(Vector2i(33, 14)), "NPC ocupa a célula")
 	check(m.is_blocked(Vector2i(34, 10)), "parede da cabana bloqueia")
 	check(not m.is_blocked(Vector2i(35, 10)), "porta da cabana é passável")
-	check(not m.interaction_at(Vector2i(25, 12)).is_empty(), "placa interativa")
+	check(not m.interaction_at(Vector2i(22, 3)).is_empty(), "placa interativa")
 	m.free()
 
 
@@ -120,5 +120,5 @@ func test_dialog_box_runs_script() -> void:
 		box._press()
 	check(Game.top_overlay() == null, "diálogo fecha ao terminar")
 	check(SaveGame.get_flag("bento_met"), "set_flag do roteiro aplicado")
-	var txt := DialogBox.format_text("DLG_BENTO_03")
+	var txt := DialogBox.format_text("DLG_P_BENTO_4")
 	check(txt.contains("Téo"), "{player} substituído pelo nome")
