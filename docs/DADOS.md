@@ -73,7 +73,10 @@ Referência: `"arquivo/id"`. Cada caixa tem no máximo 3 linhas; textos maiores 
 
 ## Formatos das próximas fases (o validador já os confere)
 
-### `data/species.json` (fases 3b/3c)
+### `data/species.json` (gerado por `tools/bestiary/build.py`)
+Campos extras usados pelo jogo: `gender`, `map_behavior`, `starter` (linha), `entry_key`, `number`, `base_xp`, `sprite` (folha 64×32), `map_sprite` (folha 32×16, 2 quadros) e, a partir da 3c, `learnset` e `growth_move` por estágio.
+
+### Formato base
 ```json
 {
   "lines": [{"id": "lanterneiro", "type": "fisico|magico|cura|veneno", "region": "minas", "rarity": "comum",

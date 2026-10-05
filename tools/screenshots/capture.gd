@@ -24,6 +24,10 @@ func _ready() -> void:
 	await _shot("00_titulo_intro")
 	await _wait(1.6)
 	await _shot("01_titulo")
+	if "--bestiary" in OS.get_cmdline_user_args():
+		await _bestiary_shots()
+		get_tree().quit()
+		return
 	if "--phase3" in OS.get_cmdline_user_args():
 		await _phase3_shots()
 		get_tree().quit()
@@ -227,3 +231,40 @@ func _phase3_shots() -> void:
 	Game.open_overlay(RanchMenu.new())
 	await _wait(0.4)
 	await _shot("c10_rancho")
+
+
+## Fase 3b: Ossário com espécies reais, fichas e selvagens reais no mapa.
+func _bestiary_shots() -> void:
+	Game.start_new_game("Téo")
+	await _wait(1.0)
+	var ids := Data.all_species_ids(false)
+	for i in ids.size():
+		var e := Ossuary.entry(ids[i])
+		e["seen"] = i % 5 != 4
+		e["defeated"] = i % 3 == 0
+		e["recruited"] = i % 4 == 0
+		e["marker"] = (i * 37) % 100
+	Ossuary.entry("faroleira_3")["golden_recruited"] = true
+	var oss := OssuaryScreen.new()
+	Game.open_overlay(oss)
+	await _wait(0.4)
+	await _shot("d1_ossario")
+	for id in ["grumete_1", "faroleira_3", "palafiteiro_3", "rei_esqueleto"]:
+		Ossuary.entry(id)["seen"] = true
+		var en := OssuaryEntry.new().setup(id, int(Data.species(id).get("number", 0)))
+		Game.open_overlay(en)
+		await _wait(0.5)
+		await _shot("d2_ficha_" + id)
+		en.close()
+		await _wait(0.2)
+	Game.close_all_overlays()
+	var w := Game.world
+	var rng := RandomNumberGenerator.new()
+	rng.seed = 4
+	var table := []
+	for id in ["grumete_1", "faroleira_1", "marisqueiro_1", "rendeira_1", "lenhador_2", "mineiro_3", "domador_escorpioes_3"]:
+		table.append({"species": id, "min_level": 5, "max_level": 5})
+	Data.encounter_overrides["_cap"] = table
+	w.map.add_spawn(w, {"id": "cap", "table": "_cap", "x": w.player.cell.x, "y": w.player.cell.y, "radius": 5, "count": 7}, rng)
+	await _wait(1.2)
+	await _shot("d3_selvagens_reais")

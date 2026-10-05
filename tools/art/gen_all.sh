@@ -10,3 +10,5 @@ python3 gen_ui.py
 python3 gen_sfx.py
 python3 gen_battle.py
 python3 gen_title.py
+python3 ../bestiary/build.py
+python3 gen_skeletons.py

@@ -1,0 +1,1790 @@
+{
+ "lines": [
+  {
+   "id": "grumete",
+   "type": "fisico",
+   "region": "praia",
+   "rarity": "incomum",
+   "growth_levels": [
+    16,
+    36
+   ],
+   "signature_move": "remada_dupla",
+   "gender": "m",
+   "map_behavior": "chase",
+   "starter": "Taro",
+   "stages": [
+    {
+     "id": "grumete_1",
+     "name_key": "SPECIES_GRUMETE_1",
+     "entry_key": "OSS_GRUMETE_1",
+     "stats": {
+      "hp": 52,
+      "atk": 66,
+      "mag": 28,
+      "def": 49,
+      "res": 37,
+      "spd": 49
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/grumete_1.png",
+     "map_sprite": "res://assets/skeletons/map/grumete_1.png",
+     "number": 1
+    },
+    {
+     "id": "grumete_2",
+     "name_key": "SPECIES_GRUMETE_2",
+     "entry_key": "OSS_GRUMETE_2",
+     "stats": {
+      "hp": 72,
+      "atk": 91,
+      "mag": 39,
+      "def": 69,
+      "res": 52,
+      "spd": 69
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/grumete_2.png",
+     "map_sprite": "res://assets/skeletons/map/grumete_2.png",
+     "number": 2
+    },
+    {
+     "id": "grumete_3",
+     "name_key": "SPECIES_GRUMETE_3",
+     "entry_key": "OSS_GRUMETE_3",
+     "stats": {
+      "hp": 92,
+      "atk": 117,
+      "mag": 50,
+      "def": 88,
+      "res": 67,
+      "spd": 88
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/grumete_3.png",
+     "map_sprite": "res://assets/skeletons/map/grumete_3.png",
+     "number": 3
+    }
+   ]
+  },
+  {
+   "id": "faroleira",
+   "type": "magico",
+   "region": "praia",
+   "rarity": "incomum",
+   "growth_levels": [
+    16,
+    36
+   ],
+   "signature_move": "facho_do_farol",
+   "gender": "f",
+   "map_behavior": "patrol",
+   "starter": "Lia",
+   "stages": [
+    {
+     "id": "faroleira_1",
+     "name_key": "SPECIES_FAROLEIRA_1",
+     "entry_key": "OSS_FAROLEIRA_1",
+     "stats": {
+      "hp": 44,
+      "atk": 28,
+      "mag": 66,
+      "def": 37,
+      "res": 54,
+      "spd": 52
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/faroleira_1.png",
+     "map_sprite": "res://assets/skeletons/map/faroleira_1.png",
+     "number": 4
+    },
+    {
+     "id": "faroleira_2",
+     "name_key": "SPECIES_FAROLEIRA_2",
+     "entry_key": "OSS_FAROLEIRA_2",
+     "stats": {
+      "hp": 63,
+      "atk": 39,
+      "mag": 91,
+      "def": 52,
+      "res": 75,
+      "spd": 72
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/faroleira_2.png",
+     "map_sprite": "res://assets/skeletons/map/faroleira_2.png",
+     "number": 5
+    },
+    {
+     "id": "faroleira_3",
+     "name_key": "SPECIES_FAROLEIRA_3",
+     "entry_key": "OSS_FAROLEIRA_3",
+     "stats": {
+      "hp": 80,
+      "atk": 50,
+      "mag": 117,
+      "def": 67,
+      "res": 96,
+      "spd": 92
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/faroleira_3.png",
+     "map_sprite": "res://assets/skeletons/map/faroleira_3.png",
+     "number": 6
+    }
+   ]
+  },
+  {
+   "id": "marisqueiro",
+   "type": "veneno",
+   "region": "praia",
+   "rarity": "comum",
+   "growth_levels": [
+    14,
+    34
+   ],
+   "signature_move": "chuva_de_espinhos",
+   "gender": "m",
+   "map_behavior": "shy",
+   "starter": "",
+   "stages": [
+    {
+     "id": "marisqueiro_1",
+     "name_key": "SPECIES_MARISQUEIRO_1",
+     "entry_key": "OSS_MARISQUEIRO_1",
+     "stats": {
+      "hp": 42,
+      "atk": 46,
+      "mag": 46,
+      "def": 39,
+      "res": 41,
+      "spd": 48
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/marisqueiro_1.png",
+     "map_sprite": "res://assets/skeletons/map/marisqueiro_1.png",
+     "number": 7
+    },
+    {
+     "id": "marisqueiro_2",
+     "name_key": "SPECIES_MARISQUEIRO_2",
+     "entry_key": "OSS_MARISQUEIRO_2",
+     "stats": {
+      "hp": 59,
+      "atk": 65,
+      "mag": 65,
+      "def": 56,
+      "res": 59,
+      "spd": 68
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/marisqueiro_2.png",
+     "map_sprite": "res://assets/skeletons/map/marisqueiro_2.png",
+     "number": 8
+    },
+    {
+     "id": "marisqueiro_3",
+     "name_key": "SPECIES_MARISQUEIRO_3",
+     "entry_key": "OSS_MARISQUEIRO_3",
+     "stats": {
+      "hp": 78,
+      "atk": 84,
+      "mag": 84,
+      "def": 72,
+      "res": 76,
+      "spd": 88
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/marisqueiro_3.png",
+     "map_sprite": "res://assets/skeletons/map/marisqueiro_3.png",
+     "number": 9
+    }
+   ]
+  },
+  {
+   "id": "rendeira",
+   "type": "cura",
+   "region": "praia",
+   "rarity": "comum",
+   "growth_levels": [
+    14,
+    34
+   ],
+   "signature_move": "remendo_de_rede",
+   "gender": "f",
+   "map_behavior": "circle",
+   "starter": "",
+   "stages": [
+    {
+     "id": "rendeira_1",
+     "name_key": "SPECIES_RENDEIRA_1",
+     "entry_key": "OSS_RENDEIRA_1",
+     "stats": {
+      "hp": 51,
+      "atk": 28,
+      "mag": 48,
+      "def": 44,
+      "res": 52,
+      "spd": 39
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/rendeira_1.png",
+     "map_sprite": "res://assets/skeletons/map/rendeira_1.png",
+     "number": 10
+    },
+    {
+     "id": "rendeira_2",
+     "name_key": "SPECIES_RENDEIRA_2",
+     "entry_key": "OSS_RENDEIRA_2",
+     "stats": {
+      "hp": 72,
+      "atk": 40,
+      "mag": 68,
+      "def": 62,
+      "res": 74,
+      "spd": 56
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/rendeira_2.png",
+     "map_sprite": "res://assets/skeletons/map/rendeira_2.png",
+     "number": 11
+    },
+    {
+     "id": "rendeira_3",
+     "name_key": "SPECIES_RENDEIRA_3",
+     "entry_key": "OSS_RENDEIRA_3",
+     "stats": {
+      "hp": 94,
+      "atk": 52,
+      "mag": 88,
+      "def": 80,
+      "res": 96,
+      "spd": 72
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/rendeira_3.png",
+     "map_sprite": "res://assets/skeletons/map/rendeira_3.png",
+     "number": 12
+    }
+   ]
+  },
+  {
+   "id": "lenhador",
+   "type": "fisico",
+   "region": "bosque",
+   "rarity": "comum",
+   "growth_levels": [
+    18,
+    40
+   ],
+   "signature_move": "golpe_de_tora",
+   "gender": "m",
+   "map_behavior": "chase",
+   "starter": "",
+   "stages": [
+    {
+     "id": "lenhador_1",
+     "name_key": "SPECIES_LENHADOR_1",
+     "entry_key": "OSS_LENHADOR_1",
+     "stats": {
+      "hp": 48,
+      "atk": 61,
+      "mag": 26,
+      "def": 46,
+      "res": 35,
+      "spd": 46
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/lenhador_1.png",
+     "map_sprite": "res://assets/skeletons/map/lenhador_1.png",
+     "number": 13
+    },
+    {
+     "id": "lenhador_2",
+     "name_key": "SPECIES_LENHADOR_2",
+     "entry_key": "OSS_LENHADOR_2",
+     "stats": {
+      "hp": 68,
+      "atk": 87,
+      "mag": 37,
+      "def": 65,
+      "res": 50,
+      "spd": 65
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/lenhador_2.png",
+     "map_sprite": "res://assets/skeletons/map/lenhador_2.png",
+     "number": 14
+    },
+    {
+     "id": "lenhador_3",
+     "name_key": "SPECIES_LENHADOR_3",
+     "entry_key": "OSS_LENHADOR_3",
+     "stats": {
+      "hp": 90,
+      "atk": 112,
+      "mag": 48,
+      "def": 84,
+      "res": 64,
+      "spd": 84
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/lenhador_3.png",
+     "map_sprite": "res://assets/skeletons/map/lenhador_3.png",
+     "number": 15
+    }
+   ]
+  },
+  {
+   "id": "herborista",
+   "type": "cura",
+   "region": "bosque",
+   "rarity": "comum",
+   "growth_levels": [
+    18,
+    40
+   ],
+   "signature_move": "seiva_viva",
+   "gender": "f",
+   "map_behavior": "shy",
+   "starter": "",
+   "stages": [
+    {
+     "id": "herborista_1",
+     "name_key": "SPECIES_HERBORISTA_1",
+     "entry_key": "OSS_HERBORISTA_1",
+     "stats": {
+      "hp": 51,
+      "atk": 28,
+      "mag": 48,
+      "def": 44,
+      "res": 52,
+      "spd": 39
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/herborista_1.png",
+     "map_sprite": "res://assets/skeletons/map/herborista_1.png",
+     "number": 16
+    },
+    {
+     "id": "herborista_2",
+     "name_key": "SPECIES_HERBORISTA_2",
+     "entry_key": "OSS_HERBORISTA_2",
+     "stats": {
+      "hp": 72,
+      "atk": 40,
+      "mag": 68,
+      "def": 62,
+      "res": 74,
+      "spd": 56
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/herborista_2.png",
+     "map_sprite": "res://assets/skeletons/map/herborista_2.png",
+     "number": 17
+    },
+    {
+     "id": "herborista_3",
+     "name_key": "SPECIES_HERBORISTA_3",
+     "entry_key": "OSS_HERBORISTA_3",
+     "stats": {
+      "hp": 94,
+      "atk": 52,
+      "mag": 88,
+      "def": 80,
+      "res": 96,
+      "spd": 72
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/herborista_3.png",
+     "map_sprite": "res://assets/skeletons/map/herborista_3.png",
+     "number": 18
+    }
+   ]
+  },
+  {
+   "id": "cogumeleiro",
+   "type": "veneno",
+   "region": "bosque",
+   "rarity": "incomum",
+   "growth_levels": [
+    20,
+    42
+   ],
+   "signature_move": "nuvem_de_esporos",
+   "gender": "m",
+   "map_behavior": "patrol",
+   "starter": "",
+   "stages": [
+    {
+     "id": "cogumeleiro_1",
+     "name_key": "SPECIES_COGUMELEIRO_1",
+     "entry_key": "OSS_COGUMELEIRO_1",
+     "stats": {
+      "hp": 45,
+      "atk": 49,
+      "mag": 49,
+      "def": 42,
+      "res": 44,
+      "spd": 52
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/cogumeleiro_1.png",
+     "map_sprite": "res://assets/skeletons/map/cogumeleiro_1.png",
+     "number": 19
+    },
+    {
+     "id": "cogumeleiro_2",
+     "name_key": "SPECIES_COGUMELEIRO_2",
+     "entry_key": "OSS_COGUMELEIRO_2",
+     "stats": {
+      "hp": 61,
+      "atk": 69,
+      "mag": 69,
+      "def": 59,
+      "res": 62,
+      "spd": 72
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/cogumeleiro_2.png",
+     "map_sprite": "res://assets/skeletons/map/cogumeleiro_2.png",
+     "number": 20
+    },
+    {
+     "id": "cogumeleiro_3",
+     "name_key": "SPECIES_COGUMELEIRO_3",
+     "entry_key": "OSS_COGUMELEIRO_3",
+     "stats": {
+      "hp": 80,
+      "atk": 88,
+      "mag": 88,
+      "def": 75,
+      "res": 79,
+      "spd": 92
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/cogumeleiro_3.png",
+     "map_sprite": "res://assets/skeletons/map/cogumeleiro_3.png",
+     "number": 21
+    }
+   ]
+  },
+  {
+   "id": "flautista",
+   "type": "magico",
+   "region": "bosque",
+   "rarity": "raro",
+   "growth_levels": [
+    22,
+    46
+   ],
+   "signature_move": "melodia_vagalume",
+   "gender": "m",
+   "map_behavior": "fast",
+   "starter": "",
+   "stages": [
+    {
+     "id": "flautista_1",
+     "name_key": "SPECIES_FLAUTISTA_1",
+     "entry_key": "OSS_FLAUTISTA_1",
+     "stats": {
+      "hp": 44,
+      "atk": 48,
+      "mag": 58,
+      "def": 40,
+      "res": 42,
+      "spd": 68
+     },
+     "base_xp": 60,
+     "sprite": "res://assets/skeletons/flautista_1.png",
+     "map_sprite": "res://assets/skeletons/map/flautista_1.png",
+     "number": 22
+    },
+    {
+     "id": "flautista_2",
+     "name_key": "SPECIES_FLAUTISTA_2",
+     "entry_key": "OSS_FLAUTISTA_2",
+     "stats": {
+      "hp": 62,
+      "atk": 65,
+      "mag": 79,
+      "def": 55,
+      "res": 58,
+      "spd": 93
+     },
+     "base_xp": 120,
+     "sprite": "res://assets/skeletons/flautista_2.png",
+     "map_sprite": "res://assets/skeletons/map/flautista_2.png",
+     "number": 23
+    },
+    {
+     "id": "flautista_3",
+     "name_key": "SPECIES_FLAUTISTA_3",
+     "entry_key": "OSS_FLAUTISTA_3",
+     "stats": {
+      "hp": 78,
+      "atk": 83,
+      "mag": 100,
+      "def": 70,
+      "res": 74,
+      "spd": 117
+     },
+     "base_xp": 190,
+     "sprite": "res://assets/skeletons/flautista_3.png",
+     "map_sprite": "res://assets/skeletons/map/flautista_3.png",
+     "number": 24
+    }
+   ]
+  },
+  {
+   "id": "mineiro",
+   "type": "fisico",
+   "region": "minas",
+   "rarity": "comum",
+   "growth_levels": [
+    24,
+    46
+   ],
+   "signature_move": "desmoronar",
+   "gender": "m",
+   "map_behavior": "patrol",
+   "starter": "",
+   "stages": [
+    {
+     "id": "mineiro_1",
+     "name_key": "SPECIES_MINEIRO_1",
+     "entry_key": "OSS_MINEIRO_1",
+     "stats": {
+      "hp": 54,
+      "atk": 41,
+      "mag": 31,
+      "def": 57,
+      "res": 48,
+      "spd": 31
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/mineiro_1.png",
+     "map_sprite": "res://assets/skeletons/map/mineiro_1.png",
+     "number": 26
+    },
+    {
+     "id": "mineiro_2",
+     "name_key": "SPECIES_MINEIRO_2",
+     "entry_key": "OSS_MINEIRO_2",
+     "stats": {
+      "hp": 78,
+      "atk": 59,
+      "mag": 43,
+      "def": 81,
+      "res": 68,
+      "spd": 43
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/mineiro_2.png",
+     "map_sprite": "res://assets/skeletons/map/mineiro_2.png",
+     "number": 27
+    },
+    {
+     "id": "mineiro_3",
+     "name_key": "SPECIES_MINEIRO_3",
+     "entry_key": "OSS_MINEIRO_3",
+     "stats": {
+      "hp": 102,
+      "atk": 76,
+      "mag": 56,
+      "def": 104,
+      "res": 88,
+      "spd": 56
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/mineiro_3.png",
+     "map_sprite": "res://assets/skeletons/map/mineiro_3.png",
+     "number": 28
+    }
+   ]
+  },
+  {
+   "id": "ferreiro",
+   "type": "magico",
+   "region": "minas",
+   "rarity": "incomum",
+   "growth_levels": [
+    24,
+    46
+   ],
+   "signature_move": "martelo_de_brasa",
+   "gender": "m",
+   "map_behavior": "patrol",
+   "starter": "",
+   "stages": [
+    {
+     "id": "ferreiro_1",
+     "name_key": "SPECIES_FERREIRO_1",
+     "entry_key": "OSS_FERREIRO_1",
+     "stats": {
+      "hp": 44,
+      "atk": 28,
+      "mag": 66,
+      "def": 37,
+      "res": 54,
+      "spd": 52
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/ferreiro_1.png",
+     "map_sprite": "res://assets/skeletons/map/ferreiro_1.png",
+     "number": 29
+    },
+    {
+     "id": "ferreiro_2",
+     "name_key": "SPECIES_FERREIRO_2",
+     "entry_key": "OSS_FERREIRO_2",
+     "stats": {
+      "hp": 63,
+      "atk": 39,
+      "mag": 91,
+      "def": 52,
+      "res": 75,
+      "spd": 72
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/ferreiro_2.png",
+     "map_sprite": "res://assets/skeletons/map/ferreiro_2.png",
+     "number": 30
+    },
+    {
+     "id": "ferreiro_3",
+     "name_key": "SPECIES_FERREIRO_3",
+     "entry_key": "OSS_FERREIRO_3",
+     "stats": {
+      "hp": 80,
+      "atk": 50,
+      "mag": 117,
+      "def": 67,
+      "res": 96,
+      "spd": 92
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/ferreiro_3.png",
+     "map_sprite": "res://assets/skeletons/map/ferreiro_3.png",
+     "number": 31
+    }
+   ]
+  },
+  {
+   "id": "gasista",
+   "type": "veneno",
+   "region": "minas",
+   "rarity": "comum",
+   "growth_levels": [
+    24,
+    46
+   ],
+   "signature_move": "vazamento",
+   "gender": "m",
+   "map_behavior": "circle",
+   "starter": "",
+   "stages": [
+    {
+     "id": "gasista_1",
+     "name_key": "SPECIES_GASISTA_1",
+     "entry_key": "OSS_GASISTA_1",
+     "stats": {
+      "hp": 45,
+      "atk": 44,
+      "mag": 44,
+      "def": 44,
+      "res": 44,
+      "spd": 41
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/gasista_1.png",
+     "map_sprite": "res://assets/skeletons/map/gasista_1.png",
+     "number": 32
+    },
+    {
+     "id": "gasista_2",
+     "name_key": "SPECIES_GASISTA_2",
+     "entry_key": "OSS_GASISTA_2",
+     "stats": {
+      "hp": 65,
+      "atk": 62,
+      "mag": 62,
+      "def": 62,
+      "res": 62,
+      "spd": 59
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/gasista_2.png",
+     "map_sprite": "res://assets/skeletons/map/gasista_2.png",
+     "number": 33
+    },
+    {
+     "id": "gasista_3",
+     "name_key": "SPECIES_GASISTA_3",
+     "entry_key": "OSS_GASISTA_3",
+     "stats": {
+      "hp": 86,
+      "atk": 80,
+      "mag": 80,
+      "def": 80,
+      "res": 80,
+      "spd": 76
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/gasista_3.png",
+     "map_sprite": "res://assets/skeletons/map/gasista_3.png",
+     "number": 34
+    }
+   ]
+  },
+  {
+   "id": "aguadeiro",
+   "type": "cura",
+   "region": "minas",
+   "rarity": "raro",
+   "growth_levels": [
+    28,
+    50
+   ],
+   "signature_move": "jato_fresco",
+   "gender": "m",
+   "map_behavior": "shy",
+   "starter": "",
+   "stages": [
+    {
+     "id": "aguadeiro_1",
+     "name_key": "SPECIES_AGUADEIRO_1",
+     "entry_key": "OSS_AGUADEIRO_1",
+     "stats": {
+      "hp": 63,
+      "atk": 35,
+      "mag": 47,
+      "def": 65,
+      "res": 55,
+      "spd": 35
+     },
+     "base_xp": 60,
+     "sprite": "res://assets/skeletons/aguadeiro_1.png",
+     "map_sprite": "res://assets/skeletons/map/aguadeiro_1.png",
+     "number": 35
+    },
+    {
+     "id": "aguadeiro_2",
+     "name_key": "SPECIES_AGUADEIRO_2",
+     "entry_key": "OSS_AGUADEIRO_2",
+     "stats": {
+      "hp": 86,
+      "atk": 48,
+      "mag": 65,
+      "def": 89,
+      "res": 76,
+      "spd": 48
+     },
+     "base_xp": 120,
+     "sprite": "res://assets/skeletons/aguadeiro_2.png",
+     "map_sprite": "res://assets/skeletons/map/aguadeiro_2.png",
+     "number": 36
+    },
+    {
+     "id": "aguadeiro_3",
+     "name_key": "SPECIES_AGUADEIRO_3",
+     "entry_key": "OSS_AGUADEIRO_3",
+     "stats": {
+      "hp": 108,
+      "atk": 61,
+      "mag": 83,
+      "def": 113,
+      "res": 96,
+      "spd": 61
+     },
+     "base_xp": 190,
+     "sprite": "res://assets/skeletons/aguadeiro_3.png",
+     "map_sprite": "res://assets/skeletons/map/aguadeiro_3.png",
+     "number": 37
+    }
+   ]
+  },
+  {
+   "id": "lavadeira",
+   "type": "veneno",
+   "region": "pantano",
+   "rarity": "comum",
+   "growth_levels": [
+    30,
+    52
+   ],
+   "signature_move": "anil_toxico",
+   "gender": "f",
+   "map_behavior": "patrol",
+   "starter": "",
+   "stages": [
+    {
+     "id": "lavadeira_1",
+     "name_key": "SPECIES_LAVADEIRA_1",
+     "entry_key": "OSS_LAVADEIRA_1",
+     "stats": {
+      "hp": 42,
+      "atk": 26,
+      "mag": 61,
+      "def": 35,
+      "res": 50,
+      "spd": 48
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/lavadeira_1.png",
+     "map_sprite": "res://assets/skeletons/map/lavadeira_1.png",
+     "number": 39
+    },
+    {
+     "id": "lavadeira_2",
+     "name_key": "SPECIES_LAVADEIRA_2",
+     "entry_key": "OSS_LAVADEIRA_2",
+     "stats": {
+      "hp": 59,
+      "atk": 37,
+      "mag": 87,
+      "def": 50,
+      "res": 71,
+      "spd": 68
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/lavadeira_2.png",
+     "map_sprite": "res://assets/skeletons/map/lavadeira_2.png",
+     "number": 40
+    },
+    {
+     "id": "lavadeira_3",
+     "name_key": "SPECIES_LAVADEIRA_3",
+     "entry_key": "OSS_LAVADEIRA_3",
+     "stats": {
+      "hp": 78,
+      "atk": 48,
+      "mag": 112,
+      "def": 64,
+      "res": 92,
+      "spd": 88
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/lavadeira_3.png",
+     "map_sprite": "res://assets/skeletons/map/lavadeira_3.png",
+     "number": 41
+    }
+   ]
+  },
+  {
+   "id": "palafiteiro",
+   "type": "fisico",
+   "region": "pantano",
+   "rarity": "comum",
+   "growth_levels": [
+    30,
+    52
+   ],
+   "signature_move": "estaca_firme",
+   "gender": "m",
+   "map_behavior": "patrol",
+   "starter": "",
+   "stages": [
+    {
+     "id": "palafiteiro_1",
+     "name_key": "SPECIES_PALAFITEIRO_1",
+     "entry_key": "OSS_PALAFITEIRO_1",
+     "stats": {
+      "hp": 54,
+      "atk": 41,
+      "mag": 31,
+      "def": 57,
+      "res": 48,
+      "spd": 31
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/palafiteiro_1.png",
+     "map_sprite": "res://assets/skeletons/map/palafiteiro_1.png",
+     "number": 42
+    },
+    {
+     "id": "palafiteiro_2",
+     "name_key": "SPECIES_PALAFITEIRO_2",
+     "entry_key": "OSS_PALAFITEIRO_2",
+     "stats": {
+      "hp": 78,
+      "atk": 59,
+      "mag": 43,
+      "def": 81,
+      "res": 68,
+      "spd": 43
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/palafiteiro_2.png",
+     "map_sprite": "res://assets/skeletons/map/palafiteiro_2.png",
+     "number": 43
+    },
+    {
+     "id": "palafiteiro_3",
+     "name_key": "SPECIES_PALAFITEIRO_3",
+     "entry_key": "OSS_PALAFITEIRO_3",
+     "stats": {
+      "hp": 102,
+      "atk": 76,
+      "mag": 56,
+      "def": 104,
+      "res": 88,
+      "spd": 56
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/palafiteiro_3.png",
+     "map_sprite": "res://assets/skeletons/map/palafiteiro_3.png",
+     "number": 44
+    }
+   ]
+  },
+  {
+   "id": "jardineiro_lirios",
+   "type": "cura",
+   "region": "pantano",
+   "rarity": "incomum",
+   "growth_levels": [
+    32,
+    56
+   ],
+   "signature_move": "orvalho_de_lirio",
+   "gender": "m",
+   "map_behavior": "circle",
+   "starter": "",
+   "stages": [
+    {
+     "id": "jardineiro_lirios_1",
+     "name_key": "SPECIES_JARDINEIRO_LIRIOS_1",
+     "entry_key": "OSS_JARDINEIRO_LIRIOS_1",
+     "stats": {
+      "hp": 54,
+      "atk": 30,
+      "mag": 52,
+      "def": 47,
+      "res": 56,
+      "spd": 42
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/jardineiro_lirios_1.png",
+     "map_sprite": "res://assets/skeletons/map/jardineiro_lirios_1.png",
+     "number": 45
+    },
+    {
+     "id": "jardineiro_lirios_2",
+     "name_key": "SPECIES_JARDINEIRO_LIRIOS_2",
+     "entry_key": "OSS_JARDINEIRO_LIRIOS_2",
+     "stats": {
+      "hp": 76,
+      "atk": 42,
+      "mag": 72,
+      "def": 65,
+      "res": 78,
+      "spd": 59
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/jardineiro_lirios_2.png",
+     "map_sprite": "res://assets/skeletons/map/jardineiro_lirios_2.png",
+     "number": 46
+    },
+    {
+     "id": "jardineiro_lirios_3",
+     "name_key": "SPECIES_JARDINEIRO_LIRIOS_3",
+     "entry_key": "OSS_JARDINEIRO_LIRIOS_3",
+     "stats": {
+      "hp": 97,
+      "atk": 54,
+      "mag": 92,
+      "def": 84,
+      "res": 100,
+      "spd": 75
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/jardineiro_lirios_3.png",
+     "map_sprite": "res://assets/skeletons/map/jardineiro_lirios_3.png",
+     "number": 47
+    }
+   ]
+  },
+  {
+   "id": "sentinela",
+   "type": "fisico",
+   "region": "ossorio",
+   "rarity": "comum",
+   "growth_levels": [
+    34,
+    58
+   ],
+   "signature_move": "muralha_viva",
+   "gender": "m",
+   "map_behavior": "patrol",
+   "starter": "",
+   "stages": [
+    {
+     "id": "sentinela_1",
+     "name_key": "SPECIES_SENTINELA_1",
+     "entry_key": "OSS_SENTINELA_1",
+     "stats": {
+      "hp": 54,
+      "atk": 41,
+      "mag": 31,
+      "def": 57,
+      "res": 48,
+      "spd": 31
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/sentinela_1.png",
+     "map_sprite": "res://assets/skeletons/map/sentinela_1.png",
+     "number": 49
+    },
+    {
+     "id": "sentinela_2",
+     "name_key": "SPECIES_SENTINELA_2",
+     "entry_key": "OSS_SENTINELA_2",
+     "stats": {
+      "hp": 78,
+      "atk": 59,
+      "mag": 43,
+      "def": 81,
+      "res": 68,
+      "spd": 43
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/sentinela_2.png",
+     "map_sprite": "res://assets/skeletons/map/sentinela_2.png",
+     "number": 50
+    },
+    {
+     "id": "sentinela_3",
+     "name_key": "SPECIES_SENTINELA_3",
+     "entry_key": "OSS_SENTINELA_3",
+     "stats": {
+      "hp": 102,
+      "atk": 76,
+      "mag": 56,
+      "def": 104,
+      "res": 88,
+      "spd": 56
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/sentinela_3.png",
+     "map_sprite": "res://assets/skeletons/map/sentinela_3.png",
+     "number": 51
+    }
+   ]
+  },
+  {
+   "id": "escriba",
+   "type": "magico",
+   "region": "ossorio",
+   "rarity": "raro",
+   "growth_levels": [
+    38,
+    62
+   ],
+   "signature_move": "decreto_selado",
+   "gender": "m",
+   "map_behavior": "shy",
+   "starter": "",
+   "stages": [
+    {
+     "id": "escriba_1",
+     "name_key": "SPECIES_ESCRIBA_1",
+     "entry_key": "OSS_ESCRIBA_1",
+     "stats": {
+      "hp": 47,
+      "atk": 30,
+      "mag": 70,
+      "def": 40,
+      "res": 58,
+      "spd": 55
+     },
+     "base_xp": 60,
+     "sprite": "res://assets/skeletons/escriba_1.png",
+     "map_sprite": "res://assets/skeletons/map/escriba_1.png",
+     "number": 52
+    },
+    {
+     "id": "escriba_2",
+     "name_key": "SPECIES_ESCRIBA_2",
+     "entry_key": "OSS_ESCRIBA_2",
+     "stats": {
+      "hp": 65,
+      "atk": 41,
+      "mag": 96,
+      "def": 55,
+      "res": 79,
+      "spd": 76
+     },
+     "base_xp": 120,
+     "sprite": "res://assets/skeletons/escriba_2.png",
+     "map_sprite": "res://assets/skeletons/map/escriba_2.png",
+     "number": 53
+    },
+    {
+     "id": "escriba_3",
+     "name_key": "SPECIES_ESCRIBA_3",
+     "entry_key": "OSS_ESCRIBA_3",
+     "stats": {
+      "hp": 82,
+      "atk": 52,
+      "mag": 122,
+      "def": 70,
+      "res": 100,
+      "spd": 96
+     },
+     "base_xp": 190,
+     "sprite": "res://assets/skeletons/escriba_3.png",
+     "map_sprite": "res://assets/skeletons/map/escriba_3.png",
+     "number": 54
+    }
+   ]
+  },
+  {
+   "id": "sineiro",
+   "type": "cura",
+   "region": "ossorio",
+   "rarity": "incomum",
+   "growth_levels": [
+    34,
+    58
+   ],
+   "signature_move": "badalada_serena",
+   "gender": "m",
+   "map_behavior": "circle",
+   "starter": "",
+   "stages": [
+    {
+     "id": "sineiro_1",
+     "name_key": "SPECIES_SINEIRO_1",
+     "entry_key": "OSS_SINEIRO_1",
+     "stats": {
+      "hp": 54,
+      "atk": 30,
+      "mag": 52,
+      "def": 47,
+      "res": 56,
+      "spd": 42
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/sineiro_1.png",
+     "map_sprite": "res://assets/skeletons/map/sineiro_1.png",
+     "number": 55
+    },
+    {
+     "id": "sineiro_2",
+     "name_key": "SPECIES_SINEIRO_2",
+     "entry_key": "OSS_SINEIRO_2",
+     "stats": {
+      "hp": 76,
+      "atk": 42,
+      "mag": 72,
+      "def": 65,
+      "res": 78,
+      "spd": 59
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/sineiro_2.png",
+     "map_sprite": "res://assets/skeletons/map/sineiro_2.png",
+     "number": 56
+    },
+    {
+     "id": "sineiro_3",
+     "name_key": "SPECIES_SINEIRO_3",
+     "entry_key": "OSS_SINEIRO_3",
+     "stats": {
+      "hp": 97,
+      "atk": 54,
+      "mag": 92,
+      "def": 84,
+      "res": 100,
+      "spd": 75
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/sineiro_3.png",
+     "map_sprite": "res://assets/skeletons/map/sineiro_3.png",
+     "number": 57
+    }
+   ]
+  },
+  {
+   "id": "carregador",
+   "type": "fisico",
+   "region": "picos",
+   "rarity": "comum",
+   "growth_levels": [
+    40,
+    64
+   ],
+   "signature_move": "avalanche_de_carga",
+   "gender": "m",
+   "map_behavior": "patrol",
+   "starter": "",
+   "stages": [
+    {
+     "id": "carregador_1",
+     "name_key": "SPECIES_CARREGADOR_1",
+     "entry_key": "OSS_CARREGADOR_1",
+     "stats": {
+      "hp": 48,
+      "atk": 61,
+      "mag": 26,
+      "def": 46,
+      "res": 35,
+      "spd": 46
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/carregador_1.png",
+     "map_sprite": "res://assets/skeletons/map/carregador_1.png",
+     "number": 59
+    },
+    {
+     "id": "carregador_2",
+     "name_key": "SPECIES_CARREGADOR_2",
+     "entry_key": "OSS_CARREGADOR_2",
+     "stats": {
+      "hp": 68,
+      "atk": 87,
+      "mag": 37,
+      "def": 65,
+      "res": 50,
+      "spd": 65
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/carregador_2.png",
+     "map_sprite": "res://assets/skeletons/map/carregador_2.png",
+     "number": 60
+    },
+    {
+     "id": "carregador_3",
+     "name_key": "SPECIES_CARREGADOR_3",
+     "entry_key": "OSS_CARREGADOR_3",
+     "stats": {
+      "hp": 90,
+      "atk": 112,
+      "mag": 48,
+      "def": 84,
+      "res": 64,
+      "spd": 84
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/carregador_3.png",
+     "map_sprite": "res://assets/skeletons/map/carregador_3.png",
+     "number": 61
+    }
+   ]
+  },
+  {
+   "id": "escultor",
+   "type": "magico",
+   "region": "picos",
+   "rarity": "incomum",
+   "growth_levels": [
+    40,
+    64
+   ],
+   "signature_move": "estatua_de_gelo",
+   "gender": "m",
+   "map_behavior": "fast",
+   "starter": "",
+   "stages": [
+    {
+     "id": "escultor_1",
+     "name_key": "SPECIES_ESCULTOR_1",
+     "entry_key": "OSS_ESCULTOR_1",
+     "stats": {
+      "hp": 43,
+      "atk": 44,
+      "mag": 54,
+      "def": 37,
+      "res": 40,
+      "spd": 63
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/escultor_1.png",
+     "map_sprite": "res://assets/skeletons/map/escultor_1.png",
+     "number": 62
+    },
+    {
+     "id": "escultor_2",
+     "name_key": "SPECIES_ESCULTOR_2",
+     "entry_key": "OSS_ESCULTOR_2",
+     "stats": {
+      "hp": 59,
+      "atk": 62,
+      "mag": 75,
+      "def": 52,
+      "res": 56,
+      "spd": 88
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/escultor_2.png",
+     "map_sprite": "res://assets/skeletons/map/escultor_2.png",
+     "number": 63
+    },
+    {
+     "id": "escultor_3",
+     "name_key": "SPECIES_ESCULTOR_3",
+     "entry_key": "OSS_ESCULTOR_3",
+     "stats": {
+      "hp": 76,
+      "atk": 79,
+      "mag": 96,
+      "def": 67,
+      "res": 71,
+      "spd": 113
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/escultor_3.png",
+     "map_sprite": "res://assets/skeletons/map/escultor_3.png",
+     "number": 64
+    }
+   ]
+  },
+  {
+   "id": "chazeiro",
+   "type": "cura",
+   "region": "picos",
+   "rarity": "raro",
+   "growth_levels": [
+    44,
+    68
+   ],
+   "signature_move": "cha_de_abrigo",
+   "gender": "m",
+   "map_behavior": "shy",
+   "starter": "",
+   "stages": [
+    {
+     "id": "chazeiro_1",
+     "name_key": "SPECIES_CHAZEIRO_1",
+     "entry_key": "OSS_CHAZEIRO_1",
+     "stats": {
+      "hp": 63,
+      "atk": 35,
+      "mag": 47,
+      "def": 65,
+      "res": 55,
+      "spd": 35
+     },
+     "base_xp": 60,
+     "sprite": "res://assets/skeletons/chazeiro_1.png",
+     "map_sprite": "res://assets/skeletons/map/chazeiro_1.png",
+     "number": 65
+    },
+    {
+     "id": "chazeiro_2",
+     "name_key": "SPECIES_CHAZEIRO_2",
+     "entry_key": "OSS_CHAZEIRO_2",
+     "stats": {
+      "hp": 86,
+      "atk": 48,
+      "mag": 65,
+      "def": 89,
+      "res": 76,
+      "spd": 48
+     },
+     "base_xp": 120,
+     "sprite": "res://assets/skeletons/chazeiro_2.png",
+     "map_sprite": "res://assets/skeletons/map/chazeiro_2.png",
+     "number": 66
+    },
+    {
+     "id": "chazeiro_3",
+     "name_key": "SPECIES_CHAZEIRO_3",
+     "entry_key": "OSS_CHAZEIRO_3",
+     "stats": {
+      "hp": 108,
+      "atk": 61,
+      "mag": 83,
+      "def": 113,
+      "res": 96,
+      "spd": 61
+     },
+     "base_xp": 190,
+     "sprite": "res://assets/skeletons/chazeiro_3.png",
+     "map_sprite": "res://assets/skeletons/map/chazeiro_3.png",
+     "number": 67
+    }
+   ]
+  },
+  {
+   "id": "domador_escorpioes",
+   "type": "veneno",
+   "region": "deserto",
+   "rarity": "comum",
+   "growth_levels": [
+    44,
+    68
+   ],
+   "signature_move": "ferrao_das_dunas",
+   "gender": "m",
+   "map_behavior": "chase",
+   "starter": "",
+   "stages": [
+    {
+     "id": "domador_escorpioes_1",
+     "name_key": "SPECIES_DOMADOR_ESCORPIOES_1",
+     "entry_key": "OSS_DOMADOR_ESCORPIOES_1",
+     "stats": {
+      "hp": 40,
+      "atk": 50,
+      "mag": 41,
+      "def": 35,
+      "res": 37,
+      "spd": 59
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/domador_escorpioes_1.png",
+     "map_sprite": "res://assets/skeletons/map/domador_escorpioes_1.png",
+     "number": 69
+    },
+    {
+     "id": "domador_escorpioes_2",
+     "name_key": "SPECIES_DOMADOR_ESCORPIOES_2",
+     "entry_key": "OSS_DOMADOR_ESCORPIOES_2",
+     "stats": {
+      "hp": 55,
+      "atk": 71,
+      "mag": 59,
+      "def": 50,
+      "res": 53,
+      "spd": 84
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/domador_escorpioes_2.png",
+     "map_sprite": "res://assets/skeletons/map/domador_escorpioes_2.png",
+     "number": 70
+    },
+    {
+     "id": "domador_escorpioes_3",
+     "name_key": "SPECIES_DOMADOR_ESCORPIOES_3",
+     "entry_key": "OSS_DOMADOR_ESCORPIOES_3",
+     "stats": {
+      "hp": 74,
+      "atk": 92,
+      "mag": 76,
+      "def": 64,
+      "res": 68,
+      "spd": 108
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/domador_escorpioes_3.png",
+     "map_sprite": "res://assets/skeletons/map/domador_escorpioes_3.png",
+     "number": 71
+    }
+   ]
+  },
+  {
+   "id": "cartografo",
+   "type": "magico",
+   "region": "deserto",
+   "rarity": "raro",
+   "growth_levels": [
+    48,
+    70
+   ],
+   "signature_move": "rota_dos_ecos",
+   "gender": "m",
+   "map_behavior": "shy",
+   "starter": "",
+   "stages": [
+    {
+     "id": "cartografo_1",
+     "name_key": "SPECIES_CARTOGRAFO_1",
+     "entry_key": "OSS_CARTOGRAFO_1",
+     "stats": {
+      "hp": 48,
+      "atk": 52,
+      "mag": 52,
+      "def": 45,
+      "res": 48,
+      "spd": 55
+     },
+     "base_xp": 60,
+     "sprite": "res://assets/skeletons/cartografo_1.png",
+     "map_sprite": "res://assets/skeletons/map/cartografo_1.png",
+     "number": 72
+    },
+    {
+     "id": "cartografo_2",
+     "name_key": "SPECIES_CARTOGRAFO_2",
+     "entry_key": "OSS_CARTOGRAFO_2",
+     "stats": {
+      "hp": 65,
+      "atk": 72,
+      "mag": 72,
+      "def": 62,
+      "res": 65,
+      "spd": 76
+     },
+     "base_xp": 120,
+     "sprite": "res://assets/skeletons/cartografo_2.png",
+     "map_sprite": "res://assets/skeletons/map/cartografo_2.png",
+     "number": 73
+    },
+    {
+     "id": "cartografo_3",
+     "name_key": "SPECIES_CARTOGRAFO_3",
+     "entry_key": "OSS_CARTOGRAFO_3",
+     "stats": {
+      "hp": 83,
+      "atk": 91,
+      "mag": 91,
+      "def": 78,
+      "res": 83,
+      "spd": 96
+     },
+     "base_xp": 190,
+     "sprite": "res://assets/skeletons/cartografo_3.png",
+     "map_sprite": "res://assets/skeletons/map/cartografo_3.png",
+     "number": 74
+    }
+   ]
+  },
+  {
+   "id": "tamborileiro",
+   "type": "cura",
+   "region": "deserto",
+   "rarity": "incomum",
+   "growth_levels": [
+    44,
+    68
+   ],
+   "signature_move": "ritmo_da_caravana",
+   "gender": "m",
+   "map_behavior": "circle",
+   "starter": "",
+   "stages": [
+    {
+     "id": "tamborileiro_1",
+     "name_key": "SPECIES_TAMBORILEIRO_1",
+     "entry_key": "OSS_TAMBORILEIRO_1",
+     "stats": {
+      "hp": 49,
+      "atk": 47,
+      "mag": 47,
+      "def": 47,
+      "res": 47,
+      "spd": 44
+     },
+     "base_xp": 50,
+     "sprite": "res://assets/skeletons/tamborileiro_1.png",
+     "map_sprite": "res://assets/skeletons/map/tamborileiro_1.png",
+     "number": 75
+    },
+    {
+     "id": "tamborileiro_2",
+     "name_key": "SPECIES_TAMBORILEIRO_2",
+     "entry_key": "OSS_TAMBORILEIRO_2",
+     "stats": {
+      "hp": 70,
+      "atk": 65,
+      "mag": 65,
+      "def": 65,
+      "res": 65,
+      "spd": 62
+     },
+     "base_xp": 110,
+     "sprite": "res://assets/skeletons/tamborileiro_2.png",
+     "map_sprite": "res://assets/skeletons/map/tamborileiro_2.png",
+     "number": 76
+    },
+    {
+     "id": "tamborileiro_3",
+     "name_key": "SPECIES_TAMBORILEIRO_3",
+     "entry_key": "OSS_TAMBORILEIRO_3",
+     "stats": {
+      "hp": 87,
+      "atk": 84,
+      "mag": 84,
+      "def": 84,
+      "res": 84,
+      "spd": 79
+     },
+     "base_xp": 180,
+     "sprite": "res://assets/skeletons/tamborileiro_3.png",
+     "map_sprite": "res://assets/skeletons/map/tamborileiro_3.png",
+     "number": 77
+    }
+   ]
+  }
+ ],
+ "uniques": [
+  {
+   "id": "raizerno",
+   "name_key": "SPECIES_RAIZERNO",
+   "entry_key": "OSS_RAIZERNO",
+   "type": "cura",
+   "region": "bosque",
+   "rarity": "unico",
+   "gender": "m",
+   "map_behavior": "patrol",
+   "stats": {
+    "hp": 102,
+    "atk": 57,
+    "mag": 78,
+    "def": 106,
+    "res": 90,
+    "spd": 57
+   },
+   "base_xp": 170,
+   "sprite": "res://assets/skeletons/raizerno.png",
+   "map_sprite": "res://assets/skeletons/map/raizerno.png",
+   "number": 25
+  },
+  {
+   "id": "vagonauta",
+   "name_key": "SPECIES_VAGONAUTA",
+   "entry_key": "OSS_VAGONAUTA",
+   "type": "fisico",
+   "region": "minas",
+   "rarity": "unico",
+   "gender": "m",
+   "map_behavior": "fast",
+   "stats": {
+    "hp": 74,
+    "atk": 94,
+    "mag": 78,
+    "def": 65,
+    "res": 69,
+    "spd": 110
+   },
+   "base_xp": 170,
+   "sprite": "res://assets/skeletons/vagonauta.png",
+   "map_sprite": "res://assets/skeletons/map/vagonauta.png",
+   "number": 38
+  },
+  {
+   "id": "brumaga",
+   "name_key": "SPECIES_BRUMAGA",
+   "entry_key": "OSS_BRUMAGA",
+   "type": "veneno",
+   "region": "pantano",
+   "rarity": "unico",
+   "gender": "f",
+   "map_behavior": "shy",
+   "stats": {
+    "hp": 78,
+    "atk": 49,
+    "mag": 114,
+    "def": 65,
+    "res": 94,
+    "spd": 90
+   },
+   "base_xp": 170,
+   "sprite": "res://assets/skeletons/brumaga.png",
+   "map_sprite": "res://assets/skeletons/map/brumaga.png",
+   "number": 48
+  },
+  {
+   "id": "bufardo",
+   "name_key": "SPECIES_BUFARDO",
+   "entry_key": "OSS_BUFARDO",
+   "type": "magico",
+   "region": "ossorio",
+   "rarity": "unico",
+   "gender": "m",
+   "map_behavior": "fast",
+   "stats": {
+    "hp": 76,
+    "atk": 86,
+    "mag": 86,
+    "def": 74,
+    "res": 78,
+    "spd": 90
+   },
+   "base_xp": 170,
+   "sprite": "res://assets/skeletons/bufardo.png",
+   "map_sprite": "res://assets/skeletons/map/bufardo.png",
+   "number": 58
+  },
+  {
+   "id": "nevasco",
+   "name_key": "SPECIES_NEVASCO",
+   "entry_key": "OSS_NEVASCO",
+   "type": "cura",
+   "region": "picos",
+   "rarity": "unico",
+   "gender": "m",
+   "map_behavior": "patrol",
+   "stats": {
+    "hp": 93,
+    "atk": 53,
+    "mag": 90,
+    "def": 82,
+    "res": 98,
+    "spd": 74
+   },
+   "base_xp": 170,
+   "sprite": "res://assets/skeletons/nevasco.png",
+   "map_sprite": "res://assets/skeletons/map/nevasco.png",
+   "number": 68
+  },
+  {
+   "id": "ampulhor",
+   "name_key": "SPECIES_AMPULHOR",
+   "entry_key": "OSS_AMPULHOR",
+   "type": "magico",
+   "region": "deserto",
+   "rarity": "unico",
+   "gender": "m",
+   "map_behavior": "patrol",
+   "stats": {
+    "hp": 78,
+    "atk": 49,
+    "mag": 114,
+    "def": 65,
+    "res": 94,
+    "spd": 90
+   },
+   "base_xp": 170,
+   "sprite": "res://assets/skeletons/ampulhor.png",
+   "map_sprite": "res://assets/skeletons/map/ampulhor.png",
+   "number": 78
+  },
+  {
+   "id": "degustor",
+   "name_key": "SPECIES_DEGUSTOR",
+   "entry_key": "OSS_DEGUSTOR",
+   "type": "veneno",
+   "region": "castelo",
+   "rarity": "unico",
+   "gender": "m",
+   "map_behavior": "chase",
+   "stats": {
+    "hp": 84,
+    "atk": 82,
+    "mag": 82,
+    "def": 82,
+    "res": 82,
+    "spd": 78
+   },
+   "base_xp": 170,
+   "sprite": "res://assets/skeletons/degustor.png",
+   "map_sprite": "res://assets/skeletons/map/degustor.png",
+   "number": 79
+  }
+ ],
+ "king": {
+  "id": "rei_esqueleto",
+  "name_key": "SPECIES_REI_ESQUELETO",
+  "entry_key": "OSS_REI_ESQUELETO",
+  "type": "magico",
+  "region": "castelo",
+  "rarity": "unico",
+  "gender": "m",
+  "map_behavior": "patrol",
+  "stats": {
+   "hp": 110,
+   "atk": 100,
+   "mag": 115,
+   "def": 95,
+   "res": 100,
+   "spd": 80
+  },
+  "base_xp": 400,
+  "sprite": "res://assets/skeletons/rei_esqueleto.png",
+  "map_sprite": "res://assets/skeletons/map/rei_esqueleto.png",
+  "number": 80
+ }
+}

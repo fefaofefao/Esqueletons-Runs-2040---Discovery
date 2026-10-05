@@ -4,7 +4,7 @@ extends "res://tests/test_case.gd"
 
 const LANGS := ["pt_BR", "en", "es"]
 ## Textos exibidos na caixa de diálogo (até 3 linhas de 288 px).
-const DIALOG_PREFIXES := ["DLG_", "SIGN_", "OBJ_", "MSG_", "CREDITS_"]
+const DIALOG_PREFIXES := ["DLG_", "SIGN_", "OBJ_", "MSG_", "CREDITS_", "OSS_"]
 const DIALOG_KEYS := ["DBG_TEAM_GIVEN", "SET_PRIVACY_INFO", "ABOUT_PRIVACY_PENDING", "DBG_TIMES_EMPTY", "DBG_SAVE_DELETED", "DBG_GROWTH_TEAM_GIVEN"]
 ## Perguntas da ChoiceBox (206 px, até 4 linhas).
 const CHOICE_PREFIXES := ["CONFIRM_", "RECRUIT_ASK"]

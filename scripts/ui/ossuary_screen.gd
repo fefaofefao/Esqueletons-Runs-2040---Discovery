@@ -73,6 +73,4 @@ func _on_activated(id: String) -> void:
 	if not e.get("seen", false):
 		Audio.sfx("bump")
 		return
-	var entry_key := str(Data.species(id).get("entry_key", ""))
-	if entry_key != "":
-		await Game.show_message(entry_key)
+	Game.open_overlay(OssuaryEntry.new().setup(id, _ids.find(id) + 1))

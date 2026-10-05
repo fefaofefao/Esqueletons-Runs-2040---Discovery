@@ -1,0 +1,161 @@
+keys,pt_BR,en,es
+SPECIES_GRUMETE_1,Remito,Oarlet,Remiño
+OSS_GRUMETE_1,Treina remadas no ar enquanto dorme. Ainda confunde o remo com uma colher.,It practices rowing in its sleep. It still mistakes its oar for a spoon.,Practica remadas mientras duerme. Aún confunde el remo con una cuchara.
+SPECIES_GRUMETE_2,Vogaréu,Strokeby,Bogador
+OSS_GRUMETE_2,"Desafia qualquer um para uma corrida de barco. Perde a calma, nunca o ritmo.","It challenges anyone to a boat race. It loses its temper, never its rhythm.","Reta a cualquiera a una carrera de botes. Pierde la calma, nunca el ritmo."
+SPECIES_GRUMETE_3,Timonaço,Helmsbone,Timonazo
+OSS_GRUMETE_3,"Já atravessou tempestades sem barco, só com o remo. A tripulação dele são as ondas.","It has crossed storms with no boat, only its oar. The waves are its crew.","Ha cruzado tormentas sin barco, solo con su remo. Las olas son su tripulación."
+SPECIES_FAROLEIRA_1,Lumiça,Glimmet,Chispela
+OSS_FAROLEIRA_1,"Acende a lamparina quando tem medo do escuro, ou seja, sempre.","It lights its lamp whenever it fears the dark, which is always.","Enciende su lámpara cuando teme a la oscuridad, o sea, siempre."
+SPECIES_FAROLEIRA_2,Prismela,Prismae,Prismina
+OSS_FAROLEIRA_2,Desvia a luz do prisma para escrever recados no céu. Ninguém consegue ler a letra dela.,It bends prism light to write notes across the sky. Nobody can read its handwriting.,Desvía la luz del prisma para escribir mensajes en el cielo. Nadie entiende su letra.
+SPECIES_FAROLEIRA_3,Faroleza,Beaconne,Farolesa
+OSS_FAROLEIRA_3,A coroa dela gira devagar a noite inteira. Barcos perdidos chegam à praia seguindo esse brilho.,Its crown turns slowly all night. Lost boats reach shore by following its glow.,Su corona gira despacio toda la noche. Los barcos perdidos llegan a la orilla siguiendo su brillo.
+SPECIES_MARISQUEIRO_1,Mariscote,Shellby,Almejito
+OSS_MARISQUEIRO_1,Esconde-se dentro da concha quando alguém olha. A concha é bem menor que ele.,It hides inside its shell when watched. The shell is much smaller than it is.,Se esconde en su concha cuando lo miran. La concha es mucho más pequeña que él.
+SPECIES_MARISQUEIRO_2,Ouriçal,Urchip,Erizón
+OSS_MARISQUEIRO_2,Usa luvas de ouriço para cumprimentar. Por isso ninguém aperta a mão dele.,It wears urchin gloves to say hello. That is why nobody shakes its hand.,Saluda con guantes de erizo. Por eso nadie le da la mano.
+SPECIES_MARISQUEIRO_3,Espinhardo,Spinnacle,Pinchardo
+OSS_MARISQUEIRO_3,Fica imóvel nas pedras até a maré baixar. Quem pisa nele sente o veneno por três dias.,It sits still on the rocks until low tide. Whoever steps on it feels the venom for three days.,Se queda quieto en las rocas hasta la marea baja. Quien lo pisa siente el veneno tres días.
+SPECIES_RENDEIRA_1,Novelita,Knotling,Ovillita
+OSS_RENDEIRA_1,Rola pela areia quando se enrosca no próprio fio. Desenrolar leva a tarde toda.,It rolls across the sand when tangled in its own yarn. Untangling it takes all afternoon.,Rueda por la arena cuando se enreda en su hilo. Desenredarla lleva toda la tarde.
+SPECIES_RENDEIRA_2,Tramela,Shuttla,Tramona
+OSS_RENDEIRA_2,"Costura rasgos em velas, redes e mangas, sem pedir licença.","It stitches tears in sails, nets and sleeves without asking permission.","Cose rotos en velas, redes y mangas sin pedir permiso."
+SPECIES_RENDEIRA_3,Redentora,Tapestrix,Redencia
+OSS_RENDEIRA_3,Tece com fios de luz da lua. Dizem que remenda até promessas quebradas.,It weaves with threads of moonlight. Some say it can mend even broken promises.,Teje con hilos de luz de luna. Dicen que remienda hasta promesas rotas.
+SPECIES_LENHADOR_1,Lasquinho,Twiglet,Astillo
+OSS_LENHADOR_1,Bate o graveto em tudo para ver o que é oco. Inclusive na própria cabeça.,"It taps its twig on everything to find what is hollow, its own head included.",Golpea todo con su ramita para ver qué está hueco. Incluida su propia cabeza.
+SPECIES_LENHADOR_2,Toreiro,Hatchley,Hachón
+OSS_LENHADOR_2,Empilha toras em torres perfeitas e fica bravo se o vento derruba.,It stacks logs into perfect towers and gets cross when the wind knocks them down.,Apila troncos en torres perfectas y se enoja si el viento las derriba.
+SPECIES_LENHADOR_3,Troncalho,Timbrawl,Troncazo
+OSS_LENHADOR_3,O musgo da barba dele tem vida própria. Um golpe da tora abre clareiras.,The moss in its beard has a life of its own. One swing of its log opens a clearing.,El musgo de su barba tiene vida propia. Un golpe de su tronco abre claros.
+SPECIES_HERBORISTA_1,Brotim,Sproutle,Brotín
+OSS_HERBORISTA_1,Fica parada ao sol para o broto crescer. Às vezes esquece de sair da chuva.,It stands in the sun so its sprout will grow. Sometimes it forgets to get out of the rain.,Se queda quieta al sol para que crezca su brote. A veces olvida salir de la lluvia.
+SPECIES_HERBORISTA_2,Raizela,Rootessa,Raicera
+OSS_HERBORISTA_2,Sabe o nome de cada raiz do bosque e o chá certo para cada dor.,It knows the name of every root in the woods and the right tea for every ache.,Sabe el nombre de cada raíz del bosque y el té justo para cada dolor.
+SPECIES_HERBORISTA_3,Floralma,Bloomsoul,Floránima
+OSS_HERBORISTA_3,A árvore dentro dela floresce quando alguém por perto se cura. Abelhas a seguem por todo canto.,The tree inside it blooms whenever someone nearby heals. Bees follow it everywhere.,El árbol en su interior florece cuando alguien cerca se cura. Las abejas la siguen a todas partes.
+SPECIES_COGUMELEIRO_1,Fungote,Mushkin,Hongüito
+OSS_COGUMELEIRO_1,Espirra esporos quando ri. Ri de quase tudo.,It sneezes spores when it laughs. It laughs at almost everything.,Estornuda esporas cuando ríe. Se ríe de casi todo.
+SPECIES_COGUMELEIRO_2,Esporito,Sporeling,Esporín
+OSS_COGUMELEIRO_2,Dorme encostado em troncos úmidos e acorda com cogumelos novos nas costas.,It naps against damp logs and wakes with new mushrooms on its back.,Duerme junto a troncos húmedos y despierta con hongos nuevos en la espalda.
+SPECIES_COGUMELEIRO_3,Cogumestre,Fungaroth,Setarca
+OSS_COGUMELEIRO_3,Debaixo do chapéu dele nunca chove. Quem fica tempo demais ali dorme por um dia inteiro.,It never rains beneath its cap. Whoever lingers there sleeps for a whole day.,Bajo su sombrero nunca llueve. Quien se queda allí demasiado duerme un día entero.
+SPECIES_FLAUTISTA_1,Flautim,Pipkin,Pitillo
+OSS_FLAUTISTA_1,Só sabe uma nota. Toca essa nota com muito sentimento.,It only knows one note. It plays that note with great feeling.,Solo sabe una nota. La toca con mucho sentimiento.
+SPECIES_FLAUTISTA_2,Vagalú,Glowfife,Luciérnago
+OSS_FLAUTISTA_2,"Os vaga-lumes dançam no ritmo da flauta. Quando erra a nota, eles apagam de vergonha.","Fireflies dance to its flute. When it misses a note, they dim in embarrassment.","Las luciérnagas bailan al ritmo de su flauta. Si falla una nota, se apagan de vergüenza."
+SPECIES_FLAUTISTA_3,Silvanor,Sylvarch,Selvanor
+OSS_FLAUTISTA_3,Rege a floresta à noite como uma orquestra. As árvores se curvam para ouvir.,It conducts the forest at night like an orchestra. The trees lean in to listen.,Dirige el bosque de noche como una orquesta. Los árboles se inclinan para escuchar.
+SPECIES_MINEIRO_1,Baldinho,Pailet,Cubetín
+OSS_MINEIRO_1,Usa o balde como capacete e como cama. Ainda não decidiu qual é o certo.,It uses its pail as a helmet and as a bed. It has not decided which is right.,Usa la cubeta de casco y de cama. Aún no decide cuál es lo correcto.
+SPECIES_MINEIRO_2,Picaréu,Pickard,Picador
+OSS_MINEIRO_2,Escuta a rocha antes de bater. Diz que cada pedra tem uma veia preferida.,It listens to the rock before striking. It says every stone has a favorite vein.,Escucha la roca antes de golpear. Dice que cada piedra tiene una veta favorita.
+SPECIES_MINEIRO_3,Rochedão,Bouldron,Peñascón
+OSS_MINEIRO_3,As placas de pedra da armadura foram arrancadas da mina mais funda. Desmoronamentos o contornam.,Its armor plates were torn from the deepest mine. Cave-ins step around it.,Las placas de su armadura vienen de la mina más profunda. Los derrumbes lo esquivan.
+SPECIES_FERREIRO_1,Faisquim,Sparkit,Chispín
+OSS_FERREIRO_1,Bate o martelinho em pedras para ver faíscas. Aplaude cada uma.,It taps stones with its little hammer to make sparks. It applauds every one.,Golpea piedras con su martillito para ver chispas. Aplaude cada una.
+SPECIES_FERREIRO_2,Bigornel,Anvillo,Yunquero
+OSS_FERREIRO_2,"Carrega a bigorna para todo lado, caso precise consertar algo de repente.",It carries its anvil everywhere in case something suddenly needs fixing.,Lleva su yunque a todas partes por si algo necesita arreglo de repente.
+SPECIES_FERREIRO_3,Forjalma,Kilnhart,Fraguador
+OSS_FERREIRO_3,A forja no peito dele aquece a mina inteira no inverno. Martela feitiços como quem martela ferro.,The forge in its chest warms the whole mine in winter. It hammers spells like iron.,La fragua de su pecho calienta toda la mina en invierno. Forja hechizos como quien forja hierro.
+SPECIES_GASISTA_1,Gasito,Whiffle,Humito
+OSS_GASISTA_1,"Fareja tudo antes de entrar. A gaiolinha dele está sempre vazia, e ele prefere assim.","It sniffs everything before entering. Its little cage is always empty, and it likes it that way.","Olfatea todo antes de entrar. Su jaulita siempre está vacía, y así la prefiere."
+SPECIES_GASISTA_2,Fumarel,Fumehorn,Fumarón
+OSS_GASISTA_2,O tanque das costas faz um apito agudo antes de vazar. Mineiros correm quando escutam.,The tank on its back whistles shrilly before it leaks. Miners run when they hear it.,El tanque de su espalda silba agudo antes de soltar gas. Los mineros corren al oírlo.
+SPECIES_GASISTA_3,Miasmor,Miasmar,Miasmón
+OSS_GASISTA_3,As chaminés soltam uma névoa verde que cobre galerias inteiras. Ele mesmo respira por filtros.,Its chimneys pour green fog over whole tunnels. It breathes only through filters.,Sus chimeneas sueltan niebla verde sobre galerías enteras. Él mismo respira con filtros.
+SPECIES_AGUADEIRO_1,Cantilho,Sippet,Cantimplín
+OSS_AGUADEIRO_1,"Oferece água a todos, até às pedras. Diz que elas parecem cansadas.","It offers water to everyone, even to rocks. It says they look tired.","Ofrece agua a todos, hasta a las piedras. Dice que parecen cansadas."
+SPECIES_AGUADEIRO_2,Bilheiro,Jugworth,Botijero
+OSS_AGUADEIRO_2,As bilhas tilintam no carrinho como um sino. Mineiros com sede seguem o som.,The jugs on its cart clink like a bell. Thirsty miners follow the sound.,Las botijas tintinean en su carro como una campana. Los mineros sedientos siguen el sonido.
+SPECIES_AGUADEIRO_3,Cisternão,Cisterno,Aljibón
+OSS_AGUADEIRO_3,A cisterna das costas nunca esvazia. Um banho de mangueira dele apaga até fogo de forja.,The cistern on its back never runs dry. One spray of its hose can put out a forge.,El aljibe de su espalda nunca se vacía. Un chorro de su manguera apaga hasta una fragua.
+SPECIES_LAVADEIRA_1,Tinhinha,Tubbit,Tinita
+OSS_LAVADEIRA_1,A bacia na cabeça vira barquinho quando o pântano enche.,The basin on its head becomes a little boat when the swamp floods.,La palangana de su cabeza se vuelve barquito cuando el pantano crece.
+SPECIES_LAVADEIRA_2,Ervaçal,Herbwash,Hierbera
+OSS_LAVADEIRA_2,"Esfrega as roupas com ervas do pântano. Elas ficam limpas, e um pouco venenosas.","It scrubs clothes with swamp herbs. They come out clean, and slightly poisonous.","Frota la ropa con hierbas del pantano. Queda limpia, y un poco venenosa."
+SPECIES_LAVADEIRA_3,Caldeona,Cauldra,Caldreona
+OSS_LAVADEIRA_3,A tina dela borbulha dia e noite. O vapor verde espanta até mosquitos.,Its tub bubbles day and night. The green steam scares off even mosquitoes.,Su tina burbujea día y noche. El vapor verde espanta hasta a los mosquitos.
+SPECIES_PALAFITEIRO_1,Estaquim,Stakelet,Estaquín
+OSS_PALAFITEIRO_1,Finca a estaquinha no chão e senta nela para descansar. Sempre afunda.,It drives its little stake into the mud and sits on it to rest. It always sinks.,Clava su estaquita en el barro y se sienta en ella a descansar. Siempre se hunde.
+SPECIES_PALAFITEIRO_2,Marretão,Malleteer,Mazón
+OSS_PALAFITEIRO_2,Cada martelada dele crava uma estaca inteira. O pântano treme junto.,Each blow of its mallet drives a whole stake. The swamp shakes along.,Cada mazazo suyo clava una estaca entera. El pantano tiembla con él.
+SPECIES_PALAFITEIRO_3,Palafitor,Stiltwarden,Palafitero
+OSS_PALAFITEIRO_3,"Anda sobre as pernas-de-pau como se fossem dele. Do alto, vigia as casas que ajudou a erguer.",It walks on its stilts as if they were its own legs. From up high it watches the houses it built.,Camina sobre sus zancos como si fueran suyos. Desde lo alto vigila las casas que levantó.
+SPECIES_JARDINEIRO_LIRIOS_1,Lirito,Lilypip,Nenufito
+OSS_JARDINEIRO_LIRIOS_1,Boia de costas no pântano usando a folha como travesseiro.,"It floats on its back in the swamp, using its leaf as a pillow.",Flota boca arriba en el pantano usando su hoja de almohada.
+SPECIES_JARDINEIRO_LIRIOS_2,Regalírio,Pondrella,Regadora
+OSS_JARDINEIRO_LIRIOS_2,"Rega cada flor do pântano uma por uma, cantando o nome delas.","It waters each swamp flower one by one, singing their names.","Riega cada flor del pantano una por una, cantando sus nombres."
+SPECIES_JARDINEIRO_LIRIOS_3,Aguapéu,Lotusage,Lotomayor
+OSS_JARDINEIRO_LIRIOS_3,Debaixo da folha gigante dele as feridas fecham devagar. Viajantes fazem fila para descansar ali.,Wounds slowly close beneath its giant leaf. Travelers line up to rest there.,Bajo su hoja gigante las heridas se cierran despacio. Los viajeros hacen fila para descansar allí.
+SPECIES_SENTINELA_1,Tampinha,Liddle,Tapita
+OSS_SENTINELA_1,"Bate continência para tudo que passa, inclusive para pombos.","It salutes everything that walks by, pigeons included.","Hace el saludo militar a todo lo que pasa, palomas incluidas."
+SPECIES_SENTINELA_2,Broquel,Bulwarkin,Rodelón
+OSS_SENTINELA_2,"Dorme de pé, encostado no escudo. Acorda com um único ruído estranho.",It sleeps standing up against its shield. A single odd noise wakes it.,Duerme de pie apoyado en su escudo. Un solo ruido extraño lo despierta.
+SPECIES_SENTINELA_3,Bastião,Bastionel,Baluartón
+OSS_SENTINELA_3,"O escudo dele já foi o portão de uma torre. Enquanto ele estiver de pé, a muralha não cai.","Its shield was once a tower gate. While it stands, the wall does not fall.","Su escudo fue la puerta de una torre. Mientras siga en pie, la muralla no cae."
+SPECIES_ESCRIBA_1,Rabisquim,Scribbit,Garabatín
+OSS_ESCRIBA_1,Escreve no ar com a pena da cabeça. Nunca termina uma frase.,It writes in the air with the quill on its head. It never finishes a sentence.,Escribe en el aire con la pluma de su cabeza. Nunca termina una frase.
+SPECIES_ESCRIBA_2,Escrivélio,Quillian,Plumario
+OSS_ESCRIBA_2,O livro que o segue registra tudo o que ele vê. Inclusive o que você disse dele.,"The book that follows it records everything it sees, including what you said about it.",El libro que lo sigue registra todo lo que ve. Incluso lo que dijiste de él.
+SPECIES_ESCRIBA_3,Pergamor,Tomeward,Pergaminor
+OSS_ESCRIBA_3,"Cada pergaminho da capa é uma lei antiga de Ossório. Quando lê uma em voz alta, ela acontece.","Each scroll in its cape is an old law of Ossório. When it reads one aloud, it comes true.","Cada pergamino de su capa es una ley antigua de Ossório. Cuando lee una en voz alta, se cumple."
+SPECIES_SINEIRO_1,Tilintim,Dingle,Tilín
+OSS_SINEIRO_1,"O sininho toca a cada passo, então nunca consegue se esconder.","Its bell rings with every step, so it can never hide.","Su campanita suena a cada paso, así que nunca puede esconderse."
+SPECIES_SINEIRO_2,Badaleiro,Clapperton,Badajo
+OSS_SINEIRO_2,"Toca o sino na hora certa, todos os dias. A cidade acerta os relógios por ele.",It rings its bell on time every day. The city sets its clocks by it.,Toca su campana a la hora exacta cada día. La ciudad ajusta sus relojes con él.
+SPECIES_SINEIRO_3,Carrilhão,Carillon,Carillón
+OSS_SINEIRO_3,O sino das costas ressoa por dentro dos ossos. Uma badalada acalma uma briga inteira.,The bell on its back resonates through its bones. One toll calms an entire brawl.,La campana de su espalda resuena en sus huesos. Una campanada calma una pelea entera.
+SPECIES_CARREGADOR_1,Mochilim,Packlet,Mochilín
+OSS_CARREGADOR_1,Leva na mochila uma pedra de estimação. Diz que é para treinar.,It carries a pet rock in its backpack. It says it is for training.,Lleva una piedra mascota en la mochila. Dice que es para entrenar.
+SPECIES_CARREGADOR_2,Cargueiro,Haulster,Cargadón
+OSS_CARREGADOR_2,As panelas da mochila batem no ritmo dos passos. É assim que os refúgios sabem que a sopa está chegando.,The pots on its pack clang with each step. That is how shelters know soup is coming.,Las ollas de su mochila suenan a cada paso. Así saben los refugios que llega la sopa.
+SPECIES_CARREGADOR_3,Alpinor,Summitor,Cumbrero
+OSS_CARREGADOR_3,"Já subiu todos os picos com a casa nas costas. Quando para, monta um abrigo para quem precisar.","It has climbed every peak with a house on its back. When it stops, it builds a shelter for anyone in need.","Ha subido todas las cumbres con una casa a cuestas. Cuando se detiene, arma un refugio para quien lo necesite."
+SPECIES_ESCULTOR_1,Gelinho,Cubbit,Hielito
+OSS_ESCULTOR_1,Esculpe bonecos de neve parecidos com quem encontra. Os bonecos sempre saem sorrindo.,It carves snowmen that look like whoever it meets. They always come out smiling.,Esculpe muñecos de nieve parecidos a quien encuentra. Siempre salen sonriendo.
+SPECIES_ESCULTOR_2,Cinzelvo,Chiselle,Cincelón
+OSS_ESCULTOR_2,Esculpiu as próprias asas e ainda não aprendeu a voar com elas. Plana nas descidas.,It carved its own wings and has not learned to fly with them. It glides downhill.,Esculpió sus propias alas y aún no aprende a volar con ellas. Planea en las bajadas.
+SPECIES_ESCULTOR_3,Cristalor,Glacior,Glaciarco
+OSS_ESCULTOR_3,Transformou o próprio corpo em escultura. A luz que atravessa o cristal congela o que toca.,It turned its own body into a sculpture. Light passing through its crystal freezes what it touches.,Convirtió su propio cuerpo en escultura. La luz que cruza su cristal congela lo que toca.
+SPECIES_CHAZEIRO_1,Xicrim,Cuplet,Tacita
+OSS_CHAZEIRO_1,Usa a xícara de chapéu e oferece chá imaginário a quem passa.,It wears a teacup as a hat and offers imaginary tea to passersby.,Usa la taza de sombrero y ofrece té imaginario a quien pasa.
+SPECIES_CHAZEIRO_2,Chaleirel,Kettleby,Teterón
+OSS_CHAZEIRO_2,A chaleira dele assobia quando alguém por perto está com frio.,Its kettle whistles whenever someone nearby is cold.,Su tetera silba cuando alguien cerca tiene frío.
+SPECIES_CHAZEIRO_3,Samovarão,Samovaron,Samovarón
+OSS_CHAZEIRO_3,O vapor do samovar derrete a neve num raio de dez passos. Nenhum viajante congela perto dele.,The steam from its samovar melts snow ten paces around. No traveler freezes near it.,El vapor de su samovar derrite la nieve en diez pasos a la redonda. Ningún viajero se congela cerca de él.
+SPECIES_DOMADOR_ESCORPIOES_1,Ferrim,Stingle,Aguijín
+OSS_DOMADOR_ESCORPIOES_1,Finge que a cauda de pano é de verdade e ameaça os outros com ela.,It pretends its cloth tail is real and threatens others with it.,Finge que su cola de tela es de verdad y amenaza a los demás con ella.
+SPECIES_DOMADOR_ESCORPIOES_2,Escorpeiro,Whipclaw,Alacranero
+OSS_DOMADOR_ESCORPIOES_2,"O escorpião do ombro obedece ao estalo do chicote. Na verdade, quem manda é o escorpião.","The scorpion on its shoulder obeys the crack of its whip. In truth, the scorpion is in charge.","El escorpión de su hombro obedece al chasquido del látigo. En realidad, quien manda es el escorpión."
+SPECIES_DOMADOR_ESCORPIOES_3,Aguilhão,Venomarch,Aguijonazo
+OSS_DOMADOR_ESCORPIOES_3,Já não se sabe onde termina o domador e começa o escorpião. Ataca antes da areia assentar.,No one can tell where the tamer ends and the scorpion begins. It strikes before the sand settles.,Ya no se sabe dónde termina el domador y empieza el escorpión. Ataca antes de que la arena se asiente.
+SPECIES_CARTOGRAFO_1,Bussolito,Compip,Brujulín
+OSS_CARTOGRAFO_1,"A bússola dele aponta para o lanche mais próximo, não para o norte.","Its compass points to the nearest snack, not to north.","Su brújula apunta al bocadillo más cercano, no al norte."
+SPECIES_CARTOGRAFO_2,Lunetário,Scopewright,Catalejón
+OSS_CARTOGRAFO_2,Mede as dunas gritando e escutando o eco. Os mapas dele mudam toda vez que venta.,It measures dunes by shouting and listening to the echo. Its maps change every time the wind blows.,Mide las dunas gritando y escuchando el eco. Sus mapas cambian cada vez que sopla el viento.
+SPECIES_CARTOGRAFO_3,Astrolar,Astrolux,Astrolario
+OSS_CARTOGRAFO_3,O astrolábio gira em volta dele e mostra caminhos que ainda não existem. Nunca se perdeu.,"Its astrolabe spins around it, showing paths that do not exist yet. It has never been lost.",Su astrolabio gira a su alrededor y muestra caminos que aún no existen. Nunca se ha perdido.
+SPECIES_TAMBORILEIRO_1,Tambim,Drumlet,Tamborín
+OSS_TAMBORILEIRO_1,Toca a barriga como tambor quando está feliz. Fica feliz com muita facilidade.,It drums on its belly when it is happy. It gets happy very easily.,Toca su barriga como tambor cuando está feliz. Se pone feliz con mucha facilidad.
+SPECIES_TAMBORILEIRO_2,Batucão,Bongard,Batucón
+OSS_TAMBORILEIRO_2,"Marca o passo das caravanas. Quando ele toca, ninguém sente cansaço.","It sets the pace for caravans. While it plays, nobody feels tired.","Marca el paso de las caravanas. Mientras toca, nadie siente cansancio."
+SPECIES_TAMBORILEIRO_3,Ecoarca,Echoarch,Resonarca
+OSS_TAMBORILEIRO_3,"O tambor das dunas ecoa por quilômetros. Quem ouve recupera o fôlego, amigo ou inimigo.","Its dune drum echoes for miles. Whoever hears it catches their breath, friend or foe.","Su tambor de dunas resuena por kilómetros. Quien lo oye recupera el aliento, amigo o enemigo."
+SPECIES_RAIZERNO,Raizerno,Elderoot,Raizeño
+OSS_RAIZERNO,Dizem que plantou o Bosque inteiro com uma semente só. Mexe-se uma vez por estação.,It is said to have planted the whole forest from a single seed. It moves once a season.,Dicen que plantó todo el bosque con una sola semilla. Se mueve una vez por estación.
+SPECIES_VAGONAUTA,Vagonauta,Cartwraith,Vagonero
+OSS_VAGONAUTA,Corre pelos trilhos à noite dando ordens a mineiros que já se foram. O vagonete nunca descarrila.,It races the rails at night shouting orders to miners long gone. Nobody knows how the cart never derails.,Recorre los rieles de noche gritando órdenes a mineros que ya se fueron. Nadie sabe cómo no descarrila.
+SPECIES_BRUMAGA,Brumaga,Fogmara,Brumaja
+OSS_BRUMAGA,"A névoa do pântano sai do caldeirão dela. Quando ri, o pântano inteiro fica mais denso.","The swamp fog rises from its cauldron. When it laughs, the whole swamp grows thicker.","La niebla del pantano sale de su caldero. Cuando ríe, todo el pantano se vuelve más espeso."
+SPECIES_BUFARDO,Bufardo,Jestrel,Bufonel
+OSS_BUFARDO,As marionetes dele imitam quem as olha. Algumas imitam bem demais.,Its puppets mimic whoever watches them. Some mimic far too well.,"Sus marionetas imitan a quien las mira. Algunas, demasiado bien."
+SPECIES_NEVASCO,Nevasco,Blizzabbot,Nevadón
+OSS_NEVASCO,Medita há tanto tempo que a neve se acumula nos ombros sem derreter. Uma palavra dele acalma tempestades.,It has meditated so long that snow piles on its shoulders without melting. One word from it calms storms.,Medita desde hace tanto que la nieve se acumula en sus hombros sin derretirse. Una palabra suya calma tormentas.
+SPECIES_AMPULHOR,Ampulhor,Sandkeeper,Arenario
+OSS_AMPULHOR,"Vira a ampulheta e a batalha fica mais lenta para todos, menos para ele.","When it flips its hourglass, battle slows down for everyone but itself.","Cuando gira su reloj de arena, la batalla se vuelve lenta para todos menos para él."
+SPECIES_DEGUSTOR,Degustor,Tastrel,Catadón
+OSS_DEGUSTOR,Provou cada prato do Rei por cem anos. Hoje é ele quem tempera os inimigos do castelo.,It tasted every royal dish for a hundred years. Now it seasons the castle's enemies.,Probó cada plato del Rey durante cien años. Ahora sazona a los enemigos del castillo.
+SPECIES_REI_ESQUELETO,Ossárion,Ossarion,Osarión
+OSS_REI_ESQUELETO,"O Rei Esqueleto. A coroa dele pesa mais do que deveria, e ninguém nunca perguntou por quê.","The Skeleton King. Its crown weighs more than it should, and nobody ever asked why.","El Rey Esqueleto. Su corona pesa más de lo que debería, y nadie preguntó nunca por qué."

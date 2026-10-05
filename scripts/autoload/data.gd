@@ -113,7 +113,7 @@ func _build_species_index() -> void:
 		for line in d.get("lines", []):
 			for i in line.get("stages", []).size():
 				var st: Dictionary = line["stages"][i].duplicate(true)
-				for k in ["type", "region", "rarity", "growth_levels", "signature_move"]:
+				for k in ["type", "region", "rarity", "growth_levels", "signature_move", "gender", "map_behavior"]:
 					if line.has(k) and not st.has(k):
 						st[k] = line[k]
 				st["line"] = line.get("id", "")
@@ -174,7 +174,13 @@ func line_stages(line_id: String) -> Array:
 
 
 ## Tabela de encontros (data/encounters.json e, para testes, data/test/encounters_test.json).
+## Tabelas montadas em tempo de execução (debug e capturas de tela).
+var encounter_overrides := {}
+
+
 func encounter_table(id: String) -> Array:
+	if encounter_overrides.has(id):
+		return encounter_overrides[id]
 	for path in ["res://data/encounters.json", "res://data/test/encounters_test.json"]:
 		if FileAccess.file_exists(path):
 			var d = load_json(path)

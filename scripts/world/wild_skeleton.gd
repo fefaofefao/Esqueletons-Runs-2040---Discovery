@@ -30,6 +30,7 @@ var _rng := RandomNumberGenerator.new()
 var _circle_i := 0
 var _announced := false
 var _bob := 0.0
+var _has_map_sprite := false
 
 
 func setup(owner_map: MapView, spec: Dictionary, at: Vector2i, center: Vector2i, r: int, beh: String) -> WildSkeleton:
@@ -50,7 +51,8 @@ func setup(owner_map: MapView, spec: Dictionary, at: Vector2i, center: Vector2i,
 	add_child(shadow)
 	_sprite = Sprite2D.new()
 	var info := Data.species(species)
-	if info.has("map_sprite"):
+	if info.has("map_sprite") and ResourceLoader.exists(str(info["map_sprite"])):
+		_has_map_sprite = true
 		_sprite.texture = load(str(info["map_sprite"]))
 		_sprite.region_enabled = true
 		_sprite.region_rect = Rect2(0, 0, 16, 16)
@@ -65,7 +67,7 @@ func setup(owner_map: MapView, spec: Dictionary, at: Vector2i, center: Vector2i,
 	_sprite.centered = false
 	add_child(_sprite)
 	if golden:
-		GoldenFX.apply(_sprite, Vector2(8, 8) if info.has("map_sprite") else Vector2(16, 16), Vector2(8, 8))
+		GoldenFX.apply(_sprite, Vector2(8, 8) if _has_map_sprite else Vector2(16, 16), Vector2(8, 8))
 	position = MapView.cell_to_pos(cell)
 	return self
 
@@ -73,6 +75,10 @@ func setup(owner_map: MapView, spec: Dictionary, at: Vector2i, center: Vector2i,
 func _process(delta: float) -> void:
 	_bob += delta
 	_sprite.position.y = -absf(sin(_bob * 6.0)) * 1.5 if _moving else 0.0
+	if _has_map_sprite:
+		# 2 quadros: alterna mais rápido andando
+		var frame := int(_bob * (6.0 if _moving else 2.0)) % 2
+		_sprite.region_rect = Rect2(16 * frame, 0, 16, 16)
 	if golden and not _announced and _on_screen():
 		_announced = true
 		Audio.sfx("golden")

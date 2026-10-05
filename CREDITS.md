@@ -11,6 +11,8 @@ Todo o conteúdo abaixo é **original**, criado para este projeto. Nenhum pack o
 | `assets/props/props.png`, `data/props.json` | `tools/art/gen_props.py` | Original do projeto |
 | `assets/ui/*`, `assets/icons/*`, `icon.png` | `tools/art/gen_ui.py` | Original do projeto |
 | `assets/title/*` (logo HD e camadas da tela inicial) | `tools/art/gen_title.py` (desenho procedural) | Original do projeto |
+| `assets/skeletons/*` (80 espécies, batalha e mapa), `assets/battle/*` | `tools/art/gen_skeletons.py` + `tools/art/skel.py`, `tools/art/gen_battle.py` | Original do projeto |
+| `assets/shaders/golden.gdshader` | escrito para o jogo | Original do projeto |
 | `assets/sfx/*.wav` | `tools/art/gen_sfx.py` (síntese chiptune) | Original do projeto |
 | Textos e traduções (`i18n/*.csv`) | escritos para o jogo | Original do projeto |
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://81yb58mbh4km"
+
+[deps]
+
+files=["res://i18n/species.pt_BR.translation", "res://i18n/species.en.translation", "res://i18n/species.es.translation"]
+
+source_file="res://i18n/species.csv"
+dest_files=["res://i18n/species.pt_BR.translation", "res://i18n/species.en.translation", "res://i18n/species.es.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

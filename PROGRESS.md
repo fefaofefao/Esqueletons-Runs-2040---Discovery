@@ -8,7 +8,8 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 | 1 — Base | ✅ concluída (APK de debug pelo CI) |
 | 2 — Batalha | ✅ concluída |
 | 3a — Sistemas dos esqueletos | ✅ concluída |
-| 3b/3c — Bestiário e balanceamento | ⏳ próxima (3b) |
+| 3b — Bestiário | ✅ concluída |
+| 3c — Golpes e balanceamento | ⏳ próxima |
 | 4a–4h — História e mundo | — |
 | 5 — Monetização e conformidade | — |
 | 6 — Polimento e publicação | — |
@@ -104,5 +105,29 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 - Espécies reais, sprites de mapa e tabelas de encontro reais: fase 3b. O Ossário só lista os bonecos de teste até lá (em build de debug).
 - Rancho nas cidades: fase 4.
 
-### Próxima tarefa: Fase 3b — Bestiário
-24 linhas × 3 estágios + 7 únicos + Rei, nomes nos 3 idiomas, sprites de batalha e de mapa, `species.json` e folha de revisão.
+## Fase 3b — Bestiário (concluída)
+
+### Feito
+- **`docs/BESTIARIO.md`:** a bíblia com as 24 linhas, os 7 únicos e o Rei. Cada linha tem conceito, silhueta, arco Bebê → Adolescente → Adulto, personalidade, comportamento no mapa, tipo, região, raridade, idades de crescimento, golpe assinatura, nomes nos 3 idiomas e entrada do Ossário por estágio.
+- **Fonte única:** `tools/bestiary/bestiary.py`. O `build.py` gera `data/species.json`, `i18n/species.csv` (160 textos × 3 idiomas) e o próprio BESTIARIO.md.
+- **Tipos:** Físico 6, Mágico 6, Cura 7, Veneno 5 (dentro de 6 ± 1). **Regiões:** Praia 4 (com Taro e Lia), Bosque 4, Minas 4, Pântano 3, Ossório 3, Picos 3 e Deserto 3; um único por região a partir do Bosque, mais um no Castelo.
+- **Sprites originais das 80 espécies** (`tools/art/gen_skeletons.py`, motor em `tools/art/skel.py`):
+  - batalha 32×32 (folha frente/costas);
+  - mapa 16×16 com 2 quadros;
+  - corpo de bebê, adolescente ou adulto, mais as peças que contam o arco de cada linha.
+- **Folha de revisão:** `docs/bestiario_sheet.png`, com mapa e batalha lado a lado em ordem do Ossário.
+- **Atributos provisórios dentro das bandas** (Bebê 262–300, Adolescente 372–412, Adulto 482–522, únicos 490, Rei 600), distribuídos pelo papel de cada linha. A fase 3c ajusta com o simulador.
+- **Ossário:** ficha de cada espécie com sprite (dourado se recrutado Golden), número, tipo, estágio, situação, marcador e entrada.
+- **Selvagens do mapa** usam o sprite de mapa animado.
+
+### Verificação
+- `validate_data.py`: OK. Confere 80 espécies, 3 estágios por linha, idades em ordem, bandas, tipos 6 ± 1, prefixos (máx. 2 por idioma), nomes não descritivos, assinaturas únicas e traduções.
+- `tests/run_tests.tscn`: 0 falhas. Todos os nomes cabem na carta da batalha e as entradas cabem na caixa de 3 linhas, nos 3 idiomas.
+- Capturas `capture.tscn -- --bestiary`: lista do Ossário, fichas e selvagens reais no mapa.
+
+### Pendências
+- Golpes reais (learnsets e as 24 assinaturas): fase 3c. Até lá as espécies reais só lutam com "Esforço".
+- Tabelas de encontro das regiões: fase 4.
+
+### Próxima tarefa: Fase 3c — Golpes e balanceamento
+56 golpes com peso e atraso, learnsets, `balance.json`, simulador e `BALANCEAMENTO.md`.

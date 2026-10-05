@@ -139,3 +139,11 @@ Registro das escolhas feitas sem consulta (AGENTS.md, seção A). Cada item diz 
 - **Rancho** cura de graça ao abrir. Na troca, escolher o mesmo esqueleto duas vezes o guarda no Rancho; o time nunca fica vazio.
 - **Ossário** conta como concluídas só as espécies reais recrutadas; Golden é contado à parte (★).
 - **Selvagens no mapa** nascem por zona (`spawns` no JSON do mapa: `{id, table, x, y, radius, count, behavior?}`) e nunca a menos de 3 células do jogador.
+
+## Fase 3b — Bestiário
+- **Fonte única em Python** (`tools/bestiary/bestiary.py`). Conceito, nomes, entradas, sprites e dados saem do mesmo lugar, e o validador confere o resultado.
+- **Lia e Taro são linhas do bestiário** (Faroleira e Grumete): o parceiro inicial é um bebê da linha com o apelido Lia ou Taro. As duas linhas são "incomuns" e não aparecem selvagens na Praia.
+- **Sprites por peças, não por recolor:** cada estágio troca a peça que conta a história (remo de brinquedo → remo → remo duplo; balde → capacete e picareta → armadura de pedra). O corpo segue as proporções da seção C: bebê de cabeça grande, adolescente esguio, adulto de ombros largos.
+- **Mapa 16×16 por redução** do sprite de batalha, priorizando as cores das peças. Assim mapa e batalha nunca divergem.
+- **Atributos provisórios por papel** (tanque, bruto, veloz, equilibrado, mago, suporte, astuto), escalados para o centro da banda do estágio. A raridade puxa o total para cima. A calibragem final fica para o simulador da fase 3c.
+- **Únicos** não crescem e ficam em 490 (banda 450–520). O **Rei** fica em 600. Nenhum deles aparece como selvagem comum.
