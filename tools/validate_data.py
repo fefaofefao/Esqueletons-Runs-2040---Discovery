@@ -355,12 +355,67 @@ def check_moves(keys):
     for t, n in want.items():
         if counts[t] != n:
             err(f"golpes: {counts[t]} do tipo {t} (esperado {n})")
+    kinds = {"poison", "stat", "heal", "cure", "delay", "drain"}
     for m in d.get("moves", []):
-        need_key(keys, m.get("name_key", ""), f"golpe {m.get('id')}")
-        for f in ("power", "accuracy", "pp", "target", "effect"):
+        mid = m.get("id")
+        need_key(keys, m.get("name_key", ""), f"golpe {mid}")
+        need_key(keys, m.get("desc_key", ""), f"descrição do golpe {mid}")
+        for f in ("power", "accuracy", "pp", "target", "effects", "weight", "category"):
             if f not in m:
-                err(f"golpes: {m.get('id')} sem o campo {f}")
+                err(f"golpes: {mid} sem o campo {f}")
+        if m.get("weight") not in ("light", "normal", "heavy"):
+            err(f"golpes: {mid} com peso inválido {m.get('weight')}")
+        if m.get("target") not in ("enemy", "all_enemies", "self", "ally", "all_allies"):
+            err(f"golpes: {mid} com alvo inválido {m.get('target')}")
+        if m.get("category") not in ("physical", "magical", "status"):
+            err(f"golpes: {mid} com categoria inválida {m.get('category')}")
+        if m.get("category") == "status" and m.get("power", 0) != 0:
+            err(f"golpes: {mid} é de status mas tem poder")
+        if m.get("category") != "status" and not 0 < m.get("power", 0) <= 150:
+            err(f"golpes: {mid} com poder fora de 1–150")
+        if not m.get("effects") and m.get("category") == "status":
+            err(f"golpes: {mid} de status sem efeito")
+        for e in m.get("effects", []):
+            if e.get("kind") not in kinds:
+                err(f"golpes: {mid} com efeito desconhecido {e.get('kind')}")
     return set(ids)
+
+
+def check_learnsets(move_ids):
+    """Learnsets, golpes de crescimento e assinaturas apontam para golpes reais;
+    cada assinatura é aprendida só pela própria linha."""
+    path = DATA / "species.json"
+    if not path.exists() or not move_ids:
+        return
+    d = load(path) or {}
+    by_sig = {}
+    for ln in d.get("lines", []):
+        sig = ln.get("signature_move")
+        if sig not in move_ids:
+            err(f"espécies: linha {ln.get('id')} com assinatura inexistente {sig}")
+        by_sig[sig] = ln.get("id")
+    entries = [(st, ln.get("id")) for ln in d.get("lines", []) for st in ln.get("stages", [])]
+    entries += [(u, u.get("id")) for u in d.get("uniques", [])]
+    if d.get("king"):
+        entries.append((d["king"], "rei"))
+    for st, line_id in entries:
+        ls = st.get("learnset")
+        if not ls:
+            err(f"espécies: {st.get('id')} sem learnset")
+            continue
+        ages = [a for a, _ in ls]
+        if ages != sorted(ages):
+            err(f"espécies: {st.get('id')} com learnset fora de ordem")
+        for age, mid in ls:
+            if mid not in move_ids:
+                err(f"espécies: {st.get('id')} aprende golpe inexistente {mid}")
+            elif mid in by_sig and by_sig[mid] != line_id:
+                err(f"espécies: {st.get('id')} aprende a assinatura de outra linha ({mid})")
+            if not 1 <= age <= 100:
+                err(f"espécies: {st.get('id')} aprende {mid} com idade inválida {age}")
+        gm = st.get("growth_move")
+        if gm and gm not in move_ids:
+            err(f"espécies: {st.get('id')} com golpe de crescimento inexistente {gm}")
 
 
 def check_encounters(growth):
@@ -424,7 +479,32 @@ def check_balance():
     if not path.exists():
         pending.append("balance.json (fase 3c): metas de nível por região e constantes")
         return
-    load(path)
+    b = load(path) or {}
+    t = b.get("targets", {})
+    if t.get("guardian_winrate") != [0.60, 0.85] or t.get("max_move_usage", 1) > 0.30 or t.get("max_type_gap", 1) > 0.20:
+        err("balance.json: metas da seção 11 alteradas (vitória 60–85%, golpe ≤30%, tipo ≤20 pontos)")
+    tm = t.get("total_minutes", [0, 0])
+    if tm != [165, 195]:
+        err("balance.json: tempo total deve mirar 2h45–3h15 (165–195 min)")
+    spp = load(DATA / "species.json") or {}
+    known = {st["id"] for ln in spp.get("lines", []) for st in ln.get("stages", [])} | {ln["id"] for ln in spp.get("lines", [])}
+    known |= {u["id"] for u in spp.get("uniques", [])} | ({spp["king"]["id"]} if spp.get("king") else set())
+    last = 0
+    for r in b.get("regions", []):
+        a = r.get("arrive", [0, 0])
+        if a[0] < last - 5:
+            err(f"balance.json: {r.get('id')} chega com idade menor que a região anterior")
+        last = a[0]
+        g = r.get("guardian_age", 0)
+        if g and g > 100:
+            err(f"balance.json: Guardião de {r.get('id')} acima de 100 anos")
+        for key in ("guardian", "final_boss"):
+            for e in r.get(key, []):
+                if e[0] not in known:
+                    err(f"balance.json: {r.get('id')}.{key} usa espécie/linha inexistente {e[0]}")
+        for ln in r.get("wild_lines", []) + [x for x in r.get("team", []) if x != "@starter"]:
+            if ln not in known:
+                err(f"balance.json: {r.get('id')} usa linha inexistente {ln}")
 
 
 def check_battle(keys):
@@ -489,7 +569,7 @@ def main():
     check_code_keys(keys)
     check_world(keys)
     growth = check_species(keys)
-    check_moves(keys)
+    check_learnsets(check_moves(keys))
     check_encounters(growth)
     check_cities(keys)
     check_routes()

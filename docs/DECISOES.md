@@ -147,3 +147,12 @@ Registro das escolhas feitas sem consulta (AGENTS.md, seção A). Cada item diz 
 - **Mapa 16×16 por redução** do sprite de batalha, priorizando as cores das peças. Assim mapa e batalha nunca divergem.
 - **Atributos provisórios por papel** (tanque, bruto, veloz, equilibrado, mago, suporte, astuto), escalados para o centro da banda do estágio. A raridade puxa o total para cima. A calibragem final fica para o simulador da fase 3c.
 - **Únicos** não crescem e ficam em 490 (banda 450–520). O **Rei** fica em 600. Nenhum deles aparece como selvagem comum.
+
+## Fase 3c — Golpes e balanceamento
+- **Golpes de veneno físicos e mágicos:** metade ataca DEF e metade RES. Com todos mágicos, Veneno perdia para tudo (Mágico vencia 97%).
+- **Vantagem de tipo ×1,35 / ×0,8** (antes ×1,5 / ×0,75): o tipo ainda pesa, mas não decide sozinho; a timeline e a Sintonia também contam.
+- **Cura tem dano próprio** em duas assinaturas (Jato Fresco drena e Badalada Serena atinge todos). As linhas de cura aprendem ataques do tipo secundário. Mesmo assim, Cura perde duelos puros, porque é tipo de suporte.
+- **Taro × Lia:** com o mesmo time, Lia vencia quase sempre. Taro (Grumete) virou perfil tanque e ganhou Cura como secundário. Agora os dois ficam entre ~65% e 90% contra os Guardiões.
+- **XP achatada por estágio** (60/68/68 × idade ÷ 18). A curva (n−1)^2,2 já cresce com a idade; a base por estágio não precisa crescer junto.
+- **Simulador em GDScript headless:** usa o mesmo `BattleEngine` e a mesma `BattleAI` do jogo, então um ajuste de regra entra na simulação sem duplicar código.
+- **Guardiões e tempo são protótipos.** As equipes, os mapas e o roteiro da fase 4 substituem os valores do `balance.json`, e a simulação é repetida a cada tarefa da fase 4.

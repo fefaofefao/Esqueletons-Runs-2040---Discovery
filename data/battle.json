@@ -24,8 +24,8 @@
   "veneno"
  ],
  "type_chart": {
-  "strong": 1.5,
-  "weak": 0.75,
+  "strong": 1.35,
+  "weak": 0.8,
   "beats": {
    "fisico": "magico",
    "magico": "veneno",
@@ -54,7 +54,8 @@
   "curve_exp": 2.2,
   "trainer_mul": 1.5,
   "participant_share": 1.0,
-  "reserve_share": 0.5
+  "reserve_share": 0.5,
+  "reward_div": 18.0
  },
  "flee": {
   "base": 0.5,

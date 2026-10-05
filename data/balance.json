@@ -1,0 +1,390 @@
+{
+ "_comment": "Metas de balanceamento (seção 11 do AGENTS.md, idades da seção C). Usado por tools/sim/simulate.gd e tools/simulate.py. As equipes dos Guardiões são protótipos até a fase 4 (roteiro).",
+ "targets": {
+  "guardian_winrate": [
+   0.6,
+   0.85
+  ],
+  "total_minutes": [
+   165,
+   195
+  ],
+  "max_move_usage": 0.3,
+  "max_type_gap": 0.2
+ },
+ "time": {
+  "seconds_per_enemy_action": 2.4,
+  "seconds_per_player_action": 4.5,
+  "battle_overhead_seconds": 9,
+  "reading_wpm": 180
+ },
+ "regions": [
+  {
+   "id": "prologo",
+   "arrive": [
+    5,
+    5
+   ],
+   "guardian_age": 0,
+   "walk_minutes": 6,
+   "read_words": 1100,
+   "wild_crossings": 6,
+   "tamers": 1,
+   "wild_lines": [
+    "marisqueiro",
+    "rendeira"
+   ],
+   "wild_age": [
+    3,
+    6
+   ],
+   "team": [
+    "@starter",
+    "rendeira"
+   ],
+   "tamer_age": 8,
+   "guardian": []
+  },
+  {
+   "id": "bosque",
+   "arrive": [
+    10,
+    18
+   ],
+   "guardian_age": 22,
+   "walk_minutes": 9,
+   "read_words": 1000,
+   "wild_crossings": 15,
+   "tamers": 3,
+   "wild_lines": [
+    "lenhador",
+    "herborista",
+    "cogumeleiro",
+    "flautista",
+    "marisqueiro"
+   ],
+   "wild_age": [
+    10,
+    15
+   ],
+   "team": [
+    "@starter",
+    "rendeira",
+    "lenhador",
+    "herborista"
+   ],
+   "tamer_age": 17,
+   "guardian": [
+    [
+     "lenhador",
+     22
+    ],
+    [
+     "flautista",
+     21
+    ],
+    [
+     "herborista",
+     23
+    ]
+   ]
+  },
+  {
+   "id": "minas",
+   "arrive": [
+    22,
+    30
+   ],
+   "guardian_age": 34,
+   "walk_minutes": 9,
+   "read_words": 1000,
+   "wild_crossings": 15,
+   "tamers": 3,
+   "wild_lines": [
+    "mineiro",
+    "ferreiro",
+    "gasista",
+    "aguadeiro",
+    "lenhador"
+   ],
+   "wild_age": [
+    21,
+    27
+   ],
+   "team": [
+    "@starter",
+    "lenhador",
+    "herborista",
+    "mineiro"
+   ],
+   "tamer_age": 29,
+   "guardian": [
+    [
+     "mineiro",
+     34
+    ],
+    [
+     "ferreiro",
+     33
+    ],
+    [
+     "gasista",
+     35
+    ],
+    [
+     "aguadeiro",
+     34
+    ]
+   ]
+  },
+  {
+   "id": "pantano",
+   "arrive": [
+    34,
+    42
+   ],
+   "guardian_age": 46,
+   "walk_minutes": 9,
+   "read_words": 1000,
+   "wild_crossings": 14,
+   "tamers": 3,
+   "wild_lines": [
+    "lavadeira",
+    "palafiteiro",
+    "jardineiro_lirios",
+    "cogumeleiro",
+    "gasista"
+   ],
+   "wild_age": [
+    33,
+    39
+   ],
+   "team": [
+    "@starter",
+    "mineiro",
+    "herborista",
+    "palafiteiro"
+   ],
+   "tamer_age": 41,
+   "guardian": [
+    [
+     "lavadeira",
+     49
+    ],
+    [
+     "palafiteiro",
+     48
+    ],
+    [
+     "jardineiro_lirios",
+     47
+    ],
+    [
+     "cogumeleiro",
+     48
+    ]
+   ]
+  },
+  {
+   "id": "ossorio",
+   "arrive": [
+    46,
+    54
+   ],
+   "guardian_age": 58,
+   "walk_minutes": 9,
+   "read_words": 1300,
+   "wild_crossings": 12,
+   "tamers": 3,
+   "wild_lines": [
+    "sentinela",
+    "escriba",
+    "sineiro",
+    "lavadeira",
+    "ferreiro"
+   ],
+   "wild_age": [
+    45,
+    51
+   ],
+   "team": [
+    "@starter",
+    "mineiro",
+    "lavadeira",
+    "sentinela"
+   ],
+   "tamer_age": 53,
+   "guardian": [
+    [
+     "sentinela",
+     62
+    ],
+    [
+     "escriba",
+     61
+    ],
+    [
+     "sineiro",
+     62
+    ],
+    [
+     "lenhador",
+     63
+    ]
+   ]
+  },
+  {
+   "id": "picos",
+   "arrive": [
+    58,
+    66
+   ],
+   "guardian_age": 70,
+   "walk_minutes": 9,
+   "read_words": 1100,
+   "wild_crossings": 10,
+   "tamers": 3,
+   "wild_lines": [
+    "carregador",
+    "escultor",
+    "chazeiro",
+    "mineiro",
+    "sineiro"
+   ],
+   "wild_age": [
+    57,
+    63
+   ],
+   "team": [
+    "@starter",
+    "sentinela",
+    "lavadeira",
+    "carregador"
+   ],
+   "tamer_age": 65,
+   "guardian": [
+    [
+     "carregador",
+     72
+    ],
+    [
+     "escultor",
+     71
+    ],
+    [
+     "chazeiro",
+     73
+    ],
+    [
+     "mineiro",
+     72
+    ]
+   ]
+  },
+  {
+   "id": "deserto",
+   "arrive": [
+    68,
+    76
+   ],
+   "guardian_age": 80,
+   "walk_minutes": 9,
+   "read_words": 1000,
+   "wild_crossings": 10,
+   "tamers": 3,
+   "wild_lines": [
+    "domador_escorpioes",
+    "cartografo",
+    "tamborileiro",
+    "escultor",
+    "palafiteiro"
+   ],
+   "wild_age": [
+    67,
+    73
+   ],
+   "team": [
+    "@starter",
+    "carregador",
+    "lavadeira",
+    "domador_escorpioes"
+   ],
+   "tamer_age": 75,
+   "guardian": [
+    [
+     "domador_escorpioes",
+     85
+    ],
+    [
+     "cartografo",
+     84
+    ],
+    [
+     "tamborileiro",
+     86
+    ],
+    [
+     "palafiteiro",
+     85
+    ]
+   ]
+  },
+  {
+   "id": "castelo",
+   "arrive": [
+    80,
+    86
+   ],
+   "guardian_age": 90,
+   "walk_minutes": 7,
+   "read_words": 1400,
+   "wild_crossings": 6,
+   "tamers": 3,
+   "wild_lines": [
+    "sentinela",
+    "escriba",
+    "ferreiro",
+    "domador_escorpioes"
+   ],
+   "wild_age": [
+    79,
+    84
+   ],
+   "team": [
+    "@starter",
+    "carregador",
+    "domador_escorpioes",
+    "tamborileiro"
+   ],
+   "tamer_age": 86,
+   "guardian": [
+    [
+     "degustor",
+     90
+    ],
+    [
+     "sentinela",
+     89
+    ],
+    [
+     "escriba",
+     90
+    ],
+    [
+     "chazeiro",
+     89
+    ]
+   ],
+   "final_boss": [
+    [
+     "rei_esqueleto",
+     120
+    ],
+    [
+     "jardineiro_lirios",
+     78
+    ]
+   ]
+  }
+ ]
+}

@@ -149,6 +149,17 @@ func test_species_names_fit_panel() -> void:
 			check(UiTheme.text_width(name) <= UnitCard.NAME_WIDTH, "nome %s [%s] '%s' não cabe na caixa (%.0f px)" % [id, lang, name, UiTheme.text_width(name)])
 
 
+## Nomes de golpes cabem na lista de golpes da batalha.
+func test_move_names_fit_list() -> void:
+	var all := all_translations()
+	for key: String in all.keys():
+		if not key.begins_with("MOVE_") or key.ends_with("_DESC"):
+			continue
+		for lang in LANGS:
+			var w := UiTheme.text_width(str(all[key][lang]))
+			check(w <= MoveList.NAME_WIDTH, "golpe %s [%s] '%s' não cabe na lista (%.0f px)" % [key, lang, all[key][lang], w])
+
+
 func _longest(all: Dictionary, keys: Array, lang: String) -> String:
 	var best := ""
 	for k in keys:

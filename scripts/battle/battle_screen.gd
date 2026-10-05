@@ -150,7 +150,7 @@ func _layout() -> void:
 		p.position = Vector2(_ox, 0) + RIBBON_POS
 		p.custom_minimum_size = RIBBON_SIZE
 		p.size = RIBBON_SIZE
-	_moves.position = Vector2(_ox + 100, 64)
+	_moves.position = Vector2(_ox + 44, 64)
 	_list_panel.position = Vector2(_ox + 62, 30)
 	_repeat.position = Vector2(_ox + 2, 124)
 	_place_timeline()

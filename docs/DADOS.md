@@ -88,8 +88,9 @@ Campos extras usados pelo jogo: `gender`, `map_behavior`, `starter` (linha), `en
 ```
 Regras: 24 linhas × 3 estágios + 7 únicos + Rei = 80; níveis crescentes; bandas de atributos (250–320 / 360–430 / 470–540; únicos 450–520; Rei ≈ 600); 6 ± 1 linhas por tipo; assinatura única; no máximo 2 nomes com o mesmo prefixo de 3 letras por idioma; nenhum nome numerado ou descritivo.
 
-### `data/moves.json` (fase 3c)
-`{"moves": [{"id", "name_key", "type", "power", "accuracy", "pp", "target", "effect"}]}`: 16 físicos, 16 mágicos, 12 de cura e 12 de veneno.
+### `data/moves.json` (gerado por `tools/bestiary/build.py` a partir de `tools/bestiary/moves.py`)
+`{"moves": [{"id", "name_key", "desc_key", "type", "category": physical|magical|status, "power", "accuracy", "pp", "target", "weight": light|normal|heavy, "effects": [...], "hits"?, "signature_of"?}]}`: 16 físicos, 16 mágicos, 12 de cura e 12 de veneno.
+Efeitos: `poison {chance}`, `stat {stat, stages, chance, on: target|self}`, `heal {percent}`, `cure`, `delay {amount, chance}`, `drain {percent}`.
 
 ### `data/encounters.json` (fase 4)
 `{"tables": {"zona": [{"species": "lanterneiro_2", "stage": 2, "min_level": 18, "max_level": 21, "rarity": "comum"}]}}`. Estágio 2/3 nunca abaixo do nível de crescimento.
@@ -101,4 +102,4 @@ Regras: 24 linhas × 3 estágios + 7 únicos + Rei = 80; níveis crescentes; ban
 `{"routes": [{"id", "from", "to", "paths": [{"kind": "tamers|wild|shortcut", "required": false}]}]}`: no mínimo 2 caminhos, nenhum obrigatório.
 
 ### `data/balance.json` (fase 3c)
-Metas de nível por região, constantes de dano/XP/marcador e chance de Golden (1/40).
+`targets` (critérios da seção 11), `time` (segundos por ação, leitura) e `regions[]`: `{id, arrive, guardian_age, walk_minutes, read_words, wild_crossings, tamers, wild_lines, wild_age, tamer_age, team, guardian, final_boss?}`. Usado por `tools/simulate.py`. A XP fica em `battle.json` (`xp.reward_div`).

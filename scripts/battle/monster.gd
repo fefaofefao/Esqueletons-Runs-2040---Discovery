@@ -67,8 +67,13 @@ func info() -> Dictionary:
 	return Data.species(species_id)
 
 
+## Nome sem o sufixo Golden (a carta da batalha mostra só a ★).
+func base_name() -> String:
+	return nickname if nickname != "" else TranslationServer.translate(str(info().get("name_key", species_id)))
+
+
 func display_name() -> String:
-	var n := nickname if nickname != "" else TranslationServer.translate(str(info().get("name_key", species_id)))
+	var n := base_name()
 	if golden:
 		var key := "GOLDEN_SUFFIX_F" if str(info().get("gender", "m")) == "f" else "GOLDEN_SUFFIX_M"
 		n = TranslationServer.translate(key).format({"name": n})

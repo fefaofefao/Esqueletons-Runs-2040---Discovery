@@ -1,0 +1,113 @@
+keys,pt_BR,en,es
+MOVE_EMPURRAO,Empurrão,Shove,Empujón
+MOVE_EMPURRAO_DESC,Rápido e simples.,Quick and simple.,Rápido y simple.
+MOVE_CABECADA,Cabeçada,Headbutt,Cabezazo
+MOVE_CABECADA_DESC,Crânio contra crânio.,Skull against skull.,Cráneo contra cráneo.
+MOVE_CHUTE_NA_CANELA,Chute na Canela,Shin Kick,Patada al Tobillo
+MOVE_CHUTE_NA_CANELA_DESC,VEL↓ (30%).,SPD↓ (30%).,VEL↓ (30%).
+MOVE_PASSO_LIGEIRO,Passo Ligeiro,Nimble Step,Paso Veloz
+MOVE_PASSO_LIGEIRO_DESC,Sua VEL↑.,Your SPD↑.,Tu VEL↑.
+MOVE_OSSO_BUMERANGUE,Osso Bumerangue,Bone Boomerang,Hueso Bumerán
+MOVE_OSSO_BUMERANGUE_DESC,Acerta 2 vezes.,Hits twice.,Golpea 2 veces.
+MOVE_RANGER_OS_DENTES,Ranger os Dentes,Grit Teeth,Apretar Dientes
+MOVE_RANGER_OS_DENTES_DESC,ATQ↑ DEF↑.,ATK↑ DEF↑.,ATQ↑ DEF↑.
+MOVE_QUEBRA_COSTELA,Quebra-Costela,Rib Cracker,Rompecostillas
+MOVE_QUEBRA_COSTELA_DESC,DEF↓ (40%).,DEF↓ (40%).,DEF↓ (40%).
+MOVE_RODOPIO,Rodopio,Whirl,Remolino
+MOVE_RODOPIO_DESC,Gira e acerta todos.,Spins into everyone.,Gira y golpea a todos.
+MOVE_INVESTIDA,Investida,Charge,Embestida
+MOVE_INVESTIDA_DESC,Atrasa.,Delays.,Retrasa.
+MOVE_SOCO_SECO,Soco Seco,Dry Punch,Puño Seco
+MOVE_SOCO_SECO_DESC,Lento e brutal.,Slow and brutal.,Lento y brutal.
+MOVE_REMADA_DUPLA,Remada Dupla,Double Stroke,Remada Doble
+MOVE_REMADA_DUPLA_DESC,Acerta 2 vezes.,Hits twice.,Golpea 2 veces.
+MOVE_GOLPE_DE_TORA,Golpe de Tora,Log Slam,Golpe de Tronco
+MOVE_GOLPE_DE_TORA_DESC,Atrasa.,Delays.,Retrasa.
+MOVE_DESMORONAR,Desmoronar,Cave-In,Derrumbe
+MOVE_DESMORONAR_DESC,VEL↓ (30%).,SPD↓ (30%).,VEL↓ (30%).
+MOVE_ESTACA_FIRME,Estaca Firme,Pile Driver,Estaca Certera
+MOVE_ESTACA_FIRME_DESC,Sua DEF↑ (50%).,Your DEF↑ (50%).,Tu DEF↑ (50%).
+MOVE_MURALHA_VIVA,Muralha Viva,Living Wall,Muralla Viva
+MOVE_MURALHA_VIVA_DESC,"DEF↑↑, RES↑.","DEF↑↑, RES↑.","DEF↑↑, RES↑."
+MOVE_AVALANCHE_DE_CARGA,Avalanche de Carga,Cargo Avalanche,Alud de Carga
+MOVE_AVALANCHE_DE_CARGA_DESC,"Atrasa, sua VEL↓.","Delays, your SPD↓.","Retrasa, tu VEL↓."
+MOVE_FAISCA_OSSEA,Faísca Óssea,Bone Spark,Chispa Ósea
+MOVE_FAISCA_OSSEA_DESC,Um estalo de magia.,A snap of magic.,Un chasquido mágico.
+MOVE_CLARAO,Clarão,Flare,Destello
+MOVE_CLARAO_DESC,RES↓ (30%).,RES↓ (30%).,RES↓ (30%).
+MOVE_ECO_SOMBRIO,Eco Sombrio,Dark Echo,Eco Sombrío
+MOVE_ECO_SOMBRIO_DESC,Ressoa nos ossos.,Rattles the bones.,Resuena en los huesos.
+MOVE_CONCENTRAR,Concentrar,Focus,Concentrarse
+MOVE_CONCENTRAR_DESC,MAG↑↑.,MAG↑↑.,MAG↑↑.
+MOVE_VENTANIA,Ventania,Gale,Vendaval
+MOVE_VENTANIA_DESC,Atrasa.,Delays.,Retrasa.
+MOVE_CHAMA_FRIA,Chama Fria,Cold Flame,Llama Fría
+MOVE_CHAMA_FRIA_DESC,ATQ↓ (30%).,ATK↓ (30%).,ATQ↓ (30%).
+MOVE_CHUVA_DE_BRASAS,Chuva de Brasas,Ember Rain,Lluvia de Brasas
+MOVE_CHUVA_DE_BRASAS_DESC,Brasas em todos.,Embers on all foes.,Brasas sobre todos.
+MOVE_ANCORA_DO_TEMPO,Âncora do Tempo,Time Anchor,Ancla del Tiempo
+MOVE_ANCORA_DO_TEMPO_DESC,Atrasa muito.,Big delay.,Retrasa mucho.
+MOVE_RAIO_LUNAR,Raio Lunar,Moonbeam,Rayo Lunar
+MOVE_RAIO_LUNAR_DESC,Luz fria e pesada.,"Cold, heavy light.",Luz fría y pesada.
+MOVE_EXPLOSAO_ARCANA,Explosão Arcana,Arcane Burst,Estallido Arcano
+MOVE_EXPLOSAO_ARCANA_DESC,Sua MAG↓.,Your MAG↓.,Tu MAG↓.
+MOVE_FACHO_DO_FAROL,Facho do Farol,Beacon Beam,Haz del Faro
+MOVE_FACHO_DO_FAROL_DESC,RES↓ (30%).,RES↓ (30%).,RES↓ (30%).
+MOVE_MELODIA_VAGALUME,Melodia Vaga-lume,Firefly Tune,Melodía Luciérnaga
+MOVE_MELODIA_VAGALUME_DESC,Luz dançante.,Dancing light.,Luz danzante.
+MOVE_MARTELO_DE_BRASA,Martelo de Brasa,Ember Hammer,Martillo de Brasa
+MOVE_MARTELO_DE_BRASA_DESC,DEF↓ (30%).,DEF↓ (30%).,DEF↓ (30%).
+MOVE_DECRETO_SELADO,Decreto Selado,Sealed Decree,Decreto Sellado
+MOVE_DECRETO_SELADO_DESC,Atrasa.,Delays.,Retrasa.
+MOVE_ESTATUA_DE_GELO,Estátua de Gelo,Ice Statue,Estatua de Hielo
+MOVE_ESTATUA_DE_GELO_DESC,VEL↓ (50%).,SPD↓ (50%).,VEL↓ (50%).
+MOVE_ROTA_DOS_ECOS,Rota dos Ecos,Echo Route,Ruta de Ecos
+MOVE_ROTA_DOS_ECOS_DESC,Sua VEL↑.,Your SPD↑.,Tu VEL↑.
+MOVE_REMENDO,Remendo,Patch Up,Parche
+MOVE_REMENDO_DESC,Cura 35%.,Heals 35%.,Cura 35%.
+MOVE_CURATIVO,Curativo,Bandage,Vendaje
+MOVE_CURATIVO_DESC,Cura 40%.,Heals 40%.,Cura 40%.
+MOVE_BALSAMO,Bálsamo,Balm,Ungüento
+MOVE_BALSAMO_DESC,Cura 25%.,Heals 25%.,Cura 25%.
+MOVE_LIMPEZA,Limpeza,Cleanse,Purga
+MOVE_LIMPEZA_DESC,Tira veneno.,Cures poison.,Quita veneno.
+MOVE_ENCORAJAR,Encorajar,Cheer,Animar
+MOVE_ENCORAJAR_DESC,ATQ↑ MAG↑.,ATK↑ MAG↑.,ATQ↑ MAG↑.
+MOVE_REMENDO_DE_REDE,Remendo de Rede,Net Mend,Remiendo de Red
+MOVE_REMENDO_DE_REDE_DESC,"Cura 40%, DEF↑.","Heals 40%, DEF↑.","Cura 40%, DEF↑."
+MOVE_SEIVA_VIVA,Seiva Viva,Living Sap,Savia Viva
+MOVE_SEIVA_VIVA_DESC,Cura 25%.,Heals 25%.,Cura 25%.
+MOVE_JATO_FRESCO,Jato Fresco,Cool Spray,Chorro Fresco
+MOVE_JATO_FRESCO_DESC,Drena 50% do dano.,Drains 50% dealt.,Drena 50% del daño.
+MOVE_ORVALHO_DE_LIRIO,Orvalho de Lírio,Lily Dew,Rocío de Lirio
+MOVE_ORVALHO_DE_LIRIO_DESC,"Cura 45%, RES↑.","Heals 45%, RES↑.","Cura 45%, RES↑."
+MOVE_BADALADA_SERENA,Badalada Serena,Serene Toll,Campanada Serena
+MOVE_BADALADA_SERENA_DESC,Atrasa.,Delays.,Retrasa.
+MOVE_CHA_DE_ABRIGO,Chá de Abrigo,Shelter Tea,Té de Refugio
+MOVE_CHA_DE_ABRIGO_DESC,Cura 35%.,Heals 35%.,Cura 35%.
+MOVE_RITMO_DA_CARAVANA,Ritmo da Caravana,Caravan Rhythm,Ritmo de Caravana
+MOVE_RITMO_DA_CARAVANA_DESC,VEL↑.,SPD↑.,VEL↑.
+MOVE_PICADA,Picada,Prick,Pinchazo
+MOVE_PICADA_DESC,Envenena (30%).,Poisons (30%).,Envenena (30%).
+MOVE_LODO,Lodo,Sludge,Lodo
+MOVE_LODO_DESC,Envenena (30%).,Poisons (30%).,Envenena (30%).
+MOVE_BAFO_AZEDO,Bafo Azedo,Sour Breath,Aliento Agrio
+MOVE_BAFO_AZEDO_DESC,Envenena.,Poisons.,Envenena.
+MOVE_NEBLINA_VERDE,Neblina Verde,Green Mist,Neblina Verde
+MOVE_NEBLINA_VERDE_DESC,Envenena (20%).,Poisons (20%).,Envenena (20%).
+MOVE_CUSPE_ACIDO,Cuspe Ácido,Acid Spit,Escupitajo Ácido
+MOVE_CUSPE_ACIDO_DESC,RES↓ (40%).,RES↓ (40%).,RES↓ (40%).
+MOVE_DRENO_TOXICO,Dreno Tóxico,Toxic Drain,Drenaje Tóxico
+MOVE_DRENO_TOXICO_DESC,Drena 50% do dano.,Drains 50% dealt.,Drena 50% del daño.
+MOVE_TOXINA_LENTA,Toxina Lenta,Slow Toxin,Toxina Lenta
+MOVE_TOXINA_LENTA_DESC,"Envenena, atrasa.","Poisons, delays.","Envenena, retrasa."
+MOVE_CHUVA_DE_ESPINHOS,Chuva de Espinhos,Spine Shower,Lluvia de Púas
+MOVE_CHUVA_DE_ESPINHOS_DESC,Envenena (25%).,Poisons (25%).,Envenena (25%).
+MOVE_NUVEM_DE_ESPOROS,Nuvem de Esporos,Spore Cloud,Nube de Esporas
+MOVE_NUVEM_DE_ESPOROS_DESC,Envenena (70%).,Poisons (70%).,Envenena (70%).
+MOVE_VAZAMENTO,Vazamento,Gas Leak,Fuga de Gas
+MOVE_VAZAMENTO_DESC,Envenena (40%).,Poisons (40%).,Envenena (40%).
+MOVE_ANIL_TOXICO,Anil Tóxico,Toxic Bluing,Añil Tóxico
+MOVE_ANIL_TOXICO_DESC,"Envenena (35%), RES↓.","Poisons (35%), RES↓.","Envenena (35%), RES↓."
+MOVE_FERRAO_DAS_DUNAS,Ferrão das Dunas,Dune Sting,Aguijón de Dunas
+MOVE_FERRAO_DAS_DUNAS_DESC,Envenena (50%).,Poisons (50%).,Envenena (50%).

@@ -18,7 +18,7 @@ LINES = [
     # ------------------------------------------------------------ PRAIA / VILA MARÉ (Prólogo)
     {
         "id": "grumete", "type": "fisico", "region": "praia", "rarity": "incomum", "growth": [16, 36],
-        "role": "bruto", "behavior": "chase", "gender": "m", "starter": "Taro",
+        "role": "tanque", "behavior": "chase", "gender": "m", "starter": "Taro",
         "concept": "Esqueleto de grumete dos barcos de pesca da Vila Maré, que nunca larga o remo.",
         "silhouette": "Remo vertical maior que o corpo ao lado direito; chapéu muda de touca de pompom para bandana e para quepe de capitão.",
         "arc": "Bebê de touca e camiseta listrada com um remo de brinquedo → Adolescente de bandana e colete vermelho com um remo de verdade apoiado no chão → Adulto de casaco de lona e quepe, com o remo duplo atravessado nas costas como uma arma.",
@@ -460,7 +460,7 @@ LINES = [
     },
     {
         "id": "escultor", "type": "magico", "region": "picos", "rarity": "incomum", "growth": [40, 64],
-        "role": "veloz", "behavior": "fast", "gender": "m",
+        "role": "astuto", "behavior": "fast", "gender": "m",
         "concept": "Esqueleto de escultor de gelo dos Picos Gelados, que talha estátuas no gelo eterno com um cinzel.",
         "silhouette": "Cubo de gelo na cabeça; o adolescente ganha asas de gelo esculpidas; o adulto vira cristal, com coroa de pingentes.",
         "arc": "Bebê com um cubo de gelo de capacete e um cinzelzinho → Adolescente com asas de gelo que esculpiu para si mesmo → Adulto com armadura cristalina e coroa de pingentes de gelo.",

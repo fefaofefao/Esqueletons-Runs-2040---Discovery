@@ -9,8 +9,8 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 | 2 — Batalha | ✅ concluída |
 | 3a — Sistemas dos esqueletos | ✅ concluída |
 | 3b — Bestiário | ✅ concluída |
-| 3c — Golpes e balanceamento | ⏳ próxima |
-| 4a–4h — História e mundo | — |
+| 3c — Golpes e balanceamento | ✅ concluída |
+| 4a–4h — História e mundo | ⏳ próxima (4a) |
 | 5 — Monetização e conformidade | — |
 | 6 — Polimento e publicação | — |
 
@@ -129,5 +129,43 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 - Golpes reais (learnsets e as 24 assinaturas): fase 3c. Até lá as espécies reais só lutam com "Esforço".
 - Tabelas de encontro das regiões: fase 4.
 
-### Próxima tarefa: Fase 3c — Golpes e balanceamento
-56 golpes com peso e atraso, learnsets, `balance.json`, simulador e `BALANCEAMENTO.md`.
+## Fase 3c — Golpes e balanceamento (concluída)
+
+### Feito
+- **56 golpes** (16 Físicos, 16 Mágicos, 12 de Cura/Suporte, 12 de Veneno), entre eles as 24 assinaturas. Cada golpe tem peso (leve/normal/pesado), alvo, PP, precisão e efeitos.
+- **Fonte única:** `tools/bestiary/moves.py`. Gera `data/moves.json`, `i18n/moves.csv` e os learnsets. As descrições saem dos próprios efeitos (setas ↑↓), então nunca mentem.
+- **Novas mecânicas no motor:** golpes de 2 acertos, dreno (recupera % do dano) e efeitos em quem usa (`on: self`). A IA leva as três em conta.
+- **Learnsets das 80 espécies:**
+  - escada de poder igual entre os tipos, mais ataques de um tipo secundário por linha;
+  - a assinatura vem ao crescer para Adolescente, e o golpe mais forte do tipo ao virar Adulto;
+  - únicos e Rei têm conjuntos próprios, sem assinaturas.
+- **`data/balance.json`:**
+  - metas da seção 11 por região (chegada, Guardião);
+  - plano de encontros (selvagens, domadores, faixa de idade);
+  - equipe mais provável e protótipos dos Guardiões;
+  - orçamento de tempo.
+- **Simulador** (`tools/sim/simulate.gd` com o motor e a IA reais; `tools/simulate.py` confere os critérios e gera `docs/BALANCEAMENTO.md`). 40 jogadas e 10 tentativas por Guardião rodam em cerca de 1 min.
+- **Ajustes feitos com o simulador:** XP, faixas de idade, golpes de veneno físicos, perfis de atributo, vantagem de tipo ×1,35/×0,8, Cura com dano próprio e Taro × Lia. A tabela completa está no BALANCEAMENTO.md.
+- **Batalha:** lista de golpes mais larga (nomes longos cabem). A carta mostra ★ e o nome sem o sufixo Golden.
+
+### Resultado (simulação, 40 jogadas)
+- Idade no Guardião dentro de ~1,5 ano da meta em todas as regiões (20/34/47/60/70/81/88).
+- Vitória contra os Guardiões entre 67% e 85%; Rei 64%.
+- Tempo estimado: 2h54.
+- Golpe mais usado: 15%.
+- Diferença máxima entre tipos: Mágico +16 pontos (limite 20).
+
+### Verificação
+- `tests/run_tests.tscn`: 4763 verificações, 0 falhas. O novo `test_moves.gd` cobre:
+  - 2 acertos, dreno e efeito em si mesmo;
+  - golpes de todas as espécies e assinatura só da própria linha;
+  - batalhas completas entre espécies reais.
+- O teste de overflow confere os nomes de golpe na lista e as descrições na faixa, nos 3 idiomas.
+- `validate_data.py`: confere `moves.json` (tipos, pesos, alvos, efeitos), learnsets e `balance.json`.
+- `python3 tools/simulate.py --check`: todos os critérios OK.
+
+### Pendências
+- Os Guardiões são protótipos, e caminhada e leitura são orçamento. A fase 4 define as equipes do roteiro, mede os mapas reais e repete a simulação.
+
+### Próxima tarefa: Fase 4a — Arco da história
+`docs/roteiro/00_arco.md` com as notas do Fernando (Guardiões parentes do Rei, dificuldade crescente), as 3 decisões e os 2 finais.

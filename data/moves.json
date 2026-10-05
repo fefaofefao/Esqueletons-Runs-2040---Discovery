@@ -1,0 +1,1097 @@
+{
+ "moves": [
+  {
+   "id": "empurrao",
+   "name_key": "MOVE_EMPURRAO",
+   "desc_key": "MOVE_EMPURRAO_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 30,
+   "accuracy": 100,
+   "pp": 30,
+   "target": "enemy",
+   "weight": "light",
+   "effects": []
+  },
+  {
+   "id": "cabecada",
+   "name_key": "MOVE_CABECADA",
+   "desc_key": "MOVE_CABECADA_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 45,
+   "accuracy": 100,
+   "pp": 25,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": []
+  },
+  {
+   "id": "chute_na_canela",
+   "name_key": "MOVE_CHUTE_NA_CANELA",
+   "desc_key": "MOVE_CHUTE_NA_CANELA_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 40,
+   "accuracy": 100,
+   "pp": 25,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "spd",
+     "stages": -1,
+     "chance": 30,
+     "on": "target"
+    }
+   ]
+  },
+  {
+   "id": "passo_ligeiro",
+   "name_key": "MOVE_PASSO_LIGEIRO",
+   "desc_key": "MOVE_PASSO_LIGEIRO_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 35,
+   "accuracy": 100,
+   "pp": 20,
+   "target": "enemy",
+   "weight": "light",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "spd",
+     "stages": 1,
+     "chance": 100,
+     "on": "self"
+    }
+   ]
+  },
+  {
+   "id": "osso_bumerangue",
+   "name_key": "MOVE_OSSO_BUMERANGUE",
+   "desc_key": "MOVE_OSSO_BUMERANGUE_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 30,
+   "accuracy": 95,
+   "pp": 20,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": [],
+   "hits": 2
+  },
+  {
+   "id": "ranger_os_dentes",
+   "name_key": "MOVE_RANGER_OS_DENTES",
+   "desc_key": "MOVE_RANGER_OS_DENTES_DESC",
+   "type": "fisico",
+   "category": "status",
+   "power": 0,
+   "accuracy": 100,
+   "pp": 15,
+   "target": "self",
+   "weight": "light",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "atk",
+     "stages": 1,
+     "chance": 100,
+     "on": "target"
+    },
+    {
+     "kind": "stat",
+     "stat": "def",
+     "stages": 1,
+     "chance": 100,
+     "on": "target"
+    }
+   ]
+  },
+  {
+   "id": "quebra_costela",
+   "name_key": "MOVE_QUEBRA_COSTELA",
+   "desc_key": "MOVE_QUEBRA_COSTELA_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 60,
+   "accuracy": 90,
+   "pp": 15,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "def",
+     "stages": -1,
+     "chance": 40,
+     "on": "target"
+    }
+   ]
+  },
+  {
+   "id": "rodopio",
+   "name_key": "MOVE_RODOPIO",
+   "desc_key": "MOVE_RODOPIO_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 45,
+   "accuracy": 95,
+   "pp": 15,
+   "target": "all_enemies",
+   "weight": "normal",
+   "effects": []
+  },
+  {
+   "id": "investida",
+   "name_key": "MOVE_INVESTIDA",
+   "desc_key": "MOVE_INVESTIDA_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 75,
+   "accuracy": 95,
+   "pp": 15,
+   "target": "enemy",
+   "weight": "heavy",
+   "effects": [
+    {
+     "kind": "delay",
+     "amount": 0.25,
+     "chance": 100
+    }
+   ]
+  },
+  {
+   "id": "soco_seco",
+   "name_key": "MOVE_SOCO_SECO",
+   "desc_key": "MOVE_SOCO_SECO_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 95,
+   "accuracy": 90,
+   "pp": 10,
+   "target": "enemy",
+   "weight": "heavy",
+   "effects": []
+  },
+  {
+   "id": "remada_dupla",
+   "name_key": "MOVE_REMADA_DUPLA",
+   "desc_key": "MOVE_REMADA_DUPLA_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 50,
+   "accuracy": 95,
+   "pp": 15,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": [],
+   "hits": 2,
+   "signature_of": "grumete"
+  },
+  {
+   "id": "golpe_de_tora",
+   "name_key": "MOVE_GOLPE_DE_TORA",
+   "desc_key": "MOVE_GOLPE_DE_TORA_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 100,
+   "accuracy": 90,
+   "pp": 10,
+   "target": "enemy",
+   "weight": "heavy",
+   "effects": [
+    {
+     "kind": "delay",
+     "amount": 0.3,
+     "chance": 100
+    }
+   ],
+   "signature_of": "lenhador"
+  },
+  {
+   "id": "desmoronar",
+   "name_key": "MOVE_DESMORONAR",
+   "desc_key": "MOVE_DESMORONAR_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 65,
+   "accuracy": 95,
+   "pp": 10,
+   "target": "all_enemies",
+   "weight": "heavy",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "spd",
+     "stages": -1,
+     "chance": 30,
+     "on": "target"
+    }
+   ],
+   "signature_of": "mineiro"
+  },
+  {
+   "id": "estaca_firme",
+   "name_key": "MOVE_ESTACA_FIRME",
+   "desc_key": "MOVE_ESTACA_FIRME_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 75,
+   "accuracy": 95,
+   "pp": 15,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "def",
+     "stages": 1,
+     "chance": 50,
+     "on": "self"
+    }
+   ],
+   "signature_of": "palafiteiro"
+  },
+  {
+   "id": "muralha_viva",
+   "name_key": "MOVE_MURALHA_VIVA",
+   "desc_key": "MOVE_MURALHA_VIVA_DESC",
+   "type": "fisico",
+   "category": "status",
+   "power": 0,
+   "accuracy": 100,
+   "pp": 10,
+   "target": "self",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "def",
+     "stages": 2,
+     "chance": 100,
+     "on": "target"
+    },
+    {
+     "kind": "stat",
+     "stat": "res",
+     "stages": 1,
+     "chance": 100,
+     "on": "target"
+    }
+   ],
+   "signature_of": "sentinela"
+  },
+  {
+   "id": "avalanche_de_carga",
+   "name_key": "MOVE_AVALANCHE_DE_CARGA",
+   "desc_key": "MOVE_AVALANCHE_DE_CARGA_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 110,
+   "accuracy": 90,
+   "pp": 5,
+   "target": "enemy",
+   "weight": "heavy",
+   "effects": [
+    {
+     "kind": "delay",
+     "amount": 0.4,
+     "chance": 100
+    },
+    {
+     "kind": "stat",
+     "stat": "spd",
+     "stages": -1,
+     "chance": 100,
+     "on": "self"
+    }
+   ],
+   "signature_of": "carregador"
+  },
+  {
+   "id": "faisca_ossea",
+   "name_key": "MOVE_FAISCA_OSSEA",
+   "desc_key": "MOVE_FAISCA_OSSEA_DESC",
+   "type": "magico",
+   "category": "magical",
+   "power": 35,
+   "accuracy": 100,
+   "pp": 30,
+   "target": "enemy",
+   "weight": "light",
+   "effects": []
+  },
+  {
+   "id": "clarao",
+   "name_key": "MOVE_CLARAO",
+   "desc_key": "MOVE_CLARAO_DESC",
+   "type": "magico",
+   "category": "magical",
+   "power": 45,
+   "accuracy": 100,
+   "pp": 25,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "res",
+     "stages": -1,
+     "chance": 30,
+     "on": "target"
+    }
+   ]
+  },
+  {
+   "id": "eco_sombrio",
+   "name_key": "MOVE_ECO_SOMBRIO",
+   "desc_key": "MOVE_ECO_SOMBRIO_DESC",
+   "type": "magico",
+   "category": "magical",
+   "power": 55,
+   "accuracy": 100,
+   "pp": 20,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": []
+  },
+  {
+   "id": "concentrar",
+   "name_key": "MOVE_CONCENTRAR",
+   "desc_key": "MOVE_CONCENTRAR_DESC",
+   "type": "magico",
+   "category": "status",
+   "power": 0,
+   "accuracy": 100,
+   "pp": 15,
+   "target": "self",
+   "weight": "light",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "mag",
+     "stages": 2,
+     "chance": 100,
+     "on": "target"
+    }
+   ]
+  },
+  {
+   "id": "ventania",
+   "name_key": "MOVE_VENTANIA",
+   "desc_key": "MOVE_VENTANIA_DESC",
+   "type": "magico",
+   "category": "magical",
+   "power": 35,
+   "accuracy": 95,
+   "pp": 15,
+   "target": "all_enemies",
+   "weight": "light",
+   "effects": [
+    {
+     "kind": "delay",
+     "amount": 0.15,
+     "chance": 100
+    }
+   ]
+  },
+  {
+   "id": "chama_fria",
+   "name_key": "MOVE_CHAMA_FRIA",
+   "desc_key": "MOVE_CHAMA_FRIA_DESC",
+   "type": "magico",
+   "category": "magical",
+   "power": 60,
+   "accuracy": 95,
+   "pp": 15,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "atk",
+     "stages": -1,
+     "chance": 30,
+     "on": "target"
+    }
+   ]
+  },
+  {
+   "id": "chuva_de_brasas",
+   "name_key": "MOVE_CHUVA_DE_BRASAS",
+   "desc_key": "MOVE_CHUVA_DE_BRASAS_DESC",
+   "type": "magico",
+   "category": "magical",
+   "power": 50,
+   "accuracy": 90,
+   "pp": 10,
+   "target": "all_enemies",
+   "weight": "normal",
+   "effects": []
+  },
+  {
+   "id": "ancora_do_tempo",
+   "name_key": "MOVE_ANCORA_DO_TEMPO",
+   "desc_key": "MOVE_ANCORA_DO_TEMPO_DESC",
+   "type": "magico",
+   "category": "status",
+   "power": 0,
+   "accuracy": 90,
+   "pp": 10,
+   "target": "enemy",
+   "weight": "light",
+   "effects": [
+    {
+     "kind": "delay",
+     "amount": 0.6,
+     "chance": 100
+    }
+   ]
+  },
+  {
+   "id": "raio_lunar",
+   "name_key": "MOVE_RAIO_LUNAR",
+   "desc_key": "MOVE_RAIO_LUNAR_DESC",
+   "type": "magico",
+   "category": "magical",
+   "power": 85,
+   "accuracy": 90,
+   "pp": 10,
+   "target": "enemy",
+   "weight": "heavy",
+   "effects": []
+  },
+  {
+   "id": "explosao_arcana",
+   "name_key": "MOVE_EXPLOSAO_ARCANA",
+   "desc_key": "MOVE_EXPLOSAO_ARCANA_DESC",
+   "type": "magico",
+   "category": "magical",
+   "power": 115,
+   "accuracy": 85,
+   "pp": 5,
+   "target": "enemy",
+   "weight": "heavy",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "mag",
+     "stages": -1,
+     "chance": 100,
+     "on": "self"
+    }
+   ]
+  },
+  {
+   "id": "facho_do_farol",
+   "name_key": "MOVE_FACHO_DO_FAROL",
+   "desc_key": "MOVE_FACHO_DO_FAROL_DESC",
+   "type": "magico",
+   "category": "magical",
+   "power": 60,
+   "accuracy": 100,
+   "pp": 15,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "res",
+     "stages": -1,
+     "chance": 30,
+     "on": "target"
+    }
+   ],
+   "signature_of": "faroleira"
+  },
+  {
+   "id": "melodia_vagalume",
+   "name_key": "MOVE_MELODIA_VAGALUME",
+   "desc_key": "MOVE_MELODIA_VAGALUME_DESC",
+   "type": "magico",
+   "category": "magical",
+   "power": 45,
+   "accuracy": 100,
+   "pp": 15,
+   "target": "all_enemies",
+   "weight": "light",
+   "effects": [],
+   "signature_of": "flautista"
+  },
+  {
+   "id": "martelo_de_brasa",
+   "name_key": "MOVE_MARTELO_DE_BRASA",
+   "desc_key": "MOVE_MARTELO_DE_BRASA_DESC",
+   "type": "magico",
+   "category": "magical",
+   "power": 90,
+   "accuracy": 90,
+   "pp": 10,
+   "target": "enemy",
+   "weight": "heavy",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "def",
+     "stages": -1,
+     "chance": 30,
+     "on": "target"
+    }
+   ],
+   "signature_of": "ferreiro"
+  },
+  {
+   "id": "decreto_selado",
+   "name_key": "MOVE_DECRETO_SELADO",
+   "desc_key": "MOVE_DECRETO_SELADO_DESC",
+   "type": "magico",
+   "category": "magical",
+   "power": 60,
+   "accuracy": 95,
+   "pp": 10,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "delay",
+     "amount": 0.35,
+     "chance": 100
+    }
+   ],
+   "signature_of": "escriba"
+  },
+  {
+   "id": "estatua_de_gelo",
+   "name_key": "MOVE_ESTATUA_DE_GELO",
+   "desc_key": "MOVE_ESTATUA_DE_GELO_DESC",
+   "type": "magico",
+   "category": "magical",
+   "power": 75,
+   "accuracy": 90,
+   "pp": 10,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "spd",
+     "stages": -1,
+     "chance": 50,
+     "on": "target"
+    }
+   ],
+   "signature_of": "escultor"
+  },
+  {
+   "id": "rota_dos_ecos",
+   "name_key": "MOVE_ROTA_DOS_ECOS",
+   "desc_key": "MOVE_ROTA_DOS_ECOS_DESC",
+   "type": "magico",
+   "category": "magical",
+   "power": 55,
+   "accuracy": 100,
+   "pp": 15,
+   "target": "enemy",
+   "weight": "light",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "spd",
+     "stages": 1,
+     "chance": 100,
+     "on": "self"
+    }
+   ],
+   "signature_of": "cartografo"
+  },
+  {
+   "id": "remendo",
+   "name_key": "MOVE_REMENDO",
+   "desc_key": "MOVE_REMENDO_DESC",
+   "type": "cura",
+   "category": "status",
+   "power": 0,
+   "accuracy": 100,
+   "pp": 15,
+   "target": "self",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "heal",
+     "percent": 35
+    }
+   ]
+  },
+  {
+   "id": "curativo",
+   "name_key": "MOVE_CURATIVO",
+   "desc_key": "MOVE_CURATIVO_DESC",
+   "type": "cura",
+   "category": "status",
+   "power": 0,
+   "accuracy": 100,
+   "pp": 10,
+   "target": "ally",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "heal",
+     "percent": 40
+    }
+   ]
+  },
+  {
+   "id": "balsamo",
+   "name_key": "MOVE_BALSAMO",
+   "desc_key": "MOVE_BALSAMO_DESC",
+   "type": "cura",
+   "category": "status",
+   "power": 0,
+   "accuracy": 100,
+   "pp": 8,
+   "target": "all_allies",
+   "weight": "heavy",
+   "effects": [
+    {
+     "kind": "heal",
+     "percent": 25
+    }
+   ]
+  },
+  {
+   "id": "limpeza",
+   "name_key": "MOVE_LIMPEZA",
+   "desc_key": "MOVE_LIMPEZA_DESC",
+   "type": "cura",
+   "category": "status",
+   "power": 0,
+   "accuracy": 100,
+   "pp": 10,
+   "target": "all_allies",
+   "weight": "light",
+   "effects": [
+    {
+     "kind": "cure"
+    }
+   ]
+  },
+  {
+   "id": "encorajar",
+   "name_key": "MOVE_ENCORAJAR",
+   "desc_key": "MOVE_ENCORAJAR_DESC",
+   "type": "cura",
+   "category": "status",
+   "power": 0,
+   "accuracy": 100,
+   "pp": 15,
+   "target": "ally",
+   "weight": "light",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "atk",
+     "stages": 1,
+     "chance": 100,
+     "on": "target"
+    },
+    {
+     "kind": "stat",
+     "stat": "mag",
+     "stages": 1,
+     "chance": 100,
+     "on": "target"
+    }
+   ]
+  },
+  {
+   "id": "remendo_de_rede",
+   "name_key": "MOVE_REMENDO_DE_REDE",
+   "desc_key": "MOVE_REMENDO_DE_REDE_DESC",
+   "type": "cura",
+   "category": "status",
+   "power": 0,
+   "accuracy": 100,
+   "pp": 10,
+   "target": "ally",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "heal",
+     "percent": 40
+    },
+    {
+     "kind": "stat",
+     "stat": "def",
+     "stages": 1,
+     "chance": 100,
+     "on": "target"
+    }
+   ],
+   "signature_of": "rendeira"
+  },
+  {
+   "id": "seiva_viva",
+   "name_key": "MOVE_SEIVA_VIVA",
+   "desc_key": "MOVE_SEIVA_VIVA_DESC",
+   "type": "cura",
+   "category": "status",
+   "power": 0,
+   "accuracy": 100,
+   "pp": 10,
+   "target": "all_allies",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "heal",
+     "percent": 25
+    }
+   ],
+   "signature_of": "herborista"
+  },
+  {
+   "id": "jato_fresco",
+   "name_key": "MOVE_JATO_FRESCO",
+   "desc_key": "MOVE_JATO_FRESCO_DESC",
+   "type": "cura",
+   "category": "magical",
+   "power": 55,
+   "accuracy": 100,
+   "pp": 15,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "drain",
+     "percent": 50
+    }
+   ],
+   "signature_of": "aguadeiro"
+  },
+  {
+   "id": "orvalho_de_lirio",
+   "name_key": "MOVE_ORVALHO_DE_LIRIO",
+   "desc_key": "MOVE_ORVALHO_DE_LIRIO_DESC",
+   "type": "cura",
+   "category": "status",
+   "power": 0,
+   "accuracy": 100,
+   "pp": 10,
+   "target": "self",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "heal",
+     "percent": 45
+    },
+    {
+     "kind": "stat",
+     "stat": "res",
+     "stages": 1,
+     "chance": 100,
+     "on": "target"
+    }
+   ],
+   "signature_of": "jardineiro_lirios"
+  },
+  {
+   "id": "badalada_serena",
+   "name_key": "MOVE_BADALADA_SERENA",
+   "desc_key": "MOVE_BADALADA_SERENA_DESC",
+   "type": "cura",
+   "category": "magical",
+   "power": 45,
+   "accuracy": 100,
+   "pp": 10,
+   "target": "all_enemies",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "delay",
+     "amount": 0.15,
+     "chance": 100
+    }
+   ],
+   "signature_of": "sineiro"
+  },
+  {
+   "id": "cha_de_abrigo",
+   "name_key": "MOVE_CHA_DE_ABRIGO",
+   "desc_key": "MOVE_CHA_DE_ABRIGO_DESC",
+   "type": "cura",
+   "category": "status",
+   "power": 0,
+   "accuracy": 100,
+   "pp": 8,
+   "target": "all_allies",
+   "weight": "heavy",
+   "effects": [
+    {
+     "kind": "heal",
+     "percent": 35
+    }
+   ],
+   "signature_of": "chazeiro"
+  },
+  {
+   "id": "ritmo_da_caravana",
+   "name_key": "MOVE_RITMO_DA_CARAVANA",
+   "desc_key": "MOVE_RITMO_DA_CARAVANA_DESC",
+   "type": "cura",
+   "category": "status",
+   "power": 0,
+   "accuracy": 100,
+   "pp": 10,
+   "target": "all_allies",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "spd",
+     "stages": 1,
+     "chance": 100,
+     "on": "target"
+    }
+   ],
+   "signature_of": "tamborileiro"
+  },
+  {
+   "id": "picada",
+   "name_key": "MOVE_PICADA",
+   "desc_key": "MOVE_PICADA_DESC",
+   "type": "veneno",
+   "category": "physical",
+   "power": 30,
+   "accuracy": 100,
+   "pp": 30,
+   "target": "enemy",
+   "weight": "light",
+   "effects": [
+    {
+     "kind": "poison",
+     "chance": 30
+    }
+   ]
+  },
+  {
+   "id": "lodo",
+   "name_key": "MOVE_LODO",
+   "desc_key": "MOVE_LODO_DESC",
+   "type": "veneno",
+   "category": "magical",
+   "power": 45,
+   "accuracy": 100,
+   "pp": 20,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "poison",
+     "chance": 30
+    }
+   ]
+  },
+  {
+   "id": "bafo_azedo",
+   "name_key": "MOVE_BAFO_AZEDO",
+   "desc_key": "MOVE_BAFO_AZEDO_DESC",
+   "type": "veneno",
+   "category": "status",
+   "power": 0,
+   "accuracy": 90,
+   "pp": 15,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "poison",
+     "chance": 100
+    }
+   ]
+  },
+  {
+   "id": "neblina_verde",
+   "name_key": "MOVE_NEBLINA_VERDE",
+   "desc_key": "MOVE_NEBLINA_VERDE_DESC",
+   "type": "veneno",
+   "category": "magical",
+   "power": 30,
+   "accuracy": 95,
+   "pp": 15,
+   "target": "all_enemies",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "poison",
+     "chance": 20
+    }
+   ]
+  },
+  {
+   "id": "cuspe_acido",
+   "name_key": "MOVE_CUSPE_ACIDO",
+   "desc_key": "MOVE_CUSPE_ACIDO_DESC",
+   "type": "veneno",
+   "category": "physical",
+   "power": 55,
+   "accuracy": 95,
+   "pp": 15,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "res",
+     "stages": -1,
+     "chance": 40,
+     "on": "target"
+    }
+   ]
+  },
+  {
+   "id": "dreno_toxico",
+   "name_key": "MOVE_DRENO_TOXICO",
+   "desc_key": "MOVE_DRENO_TOXICO_DESC",
+   "type": "veneno",
+   "category": "magical",
+   "power": 55,
+   "accuracy": 100,
+   "pp": 10,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "drain",
+     "percent": 50
+    }
+   ]
+  },
+  {
+   "id": "toxina_lenta",
+   "name_key": "MOVE_TOXINA_LENTA",
+   "desc_key": "MOVE_TOXINA_LENTA_DESC",
+   "type": "veneno",
+   "category": "status",
+   "power": 0,
+   "accuracy": 85,
+   "pp": 10,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "poison",
+     "chance": 100
+    },
+    {
+     "kind": "delay",
+     "amount": 0.3,
+     "chance": 100
+    }
+   ]
+  },
+  {
+   "id": "chuva_de_espinhos",
+   "name_key": "MOVE_CHUVA_DE_ESPINHOS",
+   "desc_key": "MOVE_CHUVA_DE_ESPINHOS_DESC",
+   "type": "veneno",
+   "category": "physical",
+   "power": 40,
+   "accuracy": 95,
+   "pp": 10,
+   "target": "all_enemies",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "poison",
+     "chance": 25
+    }
+   ],
+   "signature_of": "marisqueiro"
+  },
+  {
+   "id": "nuvem_de_esporos",
+   "name_key": "MOVE_NUVEM_DE_ESPOROS",
+   "desc_key": "MOVE_NUVEM_DE_ESPOROS_DESC",
+   "type": "veneno",
+   "category": "status",
+   "power": 0,
+   "accuracy": 85,
+   "pp": 10,
+   "target": "all_enemies",
+   "weight": "heavy",
+   "effects": [
+    {
+     "kind": "poison",
+     "chance": 70
+    }
+   ],
+   "signature_of": "cogumeleiro"
+  },
+  {
+   "id": "vazamento",
+   "name_key": "MOVE_VAZAMENTO",
+   "desc_key": "MOVE_VAZAMENTO_DESC",
+   "type": "veneno",
+   "category": "magical",
+   "power": 65,
+   "accuracy": 95,
+   "pp": 10,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "poison",
+     "chance": 40
+    }
+   ],
+   "signature_of": "gasista"
+  },
+  {
+   "id": "anil_toxico",
+   "name_key": "MOVE_ANIL_TOXICO",
+   "desc_key": "MOVE_ANIL_TOXICO_DESC",
+   "type": "veneno",
+   "category": "magical",
+   "power": 70,
+   "accuracy": 95,
+   "pp": 10,
+   "target": "enemy",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "poison",
+     "chance": 35
+    },
+    {
+     "kind": "stat",
+     "stat": "res",
+     "stages": -1,
+     "chance": 100,
+     "on": "target"
+    }
+   ],
+   "signature_of": "lavadeira"
+  },
+  {
+   "id": "ferrao_das_dunas",
+   "name_key": "MOVE_FERRAO_DAS_DUNAS",
+   "desc_key": "MOVE_FERRAO_DAS_DUNAS_DESC",
+   "type": "veneno",
+   "category": "physical",
+   "power": 60,
+   "accuracy": 100,
+   "pp": 15,
+   "target": "enemy",
+   "weight": "light",
+   "effects": [
+    {
+     "kind": "poison",
+     "chance": 50
+    }
+   ],
+   "signature_of": "domador_escorpioes"
+  }
+ ]
+}

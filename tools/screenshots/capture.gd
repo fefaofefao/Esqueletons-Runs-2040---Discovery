@@ -268,3 +268,16 @@ func _bestiary_shots() -> void:
 	w.map.add_spawn(w, {"id": "cap", "table": "_cap", "x": w.player.cell.x, "y": w.player.cell.y, "radius": 5, "count": 7}, rng)
 	await _wait(1.2)
 	await _shot("d3_selvagens_reais")
+	var taro := Monster.create("grumete_2", 24)
+	taro.nickname = "Taro"
+	var lia := Monster.create("faroleira_2", 24)
+	lia.nickname = "Lia"
+	SaveGame.data["party"] = [taro.to_dict(), lia.to_dict(), Monster.create("lenhador_2", 22).to_dict()]
+	Game.start_battle({"kind": "wild", "seed": 9, "enemies": [["mineiro_2", 25], ["gasista_1", 22, true]]})
+	await _wait(5.5)
+	await _shot("d4_batalha_real")
+	Controls.tap_action("btn_a")
+	await _wait(0.4)
+	Controls.tap_action("move_right")
+	await _wait(0.3)
+	await _shot("d5_golpes_reais")

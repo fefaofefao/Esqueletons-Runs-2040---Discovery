@@ -65,7 +65,7 @@ static func age_text(n: int) -> String:
 func refresh() -> void:
 	if monster == null:
 		return
-	_name.text = ("★" if monster.golden else "") + monster.display_name()
+	_name.text = ("★" if monster.golden else "") + monster.base_name()
 	_name.add_theme_color_override("font_color", Color8(255, 210, 90) if monster.golden else (UiTheme.TEXT_DARK if ally else UiTheme.TEXT_LIGHT))
 	_age.text = age_text(monster.level)
 	_type.texture = load("res://assets/battle/type_%s.png" % monster.type())

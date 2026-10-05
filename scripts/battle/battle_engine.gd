@@ -357,17 +357,28 @@ func _use_move(user: Monster, move_id: String, target_uid: int, bonus: float) ->
 		if acc < 100.0 and rng.randf() * 100.0 >= acc:
 			_ev("miss", {"user": user.uid, "target": target.uid})
 			continue
+		var dealt := 0
 		if str(mv.get("category", "physical")) != "status" and int(mv.get("power", 0)) > 0:
-			var r := calc_damage(rules, user, target, mv, rng, {"bonus": bonus})
-			if target_kind == "all_enemies" and targets.size() > 1:
-				r["damage"] = maxi(1, int(r["damage"] * 0.75))
-			_damage(target, int(r["damage"]), {"crit": r["crit"], "eff": r["eff"], "user": user.uid})
+			for h in int(mv.get("hits", 1)):
+				if target.is_fainted():
+					break
+				var r := calc_damage(rules, user, target, mv, rng, {"bonus": bonus})
+				if target_kind == "all_enemies" and targets.size() > 1:
+					r["damage"] = maxi(1, int(r["damage"] * 0.75))
+				var before: int = target.hp
+				_damage(target, int(r["damage"]), {"crit": r["crit"], "eff": r["eff"], "user": user.uid})
+				dealt += before - target.hp
 		for eff in mv.get("effects", []):
-			if target.is_fainted():
-				break
+			var on_self: bool = str(eff.get("on", "target")) == "self"
+			if target.is_fainted() and not on_self:
+				continue
 			if rng.randf() * 100.0 >= float(eff.get("chance", 100)):
 				continue
-			_apply_effect(user, target, eff, bonus)
+			if str(eff.get("kind", "")) == "drain":
+				if dealt > 0 and not user.is_fainted():
+					_heal(user, maxi(1, int(dealt * float(eff.get("percent", 50)) / 100.0)))
+				continue
+			_apply_effect(user, user if on_self else target, eff, bonus)
 		if target.is_fainted():
 			_on_faint(target)
 
@@ -553,7 +564,7 @@ func xp_reward(enemy: Monster) -> int:
 	var x: Dictionary = rules.get("xp", {})
 	var base := float(enemy.info().get("base_xp", 60))
 	var mul := 1.0 if is_wild() else float(x.get("trainer_mul", 1.5))
-	return maxi(1, int(base * enemy.level / 5.0 * mul))
+	return maxi(1, int(base * enemy.level / float(x.get("reward_div", 5.0)) * mul))
 
 
 func _award_xp(enemy: Monster) -> void:

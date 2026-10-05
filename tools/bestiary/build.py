@@ -21,11 +21,11 @@ import bestiary as B  # noqa: E402
 
 STATS = ["hp", "atk", "mag", "def", "res", "spd"]
 ROLE = {
-    "tanque":      {"hp": 1.25, "atk": 0.95, "mag": 0.70, "def": 1.30, "res": 1.10, "spd": 0.70},
+    "tanque":      {"hp": 1.20, "atk": 1.25, "mag": 0.55, "def": 1.15, "res": 1.00, "spd": 0.85},
     "bruto":       {"hp": 1.10, "atk": 1.40, "mag": 0.60, "def": 1.05, "res": 0.80, "spd": 1.05},
-    "veloz":       {"hp": 0.90, "atk": 1.15, "mag": 0.95, "def": 0.80, "res": 0.85, "spd": 1.35},
+    "veloz":       {"hp": 0.95, "atk": 1.15, "mag": 0.95, "def": 0.85, "res": 0.85, "spd": 1.25},
     "equilibrado": {"hp": 1.05, "atk": 1.00, "mag": 1.00, "def": 1.00, "res": 1.00, "spd": 0.95},
-    "mago":        {"hp": 0.95, "atk": 0.60, "mag": 1.40, "def": 0.80, "res": 1.15, "spd": 1.10},
+    "mago":        {"hp": 1.05, "atk": 0.60, "mag": 1.15, "def": 0.90, "res": 1.00, "spd": 1.00},
     "suporte":     {"hp": 1.15, "atk": 0.65, "mag": 1.10, "def": 1.00, "res": 1.20, "spd": 0.90},
     "astuto":      {"hp": 0.95, "atk": 1.05, "mag": 1.05, "def": 0.90, "res": 0.95, "spd": 1.10},
     "rei":         {"hp": 1.10, "atk": 1.00, "mag": 1.15, "def": 0.95, "res": 1.00, "spd": 0.80},
@@ -34,7 +34,7 @@ STAGE_TOTAL = {1: (262, 300), 2: (372, 412), 3: (482, 522)}  # (comum, raro)
 RARITY_T = {"comum": 0.0, "incomum": 0.5, "raro": 1.0, "unico": 1.0}
 UNIQUE_TOTAL = 490
 KING_TOTAL = 600
-BASE_XP = {1: 50, 2: 110, 3: 180}
+BASE_XP = {1: 60, 2: 68, 3: 68}
 
 
 def stats_for(role, typ, total):
@@ -80,7 +80,7 @@ def build():
             lo, hi = STAGE_TOTAL[i]
             total = int(round(lo + (hi - lo) * RARITY_T[ln["rarity"]]))
             entry = {"id": sid, "name_key": key(sid), "entry_key": okey(sid),
-                     "stats": stats_for(ln["role"], ln["type"], total), "base_xp": BASE_XP[i] + (10 if ln["rarity"] == "raro" else 0),
+                     "stats": stats_for(ln["role"], ln["type"], total), "base_xp": BASE_XP[i] + (6 if ln["rarity"] == "raro" else 0),
                      "sprite": f"res://assets/skeletons/{sid}.png", "map_sprite": f"res://assets/skeletons/map/{sid}.png"}
             if M:
                 entry["learnset"] = M.learnset(ln, i)
@@ -98,7 +98,7 @@ def build():
         rows.append([okey(u["id"]), u["entry"]["pt"], u["entry"]["en"], u["entry"]["es"]])
         e = {"id": u["id"], "name_key": key(u["id"]), "entry_key": okey(u["id"]), "type": u["type"],
              "region": u["region"], "rarity": "unico", "gender": u["gender"], "map_behavior": u["behavior"],
-             "stats": stats_for(u["role"], u["type"], UNIQUE_TOTAL), "base_xp": 170,
+             "stats": stats_for(u["role"], u["type"], UNIQUE_TOTAL), "base_xp": 90,
              "sprite": f"res://assets/skeletons/{u['id']}.png", "map_sprite": f"res://assets/skeletons/map/{u['id']}.png"}
         if M:
             e["learnset"] = M.learnset_unique(u)
@@ -108,7 +108,7 @@ def build():
     rows.append([okey(k["id"]), k["entry"]["pt"], k["entry"]["en"], k["entry"]["es"]])
     king = {"id": k["id"], "name_key": key(k["id"]), "entry_key": okey(k["id"]), "type": k["type"],
             "region": k["region"], "rarity": "unico", "gender": k["gender"], "map_behavior": k["behavior"],
-            "stats": stats_for("rei", k["type"], KING_TOTAL), "base_xp": 400,
+            "stats": stats_for("rei", k["type"], KING_TOTAL), "base_xp": 120,
             "sprite": f"res://assets/skeletons/{k['id']}.png", "map_sprite": f"res://assets/skeletons/map/{k['id']}.png"}
     if M:
         king["learnset"] = M.learnset_unique(k)
@@ -131,6 +131,22 @@ def build():
         w = csv.writer(f)
         w.writerow(["keys", "pt_BR", "en", "es"])
         w.writerows(rows)
+    if M:
+        (ROOT / "data/moves.json").write_text(json.dumps(M.to_json(), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        with open(ROOT / "i18n/moves.csv", "w", newline="", encoding="utf-8") as f:
+            w = csv.writer(f)
+            w.writerow(["keys", "pt_BR", "en", "es"])
+            w.writerows(M.csv_rows())
+        # descrições geradas que coincidem de verdade entre idiomas ("Cura 35%.")
+        allow = ROOT / "i18n/allow_identical.txt"
+        marker = "# --- gerado por tools/bestiary/build.py (descrições de golpes) ---"
+        lines = allow.read_text(encoding="utf-8").split("\n")
+        if marker in lines:
+            lines = lines[:lines.index(marker)]
+        while lines and lines[-1] == "":
+            lines.pop()
+        same = [r[0] for r in M.csv_rows() if r[0].endswith("_DESC") and (r[1] == r[2] or r[1] == r[3])]
+        allow.write_text("\n".join(lines + [marker] + same) + "\n", encoding="utf-8")
     write_doc(data)
     print(f"bestiário: {len(lines_out)} linhas, {len(uniques)} únicos, rei; {len(rows)} textos")
 

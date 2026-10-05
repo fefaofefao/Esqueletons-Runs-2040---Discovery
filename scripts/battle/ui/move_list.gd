@@ -5,7 +5,8 @@ extends Control
 
 signal tapped(index: int)
 
-const ROW := Vector2(120, 15)
+const ROW := Vector2(156, 15)
+const NAME_WIDTH := 100.0
 
 var monster: Monster
 var engine: BattleEngine
@@ -33,7 +34,7 @@ func _ready() -> void:
 		r.add_child(icon)
 		var name_l := UiTheme.label("")
 		name_l.position = Vector2(15, 1)
-		name_l.size = Vector2(70, 12)
+		name_l.size = Vector2(NAME_WIDTH, 12)
 		name_l.clip_text = true
 		name_l.name = "Name"
 		r.add_child(name_l)
@@ -109,7 +110,7 @@ func _draw_row(r: Control, i: int) -> void:
 		r.draw_rect(Rect2(Vector2(2, 2), r.size - Vector2(4, 4)), Color(0.5, 0.5, 0.5, 0.35))
 	if i < move_ids.size():
 		var w := str(engine.move_data(move_ids[i]).get("weight", "normal"))
-		var x := 88.0
+		var x := ROW.x - 39.0
 		if w == "light":
 			for k in 2:
 				r.draw_polyline(PackedVector2Array([Vector2(x + k * 3, 4), Vector2(x + k * 3 + 2, 7), Vector2(x + k * 3, 10)]), Color8(40, 150, 200), 1.0)

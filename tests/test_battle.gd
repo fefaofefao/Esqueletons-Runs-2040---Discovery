@@ -25,7 +25,7 @@ func test_damage_formula_matches_spec() -> void:
 	var mv := Data.move("teste_soco")
 	var r := BattleEngine.calc_damage(R, a, d, mv, null, {"variance": 1.0, "crit": false})
 	var expected := ((2.0 * 20 / 5 + 2) * 40 * a.stat("atk") / float(d.stat("def"))) / 50.0 + 2
-	expected *= 1.5 * 1.25  # físico vence mágico + mesmo tipo
+	expected *= float(R["type_chart"]["strong"]) * 1.25  # físico vence mágico + mesmo tipo
 	check_eq(r["damage"], int(expected), "dano = fórmula da seção 9")
 	var crit := BattleEngine.calc_damage(R, a, d, mv, null, {"variance": 1.0, "crit": true})
 	check_eq(crit["damage"], int(expected * 1.5), "crítico ×1,5")
@@ -35,15 +35,18 @@ func test_damage_formula_matches_spec() -> void:
 
 func test_type_chart() -> void:
 	R = Data.battle_rules()
-	check(is_equal_approx(BattleEngine.type_multiplier(R, "fisico", "magico"), 1.5), "Físico > Mágico")
-	check(is_equal_approx(BattleEngine.type_multiplier(R, "magico", "veneno"), 1.5), "Mágico > Veneno")
-	check(is_equal_approx(BattleEngine.type_multiplier(R, "veneno", "fisico"), 1.5), "Veneno > Físico")
-	check(is_equal_approx(BattleEngine.type_multiplier(R, "magico", "fisico"), 0.75), "contra: ×0,75")
+	var strong := float(R["type_chart"]["strong"])
+	var weak := float(R["type_chart"]["weak"])
+	check(strong > 1.0 and weak < 1.0, "vantagem > 1 e desvantagem < 1")
+	check(is_equal_approx(BattleEngine.type_multiplier(R, "fisico", "magico"), strong), "Físico > Mágico")
+	check(is_equal_approx(BattleEngine.type_multiplier(R, "magico", "veneno"), strong), "Mágico > Veneno")
+	check(is_equal_approx(BattleEngine.type_multiplier(R, "veneno", "fisico"), strong), "Veneno > Físico")
+	check(is_equal_approx(BattleEngine.type_multiplier(R, "magico", "fisico"), weak), "contra: desvantagem")
 	for t in ["fisico", "magico", "veneno", "cura"]:
 		check(is_equal_approx(BattleEngine.type_multiplier(R, "cura", t), 1.0), "Cura neutro atacando %s" % t)
 		check(is_equal_approx(BattleEngine.type_multiplier(R, t, "cura"), 1.0), "Cura neutro defendendo de %s" % t)
-	check_eq(BattleEngine.effectiveness_label(1.5), "BTL_EFF_STRONG", "rótulo Forte")
-	check_eq(BattleEngine.effectiveness_label(0.75), "BTL_EFF_WEAK", "rótulo Fraco")
+	check_eq(BattleEngine.effectiveness_label(strong), "BTL_EFF_STRONG", "rótulo Forte")
+	check_eq(BattleEngine.effectiveness_label(weak), "BTL_EFF_WEAK", "rótulo Fraco")
 
 
 func _auto(b: BattleEngine, max_turns: int = 200, chooser: Callable = Callable()) -> void:
