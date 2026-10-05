@@ -64,11 +64,8 @@ func dialog_ref() -> String:
 	if d is String:
 		return d
 	for entry in d:
-		if entry.has("if") and not SaveGame.get_flag(str(entry["if"])):
-			continue
-		if entry.has("if_not") and SaveGame.get_flag(str(entry["if_not"])):
-			continue
-		return str(entry.get("dialog", ""))
+		if MapView.condition_ok(entry):
+			return str(entry.get("dialog", ""))
 	return ""
 
 

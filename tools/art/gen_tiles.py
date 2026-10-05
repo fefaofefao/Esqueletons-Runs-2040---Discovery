@@ -425,6 +425,82 @@ class Atlas:
         return img
 
 
+# ---------------------------------------------------------------- terrenos das regiões (fase 4c+)
+def tile_noise(base, light, dark, seed, specks=(), ripples=None):
+    """Chão com ruído (cinza, lama, neve, duna, calçamento...)."""
+    img = new(T, T)
+    for y in range(T):
+        for x in range(T):
+            h = hash01(x, y, seed)
+            c = base
+            if h > 0.88:
+                c = light
+            elif h < 0.1:
+                c = dark
+            if ripples and (y + int(2 * math.sin((x + seed) / 3))) % ripples == 0:
+                c = dark
+            put(img, x, y, c)
+    for i, col in enumerate(specks):
+        x, y = int(hash01(i, 1, seed) * 14) + 1, int(hash01(i, 2, seed) * 14) + 1
+        put(img, x, y, col)
+        put(img, x + 1, y, mix(col, base, 0.5))
+    return [img]
+
+
+def tile_cobble(base, light, dark, seed):
+    img = new(T, T)
+    rect(img, 0, 0, T, T, dark)
+    for (x0, y0, w, h) in [(0, 0, 7, 5), (8, 0, 8, 5), (0, 6, 4, 4), (5, 6, 6, 4), (12, 6, 4, 4), (0, 11, 8, 5), (9, 11, 7, 5)]:
+        c = mix(base, light, hash01(x0, y0, seed) * 0.6)
+        rect(img, x0, y0, w - 1, h - 1, c)
+        rect(img, x0, y0, w - 1, 1, light)
+    return [img]
+
+
+def tile_blocks(base, light, dark, seed, snow=False):
+    """Parede de blocos de pedra (sólida)."""
+    img = new(T, T)
+    rect(img, 0, 0, T, T, dark)
+    for row in range(4):
+        off = 4 if row % 2 else 0
+        for col in range(-1, 3):
+            x0 = col * 8 + off
+            c = mix(base, light, hash01(col, row, seed) * 0.5)
+            rect(img, max(0, x0), row * 4, min(7, 7 + x0) if x0 < 0 else 7, 3, c)
+    if snow:
+        rect(img, 0, 0, T, 3, (240, 246, 252))
+        for x in range(0, T, 3):
+            put(img, x, 3, (220, 232, 246))
+    return [img]
+
+
+def tile_murky(base, light, dark, seed):
+    frames = []
+    for f in range(4):
+        img = new(T, T)
+        for y in range(T):
+            for x in range(T):
+                v = math.sin((x + f * 2) * 0.7 + y * 0.4 + seed)
+                c = base if v < 0.6 else light
+                if hash01(x, y, seed + f) < 0.06:
+                    c = dark
+                put(img, x, y, c)
+        frames.append(img)
+    return frames
+
+
+def tile_carpet():
+    img = new(T, T)
+    rect(img, 0, 0, T, T, (150, 40, 60))
+    rect(img, 0, 0, 2, T, (214, 170, 70))
+    rect(img, 14, 0, 2, T, (214, 170, 70))
+    for y in range(2, T, 6):
+        put(img, 8, y, (214, 170, 70))
+        put(img, 7, y + 1, (214, 170, 70))
+        put(img, 9, y + 1, (214, 170, 70))
+    return [img]
+
+
 def main():
     atlas = Atlas()
     terrains = {}
@@ -454,6 +530,21 @@ def main():
     terrain("wall_top", [tile_wall("top")], True)
     terrain("mat", [tile_mat()], False)
     terrain("void", [tile_void()], True)
+    # regiões (fase 4c+)
+    terrain("ash", [tile_noise((122, 116, 112), (150, 144, 138), (96, 90, 88), 300, [(200, 120, 60)]), tile_noise((118, 112, 108), (146, 140, 134), (92, 86, 84), 301)], False, weights=[3, 1])
+    terrain("rock", [tile_blocks((92, 84, 82), (120, 112, 106), (52, 46, 48), 310), tile_blocks((88, 80, 80), (116, 108, 104), (50, 44, 46), 311)], True)
+    terrain("mud", [tile_noise((104, 96, 64), (128, 120, 80), (78, 72, 48), 320, [(90, 140, 70)]), tile_noise((100, 92, 62), (124, 116, 78), (74, 68, 46), 321)], False, weights=[3, 1])
+    terrain("swamp", [tile_murky((70, 104, 74), (98, 132, 88), (46, 70, 52), 330)], True, fps=2.0)
+    terrain("stone", [tile_cobble((176, 170, 160), (204, 198, 186), (110, 104, 98), 340), tile_cobble((170, 164, 156), (198, 192, 182), (106, 100, 94), 341)], False, weights=[3, 1])
+    terrain("city_wall", [tile_blocks((196, 186, 168), (226, 218, 200), (120, 112, 100), 350)], True)
+    terrain("snow", [tile_noise((232, 240, 248), (250, 252, 255), (200, 214, 232), 360), tile_noise((228, 236, 246), (248, 250, 255), (196, 210, 230), 361, [(170, 190, 220)])], False, weights=[3, 1])
+    terrain("ice", [tile_noise((176, 214, 238), (226, 244, 252), (140, 186, 220), 370, [(255, 255, 255), (255, 255, 255)])], False)
+    terrain("snow_rock", [tile_blocks((120, 128, 144), (156, 164, 180), (70, 76, 92), 380, snow=True)], True)
+    terrain("dune", [tile_noise((232, 196, 128), (246, 216, 150), (204, 166, 102), 390, ripples=6), tile_noise((228, 192, 124), (244, 212, 146), (200, 162, 98), 391, ripples=5)], False, weights=[2, 1])
+    terrain("sandstone", [tile_blocks((198, 140, 88), (222, 170, 112), (130, 86, 54), 400)], True)
+    terrain("castle_floor", [tile_cobble((92, 84, 112), (120, 110, 140), (54, 48, 70), 410)], False)
+    terrain("castle_wall", [tile_blocks((70, 62, 88), (98, 88, 118), (36, 30, 48), 420)], True)
+    terrain("carpet", [tile_carpet()], False)
 
     overlays = []
 

@@ -250,12 +250,31 @@ func _place_props() -> void:
 				_interactions[cc] = {"dialog": str(p["dialog"])}
 
 
-## Condição de flag de um item do mapa ({"if": flag} / {"if_not": flag}).
+## Condição de flag (mapas, NPCs e diálogos):
+##   "if": flag · "if_not": flag · "if_all": [flags] · "if_any": [flags]
+##   "if_count": {"flags": [...], "min": n}  (ex.: pontos de Redenção)
 static func condition_ok(entry: Dictionary) -> bool:
 	if entry.has("if") and not SaveGame.get_flag(str(entry["if"])):
 		return false
 	if entry.has("if_not") and SaveGame.get_flag(str(entry["if_not"])):
 		return false
+	for f in entry.get("if_all", []):
+		if not SaveGame.get_flag(str(f)):
+			return false
+	if entry.has("if_any"):
+		var any := false
+		for f in entry["if_any"]:
+			any = any or SaveGame.get_flag(str(f))
+		if not any:
+			return false
+	if entry.has("if_count"):
+		var c: Dictionary = entry["if_count"]
+		var n := 0
+		for f in c.get("flags", []):
+			if SaveGame.get_flag(str(f)):
+				n += 1
+		if n < int(c.get("min", 1)):
+			return false
 	return true
 
 

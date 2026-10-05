@@ -671,6 +671,143 @@ def raizerno_tree():
     return img
 
 
+# ------------------------------------------------------------- minas (fase 4c)
+def rails():
+    img = new(16, 16)
+    for x in (3, 12):
+        rect(img, x, 0, 1, 16, (120, 120, 130))
+    for y in range(1, 16, 4):
+        rect(img, 1, y, 14, 2, (110, 80, 54))
+    return img
+
+
+def mine_cart():
+    img = new(26, 20)
+    rect(img, 3, 4, 20, 10, (110, 100, 96))
+    rect(img, 2, 3, 22, 2, (150, 156, 170))
+    ellipse(img, 8, 11, 6, 3, (60, 54, 52))
+    for x in (6, 20):
+        ellipse(img, x, 16, 3, 3, (60, 60, 64))
+    ellipse(img, 10, 4, 3, 2, (60, 58, 60))
+    ellipse(img, 16, 3, 3, 2, (80, 76, 74))
+    outline(img, OUT_C)
+    return img
+
+
+def mine_lamp(frame):
+    img = new(12, 30)
+    rect(img, 5, 6, 2, 23, (110, 80, 54))
+    rect(img, 3, 27, 6, 2, (90, 64, 44))
+    rect(img, 2, 2, 8, 6, (70, 70, 84))
+    rect(img, 3, 3, 6, 4, (255, 210, 110) if frame == 0 else (255, 190, 90))
+    outline(img, OUT_C)
+    return img
+
+
+def crystal(frame):
+    img = new(16, 18)
+    col = (150, 220, 255) if frame == 0 else (190, 240, 255)
+    for (x, h, w) in [(4, 10, 3), (8, 14, 4), (12, 8, 3)]:
+        for y in range(h):
+            ww = max(1, int(w * (1 - y / h)) + 1)
+            rect(img, x - ww // 2, 17 - y, ww, 1, col if y > 1 else (255, 255, 255))
+    outline(img, OUT_C)
+    return img
+
+
+def beam_frame():
+    img = new(48, 40)
+    rect(img, 2, 6, 6, 34, (120, 84, 56))
+    rect(img, 40, 6, 6, 34, (120, 84, 56))
+    rect(img, 0, 2, 48, 7, (140, 100, 64))
+    rect(img, 8, 9, 32, 31, (24, 20, 26))
+    outline(img, OUT_C)
+    return img
+
+
+def anvil():
+    img = new(20, 14)
+    rect(img, 2, 2, 16, 4, (90, 92, 104))
+    rect(img, 16, 3, 4, 2, (90, 92, 104))
+    rect(img, 7, 6, 6, 4, (70, 72, 84))
+    rect(img, 4, 10, 12, 3, (70, 72, 84))
+    rect(img, 2, 2, 16, 1, (150, 156, 170))
+    outline(img, OUT_C)
+    return img
+
+
+def forge(frame):
+    img = new(40, 34)
+    rect(img, 2, 8, 36, 25, (110, 90, 84))
+    for y in range(8, 33, 5):
+        rect(img, 2, y, 36, 1, (84, 66, 62))
+    rect(img, 10, 16, 20, 12, (30, 20, 20))
+    fire = [(255, 150, 60), (255, 210, 110), (230, 90, 40)]
+    for i in range(6):
+        x = 12 + i * 3
+        h = 5 + ((i + frame) % 3) * 2
+        rect(img, x, 28 - h, 2, h, fire[(i + frame) % 3])
+    rect(img, 16, 0, 8, 9, (96, 80, 76))
+    outline(img, OUT_C)
+    return img
+
+
+def chain_gate():
+    img = new(34, 28)
+    for x in (2, 30):
+        rect(img, x, 0, 3, 28, (80, 76, 84))
+    for row in range(5):
+        for k in range(8):
+            ellipse(img, 6 + k * 3.2, 4 + row * 5, 1.8, 1.4, (150, 150, 160))
+            put(img, int(6 + k * 3.2), 4 + row * 5, (90, 90, 100))
+    rect(img, 14, 10, 6, 7, (200, 160, 70))
+    rect(img, 16, 12, 2, 3, (80, 60, 30))
+    outline(img, OUT_C)
+    return img
+
+
+def rubble():
+    img = new(34, 22)
+    r = rng(17)
+    for _ in range(9):
+        x, y = r.randint(4, 28), r.randint(6, 18)
+        ellipse(img, x, y, r.randint(3, 6), r.randint(2, 4), (120 + r.randint(-10, 10), 112, 106))
+    outline(img, OUT_C)
+    return img
+
+
+def map_board():
+    img = new(30, 24)
+    rect(img, 1, 1, 28, 20, (110, 80, 54))
+    rect(img, 3, 3, 24, 16, (236, 220, 170))
+    for (cx, cy) in [(9, 9), (16, 7), (22, 11)]:
+        ellipse(img, cx, cy, 3.5, 2.5, (110, 170, 210))
+    for x in range(4, 26):
+        put(img, x, 14 + int(1.5 * math.sin(x / 2)), (150, 110, 80))
+    rect(img, 13, 21, 4, 3, (90, 64, 44))
+    outline(img, OUT_C)
+    return img
+
+
+def scarf():
+    img = new(16, 10)
+    for x in range(1, 15):
+        rect(img, x, 3 + int(1.5 * math.sin(x / 2)), 1, 3, (214, 90, 90))
+    for x in range(2, 14, 3):
+        put(img, x, 4 + int(1.5 * math.sin(x / 2)), (250, 220, 120))
+    outline(img, OUT_C)
+    return img
+
+
+def helmet_lamp():
+    img = new(14, 12)
+    ellipse(img, 7, 7, 6, 4, (230, 190, 60))
+    rect(img, 1, 8, 12, 3, (230, 190, 60))
+    rect(img, 5, 3, 4, 3, (255, 250, 200))
+    outline(img, OUT_C)
+    return img
+
+
 # ------------------------------------------------------------- empacotamento
 PROPS = {
     # id: (função, quadros, fps, origem em px (pés), colisão [células relativas], camada, interativo)
@@ -721,6 +858,21 @@ PROPS = {
     "mushrooms": (lambda f: mushrooms(0), 1, 0, (8, 13), [], "ground", False),
     "glow_shroom": (lambda f: mushrooms(f, True), 2, 1.5, (8, 13), [], "ground", False),
     "herb_blue": (lambda f: herb_blue(), 1, 0, (7, 15), [[0, 0]], "y", True),
+    "house_stone": (lambda f: house(64, 62, (110, 110, 124), (76, 76, 90), (180, 172, 160), (140, 132, 120), "house"), 1, 0, (32, 61), [[-2, 0], [-1, 0], [1, 0], [-2, -1], [-1, -1], [0, -1], [1, -1]], "y", False),
+    "house_stone_ranch": (lambda f: house(80, 70, (150, 70, 60), (110, 46, 40), (180, 172, 160), (140, 132, 120), "ranch"), 1, 0, (40, 69), [[-2, 0], [-1, 0], [1, 0], [2, 0], [-2, -1], [-1, -1], [0, -1], [1, -1], [2, -1]], "y", False),
+    "house_stone_shop": (lambda f: house(80, 70, (70, 90, 120), (46, 62, 90), (180, 172, 160), (140, 132, 120), "shop"), 1, 0, (40, 69), [[-2, 0], [-1, 0], [1, 0], [2, 0], [-2, -1], [-1, -1], [0, -1], [1, -1], [2, -1]], "y", False),
+    "rails": (lambda f: rails(), 1, 0, (8, 15), [], "ground", False),
+    "mine_cart": (lambda f: mine_cart(), 1, 0, (13, 19), [[0, 0]], "y", False),
+    "mine_lamp": (mine_lamp, 2, 2.0, (6, 29), [[0, 0]], "y", False),
+    "crystal": (crystal, 2, 1.2, (8, 17), [[0, 0]], "y", False),
+    "beam_frame": (lambda f: beam_frame(), 1, 0, (24, 39), [[-1, 0], [1, 0], [-1, -1], [0, -1], [1, -1]], "y", False),
+    "anvil": (lambda f: anvil(), 1, 0, (10, 13), [[0, 0]], "y", False),
+    "forge": (forge, 2, 4.0, (20, 33), [[-1, 0], [0, 0], [1, 0], [-1, -1], [0, -1], [1, -1]], "y", False),
+    "chain_gate": (lambda f: chain_gate(), 1, 0, (17, 27), [[-1, 0], [0, 0]], "y", True),
+    "rubble": (lambda f: rubble(), 1, 0, (17, 21), [[-1, 0], [0, 0]], "y", True),
+    "map_board": (lambda f: map_board(), 1, 0, (15, 23), [[0, 0], [-1, 0]], "y", True),
+    "scarf": (lambda f: scarf(), 1, 0, (8, 9), [[0, 0]], "y", True),
+    "helmet_lamp": (lambda f: helmet_lamp(), 1, 0, (7, 11), [[0, 0]], "y", True),
     "raizerno_tree": (lambda f: raizerno_tree(), 1, 0, (28, 62), [[-1, 0], [0, 0], [1, 0], [-1, -1], [0, -1], [1, -1]], "y", True),
 }
 
@@ -730,6 +882,9 @@ LIGHTS = {
     "lamp": {"radius": 40, "color": [1.0, 0.82, 0.5], "intensity": 0.35, "offset": [0, -9]},
     "campfire": {"radius": 44, "color": [1.0, 0.6, 0.3], "intensity": 0.3, "offset": [0, -6]},
     "glow_shroom": {"radius": 26, "color": [0.5, 1.0, 0.95], "intensity": 0.4, "offset": [0, -6]},
+    "mine_lamp": {"radius": 34, "color": [1.0, 0.8, 0.5], "intensity": 0.4, "offset": [0, -24]},
+    "crystal": {"radius": 24, "color": [0.6, 0.9, 1.0], "intensity": 0.35, "offset": [0, -8]},
+    "forge": {"radius": 48, "color": [1.0, 0.55, 0.25], "intensity": 0.45, "offset": [0, -12]},
     "lamp_post": {"radius": 36, "color": [1.0, 0.85, 0.55], "intensity": 0.28, "offset": [0, -25]},
 }
 

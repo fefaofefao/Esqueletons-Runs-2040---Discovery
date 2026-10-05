@@ -11,7 +11,7 @@ extends Overlay
 ##   {"action": "nome", ...}  ação de roteiro (batalha, loja, dar parceiro...):
 ##       a caixa fecha, o Game executa a ação e reabre o diálogo no nó seguinte
 ##       (ver Game.play_script e docs/DADOS.md).
-## Qualquer nó aceita "if": "flag" ou "if_not": "flag".
+## Qualquer nó aceita condições ("if", "if_not", "if_all", "if_any", "if_count").
 
 signal choice_made(index: int)
 
@@ -151,9 +151,7 @@ func _advance_node() -> void:
 			close()
 			return
 		var n: Dictionary = _script[_node_i]
-		if n.has("if") and not SaveGame.get_flag(str(n["if"])):
-			continue
-		if n.has("if_not") and SaveGame.get_flag(str(n["if_not"])):
+		if not MapView.condition_ok(n):
 			continue
 		if n.has("set_flag") and not n.has("say") and not n.has("choice"):
 			SaveGame.set_flag(str(n["set_flag"]), bool(n.get("value", true)))

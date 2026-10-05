@@ -37,9 +37,24 @@ func _ready() -> void:
 	_fill()
 
 
-func _stock() -> Array:
+## Estoque: lista de itens, ou {"items": [...], "price_mul": {flag: multiplicador}}.
+func _shop() -> Dictionary:
 	var d = Data.load_json("res://data/shops.json")
-	return d.get("shops", {}).get(shop_id, []) if d is Dictionary else []
+	var sh = d.get("shops", {}).get(shop_id, []) if d is Dictionary else []
+	return sh if sh is Dictionary else {"items": sh}
+
+
+func _stock() -> Array:
+	return _shop().get("items", [])
+
+
+func price(id: String) -> int:
+	var mul := 1.0
+	var pm: Dictionary = _shop().get("price_mul", {})
+	for f in pm.keys():
+		if SaveGame.get_flag(str(f)):
+			mul *= float(pm[f])
+	return int(round(int(Data.item(id).get("price", 0)) * mul / 10.0) * 10)
 
 
 func _fill() -> void:
@@ -49,7 +64,7 @@ func _fill() -> void:
 		var it := Data.item(id)
 		var owned := int(SaveGame.data.get("bag", {}).get(id, 0))
 		items.append({"id": id, "key": str(it.get("name_key", "")), "suffix": "×%d" % owned,
-			"value": func() -> String: return "$%d" % int(it.get("price", 0)), "fixed": true})
+			"value": func() -> String: return "$%d" % price(id), "fixed": true})
 	items.append({"id": "_back", "key": "SET_BACK"})
 	_menu.set_items(items, _menu.index)
 	_update_desc()
@@ -64,13 +79,13 @@ func _buy(id: String) -> void:
 	if id == "_back":
 		close()
 		return
-	var price := int(Data.item(id).get("price", 0))
+	var cost := price(id)
 	var money := int(SaveGame.data.get("money", 0))
-	if money < price:
+	if money < cost:
 		Audio.sfx("bump")
 		_desc.text = tr("SHOP_NO_MONEY")
 		return
-	SaveGame.data["money"] = money - price
+	SaveGame.data["money"] = money - cost
 	ScriptActions._add_item(id, 1)
 	Audio.sfx("buy")
 	_fill()

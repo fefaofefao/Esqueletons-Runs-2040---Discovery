@@ -8,6 +8,12 @@ extends RefCounted
 ##   ranch  ·  shop {id}  ·  respawn (Rancho atual vira o ponto de volta)
 ##   hide_npc {id}                                o NPC some (para sempre)
 ##   sfx {name}
+##   take_item {item, n}       tira até n unidades (doações)
+##   give_monster {species, age, nickname?, golden?}  entra no time (ou Rancho)
+##   refresh_map               recarrega o mapa atual (objetos com flags mudam)
+##   fade {out}                escurece/clareia a tela · wait {s}
+##   credits                   rola os créditos (e volta ao mapa)
+##   heal_all                  cura time e Rancho
 ## run() devolve false se o roteiro deve parar (ex.: derrota na batalha).
 
 
@@ -75,6 +81,44 @@ static func run(n: Dictionary) -> bool:
 				Game.world.map.remove_npc(str(n.id))
 		"sfx":
 			Audio.sfx(str(n.name))
+		"take_item":
+			var bag: Dictionary = SaveGame.data.get("bag", {})
+			var id := str(n.item)
+			var k := mini(int(n.get("n", 1)), int(bag.get(id, 0)))
+			bag[id] = int(bag.get(id, 0)) - k
+			if int(bag[id]) <= 0:
+				bag.erase(id)
+				SaveGame.set_flag("has_" + id, false)
+			if k > 0:
+				await Game.show_message("MSG_GAVE_ITEM", {"item": TranslationServer.translate(str(Data.item(id).get("name_key", ""))), "n": k})
+		"give_monster":
+			var m2 := Monster.create(str(n.species), int(n.get("age", 5)), bool(n.get("golden", false)))
+			if n.has("nickname"):
+				m2.nickname = TranslationServer.translate(str(n.nickname))
+			Ossuary.mark_seen(m2)
+			Ossuary.entry(m2.species_id)["recruited"] = true
+			var where := Ossuary.add_to_team(m2)
+			Audio.sfx("recruit")
+			await Game.show_message("RECRUIT_JOINED" if where == "party" else "RECRUIT_TO_RANCH", {"name": m2.display_name()})
+			Game.autosave()
+		"refresh_map":
+			if Game.world and Game.world.player:
+				await Game.warp(Game.world.map_id, Game.world.player.cell, Game.world.player.facing)
+		"fade":
+			await Game.fade_screen(bool(n.get("out", true)))
+		"wait":
+			await Game.get_tree().create_timer(float(n.get("s", 1.0))).timeout
+		"credits":
+			var c := CreditsScreen.new()
+			Game.open_overlay(c)
+			await c.closed
+		"heal_all":
+			for key in ["party", "ranch"]:
+				var arr2: Array = SaveGame.data.get(key, [])
+				for i in arr2.size():
+					var mm2 := Monster.from_dict(arr2[i])
+					mm2.heal_full()
+					arr2[i] = mm2.to_dict()
 		_:
 			push_warning("ScriptActions: ação desconhecida %s" % str(n.get("action", "")))
 	return true
@@ -84,6 +128,7 @@ static func _add_item(id: String, count: int) -> void:
 	if not SaveGame.data.has("bag"):
 		SaveGame.data["bag"] = {}
 	SaveGame.data["bag"][id] = int(SaveGame.data["bag"].get(id, 0)) + count
+	SaveGame.set_flag("has_" + id)
 
 
 static func _marker(species: String, amount: int) -> void:

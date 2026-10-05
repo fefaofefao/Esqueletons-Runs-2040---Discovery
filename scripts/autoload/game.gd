@@ -111,6 +111,14 @@ func _set_screen(node: Node, screen_name: String) -> void:
 	screen_changed.emit(screen_name)
 
 
+## Escurece (out = true) ou clareia a tela, para cenas do roteiro.
+func fade_screen(out: bool, seconds: float = 0.6) -> void:
+	_fade.mouse_filter = Control.MOUSE_FILTER_STOP if out else Control.MOUSE_FILTER_IGNORE
+	var tw := create_tween()
+	tw.tween_property(_fade, "color:a", 1.0 if out else 0.0, seconds)
+	await tw.finished
+
+
 func _transition(action: Callable, with_fade: bool = true) -> void:
 	transitioning = true
 	Controls.clear()

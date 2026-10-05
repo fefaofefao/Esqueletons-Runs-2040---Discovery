@@ -1159,10 +1159,510 @@
    "layer": "y",
    "interactive": true
   },
-  "raizerno_tree": {
+  "house_stone": {
    "rect": [
     48,
     346,
+    64,
+    62
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    32,
+    61
+   ],
+   "collision": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "house_stone_ranch": {
+   "rect": [
+    113,
+    346,
+    80,
+    70
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    40,
+    69
+   ],
+   "collision": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ],
+    [
+     2,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "house_stone_shop": {
+   "rect": [
+    0,
+    417,
+    80,
+    70
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    40,
+    69
+   ],
+   "collision": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ],
+    [
+     2,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "rails": {
+   "rect": [
+    81,
+    417,
+    16,
+    16
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    8,
+    15
+   ],
+   "collision": [],
+   "layer": "ground",
+   "interactive": false
+  },
+  "mine_cart": {
+   "rect": [
+    98,
+    417,
+    26,
+    20
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    13,
+    19
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "mine_lamp": {
+   "rect": [
+    125,
+    417,
+    12,
+    30
+   ],
+   "frames": 2,
+   "fps": 2.0,
+   "origin": [
+    6,
+    29
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false,
+   "light": {
+    "radius": 34,
+    "color": [
+     1.0,
+     0.8,
+     0.5
+    ],
+    "intensity": 0.4,
+    "offset": [
+     0,
+     -24
+    ]
+   }
+  },
+  "crystal": {
+   "rect": [
+    150,
+    417,
+    16,
+    18
+   ],
+   "frames": 2,
+   "fps": 1.2,
+   "origin": [
+    8,
+    17
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false,
+   "light": {
+    "radius": 24,
+    "color": [
+     0.6,
+     0.9,
+     1.0
+    ],
+    "intensity": 0.35,
+    "offset": [
+     0,
+     -8
+    ]
+   }
+  },
+  "beam_frame": {
+   "rect": [
+    183,
+    417,
+    48,
+    40
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    24,
+    39
+   ],
+   "collision": [
+    [
+     -1,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "anvil": {
+   "rect": [
+    232,
+    417,
+    20,
+    14
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    10,
+    13
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": false
+  },
+  "forge": {
+   "rect": [
+    0,
+    488,
+    40,
+    34
+   ],
+   "frames": 2,
+   "fps": 4.0,
+   "origin": [
+    20,
+    33
+   ],
+   "collision": [
+    [
+     -1,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     -1
+    ],
+    [
+     1,
+     -1
+    ]
+   ],
+   "layer": "y",
+   "interactive": false,
+   "light": {
+    "radius": 48,
+    "color": [
+     1.0,
+     0.55,
+     0.25
+    ],
+    "intensity": 0.45,
+    "offset": [
+     0,
+     -12
+    ]
+   }
+  },
+  "chain_gate": {
+   "rect": [
+    81,
+    488,
+    34,
+    28
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    17,
+    27
+   ],
+   "collision": [
+    [
+     -1,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "rubble": {
+   "rect": [
+    116,
+    488,
+    34,
+    22
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    17,
+    21
+   ],
+   "collision": [
+    [
+     -1,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "map_board": {
+   "rect": [
+    151,
+    488,
+    30,
+    24
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    15,
+    23
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ],
+    [
+     -1,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "scarf": {
+   "rect": [
+    182,
+    488,
+    16,
+    10
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    8,
+    9
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "helmet_lamp": {
+   "rect": [
+    199,
+    488,
+    14,
+    12
+   ],
+   "frames": 1,
+   "fps": 0,
+   "origin": [
+    7,
+    11
+   ],
+   "collision": [
+    [
+     0,
+     0
+    ]
+   ],
+   "layer": "y",
+   "interactive": true
+  },
+  "raizerno_tree": {
+   "rect": [
+    0,
+    523,
     56,
     64
    ],

@@ -114,3 +114,11 @@ MAP_VILA_LOJA,Armazém do Anzol,Hook's General Store,Almacén Anzuelo
 MAP_VILA_CASA_REMO,Casa da Família Remo,The Oar Family House,Casa de la Familia Remo
 MAP_VILA_CASA_CONCHA,Casa da Vó Concha,Granny Shell's House,Casa de la Abuela Concha
 MAP_VILA_MARE,Vila Maré,Tidemark Village,Villa Marea
+CREDITS_TITLE,Esqueletons Runs 2040 — Edição Discovery,Esqueletons Runs 2040 — Discovery Edition,Esqueletons Runs 2040 — Edición Discovery
+CREDITS_PRODUCER,Uma produção {name},A {name} production,Una producción de {name}
+CREDITS_DIRECTOR,"Criação, direção e roteiro: {name}","Created, directed and written by {name}","Creación, dirección y guion: {name}"
+CREDITS_ORIGINAL,"Personagens, arte, música, sons e textos originais.","Original characters, art, music, sounds and writing.","Personajes, arte, música, sonidos y textos originales."
+CREDITS_ENGINE,Feito com o motor Godot (licença MIT).,Made with the Godot Engine (MIT license).,Hecho con el motor Godot (licencia MIT).
+CREDITS_FONTS,Fonte pixel própria. Lista completa em CREDITS.md.,Custom pixel font. Full list in CREDITS.md.,Fuente pixel propia. Lista completa en CREDITS.md.
+CREDITS_THANKS,"Obrigado por jogar. Até a próxima edição!","Thanks for playing. See you in the next edition!","Gracias por jugar. ¡Hasta la próxima edición!"
+MSG_GAVE_ITEM,Você entregou {item} ×{n}.,You handed over {item} ×{n}.,Entregaste {item} ×{n}.
