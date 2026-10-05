@@ -6,8 +6,8 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 | Fase | Estado |
 |---|---|
 | 1 — Base | ✅ concluída (APK de debug pelo CI) |
-| 2 — Batalha | ⏳ próxima |
-| 3a/3b/3c — Esqueletos | — |
+| 2 — Batalha | ✅ concluída |
+| 3a/3b/3c — Esqueletos | ⏳ próxima (3a) |
 | 4a–4h — História e mundo | — |
 | 5 — Monetização e conformidade | — |
 | 6 — Polimento e publicação | — |
@@ -47,5 +47,28 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 - Vibração usa `performHapticFeedback` (sem permissão extra). Precisa ser conferida num aparelho real.
 - "Privacidade e anúncios" mostra um aviso até a fase 5 (UMP).
 
-### Próxima tarefa: Fase 2 — Batalha
-Sistema 2×2, menu em anel, timeline de turnos, prévia do golpe, "repetir último turno", tipos e vantagens, fórmula de dano, veneno, XP, níveis, fuga e derrota.
+
+## Fase 2 — Batalha (concluída)
+
+### Feito
+- **Batalha em dupla 2×2:** time de até 4, com 2 em campo e 2 na reserva. Selvagens vêm em 1 ou 2; domadores e chefes em 2, com reservas.
+- **Motor de regras** (`BattleEngine`) separado da tela, com a fórmula da seção 9 (tipo ×1,5/×0,75, mesmo tipo ×1,25, variação 0,85–1,0, crítico ×1,5 com 6,25%), ordem por prioridade e VEL, veneno de 3 a 5 turnos, buffs/debuffs, cura, itens, troca que gasta o turno, fuga por VEL (só de selvagens), XP (participantes 100%, reservas 50%), níveis até 50, aprender golpe (com escolha de qual esquecer) e derrota.
+- **IA** de golpe: melhor dano esperado, cura abaixo de 35% de PV; selvagens às vezes agem ao acaso.
+- **Tela:** timeline de turnos no topo, menu em anel, prévia do golpe com efetividade/efeito/alvo, alvo pelo D-pad ou toque, "Repetir último turno" (MENU), caixas com barra de PV animada, números de dano, partículas por tipo, lunge/tremida/queda, log com máquina de escrever. Respeita o 2x.
+- **Integração:** `Game.start_battle()` abre a batalha sobre o mapa com transição em flash, devolve a equipe para o save, aplica a derrota (−10% de moedas, cura, volta ao ponto de retorno) e salva.
+- **Debug:** batalhas de teste, equipe de teste, definir nível, vencer batalha.
+- **Arte de teste:** fundo de batalha da praia, 4 bonecos de treino (frente/costas), ícones de tipo, do anel e de veneno.
+
+### Verificação
+- `tests/run_tests.tscn`: 2582 verificações, 0 falhas. Inclui `test_battle.gd` (regras) e `test_battle_ui.gd`, que joga batalhas completas pela interface: selvagem, domador com troca forçada, derrota e aprendizado de golpe.
+- O CI agora falha se houver qualquer `SCRIPT ERROR` durante os testes.
+- `validate_data.py` também confere `battle.json`, `items.json` e os dados de teste.
+- Capturas de tela em 16:9 e 20:9 conferidas.
+
+### Pendências
+- Esqueletos selvagens no mapa, crescimento, marcador, Golden, Rancho e Ossário: fase 3a.
+- Espécies, golpes e números reais (substituem os bonecos de teste) e o simulador: fases 3b/3c.
+- Música de batalha: fase 6.
+
+### Próxima tarefa: Fase 3a — Sistemas dos esqueletos
+Crescimento + animação de aniversário, marcador de recrutamento, Golden (shader, chance 1/40, regra de 99%), Rancho e Ossário.

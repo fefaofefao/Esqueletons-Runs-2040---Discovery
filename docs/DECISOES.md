@@ -78,3 +78,35 @@ Registro das escolhas feitas sem consulta (AGENTS.md, seção A). Cada item diz 
 - **Cenário:** pôr do sol retrô "2040" com sol listrado, mar com reflexo ondulando (shader), ilha com o castelo do Rei Esqueleto (janelas acesas), nuvens em parallax, coqueiros em contraluz, raios de sol girando, brasas subindo e estrela cadente de vez em quando. As camadas têm 2400×1080 e cobrem telas 16:9 a 20:9.
 - **Botões modernos** (`TitleButton`): vidro escuro com borda fina e antialiasing; o principal (Continuar/Novo jogo) é laranja e o selecionado ganha brilho ciano pulsando. Há animação de entrada (logo com quique e flash, botões subindo), que A ou um toque pulam.
 - **Fontes OFL:** Nunito no jogo; Lilita One e Orbitron só para desenhar o logo, então não vão no pacote. A especificação pede assets próprios ou CC0. Fontes OFL são o padrão do mercado e permitem uso comercial e empacotamento; a origem está registrada em `CREDITS.md`. Se o Fernando quiser 100% CC0, troco a Nunito por uma fonte CC0.
+
+## Fase 2 — Batalha
+
+### Arquitetura
+- **Regras separadas da tela.** `BattleEngine` (RefCounted, sem nós) resolve a rodada e devolve uma lista de eventos (`move`, `damage`, `miss`, `poisoned`, `poison_tick`, `stat`, `heal`, `switch_in`, `faint`, `xp`, `learn_prompt`, `fled`, `win`...). A `BattleScreen` só anima esses eventos. O simulador da fase 3c vai usar o mesmo motor e a mesma IA (`BattleAI`), então a batalha simulada e a jogada são idênticas.
+- **Sorteios com semente** (`RandomNumberGenerator`): os testes são determinísticos.
+- **Constantes em `data/battle.json`:** fórmula, STAB 1,25, variação 0,85–1,0, crítico 1,5/6,25%, tabela de tipos, estágios −3..+3, veneno, prioridades, XP, fuga, derrota e IA. O balanceamento por região (`balance.json`) vem na fase 3c.
+
+### Regras que precisei definir (a especificação não fixa)
+- **Atributos por nível:** PV = 2·base·N/100 + N + 10; demais = 2·base·N/100 + 5. Golden: +10% em tudo.
+- **Categoria do golpe:** cada golpe tem `type` (vantagem e mesmo tipo) e `category` (`physical` usa ATQ×DEF, `magical` usa MAG×RES, `status` não causa dano). Golpes de Veneno são `magical` por padrão.
+- **Alvos:** `enemy`, `all_enemies` (×0,75 em cada um quando há 2 alvos), `self`, `ally`, `all_allies`. Se o alvo cai antes, o golpe vai para o outro inimigo.
+- **Ordem:** prioridade (fuga 7, troca 6, item 5, golpes 0 ou o valor do golpe), depois VEL com estágios, empate por sorteio.
+- **Veneno:** 3 a 5 turnos (sorteado), 1/12 do PV máximo no fim de cada rodada.
+- **Estágios:** +1 = ×1,5, +2 = ×2, +3 = ×2,5; −1 = ×0,67, −2 = ×0,5, −3 = ×0,4. Zeram ao trocar.
+- **XP ao derrotar cada inimigo:** base_xp × nível/5 (×1,5 contra domadores e chefes). Quem participou recebe 100% e as reservas vivas 50%. Curva: XP do nível N = 0,8·(N−1)³. Ao subir de nível aprende o golpe do learnset; com 4 golpes, pergunta qual esquecer.
+- **Fuga** (só de selvagens): 50% + 40% × (VEL mais rápida minha − deles)/deles + 12% por tentativa, entre 15% e 95%. Gasta a vez de quem tentou.
+- **Derrota:** perde 10% das moedas, a equipe é curada e volta para o ponto de retorno do save (`respawn`, hoje a Praia). O Rancho de cada cidade passa a ser o ponto de retorno na fase 3a/4. O anúncio premiado "reviver sem perder moedas" entra na fase 5.
+- **Sem PP:** o esqueleto usa "Debater-se" (poder 30).
+- **Inimigo que cai é substituído na hora** pela reserva. Quando cai um aliado, o jogador escolhe quem entra no fim da rodada.
+
+### Interface
+- **Timeline** no topo, com os rostos na ordem prevista. Ela se atualiza enquanto você escolhe (uma troca ou um golpe com prioridade sobe na fila) e destaca quem está agindo.
+- **Menu em anel** ao redor do esqueleto ativo: Golpes ↑, Itens →, Trocar ↓, Fugir ←. A direção escolhe e A confirma. Opções impossíveis ficam apagadas (fugir de domador, trocar sem reserva, itens sem estoque).
+- **Prévia do golpe:** tipo, poder e precisão, efetividade contra o alvo marcado (Fraco/Normal/Forte, em cores), alvo e uma faixa com o efeito. O alvo é escolhido pelo D-pad ou tocando no esqueleto (1º toque marca, 2º confirma).
+- **Repetir último turno:** botão MENU (ou o chip "Repetir turno"). Só aparece quando os dois aliados podem repetir o golpe e o alvo da rodada anterior.
+- **Toque na batalha:** tudo é tocável (anel, golpes, alvos, listas, mensagens), então o D-pad e o A/B somem durante a batalha; ficam MENU (repetir) e 2x. Teclado e gamepad seguem iguais.
+- **Debug:** F1/Select ou 3 toques na timeline abrem o menu, que agora tem batalhas de teste (1 selvagem, 2 selvagens, domador com 3, chefe +4 níveis), equipe de teste, definir nível da equipe e vencer a batalha.
+
+### Conteúdo de teste (não é conteúdo do jogo)
+- As espécies e os golpes reais são das fases 3b/3c. Para testar a batalha agora existem **4 bonecos de treino** (um por tipo) e **12 golpes de teste** em `data/test/`, com nomes próprios de teste nos 3 idiomas (`i18n/test.csv`). Eles só aparecem pelo menu de debug e **ficam fora do AAB de release** (`exclude_filter`). A fase 3 os substitui.
+- **Itens reais** (`data/items.json`): Poção P/M/G (30/80/200 PV), Antídoto e Reviver (50%).

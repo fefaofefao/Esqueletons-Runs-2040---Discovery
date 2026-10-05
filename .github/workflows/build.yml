@@ -67,7 +67,10 @@ jobs:
         run: ~/godot/godot --headless --import
 
       - name: Testes (headless)
-        run: ~/godot/godot --headless res://tests/run_tests.tscn
+        run: |
+          set -o pipefail
+          ~/godot/godot --headless res://tests/run_tests.tscn 2>&1 | tee test.log
+          if grep -q "SCRIPT ERROR" test.log; then echo "::error::Erro de script durante os testes"; exit 1; fi
 
   android-debug:
     name: APK de debug

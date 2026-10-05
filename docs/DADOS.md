@@ -56,6 +56,15 @@ Terrenos atuais: `sand`, `water`, `deep`, `grass`, `flowers`, `path`, `bush`, `d
 ```
 Referência: `"arquivo/id"`. Cada caixa tem no máximo 3 linhas; textos maiores são paginados, mas o teste de overflow exige caber em uma caixa.
 
+## Batalha (fase 2)
+- `data/battle.json`: regras e constantes da seção 9 (ver `docs/DECISOES.md`).
+- `data/items.json`: `{"items": {id: {name_key, desc_key, kind: heal|cure|revive|key, amount?, fraction?, price, battle, target}}}`.
+- **Golpe** (`data/moves.json` na fase 3c; `data/test/moves_test.json` hoje):
+  `{name_key, desc_key, type, category: physical|magical|status, power, accuracy, pp, target: enemy|all_enemies|self|ally|all_allies, priority, effects: [...]}`.
+  Efeitos: `{"kind": "poison", "chance"}`, `{"kind": "stat", "stat": atk|mag|def|res|spd, "stages": ±n, "chance"}`, `{"kind": "heal", "percent"}`, `{"kind": "cure"}`.
+- **Espécie usada pelo motor:** `name_key`, `type`, `base` (`hp, atk, mag, def, res, spd`; na fase 3 pode se chamar `stats`), `base_xp`, `sprite` (folha 64×32: frente 0–31, costas 32–63) e `learnset` `[[nível, golpe], ...]`.
+- **Esqueleto no save** (`party`): `{uid, species, nickname, level, xp, hp, moves: [{id, pp}], poison_turns, golden}`. `bag`: `{item: quantidade}`. `respawn`: `{map, x, y, facing}`.
+
 ## Formatos das próximas fases (o validador já os confere)
 
 ### `data/species.json` (fases 3b/3c)

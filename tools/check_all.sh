@@ -8,5 +8,6 @@ python3 -m unittest discover -s tools/tests
 python3 tools/sync_publisher.py --check
 python3 tools/check_placeholders.py
 "$GODOT" --headless --import >/dev/null 2>&1
-"$GODOT" --headless res://tests/run_tests.tscn
+"$GODOT" --headless res://tests/run_tests.tscn 2>&1 | tee /tmp/esq_tests.log
+if grep -q "SCRIPT ERROR" /tmp/esq_tests.log; then echo "erro de script durante os testes"; exit 1; fi
 echo "check_all: OK"

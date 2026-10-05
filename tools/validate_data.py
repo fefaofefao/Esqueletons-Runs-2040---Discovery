@@ -427,6 +427,48 @@ def check_balance():
     load(path)
 
 
+def check_battle(keys):
+    """Regras de batalha, itens e dados de teste da fase 2."""
+    b = load(DATA / "battle.json") or {}
+    if sorted(b.get("types", [])) != sorted(TYPES):
+        err(f"battle.json: tipos {b.get('types')} diferentes de {TYPES}")
+    beats = b.get("type_chart", {}).get("beats", {})
+    if beats != {"fisico": "magico", "magico": "veneno", "veneno": "fisico"}:
+        err("battle.json: ciclo de vantagens deve ser Físico > Mágico > Veneno > Físico (Cura neutro)")
+    if b.get("level_max") != 50 or b.get("party_size") != 4 or b.get("active_per_side") != 2:
+        err("battle.json: nível máximo 50, time de 4 e 2 em campo")
+    need_key(keys, b.get("struggle", {}).get("name_key", ""), "battle.json (struggle)")
+    for iid, it in ((load(DATA / "items.json") or {}).get("items", {})).items():
+        need_key(keys, it.get("name_key", ""), f"item {iid}")
+        need_key(keys, it.get("desc_key", ""), f"item {iid}")
+        if it.get("kind") not in ("heal", "cure", "revive", "key"):
+            err(f"item {iid}: tipo desconhecido {it.get('kind')}")
+    moves = {}
+    for path in [DATA / "moves.json", DATA / "test" / "moves_test.json"]:
+        if path.exists():
+            d = load(path) or {}
+            lst = d.get("moves", {})
+            for mid, mv in (lst.items() if isinstance(lst, dict) else ((m.get("id"), m) for m in lst)):
+                if mid in moves:
+                    err(f"golpes: ID duplicado {mid}")
+                moves[mid] = mv
+                need_key(keys, mv.get("name_key", ""), f"golpe {mid}")
+                need_key(keys, mv.get("desc_key", ""), f"golpe {mid}")
+                if mv.get("type") not in TYPES:
+                    err(f"golpe {mid}: tipo inválido {mv.get('type')}")
+                if mv.get("target") not in ("enemy", "all_enemies", "self", "ally", "all_allies"):
+                    err(f"golpe {mid}: alvo inválido {mv.get('target')}")
+    tpath = DATA / "test" / "species_test.json"
+    if tpath.exists():
+        for sid, sp in ((load(tpath) or {}).get("species", {})).items():
+            need_key(keys, sp.get("name_key", ""), f"boneco {sid}")
+            if not res_path(sp.get("sprite", "")).exists():
+                err(f"boneco {sid}: sprite inexistente")
+            for lvl, mid in sp.get("learnset", []):
+                if mid not in moves:
+                    err(f"boneco {sid}: learnset com golpe inexistente {mid}")
+
+
 def check_publisher():
     p = load(ROOT / "config" / "publisher.json") or {}
     for f in ("game_name", "edition", "producer", "contact_email", "website", "privacy_policy_url", "package_name", "version_name"):
@@ -450,6 +492,7 @@ def main():
     check_cities(keys)
     check_routes()
     check_balance()
+    check_battle(keys)
     check_publisher()
     infos.append(f"{len(keys)} chaves de tradução × {len(LANGS)} idiomas")
     for i in infos:
