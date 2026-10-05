@@ -340,8 +340,15 @@ func _advance(choices: Array = [], shot_name: String = "", shot_at: int = -1, ma
 
 
 func _goto(map_id: String, cell: Vector2i, facing: String) -> void:
-	await Game.warp(map_id, cell, facing)
-	await _wait(0.6)
+	# warp espera o evento de entrada do mapa (fala do parceiro etc.): não dá
+	# para esperar por ele aqui; troca o mapa e lê o que aparecer.
+	Game.warp(map_id, cell, facing)
+	await _wait(1.0)
+	for i in 30:
+		if not Game.transitioning and Game.top_overlay() == null:
+			break
+		await _advance([], "", -1, 12)
+	await _wait(0.3)
 
 
 func _prologo_shots() -> void:
