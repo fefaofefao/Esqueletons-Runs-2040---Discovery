@@ -72,6 +72,12 @@ BTL_TAMER_BAGRE
 SPK_CALICO
 ITEM_RECORD
 # --- fim ossorio ---
+# --- região picos (nomes próprios iguais nos idiomas) ---
+SPK_BRISA
+SPK_NEVASCO
+SPK_ALVA
+BTL_TAMER_BRISA
+# --- fim picos ---
 # --- gerado por tools/bestiary/build.py (descrições de golpes) ---
 MOVE_CHUTE_NA_CANELA_DESC
 MOVE_RANGER_OS_DENTES_DESC

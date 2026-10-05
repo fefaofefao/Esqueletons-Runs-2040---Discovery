@@ -99,6 +99,22 @@
    "price": 0,
    "battle": false,
    "target": "none"
+  },
+  "carta_alva": {
+   "name_key": "ITEM_LETTER",
+   "desc_key": "ITEM_LETTER_TEXT",
+   "kind": "key",
+   "price": 0,
+   "battle": false,
+   "target": "none"
+  },
+  "broto_cha": {
+   "name_key": "ITEM_SPROUT",
+   "desc_key": "ITEM_SPROUT_TEXT",
+   "kind": "key",
+   "price": 0,
+   "battle": false,
+   "target": "none"
   }
  }
 }

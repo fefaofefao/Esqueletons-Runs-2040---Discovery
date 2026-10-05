@@ -15,7 +15,8 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 | 4c — Minas de Cinzas | ✅ concluída |
 | 4d — Pântano Verde-Musgo | ✅ concluída |
 | 4e — Cidade Murada de Ossório | ✅ concluída |
-| 4f–4h — Regiões, Castelo e finais | ⏳ próxima (4f) |
+| 4f — Picos Gelados | ✅ concluída |
+| 4g–4h — Deserto, Castelo e finais | ⏳ próxima (4g) |
 | 5 — Monetização e conformidade | — |
 | 6 — Polimento e publicação | — |
 
@@ -315,3 +316,19 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 - `tests/run_tests.tscn`: 0 falhas (revelação, escolha 4 nos dois sentidos, missão do Selo).
 - `tools/validate_data.py`: OK. `tools/simulate.py --check`: 0 critérios falhando.
 - Capturas: `capture.tscn -- --region=ossorio` (Rota 4, recorrente, cidade, Caliço, revelação, diário).
+
+## Fase 4f — Picos Gelados (concluída)
+
+### Feito
+- **`docs/roteiro/06_picos.md`** (gerado por `tools/maps/picos.py`):
+  - problema local: a Alva congelou os picos para "nada mudar" até o pai melhorar; Geada está sem chá e sem estrada;
+  - pista nº 6: o monge Nevasco explica que o eco da coroa atravessa o tempo (o vidro do museu vibrando);
+  - **reencontro com o recorrente** (batalha opcional; a cena acontece mesmo sem lutar): Taro admite o medo de os pais não lembrarem dele; Lia ensina a "seguir a luz";
+  - Guardiã Alva (Velocidade) e a **escolha 5** (levar ou não a carta ao pai; dá para voltar e aceitar depois).
+- **Consequência da escolha 4:** se Ossório soube do registro, 2 Guardas Leais vigiam a Rota 5.
+- **Geada:** Rancho, Armarinho (só itens fortes), casas da Patinadora Lâmina e dos Irmãos Granizo, Mosteiro do Eco (Nevasco, único recrutável), missão do broto de chá.
+- **Jardim de Gelo:** Guarda Pingente, broto e Alva. 13 NPCs novos.
+
+### Verificação
+- `tests/run_tests.tscn`: 9535 verificações, 0 falhas (carta aceita depois de recusar, pista 6, Guardas Leais só com a escolha 4).
+- `tools/validate_data.py`: OK. Capturas: `capture.tscn -- --region=picos`.

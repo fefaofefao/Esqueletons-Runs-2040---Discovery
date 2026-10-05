@@ -1,0 +1,158 @@
+{
+ "id": "jardim_gelo",
+ "region": "picos",
+ "name_key": "MAP_JARDIM_GELO",
+ "tileset": "overworld",
+ "legend": {
+  "g": "snow",
+  "p": "stone",
+  "B": "snow_rock",
+  "f": "ice"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
+  "BBBBBBppppppppBBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBppppppppBBBBggggggggggggBBBB",
+  "BBBBBBppppppppBBBBggggggggggggpppp",
+  "BBBBBBpppppppppppppgggggggggggpppp",
+  "BBBBBBpppppppppppppgggggggggggpppp",
+  "BBBgggggggggggBBBBggggggggggggpppp",
+  "BBBgggggggggggBBBBggggggggggggBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+ ],
+ "spawn": {
+  "x": 31,
+  "y": 10,
+  "facing": "left"
+ },
+ "props": [
+  {
+   "type": "statue_prince",
+   "x": 5,
+   "y": 2
+  },
+  {
+   "type": "statue_prince",
+   "x": 15,
+   "y": 2
+  },
+  {
+   "type": "crystal",
+   "x": 7,
+   "y": 5
+  },
+  {
+   "type": "crystal",
+   "x": 13,
+   "y": 5
+  },
+  {
+   "type": "snow_pine",
+   "x": 20,
+   "y": 9
+  },
+  {
+   "type": "snow_pine",
+   "x": 27,
+   "y": 13
+  },
+  {
+   "type": "crystal",
+   "x": 22,
+   "y": 13
+  },
+  {
+   "type": "snowman",
+   "x": 4,
+   "y": 19,
+   "dialog": "picos/boneco"
+  },
+  {
+   "type": "herb_blue",
+   "x": 11,
+   "y": 18,
+   "dialog": "picos/broto",
+   "if": "camelia_quest",
+   "if_not": "broto_pego"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "alva",
+   "x": 10,
+   "y": 3,
+   "facing": "down"
+  },
+  {
+   "id": "pingente",
+   "x": 14,
+   "y": 10,
+   "facing": "right"
+  }
+ ],
+ "warps": [
+  {
+   "x": 33,
+   "y": 10,
+   "to": "geada",
+   "tx": 1,
+   "ty": 15,
+   "facing": "right",
+   "sfx": ""
+  },
+  {
+   "x": 33,
+   "y": 11,
+   "to": "geada",
+   "tx": 1,
+   "ty": 16,
+   "facing": "right",
+   "sfx": ""
+  }
+ ],
+ "spawns": [
+  {
+   "id": "j_salao",
+   "table": "jardim_salao",
+   "x": 23,
+   "y": 10,
+   "radius": 3,
+   "count": 2
+  },
+  {
+   "id": "j_sul",
+   "table": "jardim_sul",
+   "x": 6,
+   "y": 15,
+   "radius": 2,
+   "count": 1
+  }
+ ],
+ "ambient": [
+  "snow"
+ ],
+ "tint": [
+  0.86,
+  0.92,
+  1.0
+ ],
+ "on_enter": [
+  {
+   "if_not": "jardim_visto",
+   "dialog": "picos/chegada_jardim"
+  }
+ ]
+}

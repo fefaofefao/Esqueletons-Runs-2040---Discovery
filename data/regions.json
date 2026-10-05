@@ -128,9 +128,16 @@
    ],
    "music": "",
    "maps": [
-    "rota_5"
+    "rota_5",
+    "geada",
+    "jardim_gelo",
+    "geada_rancho",
+    "geada_loja",
+    "geada_casa_lamina",
+    "geada_casa_granizo",
+    "mosteiro_eco"
    ],
-   "battle_bg": "res://assets/battle/bg_praia.png"
+   "battle_bg": "res://assets/battle/bg_picos.png"
   },
   "deserto": {
    "name_key": "REGION_DESERTO",
@@ -141,7 +148,9 @@
     0.85
    ],
    "music": "",
-   "maps": [],
+   "maps": [
+    "rota_6"
+   ],
    "battle_bg": "res://assets/battle/bg_praia.png"
   },
   "castelo": {

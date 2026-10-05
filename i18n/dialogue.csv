@@ -529,3 +529,118 @@ DLG_O_CAL_OPEN,Regra do quartel: o vencedor tem direito ao Arquivo. Leia o que m
 DLG_O_CAL_OPEN2,Honra exige verdade. Mesmo a verdade que dói.,Honor demands truth. Even the truth that hurts.,El honor exige verdad. Incluso la verdad que duele.
 DLG_O_CAL_TOLD,"Você contou à cidade. Insubordinação... e verdade. Quando chegar a hora, conte comigo.","You told the city. Insubordination... and truth. When the time comes, count on me.","Se lo contaste a la ciudad. Insubordinación... y verdad. Cuando llegue la hora, cuenta conmigo."
 DLG_O_CAL_KEPT,Você guardou o segredo. Discrição. Um soldado agradece.,You kept the secret. Discretion. A soldier is grateful.,Guardaste el secreto. Discreción. Un soldado lo agradece.
+SPK_TRENO,Guia Trenó,Guide Sled,Guía Trineo
+SPK_GRAMPO,Alpinista Grampo,Climber Piton,Alpinista Clavija
+SPK_RAJADA,Rajada,Gust,Ráfaga
+SPK_BRISA,Monja Brisa,Sister Breeze,Monja Brisa
+SPK_LAREIRA,Dona Lareira,Mrs. Hearth,Doña Hoguera
+SPK_CACHECOL,Seu Cachecol,Mr. Muffler,Don Bufanda
+SPK_LAMINA,Patinadora Lâmina,Skater Blade,Patinadora Cuchilla
+SPK_GRANIZO,Irmãos Granizo,Hail Brothers,Hermanos Granizo
+SPK_FLOQUINHO,Floquinho,Flurry,Copito
+SPK_CAMELIA,Camélia,Camellia,Camelia
+SPK_PINHAO,Vô Pinhão,Grandpa Pinecone,Abuelo Piñón
+SPK_DEGELO,Degelo,Thaw,Deshielo
+SPK_PINGENTE,Guarda Pingente,Guard Icicle,Guardia Carámbano
+SPK_LEAL,Guarda Leal,Loyal Guard,Guardia Leal
+SPK_NEVASCO,Nevasco,Nevasco,Nevasco
+SPK_ALVA,Alva,Alva,Alva
+BTL_TAMER_GRAMPO,Alpinista Grampo,Climber Piton,Alpinista Clavija
+BTL_TAMER_RAJADA,Rajada,Gust,Ráfaga
+BTL_TAMER_BRISA,Monja Brisa,Sister Breeze,Monja Brisa
+BTL_TAMER_LAMINA,Patinadora Lâmina,Skater Blade,Patinadora Cuchilla
+BTL_TAMER_GRANIZO,Irmãos Granizo,Hail Brothers,Hermanos Granizo
+BTL_TAMER_PINGENTE,Guarda Pingente,Guard Icicle,Guardia Carámbano
+BTL_TAMER_LEAL,Guarda Leal,Loyal Guard,Guardia Leal
+BTL_TAMER_ALVA,Guardiã Alva,Guardian Alva,Guardiana Alva
+MAP_ROTA_5,Rota 5 — Trilha da Nevasca,Route 5 — Blizzard Trail,Ruta 5 — Sendero de la Ventisca
+MAP_GEADA,Geada,Frostholm,Escarcha
+MAP_JARDIM_GELO,Jardim de Gelo,Ice Garden,Jardín de Hielo
+MAP_GEADA_RANCHO,Rancho da Lareira,Hearth's Ranch,Rancho de Hoguera
+MAP_GEADA_LOJA,Armarinho do Cachecol,Muffler's Goods,Mercería de Bufanda
+MAP_GEADA_CASA_LAMINA,Casa da Patinadora Lâmina,Skater Blade's House,Casa de la Patinadora Cuchilla
+MAP_GEADA_CASA_GRANIZO,Casa dos Irmãos Granizo,Hail Brothers' House,Casa de los Hermanos Granizo
+MAP_MOSTEIRO,Mosteiro do Eco,Monastery of the Echo,Monasterio del Eco
+MSG_ALVA_ROAD,Uma parede de gelo fecha a descida para o deserto.,A wall of ice blocks the way down to the desert.,Un muro de hielo cierra la bajada al desierto.
+ITEM_LETTER,Carta da Alva,Alva's Letter,Carta de Alva
+ITEM_LETTER_TEXT,"Uma carta lacrada, endereçada ""ao meu pai"". A letra treme um pouco.","A sealed letter addressed ""to my father"". The handwriting trembles a little.","Una carta sellada, dirigida ""a mi padre"". La letra tiembla un poco."
+ITEM_SPROUT,Broto de Chá,Tea Sprout,Brote de Té
+ITEM_SPROUT_TEXT,Um broto verde que sobreviveu debaixo do gelo. A Camélia quer plantar.,A green sprout that survived under the ice. Camellia wants to plant it.,Un brote verde que sobrevivió bajo el hielo. Camelia quiere plantarlo.
+OPT_PI_TAKE,Levar a carta,Take the letter,Llevar la carta
+OPT_PI_LEAVE,Não levar,Don't take it,No llevarla
+OPT_PI_DUEL,Aceitar o desafio,Accept the challenge,Aceptar el desafío
+SIGN_PI_FORK,← Trilha dos Alpinistas · ↑ Ponte de Gelo · → Campo Branco,← Climbers' Trail · ↑ Ice Bridge · → White Field,← Sendero de Alpinistas · ↑ Puente de Hielo · → Campo Blanco
+DLG_PI_ARR_R_L,"Neve! Ela cai devagar, como se tivesse medo de chegar no chão.","Snow! It falls so slowly, like it's afraid of reaching the ground.","¡Nieve! Cae despacito, como si le diera miedo llegar al suelo."
+DLG_PI_ARR_R_T,Frio. Meu pai dizia que frio é só vento sem educação.,Cold. My dad used to say cold is just wind with no manners.,Frío. Mi papá decía que el frío es solo viento sin modales.
+DLG_PI_TRENO_1,"Pelos alpinistas tem briga, pelo campo branco tem bicho, e a Ponte de Gelo... range. Muito.","The climbers' trail has fights, the white field has critters, and the Ice Bridge... creaks. A lot.","Por los alpinistas hay pelea, por el campo blanco hay bichos, y el Puente de Hielo... cruje. Mucho."
+DLG_PI_TRENO_2,Antes eu descia com chá pras cidades. Agora o gelo não deixa nem o trenó sair.,I used to sled tea down to the towns. Now the ice won't even let the sled leave.,Antes bajaba té a los pueblos. Ahora el hielo no deja salir ni al trineo.
+DLG_PI_GRAMPO_1,Escalei três picos esta semana. Falta escalar você!,I climbed three peaks this week. You're next!,Escalé tres picos esta semana. ¡Me faltas tú!
+DLG_PI_GRAMPO_2,Escorreguei. Acontece até com quem tem grampo.,I slipped. Happens even to people with pitons.,Me resbalé. Les pasa hasta a los que llevan clavijas.
+DLG_PI_RAJADA_1,Eu corro mais que o vento! Meus esqueletos também. Tenta acompanhar!,I run faster than the wind! So do my skeletons. Try to keep up!,¡Corro más que el viento! Mis esqueletos también. ¡Intenta seguirnos!
+DLG_PI_RAJADA_2,Você leu a timeline. Que falta de educação com o vento.,You read the timeline. How rude to the wind.,Leíste la línea de turnos. Qué falta de respeto al viento.
+DLG_PI_BRISA_1,Medito na neve há vinte anos. Hoje vou meditar batalhando.,I've meditated in the snow for twenty years. Today I'll meditate by battling.,Medito en la nieve desde hace veinte años. Hoy meditaré peleando.
+DLG_PI_BRISA_2,"Perder também é um caminho. Um caminho frio, mas é.","Losing is also a path. A cold one, but a path.","Perder también es un camino. Uno frío, pero lo es."
+DLG_PI_LEAL_1,O Rei procura o herdeiro? Então o herdeiro não sobe a serra!,The King is looking for his heir? Then the heir doesn't climb this mountain!,¿El Rey busca a su heredero? ¡Entonces el heredero no sube la sierra!
+DLG_PI_LEAL_2,Ossório falou demais. A gente ouviu tudo. Alto lá!,Ossório talked too much. We heard everything. Halt!,Ossório habló de más. Lo oímos todo. ¡Alto ahí!
+DLG_PI_LEAL_AFTER,Lealdade não esquenta ninguém nesse frio. Pode passar.,Loyalty doesn't keep anyone warm in this cold. Go on.,La lealtad no calienta a nadie con este frío. Pasa.
+DLG_PI_RT_1,Você de novo. Ótimo. Tô precisando bater em alguém.,You again. Great. I need to hit something.,Tú otra vez. Genial. Necesito golpear a alguien.
+DLG_PI_RT_2,...Desculpa. Não é com você.,...Sorry. It's not about you.,...Perdón. No es contigo.
+DLG_PI_RT_3,Eu tenho medo. De chegar no castelo e meus pais não lembrarem de mim.,I'm scared. Of reaching the castle and my parents not remembering me.,Tengo miedo. De llegar al castillo y que mis padres no me recuerden.
+DLG_PI_RT_L,"Eles vão lembrar, Taro. Ninguém esquece quem faz falta.","They'll remember, Taro. Nobody forgets someone they miss.","Te recordarán, Taro. Nadie olvida a quien le hace falta."
+DLG_PI_RT_4,"...Vê se não se perde, então. A gente se vê no castelo.","...Don't get lost, then. See you at the castle.","...No te pierdas, entonces. Nos vemos en el castillo."
+DLG_PI_RL_1,"Achei vocês! Nessa nevasca, a única coisa que dava pra ver era a minha lamparina.","Found you! In this blizzard, the only thing you could see was my lamp.","¡Los encontré! Con esta ventisca, lo único que se veía era mi farolillo."
+DLG_PI_RL_2,"Quando a neve fecha tudo, não olha pra neve. Olha pra luz. É só seguir a luz.","When the snow closes everything in, don't look at the snow. Look at the light. Just follow the light.","Cuando la nieve lo cierra todo, no mires la nieve. Mira la luz. Solo sigue la luz."
+DLG_PI_RL_T,"...Isso foi bonito, Lia. Não conta pra ninguém que eu disse.","...That was nice, Lia. Don't tell anyone I said so.","...Eso fue bonito, Lia. No le digas a nadie que lo dije."
+DLG_PI_RL_3,"Agora eu vou pro farol. Quando vocês voltarem, ele vai estar aceso!","Now I'm heading to the lighthouse. When you come back, it'll be lit!","Ahora me voy al faro. ¡Cuando vuelvan, estará encendido!"
+DLG_PI_RL_PRE,"Antes de ir: uma batalha, pra eu saber que vocês aguentam o frio!","Before you go: a battle, so I know you can handle the cold!","Antes de irte: una batalla, ¡para saber que aguantan el frío!"
+DLG_PI_RT_PRE,"Luta comigo. Agora. Ou só me escuta, tanto faz.","Fight me. Now. Or just listen, whatever.","Pelea conmigo. Ahora. O solo escúchame, da igual."
+SIGN_PI_TOWN,"Geada. Chá quente, gente quente, todo o resto congelado.","Frostholm. Hot tea, warm people, everything else frozen.","Escarcha. Té caliente, gente cálida, todo lo demás congelado."
+SIGN_PI_GARDEN,← Jardim de Gelo. A princesa não recebe visitas.,← Ice Garden. The princess receives no visitors.,← Jardín de Hielo. La princesa no recibe visitas.
+OBJ_PI_SNOWMAN,"Um boneco de neve com cachecol. Alguém escreveu na barriga: ""Prefeito"".","A snowman with a scarf. Someone wrote ""Mayor"" on its belly.","Un muñeco de nieve con bufanda. Alguien escribió en la barriga: ""Alcalde""."
+DLG_PI_ARR_C_L,Fumaça nas chaminés! Pelo menos aqui dentro tem calor.,Smoke from the chimneys! At least it's warm in here.,¡Humo en las chimeneas! Al menos aquí dentro hace calor.
+DLG_PI_ARR_C_T,"O gelo parou tudo. Até o tempo, parece.","The ice stopped everything. Even time, it seems.","El hielo paró todo. Hasta el tiempo, parece."
+DLG_PI_LAREIRA_1,"Entra, entra, antes que a porta congele aberta. Tem sopa e cama pros seus esqueletos.","Come in, come in, before the door freezes open. There's soup and beds for your skeletons.","Pasa, pasa, antes de que la puerta se congele abierta. Hay sopa y camas para tus esqueletos."
+DLG_PI_LAREIRA_2,Faz um ano que é inverno. Desde que a princesa Alva chegou triste no jardim.,It's been winter for a year. Ever since Princess Alva arrived sad in the garden.,Hace un año que es invierno. Desde que la princesa Alva llegó triste al jardín.
+DLG_PI_LAREIRA_3,"Quer guardar alguém no Rancho? Aqui ninguém passa frio, prometo.","Want to leave someone at the Ranch? Nobody gets cold here, I promise.","¿Quieres dejar a alguien en el Rancho? Aquí nadie pasa frío, lo prometo."
+DLG_PI_LAREIRA_AFTER,Ouviu? Goteira! Nunca fiquei tão feliz com uma goteira.,Hear that? A leak! I've never been so happy about a leak.,¿Oíste? ¡Una gotera! Nunca me alegró tanto una gotera.
+DLG_PI_CACHECOL_1,"Cachecol, luva, gorro. E poção, claro. Frio não mata, mas cansa.","Scarves, gloves, hats. And potions, of course. Cold doesn't hurt, but it wears you out.","Bufanda, guantes, gorro. Y pociones, claro. El frío no duele, pero cansa."
+DLG_PI_CACHECOL_2,Volta logo. E fecha a porta!,Come back soon. And close the door!,Vuelve pronto. ¡Y cierra la puerta!
+DLG_PI_FLOQUINHO,Eu fiz um boneco de neve e chamei de Prefeito. Ele manda melhor que o de verdade.,I built a snowman and named it Mayor. It does a better job than the real one.,Hice un muñeco de nieve y lo llamé Alcalde. Manda mejor que el de verdad.
+DLG_PI_FLOQUINHO_AFTER,O Prefeito tá derretendo! Vou ter que fazer eleição.,The Mayor is melting! I'll have to hold an election.,¡El Alcalde se está derritiendo! Voy a tener que convocar elecciones.
+DLG_PI_PINHAO_1,"A Alva é filha do Rei. Quando menina, descia a serra pra brincar com as crianças daqui.","Alva is the King's daughter. As a girl, she'd come down the mountain to play with the kids here.","Alva es hija del Rey. De niña, bajaba la sierra a jugar con los niños de aquí."
+DLG_PI_PINHAO_2,Ela não é má. Tá triste. E tristeza de princesa vira inverno.,She isn't wicked. She's sad. And a princess's sadness turns into winter.,No es mala. Está triste. Y la tristeza de una princesa se vuelve invierno.
+DLG_PI_DEGELO_1,A equipe da Alva é rápida e congela. Esqueleto congelado anda devagar na fila.,Alva's team is fast and freezes. A frozen skeleton moves slowly in the turn order.,El equipo de Alva es rápido y congela. Un esqueleto congelado avanza despacio en la fila.
+DLG_PI_DEGELO_2,Leva quem aguenta pancada e golpe pesado que vale a espera. Correr atrás do vento não dá.,Bring someone sturdy and heavy moves worth the wait. You can't outrun the wind.,Lleva a quien aguante golpes y golpes pesados que valgan la espera. Al viento no se le gana corriendo.
+DLG_PI_CAMELIA_ASK,Minha horta de chá congelou inteira. Dizem que no Jardim de Gelo ainda tem um broto vivo.,My whole tea garden froze. They say there's still a living sprout in the Ice Garden.,Mi huerta de té se congeló entera. Dicen que en el Jardín de Hielo aún queda un brote vivo.
+DLG_PI_CAMELIA_ASK2,Traz pra mim? Com um broto eu começo tudo de novo.,Would you bring it to me? With one sprout I can start over.,¿Me lo traes? Con un brote vuelvo a empezar.
+DLG_PI_CAMELIA_WHERE,"No canto sul do Jardim de Gelo. É verdinho, não tem erro.","In the south corner of the Ice Garden. It's bright green, you can't miss it.","En la esquina sur del Jardín de Hielo. Es verdecito, no tiene pérdida."
+OBJ_PI_SPROUT,"Debaixo de uma casquinha de gelo, um broto verde teimoso.","Under a thin crust of ice, a stubborn green sprout.","Bajo una costrita de hielo, un brote verde y testarudo."
+DLG_PI_CAMELIA_THANKS,Ele tá vivo! Toma duas Poções G. E volta daqui a um ano pro primeiro chá.,It's alive! Take two Potions L. And come back in a year for the first cup of tea.,¡Está vivo! Toma dos Pociones G. Y vuelve en un año por el primer té.
+DLG_PI_CAMELIA_AFTER,"O broto cresceu dois dedos! Chá, daqui a pouco. Paciência de chazeira.","The sprout grew two fingers! Tea, soon. A tea-grower's patience.","¡El brote creció dos dedos! Té, dentro de poco. Paciencia de tetera."
+DLG_PI_LAMINA_1,"No gelo, quem é rápido chega primeiro. Quer apostar corrida na timeline?","On ice, the fast arrive first. Want to race me on the timeline?","En el hielo, el rápido llega primero. ¿Apostamos una carrera en la línea de turnos?"
+DLG_PI_LAMINA_2,Você freou na hora certa. Isso é que é patinar.,You braked at just the right time. Now that's skating.,Frenaste justo a tiempo. Eso sí es patinar.
+DLG_PI_GRANIZO_1,"A gente congela, você esquenta. Vamos ver quem derrete primeiro!","We freeze, you heat up. Let's see who melts first!","Nosotros congelamos, tú te calientas. ¡A ver quién se derrite primero!"
+DLG_PI_GRANIZO_2,Derretemos. Era pra ser só um pouquinho.,We melted. It was only supposed to be a little.,Nos derretimos. Se suponía que solo un poquito.
+DLG_PI_NEV_1,"Sou Nevasco. Guardo este mosteiro e o sino do eco, que não toca há mil anos.","I am Nevasco. I keep this monastery and the bell of the echo, which hasn't rung in a thousand years.","Soy Nevasco. Guardo este monasterio y la campana del eco, que no suena desde hace mil años."
+DLG_PI_NEV_2,A coroa do Rei não chama só de longe. O eco dela atravessa o tempo.,The King's crown doesn't only call from afar. Its echo crosses time.,La corona del Rey no llama solo desde lejos. Su eco atraviesa el tiempo.
+DLG_PI_NEV_3,"Quem a ouviu cantar foi chamado. E você ouviu, não ouviu?","Whoever heard it sing was called. And you heard it, didn't you?","Quien la oyó cantar fue llamado. Y tú la oíste, ¿verdad?"
+DLG_PI_NEV_4,O vidro do museu vibrando. A coroa cantando só pra você. Alguém te chamou de propósito.,The museum glass trembling. The crown singing only for you. Someone called you on purpose.,El cristal del museo vibrando. La corona cantando solo para ti. Alguien te llamó a propósito.
+DLG_PI_NEV_L,Chamou pra quê? Pra ajudar... ou pra prender?,Called for what? To help... or to trap?,¿Llamó para qué? ¿Para ayudar... o para atrapar?
+DLG_PI_NEV_T,Ninguém chama ninguém de mil anos de distância à toa.,Nobody calls someone from a thousand years away for nothing.,Nadie llama a alguien desde mil años de distancia por nada.
+DLG_PI_NEV_5,"Essa resposta está no deserto, com a rainha. Antes, mostre se seu coração aguenta.","That answer lies in the desert, with the queen. First, show me your heart can bear it.","Esa respuesta está en el desierto, con la reina. Antes, muéstrame que tu corazón lo aguanta."
+DLG_PI_NEV_AGAIN,O sino do eco espera. Seu coração aguenta mais uma?,The bell of the echo waits. Can your heart bear one more?,La campana del eco espera. ¿Tu corazón aguanta una más?
+DLG_PI_ARR_J_L,"Tá tudo branco. Segue a minha luz, eu vou na frente!","Everything's white. Follow my light, I'll go first!","Todo está blanco. ¡Sigue mi luz, yo voy delante!"
+DLG_PI_ARR_J_T,Estátuas de gelo de todo mundo da cidade. Que coisa triste.,Ice statues of everyone in town. How sad.,Estatuas de hielo de toda la gente del pueblo. Qué cosa más triste.
+DLG_PI_PING_1,"A princesa não recebe visitas. Ordem dela. E minha também, que eu tô com frio.","The princess receives no visitors. Her orders. Mine too, because I'm cold.","La princesa no recibe visitas. Orden suya. Y mía también, que tengo frío."
+DLG_PI_PING_2,"Tá, passa. Mas fala baixo, ela tá cantando.","Fine, go. But keep it down, she's singing.","Vale, pasa. Pero habla bajito, está cantando."
+DLG_PI_ALVA_1,Você veio de muito longe. Dá pra ver nos seus olhos.,You've come from very far away. I can see it in your eyes.,Vienes de muy lejos. Se te nota en los ojos.
+DLG_PI_ALVA_2,"Sou Alva, filha do Rei. Meu pai está triste há mil anos. Se nada mudar, talvez ele melhore.","I'm Alva, the King's daughter. My father has been sad for a thousand years. If nothing changes, maybe he'll get better.","Soy Alva, hija del Rey. Mi padre lleva mil años triste. Si nada cambia, quizá mejore."
+DLG_PI_ALVA_3,Por isso congelei tudo aqui em cima. Desculpa. Não posso deixar você passar.,That's why I froze everything up here. I'm sorry. I can't let you through.,Por eso congelé todo aquí arriba. Lo siento. No puedo dejarte pasar.
+DLG_PI_ALVA_WIN,Você é rápido... mais rápido que o inverno.,You're fast... faster than winter.,Eres rápido... más rápido que el invierno.
+DLG_PI_ALVA_MOTIVE,"Eu só queria ver meu pai sorrir de novo. Quando a coroa rachou, ele parou de vez.","I just wanted to see my father smile again. When the crown cracked, he stopped for good.","Solo quería ver a mi padre sonreír otra vez. Cuando la corona se agrietó, dejó de hacerlo para siempre."
+DLG_PI_ALVA_ECHO,"Você é o eco que a coroa chamou, não é? Então você vai ver meu pai.","You're the echo the crown called, aren't you? Then you'll see my father.","Eres el eco que llamó la corona, ¿verdad? Entonces verás a mi padre."
+DLG_PI_ALVA_ASK,"Leva isto pra ele? Ele não lê as minhas cartas. Talvez leia, se vier de você.","Will you take this to him? He doesn't read my letters. Maybe he will, if it comes from you.",¿Le llevas esto? No lee mis cartas. Quizá la lea si se la llevas tú.
+DLG_PI_ALVA_THANKS,Obrigada. Diz que a filha dele está esperando. Que sempre esperou.,Thank you. Tell him his daughter is waiting. That she always has been.,Gracias. Dile que su hija lo está esperando. Que siempre lo esperó.
+DLG_PI_ALVA_NO,"Entendo. Ninguém gosta de carregar a tristeza dos outros. Se mudar de ideia, ela fica aqui.","I understand. Nobody likes carrying someone else's sadness. If you change your mind, it'll be here.","Lo entiendo. A nadie le gusta cargar la tristeza ajena. Si cambias de idea, aquí estará."
+DLG_PI_ALVA_THAW,O gelo da estrada vai derreter. Lá embaixo fica o deserto. Minha mãe mora lá.,The ice on the road will melt. Down below is the desert. My mother lives there.,El hielo del camino se derretirá. Allá abajo está el desierto. Mi madre vive allí.
+DLG_PI_ALVA_AFTER,Diz pra minha mãe que eu tô bem. Mais ou menos bem.,Tell my mother I'm all right. More or less.,Dile a mi madre que estoy bien. Más o menos.

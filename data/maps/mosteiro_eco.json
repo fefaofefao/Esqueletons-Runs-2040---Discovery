@@ -1,0 +1,76 @@
+{
+ "id": "mosteiro_eco",
+ "region": "picos",
+ "name_key": "MAP_MOSTEIRO",
+ "tileset": "overworld",
+ "legend": {
+  "T": "wall_top",
+  "w": "wall",
+  "n": "wall_window",
+  ".": "carpet",
+  "m": "mat"
+ },
+ "ground": [
+  "TTTTTTTTTTTT",
+  "TwwnwwwwwnwT",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "TTTTTTmTTTTT"
+ ],
+ "spawn": {
+  "x": 6,
+  "y": 8,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "bell_tower",
+   "x": 6,
+   "y": 2
+  },
+  {
+   "type": "candelabra",
+   "x": 2,
+   "y": 4
+  },
+  {
+   "type": "candelabra",
+   "x": 10,
+   "y": 4
+  },
+  {
+   "type": "rug",
+   "x": 6,
+   "y": 6
+  },
+  {
+   "type": "prayer_flags",
+   "x": 6,
+   "y": 8
+  }
+ ],
+ "npcs": [
+  {
+   "id": "nevasco_npc",
+   "x": 6,
+   "y": 4,
+   "facing": "down"
+  }
+ ],
+ "warps": [
+  {
+   "x": 6,
+   "y": 9,
+   "to": "geada",
+   "tx": 14,
+   "ty": 28,
+   "facing": "down",
+   "sfx": "door"
+  }
+ ]
+}

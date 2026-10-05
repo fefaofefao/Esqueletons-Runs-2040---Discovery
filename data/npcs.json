@@ -1768,6 +1768,420 @@
     "vision": 3,
     "flag": "calico_beaten"
    }
+  },
+  "treno": {
+   "name_key": "SPK_TRENO",
+   "role": "hint",
+   "sprite": "res://assets/sprites/npc/treno.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "picos/treno"
+    }
+   ]
+  },
+  "grampo": {
+   "name_key": "SPK_GRAMPO",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/grampo.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "grampo_beaten",
+     "dialog": "picos/grampo_depois"
+    },
+    {
+     "dialog": "picos/grampo"
+    }
+   ],
+   "tamer": {
+    "vision": 4,
+    "flag": "grampo_beaten"
+   }
+  },
+  "rajada": {
+   "name_key": "SPK_RAJADA",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/rajada.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "rajada_beaten",
+     "dialog": "picos/rajada_depois"
+    },
+    {
+     "dialog": "picos/rajada"
+    }
+   ],
+   "tamer": {
+    "vision": 4,
+    "flag": "rajada_beaten"
+   }
+  },
+  "brisa": {
+   "name_key": "SPK_BRISA",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/brisa.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "brisa_beaten",
+     "dialog": "picos/brisa_depois"
+    },
+    {
+     "dialog": "picos/brisa"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "brisa_beaten"
+   }
+  },
+  "leal_a": {
+   "name_key": "SPK_LEAL",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/elmo.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "leal_a_beaten",
+     "dialog": "picos/leal_a_depois"
+    },
+    {
+     "dialog": "picos/leal_a"
+    }
+   ],
+   "tamer": {
+    "vision": 4,
+    "flag": "leal_a_beaten"
+   }
+  },
+  "leal_b": {
+   "name_key": "SPK_LEAL",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/grade.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "leal_b_beaten",
+     "dialog": "picos/leal_b_depois"
+    },
+    {
+     "dialog": "picos/leal_b"
+    }
+   ],
+   "tamer": {
+    "vision": 4,
+    "flag": "leal_b_beaten"
+   }
+  },
+  "rival_taro_p": {
+   "name_key": "SPK_TARO",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_grumete_3.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "picos/rival_taro"
+    }
+   ]
+  },
+  "rival_lia_p": {
+   "name_key": "SPK_LIA",
+   "role": "story",
+   "sprite": "res://assets/sprites/npc/skel_faroleira_3.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "dialog": "picos/rival_lia"
+    }
+   ]
+  },
+  "lareira": {
+   "name_key": "SPK_LAREIRA",
+   "role": "ranch",
+   "sprite": "res://assets/sprites/npc/lareira.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "picos/lareira"
+    }
+   ]
+  },
+  "cachecol": {
+   "name_key": "SPK_CACHECOL",
+   "role": "shop",
+   "sprite": "res://assets/sprites/npc/cachecol.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "picos/cachecol"
+    }
+   ]
+  },
+  "floquinho": {
+   "name_key": "SPK_FLOQUINHO",
+   "role": "humor",
+   "sprite": "res://assets/sprites/npc/floquinho.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "picos/floquinho"
+    }
+   ]
+  },
+  "pinhao": {
+   "name_key": "SPK_PINHAO",
+   "role": "lore",
+   "sprite": "res://assets/sprites/npc/pinhao.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "picos/pinhao"
+    }
+   ]
+  },
+  "degelo": {
+   "name_key": "SPK_DEGELO",
+   "role": "hint",
+   "sprite": "res://assets/sprites/npc/degelo.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "dialog": "picos/degelo"
+    }
+   ]
+  },
+  "camelia": {
+   "name_key": "SPK_CAMELIA",
+   "role": "quest",
+   "sprite": "res://assets/sprites/npc/camelia.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "look_around",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "camelia_done",
+     "dialog": "picos/camelia_depois"
+    },
+    {
+     "if": "has_broto_cha",
+     "dialog": "picos/camelia_obrigada"
+    },
+    {
+     "if": "camelia_quest",
+     "dialog": "picos/camelia_onde"
+    },
+    {
+     "dialog": "picos/camelia_pede"
+    }
+   ]
+  },
+  "lamina": {
+   "name_key": "SPK_LAMINA",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/lamina.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "lamina_beaten",
+     "dialog": "picos/lamina_depois"
+    },
+    {
+     "dialog": "picos/lamina"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "lamina_beaten"
+   }
+  },
+  "granizo": {
+   "name_key": "SPK_GRANIZO",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/granizo.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "granizo_beaten",
+     "dialog": "picos/granizo_depois"
+    },
+    {
+     "dialog": "picos/granizo"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "granizo_beaten"
+   }
+  },
+  "nevasco_npc": {
+   "name_key": "SPECIES_NEVASCO",
+   "role": "wild",
+   "sprite": "res://assets/sprites/npc/skel_nevasco.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "if": "pista_6",
+     "dialog": "picos/nevasco_de_novo"
+    },
+    {
+     "dialog": "picos/nevasco"
+    }
+   ]
+  },
+  "pingente": {
+   "name_key": "SPK_PINGENTE",
+   "role": "tamer",
+   "sprite": "res://assets/sprites/npc/pingente.png",
+   "frames": 2,
+   "idle_fps": 1.2,
+   "behavior": "stand",
+   "look_dirs": [
+    "down",
+    "left",
+    "right"
+   ],
+   "dialog": [
+    {
+     "if": "pingente_beaten",
+     "dialog": "picos/pingente_depois"
+    },
+    {
+     "dialog": "picos/pingente"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "pingente_beaten"
+   }
+  },
+  "alva": {
+   "name_key": "SPK_ALVA",
+   "role": "guardian",
+   "sprite": "res://assets/sprites/npc/skel_alva.png",
+   "frames": 2,
+   "idle_fps": 2.0,
+   "behavior": "stand",
+   "dialog": [
+    {
+     "if": "picos_carta",
+     "dialog": "picos/alva_depois"
+    },
+    {
+     "if": "alva_beaten",
+     "dialog": "picos/alva_carta"
+    },
+    {
+     "dialog": "picos/alva"
+    }
+   ],
+   "tamer": {
+    "vision": 3,
+    "flag": "alva_beaten"
+   }
   }
  }
 }

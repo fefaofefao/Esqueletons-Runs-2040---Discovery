@@ -1,0 +1,827 @@
+{
+ "_comment": "Gerado por tools/maps/picos.py (fonte única do roteiro).",
+ "dialogs": {
+  "placa_bifurcacao": [
+   {
+    "say": "SIGN_PI_FORK"
+   }
+  ],
+  "chegada_rota": [
+   {
+    "say": "DLG_PI_ARR_R_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_PI_ARR_R_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "rota5_vista",
+    "value": true
+   }
+  ],
+  "treno": [
+   {
+    "say": "DLG_PI_TRENO_1",
+    "speaker": "SPK_TRENO"
+   },
+   {
+    "say": "DLG_PI_TRENO_2",
+    "speaker": "SPK_TRENO"
+   }
+  ],
+  "grampo": [
+   {
+    "say": "DLG_PI_GRAMPO_1",
+    "speaker": "SPK_GRAMPO"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_GRAMPO",
+    "enemies": [
+     [
+      "carregador_2",
+      60
+     ],
+     [
+      "mineiro_3",
+      60
+     ]
+    ],
+    "reward": 760,
+    "win_flag": "grampo_beaten"
+   },
+   {
+    "say": "DLG_PI_GRAMPO_2",
+    "speaker": "SPK_GRAMPO"
+   }
+  ],
+  "grampo_depois": [
+   {
+    "say": "DLG_PI_GRAMPO_2",
+    "speaker": "SPK_GRAMPO"
+   }
+  ],
+  "rajada": [
+   {
+    "say": "DLG_PI_RAJADA_1",
+    "speaker": "SPK_RAJADA"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_RAJADA",
+    "enemies": [
+     [
+      "escultor_2",
+      61
+     ],
+     [
+      "sineiro_3",
+      61
+     ]
+    ],
+    "reward": 780,
+    "win_flag": "rajada_beaten"
+   },
+   {
+    "say": "DLG_PI_RAJADA_2",
+    "speaker": "SPK_RAJADA"
+   }
+  ],
+  "rajada_depois": [
+   {
+    "say": "DLG_PI_RAJADA_2",
+    "speaker": "SPK_RAJADA"
+   }
+  ],
+  "brisa": [
+   {
+    "say": "DLG_PI_BRISA_1",
+    "speaker": "SPK_BRISA"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_BRISA",
+    "enemies": [
+     [
+      "chazeiro_2",
+      62
+     ],
+     [
+      "carregador_2",
+      62
+     ]
+    ],
+    "reward": 800,
+    "win_flag": "brisa_beaten",
+    "items": [
+     [
+      "pocao_g",
+      1
+     ]
+    ]
+   },
+   {
+    "say": "DLG_PI_BRISA_2",
+    "speaker": "SPK_BRISA"
+   }
+  ],
+  "brisa_depois": [
+   {
+    "say": "DLG_PI_BRISA_2",
+    "speaker": "SPK_BRISA"
+   }
+  ],
+  "leal_a": [
+   {
+    "say": "DLG_PI_LEAL_1",
+    "speaker": "SPK_LEAL"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_LEAL",
+    "enemies": [
+     [
+      "sentinela_3",
+      63
+     ],
+     [
+      "escriba_3",
+      62
+     ]
+    ],
+    "reward": 600,
+    "win_flag": "leal_a_beaten"
+   },
+   {
+    "say": "DLG_PI_LEAL_AFTER",
+    "speaker": "SPK_LEAL"
+   }
+  ],
+  "leal_a_depois": [
+   {
+    "say": "DLG_PI_LEAL_AFTER",
+    "speaker": "SPK_LEAL"
+   }
+  ],
+  "leal_b": [
+   {
+    "say": "DLG_PI_LEAL_2",
+    "speaker": "SPK_LEAL"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_LEAL",
+    "enemies": [
+     [
+      "ferreiro_3",
+      63
+     ],
+     [
+      "sentinela_3",
+      63
+     ]
+    ],
+    "reward": 600,
+    "win_flag": "leal_b_beaten"
+   },
+   {
+    "say": "DLG_PI_LEAL_AFTER",
+    "speaker": "SPK_LEAL"
+   }
+  ],
+  "leal_b_depois": [
+   {
+    "say": "DLG_PI_LEAL_AFTER",
+    "speaker": "SPK_LEAL"
+   }
+  ],
+  "rival_taro": [
+   {
+    "say": "DLG_PI_RT_1",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_PI_RT_PRE",
+    "choice": [
+     {
+      "text": "OPT_P_FIGHT",
+      "goto": "picos/rival_taro_luta"
+     },
+     {
+      "text": "OPT_P_NOT_NOW",
+      "goto": "picos/rival_taro_fala"
+     }
+    ],
+    "speaker": "SPK_TARO"
+   }
+  ],
+  "rival_taro_luta": [
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_TARO",
+    "enemies": [
+     [
+      "grumete_3",
+      66
+     ],
+     [
+      "carregador_3",
+      65
+     ]
+    ],
+    "reward": 900,
+    "win_flag": "rival_picos_done",
+    "marker": {
+     "species": "grumete_3",
+     "amount": 10
+    }
+   },
+   {
+    "goto": "picos/rival_taro_fala"
+   }
+  ],
+  "rival_taro_fala": [
+   {
+    "say": "DLG_PI_RT_2",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_PI_RT_3",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_PI_RT_L",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "say": "DLG_PI_RT_4",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "set_flag": "rival_picos_done",
+    "value": true
+   },
+   {
+    "action": "hide_npc",
+    "id": "rival_taro_p"
+   }
+  ],
+  "rival_lia": [
+   {
+    "say": "DLG_PI_RL_1",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "say": "DLG_PI_RL_PRE",
+    "choice": [
+     {
+      "text": "OPT_P_FIGHT",
+      "goto": "picos/rival_lia_luta"
+     },
+     {
+      "text": "OPT_P_NOT_NOW",
+      "goto": "picos/rival_lia_fala"
+     }
+    ],
+    "speaker": "SPK_LIA"
+   }
+  ],
+  "rival_lia_luta": [
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_LIA",
+    "enemies": [
+     [
+      "faroleira_3",
+      66
+     ],
+     [
+      "escultor_3",
+      65
+     ]
+    ],
+    "reward": 900,
+    "win_flag": "rival_picos_done",
+    "marker": {
+     "species": "faroleira_3",
+     "amount": 10
+    }
+   },
+   {
+    "goto": "picos/rival_lia_fala"
+   }
+  ],
+  "rival_lia_fala": [
+   {
+    "say": "DLG_PI_RL_2",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "say": "DLG_PI_RL_T",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_PI_RL_3",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "set_flag": "rival_picos_done",
+    "value": true
+   },
+   {
+    "action": "hide_npc",
+    "id": "rival_lia_p"
+   }
+  ],
+  "placa_cidade": [
+   {
+    "say": "SIGN_PI_TOWN"
+   }
+  ],
+  "placa_jardim": [
+   {
+    "say": "SIGN_PI_GARDEN"
+   }
+  ],
+  "boneco": [
+   {
+    "say": "OBJ_PI_SNOWMAN"
+   }
+  ],
+  "chegada_cidade": [
+   {
+    "say": "DLG_PI_ARR_C_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_PI_ARR_C_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "geada_vista",
+    "value": true
+   }
+  ],
+  "lareira": [
+   {
+    "action": "heal"
+   },
+   {
+    "action": "respawn"
+   },
+   {
+    "say": "DLG_PI_LAREIRA_AFTER",
+    "speaker": "SPK_LAREIRA",
+    "if": "alva_beaten"
+   },
+   {
+    "say": "DLG_PI_LAREIRA_1",
+    "speaker": "SPK_LAREIRA",
+    "if_not": "alva_beaten"
+   },
+   {
+    "say": "DLG_PI_LAREIRA_2",
+    "speaker": "SPK_LAREIRA",
+    "if_not": "alva_beaten"
+   },
+   {
+    "say": "DLG_PI_LAREIRA_3",
+    "choice": [
+     {
+      "text": "OPT_P_RANCH",
+      "goto": "vila_mare/rancho"
+     },
+     {
+      "text": "OPT_P_LEAVE"
+     }
+    ],
+    "speaker": "SPK_LAREIRA"
+   }
+  ],
+  "cachecol": [
+   {
+    "say": "DLG_PI_CACHECOL_1",
+    "speaker": "SPK_CACHECOL"
+   },
+   {
+    "action": "shop",
+    "id": "geada"
+   },
+   {
+    "say": "DLG_PI_CACHECOL_2",
+    "speaker": "SPK_CACHECOL"
+   }
+  ],
+  "floquinho": [
+   {
+    "say": "DLG_PI_FLOQUINHO_AFTER",
+    "speaker": "SPK_FLOQUINHO",
+    "if": "alva_beaten"
+   },
+   {
+    "say": "DLG_PI_FLOQUINHO",
+    "speaker": "SPK_FLOQUINHO",
+    "if_not": "alva_beaten"
+   }
+  ],
+  "pinhao": [
+   {
+    "say": "DLG_PI_PINHAO_1",
+    "speaker": "SPK_PINHAO"
+   },
+   {
+    "say": "DLG_PI_PINHAO_2",
+    "speaker": "SPK_PINHAO"
+   }
+  ],
+  "degelo": [
+   {
+    "say": "DLG_PI_DEGELO_1",
+    "speaker": "SPK_DEGELO"
+   },
+   {
+    "say": "DLG_PI_DEGELO_2",
+    "speaker": "SPK_DEGELO"
+   }
+  ],
+  "camelia_pede": [
+   {
+    "say": "DLG_PI_CAMELIA_ASK",
+    "speaker": "SPK_CAMELIA"
+   },
+   {
+    "say": "DLG_PI_CAMELIA_ASK2",
+    "speaker": "SPK_CAMELIA"
+   },
+   {
+    "set_flag": "camelia_quest",
+    "value": true
+   }
+  ],
+  "camelia_onde": [
+   {
+    "say": "DLG_PI_CAMELIA_WHERE",
+    "speaker": "SPK_CAMELIA"
+   }
+  ],
+  "camelia_obrigada": [
+   {
+    "action": "take_item",
+    "item": "broto_cha",
+    "n": 1
+   },
+   {
+    "say": "DLG_PI_CAMELIA_THANKS",
+    "speaker": "SPK_CAMELIA"
+   },
+   {
+    "action": "give_item",
+    "item": "pocao_g",
+    "n": 2
+   },
+   {
+    "set_flag": "camelia_done",
+    "value": true
+   }
+  ],
+  "camelia_depois": [
+   {
+    "say": "DLG_PI_CAMELIA_AFTER",
+    "speaker": "SPK_CAMELIA"
+   }
+  ],
+  "broto": [
+   {
+    "say": "OBJ_PI_SPROUT"
+   },
+   {
+    "action": "give_item",
+    "item": "broto_cha",
+    "n": 1
+   },
+   {
+    "set_flag": "broto_pego",
+    "value": true
+   }
+  ],
+  "lamina": [
+   {
+    "say": "DLG_PI_LAMINA_1",
+    "speaker": "SPK_LAMINA"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_LAMINA",
+    "enemies": [
+     [
+      "carregador_3",
+      66
+     ],
+     [
+      "escultor_3",
+      65
+     ]
+    ],
+    "reward": 820,
+    "win_flag": "lamina_beaten",
+    "items": [
+     [
+      "pocao_g",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_PI_LAMINA_2",
+    "speaker": "SPK_LAMINA"
+   }
+  ],
+  "lamina_depois": [
+   {
+    "say": "DLG_PI_LAMINA_2",
+    "speaker": "SPK_LAMINA"
+   }
+  ],
+  "granizo": [
+   {
+    "say": "DLG_PI_GRANIZO_1",
+    "speaker": "SPK_GRANIZO"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_GRANIZO",
+    "enemies": [
+     [
+      "escultor_3",
+      66
+     ],
+     [
+      "chazeiro_2",
+      65
+     ]
+    ],
+    "reward": 800,
+    "win_flag": "granizo_beaten",
+    "items": [
+     [
+      "reviver",
+      2
+     ]
+    ]
+   },
+   {
+    "say": "DLG_PI_GRANIZO_2",
+    "speaker": "SPK_GRANIZO"
+   }
+  ],
+  "granizo_depois": [
+   {
+    "say": "DLG_PI_GRANIZO_2",
+    "speaker": "SPK_GRANIZO"
+   }
+  ],
+  "nevasco": [
+   {
+    "say": "DLG_PI_NEV_1",
+    "speaker": "SPK_NEVASCO"
+   },
+   {
+    "say": "DLG_PI_NEV_2",
+    "speaker": "SPK_NEVASCO"
+   },
+   {
+    "say": "DLG_PI_NEV_3",
+    "speaker": "SPK_NEVASCO"
+   },
+   {
+    "say": "DLG_PI_NEV_4"
+   },
+   {
+    "say": "DLG_PI_NEV_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_PI_NEV_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "pista_6",
+    "value": true
+   },
+   {
+    "say": "DLG_PI_NEV_5",
+    "choice": [
+     {
+      "text": "OPT_PI_DUEL",
+      "goto": "picos/nevasco_luta"
+     },
+     {
+      "text": "OPT_P_NOT_NOW"
+     }
+    ],
+    "speaker": "SPK_NEVASCO"
+   }
+  ],
+  "nevasco_de_novo": [
+   {
+    "say": "DLG_PI_NEV_AGAIN",
+    "choice": [
+     {
+      "text": "OPT_PI_DUEL",
+      "goto": "picos/nevasco_luta"
+     },
+     {
+      "text": "OPT_P_NOT_NOW"
+     }
+    ],
+    "speaker": "SPK_NEVASCO"
+   }
+  ],
+  "nevasco_luta": [
+   {
+    "action": "battle",
+    "kind": "wild",
+    "tamer_key": "",
+    "enemies": [
+     [
+      "nevasco",
+      64
+     ]
+    ],
+    "reward": 0
+   }
+  ],
+  "chegada_jardim": [
+   {
+    "say": "DLG_PI_ARR_J_L",
+    "speaker": "SPK_LIA",
+    "if": "partner_lia"
+   },
+   {
+    "say": "DLG_PI_ARR_J_T",
+    "speaker": "SPK_TARO",
+    "if": "partner_taro"
+   },
+   {
+    "set_flag": "jardim_visto",
+    "value": true
+   }
+  ],
+  "pingente": [
+   {
+    "say": "DLG_PI_PING_1",
+    "speaker": "SPK_PINGENTE"
+   },
+   {
+    "action": "battle",
+    "kind": "tamer",
+    "tamer_key": "BTL_TAMER_PINGENTE",
+    "enemies": [
+     [
+      "escultor_3",
+      67
+     ],
+     [
+      "carregador_3",
+      67
+     ]
+    ],
+    "reward": 840,
+    "win_flag": "pingente_beaten"
+   },
+   {
+    "say": "DLG_PI_PING_2",
+    "speaker": "SPK_PINGENTE"
+   }
+  ],
+  "pingente_depois": [
+   {
+    "say": "DLG_PI_PING_2",
+    "speaker": "SPK_PINGENTE"
+   }
+  ],
+  "alva": [
+   {
+    "say": "DLG_PI_ALVA_1",
+    "speaker": "SPK_ALVA"
+   },
+   {
+    "say": "DLG_PI_ALVA_2",
+    "speaker": "SPK_ALVA"
+   },
+   {
+    "say": "DLG_PI_ALVA_3",
+    "speaker": "SPK_ALVA"
+   },
+   {
+    "action": "battle",
+    "kind": "boss",
+    "tamer_key": "BTL_TAMER_ALVA",
+    "enemies": [
+     [
+      "carregador_3",
+      72
+     ],
+     [
+      "escultor_3",
+      71
+     ],
+     [
+      "chazeiro_3",
+      73
+     ],
+     [
+      "mineiro_3",
+      72
+     ]
+    ],
+    "reward": 1900,
+    "win_flag": "alva_beaten"
+   },
+   {
+    "say": "DLG_PI_ALVA_WIN",
+    "speaker": "SPK_ALVA"
+   },
+   {
+    "say": "DLG_PI_ALVA_MOTIVE",
+    "speaker": "SPK_ALVA"
+   },
+   {
+    "say": "DLG_PI_ALVA_ECHO",
+    "speaker": "SPK_ALVA"
+   },
+   {
+    "say": "DLG_PI_ALVA_THAW",
+    "speaker": "SPK_ALVA"
+   },
+   {
+    "goto": "picos/alva_carta"
+   }
+  ],
+  "alva_carta": [
+   {
+    "say": "DLG_PI_ALVA_ASK",
+    "choice": [
+     {
+      "text": "OPT_PI_TAKE",
+      "goto": "picos/carta_sim"
+     },
+     {
+      "text": "OPT_PI_LEAVE",
+      "goto": "picos/carta_nao"
+     }
+    ],
+    "speaker": "SPK_ALVA"
+   }
+  ],
+  "carta_sim": [
+   {
+    "action": "give_item",
+    "item": "carta_alva",
+    "n": 1
+   },
+   {
+    "say": "DLG_PI_ALVA_THANKS",
+    "speaker": "SPK_ALVA"
+   },
+   {
+    "set_flag": "picos_carta",
+    "value": true
+   },
+   {
+    "action": "refresh_map"
+   }
+  ],
+  "carta_nao": [
+   {
+    "say": "DLG_PI_ALVA_NO",
+    "speaker": "SPK_ALVA"
+   },
+   {
+    "action": "refresh_map"
+   }
+  ],
+  "alva_depois": [
+   {
+    "say": "DLG_PI_ALVA_AFTER",
+    "speaker": "SPK_ALVA"
+   }
+  ]
+ }
+}

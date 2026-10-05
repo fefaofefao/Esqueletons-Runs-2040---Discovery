@@ -98,6 +98,26 @@
     "selo",
     "clarim"
    ]
+  },
+  {
+   "id": "geada",
+   "map": "geada",
+   "ranch": "lareira",
+   "shop": "geada",
+   "tamer_houses": [
+    "lamina",
+    "granizo"
+   ],
+   "npcs": [
+    "floquinho",
+    "pinhao",
+    "degelo",
+    "camelia",
+    "nevasco_npc"
+   ],
+   "quests": [
+    "camelia"
+   ]
   }
  ]
 }

@@ -84,6 +84,27 @@
      "note": "Aqueduto Velho: curto, com um selvagem forte"
     }
    ]
+  },
+  {
+   "id": "rota_5",
+   "map": "rota_5",
+   "from": "ossorio",
+   "to": "geada",
+   "paths": [
+    {
+     "kind": "domadores",
+     "required": false
+    },
+    {
+     "kind": "selvagem",
+     "required": false
+    },
+    {
+     "kind": "atalho",
+     "required": false,
+     "note": "Ponte de Gelo: curta, com um selvagem forte"
+    }
+   ]
   }
  ]
 }

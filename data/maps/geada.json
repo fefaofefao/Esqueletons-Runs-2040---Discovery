@@ -1,0 +1,338 @@
+{
+ "id": "geada",
+ "region": "picos",
+ "name_key": "MAP_GEADA",
+ "tileset": "overworld",
+ "legend": {
+  "g": "snow",
+  "f": "ice",
+  "B": "snow_rock",
+  "p": "stone",
+  ".": "floor",
+  "s": "stone"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggppppppppppppppppppppppggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "pppppppppppppppsssssssssssggggpggggggggB",
+  "pppppppppppppppsssssssssssggggpggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
+  "BggggggggpgggggggggppgggggggggpggggggggB",
+  "BggggggggpgggggggggppgggggggggpggggggggB",
+  "BgggggppppppppppppppppppppppppppppgggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
+ ],
+ "spawn": {
+  "x": 19,
+  "y": 29,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "chalet_ranch",
+   "x": 12,
+   "y": 10
+  },
+  {
+   "type": "chalet_shop",
+   "x": 27,
+   "y": 10
+  },
+  {
+   "type": "chalet",
+   "x": 8,
+   "y": 20
+  },
+  {
+   "type": "chalet",
+   "x": 31,
+   "y": 20
+  },
+  {
+   "type": "chalet",
+   "x": 14,
+   "y": 27
+  },
+  {
+   "type": "sign",
+   "x": 18,
+   "y": 28,
+   "dialog": "picos/placa_cidade"
+  },
+  {
+   "type": "sign",
+   "x": 3,
+   "y": 14,
+   "dialog": "picos/placa_jardim"
+  },
+  {
+   "type": "snowman",
+   "x": 17,
+   "y": 15,
+   "dialog": "picos/boneco"
+  },
+  {
+   "type": "kettle",
+   "x": 23,
+   "y": 16
+  },
+  {
+   "type": "prayer_flags",
+   "x": 20,
+   "y": 12
+  },
+  {
+   "type": "lamp_post",
+   "x": 13,
+   "y": 13
+  },
+  {
+   "type": "lamp_post",
+   "x": 26,
+   "y": 13
+  },
+  {
+   "type": "monastery_gate",
+   "x": 14,
+   "y": 25
+  },
+  {
+   "type": "snow_pine",
+   "x": 3,
+   "y": 3
+  },
+  {
+   "type": "rock_small",
+   "x": 8,
+   "y": 8
+  },
+  {
+   "type": "snow_pine",
+   "x": 6,
+   "y": 4
+  },
+  {
+   "type": "rock_small",
+   "x": 11,
+   "y": 6
+  },
+  {
+   "type": "snow_pine",
+   "x": 34,
+   "y": 5
+  },
+  {
+   "type": "snow_pine",
+   "x": 37,
+   "y": 8
+  },
+  {
+   "type": "snow_pine",
+   "x": 29,
+   "y": 6
+  },
+  {
+   "type": "snow_pine",
+   "x": 28,
+   "y": 1
+  },
+  {
+   "type": "rock_small",
+   "x": 9,
+   "y": 27
+  },
+  {
+   "type": "rock_small",
+   "x": 3,
+   "y": 23
+  },
+  {
+   "type": "snow_pine",
+   "x": 8,
+   "y": 23
+  },
+  {
+   "type": "snow_pine",
+   "x": 33,
+   "y": 24
+  },
+  {
+   "type": "rock_small",
+   "x": 29,
+   "y": 25
+  },
+  {
+   "type": "rock_small",
+   "x": 25,
+   "y": 28
+  }
+ ],
+ "npcs": [
+  {
+   "id": "floquinho",
+   "x": 16,
+   "y": 16,
+   "facing": "right"
+  },
+  {
+   "id": "pinhao",
+   "x": 24,
+   "y": 18,
+   "facing": "left"
+  },
+  {
+   "id": "degelo",
+   "x": 22,
+   "y": 13,
+   "facing": "down"
+  },
+  {
+   "id": "camelia",
+   "x": 26,
+   "y": 24,
+   "facing": "left"
+  }
+ ],
+ "warps": [
+  {
+   "x": 19,
+   "y": 31,
+   "to": "rota_5",
+   "tx": 19,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 31,
+   "to": "rota_5",
+   "tx": 20,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 19,
+   "y": 0,
+   "to": "rota_6",
+   "tx": 19,
+   "ty": 48,
+   "facing": "up",
+   "sfx": "",
+   "if": "alva_beaten",
+   "locked_message": "MSG_ALVA_ROAD"
+  },
+  {
+   "x": 20,
+   "y": 0,
+   "to": "rota_6",
+   "tx": 20,
+   "ty": 48,
+   "facing": "up",
+   "sfx": "",
+   "if": "alva_beaten",
+   "locked_message": "MSG_ALVA_ROAD"
+  },
+  {
+   "x": 0,
+   "y": 15,
+   "to": "jardim_gelo",
+   "tx": 32,
+   "ty": 10,
+   "facing": "left",
+   "sfx": ""
+  },
+  {
+   "x": 0,
+   "y": 16,
+   "to": "jardim_gelo",
+   "tx": 32,
+   "ty": 11,
+   "facing": "left",
+   "sfx": ""
+  },
+  {
+   "x": 12,
+   "y": 10,
+   "to": "geada_rancho",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 27,
+   "y": 10,
+   "to": "geada_loja",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 8,
+   "y": 20,
+   "to": "geada_casa_lamina",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 31,
+   "y": 20,
+   "to": "geada_casa_granizo",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  },
+  {
+   "x": 14,
+   "y": 27,
+   "to": "mosteiro_eco",
+   "tx": 6,
+   "ty": 8,
+   "facing": "up",
+   "sfx": "door"
+  }
+ ],
+ "ambient": [
+  "snow"
+ ],
+ "tint": [
+  0.95,
+  0.97,
+  1.0
+ ],
+ "on_enter": [
+  {
+   "if_not": "geada_vista",
+   "dialog": "picos/chegada_cidade"
+  }
+ ]
+}

@@ -269,3 +269,35 @@ func test_quiz_selo() -> void:
 	check(not SaveGame.get_flag("selo_done"), "resposta errada não premia")
 	await _play("ossorio/selo", [1])
 	check(SaveGame.get_flag("selo_done"), "Rainha Duna é a resposta certa")
+
+
+func test_choice_picos() -> void:
+	SaveGame.start_new("Téo")
+	SaveGame.set_flag("alva_beaten")
+	await _play("picos/alva_carta", [1])
+	check(not SaveGame.get_flag("has_carta_alva"), "não levar: sem carta")
+	await _play("picos/alva_carta", [0])
+	check(SaveGame.get_flag("has_carta_alva") and SaveGame.get_flag("picos_carta"), "levar (mesmo depois de recusar): Carta da Alva")
+	await _play("picos/nevasco", [1])
+	check(SaveGame.get_flag("pista_6"), "Nevasco: pista 6")
+
+
+func test_ossorio_consequence_on_route5() -> void:
+	SaveGame.start_new("Téo")
+	var m := _map("rota_5")
+	var leais := 0
+	for n in m.all_npcs():
+		if n.npc_id.begins_with("leal_"):
+			leais += 1
+	check_eq(leais, 0, "segredo: sem Guardas Leais na Rota 5")
+	m.queue_free()
+	await tree.process_frame
+	SaveGame.set_flag("ossorio_revelou")
+	var m2 := _map("rota_5")
+	leais = 0
+	for n in m2.all_npcs():
+		if n.npc_id.begins_with("leal_"):
+			leais += 1
+	check_eq(leais, 2, "contou: 2 Guardas Leais na Rota 5")
+	m2.queue_free()
+	await tree.process_frame

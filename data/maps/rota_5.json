@@ -1,0 +1,362 @@
+{
+ "id": "rota_5",
+ "region": "picos",
+ "name_key": "MAP_ROTA_5",
+ "tileset": "overworld",
+ "legend": {
+  "g": "snow",
+  "f": "ice",
+  "B": "snow_rock",
+  "p": "stone",
+  ".": "floor"
+ },
+ "ground": [
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffggffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffggffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfffggfffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBfffggfffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffggppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffggppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffggffffB",
+  "BBggppgggggggggggggppggggffffffffggffffB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggppppppppppppppppppppppppppgggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
+ ],
+ "spawn": {
+  "x": 19,
+  "y": 47,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "prayer_flags",
+   "x": 20,
+   "y": 36
+  },
+  {
+   "type": "prayer_flags",
+   "x": 20,
+   "y": 14
+  },
+  {
+   "type": "snowman",
+   "x": 24,
+   "y": 44,
+   "dialog": "picos/boneco"
+  },
+  {
+   "type": "sign",
+   "x": 18,
+   "y": 42,
+   "dialog": "picos/placa_bifurcacao"
+  },
+  {
+   "type": "rock_small",
+   "x": 12,
+   "y": 46
+  },
+  {
+   "type": "snow_pine",
+   "x": 13,
+   "y": 43
+  },
+  {
+   "type": "snow_pine",
+   "x": 33,
+   "y": 47
+  },
+  {
+   "type": "rock_small",
+   "x": 33,
+   "y": 43
+  },
+  {
+   "type": "snow_pine",
+   "x": 23,
+   "y": 45
+  },
+  {
+   "type": "snow_pine",
+   "x": 8,
+   "y": 46
+  },
+  {
+   "type": "snow_pine",
+   "x": 3,
+   "y": 44
+  },
+  {
+   "type": "rock_small",
+   "x": 26,
+   "y": 47
+  },
+  {
+   "type": "snow_pine",
+   "x": 34,
+   "y": 8
+  },
+  {
+   "type": "snow_pine",
+   "x": 8,
+   "y": 3
+  },
+  {
+   "type": "rock_small",
+   "x": 5,
+   "y": 2
+  },
+  {
+   "type": "snow_pine",
+   "x": 16,
+   "y": 3
+  },
+  {
+   "type": "snow_pine",
+   "x": 17,
+   "y": 8
+  },
+  {
+   "type": "snow_pine",
+   "x": 13,
+   "y": 2
+  },
+  {
+   "type": "snow_pine",
+   "x": 4,
+   "y": 8
+  },
+  {
+   "type": "rock_small",
+   "x": 25,
+   "y": 5
+  },
+  {
+   "type": "snow_pine",
+   "x": 14,
+   "y": 6
+  },
+  {
+   "type": "snow_pine",
+   "x": 7,
+   "y": 21
+  },
+  {
+   "type": "rock_small",
+   "x": 5,
+   "y": 12
+  },
+  {
+   "type": "snow_pine",
+   "x": 8,
+   "y": 18
+  },
+  {
+   "type": "snow_pine",
+   "x": 8,
+   "y": 35
+  },
+  {
+   "type": "rock_small",
+   "x": 3,
+   "y": 16
+  }
+ ],
+ "npcs": [
+  {
+   "id": "grampo",
+   "x": 6,
+   "y": 30,
+   "facing": "left"
+  },
+  {
+   "id": "rajada",
+   "x": 3,
+   "y": 20,
+   "facing": "right"
+  },
+  {
+   "id": "brisa",
+   "x": 12,
+   "y": 9,
+   "facing": "down"
+  },
+  {
+   "id": "treno",
+   "x": 22,
+   "y": 42,
+   "facing": "left"
+  },
+  {
+   "id": "leal_a",
+   "x": 16,
+   "y": 4,
+   "facing": "right",
+   "if": "ossorio_revelou"
+  },
+  {
+   "id": "leal_b",
+   "x": 23,
+   "y": 8,
+   "facing": "left",
+   "if": "ossorio_revelou"
+  },
+  {
+   "id": "rival_taro_p",
+   "x": 26,
+   "y": 6,
+   "facing": "left",
+   "if": "partner_lia",
+   "if_not": "rival_picos_done"
+  },
+  {
+   "id": "rival_lia_p",
+   "x": 26,
+   "y": 6,
+   "facing": "left",
+   "if": "partner_taro",
+   "if_not": "rival_picos_done"
+  }
+ ],
+ "warps": [
+  {
+   "x": 19,
+   "y": 49,
+   "to": "ossorio",
+   "tx": 19,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 49,
+   "to": "ossorio",
+   "tx": 20,
+   "ty": 1,
+   "facing": "down",
+   "sfx": ""
+  },
+  {
+   "x": 19,
+   "y": 0,
+   "to": "geada",
+   "tx": 19,
+   "ty": 30,
+   "facing": "up",
+   "sfx": ""
+  },
+  {
+   "x": 20,
+   "y": 0,
+   "to": "geada",
+   "tx": 20,
+   "ty": 30,
+   "facing": "up",
+   "sfx": ""
+  }
+ ],
+ "spawns": [
+  {
+   "id": "r5_sul",
+   "table": "rota5_sul",
+   "x": 10,
+   "y": 45,
+   "radius": 3,
+   "count": 2
+  },
+  {
+   "id": "r5_oeste",
+   "table": "rota5_oeste",
+   "x": 5,
+   "y": 25,
+   "radius": 2,
+   "count": 1
+  },
+  {
+   "id": "r5_campo_a",
+   "table": "rota5_campo",
+   "x": 30,
+   "y": 32,
+   "radius": 4,
+   "count": 3
+  },
+  {
+   "id": "r5_campo_b",
+   "table": "rota5_campo",
+   "x": 30,
+   "y": 18,
+   "radius": 4,
+   "count": 3
+  },
+  {
+   "id": "r5_ponte",
+   "table": "rota5_ponte",
+   "x": 19,
+   "y": 25,
+   "radius": 2,
+   "count": 1
+  },
+  {
+   "id": "r5_norte",
+   "table": "rota5_norte",
+   "x": 10,
+   "y": 6,
+   "radius": 3,
+   "count": 2
+  }
+ ],
+ "ambient": [
+  "snow"
+ ],
+ "tint": [
+  0.96,
+  0.98,
+  1.0
+ ],
+ "on_enter": [
+  {
+   "if_not": "rota5_vista",
+   "dialog": "picos/chegada_rota"
+  }
+ ]
+}

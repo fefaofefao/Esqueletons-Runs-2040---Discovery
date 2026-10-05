@@ -1,0 +1,66 @@
+{
+ "id": "geada_casa_lamina",
+ "region": "picos",
+ "name_key": "MAP_GEADA_CASA_LAMINA",
+ "tileset": "overworld",
+ "legend": {
+  "T": "wall_top",
+  "w": "wall",
+  "n": "wall_window",
+  ".": "floor",
+  "m": "mat"
+ },
+ "ground": [
+  "TTTTTTTTTTTT",
+  "TwwnwwwwwnwT",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "T..........T",
+  "TTTTTTmTTTTT"
+ ],
+ "spawn": {
+  "x": 6,
+  "y": 8,
+  "facing": "up"
+ },
+ "props": [
+  {
+   "type": "table",
+   "x": 7,
+   "y": 5
+  },
+  {
+   "type": "plant",
+   "x": 2,
+   "y": 3
+  },
+  {
+   "type": "lamp",
+   "x": 10,
+   "y": 7
+  }
+ ],
+ "npcs": [
+  {
+   "id": "lamina",
+   "x": 6,
+   "y": 3,
+   "facing": "down"
+  }
+ ],
+ "warps": [
+  {
+   "x": 6,
+   "y": 9,
+   "to": "geada",
+   "tx": 8,
+   "ty": 21,
+   "facing": "down",
+   "sfx": "door"
+  }
+ ]
+}
