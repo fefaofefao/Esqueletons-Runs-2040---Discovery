@@ -9,58 +9,60 @@
   "B": "bush",
   "p": "path",
   "~": "water",
-  ".": "sand"
+  ".": "sand",
+  "F": "dock",
+  "k": "deep"
  },
  "ground": [
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
-  "BBgBggggBBgBBgBgBggppggggBBgggggggBBgBBB",
-  "BBgggggggggggggggggppgggggBggggggggggBBB",
-  "BBBggggggggggggggggppgggggggggggggggggBB",
-  "BBBggggggggggggggggppggfggggggggggggggBB",
-  "BBgggggggggggggggggppggfggggggggggggggBB",
-  "BBgggggggggggggggggppggfggggggggggggggBB",
-  "BBBggggggggggggggggppgggggggggggggggggBB",
-  "BBBggggggggggggggggppgggggggggggggggggBB",
-  "BBBggggggggggggggggppgggggggggggggggggfB",
-  "BBBggggggggggggggggppgggggggggggggggfffB",
-  "BBgggggggggggggggggppgggggggggggggggfffB",
-  "BBBgggggggBBBgBgBBgppgggggggggggggggfBBB",
-  "BBBgppggBBBBBBBBBBBppBggggggfffffppfffBB",
-  "BBBgppgggBBBBBBBBBBppBBBBffggffffppfffBB",
-  "BBBgppgggBBBBBBBBBBppBBBBffggffffppfffBB",
-  "BBggppgggBBBBBBBBBBppBBBBBfffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffggB",
-  "BBggppggBBBBBBBBBBBppBBBBffffffffppffgBB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBBBffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffggffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffggffppffBBB",
-  "BBggppggBBBBBBBBBBBppBBBBffffffffppffBBB",
-  "BBggppgggBBBBBBBBBBppBBBBBfffffffppfffBB",
-  "BBggppgggBBBBBBBBBBppBBBBBfffffffppffffB",
-  "BBBgppgggBBBBBBBBBBppBBBBfggfffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBBggfffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBBfffffffppfggfB",
-  "BBggppgggBBBBBBBBBBppBBBBBfffffffppfggfB",
-  "BBBgppgggBBBBBBBBBBppBBBBBfffffffppffffB",
-  "BBBgppggBBBBBBBBBBBppBBBBfffggfffppffBBB",
-  "BBBgppgggBBBBBBBBBBppBBBBBffggfffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffBBB",
-  "BBggppgggBBgggBBgggppggggggffffffppfffBB",
-  "BBggppgggggggggggggppggggggffffffppfffBB",
-  "BBggppgggggggggggggppggggggffffffppfffBB",
-  "BBBgppgggggggggggggppggggffffffffppffffB",
-  "BBggppgggppppppppppppppppppppppppppgggBB",
-  "BBBggggggggggggggggppgggggggggggggggggBB",
-  "BBBggggggggggggggggppgggggggggggggggggBB",
-  "BBBggggggggggggggggppggggggggggggggggBBB",
+  "BBggggggggggggBBBggppggggggggggggBBgggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggg~~~ggggggggggBB",
+  "BBgggggggggggggggggppggg~~~~~ggggfgggBBB",
+  "BBgggggggggggggggggppgg~~kkk~~gggffggBBB",
+  "BBgggggggggggggggggppggg~~~~~ggggffggBBB",
+  "BBgggggggggggggggggppgggg~~~ggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
   "BBgggggggggggggggggppggggggggggggggggBBB",
+  "BBgggggggBggBBgggggppgggggggggggggggggfB",
+  "BBggppggBBBBBBBBBBBppBggggggfffffppfffBB",
+  "BBBgppgggBBBBBBBBBBppBBBBffggffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBBBggffffpppffBB",
+  "BBBgppgBBBBBBBBBBBBppBBBBfffffffffpppffB",
+  "BBggppgggBBBBBBBBBBppBBBBBfffffffffppggB",
+  "BBggppgggBBBBBBBBBBppBBBBfffffffffpppgBB",
+  "BBggppggBBBBBBBBBBBppBBBBffffffffpppfffB",
+  "BBggppggBBBBBBBBBBBppBBBBfffffffpppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffggpppfffffB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffggppffffffB",
+  "BBBgppggBBBBBBBBBBBppBBBBBfffffppfffffBB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffpppffffBB",
+  "BBBgppggBBBBBBBBBBBppBBBBBffffffpppffffB",
+  "BBBgppgggBBBBBBBBBBppBBBBfggfffffppfffBB",
+  "BBBgppgggBBBBBBBBBBppBBBBBggfffffpppffBB",
+  "BBBgppgggBBBBBBBBBBppBBBBfffffffffpppffB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffffppgfB",
+  "BBBgppgggBBBBBBBBBBppBBBBBfffffffffppgfB",
+  "BBBgppgggBBBBBBBBBBppBBBBfffffffffpppfBB",
+  "BBBgppggBBBBBBBBBBBFFBBBB~~fggfffpppffBB",
+  "BBggppgggBBBBBBBBBBFFBBBB~~~~~ffpppffffB",
+  "BB~~FF~~~BBBBBBBBBBppBBBBff~~~~FFF~~~~~B",
+  "BB~~FF~~~~~~~gBBBggppggggggfff~FF~~~~~~B",
+  "BBggppgggggggggggggppggggggffffpppfffffB",
+  "BBBgppgggggggggggggppggggggfffffpppffBBB",
+  "BBBgppgggggggggggggppggggffffffffppffffB",
+  "BBggppgggppppppppppppppppppppppppppgggBB",
+  "BBgggggggggggggggggppggggggggggggggggBBB",
+  "BBgggggggggggggggggppgggggggggggggggBBBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggBgggggggggggppgggggggggggggggggBB",
-  "BBBgggBBgggggBBggggppggBBggBggggBggBBgBB",
+  "BBgggggggggggggggggppgggggggggggggfgggBB",
+  "BBgggggggggggggggggppgggggggggggggfgggBB",
+  "BBgggggggggggggggggppgggggggggggffggggBB",
+  "BBgggggggggggggBBggppggggggggggggggggBBB",
+  "BBgggggggggBggBBBggppgggBgBBBBBgBBBgggBB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
  ],
  "spawn": {
@@ -105,19 +107,9 @@
    "y": 43
   },
   {
-   "type": "log",
-   "x": 10,
-   "y": 44
-  },
-  {
    "type": "mushrooms",
    "x": 7,
    "y": 27
-  },
-  {
-   "type": "mushrooms",
-   "x": 30,
-   "y": 6
   },
   {
    "type": "tree_oak",
@@ -150,29 +142,9 @@
    "y": 47
   },
   {
-   "type": "tree_pine",
-   "x": 4,
-   "y": 43
-  },
-  {
-   "type": "tree_pine",
-   "x": 3,
-   "y": 46
-  },
-  {
-   "type": "tree_pine",
-   "x": 9,
-   "y": 44
-  },
-  {
    "type": "tree_oak",
    "x": 6,
    "y": 2
-  },
-  {
-   "type": "tree_oak",
-   "x": 26,
-   "y": 8
   },
   {
    "type": "tree_oak",
@@ -191,28 +163,8 @@
   },
   {
    "type": "tree_oak2",
-   "x": 31,
-   "y": 6
-  },
-  {
-   "type": "tree_oak",
-   "x": 5,
-   "y": 8
-  },
-  {
-   "type": "tree_oak2",
-   "x": 26,
-   "y": 5
-  },
-  {
-   "type": "tree_oak2",
    "x": 36,
    "y": 8
-  },
-  {
-   "type": "tree_oak2",
-   "x": 31,
-   "y": 3
   },
   {
    "type": "tree_pine",
@@ -240,149 +192,219 @@
    "y": 16
   },
   {
-   "type": "tree_pine",
-   "x": 3,
-   "y": 36
+   "type": "lilypad",
+   "x": 24,
+   "y": 5
+  },
+  {
+   "type": "lilypad",
+   "x": 27,
+   "y": 7
+  },
+  {
+   "type": "reeds",
+   "x": 30,
+   "y": 6
+  },
+  {
+   "type": "reeds",
+   "x": 22,
+   "y": 7
   },
   {
    "type": "tree_oak",
-   "x": 1,
-   "y": 10
+   "x": 5,
+   "y": 4
+  },
+  {
+   "type": "tree_oak2",
+   "x": 3,
+   "y": 7
   },
   {
    "type": "tree_pine",
+   "x": 7,
+   "y": 7
+  },
+  {
+   "type": "mushrooms",
+   "x": 5,
+   "y": 7
+  },
+  {
+   "type": "stump",
+   "x": 7,
+   "y": 4
+  },
+  {
+   "type": "broken_column",
+   "x": 3,
+   "y": 43
+  },
+  {
+   "type": "broken_column",
+   "x": 7,
+   "y": 43
+  },
+  {
+   "type": "broken_column",
+   "x": 3,
+   "y": 47
+  },
+  {
+   "type": "rubble",
+   "x": 6,
+   "y": 47
+  },
+  {
+   "type": "rock_small",
+   "x": 5,
+   "y": 45
+  },
+  {
+   "type": "tree_pine",
+   "x": 15,
+   "y": 1
+  },
+  {
+   "type": "tree_oak",
+   "x": 38,
+   "y": 6
+  },
+  {
+   "type": "tree_oak",
    "x": 10,
    "y": 15
   },
   {
-   "type": "tree_oak",
-   "x": 12,
-   "y": 15
-  },
-  {
-   "type": "tree_oak",
-   "x": 14,
-   "y": 15
-  },
-  {
    "type": "tree_pine",
-   "x": 16,
-   "y": 15
-  },
-  {
-   "type": "tree_pine",
-   "x": 22,
+   "x": 13,
    "y": 16
   },
   {
    "type": "tree_pine",
-   "x": 12,
-   "y": 17
+   "x": 17,
+   "y": 16
   },
   {
    "type": "tree_oak2",
    "x": 15,
+   "y": 17
+  },
+  {
+   "type": "tree_pine",
+   "x": 22,
+   "y": 17
+  },
+  {
+   "type": "tree_oak",
+   "x": 11,
    "y": 18
   },
   {
-   "type": "tree_oak2",
-   "x": 23,
+   "type": "tree_pine",
+   "x": 13,
    "y": 18
+  },
+  {
+   "type": "tree_pine",
+   "x": 16,
+   "y": 19
   },
   {
    "type": "tree_pine",
    "x": 10,
-   "y": 19
-  },
-  {
-   "type": "tree_oak2",
-   "x": 13,
-   "y": 19
-  },
-  {
-   "type": "tree_oak2",
-   "x": 17,
-   "y": 19
-  },
-  {
-   "type": "tree_pine",
-   "x": 15,
    "y": 20
   },
   {
-   "type": "tree_oak2",
-   "x": 13,
-   "y": 21
-  },
-  {
    "type": "tree_pine",
-   "x": 17,
-   "y": 21
+   "x": 22,
+   "y": 20
   },
   {
-   "type": "tree_oak2",
-   "x": 22,
+   "type": "tree_oak",
+   "x": 16,
    "y": 21
   },
   {
    "type": "tree_oak",
-   "x": 23,
+   "x": 10,
+   "y": 22
+  },
+  {
+   "type": "tree_pine",
+   "x": 14,
    "y": 23
   },
   {
    "type": "tree_pine",
-   "x": 13,
+   "x": 22,
+   "y": 23
+  },
+  {
+   "type": "tree_oak2",
+   "x": 16,
    "y": 24
   },
   {
-   "type": "tree_oak2",
-   "x": 17,
+   "type": "tree_pine",
+   "x": 13,
    "y": 25
   },
   {
-   "type": "tree_oak2",
-   "x": 14,
+   "type": "tree_pine",
+   "x": 22,
+   "y": 25
+  },
+  {
+   "type": "tree_pine",
+   "x": 17,
    "y": 26
   },
   {
-   "type": "tree_pine",
-   "x": 11,
-   "y": 27
-  },
-  {
    "type": "tree_oak2",
-   "x": 17,
-   "y": 27
-  },
-  {
-   "type": "tree_oak2",
-   "x": 13,
-   "y": 28
-  },
-  {
-   "type": "tree_oak2",
-   "x": 23,
-   "y": 28
-  },
-  {
-   "type": "tree_pine",
-   "x": 13,
-   "y": 30
-  },
-  {
-   "type": "tree_oak2",
-   "x": 17,
-   "y": 30
-  },
-  {
-   "type": "tree_pine",
-   "x": 11,
-   "y": 31
-  },
-  {
-   "type": "tree_pine",
    "x": 15,
+   "y": 27
+  },
+  {
+   "type": "tree_oak",
+   "x": 22,
+   "y": 27
+  },
+  {
+   "type": "tree_oak2",
+   "x": 12,
+   "y": 28
+  },
+  {
+   "type": "tree_oak2",
+   "x": 17,
+   "y": 28
+  },
+  {
+   "type": "tree_pine",
+   "x": 13,
+   "y": 30
+  },
+  {
+   "type": "tree_oak2",
+   "x": 17,
+   "y": 30
+  },
+  {
+   "type": "tree_oak",
+   "x": 10,
    "y": 31
+  },
+  {
+   "type": "tree_pine",
+   "x": 1,
+   "y": 32
+  },
+  {
+   "type": "tree_pine",
+   "x": 17,
+   "y": 32
   },
   {
    "type": "tree_pine",
@@ -390,114 +412,104 @@
    "y": 32
   },
   {
-   "type": "tree_pine",
-   "x": 16,
-   "y": 33
-  },
-  {
    "type": "tree_oak",
-   "x": 1,
-   "y": 42
-  },
-  {
-   "type": "stump",
-   "x": 24,
-   "y": 45
+   "x": 10,
+   "y": 33
   },
   {
    "type": "tree_pine",
    "x": 15,
-   "y": 4
+   "y": 33
   },
   {
    "type": "tree_pine",
+   "x": 13,
+   "y": 34
+  },
+  {
+   "type": "tree_pine",
+   "x": 15,
+   "y": 35
+  },
+  {
+   "type": "log",
+   "x": 17,
+   "y": 37
+  },
+  {
+   "type": "mushrooms",
+   "x": 38,
+   "y": 22
+  },
+  {
+   "type": "mushrooms",
+   "x": 26,
+   "y": 23
+  },
+  {
+   "type": "mushrooms",
+   "x": 16,
+   "y": 7
+  },
+  {
+   "type": "mushrooms",
    "x": 36,
+   "y": 46
+  },
+  {
+   "type": "rock_small",
+   "x": 32,
    "y": 45
   },
   {
+   "type": "rock_small",
+   "x": 17,
+   "y": 4
+  },
+  {
+   "type": "stump",
+   "x": 8,
+   "y": 13
+  },
+  {
    "type": "mushrooms",
+   "x": 29,
+   "y": 27
+  },
+  {
+   "type": "log",
    "x": 33,
+   "y": 12
+  },
+  {
+   "type": "mushrooms",
+   "x": 28,
+   "y": 20
+  },
+  {
+   "type": "mushrooms",
+   "x": 13,
+   "y": 42
+  },
+  {
+   "type": "mushrooms",
+   "x": 37,
+   "y": 26
+  },
+  {
+   "type": "mushrooms",
+   "x": 28,
+   "y": 30
+  },
+  {
+   "type": "mushrooms",
+   "x": 37,
    "y": 2
-  },
-  {
-   "type": "mushrooms",
-   "x": 30,
-   "y": 36
-  },
-  {
-   "type": "mushrooms",
-   "x": 25,
-   "y": 18
   },
   {
    "type": "mushrooms",
    "x": 2,
    "y": 12
-  },
-  {
-   "type": "log",
-   "x": 17,
-   "y": 11
-  },
-  {
-   "type": "mushrooms",
-   "x": 28,
-   "y": 23
-  },
-  {
-   "type": "mushrooms",
-   "x": 31,
-   "y": 10
-  },
-  {
-   "type": "stump",
-   "x": 12,
-   "y": 43
-  },
-  {
-   "type": "mushrooms",
-   "x": 31,
-   "y": 44
-  },
-  {
-   "type": "stump",
-   "x": 8,
-   "y": 35
-  },
-  {
-   "type": "mushrooms",
-   "x": 29,
-   "y": 13
-  },
-  {
-   "type": "rock_small",
-   "x": 36,
-   "y": 40
-  },
-  {
-   "type": "mushrooms",
-   "x": 36,
-   "y": 15
-  },
-  {
-   "type": "mushrooms",
-   "x": 5,
-   "y": 46
-  },
-  {
-   "type": "tree_oak2",
-   "x": 27,
-   "y": 42
-  },
-  {
-   "type": "mushrooms",
-   "x": 30,
-   "y": 29
-  },
-  {
-   "type": "mushrooms",
-   "x": 2,
-   "y": 3
   }
  ],
  "npcs": [

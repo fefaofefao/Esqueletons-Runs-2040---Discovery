@@ -13,53 +13,53 @@
  "ground": [
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
-  "BBBgggBggggggBggBggppggBBBgggBgggBBBBBBB",
+  "BBgggggggggggBggBggppggBBBgggggggBBggBBB",
+  "BBgggggggggggggggggppggBggggggggggggggBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBBggggggggggggggggppgggggggggggggggggBB",
-  "BBBBgggggggggggggggppgggggggggggggggggBB",
-  "BBBggggggggggggggggppgggggggggggggggggBB",
-  "BBBggggggggggggggggppgggggggggggggggggBB",
-  "BBBggggggggggggggggppgggggggggggggggggfB",
-  "BBBggggggggggggggggppgggggggggggggggggBB",
-  "BBBggggggggggggggggppgggggggggggggggggBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBBgggggggBgggggBggppgggBBggggggggggggfB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppfffBB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffggfffBB",
-  "BBggppggBBBBBBBBBBBppBBBBBfffffffggffBBB",
-  "BBggppggBBBBBBBBBBBppBBBBffffffffppffBBB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppfffBB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppggffB",
-  "BBggppgggBBBBBBBBBBppBBBBBfffffffppggffB",
-  "BBggppgggBBBBBBBBBBppBBBBBfffffffppffffB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBgggggggggggggggggppgggggggggggggggggfB",
+  "BBBggggggggggggggggppgggggggggggggggggBB",
+  "BBBggggggBggggBggggppgggggggggggggggggBB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBBgppgggBBBBBBBBBBppBBBBBBffffffggfffBB",
+  "BBggppggBBBBBBBBBBBppBBBBffffffffggffBBB",
+  "BBggppggBBBBBBBBBBBppBBBBBfffffffppffffB",
+  "BBggppgBBBBBBBBBBBBppBBBBBfffffffppffffB",
+  "BBggppggBBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppggBBBBBBBBBBBppBBBBBfffffffppggfBB",
+  "BBggppggBBBBBBBBBBBppBBBBffffffffppggffB",
+  "BBggppggBBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgBBBBBBBBBBBBppBBBBffffggffppffffB",
   "BBBgppgggBBBBBBBBBBppBBBBffffggffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBBfffggffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBBBffffffpggfffB",
   "BBBgppgggBBBBBBBBBBppBBBBffffffffpggfffB",
-  "BBggppggBBBBBBBBBBBppBBBBffffffffppfffBB",
-  "BBBgppgggBBBBBBBBBBppBBBBffffffffppfffBB",
-  "BBBgppgggBBBBBBBBBBppBBBBBfffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBBfffffffppfggfB",
-  "BBBgppgggBBBBBBBBBBppBBBBffffffffppfggBB",
-  "BBBgppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffpggfffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBBgppgggBBBBBBBBBBppBBBBBfffffffppfffBB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffpppffBB",
+  "BBggppgggBBBBBBBBBBppBBBBfffffffffppggfB",
+  "BBggppgggBBBBBBBBBBppBBBBBffffffffppggfB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffpppfffB",
   "BBBgppggBBBBBBBBBBBppBBBBBfffggffppffffB",
-  "BBBgppgggBBBBBBBBBBppBBBBffffggffppfffBB",
-  "BBBgppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppggggBBBBBggggppggBgffffffffppfffBB",
-  "BBggppgggggggggggggppggBgffffffffppffffB",
-  "BBggppgggggggggggggppggggffffffffppfffBB",
-  "BBBgppgggggggggggggppggggffffffffppfffBB",
-  "BBggppgggppppppppppppppppppppppppppgBBBB",
-  "BBBggggggggggggggggppgggggggggggggggBBBB",
+  "BBggppgggBBBBBBBBBBppBBBBBfffggffppfffBB",
+  "BBBgppgggBBBBBBBBBBppBBBBfffffffpppffffB",
+  "BBBgppgggBgBBBgggggppggBgfffffffppfffffB",
+  "BBBgppgggggggggggggppggggfffffffppffffBB",
+  "BBBgppgggggggggggggppggggfffffffpppfffBB",
+  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBBgppgggppppppppppppppppppppppppppggBBB",
+  "BBgggggggggggggggggppggggggggggggggggBBB",
+  "BBgggggggggggggggggppgggggggggggggggBBBB",
   "BBBggggggggggggggggppggggggggggggggggBBB",
-  "BBBggggggggggggggggppgggggggggggggggggBB",
   "BBBggggggggggggggggppggggggggggggggggBBB",
+  "BBgggggggggggggggggppggggggggggggggggBBB",
   "BBBggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBggBBBggBgggggggggppggggBBgBgggggggggBB",
+  "BBgggBgggBgggggggggppgggggggggggggggggBB",
+  "BBBBgBgggBBgggBggggppggBgggggggggggBBBBB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
  ],
  "spawn": {
@@ -110,19 +110,9 @@
    "y": 47
   },
   {
-   "type": "cactus",
-   "x": 30,
-   "y": 47
-  },
-  {
    "type": "rock_small",
    "x": 36,
    "y": 47
-  },
-  {
-   "type": "rock_small",
-   "x": 27,
-   "y": 46
   },
   {
    "type": "cactus",
@@ -140,39 +130,14 @@
    "y": 44
   },
   {
-   "type": "palm",
-   "x": 30,
-   "y": 44
-  },
-  {
-   "type": "rock_small",
-   "x": 32,
-   "y": 7
-  },
-  {
-   "type": "cactus",
-   "x": 7,
-   "y": 6
-  },
-  {
    "type": "broken_column",
    "x": 27,
    "y": 5
   },
   {
    "type": "rock_small",
-   "x": 8,
-   "y": 3
-  },
-  {
-   "type": "rock_small",
    "x": 4,
    "y": 2
-  },
-  {
-   "type": "rock_small",
-   "x": 36,
-   "y": 4
   },
   {
    "type": "palm",
@@ -182,11 +147,6 @@
   {
    "type": "rock_small",
    "x": 17,
-   "y": 8
-  },
-  {
-   "type": "palm",
-   "x": 36,
    "y": 8
   },
   {
@@ -215,74 +175,134 @@
    "y": 21
   },
   {
-   "type": "rock_big",
-   "x": 35,
-   "y": 1
+   "type": "oasis_pool",
+   "x": 29,
+   "y": 45
+  },
+  {
+   "type": "palm",
+   "x": 26,
+   "y": 44
+  },
+  {
+   "type": "palm",
+   "x": 32,
+   "y": 45
+  },
+  {
+   "type": "reeds",
+   "x": 31,
+   "y": 46
+  },
+  {
+   "type": "broken_column",
+   "x": 3,
+   "y": 4
+  },
+  {
+   "type": "broken_column",
+   "x": 7,
+   "y": 4
+  },
+  {
+   "type": "broken_column",
+   "x": 3,
+   "y": 8
+  },
+  {
+   "type": "rubble",
+   "x": 6,
+   "y": 8
+  },
+  {
+   "type": "rock_small",
+   "x": 5,
+   "y": 6
+  },
+  {
+   "type": "oasis_pool",
+   "x": 34,
+   "y": 7
+  },
+  {
+   "type": "palm",
+   "x": 31,
+   "y": 6
+  },
+  {
+   "type": "palm",
+   "x": 37,
+   "y": 7
+  },
+  {
+   "type": "reeds",
+   "x": 36,
+   "y": 8
   },
   {
    "type": "cactus",
-   "x": 12,
-   "y": 15
-  },
-  {
-   "type": "cactus",
-   "x": 16,
-   "y": 15
+   "x": 1,
+   "y": 13
   },
   {
    "type": "rock_big",
-   "x": 14,
-   "y": 16
+   "x": 13,
+   "y": 15
   },
   {
    "type": "rock_big",
    "x": 22,
-   "y": 16
+   "y": 15
   },
   {
    "type": "rock_big",
-   "x": 16,
+   "x": 9,
    "y": 17
   },
   {
    "type": "cactus",
-   "x": 11,
-   "y": 19
+   "x": 15,
+   "y": 17
   },
   {
    "type": "cactus",
-   "x": 13,
+   "x": 12,
+   "y": 18
+  },
+  {
+   "type": "cactus",
+   "x": 9,
    "y": 19
   },
   {
    "type": "rock_big",
-   "x": 16,
-   "y": 19
+   "x": 12,
+   "y": 20
   },
   {
    "type": "rock_big",
    "x": 23,
-   "y": 19
+   "y": 20
   },
   {
    "type": "rock_big",
-   "x": 13,
+   "x": 9,
    "y": 21
   },
   {
    "type": "rock_big",
-   "x": 22,
+   "x": 17,
    "y": 22
   },
   {
-   "type": "cactus",
-   "x": 10,
+   "type": "rock_big",
+   "x": 23,
    "y": 23
   },
   {
-   "type": "cactus",
-   "x": 15,
-   "y": 23
+   "type": "rock_big",
+   "x": 13,
+   "y": 24
   },
   {
    "type": "rock_big",
@@ -290,58 +310,58 @@
    "y": 25
   },
   {
-   "type": "cactus",
-   "x": 12,
-   "y": 26
-  },
-  {
-   "type": "rock_big",
-   "x": 14,
-   "y": 26
-  },
-  {
-   "type": "rock_big",
-   "x": 23,
-   "y": 26
-  },
-  {
    "type": "rock_big",
    "x": 17,
-   "y": 27
+   "y": 25
   },
   {
-   "type": "rock_big",
-   "x": 10,
+   "type": "cactus",
+   "x": 22,
+   "y": 25
+  },
+  {
+   "type": "cactus",
+   "x": 15,
+   "y": 26
+  },
+  {
+   "type": "cactus",
+   "x": 16,
    "y": 28
   },
   {
    "type": "cactus",
-   "x": 16,
+   "x": 12,
    "y": 29
   },
   {
    "type": "rock_big",
-   "x": 10,
-   "y": 30
-  },
-  {
-   "type": "rock_big",
    "x": 23,
-   "y": 30
-  },
-  {
-   "type": "rock_big",
-   "x": 22,
-   "y": 32
+   "y": 29
   },
   {
    "type": "cactus",
-   "x": 10,
+   "x": 16,
+   "y": 30
+  },
+  {
+   "type": "rock_big",
+   "x": 11,
+   "y": 31
+  },
+  {
+   "type": "cactus",
+   "x": 16,
+   "y": 32
+  },
+  {
+   "type": "rock_big",
+   "x": 14,
    "y": 33
   },
   {
    "type": "rock_big",
-   "x": 1,
+   "x": 11,
    "y": 34
   },
   {
@@ -351,28 +371,58 @@
   },
   {
    "type": "cactus",
+   "x": 1,
+   "y": 36
+  },
+  {
+   "type": "rock_big",
+   "x": 38,
+   "y": 41
+  },
+  {
+   "type": "dead_tree",
    "x": 22,
-   "y": 34
-  },
-  {
-   "type": "rock_big",
-   "x": 11,
-   "y": 35
-  },
-  {
-   "type": "rock_big",
-   "x": 13,
-   "y": 35
+   "y": 3
   },
   {
    "type": "cactus",
-   "x": 32,
-   "y": 44
+   "x": 8,
+   "y": 43
+  },
+  {
+   "type": "cactus",
+   "x": 24,
+   "y": 37
   },
   {
    "type": "rock_small",
-   "x": 26,
-   "y": 7
+   "x": 30,
+   "y": 15
+  },
+  {
+   "type": "cactus",
+   "x": 25,
+   "y": 4
+  },
+  {
+   "type": "cactus",
+   "x": 29,
+   "y": 25
+  },
+  {
+   "type": "rock_small",
+   "x": 15,
+   "y": 4
+  },
+  {
+   "type": "cactus",
+   "x": 16,
+   "y": 38
+  },
+  {
+   "type": "dead_tree",
+   "x": 28,
+   "y": 10
   },
   {
    "type": "cactus",
@@ -380,99 +430,44 @@
    "y": 2
   },
   {
-   "type": "cactus",
-   "x": 24,
-   "y": 47
+   "type": "rock_small",
+   "x": 12,
+   "y": 6
   },
   {
    "type": "cactus",
-   "x": 31,
-   "y": 38
+   "x": 26,
+   "y": 18
+  },
+  {
+   "type": "cactus",
+   "x": 25,
+   "y": 14
+  },
+  {
+   "type": "dead_tree",
+   "x": 28,
+   "y": 7
+  },
+  {
+   "type": "cactus",
+   "x": 25,
+   "y": 9
   },
   {
    "type": "rock_small",
    "x": 26,
-   "y": 27
-  },
-  {
-   "type": "rock_small",
-   "x": 17,
-   "y": 10
+   "y": 23
   },
   {
    "type": "cactus",
-   "x": 2,
-   "y": 40
-  },
-  {
-   "type": "rock_small",
-   "x": 31,
-   "y": 25
-  },
-  {
-   "type": "dead_tree",
-   "x": 9,
-   "y": 37
+   "x": 22,
+   "y": 46
   },
   {
    "type": "cactus",
-   "x": 2,
-   "y": 17
-  },
-  {
-   "type": "cactus",
-   "x": 6,
-   "y": 9
-  },
-  {
-   "type": "cactus",
-   "x": 25,
-   "y": 10
-  },
-  {
-   "type": "rock_small",
-   "x": 28,
-   "y": 37
-  },
-  {
-   "type": "rock_small",
-   "x": 8,
-   "y": 47
-  },
-  {
-   "type": "dead_tree",
-   "x": 12,
-   "y": 12
-  },
-  {
-   "type": "rock_small",
-   "x": 17,
-   "y": 5
-  },
-  {
-   "type": "cactus",
-   "x": 25,
-   "y": 15
-  },
-  {
-   "type": "cactus",
-   "x": 31,
-   "y": 12
-  },
-  {
-   "type": "rock_small",
-   "x": 28,
-   "y": 13
-  },
-  {
-   "type": "rock_small",
-   "x": 15,
-   "y": 44
-  },
-  {
-   "type": "rock_small",
-   "x": 3,
-   "y": 7
+   "x": 16,
+   "y": 46
   }
  ],
  "npcs": [

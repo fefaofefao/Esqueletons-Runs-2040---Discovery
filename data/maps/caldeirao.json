@@ -94,9 +94,14 @@
    "if_not": "malote_pego"
   },
   {
-   "type": "reeds",
-   "x": 13,
+   "type": "mushrooms",
+   "x": 16,
    "y": 4
+  },
+  {
+   "type": "reeds",
+   "x": 7,
+   "y": 5
   }
  ],
  "npcs": [

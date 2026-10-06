@@ -18,18 +18,18 @@
   "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
   "BBBfffffffffffffffBBBBBBBBBBBBBBBB",
   "BBBBBBppppppppBBBBBBBBBBBBBBBBBBBB",
-  "BBBBBBppppppppBBBBggggggggBgggBBBB",
+  "BBBBBBppppppppBBBBggggBBBgggggBBBB",
   "BBBBBBppppppppBBBBggggggggggggpppp",
   "BBBBBBpppppppppppppgggggggggggpppp",
   "BBBBBBpppppppppppppgggggggggggpppp",
-  "BBBgggggggggggBBBBggggggggggggpppp",
-  "BBBBggggggggggBBBBBgBgggggBgBgBBBB",
+  "BBBBggggggggggBBBBggggggggggggpppp",
+  "BBBgggggggggBBBBBBBgBgggggggBgBBBB",
   "BBBggggggggggBBBBBBBBBBBBBBBBBBBBB",
-  "BBBBggggggggggBBBBBBBBBBBBBBBBBBBB",
   "BBBBggggggggBBBBBBBBBBBBBBBBBBBBBB",
+  "BBBBgggggggggBBBBBBBBBBBBBBBBBBBBB",
   "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
-  "BBBgggggggBgggBBBBBBBBBBBBBBBBBBBB",
-  "BBBgggBggBBgggBBBBBBBBBBBBBBBBBBBB",
+  "BBBgggggggggggBBBBBBBBBBBBBBBBBBBB",
+  "BBBBgBgggBggggBBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
  ],
@@ -86,47 +86,47 @@
   },
   {
    "type": "rock_big",
+   "x": 20,
+   "y": 1
+  },
+  {
+   "type": "rock_big",
    "x": 24,
    "y": 1
   },
   {
    "type": "rock_big",
-   "x": 28,
-   "y": 1
-  },
-  {
-   "type": "rock_big",
-   "x": 20,
+   "x": 1,
    "y": 2
   },
   {
    "type": "rock_big",
+   "x": 27,
+   "y": 2
+  },
+  {
+   "type": "rock_big",
+   "x": 29,
+   "y": 2
+  },
+  {
+   "type": "cactus",
    "x": 31,
    "y": 2
   },
   {
    "type": "cactus",
-   "x": 26,
+   "x": 21,
    "y": 3
   },
   {
-   "type": "cactus",
+   "type": "rock_big",
    "x": 1,
    "y": 4
   },
   {
    "type": "rock_big",
-   "x": 19,
-   "y": 4
-  },
-  {
-   "type": "cactus",
    "x": 24,
-   "y": 4
-  },
-  {
-   "type": "rock_big",
-   "x": 28,
    "y": 4
   },
   {
@@ -161,8 +161,18 @@
   },
   {
    "type": "rock_big",
-   "x": 1,
-   "y": 12
+   "x": 4,
+   "y": 10
+  },
+  {
+   "type": "rock_big",
+   "x": 15,
+   "y": 13
+  },
+  {
+   "type": "cactus",
+   "x": 17,
+   "y": 14
   },
   {
    "type": "cactus",
@@ -170,109 +180,84 @@
    "y": 14
   },
   {
-   "type": "cactus",
-   "x": 18,
+   "type": "rock_big",
+   "x": 23,
    "y": 15
+  },
+  {
+   "type": "cactus",
+   "x": 25,
+   "y": 15
+  },
+  {
+   "type": "cactus",
+   "x": 17,
+   "y": 16
   },
   {
    "type": "rock_big",
-   "x": 20,
-   "y": 15
-  },
-  {
-   "type": "cactus",
-   "x": 24,
-   "y": 15
-  },
-  {
-   "type": "cactus",
    "x": 27,
-   "y": 15
-  },
-  {
-   "type": "rock_big",
-   "x": 1,
    "y": 16
   },
   {
    "type": "cactus",
-   "x": 18,
+   "x": 31,
+   "y": 16
+  },
+  {
+   "type": "cactus",
+   "x": 23,
    "y": 17
+  },
+  {
+   "type": "cactus",
+   "x": 25,
+   "y": 17
+  },
+  {
+   "type": "cactus",
+   "x": 32,
+   "y": 18
+  },
+  {
+   "type": "rock_big",
+   "x": 16,
+   "y": 19
   },
   {
    "type": "rock_big",
    "x": 22,
-   "y": 17
+   "y": 19
   },
   {
-   "type": "rock_big",
+   "type": "cactus",
    "x": 24,
-   "y": 17
-  },
-  {
-   "type": "cactus",
-   "x": 28,
-   "y": 17
-  },
-  {
-   "type": "cactus",
-   "x": 30,
-   "y": 17
+   "y": 19
   },
   {
    "type": "rock_big",
-   "x": 26,
-   "y": 18
-  },
-  {
-   "type": "cactus",
    "x": 1,
-   "y": 19
-  },
-  {
-   "type": "rock_big",
-   "x": 17,
-   "y": 19
-  },
-  {
-   "type": "rock_big",
-   "x": 24,
-   "y": 19
-  },
-  {
-   "type": "rock_big",
-   "x": 15,
    "y": 20
   },
   {
    "type": "cactus",
-   "x": 21,
-   "y": 20
-  },
-  {
-   "type": "cactus",
-   "x": 26,
-   "y": 20
-  },
-  {
-   "type": "cactus",
-   "x": 29,
+   "x": 18,
    "y": 20
   },
   {
    "type": "rock_big",
-   "x": 32,
+   "x": 30,
    "y": 20
   },
   {
-   "type": "rock_small",
+   "type": "cactus",
    "x": 25,
    "y": 13
   },
   {
    "type": "rock_small",
-   "x": 13,
-   "y": 13
+   "x": 25,
+   "y": 8
   }
  ],
  "npcs": [

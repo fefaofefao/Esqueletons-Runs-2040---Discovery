@@ -13,53 +13,53 @@
  "ground": [
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
-  "BBggggggggBggggggggppgggggggBBBBBBBBgBBB",
+  "BBgBBgggBBBBgggggggppggBgBggggBBBggBgBBB",
   "BBgggggggggggggggggppggggggggggggggggBBB",
-  "BBBBgggggggggggggggppggggggggggggggggBBB",
+  "BBBggggggggggggggggppgggggggggggggggggBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBBggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppggggggggggggggggBBB",
-  "BBBggggggggggggggggppgggggggggggggggggBB",
+  "BBBggggggggggggggggppggggggggggfffggggBB",
+  "BBBggggggggggggggggppgggggggggfffffgggBB",
+  "BBBggggggggggggggggppggggggggfffffffggBB",
+  "BBBggggggggggggggggppgggggggggfffffgggfB",
+  "BBgggggggggggggggggppggggggggggfffggggfB",
   "BBBggggggggggggggggppgggggggggggggggggfB",
-  "BBBggggggggggggggggppgggggggggggggggggfB",
-  "BBgggggggggggggggggppgggggggggggggggggfB",
-  "BBBggggggggggggggBgppgggggggggggggggggfB",
-  "BBggggggggBBBBBggBgppgBBggggggggggggggfB",
+  "BBBBgggggggggggggggppgggggggggggggggggfB",
+  "BBBgggggBBBggBBBBBgppgggggggggggggggggfB",
   "BBBgppgggBBBBBBBBBBppBBBBffffffffggffffB",
   "BBggppggBBBBBBBBBBBppBBBBffffffffggffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBfffggfffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBfffggfffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBBgppggBBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBBgppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppggBBBBBBBBBBBppBBBBffffffffppffffB",
   "BBBgppgBBBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppggBBBBBBBBBBBppBBBBffffffffpggfffB",
+  "BBggppggBBBBBBBBBBBppBBBBfffggfffppffffB",
+  "BBggppggBBBBBBBBBBBppBBBBfffggfffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppggBBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBggppggBBBBBBBBBBBppBBBBffffffffppffffB",
   "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
+  "BBggppgBBBBBBBBBBBBppBBBBffffffffpggfffB",
   "BBggppgggBBBBBBBBBBppBBBBffffffffpggfffB",
   "BBBgppgggBBBBBBBBBBppBBBBffffffffpggfffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
+  "BBBgppgggBBBBBBBBBBppBBBBffffffffppffffB",
   "BBBgppgggBBBBBBBBBBppBBBBffffffggppffffB",
-  "BBBgppgggBBBBBBBBBBppBBBBffffffggppffffB",
+  "BBggppgggBBBBBBBBBBppBBBBffffffggppffffB",
+  "BBggppggBBBBBBBBBBBppBBBBffffffffppffffB",
   "BBBgppggBBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffppffffB",
-  "BBggppgggBBBBBBBBBBppBBBBffffffffggffffB",
-  "BBggppgggggBBBgggBgppggBgffffffffggffffB",
-  "BBggppgggggggggggggppggggffffffffppffffB",
-  "BBggppgggggggggggggppggggffffffffppffffB",
+  "BBggppggBBBBBBBBBBBppBBBBffffffffggffffB",
+  "BBBgppggggggBgBBgBgppggggffffffffggffffB",
+  "BBBgppgggggggggggggppggggffffffffppffffB",
+  "BBBgppgggggggggggggppggggffffffffppffffB",
   "BBggppgggggggggggggppggggffffffffppffffB",
   "BBggppgggppppppppppppppppppppppppppgggBB",
-  "BBBggggggggggggggggppggggggggggggggggBBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
+  "BBgggggggggggggggggppgggggggggggggggggBB",
   "BBBggggggggggggggggppgggggggggggggggggBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
   "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppggggggggggggggggBBB",
-  "BBgggggggggggggggggppggBgggggggggggggBBB",
-  "BBBgggBBBBgBgBgggggppggBBgggBBgggggBgBBB",
+  "BBBBgggggggggggggggppgggggggggggggggggBB",
+  "BBgggggBBBgBggggBggppgggBgBgggggggggggBB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
  ],
  "spawn": {
@@ -102,16 +102,6 @@
   },
   {
    "type": "snow_pine",
-   "x": 33,
-   "y": 47
-  },
-  {
-   "type": "rock_small",
-   "x": 33,
-   "y": 43
-  },
-  {
-   "type": "snow_pine",
    "x": 23,
    "y": 45
   },
@@ -129,11 +119,6 @@
    "type": "rock_small",
    "x": 26,
    "y": 47
-  },
-  {
-   "type": "snow_pine",
-   "x": 34,
-   "y": 8
   },
   {
    "type": "snow_pine",
@@ -201,229 +186,234 @@
    "y": 16
   },
   {
+   "type": "snowman",
+   "x": 36,
+   "y": 7
+  },
+  {
+   "type": "rock_small",
+   "x": 28,
+   "y": 9
+  },
+  {
+   "type": "snowman",
+   "x": 32,
+   "y": 45
+  },
+  {
    "type": "snow_pine",
-   "x": 29,
-   "y": 1
+   "x": 30,
+   "y": 44
+  },
+  {
+   "type": "snow_pine",
+   "x": 34,
+   "y": 44
   },
   {
    "type": "rock_big",
-   "x": 33,
+   "x": 9,
    "y": 1
   },
   {
    "type": "snow_pine",
-   "x": 11,
+   "x": 38,
+   "y": 1
+  },
+  {
+   "type": "snow_pine",
+   "x": 10,
    "y": 15
   },
   {
    "type": "snow_pine",
-   "x": 22,
-   "y": 15
-  },
-  {
-   "type": "snow_pine",
-   "x": 14,
-   "y": 16
-  },
-  {
-   "type": "snow_pine",
-   "x": 16,
-   "y": 17
-  },
-  {
-   "type": "rock_big",
-   "x": 11,
-   "y": 18
-  },
-  {
-   "type": "snow_pine",
-   "x": 14,
-   "y": 18
-  },
-  {
-   "type": "snow_pine",
-   "x": 17,
-   "y": 19
-  },
-  {
-   "type": "snow_pine",
-   "x": 11,
-   "y": 20
-  },
-  {
-   "type": "rock_big",
    "x": 15,
-   "y": 20
-  },
-  {
-   "type": "snow_pine",
-   "x": 23,
-   "y": 20
-  },
-  {
-   "type": "rock_big",
-   "x": 10,
-   "y": 22
-  },
-  {
-   "type": "snow_pine",
-   "x": 22,
-   "y": 22
-  },
-  {
-   "type": "snow_pine",
-   "x": 13,
-   "y": 24
-  },
-  {
-   "type": "snow_pine",
-   "x": 16,
-   "y": 24
-  },
-  {
-   "type": "snow_pine",
-   "x": 10,
-   "y": 25
+   "y": 15
   },
   {
    "type": "snow_pine",
    "x": 12,
-   "y": 26
-  },
-  {
-   "type": "snow_pine",
-   "x": 23,
-   "y": 26
-  },
-  {
-   "type": "rock_big",
-   "x": 14,
-   "y": 27
-  },
-  {
-   "type": "rock_big",
-   "x": 16,
-   "y": 27
-  },
-  {
-   "type": "snow_pine",
-   "x": 10,
-   "y": 28
-  },
-  {
-   "type": "snow_pine",
-   "x": 22,
-   "y": 28
-  },
-  {
-   "type": "rock_big",
-   "x": 15,
-   "y": 29
+   "y": 16
   },
   {
    "type": "snow_pine",
    "x": 17,
-   "y": 29
+   "y": 17
   },
   {
    "type": "rock_big",
+   "x": 22,
+   "y": 17
+  },
+  {
+   "type": "snow_pine",
+   "x": 14,
+   "y": 19
+  },
+  {
+   "type": "snow_pine",
+   "x": 22,
+   "y": 19
+  },
+  {
+   "type": "snow_pine",
    "x": 10,
-   "y": 30
+   "y": 21
+  },
+  {
+   "type": "rock_big",
+   "x": 17,
+   "y": 21
   },
   {
    "type": "snow_pine",
    "x": 13,
-   "y": 30
+   "y": 22
+  },
+  {
+   "type": "snow_pine",
+   "x": 15,
+   "y": 23
+  },
+  {
+   "type": "snow_pine",
+   "x": 17,
+   "y": 23
+  },
+  {
+   "type": "rock_big",
+   "x": 22,
+   "y": 23
+  },
+  {
+   "type": "rock_big",
+   "x": 10,
+   "y": 25
+  },
+  {
+   "type": "rock_big",
+   "x": 14,
+   "y": 25
+  },
+  {
+   "type": "rock_big",
+   "x": 23,
+   "y": 25
+  },
+  {
+   "type": "snow_pine",
+   "x": 14,
+   "y": 27
+  },
+  {
+   "type": "snow_pine",
+   "x": 22,
+   "y": 27
   },
   {
    "type": "snow_pine",
    "x": 16,
+   "y": 28
+  },
+  {
+   "type": "snow_pine",
+   "x": 10,
+   "y": 29
+  },
+  {
+   "type": "rock_big",
+   "x": 12,
+   "y": 29
+  },
+  {
+   "type": "rock_big",
+   "x": 22,
+   "y": 29
+  },
+  {
+   "type": "snow_pine",
+   "x": 1,
+   "y": 30
+  },
+  {
+   "type": "snow_pine",
+   "x": 15,
+   "y": 30
+  },
+  {
+   "type": "snow_pine",
+   "x": 11,
    "y": 31
   },
   {
    "type": "snow_pine",
    "x": 13,
-   "y": 32
-  },
-  {
-   "type": "snow_pine",
-   "x": 15,
    "y": 33
   },
   {
    "type": "snow_pine",
    "x": 17,
-   "y": 33
+   "y": 34
   },
   {
-   "type": "rock_big",
-   "x": 11,
+   "type": "snow_pine",
+   "x": 23,
    "y": 34
   },
   {
    "type": "rock_small",
-   "x": 36,
-   "y": 4
-  },
-  {
-   "type": "snow_pine",
-   "x": 30,
-   "y": 48
-  },
-  {
-   "type": "snow_pine",
-   "x": 27,
-   "y": 44
-  },
-  {
-   "type": "snow_pine",
-   "x": 5,
-   "y": 6
+   "x": 7,
+   "y": 8
   },
   {
    "type": "rock_small",
-   "x": 6,
-   "y": 42
-  },
-  {
-   "type": "rock_small",
-   "x": 15,
+   "x": 2,
    "y": 46
   },
   {
+   "type": "snow_pine",
+   "x": 2,
+   "y": 16
+  },
+  {
    "type": "rock_small",
-   "x": 30,
-   "y": 44
+   "x": 33,
+   "y": 3
+  },
+  {
+   "type": "rock_small",
+   "x": 12,
+   "y": 37
   },
   {
    "type": "snow_pine",
-   "x": 10,
-   "y": 48
+   "x": 9,
+   "y": 38
+  },
+  {
+   "type": "rock_small",
+   "x": 13,
+   "y": 47
   },
   {
    "type": "snow_pine",
-   "x": 35,
-   "y": 46
-  },
-  {
-   "type": "rock_small",
-   "x": 4,
-   "y": 48
-  },
-  {
-   "type": "rock_small",
-   "x": 34,
-   "y": 12
+   "x": 2,
+   "y": 2
   },
   {
    "type": "snow_pine",
-   "x": 28,
-   "y": 12
+   "x": 8,
+   "y": 23
   },
   {
-   "type": "rock_small",
-   "x": 15,
-   "y": 11
+   "type": "snow_pine",
+   "x": 8,
+   "y": 14
+  },
+  {
+   "type": "snow_pine",
+   "x": 23,
+   "y": 38
   }
  ],
  "npcs": [

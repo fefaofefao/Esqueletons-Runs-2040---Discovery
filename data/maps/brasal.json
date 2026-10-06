@@ -13,36 +13,36 @@
  },
  "ground": [
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
-  "BggBBgBBBgggBggggggppggggBggggBBgggggggB",
-  "BgggggBggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppgggggggggggggggggBB",
-  "BggggggggggggggggggppgggggggggggggggggBB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BBBggggggggggggggggppgggggggggggggggggBB",
-  "BggggggggggggggggggppgggggggggggggggggBB",
-  "BggggggggggggggggggppgggggggggggggggggBB",
+  "BgggBBBBgBgBBBBggggppggBBBBggBgggBBgBggB",
+  "BBgggggggggggBgggggppggggggggggggggggggB",
   "BggggggggggggggggggppggggggggggggggggggB",
-  "BggggggggggggggggggppgggggggggggggggggBB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
+  "BggggggggggggggggggppggggggggggggggggggB",
   "BggggggggppppppppppppppppppppppgggggggBB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
   "BggggggggpggggssssssssssssggggpgggggggBB",
   "BggggggggpggggssssssssssssggggpgggggggBB",
+  "pppppppppppppppsssssssssssggggpggggggggB",
+  "pppppppppppppppsssssssssssggggpggggggggB",
+  "BggggggggpggggssssssssssssggggpggggggggB",
   "BggggggggpggggssssssssssssggggpgggggggBB",
-  "pppppppppppppppsssssssssssggggpgggggggBB",
-  "pppppppppppppppsssssssssssggggpgggggggBB",
-  "BggggggggpggggssssssssssssggggpgggggggBB",
-  "BggggggggpggggssssssssssssggggpgggggggBB",
-  "BBBggggggpgggggggggppgggggggggpgggggggBB",
+  "BggggggggpgggggggggppgggggggggpgggggggBB",
   "BggggggggpgggggggggppgggggggggpggggggggB",
-  "BgggggppppppppppppppppppppppppppppggggBB",
-  "BBggggggggggggpggggppgggggggggggggggggBB",
-  "BBggggggggggggpggggppggggggggggggggggggB",
-  "BBggggggggggggpggggppgggggggggggggggggBB",
+  "BgggggppppppppppppppppppppppppppppgggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppggggggggggggggggggB",
+  "BBBgggggggggggpggggppgggggggggggggggggBB",
   "BgggggggggggggpggggppgggggggggggggggggBB",
-  "BBBgggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggBBB",
+  "BBggggggggggggpggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppgggggggggggggggggBB",
+  "BggggggggggggggggggppggggggggggggggggBBB",
   "BggggggggggggggggggppggggggggggggggggggB",
-  "BBgggggggggggggggggppgggggggggggggggggBB",
-  "BggggggBBBgggggggggppgggggggBBBgggggBggB",
+  "BgBBBggggBBgBBgBgggppgggBBBggggBggBBBggB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
  ],
  "spawn": {
@@ -125,11 +125,6 @@
    "if_not": "fornalha_beaten"
   },
   {
-   "type": "rock_small",
-   "x": 2,
-   "y": 8
-  },
-  {
    "type": "crystal",
    "x": 8,
    "y": 3
@@ -147,11 +142,6 @@
   {
    "type": "rock_small",
    "x": 29,
-   "y": 4
-  },
-  {
-   "type": "rock_big",
-   "x": 32,
    "y": 4
   },
   {
@@ -195,89 +185,129 @@
    "y": 26
   },
   {
-   "type": "rock_small",
-   "x": 33,
-   "y": 2
+   "type": "crystal",
+   "x": 35,
+   "y": 6
   },
   {
-   "type": "rock_small",
-   "x": 15,
+   "type": "crystal",
+   "x": 33,
    "y": 7
   },
   {
-   "type": "dead_tree",
-   "x": 24,
-   "y": 4
-  },
-  {
-   "type": "rock_small",
-   "x": 34,
-   "y": 27
-  },
-  {
-   "type": "rubble",
-   "x": 12,
-   "y": 18
-  },
-  {
-   "type": "rubble",
-   "x": 36,
-   "y": 19
-  },
-  {
-   "type": "rock_small",
-   "x": 34,
-   "y": 11
-  },
-  {
-   "type": "rubble",
-   "x": 2,
-   "y": 28
-  },
-  {
-   "type": "rubble",
-   "x": 27,
-   "y": 4
-  },
-  {
-   "type": "rock_small",
-   "x": 34,
+   "type": "crystal",
+   "x": 37,
    "y": 5
   },
   {
    "type": "rock_small",
-   "x": 11,
-   "y": 30
+   "x": 36,
+   "y": 8
   },
   {
-   "type": "rock_small",
-   "x": 38,
-   "y": 30
+   "type": "rails",
+   "x": 2,
+   "y": 8
   },
   {
-   "type": "rock_small",
-   "x": 8,
-   "y": 25
+   "type": "rails",
+   "x": 3,
+   "y": 8
   },
   {
-   "type": "rock_small",
-   "x": 28,
-   "y": 16
+   "type": "rails",
+   "x": 4,
+   "y": 8
+  },
+  {
+   "type": "rails",
+   "x": 5,
+   "y": 8
+  },
+  {
+   "type": "rails",
+   "x": 6,
+   "y": 8
+  },
+  {
+   "type": "mine_cart",
+   "x": 5,
+   "y": 8
   },
   {
    "type": "rubble",
-   "x": 37,
-   "y": 16
+   "x": 3,
+   "y": 10
+  },
+  {
+   "type": "rubble",
+   "x": 23,
+   "y": 7
   },
   {
    "type": "rock_small",
-   "x": 38,
-   "y": 9
+   "x": 17,
+   "y": 5
   },
   {
    "type": "dead_tree",
-   "x": 28,
+   "x": 29,
+   "y": 5
+  },
+  {
+   "type": "rubble",
+   "x": 25,
+   "y": 2
+  },
+  {
+   "type": "rock_small",
+   "x": 32,
+   "y": 12
+  },
+  {
+   "type": "rock_small",
+   "x": 36,
+   "y": 23
+  },
+  {
+   "type": "rock_small",
+   "x": 32,
    "y": 28
+  },
+  {
+   "type": "rock_small",
+   "x": 29,
+   "y": 24
+  },
+  {
+   "type": "rubble",
+   "x": 35,
+   "y": 28
+  },
+  {
+   "type": "rock_small",
+   "x": 14,
+   "y": 3
+  },
+  {
+   "type": "dead_tree",
+   "x": 14,
+   "y": 30
+  },
+  {
+   "type": "rock_small",
+   "x": 35,
+   "y": 14
+  },
+  {
+   "type": "rock_small",
+   "x": 23,
+   "y": 24
+  },
+  {
+   "type": "rubble",
+   "x": 34,
+   "y": 17
   }
  ],
  "npcs": [

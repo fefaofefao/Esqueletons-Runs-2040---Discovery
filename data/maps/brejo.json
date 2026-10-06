@@ -9,7 +9,9 @@
   "B": "swamp",
   "p": "dock",
   ".": "floor",
-  "s": "dock"
+  "s": "dock",
+  "F": "water",
+  "k": "deep"
  },
  "ground": [
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
@@ -36,11 +38,11 @@
   "BgggggppppppppppppppppppppppppppppgggggB",
   "BgggggggggggggpggggppggggggggggggggggggB",
   "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BgggggggggggggpggggppggggggggggggggggggB",
-  "BggggggggggggggggggppggggggggggggggggggB",
+  "BgggggggggggggpggggppgggggggFFFggggggggB",
+  "BgggggggggggggpggggppggggggFFFFFgggggggB",
+  "BgggggggggggggpggggppgggggFFkkkFFggggggB",
+  "BgggggggggggggpggggppggggggFFFFFgggggggB",
+  "BggggggggggggggggggppgggggggFFFggggggggB",
   "BggggggggggggggggggppggggggggggggggggggB",
   "BggggggggggggggggggppggggggggggggggggggB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
@@ -114,24 +116,9 @@
    "y": 26
   },
   {
-   "type": "reeds",
-   "x": 5,
-   "y": 3
-  },
-  {
-   "type": "dead_tree",
-   "x": 8,
-   "y": 8
-  },
-  {
    "type": "willow",
    "x": 11,
    "y": 6
-  },
-  {
-   "type": "reeds",
-   "x": 2,
-   "y": 2
   },
   {
    "type": "dead_tree",
@@ -169,94 +156,109 @@
    "y": 29
   },
   {
-   "type": "dead_tree",
-   "x": 27,
-   "y": 26
-  },
-  {
-   "type": "reeds",
-   "x": 32,
-   "y": 26
-  },
-  {
    "type": "reeds",
    "x": 36,
    "y": 24
   },
   {
-   "type": "mushrooms",
-   "x": 35,
-   "y": 10
+   "type": "lilypad",
+   "x": 27,
+   "y": 25
   },
   {
-   "type": "reeds",
-   "x": 3,
-   "y": 19
-  },
-  {
-   "type": "mushrooms",
-   "x": 31,
-   "y": 4
-  },
-  {
-   "type": "reeds",
-   "x": 10,
+   "type": "lilypad",
+   "x": 30,
    "y": 27
   },
   {
    "type": "reeds",
-   "x": 36,
-   "y": 13
-  },
-  {
-   "type": "glow_shroom",
-   "x": 34,
-   "y": 24
-  },
-  {
-   "type": "dead_tree",
    "x": 33,
-   "y": 14
-  },
-  {
-   "type": "reeds",
-   "x": 30,
-   "y": 28
-  },
-  {
-   "type": "glow_shroom",
-   "x": 3,
-   "y": 22
-  },
-  {
-   "type": "reeds",
-   "x": 13,
-   "y": 4
-  },
-  {
-   "type": "dead_tree",
-   "x": 7,
-   "y": 24
+   "y": 26
   },
   {
    "type": "reeds",
    "x": 25,
-   "y": 28
+   "y": 27
+  },
+  {
+   "type": "willow",
+   "x": 5,
+   "y": 4
+  },
+  {
+   "type": "dead_tree",
+   "x": 3,
+   "y": 6
+  },
+  {
+   "type": "glow_shroom",
+   "x": 7,
+   "y": 6
   },
   {
    "type": "mushrooms",
-   "x": 37,
-   "y": 18
+   "x": 5,
+   "y": 7
+  },
+  {
+   "type": "glow_shroom",
+   "x": 33,
+   "y": 10
+  },
+  {
+   "type": "dead_tree",
+   "x": 27,
+   "y": 15
+  },
+  {
+   "type": "reeds",
+   "x": 16,
+   "y": 5
+  },
+  {
+   "type": "reeds",
+   "x": 25,
+   "y": 4
   },
   {
    "type": "reeds",
    "x": 6,
-   "y": 13
+   "y": 10
+  },
+  {
+   "type": "mushrooms",
+   "x": 2,
+   "y": 26
   },
   {
    "type": "reeds",
-   "x": 12,
+   "x": 31,
+   "y": 5
+  },
+  {
+   "type": "reeds",
+   "x": 3,
+   "y": 18
+  },
+  {
+   "type": "dead_tree",
+   "x": 35,
    "y": 23
+  },
+  {
+   "type": "reeds",
+   "x": 36,
+   "y": 15
+  },
+  {
+   "type": "reeds",
+   "x": 11,
+   "y": 2
+  },
+  {
+   "type": "mushrooms",
+   "x": 7,
+   "y": 13
   }
  ],
  "npcs": [

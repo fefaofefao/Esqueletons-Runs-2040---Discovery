@@ -9,25 +9,26 @@
   "B": "bush",
   "p": "path",
   "~": "water",
-  ".": "sand"
+  ".": "sand",
+  "F": "deep"
  },
  "ground": [
   "BBBBBBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBBBBBB",
-  "BBgggggBBBggBBgBgBggggBB",
+  "BBggBgggBBgBgBggggBBBggB",
   "BBggfffffffffffffffffggB",
-  "BBggfffffffffffffffffggB",
-  "BBggffgggggggggggggffgBB",
-  "BBBgffgggggggggggggffggB",
-  "BBBgffgggggggggggggffggB",
-  "BBggffggggggpppppppppppp",
-  "BBggffggggggpppppppppppp",
+  "BBggfffffffffffffffffgBB",
+  "BBBBffggggggggggfggffggB",
+  "BBBgffggggggggggfffffggB",
   "BBggffgggggggggggggffggB",
-  "BBBgffgggggggggggggffggB",
-  "BBggffgggggggggggggffgBB",
-  "BBggfffffffffffffffffggB",
-  "BBgggggggggggggffggggggB",
-  "BBggBBggBggggBBBfBBBBggB",
+  "BBggffggggggpppppppppppp",
+  "BBggffggggggpppppppppppp",
+  "BBggf~~~gggggggggggffggB",
+  "BBgg~~~~~ggggggggggffggB",
+  "BBg~~FFF~~gggggggggffgBB",
+  "BBgg~~~~~ffffffffffffgBB",
+  "BBggg~~~gggggggggggggggB",
+  "BBgggggggggggBgBgBBBggBB",
   "BBBBBBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBBBBBB"
  ],
@@ -58,11 +59,6 @@
   },
   {
    "type": "mushrooms",
-   "x": 7,
-   "y": 11
-  },
-  {
-   "type": "mushrooms",
    "x": 17,
    "y": 5
   },
@@ -83,47 +79,52 @@
   },
   {
    "type": "tree_pine",
-   "x": 10,
-   "y": 14
-  },
-  {
-   "type": "tree_oak2",
-   "x": 3,
-   "y": 9
-  },
-  {
-   "type": "tree_oak2",
-   "x": 3,
-   "y": 13
-  },
-  {
-   "type": "tree_oak2",
-   "x": 6,
-   "y": 12
-  },
-  {
-   "type": "tree_pine",
    "x": 19,
    "y": 5
   },
   {
-   "type": "mushrooms",
-   "x": 5,
-   "y": 8
+   "type": "lilypad",
+   "x": 4,
+   "y": 11
   },
   {
-   "type": "rock_small",
+   "type": "lilypad",
+   "x": 7,
+   "y": 13
+  },
+  {
+   "type": "reeds",
    "x": 10,
-   "y": 10
+   "y": 12
+  },
+  {
+   "type": "reeds",
+   "x": 2,
+   "y": 13
+  },
+  {
+   "type": "tree_pine",
+   "x": 18,
+   "y": 16
   },
   {
    "type": "log",
-   "x": 6,
+   "x": 15,
    "y": 5
   },
   {
+   "type": "log",
+   "x": 3,
+   "y": 2
+  },
+  {
    "type": "mushrooms",
-   "x": 18,
+   "x": 8,
+   "y": 3
+  },
+  {
+   "type": "mushrooms",
+   "x": 21,
    "y": 3
   }
  ],

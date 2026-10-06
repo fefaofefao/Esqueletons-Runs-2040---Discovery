@@ -16,22 +16,22 @@
  "ground": [
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
-  "BBgBBgBggBBBBggggggppgggggggBBggg~~~WWWW",
-  "BBggBggggggggggggggpBgggggggggggg~~~WWWW",
-  "BBBggggggggggggggggpBgggggggggggg~f~WWWW",
+  "BBgBBgBggBBBBggggggppgggggffBgggg~~~WWWW",
+  "BBggBggggggggggggggpBgggggfgBgggg~~~WWWW",
+  "BBBggggggggggggggggpBgggggffggggg~f~WWWW",
   "BBgggggggggggggggggpBgggggggggggg~~~WWWW",
-  "BBBggggggggggggggggppgggggggggggg~~~WWWW",
+  "BBBgggggggggfggggggppgggggggggggg~~~WWWW",
   "BBgggggggggggggggggppgggggggggggg~~~WWWW",
   "BBgggggggggggggggggppgggggggggggg~~~WWWW",
-  "BBBBgggggggggggggggppgggggggggg..~~~WWWW",
   "BBgggggggggggggggggppgggggggggg..~~~WWWW",
+  "BBBggggggggggggggggppgggggggggg..~~~WWWW",
   "BBBggggggpppppppppppppppppppppp..~~~WWWW",
   "BBgggggggpggggppppppppppppggggp..~~~WWWW",
   "BBgggggggpggggpfppppppppfpggggp..~~~WWWW",
   "BBgggggggpggggppppppppppppggggp..~~~WWWW",
   "BBgggggggpggggppppppppppppppppppp======W",
   "BBBggggggpggggppppppppppppppppppp======W",
-  "BBgggggggpggggpfppppppppfpggggp..~~~WWWW",
+  "BBBggggggpggggpfppppppppfpggggp..~~~WWWW",
   "BBBggggggpggggppppppppppppggggp..~~~WWWW",
   "BBBggggggpgggggggggppgggggggggp..~~~WWWW",
   "BBBggggggpgggggggggppgggggggggp..~~~WWWW",
@@ -39,11 +39,11 @@
   "BBBggggggggggggggggppgggggggggg..~~~WWWW",
   "BBgggggggggggggggggppgggggggggg..~~~WWWW",
   "BBgggggggggggggggggppgggggggggg..~~~WWWW",
-  "BBggggggggggggggfggppgggggggggg..~~~WWWW",
-  "BBBggfgggggggggfgggppgggggggggg..~~~WWWW",
-  "BBBgggfggggggggfgggppgggggggggggg~~~WWWW",
-  "BBggggggggggfggggggppggggggfggggg~~~WWWW",
-  "BBgBBggBBBgBBBBBgggppgggggBggggBg~~~WWWW",
+  "BBgggggggggggggggggppgggggggggg..~~~WWWW",
+  "BBBggfgggggggggggggppgggggggggg..~~~WWWW",
+  "BBBgggfggggggggggggppgggggggggggg~~~WWWW",
+  "BBggggggggggfBgBgggppggggggfggggg~~~WWWW",
+  "BBgBBggBgBBgBBBBgggppggggggBBBggg~~~WWWW",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB",
   "BBBBBBBBBBBBBBBBBBBppBBBBBBBBBBBBBBBBBBB"
  ],
@@ -255,54 +255,64 @@
    "y": 6
   },
   {
-   "type": "palm",
+   "type": "tree_oak2",
    "x": 14,
    "y": 30
   },
   {
-   "type": "plant",
-   "x": 2,
-   "y": 21
-  },
-  {
-   "type": "plant",
-   "x": 22,
-   "y": 25
-  },
-  {
    "type": "rock_small",
-   "x": 26,
-   "y": 2
-  },
-  {
-   "type": "rock_small",
-   "x": 11,
-   "y": 27
-  },
-  {
-   "type": "rock_small",
-   "x": 14,
-   "y": 6
-  },
-  {
-   "type": "stump",
-   "x": 23,
-   "y": 28
-  },
-  {
-   "type": "stump",
-   "x": 12,
-   "y": 17
+   "x": 29,
+   "y": 24
   },
   {
    "type": "rock_small",
    "x": 5,
-   "y": 4
+   "y": 13
   },
   {
    "type": "stump",
-   "x": 9,
-   "y": 7
+   "x": 13,
+   "y": 4
+  },
+  {
+   "type": "plant",
+   "x": 12,
+   "y": 18
+  },
+  {
+   "type": "plant",
+   "x": 2,
+   "y": 5
+  },
+  {
+   "type": "rock_small",
+   "x": 3,
+   "y": 9
+  },
+  {
+   "type": "stump",
+   "x": 5,
+   "y": 28
+  },
+  {
+   "type": "rock_small",
+   "x": 11,
+   "y": 13
+  },
+  {
+   "type": "rock_small",
+   "x": 2,
+   "y": 13
+  },
+  {
+   "type": "stump",
+   "x": 16,
+   "y": 5
+  },
+  {
+   "type": "plant",
+   "x": 24,
+   "y": 26
   }
  ],
  "npcs": [
