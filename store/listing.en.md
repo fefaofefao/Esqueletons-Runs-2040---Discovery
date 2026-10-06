@@ -43,4 +43,4 @@ Free, with optional, non-intrusive ads.
 - Capturas (paisagem, 1280×720): `store/screenshots/en/`
 
 ## Política de privacidade
-[URL]/privacidade
+https://fefaofefao.github.io/privacidade.html

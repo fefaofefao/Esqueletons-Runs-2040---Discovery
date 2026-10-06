@@ -11,8 +11,8 @@
   "producer": "FSamp Labs",
   "responsible": "Fernando Martins Sampaio",
   "contact_email": "fe.m.sampaio@hotmail.com",
-  "website": "[URL]",
-  "privacy_policy_url": "[URL]/privacidade",
+  "website": "https://fefaofefao.github.io",
+  "privacy_policy_url": "https://fefaofefao.github.io/privacidade.html",
   "package_name": "com.fsamplabs.esqueletonsruns2040.discovery",
   "version_name": "0.1.0",
   "platform": "Android / Google Play (AAB)",
@@ -24,7 +24,7 @@
   ],
   "audience_min_age": 13,
   "admob": {
-    "_comment": "IDs reais entram só no release, via GitHub Secrets (ADMOB_APP_ID, ADMOB_BANNER_ID, ADMOB_INTERSTITIAL_ID, ADMOB_REWARDED_ID). O ID de editor (pub-...) é público e vai no app-ads.txt.",
+    "_comment": "IDs reais entram só no release, via GitHub Secrets (ADMOB_APP_ID, ADMOB_BANNER_ID, ADMOB_INTERSTITIAL_ID, ADMOB_REWARDED_ID). O ID de editor (pub-...) é público e vai no app-ads.txt; se ficar como placeholder, o release o tira do Secret ADMOB_APP_ID (tools/sync_publisher.py --publisher-id-from-env).",
     "app_id_secret": "ADMOB_APP_ID",
     "publisher_id": "[ADMOB_PUB_ID]"
   },

@@ -122,9 +122,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Sem placeholders no release
-        run: python3 tools/check_placeholders.py --release
-
       - name: Conferir Secrets
         env:
           KS: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
@@ -143,7 +140,15 @@ jobs:
           [ -z "$KS" ] && missing="$missing ANDROID_KEYSTORE_BASE64"
           [ -z "$KS_PASS" ] && missing="$missing ANDROID_KEYSTORE_PASSWORD"
           [ -z "$KS_ALIAS" ] && missing="$missing ANDROID_KEY_ALIAS"
-          if [ -n "$missing" ]; then echo "::error::Secrets ausentes:$missing (veja docs/BUILD.md)"; exit 1; fi
+          if [ -n "$missing" ]; then echo "::error::Secrets ausentes:$missing (veja docs/PUBLICAR_PELO_NAVEGADOR.md)"; exit 1; fi
+
+      - name: ID de editor do AdMob (tirado do ADMOB_APP_ID se faltar)
+        env:
+          ADMOB_APP_ID: ${{ secrets.ADMOB_APP_ID }}
+        run: python3 tools/sync_publisher.py --publisher-id-from-env
+
+      - name: Sem placeholders no release
+        run: python3 tools/check_placeholders.py --release
 
       - uses: ./.github/actions/setup-godot-android
 
@@ -189,4 +194,12 @@ jobs:
         with:
           name: esqueletons-release-aab
           path: build/esqueletons-release.aab
+          retention-days: 30
+
+      - name: Site da produtora (política e app-ads.txt já com o ID de editor)
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-da-produtora
+          path: site/
+          include-hidden-files: true
           retention-days: 30

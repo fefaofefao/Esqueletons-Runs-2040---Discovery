@@ -22,6 +22,7 @@ SCAN = [
     "store",
     "privacy",
     "app-ads.txt",
+    "site",
 ]
 TEXT_EXT = {".json", ".csv", ".cfg", ".godot", ".md", ".txt", ".html", ".xml", ".po"}
 PATTERN = re.compile(r"\[(?:[A-ZÀ-Ý][A-ZÀ-Ý0-9_]*)(?: [A-ZÀ-Ý0-9_]+)*\]")

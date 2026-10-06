@@ -13,16 +13,17 @@ Gerado por `tools/store/gen_play_console.py` a partir de `config/publisher.json`
 | Pacote | `com.fsamplabs.esqueletonsruns2040.discovery` |
 | Desenvolvedor | FSamp Labs (Fernando Martins Sampaio) |
 | E-mail de contato | fe.m.sampaio@hotmail.com |
-| Site | [URL] |
+| Site | https://fefaofefao.github.io |
 | Categoria | Jogos → RPG |
 | Tags sugeridas | RPG, Coleta de criaturas, Aventura, Pixel art, Single player, Offline |
 
 ## 2. Conteúdo do app (Política → Conteúdo do app)
 
 ### Política de privacidade
-- URL: **[URL]/privacidade**
-- Arquivos para publicar no site: `privacy/privacidade.pt_BR.html`, `privacy/privacy.en.html`, `privacy/privacidad.es.html`.
-- Publique também o `app-ads.txt` na raiz de [URL] (ex.: `[URL]/app-ads.txt`) e informe o site na ficha do AdMob.
+- URL: **https://fefaofefao.github.io/privacidade.html**
+- Arquivos para a raiz de https://fefaofefao.github.io: a pasta `site/` (index, política em PT/EN/ES e `app-ads.txt`). O artefato `site-da-produtora` do build de release traz a mesma pasta já com o ID de editor no `app-ads.txt`.
+- Informe https://fefaofefao.github.io como site do desenvolvedor na Play Console (é onde o AdMob procura o `https://fefaofefao.github.io/app-ads.txt`).
+- Passo a passo pelo navegador: `docs/PUBLICAR_PELO_NAVEGADOR.md`.
 
 ### Acesso ao app
 - **Todas as funcionalidades estão disponíveis sem acesso especial.** Não há login, conta ou assinatura.

@@ -2,6 +2,7 @@
 """Documentos de publicação gerados de config/publisher.json (fonte única):
   privacy/privacidade.pt_BR.{md,html}, privacy/privacy.en.{md,html}, privacy/privacidad.es.{md,html}
   app-ads.txt
+  site/ (index.html, privacidade.html, privacy.html, privacidad.html, app-ads.txt): o site da produtora
   store/listing.<idioma>.md   (título ≤30, curta ≤80, longa ≤4000; sem marcas de terceiros)
 Placeholders como [URL] e [ADMOB_PUB_ID] continuam visíveis; o build de release
 falha enquanto existirem (tools/check_placeholders.py).
@@ -184,9 +185,40 @@ def check():
     return errors
 
 
+SITE_PAGES = {"pt_BR": "privacidade.html", "en": "privacy.html", "es": "privacidad.html"}
+LANG_LABEL = {"pt_BR": "Português", "en": "English", "es": "Español"}
+
+
+def write_site(site_pages, app_ads):
+    """site/: o que vai para o site da produtora (GitHub Pages ou outro), na raiz:
+    index.html, a política nos 3 idiomas e o app-ads.txt."""
+    site = ROOT / "site"
+    site.mkdir(exist_ok=True)
+    for lang, page in site_pages.items():
+        (site / SITE_PAGES[lang]).write_text(page, encoding="utf-8")
+    (site / "app-ads.txt").write_text(app_ads, encoding="utf-8")
+    (site / ".nojekyll").write_text("", encoding="utf-8")
+    games = "\n".join(
+        f'<section lang="{P[l]["lang"]}"><h2>{html.escape(PUB["game_name"])} — {html.escape(PUB["edition"][l])}</h2>'
+        f'<p>{html.escape(L[l]["short"])}</p><p><a href="{SITE_PAGES[l]}">{html.escape(P[l]["title"])}</a></p></section>'
+        for l in P)
+    email = html.escape(PUB["contact_email"])
+    (site / "index.html").write_text(f"""<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{html.escape(PUB['producer'])}</title>
+<style>body{{font-family:system-ui,sans-serif;max-width:720px;margin:2rem auto;padding:0 16px;line-height:1.55;color:#222;background:#fff}}h1{{font-size:1.6rem}}h2{{font-size:1.1rem;margin-top:1.6rem}}a{{color:#4a3fb0}}</style>
+</head><body>
+<h1>{html.escape(PUB['producer'])}</h1>
+{games}
+<p>Contato · Contact · Contacto: <a href="mailto:{email}">{email}</a></p>
+</body></html>
+""", encoding="utf-8")
+
+
 def write():
     out = ROOT / "privacy"
     out.mkdir(exist_ok=True)
+    site_pages = {}
     for lang, d in P.items():
         title = f"{d['title']} — {PUB['game_name']} ({PUB['edition'][lang]})"
         md = [f"# {title}", ""]
@@ -207,8 +239,12 @@ def write():
 </body></html>
 """
         (out / f"{d['file']}.html").write_text(page, encoding="utf-8")
+        nav = " · ".join(f'<a href="{SITE_PAGES[l]}" lang="{P[l]["lang"]}">{LANG_LABEL[l]}</a>' for l in P)
+        site_pages[lang] = page.replace("</head><body>\n", f"</head><body>\n<p>{nav}</p>\n", 1)
     pub_id = PUB.get("admob", {}).get("publisher_id", "[ADMOB_PUB_ID]")
-    (ROOT / "app-ads.txt").write_text(f"google.com, {pub_id}, DIRECT, f08c47fec0942fa0\n", encoding="utf-8")
+    app_ads = f"google.com, {pub_id}, DIRECT, f08c47fec0942fa0\n"
+    (ROOT / "app-ads.txt").write_text(app_ads, encoding="utf-8")
+    write_site(site_pages, app_ads)
     st = ROOT / "store"
     st.mkdir(exist_ok=True)
     for lang, d in L.items():

@@ -18,18 +18,15 @@ Configure em **Settings → Secrets and variables → Actions** do repositório:
 | `ANDROID_KEY_ALIAS` | alias da chave |
 | `ADMOB_APP_ID` e IDs dos blocos | fase 5 |
 
-Para criar o keystore uma única vez (guarde-o num lugar seguro: sem ele não há como atualizar o app):
-```bash
-keytool -genkeypair -v -keystore esqueletons-release.keystore -alias esqueletons \
-  -keyalg RSA -keysize 2048 -validity 10000
-base64 -w0 esqueletons-release.keystore > keystore.b64   # conteúdo do ANDROID_KEYSTORE_BASE64
-```
-Use a mesma senha para o keystore e a chave. Nunca faça commit do keystore: o `.gitignore` bloqueia `*.keystore`, `*.jks` e `*.p12`. Recomendado: ativar a **Assinatura de apps do Google Play**, para que a chave acima seja só a de upload.
+Para criar o keystore uma única vez **sem instalar nada**: Actions → **Gerar keystore de upload** → *Run workflow*. O artefato (vale 1 dia) traz os 3 valores; grave os Secrets, guarde `upload-keystore.jks` e a senha num lugar seguro e apague o artefato. O workflow se recusa a gerar outra chave se o Secret já existir.
+
+Nunca faça commit do keystore: o `.gitignore` bloqueia `*.keystore`, `*.jks` e `*.p12`. Ative a **Assinatura de apps do Google Play**, para que essa chave seja só a de upload.
 
 ## Antes do primeiro release
-1. Preencha `config/publisher.json` (produtora, sobrenome, e-mail, site). O release falha enquanto houver `[PLACEHOLDER]`.
-2. Rode `python3 tools/sync_publisher.py` (também regera a política, o `app-ads.txt`, as fichas da loja e o `PLAY_CONSOLE.md`) e faça o commit.
-3. Crie a tag: `git tag v0.1.0 && git push origin v0.1.0`.
+Passo a passo completo, feito só pelo navegador: **`docs/PUBLICAR_PELO_NAVEGADOR.md`**. Em resumo:
+1. O site da produtora é `https://fefaofefao.github.io` (GitHub Pages gratuito). Os arquivos estão em `site/`. Para usar outro domínio, troque `website` e `privacy_policy_url` em `config/publisher.json` e rode `python3 tools/sync_publisher.py`.
+2. O ID de editor do AdMob (`pub-...`) não precisa ser editado: se estiver como placeholder, o release o tira do Secret `ADMOB_APP_ID`. O artefato `site-da-produtora` do release já traz o `app-ads.txt` preenchido.
+3. Gere o AAB: Actions → **Build** → *Run workflow* com *release* marcado (ou crie a tag `v0.1.0`).
 
 ## Rodar localmente
 ```bash

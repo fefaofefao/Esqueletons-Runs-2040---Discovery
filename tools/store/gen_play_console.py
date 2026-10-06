@@ -43,8 +43,10 @@ def main():
     a("")
     a("### Política de privacidade")
     a(f"- URL: **{pub['privacy_policy_url']}**")
-    a("- Arquivos para publicar no site: `privacy/privacidade.pt_BR.html`, `privacy/privacy.en.html`, `privacy/privacidad.es.html`.")
-    a(f"- Publique também o `app-ads.txt` na raiz de {site} (ex.: `{site}/app-ads.txt`) e informe o site na ficha do AdMob.")
+    a(f"- Arquivos para a raiz de {site}: a pasta `site/` (index, política em PT/EN/ES e `app-ads.txt`). "
+      "O artefato `site-da-produtora` do build de release traz a mesma pasta já com o ID de editor no `app-ads.txt`.")
+    a(f"- Informe {site} como site do desenvolvedor na Play Console (é onde o AdMob procura o `{site}/app-ads.txt`).")
+    a("- Passo a passo pelo navegador: `docs/PUBLICAR_PELO_NAVEGADOR.md`.")
     a("")
     a("### Acesso ao app")
     a("- **Todas as funcionalidades estão disponíveis sem acesso especial.** Não há login, conta ou assinatura.")
