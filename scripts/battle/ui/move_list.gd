@@ -5,7 +5,10 @@ extends Control
 
 signal tapped(index: int)
 
-const ROW := Vector2(156, 15)
+## Linhas altas e com folga entre si: no celular cada golpe é um alvo de toque
+## grande, sem risco de acertar o vizinho.
+const ROW := Vector2(160, 18)
+const GAP := 3.0
 const NAME_WIDTH := 100.0
 
 var monster: Monster
@@ -24,29 +27,29 @@ func _ready() -> void:
 	for i in 4:
 		var r := Control.new()
 		r.size = ROW
-		r.position = Vector2(0, i * (ROW.y + 1))
+		r.position = Vector2(0, i * (ROW.y + GAP))
 		r.mouse_filter = Control.MOUSE_FILTER_STOP
 		r.gui_input.connect(_on_row_input.bind(i))
 		r.draw.connect(_draw_row.bind(r, i))
 		var icon := TextureRect.new()
-		icon.position = Vector2(4, 3)
+		icon.position = Vector2(4, 4)
 		icon.name = "Icon"
 		r.add_child(icon)
 		var name_l := UiTheme.label("")
-		name_l.position = Vector2(15, 1)
+		name_l.position = Vector2(16, 2)
 		name_l.size = Vector2(NAME_WIDTH, 12)
 		name_l.clip_text = true
 		name_l.name = "Name"
 		r.add_child(name_l)
 		var pp_l := UiTheme.label("", UiTheme.TEXT_VALUE)
 		pp_l.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-		pp_l.position = Vector2(ROW.x - 34, 1)
+		pp_l.position = Vector2(ROW.x - 34, 2)
 		pp_l.size = Vector2(30, 12)
 		pp_l.name = "PP"
 		r.add_child(pp_l)
 		add_child(r)
 		_rows.append(r)
-	size = Vector2(ROW.x, 4 * (ROW.y + 1))
+	size = Vector2(ROW.x, 4 * ROW.y + 3 * GAP)
 
 
 func open(m: Monster, e: BattleEngine) -> void:
@@ -113,9 +116,9 @@ func _draw_row(r: Control, i: int) -> void:
 		var x := ROW.x - 39.0
 		if w == "light":
 			for k in 2:
-				r.draw_polyline(PackedVector2Array([Vector2(x + k * 3, 4), Vector2(x + k * 3 + 2, 7), Vector2(x + k * 3, 10)]), Color8(40, 150, 200), 1.0)
+				r.draw_polyline(PackedVector2Array([Vector2(x + k * 3, 6), Vector2(x + k * 3 + 2, 9), Vector2(x + k * 3, 12)]), Color8(40, 150, 200), 1.0)
 		elif w == "heavy":
-			r.draw_rect(Rect2(x, 4, 5, 6), Color8(200, 110, 40))
+			r.draw_rect(Rect2(x, 6, 5, 6), Color8(200, 110, 40))
 
 
 func _on_row_input(event: InputEvent, i: int) -> void:

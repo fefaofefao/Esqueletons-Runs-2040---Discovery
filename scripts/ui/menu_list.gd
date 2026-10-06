@@ -21,6 +21,10 @@ var light_text := false
 var label_width := 0.0
 ## Máximo de linhas visíveis (0 = todas). Acima disso a lista rola.
 var max_visible := 0
+## Espaço entre linhas e altura mínima de cada linha (em px). Na batalha, linhas
+## mais altas para o toque.
+var row_spacing := 0
+var row_height := 0
 var _offset := 0
 
 var _rows: Array = []
@@ -49,12 +53,15 @@ func current_id() -> String:
 
 
 func _build() -> void:
+	add_theme_constant_override("separation", row_spacing)
 	for c in get_children():
 		c.queue_free()
 	_rows.clear()
 	for i in items.size():
 		var row := HBoxContainer.new()
 		row.mouse_filter = Control.MOUSE_FILTER_STOP
+		if row_height > 0:
+			row.custom_minimum_size.y = row_height
 		row.add_theme_constant_override("separation", 1)
 		var cursor := UiTheme.label("▶")
 		cursor.custom_minimum_size.x = 7

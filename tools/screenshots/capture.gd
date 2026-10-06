@@ -36,6 +36,10 @@ func _ready() -> void:
 			await _region_shots(a.substr(9))
 			get_tree().quit()
 			return
+	if "--battle-ui" in OS.get_cmdline_user_args():
+		await _battle_ui_shots()
+		get_tree().quit()
+		return
 	if "--travel" in OS.get_cmdline_user_args():
 		await _travel_shots()
 		get_tree().quit()
@@ -588,4 +592,33 @@ func _travel_shots() -> void:
 	await _wait(1.2)
 	await _shot("t5_resgate_1")
 	await _advance([], "t6_resgate_2", 1, 6)
+
+
+## Tela de batalha: anel, lista de golpes e troca (revisão de UX/toque).
+func _battle_ui_shots() -> void:
+	Game.start_new_game("Téo")
+	await _wait(1.0)
+	await _advance()
+	for f in ["intro_done", "bento_met", "has_partner", "partner_lia", "partner_taro", "tut_battle", "tut_marker"]:
+		SaveGame.set_flag(f)
+	var lia := Monster.create("faroleira_2", 24)
+	lia.nickname = "Lia"
+	var taro := Monster.create("grumete_2", 24)
+	taro.nickname = "Taro"
+	SaveGame.data["party"] = [lia.to_dict(), taro.to_dict(), Monster.create("lenhador_2", 22).to_dict()]
+	await _goto("rota_1", Vector2i(19, 43), "up")
+	Game.start_battle({"kind": "wild", "seed": 5, "enemies": [["mineiro_1", 20], ["herborista_1", 20]]})
+	for i in 80:
+		await _wait(0.1)
+		if Game.battle and Game.battle.state == "ring":
+			break
+		if Game.battle and Game.battle.state not in ["ring"]:
+			Game.battle._log.skip()
+	await _shot("u1_anel")
+	Game.battle._on_ring_chosen("moves")
+	await _wait(0.4)
+	await _shot("u2_golpes")
+	Game.battle._open_switch(false)
+	await _wait(0.4)
+	await _shot("u3_troca")
 

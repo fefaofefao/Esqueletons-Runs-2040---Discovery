@@ -31,6 +31,10 @@ func _ready() -> void:
 	for o in OPTIONS:
 		var r := TextureRect.new()
 		r.texture = load("res://assets/battle/ring_%s.png" % o.id)
+		# área de toque de 24×24 em volta do ícone de 16 (desenho igual)
+		r.custom_minimum_size = Vector2(24, 24)
+		r.size = Vector2(24, 24)
+		r.stretch_mode = TextureRect.STRETCH_KEEP_CENTERED
 		r.mouse_filter = Control.MOUSE_FILTER_STOP
 		r.gui_input.connect(_on_icon_input.bind(str(o.id)))
 		add_child(r)
@@ -71,7 +75,7 @@ func refresh() -> void:
 	for o in OPTIONS:
 		var r: TextureRect = _icons[o.id]
 		var sel: bool = o.id == selected
-		r.position = Vector2(o.dir) * RADIUS * (1.12 if sel else 1.0) - Vector2(8, 8)
+		r.position = Vector2(o.dir) * RADIUS * (1.12 if sel else 1.0) - Vector2(12, 12)
 		r.modulate = Color(1, 1, 1, 0.35) if disabled.has(o.id) else (Color(1.25, 1.25, 1.1) if sel else Color(1, 1, 1, 0.92))
 		r.scale = Vector2.ONE
 	_label.text = tr(_key(selected))

@@ -124,7 +124,9 @@ func _build_ui() -> void:
 	box.add_child(_list_title)
 	_list = MenuList.new()
 	_list.label_width = 120
-	_list.max_visible = 6
+	_list.max_visible = 5
+	_list.row_height = 17
+	_list.row_spacing = 1
 	box.add_child(_list)
 	_list.activated.connect(_on_list_activated)
 	_list.cancelled.connect(_on_list_cancelled)
@@ -152,7 +154,7 @@ func _layout() -> void:
 		p.position = Vector2(_ox, 0) + RIBBON_POS
 		p.custom_minimum_size = RIBBON_SIZE
 		p.size = RIBBON_SIZE
-	_moves.position = Vector2(_ox + 44, 64)
+	_moves.position = Vector2(_ox + 40, 58)
 	_list_panel.position = Vector2(_ox + 62, 30)
 	_repeat.position = Vector2(_ox + 2, 124)
 	_place_timeline()
