@@ -69,7 +69,7 @@ L = {
 Esqueletons Runs 2040 — Edição Discovery é um RPG de aventura em pixel art, o primeiro jogo da série. Viaje com a Lia e o Taro, seus dois parceiros, por seis regiões, cada uma com um Guardião da família do Rei.
 
 ESQUELETOS QUE CRESCEM
-• 80 espécies para descobrir no Ossário, todas originais.
+• 95 espécies para descobrir no Ossário, todas originais.
 • Nível é idade: cada vitória pode virar um aniversário, com bolo, velas e confete.
 • Na idade certa, o esqueleto cresce de Bebê para Adolescente e Adulto, com visual e golpes novos.
 • Esqueletos Golden: raros, brilhantes e recrutáveis.
