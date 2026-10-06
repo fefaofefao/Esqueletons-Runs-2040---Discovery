@@ -40,7 +40,7 @@ No **Mosteiro do Eco**, o monge-esqueleto **Nevasco** explica que o eco da coroa
 | Grampo, Rajada, Monja Brisa | domadores da rota | Caminho dos Alpinistas; Rajada introduz a velocidade |
 | Guardas Leais (2) | domadores condicionais | Consequência da escolha 4 (só se Ossório soube) |
 | Dona Lareira | Rancho | Cura; conta desde quando é inverno |
-| Seu Cachecol | Loja | Loja só com itens fortes (Poção G, Antídoto, Reviver) |
+| Seu Cachecol | Loja | Loja só com itens fortes (Fatia de Bolo, Erva Amarga, Vela de Aniversário) |
 | Floquinho | humor | O boneco de neve "Prefeito" |
 | Vô Pinhão | lore | A Alva menina; "tristeza de princesa vira inverno" |
 | Degelo | dica | Ensina a mecânica da Guardiã (velocidade e congelamento) |
@@ -52,8 +52,8 @@ No **Mosteiro do Eco**, o monge-esqueleto **Nevasco** explica que o eco da coroa
 ## 7. Casas de domadores
 | Dono | Tema da equipe | Recompensa |
 |---|---|---|
-| Patinadora Lâmina | Velocidade (Cargueiro + Cinzelvo) | 820 moedas + 2 Poções G |
-| Irmãos Granizo | Congelamento e cura (Cinzelvo + Chaleirel) | 800 moedas + 2 Reviver |
+| Patinadora Lâmina | Velocidade (Cargueiro + Cinzelvo) | 820 moedas + 2 Fatias de Bolo |
+| Irmãos Granizo | Congelamento e cura (Cinzelvo + Chaleirel) | 800 moedas + 2 Vela de Aniversário |
 
 ## 8. Escolhas e consequências
 | Escolha | Opções | Consequência |
@@ -62,7 +62,7 @@ No **Mosteiro do Eco**, o monge-esqueleto **Nevasco** explica que o eco da coroa
 | Recorrente | Lutar / só conversar | 900 moedas e +10% no marcador; a cena do arco acontece nos dois casos |
 | Consequência da escolha 4 | — | Se contou o registro em Ossório: 2 Guardas Leais na Rota 5 (mais batalhas) |
 | **Escolha 5: a carta da Alva** | Levar / Não levar | Levar: o item-chave **Carta da Alva**, que no Castelo pode ser entregue ao Rei (diálogo exclusivo). **Obrigatória para o Final A (Redimir).** Não levar: a Alva guarda a carta, e o jogador pode voltar e aceitar depois. |
-| Missão do broto | Fazer / ignorar | 2 Poções G |
+| Missão do broto | Fazer / ignorar | 2 Fatias de Bolo |
 
 ## 9. Falas (PT-BR, na ordem dos roteiros)
 
@@ -175,7 +175,7 @@ No **Mosteiro do Eco**, o monge-esqueleto **Nevasco** explica que o eco da coroa
   - (escolha) "`OPT_P_RANCH`" → `vila_mare/rancho` / "`OPT_P_LEAVE`"
 
 ### `picos/cachecol`
-- **Seu Cachecol:** Cachecol, luva, gorro. E poção, claro. Frio não mata, mas cansa.
+- **Seu Cachecol:** Cachecol, luva, gorro. E caldo quente, claro. Frio não mata, mas cansa.
 - *[ação shop: {"id": "geada"}]*
 - **Seu Cachecol:** Volta logo. E fecha a porta!
 
@@ -201,7 +201,7 @@ No **Mosteiro do Eco**, o monge-esqueleto **Nevasco** explica que o eco da coroa
 
 ### `picos/camelia_obrigada`
 - *[ação take_item: {"item": "broto_cha", "n": 1}]*
-- **Camélia:** Ele tá vivo! Toma duas Poções G. E volta daqui a um ano pro primeiro chá.
+- **Camélia:** Ele tá vivo! Toma duas fatias de bolo. E volta daqui a um ano pro primeiro chá.
 - *[ação give_item: {"item": "pocao_g", "n": 2}]*
 - *[flag camelia_done = True]*
 
@@ -292,4 +292,4 @@ No **Mosteiro do Eco**, o monge-esqueleto **Nevasco** explica que o eco da coroa
 - **Alva:** Diz pra minha mãe que eu tô bem. Mais ou menos bem.
 
 ## 10. Contagem
-Cerca de **931 palavras** de texto de jogo em PT-BR nesta região.
+Cerca de **933 palavras** de texto de jogo em PT-BR nesta região.

@@ -5,7 +5,7 @@ Fase 4d. **Gerado por `tools/maps/pantano.py`**, a mesma fonte que grava os mapa
 **Duração alvo:** 25 min. **Idades:** chegada 34–42; selvagens 33–39; domadores 36–43; Guardiã ~48.
 
 ## 1. Problema local
-Toda noite a **névoa verde** do caldeirão da Guardiã **Musga** desce sobre **Brejo Alto**. Quem respira tosse, e de manhã a vila faz fila na porta dela para buscar o remédio que só ela sabe fazer. Quem sai da vila perde a dose do dia: "Ninguém sai, ninguém se perde" do jeito da Musga. O Rancho e a loja estão sem antídoto (ela compra todos). A névoa também esconde a estrada do norte.
+Toda noite a **névoa verde** do caldeirão da Guardiã **Musga** desce sobre **Brejo Alto**. Quem respira tosse, e de manhã a vila faz fila na porta dela para buscar o remédio que só ela sabe fazer. Quem sai da vila perde a dose do dia: "Ninguém sai, ninguém se perde" do jeito da Musga. O Rancho e a loja estão sem erva amarga (ela compra todos). A névoa também esconde a estrada do norte.
 
 ## 2. Pista de 2040 (nº 4)
 Antes da luta, a Musga **cheira o ar** e diz: "Você tem cheiro de casa. De família." Os esqueletos da família real sentem os parentes: o protagonista é do sangue do Rei.
@@ -20,7 +20,7 @@ Antes da luta, a Musga **cheira o ar** e diz: "Você tem cheiro de casa. De fam�
 - **Parentesco:** sobrinha
 - **Personalidade:** irônica, fofoqueira, solitária; chama todo mundo de "querido" e solta fofocas (o tique dela)
 - **Motivo para servir ao Rei:** **Medo** de ser esquecida de novo: da primeira vez morreu sozinha numa torre. "Quem precisa de mim não me esquece."
-- **Mecânica-tema:** **Veneno e cura.** A equipe envenena e se cura (Ervaçal, Regalírio). Ensina o **tempo do veneno** (3–5 turnos), o uso de **antídotos** e a bater primeiro em quem cura. Lodo e as Irmãs Taboa dão a dica.
+- **Mecânica-tema:** **Veneno e cura.** A equipe envenena e se cura (Ervaçal, Regalírio). Ensina o **tempo do veneno** (3–5 turnos), o uso de **ervas amargas** e a bater primeiro em quem cura. Lodo e as Irmãs Taboa dão a dica.
 - **Equipe:** Ervaçal 49, Marretão 48, Regalírio 47, Cogumestre 48.
 - **Recompensa:** 1300 moedas; a névoa para e a estrada norte (Rota 4) aparece.
 
@@ -28,7 +28,7 @@ Antes da luta, a Musga **cheira o ar** e diz: "Você tem cheiro de casa. De fam�
 | Mapa | Conteúdo |
 |---|---|
 | **Rota 3** (`rota_3`) | Sai de Brasal (depois da Tia). 3 caminhos: **Trilha das Tábuas** (oeste: Traíra, Caniço, Marreco), **Capinzal** (leste, mais selvagens) e **Passagem do Desmoronamento** (centro: entulho que só some com o **Martelo da Tia**, com um selvagem forte). Placa e o Barqueiro Remanso dão a dica. |
-| **Brejo Alto** (`brejo`) | Vila de palafitas: Rancho (Garça, onde acontece a escolha 3), Loja sem antídoto (Junco), casas das Irmãs Taboa e do Bagre, a casa da Vó Neblina (abre se você doar), NPCs, missão do malote e saída oeste para o Caldeirão. |
+| **Brejo Alto** (`brejo`) | Vila de palafitas: Rancho (Garça, onde acontece a escolha 3), Loja sem erva amarga (Junco), casas das Irmãs Taboa e do Bagre, a casa da Vó Neblina (abre se você doar), NPCs, missão do malote e saída oeste para o Caldeirão. |
 | **Caldeirão da Musga** (`caldeirao`) | Salão com selvagens, o malote roubado, Boticário Fel, câmara sul (Brumaga, se você doou) e o caldeirão da Musga ao norte. |
 | Interiores | Rancho da Garça, Venda do Junco, casas das Irmãs Taboa, do Bagre e da Vó Neblina. |
 
@@ -36,9 +36,9 @@ Antes da luta, a Musga **cheira o ar** e diz: "Você tem cheiro de casa. De fam�
 | NPC | Função | Por que existe |
 |---|---|---|
 | Barqueiro Remanso | dica | Explica os 3 caminhos e reconhece o Martelo da Tia |
-| Traíra, Caniço, Marreco | domadores da rota | Trilha das Tábuas; Marreco dá antídotos (que podem ir para a doação) |
-| Dona Garça | Rancho + escolha 3 | Cura; pede os antídotos para as crianças |
-| Seu Junco | Loja | Mostra o problema: a Musga compra todo antídoto |
+| Traíra, Caniço, Marreco | domadores da rota | Trilha das Tábuas; Marreco dá ervas amargas (que podem ir para a doação) |
+| Dona Garça | Rancho + escolha 3 | Cura; pede os ervas amargas para as crianças |
+| Seu Junco | Loja | Mostra o problema: a Musga compra todo erva amarga |
 | Girino | humor | Recorde de fôlego; muda depois da Guardiã |
 | Seu Sapé | lore | Conta como a Musga morreu esquecida numa torre |
 | Lodo | dica | Ensina o tempo do veneno e a bater em quem cura |
@@ -49,16 +49,16 @@ Antes da luta, a Musga **cheira o ar** e diz: "Você tem cheiro de casa. De fam�
 ## 7. Casas de domadores
 | Dono | Tema da equipe | Recompensa |
 |---|---|---|
-| Irmãs Taboa | Veneno em dobro (Ervaçal + Esporito) | 640 moedas + 2 Antídotos |
-| Pescador Bagre | Aguentar e curar (Marretão + Regalírio) | 660 moedas + 2 Poções G |
-| Vó Neblina (só se doar) | Névoa: veneno e cura (Ervaçal + Regalírio) | 700 moedas + 2 Reviver; conta onde está a Brumaga |
+| Irmãs Taboa | Veneno em dobro (Ervaçal + Esporito) | 640 moedas + 2 Ervas Amargas |
+| Pescador Bagre | Aguentar e curar (Marretão + Regalírio) | 660 moedas + 2 Fatias de Bolo |
+| Vó Neblina (só se doar) | Névoa: veneno e cura (Ervaçal + Regalírio) | 700 moedas + 2 Vela de Aniversário; conta onde está a Brumaga |
 
 ## 8. Escolhas e consequências
 | Escolha | Opções | Consequência |
 |---|---|---|
 | Caminho da Rota 3 | Tábuas / Capinzal / Desmoronamento | Moedas e itens / XP e marcadores / curto, só com o Martelo da Tia |
-| **Escolha 3: os antídotos** | Doar / Guardar | Doar (até 3): as crianças e a Vó Neblina se curam, a casa dela abre (3ª casa de domadores) e a única **Brumaga** aparece no Caldeirão; **+1 Redenção** (`red_pantano`). Guardar: você fica com os itens. |
-| Missão do malote | Fazer / ignorar | 1 Reviver + 2 Antídotos (que podem ajudar na doação) |
+| **Escolha 3: os ervas amargas** | Doar / Guardar | Doar (até 3): as crianças e a Vó Neblina se curam, a casa dela abre (3ª casa de domadores) e a única **Brumaga** aparece no Caldeirão; **+1 Redenção** (`red_pantano`). Guardar: você fica com os itens. |
+| Missão do malote | Fazer / ignorar | 1 Vela de Aniversário + 2 Ervas Amargas (que podem ajudar na doação) |
 
 ## 9. Falas (PT-BR, na ordem dos roteiros)
 
@@ -99,10 +99,10 @@ Antes da luta, a Musga **cheira o ar** e diz: "Você tem cheiro de casa. De fam�
 ### `pantano/marreco`
 - **Marreco:** Meus patos fugiram da névoa. Meus esqueletos ficaram. Sabe por quê? Lealdade!
 - *[batalha tamer: Fumarel 38, Marretão 38 · 570 moedas + 2× antidoto]*
-- **Marreco:** Leva esses antídotos. Lá na vila tão precisando mais que eu.
+- **Marreco:** Leva essas ervas amargas. Lá na vila tão precisando mais que eu.
 
 ### `pantano/marreco_depois`
-- **Marreco:** Leva esses antídotos. Lá na vila tão precisando mais que eu.
+- **Marreco:** Leva essas ervas amargas. Lá na vila tão precisando mais que eu.
 
 ### `pantano/placa_brejo`
 - *(narração)* Brejo Alto. Casa com perna, gente com fôlego.
@@ -120,10 +120,10 @@ Antes da luta, a Musga **cheira o ar** e diz: "Você tem cheiro de casa. De fam�
 - *[ação respawn: {}]*
 - **Dona Garça:** A névoa parou! Agora é só esperar a tosse ir embora sozinha. *(if musga_beaten)*
 - **Dona Garça:** A névoa desce toda noite. De manhã, fila na porta da Musga pra buscar o remédio dela. *(if_not musga_beaten)*
-- **Dona Garça:** Meu antídoto acabou. As crianças tossem e eu só tenho chá de capim. *(if_not pantano_escolheu)*
-- **Dona Garça:** Você carrega antídotos... Doaria alguns pras crianças? Até três já curam a rua inteira. *(if has_antidoto; if_not pantano_escolheu)*
-  - (escolha) "Doar antídotos" → `pantano/doar` / "Guardar" → `pantano/guardar`
-- **Dona Garça:** Se arranjar antídoto, as crianças agradecem. A Vó Neblina também. *(if_none has_antidoto, pantano_escolheu)*
+- **Dona Garça:** Minha erva amarga acabou. As crianças tossem e eu só tenho chá de capim. *(if_not pantano_escolheu)*
+- **Dona Garça:** Você carrega erva amarga... Doaria um pouco pras crianças? Até três maços já curam a rua inteira. *(if has_antidoto; if_not pantano_escolheu)*
+  - (escolha) "Doar ervas amargas" → `pantano/doar` / "Guardar" → `pantano/guardar`
+- **Dona Garça:** Se arranjar erva amarga, as crianças agradecem. A Vó Neblina também. *(if_none has_antidoto, pantano_escolheu)*
 - *[vai para `pantano/garca_rancho`]*
 
 ### `pantano/garca_rancho`
@@ -146,9 +146,9 @@ Antes da luta, a Musga **cheira o ar** e diz: "Você tem cheiro de casa. De fam�
 - *[vai para `pantano/garca_rancho`]*
 
 ### `pantano/junco`
-- **Seu Junco:** Antídoto? Acabou faz uma semana. A Musga compra tudo pra ninguém mais ter.
+- **Seu Junco:** Erva amarga? Acabou faz uma semana. A Musga compra tudo pra ninguém mais ter.
 - *[ação shop: {"id": "brejo"}]*
-- **Seu Junco:** Poção eu tenho. Remédio de verdade, só ela. Esperta, a moça.
+- **Seu Junco:** Caldo eu tenho. Remédio de verdade, só ela. Esperta, a moça.
 
 ### `pantano/girino`
 - **Girino:** Agora eu respiro à vontade! Já tô no recorde de mil segundos. *(if musga_beaten)*
@@ -159,7 +159,7 @@ Antes da luta, a Musga **cheira o ar** e diz: "Você tem cheiro de casa. De fam�
 - **Seu Sapé:** Gente esquecida faz cada coisa pra ser lembrada...
 
 ### `pantano/lodo`
-- **Lodo:** Veneno dura de três a cinco turnos. Antídoto cedo poupa vida; tarde, poupa antídoto.
+- **Lodo:** Veneno dura de três a cinco turnos. Erva amarga cedo poupa vida; tarde, poupa erva.
 - **Lodo:** A equipe da Musga se cura enquanto você se envenena. Bate primeiro em quem cura.
 
 ### `pantano/pena_pede`
@@ -174,7 +174,7 @@ Antes da luta, a Musga **cheira o ar** e diz: "Você tem cheiro de casa. De fam�
 ### `pantano/pena_obrigada`
 - **Dona Pena:** Meu malote! E olha só: alguém escreveu "que fofo" em todas as cartas.
 - *[ação take_item: {"item": "malote", "n": 1}]*
-- **Dona Pena:** Toma, um Reviver e dois antídotos. Carteira paga em dobro quando a carta chega.
+- **Dona Pena:** Toma, uma vela de aniversário e duas ervas amargas. Carteira paga em dobro quando a carta chega.
 - *[ação give_item: {"item": "reviver", "n": 1}]*
 - *[ação give_item: {"item": "antidoto", "n": 2}]*
 - *[flag pena_done = True]*
@@ -189,12 +189,12 @@ Antes da luta, a Musga **cheira o ar** e diz: "Você tem cheiro de casa. De fam�
 - *[flag malote_pego = True]*
 
 ### `pantano/taboa`
-- **Irmãs Taboa:** Uma envenena, a outra também! Treino de antídoto, cortesia da casa.
+- **Irmãs Taboa:** Uma envenena, a outra também! Treino de erva amarga, cortesia da casa.
 - *[batalha tamer: Ervaçal 41, Esporito 41 · 640 moedas + 2× antidoto]*
-- **Irmãs Taboa:** Veneno em dobro acaba rápido... pra quem tem antídoto.
+- **Irmãs Taboa:** Veneno em dobro acaba rápido... pra quem tem erva amarga.
 
 ### `pantano/taboa_depois`
-- **Irmãs Taboa:** Veneno em dobro acaba rápido... pra quem tem antídoto.
+- **Irmãs Taboa:** Veneno em dobro acaba rápido... pra quem tem erva amarga.
 
 ### `pantano/bagre`
 - **Pescador Bagre:** Meu Marretão aguenta pancada e meu Regalírio cura. Quero ver você cansar a gente.
@@ -205,7 +205,7 @@ Antes da luta, a Musga **cheira o ar** e diz: "Você tem cheiro de casa. De fam�
 - **Pescador Bagre:** Cansou a gente. Peixe grande cansa, sabia?
 
 ### `pantano/neblina`
-- **Vó Neblina:** Foi você que mandou os antídotos? Que a névoa nunca te ache, criança.
+- **Vó Neblina:** Foi você que mandou as ervas amargas? Que a névoa nunca te ache, criança.
 - **Vó Neblina:** Agradeço do jeito antigo: com uma boa batalha!
 - *[batalha tamer: Ervaçal 42, Regalírio 42 · 700 moedas + 2× reviver]*
 - **Vó Neblina:** Minha velha Brumaga fugiu pro caldeirão quando a névoa veio. Se ela te achar digno, vai com você.
@@ -263,4 +263,4 @@ Antes da luta, a Musga **cheira o ar** e diz: "Você tem cheiro de casa. De fam�
 - **Musga:** Volta pra fofocar, querido. Sabia que o primo Caliço ensaia discurso no espelho?
 
 ## 10. Contagem
-Cerca de **848 palavras** de texto de jogo em PT-BR nesta região.
+Cerca de **862 palavras** de texto de jogo em PT-BR nesta região.

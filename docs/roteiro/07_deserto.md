@@ -48,14 +48,14 @@ Depois da luta, a Rainha Duna conta **para que** o Rei chamou o herdeiro: a coro
 ## 7. Casas de domadores
 | Dono | Tema da equipe | Recompensa |
 |---|---|---|
-| Cameleira Tâmara | Trocas no tempo certo (Aguilhão + Ecoarca) | 940 moedas + 2 Poções G |
-| Irmãos Batuque | Cura em grupo e ritmo (Ecoarca + Astrolar) | 960 moedas + 2 Reviver |
+| Cameleira Tâmara | Trocas no tempo certo (Aguilhão + Ecoarca) | 940 moedas + 2 Fatias de Bolo |
+| Irmãos Batuque | Cura em grupo e ritmo (Ecoarca + Astrolar) | 960 moedas + 2 Vela de Aniversário |
 
 ## 8. Escolhas e consequências
 | Escolha | Opções | Consequência |
 |---|---|---|
 | Caminho da Rota 6 | Caravanas / Dunas Altas / Passagem do Eco | Moedas e itens / XP, marcadores e a missão do Alforje / curto, com um selvagem forte |
-| Missão da caravana | Fazer / ignorar | 2 Reviver + 2 Poções G |
+| Missão da caravana | Fazer / ignorar | 2 Vela de Aniversário + 2 Fatias de Bolo |
 | Carta da Alva (escolha 5) | — | Se o jogador a carrega, a Duna reage com esperança (prévia do Final A) |
 
 ## 9. Falas (PT-BR, na ordem dos roteiros)
@@ -132,7 +132,7 @@ Depois da luta, a Rainha Duna conta **para que** o Rei chamou o herdeiro: a coro
   - (escolha) "`OPT_P_RANCH`" → `vila_mare/rancho` / "`OPT_P_LEAVE`"
 
 ### `deserto/canela`
-- **Mercadora Canela:** Tempero, tecido e poção. A caravana não chega, então o preço é o da saudade.
+- **Mercadora Canela:** Tempero, tecido e remédio. A caravana não chega, então o preço é o da saudade.
 - *[ação shop: {"id": "palmeiral"}]*
 - **Mercadora Canela:** Volte com sede de compras.
 
@@ -154,7 +154,7 @@ Depois da luta, a Rainha Duna conta **para que** o Rei chamou o herdeiro: a coro
 
 ### `deserto/rosa_obrigada`
 - **Cartógrafa Rosa:** Ele disse que meu mapa tava certo? Ele disse isso? Vou emoldurar a frase.
-- **Cartógrafa Rosa:** Toma: dois Reviver e o meu mapa das estrelas. Quem acha gente perdida merece.
+- **Cartógrafa Rosa:** Toma: duas velas de aniversário e o meu mapa das estrelas. Quem acha gente perdida merece.
 - *[ação give_item: {"item": "reviver", "n": 2}]*
 - *[ação give_item: {"item": "pocao_g", "n": 2}]*
 - *[flag rosa_done = True]*
@@ -219,4 +219,4 @@ Depois da luta, a Rainha Duna conta **para que** o Rei chamou o herdeiro: a coro
 - **Rainha Duna:** Os tambores voltaram. Ele vai ouvir lá do castelo. Talvez lembre de quando dançava.
 
 ## 10. Contagem
-Cerca de **752 palavras** de texto de jogo em PT-BR nesta região.
+Cerca de **754 palavras** de texto de jogo em PT-BR nesta região.

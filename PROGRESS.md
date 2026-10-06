@@ -421,3 +421,4 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 - Mapas: 1º passe de refinamento (`tools/maps/refine.py`), tiles com mais variação, casas de toras em Raizal e a folha `docs/mapas_sheet.png` para revisão.
 - Mapas, 2º passe: trilhas em curva, riachos com ponte, lagos, ruínas e outros pontos de interesse.
 - **Viagem rápida** (pausa → Viajar) para cidades já visitadas, chegada na porta do Rancho.
+- Retorno do teste: troca após desmaio corrigida, itens com nomes próprios do jogo e fala do resgate após derrota.

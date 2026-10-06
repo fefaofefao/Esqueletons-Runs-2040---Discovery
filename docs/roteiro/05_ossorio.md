@@ -49,8 +49,8 @@ Fase 4e. **Gerado por `tools/maps/ossorio.py`**, a mesma fonte que grava os mapa
 ## 7. Casas de domadores
 | Dono | Tema da equipe | Recompensa |
 |---|---|---|
-| Capitã Viseira | Sintonia em fileira (Broquel + Badaleiro) | 760 moedas + 2 Poções G |
-| Gêmeos Elo | Sintonia de iguais (dois Escrivélios) | 740 moedas + 1 Reviver + 2 Antídotos |
+| Capitã Viseira | Sintonia em fileira (Broquel + Badaleiro) | 760 moedas + 2 Fatias de Bolo |
+| Gêmeos Elo | Sintonia de iguais (dois Escrivélios) | 740 moedas + 1 Vela de Aniversário + 2 Ervas Amargas |
 
 ## 8. Escolhas e consequências
 | Escolha | Opções | Consequência |
@@ -58,7 +58,7 @@ Fase 4e. **Gerado por `tools/maps/ossorio.py`**, a mesma fonte que grava os mapa
 | Caminho da Rota 4 | Cadetes / Campo das Bandeiras / Aqueduto | Moedas e itens / XP e marcadores / curto, com um selvagem forte |
 | Recorrente | Lutar / recusar | 700 moedas e +10% no marcador |
 | **Escolha 4: o Registro Real** | Contar à cidade / Guardar segredo | Contar: a cidade se rebela, guardas leais ao Rei passam a vigiar a Rota 5 (**mais batalhas**), Caliço promete ficar do seu lado no Castelo; **+1 Redenção** (`red_ossorio`). Segredo: menos batalhas, e Caliço fica neutro. |
-| Missão do farol (Selo) | Responder / ignorar | Acertar (Rainha Duna): 2 Poções G + 1 Reviver |
+| Missão do farol (Selo) | Responder / ignorar | Acertar (Rainha Duna): 2 Fatias de Bolo + 1 Vela de Aniversário |
 
 ## 9. Falas (PT-BR, na ordem dos roteiros)
 

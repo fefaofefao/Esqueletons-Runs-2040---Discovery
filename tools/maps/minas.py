@@ -86,8 +86,8 @@ t("DLG_M_GRAXA_2", "Pelo menos agora eu tô suado de verdade.", "At least now I'
 t("DLG_M_FULIGEM_1", "Limpo chaminé da forja. Respiro fumaça. Meus esqueletos também. Prepara o pulmão!",
   "I sweep the forge chimney. I breathe smoke. So do my skeletons. Brace your lungs!",
   "Limpio la chimenea de la fragua. Respiro humo. Mis esqueletos también. ¡Prepara los pulmones!")
-t("DLG_M_FULIGEM_2", "Cof, cof. Leva um antídoto pra Mina. Lá o ar morde.",
-  "Cough, cough. Take an antidote to the Mine. The air bites in there.", "Cof, cof. Lleva un antídoto a la Mina. Allí el aire muerde.")
+t("DLG_M_FULIGEM_2", "Cof, cof. Leva erva amarga pra Mina. Lá o ar morde.",
+  "Cough, cough. Take some bitterleaf to the Mine. The air bites in there.", "Cof, cof. Lleva hierba amarga a la Mina. Allí el aire muerde.")
 
 R.d("placa_bifurcacao", [say("SIGN_M_FORK")])
 R.d("vigia_entrada", [say("DLG_M_VIGIA_1", "SPK_VIGIA_LASCA"), say("DLG_M_VIGIA_2", "SPK_VIGIA_LASCA"), flag("vigia_lasca_ok")])
@@ -121,9 +121,9 @@ t("DLG_M_RUBI_1", "Cinza no cabelo, cinza no chá, cinza no travesseiro. Deita, 
 t("DLG_M_RUBI_2", "Antes, o Rancho vivia cheio de mineiro com esqueleto no colo. Agora só tem você.",
   "This Ranch used to be full of miners with skeletons on their laps. Now it's just you.",
   "Antes el Rancho vivía lleno de mineros con esqueletos en el regazo. Ahora solo estás tú.")
-t("DLG_M_COBRE_1", "Minério? Não tem. Mas poção grande eu arranjo. Do jeito que o povo apanha...",
-  "Ore? None. But I can get you big potions. The way folks get knocked around...",
-  "¿Mineral? No hay. Pero pociones grandes sí consigo. Con lo que la gente recibe...")
+t("DLG_M_COBRE_1", "Minério? Não tem. Mas bolo eu arranjo. Do jeito que o povo apanha...",
+  "Ore? None. But cake I can get you. The way folks get knocked around...",
+  "¿Mineral? No hay. Pero pastel sí consigo. Con lo que la gente recibe...")
 t("DLG_M_COBRE_BROKE", "Com os mineiros fugidos, tudo encareceu. Não me olha assim, a culpa é de quem quebrou.",
   "With the miners gone, everything got pricier. Don't look at me like that, blame whoever broke things.",
   "Con los mineros huidos, todo subió. No me mires así, la culpa es de quien rompió.")
@@ -153,9 +153,9 @@ t("DLG_M_CARVAO_ASK", "A Tia expulsou os mineiros de gente. Na correria, larguei
   "La Tía echó a los mineros humanos. Con las prisas, dejé mi casco en la Mina Honda. ¿Me lo traes?")
 t("DLG_M_CARVAO_WHERE", "Na câmara do sul da mina, perto dos trilhos. A lanterna ainda deve estar acesa.",
   "In the mine's south chamber, by the rails. The lamp should still be lit.", "En la cámara sur de la mina, junto a los rieles. La linterna debe seguir encendida.")
-t("DLG_M_CARVAO_THANKS", "Meu capacete! Quarenta anos de mina nessa lata. Toma, duas Poções G. E olha o mapa ali na parede.",
-  "My helmet! Forty years of mining in this tin. Here, two Potions L. And take a look at the map on the wall.",
-  "¡Mi casco! Cuarenta años de mina en esta lata. Toma, dos Pociones G. Y mira el mapa de la pared.")
+t("DLG_M_CARVAO_THANKS", "Meu capacete! Quarenta anos de mina nessa lata. Toma, duas fatias de bolo. E olha o mapa ali na parede.",
+  "My helmet! Forty years of mining in this tin. Here, two cake slices. And take a look at the map on the wall.",
+  "¡Mi casco! Cuarenta años de mina en esta lata. Toma, dos porciones de pastel. Y mira el mapa de la pared.")
 t("DLG_M_CARVAO_AFTER", "Esse mapa é mais velho que a mina. Meu avô dizia que o mar desenhou ele sozinho.",
   "That map is older than the mine. My grandpa said the sea drew it by itself.", "Ese mapa es más viejo que la mina. Mi abuelo decía que el mar lo dibujó solo.")
 t("OBJ_M_HELMET", "Um capacete com a lanterna acesa, caído entre os trilhos.", "A helmet with its lamp still lit, lying between the rails.",
@@ -174,8 +174,8 @@ t("DLG_M_BIGORNA_2", "Contra parede, não empurra: procura a fresta. A Tia luta 
   "Against a wall, don't push: find the crack. Auntie fights the same way.", "Contra un muro, no empujes: busca la grieta. La Tía pelea igualito.")
 t("DLG_M_AGATA_1", "Gás de mina é perfume pra mim. Aguenta três rodadas de veneno?",
   "Mine gas is perfume to me. Can you take three rounds of poison?", "El gas de mina es perfume para mí. ¿Aguantas tres rondas de veneno?")
-t("DLG_M_AGATA_2", "Aguentou. Leva esses antídotos, você mereceu respirar.", "You held out. Take these antidotes, you've earned some fresh air.",
-  "Aguantaste. Llévate estos antídotos, te ganaste respirar.")
+t("DLG_M_AGATA_2", "Aguentou. Leva essas ervas amargas, você mereceu respirar.", "You held out. Take this bitterleaf, you've earned some fresh air.",
+  "Aguantaste. Llévate estas hierbas amargas, te ganaste respirar.")
 t("DLG_M_ROAD_GUARD", "Ordem da Tia: ninguém sai. Nem eu. E olha que eu queria.", "Auntie's orders: nobody leaves. Not even me. And believe me, I'd like to.",
   "Orden de la Tía: nadie sale. Ni yo. Y mira que me gustaría.")
 
@@ -387,8 +387,8 @@ t("DLG_M_PIRITA_PARTY1", "Achou! Gasito, olha a vela! Parabéns pra você, nessa
 t("DLG_M_PIRITA_PARTY2", "O Gasito sopra o cristal. Não apaga, claro. Ele sopra de novo, mais forte. Todo mundo ri.",
   "Gasito blows on the crystal. It doesn't go out, of course. He blows harder. Everyone laughs.",
   "Gasito sopla el cristal. No se apaga, claro. Sopla otra vez, más fuerte. Todos se ríen.")
-t("DLG_M_PIRITA_PARTY3", "Toma, duas Poções M. E um pedaço de bolo... com só um pouquinho de cinza.",
-  "Here, two Potions M. And a slice of cake... with just a little bit of ash.", "Toma, dos Pociones M. Y un trozo de pastel... con solo un poquito de ceniza.")
+t("DLG_M_PIRITA_PARTY3", "Toma, dois caldos de tutano. E um pedaço de bolo... com só um pouquinho de cinza.",
+  "Here, two marrow broths. And a slice of cake... with just a little bit of ash.", "Toma, dos caldos de tuétano. Y un trozo de pastel... con solo un poquito de ceniza.")
 t("ITEM_CRYSTAL", "Cristal-vela", "Candle Crystal", "Cristal Vela")
 t("ITEM_CRYSTAL_TEXT", "Brilha sozinho e não apaga com sopro. A Pirita quer para um bolo.", "Glows on its own and won't blow out. Pyrite wants it for a cake.",
   "Brilla solo y no se apaga al soplar. Pirita lo quiere para un pastel.")
@@ -545,7 +545,7 @@ R.DOC = {
                  "reward": "1000 moedas; a estrada do norte abre; e a **escolha 2**."},
     "maps": [("**Rota 2** (`rota_2`)", "Sai de Raizal (exige a vitória sobre Ramalho; o Vigia confere a Lasca de Raiz). 3 caminhos: **Domadores** (oeste: Graxa, Brita, Fuligem), "
               "**Selvagem** (leste, Campo de Cascalho com lama e mais esqueletos) e **Atalho** (Galeria Velha, central, curta, com um selvagem forte). Placa e Seu Seixo dão a dica."),
-             ("**Brasal** (`brasal`)", "Cidade mineira: Rancho, Loja (Poção G; preço muda com a escolha 2), 2 casas de domadores, a casa do Carvão (missão + pista), NPCs, "
+             ("**Brasal** (`brasal`)", "Cidade mineira: Rancho, Loja (Fatia de Bolo; preço muda com a escolha 2), 2 casas de domadores, a casa do Carvão (missão + pista), NPCs, "
               "saída oeste para a Mina Funda e saída norte acorrentada."),
              ("**Mina Funda** (`mina_funda`)", "Salão com selvagens, Capataz Bloqueio, câmara sul (lenço de Taro, capacete da missão, Vagonauta se a corrente for quebrada) e a forja da Tia ao norte."),
              ("Interiores", "Rancho da Rubi, Armazém do Cobre, Oficina do Bigorna, Casa da Ágata, Casa do Carvão.")],
@@ -555,7 +555,7 @@ R.NPC_DOC = [
     ("Seu Seixo", "dica", "Explica os 3 caminhos e avisa do selvagem forte da Galeria"),
     ("Graxa, Brita, Fuligem", "domadores da rota", "Caminho dos Domadores; Fuligem avisa do gás da mina"),
     ("Dona Rubi", "Rancho", "Cura; mostra a cidade esvaziada pela Tia"),
-    ("Seu Cobre", "Loja", "Loja com Poção G; reage à escolha 2 (preço e fala)"),
+    ("Seu Cobre", "Loja", "Loja com Fatia de Bolo; reage à escolha 2 (preço e fala)"),
     ("Pirita", "humor + missão", "Bolo com gosto de cinza; pede o Cristal-vela para o aniversário do Gasito"),
     ("Cascudo", "dica", "No Caminho Selvagem: ensina a reconhecer o som do Golden"),
     ("Fagulha", "dica", "Ensina a mecânica da Guardiã: Mágico contra DEF alta"),
@@ -565,16 +565,16 @@ R.NPC_DOC = [
     ("Tia Fornalha", "Guardiã", "Mecânica de Defesa e a escolha 2"),
 ]
 R.HOUSES = [
-    ("Mestre Bigorna (Oficina)", "Defesa: Bigornel e Picaréu sobem a guarda", "620 moedas + 2 Poções M"),
-    ("Ágata", "Veneno de gás e cura (Fumarel + Cantilho)", "560 moedas + 3 Antídotos + 1 Reviver"),
+    ("Mestre Bigorna (Oficina)", "Defesa: Bigornel e Picaréu sobem a guarda", "620 moedas + 2 Caldos de Tutano"),
+    ("Ágata", "Veneno de gás e cura (Fumarel + Cantilho)", "560 moedas + 3 Ervas Amargas + 1 Vela de Aniversário"),
 ]
 R.CHOICES = [
     ("Caminho da Rota 2", "Domadores / Cascalho / Galeria Velha", "Moedas e itens / XP e marcadores / curto, com um selvagem forte"),
     ("**Escolha 2: a corrente mestra**", "Quebrar / Pedir que ela solte",
      "Quebrar: os mineiros fogem, a loja fica 25% mais cara e o único **Vagonauta** aparece na câmara sul (recrutável). "
      "Pedir: a Tia dá o **Martelo da Tia** (abre o atalho de entulho da Rota 3), a loja dá 10% de desconto e soma **+1 Redenção** (`red_minas`)."),
-    ("Missão do capacete", "Fazer / ignorar", "2 Poções G"),
-    ("Missão do bolo da Pirita", "Fazer / ignorar", "2 Poções M e uma festa de aniversário"),
+    ("Missão do capacete", "Fazer / ignorar", "2 Fatias de Bolo"),
+    ("Missão do bolo da Pirita", "Fazer / ignorar", "2 Caldos de Tutano e uma festa de aniversário"),
 ]
 
 if __name__ == "__main__":

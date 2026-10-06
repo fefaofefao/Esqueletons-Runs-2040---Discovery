@@ -265,8 +265,8 @@ func start_battle(info: Dictionary) -> String:
 	_fade.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	transitioning = false
 	autosave()
-	if result == "lose" and int(SaveGame.data.get("last_money_loss", 0)) > 0:
-		await show_message("BTL_LOSE_MONEY", {"n": int(SaveGame.data.get("last_money_loss", 0))})
+	if result == "lose":
+		await _rescue_talk(int(SaveGame.data.get("last_money_loss", 0)))
 	else:
 		await run_growths()
 	return result
@@ -309,6 +309,20 @@ func _apply_defeat(party: Array, keep_money: bool = false) -> void:
 	for m in party:
 		m.heal_full()
 	SaveGame.data["party"] = party.map(func(m: Monster) -> Dictionary: return m.to_dict())
+
+
+## Depois de uma derrota, quem cuida do Rancho (ou o Bento, antes do primeiro
+## Rancho) conta que achou a equipe caída e diz a taxa do resgate.
+func _rescue_talk(loss: int) -> void:
+	var spk := "SPK_BENTO"
+	var here := world.map_id if world else ""
+	for c in Travel.cities():
+		var keeper := str(c.get("ranch", ""))
+		for n in Data.map(here).get("npcs", []):
+			if str(n.get("id", "")) == keeper:
+				spk = str(Data.npc(keeper).get("name_key", spk))
+	await play_script([{"say": "DLG_RESCUE_1", "speaker": spk},
+		{"say": "DLG_RESCUE_FEE" if loss > 0 else "DLG_RESCUE_FREE", "speaker": spk, "args": {"money": loss}}])
 
 
 # ------------------------------------------------------------------ atalhos

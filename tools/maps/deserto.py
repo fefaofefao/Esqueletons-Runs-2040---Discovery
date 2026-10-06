@@ -111,9 +111,9 @@ t("DLG_D_MORINGA_AFTER", "Tão tocando tambor lá fora! Faz um ano que eu não d
   "They're playing drums outside! I haven't fallen asleep to good noise in a year.", "¡Están tocando tambores afuera! Hace un año que no duermo con ruido bonito.")
 t("DLG_D_MORINGA_2", "Quer deixar alguém aqui na sombra? Eu rego direitinho.", "Want to leave someone here in the shade? I'll water them properly.",
   "¿Quieres dejar a alguien aquí a la sombra? Lo riego bien.")
-t("DLG_D_CANELA_1", "Tempero, tecido e poção. A caravana não chega, então o preço é o da saudade.",
-  "Spices, cloth and potions. The caravan doesn't come anymore, so prices are set by longing.",
-  "Especias, telas y pociones. La caravana no llega, así que el precio es el de la nostalgia.")
+t("DLG_D_CANELA_1", "Tempero, tecido e remédio. A caravana não chega, então o preço é o da saudade.",
+  "Spices, cloth and remedies. The caravan doesn't come anymore, so prices are set by longing.",
+  "Especias, telas y remedios. La caravana no llega, así que el precio es el de la nostalgia.")
 t("DLG_D_CANELA_2", "Volte com sede de compras.", "Come back thirsty for shopping.", "Vuelve con sed de compras.")
 t("DLG_D_GRAO", "Eu contei os grãos de areia da praça. Deu um monte. Amanhã eu conto de novo pra conferir.",
   "I counted the grains of sand in the square. It came out to a lot. Tomorrow I'll count again to check.",
@@ -133,8 +133,8 @@ t("DLG_D_ROSA_WAIT", "Dunas altas, a leste da Rota 6. Ele usa um turbante cor de
   "Dunas altas, al este de la Ruta 6. Lleva un turbante color arena. O sea: buena suerte.")
 t("DLG_D_ROSA_THANKS", "Ele disse que meu mapa tava certo? Ele disse isso? Vou emoldurar a frase.",
   "He said my map was right? He actually said that? I'm framing that sentence.", "¿Dijo que mi mapa tenía razón? ¿Dijo eso? Voy a enmarcar la frase.")
-t("DLG_D_ROSA_REWARD", "Toma: dois Reviver e o meu mapa das estrelas. Quem acha gente perdida merece.",
-  "Here: two Revives and my star chart. Anyone who finds lost people deserves it.", "Toma: dos Revivir y mi mapa de estrellas. Quien encuentra a los perdidos lo merece.")
+t("DLG_D_ROSA_REWARD", "Toma: duas velas de aniversário e o meu mapa das estrelas. Quem acha gente perdida merece.",
+  "Here: two birthday candles and my star chart. Anyone who finds lost people deserves it.", "Toma: dos velas de cumpleaños y mi mapa de estrellas. Quien encuentra a los perdidos lo merece.")
 t("DLG_D_ROSA_AFTER", "Mapa certo, marido errado. Mas é o meu marido errado.", "Right map, wrong husband. But he's my wrong husband.",
   "Mapa correcto, marido equivocado. Pero es mi marido equivocado.")
 t("DLG_D_TAMARA_1", "No deserto, quem não troca de montaria morre de cansaço. Troca de esqueleto na hora certa, vamos ver!",
@@ -384,12 +384,12 @@ R.NPC_DOC = [
     ("Rainha Duna", "Guardiã", "Resistência; pista 7 (para que o Rei quer o herdeiro)"),
 ]
 R.HOUSES = [
-    ("Cameleira Tâmara", "Trocas no tempo certo (Aguilhão + Ecoarca)", "940 moedas + 2 Poções G"),
-    ("Irmãos Batuque", "Cura em grupo e ritmo (Ecoarca + Astrolar)", "960 moedas + 2 Reviver"),
+    ("Cameleira Tâmara", "Trocas no tempo certo (Aguilhão + Ecoarca)", "940 moedas + 2 Fatias de Bolo"),
+    ("Irmãos Batuque", "Cura em grupo e ritmo (Ecoarca + Astrolar)", "960 moedas + 2 Vela de Aniversário"),
 ]
 R.CHOICES = [
     ("Caminho da Rota 6", "Caravanas / Dunas Altas / Passagem do Eco", "Moedas e itens / XP, marcadores e a missão do Alforje / curto, com um selvagem forte"),
-    ("Missão da caravana", "Fazer / ignorar", "2 Reviver + 2 Poções G"),
+    ("Missão da caravana", "Fazer / ignorar", "2 Vela de Aniversário + 2 Fatias de Bolo"),
     ("Carta da Alva (escolha 5)", "—", "Se o jogador a carrega, a Duna reage com esperança (prévia do Final A)"),
 ]
 

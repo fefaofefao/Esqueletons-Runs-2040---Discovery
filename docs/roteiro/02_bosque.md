@@ -36,7 +36,7 @@ No **Bosque Velho**, atrás da vila, o esqueleto único **Raizerno** dorme fundi
 | Mapa | Conteúdo |
 |---|---|
 | **Rota 1** (`rota_1`) | Sai da Vila Maré e se divide em **3 caminhos** que se reencontram antes de Raizal: **Domadores** (oeste, 3 domadores), **Selvagem** (leste, campo de flores com mais esqueletos) e **Atalho** (Túnel das Raízes, escuro e curto, com 1 selvagem forte). Placas na bifurcação; o Lenhador Velho dá a dica. |
-| **Raizal** (`raizal`) | Vila na floresta: Rancho, Loja (estoque com Poção M), 2 casas de domadores, NPCs e a trilha para a Clareira (Guardião) e para o Bosque Velho. |
+| **Raizal** (`raizal`) | Vila na floresta: Rancho, Loja (estoque com Caldo de Tutano), 2 casas de domadores, NPCs e a trilha para a Clareira (Guardião) e para o Bosque Velho. |
 | **Bosque Velho** (`bosque_velho`) | Clareira sagrada: Raizerno (único, batalha selvagem estática) e o brasão. |
 | Interiores | Rancho, Loja, Casa dos Irmãos Galho, Casa da Sálvia (missão). |
 
@@ -48,7 +48,7 @@ No **Bosque Velho**, atrás da vila, o esqueleto único **Raizerno** dorme fundi
 - **Lenhador Velho:** "As raízes fecharam a estrada inteira. Só o Ramalho manda desfazer."
 - **Domador Rufo (Caminho dos Domadores):** "Ei! Você tem cara de quem perde. Prova que eu tô errado!" → *Lasquinho 12, Fungote 12* · 300 moedas
 - **Domadora Íris:** "Meus esqueletos são lentos, mas quando batem..." → *Baldinho 13, Lasquinho 13* · 320 moedas
-- **Domador Cipó:** "Primo do Rei mandou vigiar. Eu vigio... batalhando!" → *Brotim 14, Fungote 14* · 350 moedas + Poção M
+- **Domador Cipó:** "Primo do Rei mandou vigiar. Eu vigio... batalhando!" → *Brotim 14, Fungote 14* · 350 moedas + Caldo de Tutano
 - **Túnel (entrada, parceiro Lia):** Lia: "Tá escuro... muito escuro." / Lia: "Tudo bem. Eu tenho luz. Eu vou na frente!"
 - **Túnel (entrada, parceiro Taro):** Taro: "Escuro? Melhor. Ninguém me vê chegando."
 - **Túnel (Lia recorrente):** Lia: "Eu... eu tava só olhando a entrada. Não tô com medo!" / Taro: "Vai logo." / Lia: "Tá bom, tá bom!"
@@ -62,16 +62,16 @@ No **Bosque Velho**, atrás da vila, o esqueleto único **Raizerno** dorme fundi
 - **Sálvia (curandeira, missão "Erva-de-febre"):**
   - Antes: "Meu estoque de erva-de-febre acabou. Tem um pé no Bosque Velho, perto do tronco grande. Traz pra mim?"
   - Lembrete: "Bosque Velho, atrás da vila. A erva tem flor azul."
-  - Com a erva: "Isso! Com isso eu curo meia vila. Toma, um Reviver e meu muito obrigada."
+  - Com a erva: "Isso! Com isso eu curo meia vila. Toma, um Vela de Aniversário e meu muito obrigada."
   - Depois: "Quando a estrada abrir, vou mandar chá pra Vila Maré."
 - **Menino Graveto (humor):** "Eu tentei desfazer as raízes com os dentes. Agora as raízes têm marca de dente."
 - **Dona Hera (lore, guardiões):** "O Ramalho não é mau. É primo do Rei, e todo primo quer agradar." / "Dizem que todos os Guardiões são da família. Família grande dá briga grande."
 - **Guarda-raiz (bloqueio da Clareira, antes do Guardião):** "O Ramalho tá na Clareira. Ele adora visita... pra derrubar."
 
 ### Casas de domadores
-- **Casa dos Irmãos Galho (tema: Atraso):** "A gente empurra seu turno pra lá e pra cá. Treino pro Ramalho!" → *Lasquinho 17, Brotim 16* · 400 moedas + 2 Poções M · Depois: "Viu? Golpe leve escapa do atraso."
+- **Casa dos Irmãos Galho (tema: Atraso):** "A gente empurra seu turno pra lá e pra cá. Treino pro Ramalho!" → *Lasquinho 17, Brotim 16* · 400 moedas + 2 Caldos de Tutano · Depois: "Viu? Golpe leve escapa do atraso."
 - **Casa da Sálvia** (sem batalha; missão da erva).
-- **Casa da Família Musgo (tema: veneno leve):** Pai Musgo: "Esporo aqui é tempero." → *Fungote 16, Brotim 16* · 350 moedas + 2 Antídotos · Depois: "Leva antídoto pras Minas. Lá o ar é pior."
+- **Casa da Família Musgo (tema: veneno leve):** Pai Musgo: "Esporo aqui é tempero." → *Fungote 16, Brotim 16* · 350 moedas + 2 Ervas Amargas · Depois: "Leva erva amarga pras Minas. Lá o ar é pior."
 
 ### Bosque Velho
 - **Raizerno (interagir):** narração: "Um esqueleto enorme dorme fundido ao tronco. Na casca, um brasão: uma coroa sobre uma onda." / "O desenho é igual ao do ingresso do museu." / (escolha) "Acordar" / "Deixar dormir" → **batalha selvagem** contra Raizerno (idade 16, desafio opcional). O marcador funciona como em qualquer selvagem; ele volta a dormir no lugar depois de sair e voltar.
@@ -82,7 +82,7 @@ No **Bosque Velho**, atrás da vila, o esqueleto único **Raizerno** dorme fundi
 |---|---|---|
 | Caminho da Rota 1 | Domadores / Selvagem / Túnel | Mais moedas e itens / mais XP e marcadores / mais curto, com um selvagem forte |
 | Recorrente | Lutar / recusar | 200 moedas e marcador |
-| Missão da erva | Fazer / ignorar | Reviver e um diálogo novo da Sálvia |
+| Missão da erva | Fazer / ignorar | Vela de Aniversário e um diálogo novo da Sálvia |
 | Raizerno | Acordar / deixar | Batalha difícil por um único (recrutável com o marcador) |
 
 ## 8. NPCs e motivo de existir
@@ -91,7 +91,7 @@ No **Bosque Velho**, atrás da vila, o esqueleto único **Raizerno** dorme fundi
 | Lenhador Velho | dica | Explica os 3 caminhos |
 | Rufo, Íris, Cipó | domadores da rota | Caminho dos Domadores: moedas e itens |
 | Tília | Rancho | Cura; liga o problema local (ninguém sai, nem doente) |
-| Toco | Loja | Loja com Poção M e humor sobre a estrada fechada |
+| Toco | Loja | Loja com Caldo de Tutano e humor sobre a estrada fechada |
 | Sálvia | missão | Problema local concreto: falta remédio |
 | Graveto | humor | Alívio cômico |
 | Hera | lore | Planta a ideia de que os Guardiões são família do Rei |

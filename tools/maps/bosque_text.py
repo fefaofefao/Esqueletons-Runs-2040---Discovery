@@ -72,7 +72,7 @@ T = {
     "DLG_B_TOCO_2": ("Volta quando o Ramalho cansar dessa brincadeira.", "Come back when Ramalho gets tired of this game.", "Vuelve cuando Ramalho se canse de este juego."),
     "DLG_B_SALVIA_ASK": ("Meu estoque de erva-de-febre acabou. Tem um pé no Bosque Velho, perto do tronco grande. Traz pra mim?", "I'm out of feverweed. There's a patch in the Old Grove, near the big trunk. Could you bring me some?", "Se me acabó la hierba de fiebre. Hay una mata en el Bosque Viejo, cerca del tronco grande. ¿Me la traes?"),
     "DLG_B_SALVIA_WHERE": ("Bosque Velho, atrás da vila. A erva tem flor azul.", "The Old Grove, behind the village. It has blue flowers.", "El Bosque Viejo, detrás de la villa. Tiene flores azules."),
-    "DLG_B_SALVIA_THANKS": ("Isso! Com isso eu curo meia vila. Toma, um Reviver e meu muito obrigada.", "Yes! With this I can heal half the village. Here, a Revive and my heartfelt thanks.", "¡Eso! Con esto curo a media villa. Toma, un Revivir y mi más sincero gracias."),
+    "DLG_B_SALVIA_THANKS": ("Isso! Com isso eu curo meia vila. Toma, uma vela de aniversário e meu muito obrigada.", "Yes! With this I can heal half the village. Here, a birthday candle and my heartfelt thanks.", "¡Eso! Con esto curo a media villa. Toma, una vela de cumpleaños y mi más sincero gracias."),
     "DLG_B_SALVIA_AFTER": ("Quando a estrada abrir, vou mandar chá pra Vila Maré.", "When the road opens, I'll send tea to Tidemark Village.", "Cuando abra el camino, voy a mandar té a Villa Marea."),
     "OBJ_HERB": ("Você colheu a erva-de-febre de flor azul.", "You picked the blue-flowered feverweed.", "Recogiste la hierba de fiebre de flor azul."),
     "DLG_B_GRAVETO": ("Eu tentei desfazer as raízes com os dentes. Agora as raízes têm marca de dente.", "I tried to undo the roots with my teeth. Now the roots have teeth marks.", "Intenté deshacer las raíces con los dientes. Ahora las raíces tienen marcas de dientes."),
@@ -82,7 +82,7 @@ T = {
     "DLG_B_GALHO_1": ("A gente empurra seu turno pra lá e pra cá. Treino pro Ramalho!", "We'll push your turn back and forth. Ramalho training!", "Te empujamos el turno de aquí para allá. ¡Entrenamiento para Ramalho!"),
     "DLG_B_GALHO_2": ("Viu? Golpe leve escapa do atraso.", "See? Light moves dodge the delay.", "¿Viste? Los golpes ligeros escapan del retraso."),
     "DLG_B_MUSGO_1": ("Esporo aqui é tempero.", "Spores are seasoning around here.", "Aquí las esporas son condimento."),
-    "DLG_B_MUSGO_2": ("Leva antídoto pras Minas. Lá o ar é pior.", "Bring antidotes to the Mines. The air there is worse.", "Lleva antídotos a las Minas. Allí el aire es peor."),
+    "DLG_B_MUSGO_2": ("Leva erva amarga pras Minas. Lá o ar é pior.", "Bring bitterleaf to the Mines. The air there is worse.", "Lleva hierba amarga a las Minas. Allí el aire es peor."),
     # Ramalho
     "DLG_B_RAMALHO_1": ("Primo do Rei, campeão de queda de braço do Bosque e dono deste machado! Você é o tal que abriu o cais?",
                         "Cousin of the King, the forest's arm-wrestling champ, and owner of this axe! Are you the one who opened the dock?",

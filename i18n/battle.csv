@@ -70,15 +70,15 @@ STAT_MAG,MAG,MAG,MAG
 STAT_DEF,DEF,DEF,DEF
 STAT_RES,RES,RES,RES
 STAT_SPD,VEL,SPD,VEL
-ITEM_POTION_S,Poção P,Small Potion,Poción P
+ITEM_POTION_S,Chá de Alga,Kelp Tea,Té de Algas
 ITEM_POTION_S_DESC,Cura 30 PV.,Heals 30 HP.,Cura 30 PS.
-ITEM_POTION_M,Poção M,Potion,Poción M
+ITEM_POTION_M,Caldo de Tutano,Marrow Broth,Caldo de Tuétano
 ITEM_POTION_M_DESC,Cura 80 PV.,Heals 80 HP.,Cura 80 PS.
-ITEM_POTION_L,Poção G,Large Potion,Poción G
+ITEM_POTION_L,Fatia de Bolo,Cake Slice,Porción de Pastel
 ITEM_POTION_L_DESC,Cura 200 PV.,Heals 200 HP.,Cura 200 PS.
-ITEM_ANTIDOTE,Antídoto,Antidote,Antídoto
+ITEM_ANTIDOTE,Erva Amarga,Bitterleaf,Hierba Amarga
 ITEM_ANTIDOTE_DESC,Tira o veneno.,Cures poison.,Quita el veneno.
-ITEM_REVIVE,Reviver,Revive,Revivir
+ITEM_REVIVE,Vela de Aniversário,Birthday Candle,Vela de Cumpleaños
 ITEM_REVIVE_DESC,Revive com metade do PV.,Revives with half HP.,Revive con la mitad de PS.
 DBG_TEST_BATTLE,Batalha de teste,Test battle,Batalla de prueba
 DBG_TEST_TEAM,Equipe de teste,Test team,Equipo de prueba
@@ -101,17 +101,20 @@ BTL_WEIGHT_HEAVY,Pesado,Heavy,Pesado
 GOLDEN_SUFFIX_M,{name} Dourado,Golden {name},{name} Dorado
 GOLDEN_SUFFIX_F,{name} Dourada,Golden {name},{name} Dorada
 BTL_GOLDEN_APPEARS,Um brilho dourado! Este é raro!,A golden shine! This one is rare!,¡Un brillo dorado! ¡Este es raro!
-RECRUIT_MARKER,"Marcador de ossos de {name}: {a}% → {b}%","{name} bone marker: {a}% → {b}%","Marcador de huesos de {name}: {a}% → {b}%"
+RECRUIT_MARKER,Marcador de ossos de {name}: {a}% → {b}%,{name} bone marker: {a}% → {b}%,Marcador de huesos de {name}: {a}% → {b}%
 RECRUIT_ASK,{name} quer andar com você. Aceita?,{name} wants to come along. Accept?,{name} quiere ir contigo. ¿Aceptas?
 RECRUIT_ACCEPT,Aceitar,Accept,Aceptar
 RECRUIT_REFUSE,Agora não,Not now,Ahora no
 RECRUIT_JOINED,{name} entrou para o time!,{name} joined the team!,¡{name} se unió al equipo!
-RECRUIT_TO_RANCH,"Time cheio: {name} foi para o Rancho.","Team full: {name} went to the Ranch.","Equipo lleno: {name} fue al Rancho."
+RECRUIT_TO_RANCH,Time cheio: {name} foi para o Rancho.,Team full: {name} went to the Ranch.,Equipo lleno: {name} fue al Rancho.
 RECRUIT_REFUSED,{name} volta para o mato. O marcador continua cheio.,{name} heads back to the wild. The marker stays full.,{name} vuelve a la maleza. El marcador sigue lleno.
 GROW_BIRTHDAY,"Feliz aniversário, {name}!","Happy birthday, {name}!","¡Feliz cumpleaños, {name}!"
 GROW_DONE,{name} cresceu e virou {species}!,{name} grew up into {species}!,¡{name} creció y se convirtió en {species}!
 ITEM_TICKET,Ingresso Amassado,Crumpled Ticket,Entrada Arrugada
-ITEM_TICKET_TEXT,"Museu do Litoral — O Reino Perdido de Ossório — 12/10/2040.","Coast Museum — The Lost Kingdom of Ossório — 10/12/2040.","Museo del Litoral — El Reino Perdido de Ossório — 12/10/2040."
-BTL_TIP_TIMELINE,"Bento: A fila lá em cima é a ordem de quem age. Quem é rápido aparece mais vezes.","Bento: The row up top is the turn order. Fast ones show up more often.","Bento: La fila de arriba es el orden de turnos. Los rápidos salen más veces."
-BTL_TIP_WEIGHT,"Bento: Golpe leve volta logo; pesado bate forte, mas demora. Olha a sombra na fila!","Bento: Light moves return fast; heavy ones hit hard but slowly. Watch the shadow!","Bento: Lo ligero vuelve pronto; lo pesado pega fuerte, pero tarda. ¡Mira la sombra!"
-BTL_TIP_SINTONIA,"Bento: Dois aliados seguidos na fila ganham Sintonia: o segundo bate mais forte.","Bento: Two allies in a row get Sync: the second one hits harder.","Bento: Dos aliados seguidos logran Sintonía: el segundo pega más fuerte."
+ITEM_TICKET_TEXT,Museu do Litoral — O Reino Perdido de Ossório — 12/10/2040.,Coast Museum — The Lost Kingdom of Ossório — 10/12/2040.,Museo del Litoral — El Reino Perdido de Ossório — 12/10/2040.
+BTL_TIP_TIMELINE,Bento: A fila lá em cima é a ordem de quem age. Quem é rápido aparece mais vezes.,Bento: The row up top is the turn order. Fast ones show up more often.,Bento: La fila de arriba es el orden de turnos. Los rápidos salen más veces.
+BTL_TIP_WEIGHT,"Bento: Golpe leve volta logo; pesado bate forte, mas demora. Olha a sombra na fila!",Bento: Light moves return fast; heavy ones hit hard but slowly. Watch the shadow!,"Bento: Lo ligero vuelve pronto; lo pesado pega fuerte, pero tarda. ¡Mira la sombra!"
+BTL_TIP_SINTONIA,Bento: Dois aliados seguidos na fila ganham Sintonia: o segundo bate mais forte.,Bento: Two allies in a row get Sync: the second one hits harder.,Bento: Dos aliados seguidos logran Sintonía: el segundo pega más fuerte.
+DLG_RESCUE_1,Te vi no chão lá fora! Que susto. Que bom que você tá bem.,I saw you lying on the ground out there! What a scare. So glad you're okay.,¡Te vi en el suelo ahí afuera! Qué susto. Qué bueno que estás bien.
+DLG_RESCUE_FEE,"Te trouxe pra cá pra descansar. Ah, inclusive: a taxa do resgate foi de {money} moedas.","I brought you here to rest. Oh, and by the way: the rescue fee was {money} coins.","Te traje aquí a descansar. Ah, por cierto: la tarifa del rescate fue de {money} monedas."
+DLG_RESCUE_FREE,"Te trouxe pra cá pra descansar. Dessa vez, não cobro nada.","I brought you here to rest. This time, it's on the house.",Te traje aquí a descansar. Esta vez no te cobro nada.

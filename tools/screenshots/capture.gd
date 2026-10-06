@@ -578,4 +578,14 @@ func _travel_shots() -> void:
 	await _wait(1.6)
 	await _advance([], "", -1, 12)
 	await _shot("t3_chegada_vila")
+	SaveGame.data["money"] = 3000
+	Game.open_overlay(ShopMenu.new().setup("brasal"))
+	await _wait(0.5)
+	await _shot("t4_loja_itens")
+	Game.close_all_overlays()
+	await _goto("vila_rancho", Vector2i(7, 5), "up")
+	Game._rescue_talk(37)
+	await _wait(1.2)
+	await _shot("t5_resgate_1")
+	await _advance([], "t6_resgate_2", 1, 6)
 

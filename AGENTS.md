@@ -39,6 +39,8 @@ Registradas na ordem em que chegaram. Em caso de conflito com as seções seguin
 5. **A batalha não pode parecer Pokémon.** Deve ser inovadora: ver `docs/DECISOES.md` (timeline por tempo, peso dos golpes, atraso, Sintonia e arena lateral).
 6. **Os dois iniciais entram juntos na equipe.** No Prólogo, Lia e Taro viram parceiros ao mesmo tempo (não há escolha entre eles). Os dois são fixos e têm **+5% em todos os atributos** em relação aos demais esqueletos (`data/battle.json` → `starter.stat_bonus`). Os arcos dos dois avançam em todas as regiões. Isso substitui o "parceiro escolhido + recorrente" da seção 6.
 7. **Viagem rápida** (pausa → Viajar), disponível desde o começo, mas só para **cidades já visitadas**: o jogador volta para caçar selvagens e enfrentar domadores sem pular a história. Chegada na porta do Rancho. Regras em `data/travel.json`.
+8. **Itens com nomes do mundo do jogo**, não os genéricos do gênero: Chá de Alga (cura pequena), Caldo de Tutano (média), Fatia de Bolo (grande), Erva Amarga (tira veneno) e Vela de Aniversário (revive). Os ids internos continuam `pocao_p`, `pocao_m`, `pocao_g`, `antidoto` e `reviver`.
+9. **Derrota:** ao acordar no Rancho, quem cuida dele (ou o Bento, antes do primeiro Rancho) diz que viu o jogador no chão, que o trouxe para descansar e quanto foi a taxa do resgate (o valor realmente perdido).
 
 ---
 

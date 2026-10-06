@@ -169,3 +169,38 @@ func test_maps_and_conditions() -> void:
 	check(not Data.encounter_table("praia").is_empty(), "tabela de encontro da Praia")
 	for e in Data.encounter_table("praia"):
 		check(int(Data.species(str(e.species)).get("stage", 0)) == 1, "Praia só tem bebês")
+
+
+func test_rescue_talk_after_defeat() -> void:
+	# depois de perder, quem cuida do Rancho conta que achou a equipe e diz a taxa
+	SaveGame.start_new("Téo")
+	var w := World.new()
+	host.add_child(w)
+	Game.world = w
+	w.load_map("vila_rancho", Vector2i(-1, -1), "up")
+	var texts := []
+	var done := [false]
+	var run := func() -> void:
+		await Game._rescue_talk(37)
+		done[0] = true
+	run.call()
+	for i in 300:
+		if done[0]:
+			break
+		var box = Game.top_overlay()
+		if box is DialogBox:
+			if box._typing:
+				box._press()
+			var t: String = (box._text as Label).text
+			if texts.is_empty() or texts[-1] != t:
+				texts.append(t)
+			box._press()
+		await tree.process_frame
+	check(done[0], "a fala do resgate termina")
+	var all := " ".join(texts)
+	check(all.contains("37"), "diz o valor perdido (37 moedas)")
+	check(all.contains(TranslationServer.translate("DLG_RESCUE_1").substr(0, 10)), "começa com 'te vi no chão'")
+	Game.close_all_overlays()
+	Game.world = null
+	w.queue_free()
+	await tree.process_frame

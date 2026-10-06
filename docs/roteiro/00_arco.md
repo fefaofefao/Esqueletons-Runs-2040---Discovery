@@ -57,7 +57,7 @@ Do parente mais distante ao mais próximo, e do mais fraco ao mais forte. Cada u
 |---|---|---|---|---|---|---|
 | Bosque | **Ramalho** | primo | brincalhão, competitivo, barulhento | **Dívida:** foi o primeiro primo que o Rei trouxe de volta | **Atraso:** golpes pesados que empurram o turno do jogador. Ensina a ler a timeline e a usar golpes leves. | 22 |
 | Minas | **Tia Fornalha** | tia | severa, justa, sem paciência | **Dever:** acredita que a ordem do Rei mantém todos seguros | **Defesa:** sobe a DEF e aguenta muito. Ensina a baixar atributos e a usar Mágico contra quem é forte em DEF. | 34 |
-| Pântano | **Musga** | sobrinha | irônica, fofoqueira, solitária | **Medo:** ser esquecida de novo se a coroa quebrar | **Veneno e cura:** envenena e se cura. Ensina antídoto e o tempo do veneno. | 46 |
+| Pântano | **Musga** | sobrinha | irônica, fofoqueira, solitária | **Medo:** ser esquecida de novo se a coroa quebrar | **Veneno e cura:** envenena e se cura. Ensina erva amarga e o tempo do veneno. | 46 |
 | Ossório | **Caliço** | irmão | orgulhoso, militar, honrado | **Honra:** a família não abandona a família | **Sintonia:** pares que agem em sequência (+25%). Ensina a montar e a quebrar Sintonia com atrasos. | 58 |
 | Picos | **Alva** | filha (herdeira) | melancólica, doce, firme | **Esperança:** que o pai se cure da tristeza | **Velocidade:** golpes leves e congelamento (VEL ↓). Ensina controle de velocidade. | 70 |
 | Deserto | **Rainha Duna** | esposa | sábia, cansada, gentil | **Amor:** se ela partir, ele fica sozinho de vez | **Resistência:** trocas e cura em grupo. Ensina a gerir a equipe e a trocar na hora certa. | 80 |
@@ -74,7 +74,7 @@ Pelo menos 3 decisões relevantes, que mudam diálogos, recompensas e recrutas:
 | # | Onde | Escolha | Consequência imediata | Peso no final |
 |---|---|---|---|---|
 | 1 | Minas | **Quebrar a corrente** da forja (libertar os mineiros à força) **ou negociar** com a Tia Fornalha depois do duelo | Quebrar: os mineiros fogem, a loja fica mais cara e **Vagonauta** pode ser recrutado. Negociar: Fornalha dá o **Martelo da Tia** (item-chave de atalho) e a loja dá desconto | Negociar soma **+1 Redenção** |
-| 2 | Pântano | **Doar o estoque de antídotos** à vila envenenada **ou guardar** | Doar: a casa de domadores da Brumaga abre e **Brumaga** pode ser recrutada. Guardar: você fica com os itens | Doar soma **+1 Redenção** |
+| 2 | Pântano | **Doar o estoque de ervas amargas** à vila envenenada **ou guardar** | Doar: a casa de domadores da Brumaga abre e **Brumaga** pode ser recrutada. Guardar: você fica com os itens | Doar soma **+1 Redenção** |
 | 3 | Ossório | **Revelar** o registro do arquivo à cidade **ou guardar segredo** | Revelar: a cidade se rebela, há mais batalhas no caminho e Caliço fica do seu lado no final. Segredo: menos batalhas, e Caliço fica neutro | Revelar soma **+1 Redenção** |
 | 4 | Picos | **Levar a carta de Alva** ao pai **ou não** | Levar: no Castelo, a carta pode ser entregue (diálogo exclusivo) | **Obrigatória** para o final de Redenção |
 

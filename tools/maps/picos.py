@@ -159,8 +159,8 @@ t("DLG_PI_LAREIRA_3", "Quer guardar alguém no Rancho? Aqui ninguém passa frio,
   "¿Quieres dejar a alguien en el Rancho? Aquí nadie pasa frío, lo prometo.")
 t("DLG_PI_LAREIRA_AFTER", "Ouviu? Goteira! Nunca fiquei tão feliz com uma goteira.", "Hear that? A leak! I've never been so happy about a leak.",
   "¿Oíste? ¡Una gotera! Nunca me alegró tanto una gotera.")
-t("DLG_PI_CACHECOL_1", "Cachecol, luva, gorro. E poção, claro. Frio não mata, mas cansa.", "Scarves, gloves, hats. And potions, of course. Cold doesn't hurt, but it wears you out.",
-  "Bufanda, guantes, gorro. Y pociones, claro. El frío no duele, pero cansa.")
+t("DLG_PI_CACHECOL_1", "Cachecol, luva, gorro. E caldo quente, claro. Frio não mata, mas cansa.", "Scarves, gloves, hats. And hot broth, of course. Cold doesn't hurt, but it wears you out.",
+  "Bufanda, guantes, gorro. Y caldo caliente, claro. El frío no duele, pero cansa.")
 t("DLG_PI_CACHECOL_2", "Volta logo. E fecha a porta!", "Come back soon. And close the door!", "Vuelve pronto. ¡Y cierra la puerta!")
 t("DLG_PI_FLOQUINHO", "Eu fiz um boneco de neve e chamei de Prefeito. Ele manda melhor que o de verdade.",
   "I built a snowman and named it Mayor. It does a better job than the real one.", "Hice un muñeco de nieve y lo llamé Alcalde. Manda mejor que el de verdad.")
@@ -183,8 +183,8 @@ t("DLG_PI_CAMELIA_WHERE", "No canto sul do Jardim de Gelo. É verdinho, não tem
   "En la esquina sur del Jardín de Hielo. Es verdecito, no tiene pérdida.")
 t("OBJ_PI_SPROUT", "Debaixo de uma casquinha de gelo, um broto verde teimoso.", "Under a thin crust of ice, a stubborn green sprout.",
   "Bajo una costrita de hielo, un brote verde y testarudo.")
-t("DLG_PI_CAMELIA_THANKS", "Ele tá vivo! Toma duas Poções G. E volta daqui a um ano pro primeiro chá.",
-  "It's alive! Take two Potions L. And come back in a year for the first cup of tea.", "¡Está vivo! Toma dos Pociones G. Y vuelve en un año por el primer té.")
+t("DLG_PI_CAMELIA_THANKS", "Ele tá vivo! Toma duas fatias de bolo. E volta daqui a um ano pro primeiro chá.",
+  "It's alive! Take two cake slices. And come back in a year for the first cup of tea.", "¡Está vivo! Toma dos porciones de pastel. Y vuelve en un año por el primer té.")
 t("DLG_PI_CAMELIA_AFTER", "O broto cresceu dois dedos! Chá, daqui a pouco. Paciência de chazeira.", "The sprout grew two fingers! Tea, soon. A tea-grower's patience.",
   "¡El brote creció dos dedos! Té, dentro de poco. Paciencia de tetera.")
 t("DLG_PI_LAMINA_1", "No gelo, quem é rápido chega primeiro. Quer apostar corrida na timeline?",
@@ -453,7 +453,7 @@ R.NPC_DOC = [
     ("Grampo, Rajada, Monja Brisa", "domadores da rota", "Caminho dos Alpinistas; Rajada introduz a velocidade"),
     ("Guardas Leais (2)", "domadores condicionais", "Consequência da escolha 4 (só se Ossório soube)"),
     ("Dona Lareira", "Rancho", "Cura; conta desde quando é inverno"),
-    ("Seu Cachecol", "Loja", "Loja só com itens fortes (Poção G, Antídoto, Reviver)"),
+    ("Seu Cachecol", "Loja", "Loja só com itens fortes (Fatia de Bolo, Erva Amarga, Vela de Aniversário)"),
     ("Floquinho", "humor", "O boneco de neve \"Prefeito\""),
     ("Vô Pinhão", "lore", "A Alva menina; \"tristeza de princesa vira inverno\""),
     ("Degelo", "dica", "Ensina a mecânica da Guardiã (velocidade e congelamento)"),
@@ -463,8 +463,8 @@ R.NPC_DOC = [
     ("Alva", "Guardiã", "Velocidade; a carta para o pai (escolha 5)"),
 ]
 R.HOUSES = [
-    ("Patinadora Lâmina", "Velocidade (Cargueiro + Cinzelvo)", "820 moedas + 2 Poções G"),
-    ("Irmãos Granizo", "Congelamento e cura (Cinzelvo + Chaleirel)", "800 moedas + 2 Reviver"),
+    ("Patinadora Lâmina", "Velocidade (Cargueiro + Cinzelvo)", "820 moedas + 2 Fatias de Bolo"),
+    ("Irmãos Granizo", "Congelamento e cura (Cinzelvo + Chaleirel)", "800 moedas + 2 Vela de Aniversário"),
 ]
 R.CHOICES = [
     ("Caminho da Rota 5", "Alpinistas / Campo Branco / Ponte de Gelo", "Moedas e itens / XP e marcadores / curto, com um selvagem forte"),
@@ -473,7 +473,7 @@ R.CHOICES = [
     ("**Escolha 5: a carta da Alva**", "Levar / Não levar",
      "Levar: o item-chave **Carta da Alva**, que no Castelo pode ser entregue ao Rei (diálogo exclusivo). **Obrigatória para o Final A (Redimir).** "
      "Não levar: a Alva guarda a carta, e o jogador pode voltar e aceitar depois."),
-    ("Missão do broto", "Fazer / ignorar", "2 Poções G"),
+    ("Missão do broto", "Fazer / ignorar", "2 Fatias de Bolo"),
 ]
 
 if __name__ == "__main__":

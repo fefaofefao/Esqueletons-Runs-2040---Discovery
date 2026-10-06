@@ -30,7 +30,7 @@ Fase 4h. **Gerado por `tools/maps/extras.py`**, que roda depois de todas as regi
 - *[vai para `vila_mare/marola`]*
 
 ### `extras/reage_anzol`
-- **SPK_ANZOL:** Com o cais aberto, chegou anzol novo. Pena que eu vendo poção.
+- **SPK_ANZOL:** Com o cais aberto, chegou anzol novo. Pena que eu vendo chá de alga.
 - *[vai para `vila_mare/anzol`]*
 
 ### `extras/reage_pipa`
@@ -307,7 +307,7 @@ Fase 4h. **Gerado por `tools/maps/extras.py`**, que roda depois de todas as regi
 - *[vai para `minas/cobre`]*
 
 ### `extras/pos_junco`
-- **SPK_JUNCO:** Antídoto de volta na prateleira! Ninguém compra. Ninguém precisa. Melhor problema do mundo.
+- **SPK_JUNCO:** Erva amarga de volta na prateleira! Ninguém compra. Ninguém precisa. Melhor problema do mundo.
 - *[vai para `pantano/junco`]*
 
 ### `extras/pos_dobrao`
@@ -395,4 +395,4 @@ Fase 4h. **Gerado por `tools/maps/extras.py`**, que roda depois de todas as regi
 - *(narração)* Mapa do litoral em 2040: as mesmas três baías. A do meio se chama Baía do Farol.
 
 ## Contagem
-Cerca de **1893 palavras** de texto de jogo em PT-BR.
+Cerca de **1896 palavras** de texto de jogo em PT-BR.

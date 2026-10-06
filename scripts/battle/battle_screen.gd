@@ -584,7 +584,7 @@ func _open_items() -> void:
 	var items := []
 	for id in _battle_items():
 		var it := Data.item(id)
-		items.append({"id": id, "key": str(it.get("name_key", id)), "value": func() -> String: return "x%d" % int(engine.bag.get(id, 0))})
+		items.append({"id": id, "key": str(it.get("name_key", id)), "fixed": true, "value": func() -> String: return "x%d" % int(engine.bag.get(id, 0))})
 	_open_list("items", "BTL_ITEMS_TITLE", items)
 
 
@@ -594,7 +594,7 @@ func _party_rows(filter: Callable) -> Array:
 	for i in team.size():
 		var m: Monster = team[i]
 		rows.append({"id": str(i), "key": "", "suffix": "%s · %s" % [m.display_name(), UnitCard.age_text(m.level)],
-			"value": func() -> String: return "%d/%d" % [m.hp, m.max_hp()], "enabled": filter.call(i, m)})
+			"fixed": true, "value": func() -> String: return "%d/%d" % [m.hp, m.max_hp()], "enabled": filter.call(i, m)})
 	return rows
 
 

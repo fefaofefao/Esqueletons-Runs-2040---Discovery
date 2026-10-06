@@ -27,7 +27,7 @@ Na casa do **Seu Carvão** há um **mapa antigo** da costa: três baías lado a 
 | Mapa | Conteúdo |
 |---|---|
 | **Rota 2** (`rota_2`) | Sai de Raizal (exige a vitória sobre Ramalho; o Vigia confere a Lasca de Raiz). 3 caminhos: **Domadores** (oeste: Graxa, Brita, Fuligem), **Selvagem** (leste, Campo de Cascalho com lama e mais esqueletos) e **Atalho** (Galeria Velha, central, curta, com um selvagem forte). Placa e Seu Seixo dão a dica. |
-| **Brasal** (`brasal`) | Cidade mineira: Rancho, Loja (Poção G; preço muda com a escolha 2), 2 casas de domadores, a casa do Carvão (missão + pista), NPCs, saída oeste para a Mina Funda e saída norte acorrentada. |
+| **Brasal** (`brasal`) | Cidade mineira: Rancho, Loja (Fatia de Bolo; preço muda com a escolha 2), 2 casas de domadores, a casa do Carvão (missão + pista), NPCs, saída oeste para a Mina Funda e saída norte acorrentada. |
 | **Mina Funda** (`mina_funda`) | Salão com selvagens, Capataz Bloqueio, câmara sul (lenço de Taro, capacete da missão, Vagonauta se a corrente for quebrada) e a forja da Tia ao norte. |
 | Interiores | Rancho da Rubi, Armazém do Cobre, Oficina do Bigorna, Casa da Ágata, Casa do Carvão. |
 
@@ -38,7 +38,7 @@ Na casa do **Seu Carvão** há um **mapa antigo** da costa: três baías lado a 
 | Seu Seixo | dica | Explica os 3 caminhos e avisa do selvagem forte da Galeria |
 | Graxa, Brita, Fuligem | domadores da rota | Caminho dos Domadores; Fuligem avisa do gás da mina |
 | Dona Rubi | Rancho | Cura; mostra a cidade esvaziada pela Tia |
-| Seu Cobre | Loja | Loja com Poção G; reage à escolha 2 (preço e fala) |
+| Seu Cobre | Loja | Loja com Fatia de Bolo; reage à escolha 2 (preço e fala) |
 | Pirita | humor + missão | Bolo com gosto de cinza; pede o Cristal-vela para o aniversário do Gasito |
 | Cascudo | dica | No Caminho Selvagem: ensina a reconhecer o som do Golden |
 | Fagulha | dica | Ensina a mecânica da Guardiã: Mágico contra DEF alta |
@@ -50,16 +50,16 @@ Na casa do **Seu Carvão** há um **mapa antigo** da costa: três baías lado a 
 ## 7. Casas de domadores
 | Dono | Tema da equipe | Recompensa |
 |---|---|---|
-| Mestre Bigorna (Oficina) | Defesa: Bigornel e Picaréu sobem a guarda | 620 moedas + 2 Poções M |
-| Ágata | Veneno de gás e cura (Fumarel + Cantilho) | 560 moedas + 3 Antídotos + 1 Reviver |
+| Mestre Bigorna (Oficina) | Defesa: Bigornel e Picaréu sobem a guarda | 620 moedas + 2 Caldos de Tutano |
+| Ágata | Veneno de gás e cura (Fumarel + Cantilho) | 560 moedas + 3 Ervas Amargas + 1 Vela de Aniversário |
 
 ## 8. Escolhas e consequências
 | Escolha | Opções | Consequência |
 |---|---|---|
 | Caminho da Rota 2 | Domadores / Cascalho / Galeria Velha | Moedas e itens / XP e marcadores / curto, com um selvagem forte |
 | **Escolha 2: a corrente mestra** | Quebrar / Pedir que ela solte | Quebrar: os mineiros fogem, a loja fica 25% mais cara e o único **Vagonauta** aparece na câmara sul (recrutável). Pedir: a Tia dá o **Martelo da Tia** (abre o atalho de entulho da Rota 3), a loja dá 10% de desconto e soma **+1 Redenção** (`red_minas`). |
-| Missão do capacete | Fazer / ignorar | 2 Poções G |
-| Missão do bolo da Pirita | Fazer / ignorar | 2 Poções M e uma festa de aniversário |
+| Missão do capacete | Fazer / ignorar | 2 Fatias de Bolo |
+| Missão do bolo da Pirita | Fazer / ignorar | 2 Caldos de Tutano e uma festa de aniversário |
 
 ## 9. Falas (PT-BR, na ordem dos roteiros)
 
@@ -101,10 +101,10 @@ Na casa do **Seu Carvão** há um **mapa antigo** da costa: três baías lado a 
 ### `minas/fuligem`
 - **Fuligem:** Limpo chaminé da forja. Respiro fumaça. Meus esqueletos também. Prepara o pulmão!
 - *[batalha tamer: Fumarel 27, Bigornel 26 · 480 moedas + 1× pocao_m, 1× antidoto]*
-- **Fuligem:** Cof, cof. Leva um antídoto pra Mina. Lá o ar morde.
+- **Fuligem:** Cof, cof. Leva erva amarga pra Mina. Lá o ar morde.
 
 ### `minas/fuligem_depois`
-- **Fuligem:** Cof, cof. Leva um antídoto pra Mina. Lá o ar morde.
+- **Fuligem:** Cof, cof. Leva erva amarga pra Mina. Lá o ar morde.
 
 ### `minas/placa_brasal`
 - *(narração)* Brasal. Aqui o fogo nunca dorme. Nem a gente.
@@ -123,7 +123,7 @@ Na casa do **Seu Carvão** há um **mapa antigo** da costa: três baías lado a 
 ### `minas/cobre`
 - **Seu Cobre:** Com os mineiros fugidos, tudo encareceu. Não me olha assim, a culpa é de quem quebrou. *(if minas_quebrou)*
 - **Seu Cobre:** Os mineiros voltaram e o minério também. Pra você, desconto de amigo. *(if minas_negociou)*
-- **Seu Cobre:** Minério? Não tem. Mas poção grande eu arranjo. Do jeito que o povo apanha... *(if_not fornalha_beaten)*
+- **Seu Cobre:** Minério? Não tem. Mas bolo eu arranjo. Do jeito que o povo apanha... *(if_not fornalha_beaten)*
 - *[ação shop: {"id": "brasal"}]*
 - **Seu Cobre:** Volte sempre. E bata a cinza da bota antes de entrar.
 
@@ -150,7 +150,7 @@ Na casa do **Seu Carvão** há um **mapa antigo** da costa: três baías lado a 
 - **Seu Carvão:** Na câmara do sul da mina, perto dos trilhos. A lanterna ainda deve estar acesa.
 
 ### `minas/carvao_obrigado`
-- **Seu Carvão:** Meu capacete! Quarenta anos de mina nessa lata. Toma, duas Poções G. E olha o mapa ali na parede.
+- **Seu Carvão:** Meu capacete! Quarenta anos de mina nessa lata. Toma, duas fatias de bolo. E olha o mapa ali na parede.
 - *[ação take_item: {"item": "capacete_carvao", "n": 1}]*
 - *[ação give_item: {"item": "pocao_g", "n": 2}]*
 - *[flag carvao_done = True]*
@@ -180,10 +180,10 @@ Na casa do **Seu Carvão** há um **mapa antigo** da costa: três baías lado a 
 ### `minas/agata`
 - **Ágata:** Gás de mina é perfume pra mim. Aguenta três rodadas de veneno?
 - *[batalha tamer: Fumarel 30, Bilheiro 29 · 560 moedas + 3× antidoto, 1× reviver]*
-- **Ágata:** Aguentou. Leva esses antídotos, você mereceu respirar.
+- **Ágata:** Aguentou. Leva essas ervas amargas, você mereceu respirar.
 
 ### `minas/agata_depois`
-- **Ágata:** Aguentou. Leva esses antídotos, você mereceu respirar.
+- **Ágata:** Aguentou. Leva essas ervas amargas, você mereceu respirar.
 
 ### `minas/guarda_estrada`
 - **Capataz Bloqueio:** Ordem da Tia: ninguém sai. Nem eu. E olha que eu queria.
@@ -290,7 +290,7 @@ Na casa do **Seu Carvão** há um **mapa antigo** da costa: três baías lado a 
 - *[ação take_item: {"item": "cristal_vela", "n": 1}]*
 - *[ação sfx: {"name": "birthday"}]*
 - *(narração)* O Gasito sopra o cristal. Não apaga, claro. Ele sopra de novo, mais forte. Todo mundo ri.
-- **Pirita:** Toma, duas Poções M. E um pedaço de bolo... com só um pouquinho de cinza.
+- **Pirita:** Toma, dois caldos de tutano. E um pedaço de bolo... com só um pouquinho de cinza.
 - *[ação give_item: {"item": "pocao_m", "n": 2}]*
 - *[flag pirita_done = True]*
 
@@ -304,4 +304,4 @@ Na casa do **Seu Carvão** há um **mapa antigo** da costa: três baías lado a 
 - **Cascudo:** Ele piscava e fazia tlin-tlin. Se ouvir esse som, corre atrás!
 
 ## 10. Contagem
-Cerca de **1131 palavras** de texto de jogo em PT-BR nesta região.
+Cerca de **1133 palavras** de texto de jogo em PT-BR nesta região.

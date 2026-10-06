@@ -487,8 +487,8 @@ R.NPC_DOC = [
     ("Caliço", "Guardião", "Sintonia; abre o Arquivo por honra"),
 ]
 R.HOUSES = [
-    ("Capitã Viseira", "Sintonia em fileira (Broquel + Badaleiro)", "760 moedas + 2 Poções G"),
-    ("Gêmeos Elo", "Sintonia de iguais (dois Escrivélios)", "740 moedas + 1 Reviver + 2 Antídotos"),
+    ("Capitã Viseira", "Sintonia em fileira (Broquel + Badaleiro)", "760 moedas + 2 Fatias de Bolo"),
+    ("Gêmeos Elo", "Sintonia de iguais (dois Escrivélios)", "740 moedas + 1 Vela de Aniversário + 2 Ervas Amargas"),
 ]
 R.CHOICES = [
     ("Caminho da Rota 4", "Cadetes / Campo das Bandeiras / Aqueduto", "Moedas e itens / XP e marcadores / curto, com um selvagem forte"),
@@ -496,7 +496,7 @@ R.CHOICES = [
     ("**Escolha 4: o Registro Real**", "Contar à cidade / Guardar segredo",
      "Contar: a cidade se rebela, guardas leais ao Rei passam a vigiar a Rota 5 (**mais batalhas**), Caliço promete ficar do seu lado no Castelo; **+1 Redenção** (`red_ossorio`). "
      "Segredo: menos batalhas, e Caliço fica neutro."),
-    ("Missão do farol (Selo)", "Responder / ignorar", "Acertar (Rainha Duna): 2 Poções G + 1 Reviver"),
+    ("Missão do farol (Selo)", "Responder / ignorar", "Acertar (Rainha Duna): 2 Fatias de Bolo + 1 Vela de Aniversário"),
 ]
 
 if __name__ == "__main__":

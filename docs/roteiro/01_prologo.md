@@ -19,7 +19,7 @@ Não há Guardião no Prólogo. O **Fiscal Brás**, capanga de Ramalho, antecipa
 ## 5. Sequência
 1. **Despertar** (Praia): ao entrar no jogo pela 1ª vez, o protagonista acorda e acha o ingresso.
 2. **Bento** (Praia, perto da cabana): explica o mundo e convida para a cabana.
-3. **Cabana:** Lia e Taro batem na porta e os dois entram na equipe. Bento dá 3 Poções P.
+3. **Cabana:** Lia e Taro batem na porta e os dois entram na equipe. Bento dá 3 Chás de Alga.
 4. **1ª batalha** (Praia): selvagens aparecem depois da cabana. Bento dá 3 dicas no começo da 1ª batalha (timeline, peso, Sintonia).
 5. **Marcador:** depois da 1ª vitória, Bento explica o marcador de ossos.
 6. **Vila Maré:** Rancho, Loja, 2 casas de domadores, NPCs e a missão da rede.
@@ -95,7 +95,7 @@ Não há Guardião no Prólogo. O **Fiscal Brás**, capanga de Ramalho, antecipa
 - **Jurema (antes):** Minha rede ficou presa nas pedras da praia, perto dos esqueletos bravos. Você pega pra mim?
 - **Jurema (antes, de novo):** Pedras do leste da praia. Cuidado com os espinhudos!
 - **(objeto) Rede presa:** Você soltou a rede da Jurema.
-- **Jurema (com a rede):** Minha rede! Toma, duas poções e um antídoto. Pescador paga em dobro quando tá feliz.
+- **Jurema (com a rede):** Minha rede! Toma, duas poções e um erva amarga. Pescador paga em dobro quando tá feliz.
 - **Jurema (depois):** Quando o cais abrir, o primeiro peixe é seu.
 
 ### Fiscal Brás (cais) — domador, capanga de Ramalho
@@ -106,12 +106,12 @@ Não há Guardião no Prólogo. O **Fiscal Brás**, capanga de Ramalho, antecipa
 
 ### Casa da Família Remo — domador (tema: golpes leves)
 - **Dono:** Seu Remo, pai de três. "Aqui em casa todo mundo é rápido. Até a sopa esfria correndo."
-- **Equipe:** Remito (6) e Novelita (6), com golpes leves. **Recompensa:** 200 moedas e 2 Poções P.
+- **Equipe:** Remito (6) e Novelita (6), com golpes leves. **Recompensa:** 200 moedas e 2 Chás de Alga.
 - **Depois:** "Rápido não é tudo. Mas ajuda a chegar primeiro na mesa."
 
 ### Casa da Vó Concha — domadora (tema: cura e Sintonia)
 - **Dona:** Vó Concha. "Meus netinhos jogam juntos. Um cura, o outro bate. Família é isso."
-- **Equipe:** Novelita (7) e Mariscote (7). **Recompensa:** 1 Reviver e 150 moedas.
+- **Equipe:** Novelita (7) e Mariscote (7). **Recompensa:** 1 Vela de Aniversário e 150 moedas.
 - **Depois:** "Volta pra comer bolo. Aniversário de esqueleto é toda semana aqui."
 
 ### Recorrente (legado)
@@ -121,7 +121,7 @@ A luta opcional contra o recorrente na saída norte só aparece em saves antigos
 
 | Escolha | Opções | Consequência |
 |---|---|---|
-| Missão da rede | Fazer / ignorar | 2 Poções P + 1 Antídoto |
+| Missão da rede | Fazer / ignorar | 2 Chás de Alga + 1 Erva Amarga |
 
 ## 8. NPCs e motivo de existir
 | NPC | Função | Por que existe |

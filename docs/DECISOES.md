@@ -215,3 +215,9 @@ Registro das escolhas feitas sem consulta (AGENTS.md, seção A). Cada item diz 
 - **Chegada:** na porta do Rancho (cura e equipe logo ali), com autosave e o evento de entrada do mapa, como uma porta comum.
 - **Bloqueios:** nas cenas finais (`museu_2040`, `sala_trono`) a opção fica apagada. Nada mais é bloqueado: como só há destinos já visitados, a viagem nunca adianta a história.
 - Testes: `tests/test_travel.gd`. Captura: `capture.tscn -- --travel`.
+
+## Retorno do teste do Fernando (troca, itens e derrota)
+
+- **Troca quando um esqueleto desmaia não aceitava o A:** as linhas da equipe e dos itens na batalha mostravam o PV/quantidade como um "valor ajustável" (como nas Configurações), e o A tentava ajustar o valor em vez de escolher. Agora essas linhas são só informativas (`fixed`). O teste de interface passa pelo mesmo caminho do botão A (`MenuList.activate_current`), e há um teste específico da troca forçada; os dois falham sem a correção.
+- **Itens renomeados** (decisão 8 da seção C): nomes ligados à praia, aos ossos e aos aniversários. Todas as falas que citavam poção, antídoto ou reviver foram reescritas nos 3 idiomas. As descrições continuam curtas porque precisam caber na faixa da loja e da mochila.
+- **Fala do resgate** (decisão 9): `Game._rescue_talk`. A taxa é a mesma da regra de derrota (`battle.json → defeat.money_loss`); com o premiado "reviver sem perder moedas", a fala diz que não cobrou nada.

@@ -50,7 +50,7 @@ t("ITEM_MAILBAG", "Malote da Pena", "Quill's Mailbag", "Saca de Pluma")
 t("ITEM_MAILBAG_TEXT", "Cartas da vila inteira, todas abertas e com bilhetinhos da Musga.", "Letters from the whole village, all opened and with notes from Musga.",
   "Cartas de toda la aldea, todas abiertas y con notitas de Musga.")
 R.ITEMS["malote"] = {"name_key": "ITEM_MAILBAG", "desc_key": "ITEM_MAILBAG_TEXT", "kind": "key", "price": 0, "battle": False, "target": "none"}
-t("OPT_PA_DONATE", "Doar antídotos", "Donate antidotes", "Donar antídotos")
+t("OPT_PA_DONATE", "Doar ervas amargas", "Donate bitterleaf", "Donar hierbas amargas")
 t("OPT_PA_KEEP", "Guardar", "Keep them", "Guardarlos")
 t("OPT_PA_FIGHT_MIST", "Enfrentar a névoa", "Face the fog", "Enfrentar la niebla")
 
@@ -75,8 +75,8 @@ t("DLG_PA_CANICO_2", "Ele também não pesca nada. Mas é ótima companhia.", "H
   "Él tampoco pesca nada. Pero es muy buena compañía.")
 t("DLG_PA_MARRECO_1", "Meus patos fugiram da névoa. Meus esqueletos ficaram. Sabe por quê? Lealdade!",
   "My ducks fled the fog. My skeletons stayed. Know why? Loyalty!", "Mis patos huyeron de la niebla. Mis esqueletos se quedaron. ¿Sabes por qué? ¡Lealtad!")
-t("DLG_PA_MARRECO_2", "Leva esses antídotos. Lá na vila tão precisando mais que eu.", "Take these antidotes. The village needs them more than I do.",
-  "Llévate estos antídotos. En la aldea los necesitan más que yo.")
+t("DLG_PA_MARRECO_2", "Leva essas ervas amargas. Lá na vila tão precisando mais que eu.", "Take this bitterleaf. The village needs it more than I do.",
+  "Llévate estas hierbas amargas. En la aldea las necesitan más que yo.")
 t("DLG_PA_ARR_L1", "Vaga-lumes! Olha, eles acendem um pro outro achar o caminho.", "Fireflies! Look, they light up so the others can find the way.",
   "¡Luciérnagas! Mira, se encienden para que los demás encuentren el camino.")
 t("DLG_PA_ARR_L2", "Igual farol. Só que pequenininho.", "Like a lighthouse. Just a tiny one.", "Como un faro. Solo que chiquitito.")
@@ -115,13 +115,13 @@ t("DLG_PA_ARR_BT1", "Todo mundo tossindo. Isso não é doença. É alguém fazen
 t("DLG_PA_GARCA_1", "A névoa desce toda noite. De manhã, fila na porta da Musga pra buscar o remédio dela.",
   "The fog rolls in every night. In the morning, everyone lines up at Musga's door for her medicine.",
   "La niebla baja cada noche. Por la mañana, fila en la puerta de Musga para buscar su remedio.")
-t("DLG_PA_GARCA_2", "Meu antídoto acabou. As crianças tossem e eu só tenho chá de capim.", "I'm out of antidotes. The kids are coughing and all I have is grass tea.",
-  "Se me acabaron los antídotos. Los niños tosen y solo tengo té de pasto.")
-t("DLG_PA_GARCA_ASK", "Você carrega antídotos... Doaria alguns pras crianças? Até três já curam a rua inteira.",
-  "You're carrying antidotes... Would you donate some for the kids? Up to three would cure the whole street.",
-  "Llevas antídotos... ¿Donarías algunos para los niños? Hasta tres curan la calle entera.")
-t("DLG_PA_GARCA_NONE", "Se arranjar antídoto, as crianças agradecem. A Vó Neblina também.", "If you come across antidotes, the kids would be grateful. Granny Fog too.",
-  "Si consigues antídotos, los niños te lo agradecerán. La abuela Neblina también.")
+t("DLG_PA_GARCA_2", "Minha erva amarga acabou. As crianças tossem e eu só tenho chá de capim.", "I'm out of bitterleaf. The kids are coughing and all I have is grass tea.",
+  "Se me acabó la hierba amarga. Los niños tosen y solo tengo té de pasto.")
+t("DLG_PA_GARCA_ASK", "Você carrega erva amarga... Doaria um pouco pras crianças? Até três maços já curam a rua inteira.",
+  "You're carrying bitterleaf... Would you donate some for the kids? Up to three bunches would cure the whole street.",
+  "Llevas hierba amarga... ¿Donarías un poco para los niños? Hasta tres manojos curan la calle entera.")
+t("DLG_PA_GARCA_NONE", "Se arranjar erva amarga, as crianças agradecem. A Vó Neblina também.", "If you come across bitterleaf, the kids would be grateful. Granny Fog too.",
+  "Si consigues hierba amarga, los niños te lo agradecerán. La abuela Neblina también.")
 t("DLG_PA_DONATE_1", "Isso cura a rua das crianças inteirinha. E sobra pra Vó Neblina!", "This will cure the whole kids' street. And there's some left for Granny Fog!",
   "Esto cura toda la calle de los niños. ¡Y sobra para la abuela Neblina!")
 t("DLG_PA_DONATE_2", "Ela era domadora das boas. Quando melhorar, vai querer te conhecer.", "She was a fine tamer. Once she's better, she'll want to meet you.",
@@ -130,10 +130,10 @@ t("DLG_PA_KEEP", "Entendo. Estrada longa pede bolso cheio. O chá vai ter que da
   "Entiendo. Camino largo pide bolsillo lleno. El té tendrá que bastar.")
 t("DLG_PA_GARCA_AFTER", "A névoa parou! Agora é só esperar a tosse ir embora sozinha.", "The fog stopped! Now we just wait for the coughs to leave on their own.",
   "¡La niebla paró! Ahora solo hay que esperar que la tos se vaya sola.")
-t("DLG_PA_JUNCO_1", "Antídoto? Acabou faz uma semana. A Musga compra tudo pra ninguém mais ter.",
-  "Antidotes? Sold out a week ago. Musga buys them all so nobody else has any.", "¿Antídotos? Se acabaron hace una semana. Musga los compra todos para que nadie más tenga.")
-t("DLG_PA_JUNCO_2", "Poção eu tenho. Remédio de verdade, só ela. Esperta, a moça.", "Potions I've got. Real medicine, only she does. Clever girl.",
-  "Pociones tengo. Remedio de verdad, solo ella. Lista, la muchacha.")
+t("DLG_PA_JUNCO_1", "Erva amarga? Acabou faz uma semana. A Musga compra tudo pra ninguém mais ter.",
+  "Bitterleaf? Sold out a week ago. Musga buys it all so nobody else has any.", "¿Hierba amarga? Se acabó hace una semana. Musga la compra toda para que nadie más tenga.")
+t("DLG_PA_JUNCO_2", "Caldo eu tenho. Remédio de verdade, só ela. Esperta, a moça.", "Broth I've got. Real medicine, only she does. Clever girl.",
+  "Caldo tengo. Remedio de verdad, solo ella. Lista, la muchacha.")
 t("DLG_PA_GIRINO", "Eu prendo a respiração quando a névoa desce. Meu recorde é três segundos.",
   "I hold my breath when the fog comes down. My record is three seconds.", "Aguanto la respiración cuando baja la niebla. Mi récord es tres segundos.")
 t("DLG_PA_GIRINO_AFTER", "Agora eu respiro à vontade! Já tô no recorde de mil segundos.", "Now I can breathe all I want! I'm already at a thousand-second record.",
@@ -143,9 +143,9 @@ t("DLG_PA_SAPE_1", "A Musga é sobrinha do Rei. Dizem que da primeira vez ela se
   "Musga es sobrina del Rey. Dicen que la primera vez se fue sola, en una torre que nadie visitaba.")
 t("DLG_PA_SAPE_2", "Gente esquecida faz cada coisa pra ser lembrada...", "Forgotten folks do the strangest things to be remembered...",
   "La gente olvidada hace cada cosa para que la recuerden...")
-t("DLG_PA_LODO_1", "Veneno dura de três a cinco turnos. Antídoto cedo poupa vida; tarde, poupa antídoto.",
-  "Poison lasts three to five turns. An early antidote saves health; a late one saves antidotes.",
-  "El veneno dura de tres a cinco turnos. Antídoto temprano ahorra vida; tarde, ahorra antídoto.")
+t("DLG_PA_LODO_1", "Veneno dura de três a cinco turnos. Erva amarga cedo poupa vida; tarde, poupa erva.",
+  "Poison lasts three to five turns. Early bitterleaf saves health; late bitterleaf just saves bitterleaf.",
+  "El veneno dura de tres a cinco turnos. Hierba amarga temprano ahorra vida; tarde, ahorra hierba.")
 t("DLG_PA_LODO_2", "A equipe da Musga se cura enquanto você se envenena. Bate primeiro em quem cura.",
   "Musga's team heals while you get poisoned. Hit the healer first.", "El equipo de Musga se cura mientras tú te envenenas. Golpea primero al que cura.")
 t("DLG_PA_PENA_ASK", "O capanga da Musga levou meu malote! Ela lê as cartas de todo mundo.", "Musga's henchman took my mailbag! She reads everybody's letters.",
@@ -156,23 +156,23 @@ t("OBJ_PA_MAILBAG", "O malote da Dona Pena. As cartas estão abertas... e anotad
   "La saca de doña Pluma. Las cartas están abiertas... y anotadas.")
 t("DLG_PA_PENA_THANKS", "Meu malote! E olha só: alguém escreveu \"que fofo\" em todas as cartas.",
   "My mailbag! And look: someone wrote \"how sweet\" on every single letter.", "¡Mi saca! Y mira: alguien escribió \"qué tierno\" en todas las cartas.")
-t("DLG_PA_PENA_REWARD", "Toma, um Reviver e dois antídotos. Carteira paga em dobro quando a carta chega.",
-  "Here, a Revive and two antidotes. A mail carrier pays double when the letter arrives.",
-  "Toma, un Revivir y dos antídotos. La cartera paga el doble cuando llega la carta.")
+t("DLG_PA_PENA_REWARD", "Toma, uma vela de aniversário e duas ervas amargas. Carteira paga em dobro quando a carta chega.",
+  "Here, a birthday candle and two bunches of bitterleaf. A mail carrier pays double when the letter arrives.",
+  "Toma, una vela de cumpleaños y dos hierbas amargas. La cartera paga el doble cuando llega la carta.")
 t("DLG_PA_PENA_AFTER", "Hoje entreguei uma carta até pra Musga. Ela chorou. De alegria, eu acho.",
   "Today I even delivered a letter to Musga. She cried. Happy tears, I think.", "Hoy hasta le entregué una carta a Musga. Lloró. De alegría, creo.")
 t("DLG_PA_PENA_WAIT", "Sem malote, sem carta. Sem carta, a vila fica muda.", "No mailbag, no letters. No letters, the village goes quiet.",
   "Sin saca, no hay cartas. Sin cartas, la aldea se queda muda.")
-t("DLG_PA_TABOA_1", "Uma envenena, a outra também! Treino de antídoto, cortesia da casa.", "One poisons, and so does the other! Antidote practice, on the house.",
-  "¡Una envenena y la otra también! Práctica de antídoto, cortesía de la casa.")
-t("DLG_PA_TABOA_2", "Veneno em dobro acaba rápido... pra quem tem antídoto.", "Double poison ends fast... for those with antidotes.",
-  "El veneno doble se acaba rápido... para quien tiene antídoto.")
+t("DLG_PA_TABOA_1", "Uma envenena, a outra também! Treino de erva amarga, cortesia da casa.", "One poisons, and so does the other! Bitterleaf practice, on the house.",
+  "¡Una envenena y la otra también! Práctica de hierba amarga, cortesía de la casa.")
+t("DLG_PA_TABOA_2", "Veneno em dobro acaba rápido... pra quem tem erva amarga.", "Double poison ends fast... for those with bitterleaf.",
+  "El veneno doble se acaba rápido... para quien tiene hierba amarga.")
 t("DLG_PA_BAGRE_1", "Meu Marretão aguenta pancada e meu Regalírio cura. Quero ver você cansar a gente.",
   "My Marretão takes hits and my Regalírio heals. Let's see you wear us down.", "Mi Marretão aguanta golpes y mi Regalírio cura. A ver si nos cansas.")
 t("DLG_PA_BAGRE_2", "Cansou a gente. Peixe grande cansa, sabia?", "You wore us down. Big fish get tired too, you know.",
   "Nos cansaste. Los peces grandes también se cansan, ¿sabías?")
-t("DLG_PA_NEBLINA_1", "Foi você que mandou os antídotos? Que a névoa nunca te ache, criança.",
-  "Was it you who sent the antidotes? May the fog never find you, child.", "¿Fuiste tú quien mandó los antídotos? Que la niebla nunca te encuentre, criatura.")
+t("DLG_PA_NEBLINA_1", "Foi você que mandou as ervas amargas? Que a névoa nunca te ache, criança.",
+  "Was it you who sent the bitterleaf? May the fog never find you, child.", "¿Fuiste tú quien mandó las hierbas amargas? Que la niebla nunca te encuentre, criatura.")
 t("DLG_PA_NEBLINA_2", "Agradeço do jeito antigo: com uma boa batalha!", "I'll thank you the old way: with a good battle!",
   "Te lo agradezco a la antigua: ¡con una buena batalla!")
 t("DLG_PA_NEBLINA_3", "Minha velha Brumaga fugiu pro caldeirão quando a névoa veio. Se ela te achar digno, vai com você.",
@@ -414,7 +414,7 @@ R.DOC = {
     "ages": "chegada 34–42; selvagens 33–39; domadores 36–43; Guardiã ~48",
     "problem": "Toda noite a **névoa verde** do caldeirão da Guardiã **Musga** desce sobre **Brejo Alto**. Quem respira tosse, e de manhã a vila faz fila na porta dela "
                "para buscar o remédio que só ela sabe fazer. Quem sai da vila perde a dose do dia: \"Ninguém sai, ninguém se perde\" do jeito da Musga. "
-               "O Rancho e a loja estão sem antídoto (ela compra todos). A névoa também esconde a estrada do norte.",
+               "O Rancho e a loja estão sem erva amarga (ela compra todos). A névoa também esconde a estrada do norte.",
     "clue_n": 4,
     "clue": "Antes da luta, a Musga **cheira o ar** e diz: \"Você tem cheiro de casa. De família.\" Os esqueletos da família real sentem os parentes: "
             "o protagonista é do sangue do Rei.",
@@ -426,21 +426,21 @@ R.DOC = {
                  "personality": "irônica, fofoqueira, solitária; chama todo mundo de \"querido\" e solta fofocas (o tique dela)",
                  "motive": "**Medo** de ser esquecida de novo: da primeira vez morreu sozinha numa torre. \"Quem precisa de mim não me esquece.\"",
                  "mechanic": "**Veneno e cura.** A equipe envenena e se cura (Ervaçal, Regalírio). Ensina o **tempo do veneno** (3–5 turnos), o uso de "
-                             "**antídotos** e a bater primeiro em quem cura. Lodo e as Irmãs Taboa dão a dica.",
+                             "**ervas amargas** e a bater primeiro em quem cura. Lodo e as Irmãs Taboa dão a dica.",
                  "team": "Ervaçal 49, Marretão 48, Regalírio 47, Cogumestre 48.",
                  "reward": "1300 moedas; a névoa para e a estrada norte (Rota 4) aparece."},
     "maps": [("**Rota 3** (`rota_3`)", "Sai de Brasal (depois da Tia). 3 caminhos: **Trilha das Tábuas** (oeste: Traíra, Caniço, Marreco), **Capinzal** (leste, mais selvagens) "
               "e **Passagem do Desmoronamento** (centro: entulho que só some com o **Martelo da Tia**, com um selvagem forte). Placa e o Barqueiro Remanso dão a dica."),
-             ("**Brejo Alto** (`brejo`)", "Vila de palafitas: Rancho (Garça, onde acontece a escolha 3), Loja sem antídoto (Junco), casas das Irmãs Taboa e do Bagre, "
+             ("**Brejo Alto** (`brejo`)", "Vila de palafitas: Rancho (Garça, onde acontece a escolha 3), Loja sem erva amarga (Junco), casas das Irmãs Taboa e do Bagre, "
               "a casa da Vó Neblina (abre se você doar), NPCs, missão do malote e saída oeste para o Caldeirão."),
              ("**Caldeirão da Musga** (`caldeirao`)", "Salão com selvagens, o malote roubado, Boticário Fel, câmara sul (Brumaga, se você doou) e o caldeirão da Musga ao norte."),
              ("Interiores", "Rancho da Garça, Venda do Junco, casas das Irmãs Taboa, do Bagre e da Vó Neblina.")],
 }
 R.NPC_DOC = [
     ("Barqueiro Remanso", "dica", "Explica os 3 caminhos e reconhece o Martelo da Tia"),
-    ("Traíra, Caniço, Marreco", "domadores da rota", "Trilha das Tábuas; Marreco dá antídotos (que podem ir para a doação)"),
-    ("Dona Garça", "Rancho + escolha 3", "Cura; pede os antídotos para as crianças"),
-    ("Seu Junco", "Loja", "Mostra o problema: a Musga compra todo antídoto"),
+    ("Traíra, Caniço, Marreco", "domadores da rota", "Trilha das Tábuas; Marreco dá ervas amargas (que podem ir para a doação)"),
+    ("Dona Garça", "Rancho + escolha 3", "Cura; pede os ervas amargas para as crianças"),
+    ("Seu Junco", "Loja", "Mostra o problema: a Musga compra todo erva amarga"),
     ("Girino", "humor", "Recorde de fôlego; muda depois da Guardiã"),
     ("Seu Sapé", "lore", "Conta como a Musga morreu esquecida numa torre"),
     ("Lodo", "dica", "Ensina o tempo do veneno e a bater em quem cura"),
@@ -449,16 +449,16 @@ R.NPC_DOC = [
     ("Musga", "Guardiã", "Veneno e cura; pista 4; fofoca que move o arco do Taro"),
 ]
 R.HOUSES = [
-    ("Irmãs Taboa", "Veneno em dobro (Ervaçal + Esporito)", "640 moedas + 2 Antídotos"),
-    ("Pescador Bagre", "Aguentar e curar (Marretão + Regalírio)", "660 moedas + 2 Poções G"),
-    ("Vó Neblina (só se doar)", "Névoa: veneno e cura (Ervaçal + Regalírio)", "700 moedas + 2 Reviver; conta onde está a Brumaga"),
+    ("Irmãs Taboa", "Veneno em dobro (Ervaçal + Esporito)", "640 moedas + 2 Ervas Amargas"),
+    ("Pescador Bagre", "Aguentar e curar (Marretão + Regalírio)", "660 moedas + 2 Fatias de Bolo"),
+    ("Vó Neblina (só se doar)", "Névoa: veneno e cura (Ervaçal + Regalírio)", "700 moedas + 2 Vela de Aniversário; conta onde está a Brumaga"),
 ]
 R.CHOICES = [
     ("Caminho da Rota 3", "Tábuas / Capinzal / Desmoronamento", "Moedas e itens / XP e marcadores / curto, só com o Martelo da Tia"),
-    ("**Escolha 3: os antídotos**", "Doar / Guardar",
+    ("**Escolha 3: os ervas amargas**", "Doar / Guardar",
      "Doar (até 3): as crianças e a Vó Neblina se curam, a casa dela abre (3ª casa de domadores) e a única **Brumaga** aparece no Caldeirão; **+1 Redenção** (`red_pantano`). "
      "Guardar: você fica com os itens."),
-    ("Missão do malote", "Fazer / ignorar", "1 Reviver + 2 Antídotos (que podem ajudar na doação)"),
+    ("Missão do malote", "Fazer / ignorar", "1 Vela de Aniversário + 2 Ervas Amargas (que podem ajudar na doação)"),
 ]
 
 if __name__ == "__main__":
