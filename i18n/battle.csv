@@ -1,20 +1,20 @@
 keys,pt_BR,en,es
-BTL_WILD_APPEARS,Um {name} selvagem apareceu!,A wild {name} appeared!,¡Apareció un {name} salvaje!
-BTL_WILD_APPEARS_2,{a} e {b} selvagens apareceram!,Wild {a} and {b} appeared!,¡Aparecieron {a} y {b} salvajes!
-BTL_TAMER_CHALLENGE,{tamer} quer batalhar!,{tamer} wants to battle!,¡{tamer} quiere pelear!
-BTL_TAMER_SENDS,{tamer} enviou {name}!,{tamer} sent out {name}!,¡{tamer} sacó a {name}!
+BTL_WILD_APPEARS,Um {name} chacoalhou do mato!,A wild {name} rattled out!,¡Un {name} salvaje salió traqueteando!
+BTL_WILD_APPEARS_2,{a} e {b} chacoalharam do mato!,{a} and {b} rattled out of the brush!,¡{a} y {b} salieron traqueteando!
+BTL_TAMER_CHALLENGE,{tamer} estala os dedos: duelo!,{tamer} cracks their knuckles: duel!,¡{tamer} truena los dedos: duelo!
+BTL_TAMER_SENDS,{tamer} chama {name}!,{tamer} calls {name}!,¡{tamer} llama a {name}!
 BTL_TAMER_DEFAULT,O domador,The tamer,El domador
-BTL_GO,"Vai, {name}!","Go, {name}!","¡Adelante, {name}!"
-BTL_COME_BACK,"Volte, {name}!","Come back, {name}!","¡Vuelve, {name}!"
+BTL_GO,"Pra frente, {name}!","You got this, {name}!","¡A por ellos, {name}!"
+BTL_COME_BACK,"Descansa, {name}!","Take five, {name}!","¡Descansa, {name}!"
 BTL_USED,{user} usou {move}!,{user} used {move}!,¡{user} usó {move}!
-BTL_MISS,{user} errou!,{user} missed!,¡{user} falló!
-BTL_NO_TARGET,Não havia alvo.,There was no target.,No había objetivo.
-BTL_CRIT,Golpe crítico!,A critical hit!,¡Golpe crítico!
-BTL_EFF_STRONG_MSG,É forte!,It's strong!,¡Es fuerte!
-BTL_EFF_WEAK_MSG,Não foi muito eficaz…,It wasn't very effective…,No fue muy eficaz…
+BTL_MISS,{user} passou raspando!,{user} whiffed it!,¡{user} pasó rozando!
+BTL_NO_TARGET,O golpe acertou o vento.,The move hit thin air.,El golpe dio al aire.
+BTL_CRIT,Bem na junta! Crítico!,Right in the joint! Critical!,¡Justo en la junta! ¡Crítico!
+BTL_EFF_STRONG_MSG,Fez os ossos tremerem!,That rattled the bones!,¡Hizo temblar los huesos!
+BTL_EFF_WEAK_MSG,Mal fez cócegas…,Barely a tickle…,Apenas cosquillas…
 BTL_POISONED,{name} foi envenenado!,{name} was poisoned!,¡{name} fue envenenado!
 BTL_ALREADY_POISONED,{name} já está envenenado.,{name} is already poisoned.,{name} ya está envenenado.
-BTL_POISON_TICK,{name} sofre com o veneno.,{name} is hurt by poison.,{name} sufre por el veneno.
+BTL_POISON_TICK,O veneno pinica {name}.,Poison stings {name}.,El veneno pica a {name}.
 BTL_POISON_END,O veneno de {name} passou.,{name}'s poison wore off.,El veneno de {name} pasó.
 BTL_STAT_UP,{stat} de {name} subiu!,{name}'s {stat} rose!,¡{stat} de {name} subió!
 BTL_STAT_DOWN,{stat} de {name} caiu!,{name}'s {stat} fell!,¡{stat} de {name} bajó!
@@ -25,7 +25,7 @@ BTL_CURED,{name} está livre do veneno.,{name} is free of poison.,{name} ya no e
 BTL_REVIVED,{name} voltou à batalha!,{name} is back in the fight!,¡{name} volvió a la batalla!
 BTL_ITEM_USED,Você usou {item} em {name}.,You used {item} on {name}.,Usaste {item} en {name}.
 BTL_NO_ITEMS,Não foi possível usar o item.,The item couldn't be used.,No se pudo usar el objeto.
-BTL_FAINT,{name} caiu!,{name} went down!,¡{name} cayó!
+BTL_FAINT,{name} desmontou!,{name} fell apart!,¡{name} se desarmó!
 BTL_XP,{name} ganhou {n} de XP!,{name} gained {n} XP!,¡{name} ganó {n} de EXP!
 BTL_LEVEL_UP,Feliz aniversário! {name} fez {n} anos!,Happy birthday! {name} turned {n}!,¡Feliz cumpleaños! {name} cumplió {n} años!
 BTL_LEARNED,{name} aprendeu {move}!,{name} learned {move}!,¡{name} aprendió {move}!
@@ -33,12 +33,12 @@ BTL_LEARN_PROMPT,"{name} quer aprender {move}, mas já sabe 4 golpes.","{name} w
 BTL_LEARN_TITLE,Esquecer qual golpe?,Forget which move?,¿Qué golpe olvidar?
 BTL_LEARN_GIVE_UP,Não aprender,Don't learn,No aprender
 BTL_DID_NOT_LEARN,{name} não aprendeu {move}.,{name} did not learn {move}.,{name} no aprendió {move}.
-BTL_FLED,Fugiu sem problemas!,Got away safely!,¡Escapaste sin problemas!
-BTL_FLEE_FAILED,Não deu para fugir!,Couldn't get away!,¡No pudiste escapar!
-BTL_CANT_FLEE,Não dá para fugir de um domador!,You can't run from a tamer!,¡No puedes huir de un domador!
-BTL_WIN,Você venceu!,You won!,¡Ganaste!
+BTL_FLED,Saiu de fininho!,Slipped away!,¡Te escabulliste!
+BTL_FLEE_FAILED,Tropeçou na fuga!,Tripped while running!,¡Tropezaste al huir!
+BTL_CANT_FLEE,Domador não deixa ninguém fugir!,A tamer won't let you run!,¡Un domador no te deja huir!
+BTL_WIN,Vitória! Os ossos do time vibram!,Victory! The team's bones hum!,¡Victoria! ¡Los huesos del equipo vibran!
 BTL_MONEY,Você recebeu {n} moedas.,You received {n} coins.,Recibiste {n} monedas.
-BTL_LOSE,Sua equipe caiu…,Your team went down…,Tu equipo cayó…
+BTL_LOSE,A equipe desmontou…,Your team fell apart…,Tu equipo se desarmó…
 BTL_LOSE_MONEY,Você perdeu {n} moedas e voltou para descansar.,You lost {n} coins and went back to rest.,Perdiste {n} monedas y volviste a descansar.
 BTL_NO_PARTY,Você ainda não tem esqueletos na equipe.,You don't have any skeletons on your team yet.,Aún no tienes esqueletos en tu equipo.
 BTL_RING_MOVES,Golpes,Moves,Golpes
@@ -58,7 +58,7 @@ BTL_SWITCH_TITLE,Trocar por quem?,Switch to whom?,¿Cambiar por quién?
 BTL_CHOOSE_REPLACEMENT,Quem entra no lugar?,Who steps in?,¿Quién entra?
 BTL_ITEMS_TITLE,Usar qual item?,Use which item?,¿Qué objeto usar?
 BTL_ITEM_TARGET,Em quem?,On whom?,¿En quién?
-BTL_STRUGGLE,Debater-se,Flail,Forcejeo
+BTL_STRUGGLE,Teimosia,Stubborn Swing,Terquedad
 BTL_STRUGGLE_DESC,Sem PP: golpe fraco.,No PP: a weak hit.,Sin PP: golpe débil.
 TYPE_FISICO,Físico,Physical,Físico
 TYPE_MAGICO,Mágico,Magic,Mágico
@@ -100,7 +100,7 @@ BTL_WEIGHT_NORMAL,Normal,Normal,Normal
 BTL_WEIGHT_HEAVY,Pesado,Heavy,Pesado
 GOLDEN_SUFFIX_M,{name} Dourado,Golden {name},{name} Dorado
 GOLDEN_SUFFIX_F,{name} Dourada,Golden {name},{name} Dorada
-BTL_GOLDEN_APPEARS,Um brilho dourado! Este é raro!,A golden shine! This one is rare!,¡Un brillo dorado! ¡Este es raro!
+BTL_GOLDEN_APPEARS,Brilho dourado! Esse é raríssimo!,A golden glint! A rare one!,¡Brillo dorado! ¡Rarísimo!
 RECRUIT_MARKER,Marcador de ossos de {name}: {a}% → {b}%,{name} bone marker: {a}% → {b}%,Marcador de huesos de {name}: {a}% → {b}%
 RECRUIT_ASK,{name} quer andar com você. Aceita?,{name} wants to come along. Accept?,{name} quiere ir contigo. ¿Aceptas?
 RECRUIT_ACCEPT,Aceitar,Accept,Aceptar

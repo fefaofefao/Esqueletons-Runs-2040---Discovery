@@ -593,7 +593,7 @@ func _travel_shots() -> void:
 	Game.close_all_overlays()
 	await _goto("vila_rancho", Vector2i(7, 5), "up")
 	Game._rescue_talk(37)
-	await _wait(1.2)
+	await _wait(4.0)
 	await _shot("t5_resgate_1")
 	await _advance([], "t6_resgate_2", 1, 6)
 

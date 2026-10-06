@@ -422,3 +422,12 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 - Mapas, 2º passe: trilhas em curva, riachos com ponte, lagos, ruínas e outros pontos de interesse.
 - **Viagem rápida** (pausa → Viajar) para cidades já visitadas, chegada na porta do Rancho.
 - Retorno do teste: troca após desmaio corrigida, itens com nomes próprios do jogo e fala do resgate após derrota.
+
+## Refino geral (pedido do Fernando, concluído)
+- **Batalha sem risco de toque errado:** golpes em linhas de 18 px com 3 px de vão (antes 14/1), listas de troca e itens com linhas de 17 px, ícones do anel com área de toque 24×24.
+- **Apresentação de Lia e Taro** reescrita: os dois chegam brigando por um remo, mostram personalidade e fecham um pacto com o jogador (escolha "pacto" ou "hesita" muda uma fala depois).
+- **Batalha final roteirizada** contra o Rei: arena do trono, falas no meio da luta, tremor e clarão quando a coroa racha; os ases dos Guardiões voltam como "ecos" no Castelo.
+- **+15 esqueletos (95 espécies):** 3 linhas novas — Zunzim → Melíria → Colmeira (Pântano, Veneno), Caquinho → Vitralho → Rosáceo (Ossório, Mágico), Barrico → Rodaleiro → Urnadão (Deserto, Físico) — e os 6 ases dos Guardiões: Troncudo, Bigornão, Caldeirona, Bandeirão, Patinora e Miragina. 3 golpes assinatura novos (59 golpes).
+- **Textos menos genéricos:** mensagens de batalha com a cara do mundo ("Um X chacoalhou do mato!", "Bem na junta! Crítico!", "X desmontou!", "Vitória! Os ossos do time vibram!"); "Debater-se" virou "Teimosia"; a mensagem de caminho fechado não fala mais em "versão de teste".
+- **Caça a bugs:** replay automático de todas as regiões (Prólogo ao Castelo) sem erros de script nem travamentos.
+- Simulador refeito com as novas linhas e ases: todos os critérios OK.
