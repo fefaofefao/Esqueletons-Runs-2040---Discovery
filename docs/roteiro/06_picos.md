@@ -267,7 +267,7 @@ No **Mosteiro do Eco**, o monge-esqueleto **Nevasco** explica que o eco da coroa
 - **Alva:** Você veio de muito longe. Dá pra ver nos seus olhos.
 - **Alva:** Sou Alva, filha do Rei. Meu pai está triste há mil anos. Se nada mudar, talvez ele melhore.
 - **Alva:** Por isso congelei tudo aqui em cima. Desculpa. Não posso deixar você passar.
-- *[batalha boss: Alpinor 72, Cristalor 71, Samovarão 73, Rochedão 72 · 1900 moedas]*
+- *[batalha boss: Patinora 70, Alpinor 72, Samovarão 73, Rochedão 72 · 1900 moedas]*
 - **Alva:** Você é rápido... mais rápido que o inverno.
 - **Alva:** Eu só queria ver meu pai sorrir de novo. Quando a coroa rachou, ele parou de vez.
 - **Alva:** Você é o eco que a coroa chamou, não é? Então você vai ver meu pai.

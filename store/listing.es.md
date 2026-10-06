@@ -12,7 +12,7 @@ Despiertas en una playa con una entrada de museo en el bolsillo: 12/10/2040. El 
 Esqueletons Runs 2040 — Edición Discovery es un RPG de aventura en pixel art, el primer juego de la serie. Viaja con Lia y Taro, tus dos compañeros, por seis regiones, cada una con un Guardián de la familia del Rey.
 
 ESQUELETOS QUE CRECEN
-• 80 especies originales para descubrir en el Osario.
+• 95 especies originales para descubrir en el Osario.
 • El nivel es la edad: cada victoria puede volverse un cumpleaños, con pastel, velas y confeti.
 • A la edad justa, el esqueleto crece de Bebé a Adolescente y Adulto, con nuevo aspecto y nuevos golpes.
 • Esqueletos Dorados: raros, brillantes y reclutables.

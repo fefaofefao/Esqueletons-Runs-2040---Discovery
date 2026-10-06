@@ -13,14 +13,14 @@ Gerado por `tools/simulate.py` (simulador `tools/sim/simulate.gd`, que usa o mot
 | Região | Chegada (meta) | Idade no Guardião (meta) | Vitória contra o Guardião | Batalhas | Derrotas | Tempo (min) |
 |---|---|---|---|---|---|---|
 | Prólogo | 5.0 (5–5) | 9.5 (—) | — | 5 | 0.0 | 15.1 |
-| Bosque | 8.9 (10–18) | 19.5 (22.0) | 62% | 14 | 0.2 | 21.1 |
-| Minas | 22.5 (22–30) | 33.7 (34.0) | 77% | 14 | 0.8 | 22.9 |
-| Pântano | 36.3 (34–42) | 47.2 (46.0) | 84% | 13 | 0.1 | 20.9 |
-| Ossório | 50.5 (46–54) | 59.8 (58.0) | 68% | 11 | 0.0 | 22.4 |
-| Picos | 62.7 (58–66) | 71.5 (70.0) | 64% | 10 | 0.0 | 21.9 |
-| Deserto | 74.4 (68–76) | 82.8 (80.0) | 81% | 10 | 0.0 | 20.9 |
-| Castelo | 86.0 (80–86) | 90.7 (90.0) | 80% · Rei 70% | 7 | 0.0 | 21.5 |
-| **Total** | | | | | | **167 min (2h46)** |
+| Bosque | 8.9 (10–18) | 19.5 (22.0) | 67% | 14 | 0.2 | 21.0 |
+| Minas | 22.5 (22–30) | 33.6 (34.0) | 77% | 14 | 0.8 | 22.8 |
+| Pântano | 36.4 (34–42) | 47.2 (46.0) | 82% | 13 | 0.1 | 20.8 |
+| Ossório | 50.7 (46–54) | 59.9 (58.0) | 84% | 11 | 0.0 | 22.1 |
+| Picos | 63.1 (58–66) | 71.8 (70.0) | 78% | 10 | 0.1 | 21.6 |
+| Deserto | 74.9 (68–76) | 83.2 (80.0) | 84% | 10 | 0.0 | 20.9 |
+| Castelo | 86.6 (80–86) | 91.0 (90.0) | 80% · Rei 71% | 7 | 0.0 | 21.6 |
+| **Total** | | | | | | **166 min (2h45)** |
 
 Tempo = batalhas × duração simulada (ação do jogador 4.5 s, do inimigo 2.4 s, +9 s de abertura/fim) + caminhada + leitura a 180 palavras/min. Caminhada e leitura são o **orçamento** de cada região para a fase 4 (mapas e roteiro ainda não existem); a fase 4 deve medir os valores reais e repetir a simulação.
 
@@ -28,10 +28,10 @@ Tempo = batalhas × duração simulada (ação do jogador 4.5 s, do inimigo 2.4 
 
 | Tipo | Vitória geral | vs Físico | vs Mágico | vs Cura | vs Veneno |
 |---|---|---|---|---|---|
-| Físico | 48% | — | 67% | 62% | 16% |
-| Mágico | 65% | 41% | — | 75% | 79% |
-| Cura/Suporte | 35% | 35% | 31% | — | 38% |
-| Veneno | 54% | 86% | 19% | 57% | — |
+| Físico | 48% | — | 65% | 62% | 17% |
+| Mágico | 65% | 44% | — | 68% | 83% |
+| Cura/Suporte | 40% | 42% | 38% | — | 41% |
+| Veneno | 54% | 84% | 18% | 59% | — |
 
 Ciclo de vantagem: Físico > Mágico > Veneno > Físico; Cura é neutra (vale ×1,35 / ×0,8). Cura perde duelos de dano por definição: é tipo de suporte e brilha em equipe mista.
 
@@ -39,16 +39,16 @@ Ciclo de vantagem: Físico > Mágico > Veneno > Físico; Cura é neutra (vale ×
 
 | Golpe | Uso |
 |---|---|
-| remada_dupla (fisico, normal) | 28.4% |
+| remada_dupla (fisico, normal) | 28.9% |
 | facho_do_farol (magico, normal) | 11.8% |
-| chama_fria (magico, normal) | 10.6% |
-| chuva_de_brasas (magico, normal) | 8.8% |
-| explosao_arcana (magico, heavy) | 7.2% |
-| investida (fisico, heavy) | 6.1% |
-| soco_seco (fisico, heavy) | 3.5% |
+| chama_fria (magico, normal) | 11.1% |
+| chuva_de_brasas (magico, normal) | 8.9% |
+| explosao_arcana (magico, heavy) | 6.9% |
+| investida (fisico, heavy) | 5.8% |
+| soco_seco (fisico, heavy) | 3.4% |
 | cabecada (fisico, normal) | 3.2% |
-| raio_lunar (magico, heavy) | 2.8% |
-| clarao (magico, normal) | 2.1% |
+| raio_lunar (magico, heavy) | 3.1% |
+| clarao (magico, normal) | 2.2% |
 
 Limite: nenhum golpe acima de 30%.
 

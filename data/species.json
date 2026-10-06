@@ -1687,7 +1687,7 @@
        "soco_seco"
       ]
      ],
-     "number": 26
+     "number": 27
     },
     {
      "id": "mineiro_2",
@@ -1755,7 +1755,7 @@
       ]
      ],
      "growth_move": "desmoronar",
-     "number": 27
+     "number": 28
     },
     {
      "id": "mineiro_3",
@@ -1823,7 +1823,7 @@
       ]
      ],
      "growth_move": "soco_seco",
-     "number": 28
+     "number": 29
     }
    ]
   },
@@ -1902,7 +1902,7 @@
        "explosao_arcana"
       ]
      ],
-     "number": 29
+     "number": 30
     },
     {
      "id": "ferreiro_2",
@@ -1970,7 +1970,7 @@
       ]
      ],
      "growth_move": "martelo_de_brasa",
-     "number": 30
+     "number": 31
     },
     {
      "id": "ferreiro_3",
@@ -2038,7 +2038,7 @@
       ]
      ],
      "growth_move": "explosao_arcana",
-     "number": 31
+     "number": 32
     }
    ]
   },
@@ -2109,7 +2109,7 @@
        "toxina_lenta"
       ]
      ],
-     "number": 32
+     "number": 33
     },
     {
      "id": "gasista_2",
@@ -2169,7 +2169,7 @@
       ]
      ],
      "growth_move": "vazamento",
-     "number": 33
+     "number": 34
     },
     {
      "id": "gasista_3",
@@ -2229,7 +2229,7 @@
       ]
      ],
      "growth_move": "toxina_lenta",
-     "number": 34
+     "number": 35
     }
    ]
   },
@@ -2300,7 +2300,7 @@
        "balsamo"
       ]
      ],
-     "number": 35
+     "number": 36
     },
     {
      "id": "aguadeiro_2",
@@ -2360,7 +2360,7 @@
       ]
      ],
      "growth_move": "jato_fresco",
-     "number": 36
+     "number": 37
     },
     {
      "id": "aguadeiro_3",
@@ -2420,7 +2420,7 @@
       ]
      ],
      "growth_move": "balsamo",
-     "number": 37
+     "number": 38
     }
    ]
   },
@@ -2491,7 +2491,7 @@
        "toxina_lenta"
       ]
      ],
-     "number": 39
+     "number": 41
     },
     {
      "id": "lavadeira_2",
@@ -2551,7 +2551,7 @@
       ]
      ],
      "growth_move": "anil_toxico",
-     "number": 40
+     "number": 42
     },
     {
      "id": "lavadeira_3",
@@ -2611,7 +2611,7 @@
       ]
      ],
      "growth_move": "toxina_lenta",
-     "number": 41
+     "number": 43
     }
    ]
   },
@@ -2690,7 +2690,7 @@
        "soco_seco"
       ]
      ],
-     "number": 42
+     "number": 44
     },
     {
      "id": "palafiteiro_2",
@@ -2758,7 +2758,7 @@
       ]
      ],
      "growth_move": "estaca_firme",
-     "number": 43
+     "number": 45
     },
     {
      "id": "palafiteiro_3",
@@ -2826,7 +2826,7 @@
       ]
      ],
      "growth_move": "soco_seco",
-     "number": 44
+     "number": 46
     }
    ]
   },
@@ -2897,7 +2897,7 @@
        "balsamo"
       ]
      ],
-     "number": 45
+     "number": 47
     },
     {
      "id": "jardineiro_lirios_2",
@@ -2957,7 +2957,7 @@
       ]
      ],
      "growth_move": "orvalho_de_lirio",
-     "number": 46
+     "number": 48
     },
     {
      "id": "jardineiro_lirios_3",
@@ -3017,7 +3017,7 @@
       ]
      ],
      "growth_move": "balsamo",
-     "number": 47
+     "number": 49
     }
    ]
   },
@@ -3096,7 +3096,7 @@
        "soco_seco"
       ]
      ],
-     "number": 49
+     "number": 55
     },
     {
      "id": "sentinela_2",
@@ -3164,7 +3164,7 @@
       ]
      ],
      "growth_move": "muralha_viva",
-     "number": 50
+     "number": 56
     },
     {
      "id": "sentinela_3",
@@ -3232,7 +3232,7 @@
       ]
      ],
      "growth_move": "soco_seco",
-     "number": 51
+     "number": 57
     }
    ]
   },
@@ -3311,7 +3311,7 @@
        "explosao_arcana"
       ]
      ],
-     "number": 52
+     "number": 58
     },
     {
      "id": "escriba_2",
@@ -3379,7 +3379,7 @@
       ]
      ],
      "growth_move": "decreto_selado",
-     "number": 53
+     "number": 59
     },
     {
      "id": "escriba_3",
@@ -3447,7 +3447,7 @@
       ]
      ],
      "growth_move": "explosao_arcana",
-     "number": 54
+     "number": 60
     }
    ]
   },
@@ -3518,7 +3518,7 @@
        "balsamo"
       ]
      ],
-     "number": 55
+     "number": 61
     },
     {
      "id": "sineiro_2",
@@ -3578,7 +3578,7 @@
       ]
      ],
      "growth_move": "badalada_serena",
-     "number": 56
+     "number": 62
     },
     {
      "id": "sineiro_3",
@@ -3638,7 +3638,7 @@
       ]
      ],
      "growth_move": "balsamo",
-     "number": 57
+     "number": 63
     }
    ]
   },
@@ -3717,7 +3717,7 @@
        "soco_seco"
       ]
      ],
-     "number": 59
+     "number": 69
     },
     {
      "id": "carregador_2",
@@ -3785,7 +3785,7 @@
       ]
      ],
      "growth_move": "avalanche_de_carga",
-     "number": 60
+     "number": 70
     },
     {
      "id": "carregador_3",
@@ -3853,7 +3853,7 @@
       ]
      ],
      "growth_move": "soco_seco",
-     "number": 61
+     "number": 71
     }
    ]
   },
@@ -3932,7 +3932,7 @@
        "explosao_arcana"
       ]
      ],
-     "number": 62
+     "number": 72
     },
     {
      "id": "escultor_2",
@@ -4000,7 +4000,7 @@
       ]
      ],
      "growth_move": "estatua_de_gelo",
-     "number": 63
+     "number": 73
     },
     {
      "id": "escultor_3",
@@ -4068,7 +4068,7 @@
       ]
      ],
      "growth_move": "explosao_arcana",
-     "number": 64
+     "number": 74
     }
    ]
   },
@@ -4139,7 +4139,7 @@
        "balsamo"
       ]
      ],
-     "number": 65
+     "number": 75
     },
     {
      "id": "chazeiro_2",
@@ -4199,7 +4199,7 @@
       ]
      ],
      "growth_move": "cha_de_abrigo",
-     "number": 66
+     "number": 76
     },
     {
      "id": "chazeiro_3",
@@ -4259,7 +4259,7 @@
       ]
      ],
      "growth_move": "balsamo",
-     "number": 67
+     "number": 77
     }
    ]
   },
@@ -4330,7 +4330,7 @@
        "toxina_lenta"
       ]
      ],
-     "number": 69
+     "number": 80
     },
     {
      "id": "domador_escorpioes_2",
@@ -4390,7 +4390,7 @@
       ]
      ],
      "growth_move": "ferrao_das_dunas",
-     "number": 70
+     "number": 81
     },
     {
      "id": "domador_escorpioes_3",
@@ -4450,7 +4450,7 @@
       ]
      ],
      "growth_move": "toxina_lenta",
-     "number": 71
+     "number": 82
     }
    ]
   },
@@ -4529,7 +4529,7 @@
        "explosao_arcana"
       ]
      ],
-     "number": 72
+     "number": 83
     },
     {
      "id": "cartografo_2",
@@ -4597,7 +4597,7 @@
       ]
      ],
      "growth_move": "rota_dos_ecos",
-     "number": 73
+     "number": 84
     },
     {
      "id": "cartografo_3",
@@ -4665,7 +4665,7 @@
       ]
      ],
      "growth_move": "explosao_arcana",
-     "number": 74
+     "number": 85
     }
    ]
   },
@@ -4736,7 +4736,7 @@
        "balsamo"
       ]
      ],
-     "number": 75
+     "number": 86
     },
     {
      "id": "tamborileiro_2",
@@ -4796,7 +4796,7 @@
       ]
      ],
      "growth_move": "ritmo_da_caravana",
-     "number": 76
+     "number": 87
     },
     {
      "id": "tamborileiro_3",
@@ -4856,7 +4856,628 @@
       ]
      ],
      "growth_move": "balsamo",
-     "number": 77
+     "number": 88
+    }
+   ]
+  },
+  {
+   "id": "apicultora",
+   "type": "veneno",
+   "region": "pantano",
+   "rarity": "incomum",
+   "growth_levels": [
+    32,
+    54
+   ],
+   "signature_move": "enxame",
+   "gender": "f",
+   "map_behavior": "fast",
+   "starter": "",
+   "stages": [
+    {
+     "id": "apicultora_1",
+     "name_key": "SPECIES_APICULTORA_1",
+     "entry_key": "OSS_APICULTORA_1",
+     "stats": {
+      "hp": 44,
+      "atk": 54,
+      "mag": 44,
+      "def": 40,
+      "res": 40,
+      "spd": 59
+     },
+     "base_xp": 60,
+     "sprite": "res://assets/skeletons/apicultora_1.png",
+     "map_sprite": "res://assets/skeletons/map/apicultora_1.png",
+     "learnset": [
+      [
+       1,
+       "picada"
+      ],
+      [
+       1,
+       "empurrao"
+      ],
+      [
+       5,
+       "lodo"
+      ],
+      [
+       9,
+       "cuspe_acido"
+      ],
+      [
+       29,
+       "neblina_verde"
+      ],
+      [
+       37,
+       "chute_na_canela"
+      ],
+      [
+       44,
+       "bafo_azedo"
+      ],
+      [
+       50,
+       "dreno_toxico"
+      ],
+      [
+       58,
+       "toxina_lenta"
+      ]
+     ],
+     "number": 50
+    },
+    {
+     "id": "apicultora_2",
+     "name_key": "SPECIES_APICULTORA_2",
+     "entry_key": "OSS_APICULTORA_2",
+     "stats": {
+      "hp": 61,
+      "atk": 75,
+      "mag": 62,
+      "def": 56,
+      "res": 56,
+      "spd": 82
+     },
+     "base_xp": 68,
+     "sprite": "res://assets/skeletons/apicultora_2.png",
+     "map_sprite": "res://assets/skeletons/map/apicultora_2.png",
+     "learnset": [
+      [
+       1,
+       "picada"
+      ],
+      [
+       1,
+       "empurrao"
+      ],
+      [
+       5,
+       "lodo"
+      ],
+      [
+       9,
+       "cuspe_acido"
+      ],
+      [
+       29,
+       "neblina_verde"
+      ],
+      [
+       32,
+       "enxame"
+      ],
+      [
+       37,
+       "chute_na_canela"
+      ],
+      [
+       44,
+       "bafo_azedo"
+      ],
+      [
+       50,
+       "dreno_toxico"
+      ],
+      [
+       58,
+       "toxina_lenta"
+      ]
+     ],
+     "growth_move": "enxame",
+     "number": 51
+    },
+    {
+     "id": "apicultora_3",
+     "name_key": "SPECIES_APICULTORA_3",
+     "entry_key": "OSS_APICULTORA_3",
+     "stats": {
+      "hp": 80,
+      "atk": 96,
+      "mag": 79,
+      "def": 71,
+      "res": 71,
+      "spd": 105
+     },
+     "base_xp": 68,
+     "sprite": "res://assets/skeletons/apicultora_3.png",
+     "map_sprite": "res://assets/skeletons/map/apicultora_3.png",
+     "learnset": [
+      [
+       1,
+       "picada"
+      ],
+      [
+       1,
+       "empurrao"
+      ],
+      [
+       5,
+       "lodo"
+      ],
+      [
+       9,
+       "cuspe_acido"
+      ],
+      [
+       29,
+       "neblina_verde"
+      ],
+      [
+       32,
+       "enxame"
+      ],
+      [
+       37,
+       "chute_na_canela"
+      ],
+      [
+       44,
+       "bafo_azedo"
+      ],
+      [
+       50,
+       "dreno_toxico"
+      ],
+      [
+       58,
+       "toxina_lenta"
+      ]
+     ],
+     "growth_move": "toxina_lenta",
+     "number": 52
+    }
+   ]
+  },
+  {
+   "id": "vitralista",
+   "type": "magico",
+   "region": "ossorio",
+   "rarity": "incomum",
+   "growth_levels": [
+    36,
+    60
+   ],
+   "signature_move": "luz_de_vitral",
+   "gender": "f",
+   "map_behavior": "circle",
+   "starter": "",
+   "stages": [
+    {
+     "id": "vitralista_1",
+     "name_key": "SPECIES_VITRALISTA_1",
+     "entry_key": "OSS_VITRALISTA_1",
+     "stats": {
+      "hp": 45,
+      "atk": 49,
+      "mag": 49,
+      "def": 42,
+      "res": 44,
+      "spd": 52
+     },
+     "base_xp": 60,
+     "sprite": "res://assets/skeletons/vitralista_1.png",
+     "map_sprite": "res://assets/skeletons/map/vitralista_1.png",
+     "learnset": [
+      [
+       1,
+       "faisca_ossea"
+      ],
+      [
+       1,
+       "remendo"
+      ],
+      [
+       5,
+       "clarao"
+      ],
+      [
+       9,
+       "eco_sombrio"
+      ],
+      [
+       33,
+       "ventania"
+      ],
+      [
+       41,
+       "curativo"
+      ],
+      [
+       48,
+       "concentrar"
+      ],
+      [
+       56,
+       "chama_fria"
+      ],
+      [
+       64,
+       "raio_lunar"
+      ],
+      [
+       72,
+       "chuva_de_brasas"
+      ],
+      [
+       80,
+       "explosao_arcana"
+      ]
+     ],
+     "number": 64
+    },
+    {
+     "id": "vitralista_2",
+     "name_key": "SPECIES_VITRALISTA_2",
+     "entry_key": "OSS_VITRALISTA_2",
+     "stats": {
+      "hp": 61,
+      "atk": 69,
+      "mag": 69,
+      "def": 59,
+      "res": 62,
+      "spd": 72
+     },
+     "base_xp": 68,
+     "sprite": "res://assets/skeletons/vitralista_2.png",
+     "map_sprite": "res://assets/skeletons/map/vitralista_2.png",
+     "learnset": [
+      [
+       1,
+       "faisca_ossea"
+      ],
+      [
+       1,
+       "remendo"
+      ],
+      [
+       5,
+       "clarao"
+      ],
+      [
+       9,
+       "eco_sombrio"
+      ],
+      [
+       33,
+       "ventania"
+      ],
+      [
+       36,
+       "luz_de_vitral"
+      ],
+      [
+       41,
+       "curativo"
+      ],
+      [
+       48,
+       "concentrar"
+      ],
+      [
+       56,
+       "chama_fria"
+      ],
+      [
+       64,
+       "raio_lunar"
+      ],
+      [
+       72,
+       "chuva_de_brasas"
+      ],
+      [
+       80,
+       "explosao_arcana"
+      ]
+     ],
+     "growth_move": "luz_de_vitral",
+     "number": 65
+    },
+    {
+     "id": "vitralista_3",
+     "name_key": "SPECIES_VITRALISTA_3",
+     "entry_key": "OSS_VITRALISTA_3",
+     "stats": {
+      "hp": 80,
+      "atk": 88,
+      "mag": 88,
+      "def": 75,
+      "res": 79,
+      "spd": 92
+     },
+     "base_xp": 68,
+     "sprite": "res://assets/skeletons/vitralista_3.png",
+     "map_sprite": "res://assets/skeletons/map/vitralista_3.png",
+     "learnset": [
+      [
+       1,
+       "faisca_ossea"
+      ],
+      [
+       1,
+       "remendo"
+      ],
+      [
+       5,
+       "clarao"
+      ],
+      [
+       9,
+       "eco_sombrio"
+      ],
+      [
+       33,
+       "ventania"
+      ],
+      [
+       36,
+       "luz_de_vitral"
+      ],
+      [
+       41,
+       "curativo"
+      ],
+      [
+       48,
+       "concentrar"
+      ],
+      [
+       56,
+       "chama_fria"
+      ],
+      [
+       64,
+       "raio_lunar"
+      ],
+      [
+       72,
+       "chuva_de_brasas"
+      ],
+      [
+       80,
+       "explosao_arcana"
+      ]
+     ],
+     "growth_move": "explosao_arcana",
+     "number": 66
+    }
+   ]
+  },
+  {
+   "id": "oleiro",
+   "type": "fisico",
+   "region": "deserto",
+   "rarity": "comum",
+   "growth_levels": [
+    46,
+    70
+   ],
+   "signature_move": "jarro_pesado",
+   "gender": "m",
+   "map_behavior": "patrol",
+   "starter": "",
+   "stages": [
+    {
+     "id": "oleiro_1",
+     "name_key": "SPECIES_OLEIRO_1",
+     "entry_key": "OSS_OLEIRO_1",
+     "stats": {
+      "hp": 52,
+      "atk": 55,
+      "mag": 24,
+      "def": 50,
+      "res": 44,
+      "spd": 37
+     },
+     "base_xp": 60,
+     "sprite": "res://assets/skeletons/oleiro_1.png",
+     "map_sprite": "res://assets/skeletons/map/oleiro_1.png",
+     "learnset": [
+      [
+       1,
+       "empurrao"
+      ],
+      [
+       1,
+       "remendo"
+      ],
+      [
+       5,
+       "cabecada"
+      ],
+      [
+       9,
+       "osso_bumerangue"
+      ],
+      [
+       43,
+       "chute_na_canela"
+      ],
+      [
+       51,
+       "curativo"
+      ],
+      [
+       58,
+       "ranger_os_dentes"
+      ],
+      [
+       66,
+       "quebra_costela"
+      ],
+      [
+       74,
+       "investida"
+      ],
+      [
+       82,
+       "rodopio"
+      ],
+      [
+       90,
+       "soco_seco"
+      ]
+     ],
+     "number": 89
+    },
+    {
+     "id": "oleiro_2",
+     "name_key": "SPECIES_OLEIRO_2",
+     "entry_key": "OSS_OLEIRO_2",
+     "stats": {
+      "hp": 74,
+      "atk": 78,
+      "mag": 34,
+      "def": 71,
+      "res": 62,
+      "spd": 53
+     },
+     "base_xp": 68,
+     "sprite": "res://assets/skeletons/oleiro_2.png",
+     "map_sprite": "res://assets/skeletons/map/oleiro_2.png",
+     "learnset": [
+      [
+       1,
+       "empurrao"
+      ],
+      [
+       1,
+       "remendo"
+      ],
+      [
+       5,
+       "cabecada"
+      ],
+      [
+       9,
+       "osso_bumerangue"
+      ],
+      [
+       43,
+       "chute_na_canela"
+      ],
+      [
+       46,
+       "jarro_pesado"
+      ],
+      [
+       51,
+       "curativo"
+      ],
+      [
+       58,
+       "ranger_os_dentes"
+      ],
+      [
+       66,
+       "quebra_costela"
+      ],
+      [
+       74,
+       "investida"
+      ],
+      [
+       82,
+       "rodopio"
+      ],
+      [
+       90,
+       "soco_seco"
+      ]
+     ],
+     "growth_move": "jarro_pesado",
+     "number": 90
+    },
+    {
+     "id": "oleiro_3",
+     "name_key": "SPECIES_OLEIRO_3",
+     "entry_key": "OSS_OLEIRO_3",
+     "stats": {
+      "hp": 98,
+      "atk": 100,
+      "mag": 44,
+      "def": 92,
+      "res": 80,
+      "spd": 68
+     },
+     "base_xp": 68,
+     "sprite": "res://assets/skeletons/oleiro_3.png",
+     "map_sprite": "res://assets/skeletons/map/oleiro_3.png",
+     "learnset": [
+      [
+       1,
+       "empurrao"
+      ],
+      [
+       1,
+       "remendo"
+      ],
+      [
+       5,
+       "cabecada"
+      ],
+      [
+       9,
+       "osso_bumerangue"
+      ],
+      [
+       43,
+       "chute_na_canela"
+      ],
+      [
+       46,
+       "jarro_pesado"
+      ],
+      [
+       51,
+       "curativo"
+      ],
+      [
+       58,
+       "ranger_os_dentes"
+      ],
+      [
+       66,
+       "quebra_costela"
+      ],
+      [
+       74,
+       "investida"
+      ],
+      [
+       82,
+       "rodopio"
+      ],
+      [
+       90,
+       "soco_seco"
+      ]
+     ],
+     "growth_move": "soco_seco",
+     "number": 91
     }
    ]
   }
@@ -4948,7 +5569,7 @@
      "osso_bumerangue"
     ]
    ],
-   "number": 38
+   "number": 39
   },
   {
    "id": "brumaga",
@@ -4992,7 +5613,7 @@
      "cuspe_acido"
     ]
    ],
-   "number": 48
+   "number": 53
   },
   {
    "id": "bufardo",
@@ -5036,7 +5657,7 @@
      "ventania"
     ]
    ],
-   "number": 58
+   "number": 67
   },
   {
    "id": "nevasco",
@@ -5080,7 +5701,7 @@
      "encorajar"
     ]
    ],
-   "number": 68
+   "number": 78
   },
   {
    "id": "ampulhor",
@@ -5124,7 +5745,7 @@
      "concentrar"
     ]
    ],
-   "number": 78
+   "number": 92
   },
   {
    "id": "degustor",
@@ -5168,7 +5789,271 @@
      "lodo"
     ]
    ],
+   "number": 94
+  },
+  {
+   "id": "troncudo",
+   "name_key": "SPECIES_TRONCUDO",
+   "entry_key": "OSS_TRONCUDO",
+   "type": "fisico",
+   "region": "bosque",
+   "rarity": "unico",
+   "gender": "m",
+   "map_behavior": "chase",
+   "stats": {
+    "hp": 90,
+    "atk": 114,
+    "mag": 49,
+    "def": 86,
+    "res": 65,
+    "spd": 86
+   },
+   "base_xp": 90,
+   "sprite": "res://assets/skeletons/troncudo.png",
+   "map_sprite": "res://assets/skeletons/map/troncudo.png",
+   "learnset": [
+    [
+     1,
+     "investida"
+    ],
+    [
+     1,
+     "quebra_costela"
+    ],
+    [
+     1,
+     "soco_seco"
+    ],
+    [
+     1,
+     "ranger_os_dentes"
+    ],
+    [
+     1,
+     "rodopio"
+    ]
+   ],
+   "number": 26
+  },
+  {
+   "id": "bigornao",
+   "name_key": "SPECIES_BIGORNAO",
+   "entry_key": "OSS_BIGORNAO",
+   "type": "fisico",
+   "region": "minas",
+   "rarity": "unico",
+   "gender": "m",
+   "map_behavior": "patrol",
+   "stats": {
+    "hp": 98,
+    "atk": 102,
+    "mag": 45,
+    "def": 94,
+    "res": 82,
+    "spd": 69
+   },
+   "base_xp": 90,
+   "sprite": "res://assets/skeletons/bigornao.png",
+   "map_sprite": "res://assets/skeletons/map/bigornao.png",
+   "learnset": [
+    [
+     1,
+     "ranger_os_dentes"
+    ],
+    [
+     1,
+     "investida"
+    ],
+    [
+     1,
+     "soco_seco"
+    ],
+    [
+     1,
+     "encorajar"
+    ],
+    [
+     1,
+     "remendo"
+    ]
+   ],
+   "number": 40
+  },
+  {
+   "id": "caldeirona",
+   "name_key": "SPECIES_CALDEIRONA",
+   "entry_key": "OSS_CALDEIRONA",
+   "type": "veneno",
+   "region": "pantano",
+   "rarity": "unico",
+   "gender": "f",
+   "map_behavior": "shy",
+   "stats": {
+    "hp": 90,
+    "atk": 52,
+    "mag": 99,
+    "def": 77,
+    "res": 86,
+    "spd": 86
+   },
+   "base_xp": 90,
+   "sprite": "res://assets/skeletons/caldeirona.png",
+   "map_sprite": "res://assets/skeletons/map/caldeirona.png",
+   "learnset": [
+    [
+     1,
+     "neblina_verde"
+    ],
+    [
+     1,
+     "balsamo"
+    ],
+    [
+     1,
+     "dreno_toxico"
+    ],
+    [
+     1,
+     "toxina_lenta"
+    ],
+    [
+     1,
+     "bafo_azedo"
+    ]
+   ],
+   "number": 54
+  },
+  {
+   "id": "bandeirao",
+   "name_key": "SPECIES_BANDEIRAO",
+   "entry_key": "OSS_BANDEIRAO",
+   "type": "cura",
+   "region": "ossorio",
+   "rarity": "unico",
+   "gender": "m",
+   "map_behavior": "patrol",
+   "stats": {
+    "hp": 93,
+    "atk": 53,
+    "mag": 90,
+    "def": 82,
+    "res": 98,
+    "spd": 74
+   },
+   "base_xp": 90,
+   "sprite": "res://assets/skeletons/bandeirao.png",
+   "map_sprite": "res://assets/skeletons/map/bandeirao.png",
+   "learnset": [
+    [
+     1,
+     "encorajar"
+    ],
+    [
+     1,
+     "balsamo"
+    ],
+    [
+     1,
+     "curativo"
+    ],
+    [
+     1,
+     "investida"
+    ],
+    [
+     1,
+     "limpeza"
+    ]
+   ],
+   "number": 68
+  },
+  {
+   "id": "patinora",
+   "name_key": "SPECIES_PATINORA",
+   "entry_key": "OSS_PATINORA",
+   "type": "magico",
+   "region": "picos",
+   "rarity": "unico",
+   "gender": "f",
+   "map_behavior": "fast",
+   "stats": {
+    "hp": 78,
+    "atk": 78,
+    "mag": 94,
+    "def": 69,
+    "res": 69,
+    "spd": 102
+   },
+   "base_xp": 90,
+   "sprite": "res://assets/skeletons/patinora.png",
+   "map_sprite": "res://assets/skeletons/map/patinora.png",
+   "learnset": [
+    [
+     1,
+     "chama_fria"
+    ],
+    [
+     1,
+     "ancora_do_tempo"
+    ],
+    [
+     1,
+     "ventania"
+    ],
+    [
+     1,
+     "raio_lunar"
+    ],
+    [
+     1,
+     "passo_ligeiro"
+    ]
+   ],
    "number": 79
+  },
+  {
+   "id": "miragina",
+   "name_key": "SPECIES_MIRAGINA",
+   "entry_key": "OSS_MIRAGINA",
+   "type": "cura",
+   "region": "deserto",
+   "rarity": "unico",
+   "gender": "f",
+   "map_behavior": "patrol",
+   "stats": {
+    "hp": 93,
+    "atk": 53,
+    "mag": 90,
+    "def": 82,
+    "res": 98,
+    "spd": 74
+   },
+   "base_xp": 90,
+   "sprite": "res://assets/skeletons/miragina.png",
+   "map_sprite": "res://assets/skeletons/map/miragina.png",
+   "learnset": [
+    [
+     1,
+     "balsamo"
+    ],
+    [
+     1,
+     "limpeza"
+    ],
+    [
+     1,
+     "raio_lunar"
+    ],
+    [
+     1,
+     "encorajar"
+    ],
+    [
+     1,
+     "eco_sombrio"
+    ]
+   ],
+   "number": 93
   }
  ],
  "king": {
@@ -5217,6 +6102,6 @@
     "concentrar"
    ]
   ],
-  "number": 80
+  "number": 95
  }
 }

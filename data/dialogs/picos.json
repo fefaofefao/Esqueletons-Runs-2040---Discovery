@@ -759,12 +759,12 @@
     "tamer_key": "BTL_TAMER_ALVA",
     "enemies": [
      [
-      "carregador_3",
-      72
+      "patinora",
+      70
      ],
      [
-      "escultor_3",
-      71
+      "carregador_3",
+      72
      ],
      [
       "chazeiro_3",

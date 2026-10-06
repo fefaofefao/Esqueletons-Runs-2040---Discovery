@@ -504,16 +504,16 @@
     "tamer_key": "BTL_TAMER_DUNA",
     "enemies": [
      [
+      "miragina",
+      86
+     ],
+     [
       "domador_escorpioes_3",
       85
      ],
      [
       "cartografo_3",
       84
-     ],
-     [
-      "tamborileiro_3",
-      86
      ],
      [
       "palafiteiro_3",

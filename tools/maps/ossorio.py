@@ -327,7 +327,7 @@ t("DLG_O_CAL_TOLD", "Você contou à cidade. Insubordinação... e verdade. Quan
   "You told the city. Insubordination... and truth. When the time comes, count on me.", "Se lo contaste a la ciudad. Insubordinación... y verdad. Cuando llegue la hora, cuenta conmigo.")
 t("DLG_O_CAL_KEPT", "Você guardou o segredo. Discrição. Um soldado agradece.", "You kept the secret. Discretion. A soldier is grateful.",
   "Guardaste el secreto. Discreción. Un soldado lo agradece.")
-CALICO_TEAM = team([("sentinela", 62), ("escriba", 61), ("sineiro", 62), ("lenhador", 63)])
+CALICO_TEAM = [["bandeirao", 60]] + team([("sentinela", 62), ("escriba", 61), ("lenhador", 63)])
 R.d("calico", [say("DLG_O_CAL_1", "SPK_CALICO"), say("DLG_O_CAL_2", "SPK_CALICO"), say("DLG_O_CAL_3", "SPK_CALICO"),
                battle("BTL_TAMER_CALICO", CALICO_TEAM, 1600, "calico_beaten", kind="boss"),
                say("DLG_O_CAL_WIN", "SPK_CALICO"), say("DLG_O_CAL_MOTIVE", "SPK_CALICO"), say("DLG_O_CAL_OPEN", "SPK_CALICO"),
@@ -351,11 +351,11 @@ def e(sp, st, a, b, rar, w=None):
 R.TABLES.update({
     "rota4_sul": [e("sentinela_2", 2, 45, 47, "comum"), e("lavadeira_2", 2, 45, 47, "comum")],
     "rota4_oeste": [e("sentinela_2", 2, 46, 48, "comum"), e("ferreiro_3", 3, 46, 48, "incomum")],
-    "rota4_campo": [e("sentinela_2", 2, 46, 48, "comum"), e("sineiro_2", 2, 46, 48, "incomum"), e("escriba_2", 2, 47, 49, "raro"),
+    "rota4_campo": [e("vitralista_2", 2, 46, 48, "incomum"), e("sentinela_2", 2, 46, 48, "comum"), e("sineiro_2", 2, 46, 48, "incomum"), e("escriba_2", 2, 47, 49, "raro"),
                     e("lavadeira_2", 2, 46, 48, "comum"), e("ferreiro_3", 3, 47, 49, "incomum")],
     "rota4_aqueduto": [e("escriba_2", 2, 54, 55, "raro", 60), e("sineiro_2", 2, 54, 55, "incomum", 40)],
     "rota4_norte": [e("sentinela_2", 2, 48, 50, "comum"), e("sineiro_2", 2, 48, 50, "incomum")],
-    "quartel_salao": [e("sentinela_2", 2, 49, 51, "comum"), e("escriba_2", 2, 49, 51, "raro"), e("ferreiro_3", 3, 49, 51, "incomum")],
+    "quartel_salao": [e("vitralista_2", 2, 49, 51, "raro"), e("sentinela_2", 2, 49, 51, "comum"), e("escriba_2", 2, 49, 51, "raro"), e("ferreiro_3", 3, 49, 51, "incomum")],
     "quartel_sul": [e("sineiro_2", 2, 50, 51, "incomum"), e("sentinela_2", 2, 50, 51, "comum")],
 })
 R.SHOPS["ossorio"] = ["pocao_m", "pocao_g", "antidoto", "reviver"]

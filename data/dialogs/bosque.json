@@ -469,8 +469,8 @@
     "tamer_key": "BTL_TAMER_RAMALHO",
     "enemies": [
      [
-      "lenhador_2",
-      21
+      "troncudo",
+      16
      ],
      [
       "flautista_2",
@@ -478,7 +478,7 @@
      ],
      [
       "herborista_2",
-      21
+      22
      ]
     ],
     "reward": 800,

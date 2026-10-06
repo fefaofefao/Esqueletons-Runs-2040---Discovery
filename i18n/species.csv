@@ -143,6 +143,24 @@ SPECIES_TAMBORILEIRO_2,Batucão,Bongard,Batucón
 OSS_TAMBORILEIRO_2,"Marca o passo das caravanas. Quando ele toca, ninguém sente cansaço.","It sets the pace for caravans. While it plays, nobody feels tired.","Marca el paso de las caravanas. Mientras toca, nadie siente cansancio."
 SPECIES_TAMBORILEIRO_3,Ecoarca,Echoarch,Resonarca
 OSS_TAMBORILEIRO_3,"O tambor das dunas ecoa por quilômetros. Quem ouve recupera o fôlego, amigo ou inimigo.","Its dune drum echoes for miles. Whoever hears it catches their breath, friend or foe.","Su tambor de dunas resuena por kilómetros. Quien lo oye recupera el aliento, amigo o enemigo."
+SPECIES_APICULTORA_1,Zunzim,Buzzlet,Zumbito
+OSS_APICULTORA_1,Rouba mel e lambe o pote até brilhar. As abelhas fingem que não viram.,It steals honey and licks the jar until it shines. The bees pretend not to notice.,Roba miel y lame el tarro hasta que brilla. Las abejas fingen no verlo.
+SPECIES_APICULTORA_2,Melíria,Honeyveil,Mielina
+OSS_APICULTORA_2,Acalma o enxame com fumaça e cantoria. Quem mexe na colmeia conhece o ferrão verde.,It calms the swarm with smoke and song. Whoever messes with the hive meets the green sting.,Calma el enjambre con humo y canto. Quien toca la colmena conoce el aguijón verde.
+SPECIES_APICULTORA_3,Colmeira,Hivequeen,Colmenara
+OSS_APICULTORA_3,"Leva a colmeia na cabeça e chama cada abelha pelo nome. O mel dela cura; o ferrão, nem tanto.","It carries the hive on its head and calls every bee by name. Its honey heals; its sting, not so much.","Lleva la colmena en la cabeza y llama a cada abeja por su nombre. Su miel cura; su aguijón, no tanto."
+SPECIES_VITRALISTA_1,Caquinho,Shardling,Cristalín
+OSS_VITRALISTA_1,Olha o mundo através de um caco azul. Jura que assim tudo fica mais bonito.,It looks at the world through a blue shard. It swears everything looks prettier that way.,Mira el mundo a través de un trozo azul. Jura que así todo se ve más bonito.
+SPECIES_VITRALISTA_2,Vitralho,Paneglow,Vitralito
+OSS_VITRALISTA_2,"Conserta vitrais de madrugada. Quando o sol bate, assina o trabalho em arco-íris.","It fixes stained glass before dawn. When the sun hits, it signs its work in rainbows.","Repara vidrieras de madrugada. Cuando da el sol, firma su obra en arcoíris."
+SPECIES_VITRALISTA_3,Rosáceo,Roseglass,Rosetón
+OSS_VITRALISTA_3,"A rosácea nas costas guarda a luz de mil manhãs. Quando ela brilha, as sombras pedem licença.","The rose window on its back holds the light of a thousand mornings. When it shines, shadows ask permission.","El rosetón de su espalda guarda la luz de mil mañanas. Cuando brilla, las sombras piden permiso."
+SPECIES_OLEIRO_1,Barrico,Claylet,Barrito
+OSS_OLEIRO_1,Faz potes tortos e diz que é de propósito. Fica emburrado se alguém pisa no barro dele.,It makes crooked pots and swears it's on purpose. It sulks if anyone steps on its clay.,Hace vasijas torcidas y jura que es a propósito. Se enfurruña si alguien pisa su barro.
+SPECIES_OLEIRO_2,Rodaleiro,Spinpot,Tornero
+OSS_OLEIRO_2,Gira a roda de oleiro o dia inteiro. Diz que o deserto é só barro esperando água.,It spins its potter's wheel all day. It says the desert is just clay waiting for water.,Gira el torno todo el día. Dice que el desierto es solo barro esperando agua.
+SPECIES_OLEIRO_3,Urnadão,Urnstone,Tinajón
+OSS_OLEIRO_3,Carrega uma urna que guarda o eco de cada caravana perdida. Remenda as rachaduras com ouro.,It carries an urn that holds the echo of every lost caravan. It mends the cracks with gold.,Carga una urna que guarda el eco de cada caravana perdida. Remienda las grietas con oro.
 SPECIES_RAIZERNO,Raizerno,Elderoot,Raizeño
 OSS_RAIZERNO,Dizem que plantou o Bosque inteiro com uma semente só. Mexe-se uma vez por estação.,It is said to have planted the whole forest from a single seed. It moves once a season.,Dicen que plantó todo el bosque con una sola semilla. Se mueve una vez por estación.
 SPECIES_VAGONAUTA,Vagonauta,Cartwraith,Vagonero
@@ -157,5 +175,17 @@ SPECIES_AMPULHOR,Ampulhor,Sandkeeper,Arenario
 OSS_AMPULHOR,"Vira a ampulheta e a batalha fica mais lenta para todos, menos para ele.","When it flips its hourglass, battle slows down for everyone but itself.","Cuando gira su reloj de arena, la batalla se vuelve lenta para todos menos para él."
 SPECIES_DEGUSTOR,Degustor,Tastrel,Catadón
 OSS_DEGUSTOR,Provou cada prato do Rei por cem anos. Hoje é ele quem tempera os inimigos do castelo.,It tasted every royal dish for a hundred years. Now it seasons the castle's enemies.,Probó cada plato del Rey durante cien años. Ahora sazona a los enemigos del castillo.
+SPECIES_TRONCUDO,Troncudo,Timberlord,Troncazo
+OSS_TRONCUDO,"Avisa antes de bater, por educação. Depois bate do mesmo jeito.","It warns you before it strikes, out of politeness. Then it strikes anyway.","Avisa antes de golpear, por educación. Después golpea igual."
+SPECIES_BIGORNAO,Bigornão,Anvilord,Yunquero
+OSS_BIGORNAO,Serviu de bigorna para a Tia por cem anos. Nunca reclamou de uma martelada.,It served as the Auntie's anvil for a hundred years. It never complained about a single hammer blow.,Sirvió de yunque a la Tía durante cien años. Nunca se quejó de un solo martillazo.
+SPECIES_CALDEIRONA,Caldeirona,Cauldrona,Calderona
+OSS_CALDEIRONA,"Ninguém sabe o que tem na sopa dela. Ela também não, e é isso que a deixa feliz.","Nobody knows what's in her soup. Neither does she, and that's what makes her happy.","Nadie sabe qué hay en su sopa. Ella tampoco, y eso la hace feliz."
+SPECIES_BANDEIRAO,Bandeirão,Bannerguard,Banderón
+OSS_BANDEIRAO,"Enquanto a bandeira está de pé, ninguém do lado dele recua. Ele nunca deixou a bandeira cair.","While the banner stands, no one on its side retreats. It has never let the banner fall.","Mientras la bandera siga en pie, nadie de su lado retrocede. Nunca la ha dejado caer."
+SPECIES_PATINORA,Patinora,Glidefrost,Patinieve
+OSS_PATINORA,Dança sozinha no lago congelado esperando uma música que nunca toca. Gira tão rápido que o frio a segue.,"It dances alone on the frozen lake, waiting for music that never plays. It spins so fast the cold follows it.",Baila sola en el lago helado esperando una música que nunca suena. Gira tan rápido que el frío la sigue.
+SPECIES_MIRAGINA,Miragina,Mirageen,Espejina
+OSS_MIRAGINA,Ninguém sabe se a viu de verdade ou só o reflexo. Dizem que as duas são boa gente.,No one knows if they saw her or just her reflection. They say both are lovely.,Nadie sabe si la vio de verdad o solo su reflejo. Dicen que las dos son buena gente.
 SPECIES_REI_ESQUELETO,Ossárion,Ossarion,Osarión
 OSS_REI_ESQUELETO,"O Rei Esqueleto. A coroa dele pesa mais do que deveria, e ninguém nunca perguntou por quê.","The Skeleton King. Its crown weighs more than it should, and nobody ever asked why.","El Rey Esqueleto. Su corona pesa más de lo que debería, y nadie preguntó nunca por qué."

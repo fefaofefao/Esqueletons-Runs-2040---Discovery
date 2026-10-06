@@ -775,16 +775,16 @@
     "tamer_key": "BTL_TAMER_CALICO",
     "enemies": [
      [
+      "bandeirao",
+      60
+     ],
+     [
       "sentinela_3",
       62
      ],
      [
       "escriba_2",
       61
-     ],
-     [
-      "sineiro_3",
-      62
      ],
      [
       "lenhador_3",

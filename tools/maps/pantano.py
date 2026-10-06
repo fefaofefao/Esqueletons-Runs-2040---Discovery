@@ -295,7 +295,7 @@ t("DLG_PA_MUSGA_AUNT", "A Tia mandou eu comer direito? Ela manda isso há mil an
 t("DLG_PA_MUSGA_AFTER", "Volta pra fofocar, querido. Sabia que o primo Caliço ensaia discurso no espelho?",
   "Come back to gossip, darling. Did you know cousin Caliço rehearses speeches in the mirror?",
   "Vuelve a chismear, querido. ¿Sabías que el primo Caliço ensaya discursos frente al espejo?")
-MUSGA_TEAM = team([("lavadeira", 49), ("palafiteiro", 48), ("jardineiro_lirios", 47), ("cogumeleiro", 48)])
+MUSGA_TEAM = [["caldeirona", 47]] + team([("palafiteiro", 48), ("jardineiro_lirios", 47), ("cogumeleiro", 48)])
 R.d("musga", [say("DLG_PA_MUSGA_1", "SPK_MUSGA"), say("DLG_PA_MUSGA_2", "SPK_MUSGA"), flag("pista_4"), say("DLG_PA_MUSGA_3", "SPK_MUSGA"),
               battle("BTL_TAMER_MUSGA", MUSGA_TEAM, 1300, "musga_beaten", kind="boss"),
               say("DLG_PA_MUSGA_WIN", "SPK_MUSGA"), say("DLG_PA_MUSGA_MOTIVE", "SPK_MUSGA"), say("DLG_PA_MUSGA_GOSSIP", "SPK_MUSGA"), say("DLG_PA_MUSGA_GOSSIP2", "SPK_MUSGA"),
@@ -319,10 +319,10 @@ def e(sp, st, a, b, rar, w=None):
 R.TABLES.update({
     "rota3_sul": [e("lavadeira_2", 2, 33, 35, "comum"), e("palafiteiro_2", 2, 33, 35, "comum")],
     "rota3_oeste": [e("gasista_2", 2, 34, 36, "comum"), e("lavadeira_2", 2, 34, 35, "comum")],
-    "rota3_campo": [e("lavadeira_2", 2, 34, 36, "comum"), e("palafiteiro_2", 2, 34, 36, "comum"), e("jardineiro_lirios_2", 2, 34, 36, "incomum"),
+    "rota3_campo": [e("apicultora_2", 2, 34, 36, "incomum"), e("lavadeira_2", 2, 34, 36, "comum"), e("palafiteiro_2", 2, 34, 36, "comum"), e("jardineiro_lirios_2", 2, 34, 36, "incomum"),
                     e("cogumeleiro_2", 2, 34, 36, "incomum"), e("gasista_2", 2, 35, 37, "comum")],
     "rota3_atalho": [e("cogumeleiro_3", 3, 42, 43, "raro", 60), e("jardineiro_lirios_2", 2, 41, 42, "incomum", 40)],
-    "rota3_norte": [e("palafiteiro_2", 2, 36, 38, "comum"), e("jardineiro_lirios_2", 2, 36, 38, "incomum")],
+    "rota3_norte": [e("apicultora_2", 2, 36, 38, "raro"), e("palafiteiro_2", 2, 36, 38, "comum"), e("jardineiro_lirios_2", 2, 36, 38, "incomum")],
     "caldeirao_salao": [e("lavadeira_2", 2, 37, 39, "comum"), e("cogumeleiro_2", 2, 37, 39, "incomum"), e("gasista_2", 2, 37, 39, "comum")],
     "caldeirao_sul": [e("jardineiro_lirios_2", 2, 38, 39, "incomum"), e("palafiteiro_2", 2, 38, 39, "comum")],
 })

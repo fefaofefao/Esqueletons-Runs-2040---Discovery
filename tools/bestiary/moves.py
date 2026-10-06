@@ -72,6 +72,7 @@ MOVES = [
        flavor=("Lento e brutal.", "Slow and brutal.", "Lento y brutal.")),
     mv("remada_dupla", "Remada Dupla", "Double Stroke", "Remada Doble", F, P, 40, 95, 12, E, NORMAL, hits=2, sig="grumete"),
     mv("golpe_de_tora", "Golpe de Tora", "Log Slam", "Golpe de Tronco", F, P, 100, 90, 10, E, HEAVY, [delay(0.3)], sig="lenhador"),
+    mv("jarro_pesado", "Jarro Pesado", "Heavy Jar", "Tinaja Pesada", F, P, 85, 90, 10, E, HEAVY, [stat("def", -1, 40)], sig="oleiro"),
     mv("desmoronar", "Desmoronar", "Cave-In", "Derrumbe", F, P, 65, 95, 10, AE, HEAVY, [stat("spd", -1, 30)], sig="mineiro"),
     mv("estaca_firme", "Estaca Firme", "Pile Driver", "Estaca Certera", F, P, 75, 95, 15, E, NORMAL, [stat("def", 1, 50, "self")], sig="palafiteiro"),
     mv("muralha_viva", "Muralha Viva", "Living Wall", "Muralla Viva", F, S, 0, 100, 10, SELF, NORMAL,
@@ -101,6 +102,7 @@ MOVES = [
     mv("decreto_selado", "Decreto Selado", "Sealed Decree", "Decreto Sellado", Mg, M, 60, 95, 10, E, NORMAL, [delay(0.35)], sig="escriba"),
     mv("estatua_de_gelo", "Estátua de Gelo", "Ice Statue", "Estatua de Hielo", Mg, M, 75, 90, 10, E, NORMAL, [stat("spd", -1, 50)], sig="escultor"),
     mv("rota_dos_ecos", "Rota dos Ecos", "Echo Route", "Ruta de Ecos", Mg, M, 55, 100, 15, E, LIGHT, [stat("spd", 1, 100, "self")], sig="cartografo"),
+    mv("luz_de_vitral", "Luz de Vitral", "Stained Light", "Luz de Vidriera", Mg, M, 50, 100, 12, AE, NORMAL, [stat("res", -1, 30)], sig="vitralista"),
     # ---------------------------------------------------------------- CURA / SUPORTE (12)
     mv("remendo", "Remendo", "Patch Up", "Parche", C, S, 0, 100, 15, SELF, NORMAL, [heal(35)]),
     mv("curativo", "Curativo", "Bandage", "Vendaje", C, S, 0, 100, 10, AL, NORMAL, [heal(40)]),
@@ -127,6 +129,7 @@ MOVES = [
     mv("vazamento", "Vazamento", "Gas Leak", "Fuga de Gas", V, M, 65, 95, 10, E, NORMAL, [poison(40)], sig="gasista"),
     mv("anil_toxico", "Anil Tóxico", "Toxic Bluing", "Añil Tóxico", V, M, 70, 95, 10, E, NORMAL, [poison(35), stat("res", -1)], sig="lavadeira"),
     mv("ferrao_das_dunas", "Ferrão das Dunas", "Dune Sting", "Aguijón de Dunas", V, P, 60, 100, 15, E, LIGHT, [poison(50)], sig="domador_escorpioes"),
+    mv("enxame", "Enxame", "Swarm", "Enjambre", V, P, 40, 95, 12, AE, LIGHT, [poison(35)], sig="apicultora"),
 ]
 
 BY_ID = {m["id"]: m for m in MOVES}
@@ -229,6 +232,7 @@ SECONDARY = {
     "sentinela": "cura", "escriba": "veneno", "sineiro": "fisico",
     "carregador": "magico", "escultor": "cura", "chazeiro": "magico",
     "domador_escorpioes": "fisico", "cartografo": "veneno", "tamborileiro": "fisico",
+    "oleiro": "cura", "vitralista": "cura", "apicultora": "fisico",
 }
 
 
@@ -298,6 +302,13 @@ UNIQUE_SETS = {
     "nevasco": ["balsamo", "limpeza", "chama_fria", "curativo", "encorajar"],
     "ampulhor": ["ancora_do_tempo", "raio_lunar", "eco_sombrio", "explosao_arcana", "concentrar"],
     "degustor": ["bafo_azedo", "toxina_lenta", "dreno_toxico", "soco_seco", "lodo"],
+    # ases dos Guardiões (decisão do Fernando: os líderes ganham um parceiro próprio)
+    "troncudo": ["investida", "quebra_costela", "soco_seco", "ranger_os_dentes", "rodopio"],
+    "bigornao": ["ranger_os_dentes", "investida", "soco_seco", "encorajar", "remendo"],
+    "caldeirona": ["neblina_verde", "balsamo", "dreno_toxico", "toxina_lenta", "bafo_azedo"],
+    "bandeirao": ["encorajar", "balsamo", "curativo", "investida", "limpeza"],
+    "patinora": ["chama_fria", "ancora_do_tempo", "ventania", "raio_lunar", "passo_ligeiro"],
+    "miragina": ["balsamo", "limpeza", "raio_lunar", "encorajar", "eco_sombrio"],
     "rei_esqueleto": ["explosao_arcana", "ancora_do_tempo", "chuva_de_brasas", "dreno_toxico", "raio_lunar", "concentrar"],
 }
 

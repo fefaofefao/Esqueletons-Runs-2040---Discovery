@@ -106,5 +106,6 @@ func test_guardian_team_coherent() -> void:
 		total += int(e[1])
 		if gl.size() == 2 and st >= 2:
 			check(int(e[1]) >= int(gl[st - 2]), "%s com idade coerente" % e[0])
-	check(abs(total / float(b.enemies.size()) - 22.0) <= 1.0, "idade média do Guardião ~22")
+	# o ás (Troncudo, único) vem mais novo porque tem atributos de único; a média fica perto de 22
+	check(abs(total / float(b.enemies.size()) - 22.0) <= 2.0, "idade média do Guardião ~22")
 	check_eq(str(b.kind), "boss", "batalha de chefe")

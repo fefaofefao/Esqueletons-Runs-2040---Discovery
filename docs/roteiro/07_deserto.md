@@ -202,7 +202,7 @@ Depois da luta, a Rainha Duna conta **para que** o Rei chamou o herdeiro: a coro
 - **Rainha Duna:** Um herdeiro no meu deserto. Eu senti você chegando, como se sente a chuva.
 - **Rainha Duna:** Sou Duna, esposa do Rei. Ergui o farol para ele voltar pra casa. Ele voltou... e nunca mais saiu.
 - **Rainha Duna:** Se eu partir, ele fica sozinho de vez. Então eu fico. E você também fica, até me vencer.
-- *[batalha boss: Aguilhão 85, Astrolar 84, Ecoarca 86, Palafitor 85 · 2200 moedas]*
+- *[batalha boss: Miragina 86, Aguilhão 85, Astrolar 84, Palafitor 85 · 2200 moedas]*
 - **Rainha Duna:** Você troca de lugar com os seus na hora certa. Como uma família.
 - **Rainha Duna:** Você precisa saber por que ele te chamou.
 - **Rainha Duna:** A coroa só se refaz na cabeça de alguém do sangue. E prende quem a usa no trono. Para sempre.

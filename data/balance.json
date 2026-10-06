@@ -76,8 +76,8 @@
    "tamer_age": 12,
    "guardian": [
     [
-     "lenhador",
-     21
+     "troncudo",
+     16
     ],
     [
      "flautista",
@@ -85,7 +85,7 @@
     ],
     [
      "herborista",
-     21
+     22
     ]
    ],
    "leader": "bosque/ramalho"
@@ -120,8 +120,8 @@
    "tamer_age": 29,
    "guardian": [
     [
-     "mineiro",
-     34
+     "bigornao",
+     32
     ],
     [
      "ferreiro",
@@ -154,7 +154,8 @@
     "palafiteiro",
     "jardineiro_lirios",
     "cogumeleiro",
-    "gasista"
+    "gasista",
+    "apicultora"
    ],
    "wild_age": [
     33,
@@ -168,8 +169,8 @@
    "tamer_age": 41,
    "guardian": [
     [
-     "lavadeira",
-     49
+     "caldeirona",
+     47
     ],
     [
      "palafiteiro",
@@ -202,7 +203,8 @@
     "escriba",
     "sineiro",
     "lavadeira",
-    "ferreiro"
+    "ferreiro",
+    "vitralista"
    ],
    "wild_age": [
     45,
@@ -216,16 +218,16 @@
    "tamer_age": 53,
    "guardian": [
     [
+     "bandeirao",
+     60
+    ],
+    [
      "sentinela",
      62
     ],
     [
      "escriba",
      61
-    ],
-    [
-     "sineiro",
-     62
     ],
     [
      "lenhador",
@@ -264,12 +266,12 @@
    "tamer_age": 65,
    "guardian": [
     [
-     "carregador",
-     72
+     "patinora",
+     70
     ],
     [
-     "escultor",
-     71
+     "carregador",
+     72
     ],
     [
      "chazeiro",
@@ -298,7 +300,8 @@
     "cartografo",
     "tamborileiro",
     "escultor",
-    "palafiteiro"
+    "palafiteiro",
+    "oleiro"
    ],
    "wild_age": [
     67,
@@ -312,16 +315,16 @@
    "tamer_age": 75,
    "guardian": [
     [
+     "miragina",
+     86
+    ],
+    [
      "domador_escorpioes",
      85
     ],
     [
      "cartografo",
      84
-    ],
-    [
-     "tamborileiro",
-     86
     ],
     [
      "palafiteiro",

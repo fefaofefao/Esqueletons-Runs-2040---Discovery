@@ -364,6 +364,26 @@ R.d("epilogo_praia", [say("DLG_C_EP_0"), say("DLG_C_EP_B1", "SPK_BENTO"), lia("D
 R.d("bento_final", [say("DLG_C_BENTO_POST", "SPK_BENTO"), say("DLG_C_EP_B3", "SPK_BENTO")])
 R.d("farol_aceso", [say("OBJ_C_LIGHTHOUSE_LIT")])
 
+# o parceiro de cada Guardião (ás): lidera a equipe dele e, no pós-jogo, segue o herói depois do eco
+ACES = {"ramalho": "troncudo", "fornalha": "bigornao", "musga": "caldeirona", "calico": "bandeirao", "alva": "patinora", "duna": "miragina"}
+t("DLG_C_ECO_ACE_RAMALHO", "Leva o Troncudo contigo. Ele grita \"madeira!\" mais alto quando tem plateia.",
+  "Take Timberlord with you. He yells \"timber!\" louder when there's an audience.",
+  "Llévate a Troncazo. Grita \"¡madera!\" más fuerte cuando tiene público.")
+t("DLG_C_ECO_ACE_FORNALHA", "Regra número nove: quem vence a Tia leva o Bigornão. Cuida das costas dele.",
+  "Rule number nine: whoever beats the Auntie takes Anvilord. Mind his back.",
+  "Regla número nueve: quien vence a la Tía se lleva a Yunquero. Cuídale la espalda.")
+t("DLG_C_ECO_ACE_MUSGA", "A Caldeirona quer conhecer o mundo, querido. Só não prova a sopa dela antes do jantar.",
+  "Cauldrona wants to see the world, dear. Just don't taste her soup before dinner.",
+  "Calderona quiere conocer el mundo, querido. Solo no pruebes su sopa antes de la cena.")
+t("DLG_C_ECO_ACE_CALICO", "Bandeirão, nova formação: siga o herdeiro. É uma ordem. A última.",
+  "Bannerguard, new formation: follow the heir. That's an order. The last one.",
+  "Banderón, nueva formación: sigue al heredero. Es una orden. La última.")
+t("DLG_C_ECO_ACE_ALVA", "A Patinora dançou sozinha por mil anos. Dança com ela de vez em quando?",
+  "Glidefrost danced alone for a thousand years. Will you dance with her now and then?",
+  "Patinieve bailó sola mil años. ¿Bailarás con ella de vez en cuando?")
+t("DLG_C_ECO_ACE_DUNA", "A Miragina vai com você. Se um dia se perder, olha pro reflexo dela.",
+  "Mirageen goes with you. If you ever get lost, look into her reflection.",
+  "Espejina va contigo. Si un día te pierdes, mira su reflejo.")
 ECOS = {
     "ramalho": ("Sou só um eco do Ramalho, preso no cabo do machado. Mas eco também quer revanche!",
                 "I'm just an echo of Ramalho, stuck in the axe handle. But echoes want rematches too!",
@@ -395,7 +415,11 @@ for g, (pt, en, es, tm) in ECOS.items():
     t(key, pt, en, es)
     pt2, en2, es2 = R.T[SPK[g]] if SPK[g] in R.T else (None, None, None)
     R.d(f"eco_{g}", [ask(key, SPK[g], [("OPT_P_FIGHT", ref(f"eco_{g}_luta")), ("OPT_P_NOT_NOW", None)])])
-    R.d(f"eco_{g}_luta", [battle(f"BTL_TAMER_ECO_{g.upper()}", team(tm), 3000, f"eco_{g}_vencido", [["pocao_g", 2]]), say("DLG_C_ECO_BYE")])
+    ace = ACES[g]
+    R.d(f"eco_{g}_luta", [battle(f"BTL_TAMER_ECO_{g.upper()}", [[ace, 96]] + team(tm[1:]), 3000, f"eco_{g}_vencido", [["pocao_g", 2]]),
+                          say("DLG_C_ECO_BYE"),
+                          say(f"DLG_C_ECO_ACE_{g.upper()}", SPK[g]) | {"if_not": f"ace_{g}"},
+                          act("give_monster", species=ace, age=90) | {"if_not": f"ace_{g}"}, flag(f"ace_{g}")])
 # nomes de batalha dos ecos com acento e tradução corretos
 for g, (pt, en, es) in {"RAMALHO": ("Eco de Ramalho", "Echo of Ramalho", "Eco de Ramalho"),
                         "FORNALHA": ("Eco da Tia Fornalha", "Echo of Aunt Furnace", "Eco de la Tía Fragua"),

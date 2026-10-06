@@ -155,7 +155,7 @@ D = {
     "musgo": [say("DLG_B_MUSGO_1", "SPK_MUSGO"), battle("BTL_TAMER_MUSGO", [["cogumeleiro_1", 13], ["herborista_1", 13]], 350, "musgo_beaten", [["antidoto", 2]]), say("DLG_B_MUSGO_2", "SPK_MUSGO")],
     "musgo_depois": [say("DLG_B_MUSGO_2", "SPK_MUSGO")],
     "ramalho": [say("DLG_B_RAMALHO_1", "SPK_RAMALHO"), say("DLG_B_RAMALHO_2", "SPK_RAMALHO"),
-                battle("BTL_TAMER_RAMALHO", [["lenhador_2", 21], ["flautista_2", 22], ["herborista_2", 21]], 800, "ramalho_beaten", kind="boss"),
+                battle("BTL_TAMER_RAMALHO", [["troncudo", 16], ["flautista_2", 22], ["herborista_2", 22]], 800, "ramalho_beaten", kind="boss"),
                 say("DLG_B_RAMALHO_WIN", "SPK_RAMALHO"), say("DLG_B_RAMALHO_MOTIVE", "SPK_RAMALHO"),
                 {"action": "give_item", "item": "lasca_raiz", "n": 1}, say("DLG_B_RAMALHO_ROOTS", "SPK_RAMALHO"),
                 {"action": "hide_npc", "id": "ramalho"}, {"action": "hide_npc", "id": "guarda_raiz"}],

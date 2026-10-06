@@ -270,7 +270,7 @@ Fase 4e. **Gerado por `tools/maps/ossorio.py`**, a mesma fonte que grava os mapa
 - **Comandante Caliço:** Atenção! Civil não entra no quartel! Identifique-se!
 - **Comandante Caliço:** Sou Caliço, irmão do Rei. A família não abandona a família. Nunca.
 - **Comandante Caliço:** Em formação! Vamos ver se você sabe quebrar uma fileira.
-- *[batalha boss: Bastião 62, Escrivélio 61, Carrilhão 62, Troncalho 63 · 1600 moedas]*
+- *[batalha boss: Bandeirão 60, Bastião 62, Escrivélio 61, Troncalho 63 · 1600 moedas]*
 - **Comandante Caliço:** Fileira rompida... Recuar com honra!
 - **Comandante Caliço:** Meu irmão perdeu todos uma vez. Eu jurei que ele nunca mais perderia ninguém.
 - **Comandante Caliço:** Regra do quartel: o vencedor tem direito ao Arquivo. Leia o que meu irmão escondeu.

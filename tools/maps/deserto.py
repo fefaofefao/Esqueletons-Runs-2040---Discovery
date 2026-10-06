@@ -234,7 +234,7 @@ t("DLG_D_DUNA_STORM", "A tempestade vai baixar. O castelo fica ao norte. Cuida d
 t("DLG_D_DUNA_AFTER", "Os tambores voltaram. Ele vai ouvir lá do castelo. Talvez lembre de quando dançava.",
   "The drums are back. He'll hear them from the castle. Maybe he'll remember when he used to dance.",
   "Volvieron los tambores. Los oirá desde el castillo. Quizá recuerde cuando bailaba.")
-DUNA_TEAM = team([("domador_escorpioes", 85), ("cartografo", 84), ("tamborileiro", 86), ("palafiteiro", 85)])
+DUNA_TEAM = [["miragina", 86]] + team([("domador_escorpioes", 85), ("cartografo", 84), ("palafiteiro", 85)])
 R.d("duna", [say("DLG_D_DUNA_1", "SPK_DUNA"), say("DLG_D_DUNA_2", "SPK_DUNA"), say("DLG_D_DUNA_3", "SPK_DUNA"),
              battle("BTL_TAMER_DUNA", DUNA_TEAM, 2200, "duna_beaten", kind="boss"),
              say("DLG_D_DUNA_WIN", "SPK_DUNA"), say("DLG_D_DUNA_WHY1", "SPK_DUNA"), say("DLG_D_DUNA_WHY2", "SPK_DUNA"), say("DLG_D_DUNA_WHY3", "SPK_DUNA"),
@@ -257,13 +257,13 @@ def e(sp, st, a, b, rar, w=None):
 
 
 R.TABLES.update({
-    "rota6_sul": [e("domador_escorpioes_3", 3, 68, 69, "comum"), e("palafiteiro_3", 3, 67, 69, "comum")],
+    "rota6_sul": [e("oleiro_2", 2, 67, 69, "comum"), e("domador_escorpioes_3", 3, 68, 69, "comum"), e("palafiteiro_3", 3, 67, 69, "comum")],
     "rota6_oeste": [e("domador_escorpioes_3", 3, 68, 70, "comum"), e("escultor_3", 3, 68, 70, "incomum")],
     "rota6_campo": [e("domador_escorpioes_3", 3, 68, 70, "comum"), e("tamborileiro_3", 3, 68, 70, "incomum"), e("cartografo_3", 3, 70, 71, "raro"),
                     e("escultor_3", 3, 68, 70, "incomum"), e("palafiteiro_3", 3, 68, 70, "comum")],
     "rota6_eco": [e("cartografo_3", 3, 76, 77, "raro", 60), e("tamborileiro_3", 3, 76, 77, "incomum", 40)],
-    "rota6_norte": [e("tamborileiro_3", 3, 70, 72, "incomum"), e("domador_escorpioes_3", 3, 70, 72, "comum")],
-    "templo_salao": [e("domador_escorpioes_3", 3, 71, 73, "comum"), e("cartografo_3", 3, 71, 73, "raro"), e("tamborileiro_3", 3, 71, 73, "incomum")],
+    "rota6_norte": [e("oleiro_3", 3, 70, 72, "incomum"), e("tamborileiro_3", 3, 70, 72, "incomum"), e("domador_escorpioes_3", 3, 70, 72, "comum")],
+    "templo_salao": [e("oleiro_3", 3, 71, 73, "comum"), e("domador_escorpioes_3", 3, 71, 73, "comum"), e("cartografo_3", 3, 71, 73, "raro"), e("tamborileiro_3", 3, 71, 73, "incomum")],
     "templo_sul": [e("cartografo_2", 2, 67, 69, "raro"), e("escultor_3", 3, 72, 73, "incomum")],
 })
 R.SHOPS["palmeiral"] = ["pocao_g", "antidoto", "reviver"]

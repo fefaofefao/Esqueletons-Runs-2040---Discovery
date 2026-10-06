@@ -299,7 +299,7 @@ t("DLG_M_FOR_AFTER_DEAL", "Os mineiros voltaram sozinhos. Trabalham mais rápido
 t("DLG_M_FOR_AFTER_BREAK", "As galerias estão vazias. Espero que você saiba o que fez.", "The galleries are empty. I hope you know what you did.",
   "Las galerías están vacías. Espero que sepas lo que hiciste.")
 
-FORNALHA_TEAM = team([("mineiro", 34), ("ferreiro", 33), ("gasista", 35), ("aguadeiro", 34)])
+FORNALHA_TEAM = [["bigornao", 32]] + team([("ferreiro", 33), ("gasista", 35), ("aguadeiro", 34)])
 R.d("fornalha", [say("DLG_M_FOR_1", "SPK_FORNALHA"), say("DLG_M_FOR_2", "SPK_FORNALHA"), say("DLG_M_FOR_3", "SPK_FORNALHA"),
                  battle("BTL_TAMER_FORNALHA", FORNALHA_TEAM, 1000, "fornalha_beaten", kind="boss"),
                  say("DLG_M_FOR_WIN", "SPK_FORNALHA"), say("DLG_M_FOR_MOTIVE", "SPK_FORNALHA"),

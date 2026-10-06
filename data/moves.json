@@ -212,6 +212,28 @@
    "signature_of": "lenhador"
   },
   {
+   "id": "jarro_pesado",
+   "name_key": "MOVE_JARRO_PESADO",
+   "desc_key": "MOVE_JARRO_PESADO_DESC",
+   "type": "fisico",
+   "category": "physical",
+   "power": 85,
+   "accuracy": 90,
+   "pp": 10,
+   "target": "enemy",
+   "weight": "heavy",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "def",
+     "stages": -1,
+     "chance": 40,
+     "on": "target"
+    }
+   ],
+   "signature_of": "oleiro"
+  },
+  {
    "id": "desmoronar",
    "name_key": "MOVE_DESMORONAR",
    "desc_key": "MOVE_DESMORONAR_DESC",
@@ -606,6 +628,28 @@
     }
    ],
    "signature_of": "cartografo"
+  },
+  {
+   "id": "luz_de_vitral",
+   "name_key": "MOVE_LUZ_DE_VITRAL",
+   "desc_key": "MOVE_LUZ_DE_VITRAL_DESC",
+   "type": "magico",
+   "category": "magical",
+   "power": 50,
+   "accuracy": 100,
+   "pp": 12,
+   "target": "all_enemies",
+   "weight": "normal",
+   "effects": [
+    {
+     "kind": "stat",
+     "stat": "res",
+     "stages": -1,
+     "chance": 30,
+     "on": "target"
+    }
+   ],
+   "signature_of": "vitralista"
   },
   {
    "id": "remendo",
@@ -1092,6 +1136,25 @@
     }
    ],
    "signature_of": "domador_escorpioes"
+  },
+  {
+   "id": "enxame",
+   "name_key": "MOVE_ENXAME",
+   "desc_key": "MOVE_ENXAME_DESC",
+   "type": "veneno",
+   "category": "physical",
+   "power": 40,
+   "accuracy": 95,
+   "pp": 12,
+   "target": "all_enemies",
+   "weight": "light",
+   "effects": [
+    {
+     "kind": "poison",
+     "chance": 35
+    }
+   ],
+   "signature_of": "apicultora"
   }
  ]
 }

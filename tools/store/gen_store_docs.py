@@ -102,7 +102,7 @@ Gratuito, com anúncios opcionais e não intrusivos.""",
 Esqueletons Runs 2040 — Discovery Edition is a pixel-art adventure RPG and the first game in the series. Travel with Lia and Taro, your two partners, across six regions, each guarded by a member of the King's family.
 
 SKELETONS THAT GROW UP
-• 80 original species to discover in the Ossuary.
+• 95 original species to discover in the Ossuary.
 • Level is age: every win can become a birthday, with cake, candles and confetti.
 • At the right age, skeletons grow from Baby to Teen to Adult, with new looks and new moves.
 • Golden skeletons: rare, shiny and recruitable.
@@ -135,7 +135,7 @@ Free, with optional, non-intrusive ads.""",
 Esqueletons Runs 2040 — Edición Discovery es un RPG de aventura en pixel art, el primer juego de la serie. Viaja con Lia y Taro, tus dos compañeros, por seis regiones, cada una con un Guardián de la familia del Rey.
 
 ESQUELETOS QUE CRECEN
-• 80 especies originales para descubrir en el Osario.
+• 95 especies originales para descubrir en el Osario.
 • El nivel es la edad: cada victoria puede volverse un cumpleaños, con pastel, velas y confeti.
 • A la edad justa, el esqueleto crece de Bebé a Adolescente y Adulto, con nuevo aspecto y nuevos golpes.
 • Esqueletos Dorados: raros, brillantes y reclutables.

@@ -2,24 +2,24 @@
 
 A bíblia de criaturas (seção 8 do AGENTS.md). **Fonte única:** `tools/bestiary/bestiary.py`; este arquivo, `data/species.json` e `i18n/species.csv` são gerados por `tools/bestiary/build.py`. Sprites: `tools/art/gen_skeletons.py`. Folha de revisão visual: `docs/bestiario_sheet.png`.
 
-**80 espécies no Ossário:** 24 linhas × 3 estágios (Bebê → Adolescente → Adulto), 7 únicos e o Rei.
+**95 espécies no Ossário:** 27 linhas × 3 estágios (Bebê → Adolescente → Adulto), 13 únicos (6 deles são os ases dos Guardiões) e o Rei.
 
 | Tipo | Linhas |
 |---|---|
-| Físico | 6 |
-| Mágico | 6 |
+| Físico | 7 |
+| Mágico | 7 |
 | Cura/Suporte | 7 |
-| Veneno | 5 |
+| Veneno | 6 |
 
 | Região | Linhas novas | Único |
 |---|---|---|
 | Praia do Despertar / Vila Maré | 4: Remito/Timonaço, Lumiça/Faroleza, Mariscote/Espinhardo, Novelita/Redentora | — |
-| Bosque das Raízes | 4: Lasquinho/Troncalho, Brotim/Floralma, Fungote/Cogumestre, Flautim/Silvanor | Raizerno |
-| Minas de Cinzas | 4: Baldinho/Rochedão, Faisquim/Forjalma, Gasito/Miasmor, Cantilho/Cisternão | Vagonauta |
-| Pântano Verde-Musgo | 3: Tinhinha/Caldeona, Estaquim/Palafitor, Lirito/Aguapéu | Brumaga |
-| Cidade Murada de Ossório | 3: Tampinha/Bastião, Rabisquim/Pergamor, Tilintim/Carrilhão | Bufardo |
-| Picos Gelados | 3: Mochilim/Alpinor, Gelinho/Cristalor, Xicrim/Samovarão | Nevasco |
-| Deserto dos Ecos | 3: Ferrim/Aguilhão, Bussolito/Astrolar, Tambim/Ecoarca | Ampulhor |
+| Bosque das Raízes | 4: Lasquinho/Troncalho, Brotim/Floralma, Fungote/Cogumestre, Flautim/Silvanor | Raizerno, Troncudo |
+| Minas de Cinzas | 4: Baldinho/Rochedão, Faisquim/Forjalma, Gasito/Miasmor, Cantilho/Cisternão | Vagonauta, Bigornão |
+| Pântano Verde-Musgo | 4: Tinhinha/Caldeona, Estaquim/Palafitor, Lirito/Aguapéu, Zunzim/Colmeira | Brumaga, Caldeirona |
+| Cidade Murada de Ossório | 4: Tampinha/Bastião, Rabisquim/Pergamor, Tilintim/Carrilhão, Caquinho/Rosáceo | Bufardo, Bandeirão |
+| Picos Gelados | 3: Mochilim/Alpinor, Gelinho/Cristalor, Xicrim/Samovarão | Nevasco, Patinora |
+| Deserto dos Ecos | 4: Ferrim/Aguilhão, Bussolito/Astrolar, Tambim/Ecoarca, Barrico/Urnadão | Ampulhor, Miragina |
 | Castelo do Rei Esqueleto | 0: — | Degustor, Ossárion (Rei) |
 
 ## Praia do Despertar / Vila Maré
@@ -161,9 +161,9 @@ A bíblia de criaturas (seção 8 do AGENTS.md). **Fonte única:** `tools/bestia
 
 | Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
 |---|---|---|---|---|---|---|
-| 026 | Bebê | Baldinho | Pailet | Cubetín | 262 | Usa o balde como capacete e como cama. Ainda não decidiu qual é o certo. |
-| 027 | Adolescente | Picaréu | Pickard | Picador | 372 | Escuta a rocha antes de bater. Diz que cada pedra tem uma veia preferida. |
-| 028 | Adulto | Rochedão | Bouldron | Peñascón | 482 | As placas de pedra da armadura foram arrancadas da mina mais funda. Desmoronamentos o contornam. |
+| 027 | Bebê | Baldinho | Pailet | Cubetín | 262 | Usa o balde como capacete e como cama. Ainda não decidiu qual é o certo. |
+| 028 | Adolescente | Picaréu | Pickard | Picador | 372 | Escuta a rocha antes de bater. Diz que cada pedra tem uma veia preferida. |
+| 029 | Adulto | Rochedão | Bouldron | Peñascón | 482 | As placas de pedra da armadura foram arrancadas da mina mais funda. Desmoronamentos o contornam. |
 
 ### Faisquim → Bigornel → Forjalma
 
@@ -176,9 +176,9 @@ A bíblia de criaturas (seção 8 do AGENTS.md). **Fonte única:** `tools/bestia
 
 | Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
 |---|---|---|---|---|---|---|
-| 029 | Bebê | Faisquim | Sparkit | Chispín | 281 | Bate o martelinho em pedras para ver faíscas. Aplaude cada uma. |
-| 030 | Adolescente | Bigornel | Anvillo | Yunquero | 392 | Carrega a bigorna para todo lado, caso precise consertar algo de repente. |
-| 031 | Adulto | Forjalma | Kilnhart | Fraguador | 502 | A forja no peito dele aquece a mina inteira no inverno. Martela feitiços como quem martela ferro. |
+| 030 | Bebê | Faisquim | Sparkit | Chispín | 281 | Bate o martelinho em pedras para ver faíscas. Aplaude cada uma. |
+| 031 | Adolescente | Bigornel | Anvillo | Yunquero | 392 | Carrega a bigorna para todo lado, caso precise consertar algo de repente. |
+| 032 | Adulto | Forjalma | Kilnhart | Fraguador | 502 | A forja no peito dele aquece a mina inteira no inverno. Martela feitiços como quem martela ferro. |
 
 ### Gasito → Fumarel → Miasmor
 
@@ -191,9 +191,9 @@ A bíblia de criaturas (seção 8 do AGENTS.md). **Fonte única:** `tools/bestia
 
 | Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
 |---|---|---|---|---|---|---|
-| 032 | Bebê | Gasito | Whiffle | Humito | 262 | Fareja tudo antes de entrar. A gaiolinha dele está sempre vazia, e ele prefere assim. |
-| 033 | Adolescente | Fumarel | Fumehorn | Fumarón | 372 | O tanque das costas faz um apito agudo antes de vazar. Mineiros correm quando escutam. |
-| 034 | Adulto | Miasmor | Miasmar | Miasmón | 482 | As chaminés soltam uma névoa verde que cobre galerias inteiras. Ele mesmo respira por filtros. |
+| 033 | Bebê | Gasito | Whiffle | Humito | 262 | Fareja tudo antes de entrar. A gaiolinha dele está sempre vazia, e ele prefere assim. |
+| 034 | Adolescente | Fumarel | Fumehorn | Fumarón | 372 | O tanque das costas faz um apito agudo antes de vazar. Mineiros correm quando escutam. |
+| 035 | Adulto | Miasmor | Miasmar | Miasmón | 482 | As chaminés soltam uma névoa verde que cobre galerias inteiras. Ele mesmo respira por filtros. |
 
 ### Cantilho → Bilheiro → Cisternão
 
@@ -206,9 +206,9 @@ A bíblia de criaturas (seção 8 do AGENTS.md). **Fonte única:** `tools/bestia
 
 | Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
 |---|---|---|---|---|---|---|
-| 035 | Bebê | Cantilho | Sippet | Cantimplín | 300 | Oferece água a todos, até às pedras. Diz que elas parecem cansadas. |
-| 036 | Adolescente | Bilheiro | Jugworth | Botijero | 412 | As bilhas tilintam no carrinho como um sino. Mineiros com sede seguem o som. |
-| 037 | Adulto | Cisternão | Cisterno | Aljibón | 522 | A cisterna das costas nunca esvazia. Um banho de mangueira dele apaga até fogo de forja. |
+| 036 | Bebê | Cantilho | Sippet | Cantimplín | 300 | Oferece água a todos, até às pedras. Diz que elas parecem cansadas. |
+| 037 | Adolescente | Bilheiro | Jugworth | Botijero | 412 | As bilhas tilintam no carrinho como um sino. Mineiros com sede seguem o som. |
+| 038 | Adulto | Cisternão | Cisterno | Aljibón | 522 | A cisterna das costas nunca esvazia. Um banho de mangueira dele apaga até fogo de forja. |
 
 ## Pântano Verde-Musgo
 
@@ -223,9 +223,9 @@ A bíblia de criaturas (seção 8 do AGENTS.md). **Fonte única:** `tools/bestia
 
 | Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
 |---|---|---|---|---|---|---|
-| 039 | Bebê | Tinhinha | Tubbit | Tinita | 262 | A bacia na cabeça vira barquinho quando o pântano enche. |
-| 040 | Adolescente | Ervaçal | Herbwash | Hierbera | 372 | Esfrega as roupas com ervas do pântano. Elas ficam limpas, e um pouco venenosas. |
-| 041 | Adulto | Caldeona | Cauldra | Caldreona | 482 | A tina dela borbulha dia e noite. O vapor verde espanta até mosquitos. |
+| 041 | Bebê | Tinhinha | Tubbit | Tinita | 262 | A bacia na cabeça vira barquinho quando o pântano enche. |
+| 042 | Adolescente | Ervaçal | Herbwash | Hierbera | 372 | Esfrega as roupas com ervas do pântano. Elas ficam limpas, e um pouco venenosas. |
+| 043 | Adulto | Caldeona | Cauldra | Caldreona | 482 | A tina dela borbulha dia e noite. O vapor verde espanta até mosquitos. |
 
 ### Estaquim → Marretão → Palafitor
 
@@ -238,9 +238,9 @@ A bíblia de criaturas (seção 8 do AGENTS.md). **Fonte única:** `tools/bestia
 
 | Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
 |---|---|---|---|---|---|---|
-| 042 | Bebê | Estaquim | Stakelet | Estaquín | 262 | Finca a estaquinha no chão e senta nela para descansar. Sempre afunda. |
-| 043 | Adolescente | Marretão | Malleteer | Mazón | 372 | Cada martelada dele crava uma estaca inteira. O pântano treme junto. |
-| 044 | Adulto | Palafitor | Stiltwarden | Palafitero | 482 | Anda sobre as pernas-de-pau como se fossem dele. Do alto, vigia as casas que ajudou a erguer. |
+| 044 | Bebê | Estaquim | Stakelet | Estaquín | 262 | Finca a estaquinha no chão e senta nela para descansar. Sempre afunda. |
+| 045 | Adolescente | Marretão | Malleteer | Mazón | 372 | Cada martelada dele crava uma estaca inteira. O pântano treme junto. |
+| 046 | Adulto | Palafitor | Stiltwarden | Palafitero | 482 | Anda sobre as pernas-de-pau como se fossem dele. Do alto, vigia as casas que ajudou a erguer. |
 
 ### Lirito → Regalírio → Aguapéu
 
@@ -253,9 +253,24 @@ A bíblia de criaturas (seção 8 do AGENTS.md). **Fonte única:** `tools/bestia
 
 | Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
 |---|---|---|---|---|---|---|
-| 045 | Bebê | Lirito | Lilypip | Nenufito | 281 | Boia de costas no pântano usando a folha como travesseiro. |
-| 046 | Adolescente | Regalírio | Pondrella | Regadora | 392 | Rega cada flor do pântano uma por uma, cantando o nome delas. |
-| 047 | Adulto | Aguapéu | Lotusage | Lotomayor | 502 | Debaixo da folha gigante dele as feridas fecham devagar. Viajantes fazem fila para descansar ali. |
+| 047 | Bebê | Lirito | Lilypip | Nenufito | 281 | Boia de costas no pântano usando a folha como travesseiro. |
+| 048 | Adolescente | Regalírio | Pondrella | Regadora | 392 | Rega cada flor do pântano uma por uma, cantando o nome delas. |
+| 049 | Adulto | Aguapéu | Lotusage | Lotomayor | 502 | Debaixo da folha gigante dele as feridas fecham devagar. Viajantes fazem fila para descansar ali. |
+
+### Zunzim → Melíria → Colmeira
+
+- **Conceito:** Esqueleto de apicultora do mangue que cria abelhas de ferrão verde nas árvores do Pântano Verde-Musgo.
+- **Silhueta:** Chapéu de aba larga com véu de tela que cresce a cada estágio; no último, uma colmeia inteira no alto da cabeça.
+- **Arco de crescimento:** Bebê abraçado a um pote de mel maior que o crânio → Adolescente de chapéu com véu e fumegador na mão → Adulta com a colmeia presa no alto da cabeça e um manto de favos.
+- **Personalidade:** Doce, protetora, zangada. **No mapa:** rápido.
+- **Tipo:** Veneno · **Raridade:** incomum · **Cresce aos** 32 e 54 anos
+- **Golpe assinatura:** Enxame / Swarm / Enjambre
+
+| Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
+|---|---|---|---|---|---|---|
+| 050 | Bebê | Zunzim | Buzzlet | Zumbito | 281 | Rouba mel e lambe o pote até brilhar. As abelhas fingem que não viram. |
+| 051 | Adolescente | Melíria | Honeyveil | Mielina | 392 | Acalma o enxame com fumaça e cantoria. Quem mexe na colmeia conhece o ferrão verde. |
+| 052 | Adulto | Colmeira | Hivequeen | Colmenara | 502 | Leva a colmeia na cabeça e chama cada abelha pelo nome. O mel dela cura; o ferrão, nem tanto. |
 
 ## Cidade Murada de Ossório
 
@@ -270,9 +285,9 @@ A bíblia de criaturas (seção 8 do AGENTS.md). **Fonte única:** `tools/bestia
 
 | Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
 |---|---|---|---|---|---|---|
-| 049 | Bebê | Tampinha | Liddle | Tapita | 262 | Bate continência para tudo que passa, inclusive para pombos. |
-| 050 | Adolescente | Broquel | Bulwarkin | Rodelón | 372 | Dorme de pé, encostado no escudo. Acorda com um único ruído estranho. |
-| 051 | Adulto | Bastião | Bastionel | Baluartón | 482 | O escudo dele já foi o portão de uma torre. Enquanto ele estiver de pé, a muralha não cai. |
+| 055 | Bebê | Tampinha | Liddle | Tapita | 262 | Bate continência para tudo que passa, inclusive para pombos. |
+| 056 | Adolescente | Broquel | Bulwarkin | Rodelón | 372 | Dorme de pé, encostado no escudo. Acorda com um único ruído estranho. |
+| 057 | Adulto | Bastião | Bastionel | Baluartón | 482 | O escudo dele já foi o portão de uma torre. Enquanto ele estiver de pé, a muralha não cai. |
 
 ### Rabisquim → Escrivélio → Pergamor
 
@@ -285,9 +300,9 @@ A bíblia de criaturas (seção 8 do AGENTS.md). **Fonte única:** `tools/bestia
 
 | Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
 |---|---|---|---|---|---|---|
-| 052 | Bebê | Rabisquim | Scribbit | Garabatín | 300 | Escreve no ar com a pena da cabeça. Nunca termina uma frase. |
-| 053 | Adolescente | Escrivélio | Quillian | Plumario | 412 | O livro que o segue registra tudo o que ele vê. Inclusive o que você disse dele. |
-| 054 | Adulto | Pergamor | Tomeward | Pergaminor | 522 | Cada pergaminho da capa é uma lei antiga de Ossório. Quando lê uma em voz alta, ela acontece. |
+| 058 | Bebê | Rabisquim | Scribbit | Garabatín | 300 | Escreve no ar com a pena da cabeça. Nunca termina uma frase. |
+| 059 | Adolescente | Escrivélio | Quillian | Plumario | 412 | O livro que o segue registra tudo o que ele vê. Inclusive o que você disse dele. |
+| 060 | Adulto | Pergamor | Tomeward | Pergaminor | 522 | Cada pergaminho da capa é uma lei antiga de Ossório. Quando lê uma em voz alta, ela acontece. |
 
 ### Tilintim → Badaleiro → Carrilhão
 
@@ -300,9 +315,24 @@ A bíblia de criaturas (seção 8 do AGENTS.md). **Fonte única:** `tools/bestia
 
 | Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
 |---|---|---|---|---|---|---|
-| 055 | Bebê | Tilintim | Dingle | Tilín | 281 | O sininho toca a cada passo, então nunca consegue se esconder. |
-| 056 | Adolescente | Badaleiro | Clapperton | Badajo | 392 | Toca o sino na hora certa, todos os dias. A cidade acerta os relógios por ele. |
-| 057 | Adulto | Carrilhão | Carillon | Carillón | 502 | O sino das costas ressoa por dentro dos ossos. Uma badalada acalma uma briga inteira. |
+| 061 | Bebê | Tilintim | Dingle | Tilín | 281 | O sininho toca a cada passo, então nunca consegue se esconder. |
+| 062 | Adolescente | Badaleiro | Clapperton | Badajo | 392 | Toca o sino na hora certa, todos os dias. A cidade acerta os relógios por ele. |
+| 063 | Adulto | Carrilhão | Carillon | Carillón | 502 | O sino das costas ressoa por dentro dos ossos. Uma badalada acalma uma briga inteira. |
+
+### Caquinho → Vitralho → Rosáceo
+
+- **Conceito:** Esqueleto de vitralista que conserta os vitrais da Cidade Murada de Ossório e prende a luz em cacos coloridos.
+- **Silhueta:** Caco de vidro colorido que cresce até virar uma rosácea redonda atrás da cabeça, como uma auréola de vitral.
+- **Arco de crescimento:** Bebê com um caco de vidro azul usado como óculos → Adolescente de avental de couro com um painel de vitral nas costas → Adulta com uma rosácea inteira brilhando atrás do crânio e um manto que muda de cor com a luz.
+- **Personalidade:** Sonhadora, meticulosa, vaidosa. **No mapa:** ronda em círculo.
+- **Tipo:** Mágico · **Raridade:** incomum · **Cresce aos** 36 e 60 anos
+- **Golpe assinatura:** Luz de Vitral / Stained Light / Luz de Vidriera
+
+| Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
+|---|---|---|---|---|---|---|
+| 064 | Bebê | Caquinho | Shardling | Cristalín | 281 | Olha o mundo através de um caco azul. Jura que assim tudo fica mais bonito. |
+| 065 | Adolescente | Vitralho | Paneglow | Vitralito | 392 | Conserta vitrais de madrugada. Quando o sol bate, assina o trabalho em arco-íris. |
+| 066 | Adulto | Rosáceo | Roseglass | Rosetón | 502 | A rosácea nas costas guarda a luz de mil manhãs. Quando ela brilha, as sombras pedem licença. |
 
 ## Picos Gelados
 
@@ -317,9 +347,9 @@ A bíblia de criaturas (seção 8 do AGENTS.md). **Fonte única:** `tools/bestia
 
 | Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
 |---|---|---|---|---|---|---|
-| 059 | Bebê | Mochilim | Packlet | Mochilín | 262 | Leva na mochila uma pedra de estimação. Diz que é para treinar. |
-| 060 | Adolescente | Cargueiro | Haulster | Cargadón | 372 | As panelas da mochila batem no ritmo dos passos. É assim que os refúgios sabem que a sopa está chegando. |
-| 061 | Adulto | Alpinor | Summitor | Cumbrero | 482 | Já subiu todos os picos com a casa nas costas. Quando para, monta um abrigo para quem precisar. |
+| 069 | Bebê | Mochilim | Packlet | Mochilín | 262 | Leva na mochila uma pedra de estimação. Diz que é para treinar. |
+| 070 | Adolescente | Cargueiro | Haulster | Cargadón | 372 | As panelas da mochila batem no ritmo dos passos. É assim que os refúgios sabem que a sopa está chegando. |
+| 071 | Adulto | Alpinor | Summitor | Cumbrero | 482 | Já subiu todos os picos com a casa nas costas. Quando para, monta um abrigo para quem precisar. |
 
 ### Gelinho → Cinzelvo → Cristalor
 
@@ -332,9 +362,9 @@ A bíblia de criaturas (seção 8 do AGENTS.md). **Fonte única:** `tools/bestia
 
 | Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
 |---|---|---|---|---|---|---|
-| 062 | Bebê | Gelinho | Cubbit | Hielito | 281 | Esculpe bonecos de neve parecidos com quem encontra. Os bonecos sempre saem sorrindo. |
-| 063 | Adolescente | Cinzelvo | Chiselle | Cincelón | 392 | Esculpiu as próprias asas e ainda não aprendeu a voar com elas. Plana nas descidas. |
-| 064 | Adulto | Cristalor | Glacior | Glaciarco | 502 | Transformou o próprio corpo em escultura. A luz que atravessa o cristal congela o que toca. |
+| 072 | Bebê | Gelinho | Cubbit | Hielito | 281 | Esculpe bonecos de neve parecidos com quem encontra. Os bonecos sempre saem sorrindo. |
+| 073 | Adolescente | Cinzelvo | Chiselle | Cincelón | 392 | Esculpiu as próprias asas e ainda não aprendeu a voar com elas. Plana nas descidas. |
+| 074 | Adulto | Cristalor | Glacior | Glaciarco | 502 | Transformou o próprio corpo em escultura. A luz que atravessa o cristal congela o que toca. |
 
 ### Xicrim → Chaleirel → Samovarão
 
@@ -347,9 +377,9 @@ A bíblia de criaturas (seção 8 do AGENTS.md). **Fonte única:** `tools/bestia
 
 | Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
 |---|---|---|---|---|---|---|
-| 065 | Bebê | Xicrim | Cuplet | Tacita | 300 | Usa a xícara de chapéu e oferece chá imaginário a quem passa. |
-| 066 | Adolescente | Chaleirel | Kettleby | Teterón | 412 | A chaleira dele assobia quando alguém por perto está com frio. |
-| 067 | Adulto | Samovarão | Samovaron | Samovarón | 522 | O vapor do samovar derrete a neve num raio de dez passos. Nenhum viajante congela perto dele. |
+| 075 | Bebê | Xicrim | Cuplet | Tacita | 300 | Usa a xícara de chapéu e oferece chá imaginário a quem passa. |
+| 076 | Adolescente | Chaleirel | Kettleby | Teterón | 412 | A chaleira dele assobia quando alguém por perto está com frio. |
+| 077 | Adulto | Samovarão | Samovaron | Samovarón | 522 | O vapor do samovar derrete a neve num raio de dez passos. Nenhum viajante congela perto dele. |
 
 ## Deserto dos Ecos
 
@@ -364,9 +394,9 @@ A bíblia de criaturas (seção 8 do AGENTS.md). **Fonte única:** `tools/bestia
 
 | Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
 |---|---|---|---|---|---|---|
-| 069 | Bebê | Ferrim | Stingle | Aguijín | 262 | Finge que a cauda de pano é de verdade e ameaça os outros com ela. |
-| 070 | Adolescente | Escorpeiro | Whipclaw | Alacranero | 372 | O escorpião do ombro obedece ao estalo do chicote. Na verdade, quem manda é o escorpião. |
-| 071 | Adulto | Aguilhão | Venomarch | Aguijonazo | 482 | Já não se sabe onde termina o domador e começa o escorpião. Ataca antes da areia assentar. |
+| 080 | Bebê | Ferrim | Stingle | Aguijín | 262 | Finge que a cauda de pano é de verdade e ameaça os outros com ela. |
+| 081 | Adolescente | Escorpeiro | Whipclaw | Alacranero | 372 | O escorpião do ombro obedece ao estalo do chicote. Na verdade, quem manda é o escorpião. |
+| 082 | Adulto | Aguilhão | Venomarch | Aguijonazo | 482 | Já não se sabe onde termina o domador e começa o escorpião. Ataca antes da areia assentar. |
 
 ### Bussolito → Lunetário → Astrolar
 
@@ -379,9 +409,9 @@ A bíblia de criaturas (seção 8 do AGENTS.md). **Fonte única:** `tools/bestia
 
 | Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
 |---|---|---|---|---|---|---|
-| 072 | Bebê | Bussolito | Compip | Brujulín | 300 | A bússola dele aponta para o lanche mais próximo, não para o norte. |
-| 073 | Adolescente | Lunetário | Scopewright | Catalejón | 412 | Mede as dunas gritando e escutando o eco. Os mapas dele mudam toda vez que venta. |
-| 074 | Adulto | Astrolar | Astrolux | Astrolario | 522 | O astrolábio gira em volta dele e mostra caminhos que ainda não existem. Nunca se perdeu. |
+| 083 | Bebê | Bussolito | Compip | Brujulín | 300 | A bússola dele aponta para o lanche mais próximo, não para o norte. |
+| 084 | Adolescente | Lunetário | Scopewright | Catalejón | 412 | Mede as dunas gritando e escutando o eco. Os mapas dele mudam toda vez que venta. |
+| 085 | Adulto | Astrolar | Astrolux | Astrolario | 522 | O astrolábio gira em volta dele e mostra caminhos que ainda não existem. Nunca se perdeu. |
 
 ### Tambim → Batucão → Ecoarca
 
@@ -394,9 +424,24 @@ A bíblia de criaturas (seção 8 do AGENTS.md). **Fonte única:** `tools/bestia
 
 | Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
 |---|---|---|---|---|---|---|
-| 075 | Bebê | Tambim | Drumlet | Tamborín | 281 | Toca a barriga como tambor quando está feliz. Fica feliz com muita facilidade. |
-| 076 | Adolescente | Batucão | Bongard | Batucón | 392 | Marca o passo das caravanas. Quando ele toca, ninguém sente cansaço. |
-| 077 | Adulto | Ecoarca | Echoarch | Resonarca | 502 | O tambor das dunas ecoa por quilômetros. Quem ouve recupera o fôlego, amigo ou inimigo. |
+| 086 | Bebê | Tambim | Drumlet | Tamborín | 281 | Toca a barriga como tambor quando está feliz. Fica feliz com muita facilidade. |
+| 087 | Adolescente | Batucão | Bongard | Batucón | 392 | Marca o passo das caravanas. Quando ele toca, ninguém sente cansaço. |
+| 088 | Adulto | Ecoarca | Echoarch | Resonarca | 502 | O tambor das dunas ecoa por quilômetros. Quem ouve recupera o fôlego, amigo ou inimigo. |
+
+### Barrico → Rodaleiro → Urnadão
+
+- **Conceito:** Esqueleto de oleiro do Deserto dos Ecos que molda jarras com a areia molhada do oásis.
+- **Silhueta:** Jarro de barro sempre presente e crescendo: no colo, depois equilibrado na cabeça, por fim uma urna enorme presa às costas como um casco.
+- **Arco de crescimento:** Bebê sujo de barro abraçando um potinho torto → Adolescente de avental com uma jarra equilibrada na cabeça → Adulto de turbante com uma urna gigante nas costas, as rachaduras remendadas a ouro.
+- **Personalidade:** Paciente, teimoso, caprichoso. **No mapa:** patrulha.
+- **Tipo:** Físico · **Raridade:** comum · **Cresce aos** 46 e 70 anos
+- **Golpe assinatura:** Jarro Pesado / Heavy Jar / Tinaja Pesada
+
+| Nº | Estágio | PT-BR | EN | ES | Total | Entrada do Ossário (PT-BR) |
+|---|---|---|---|---|---|---|
+| 089 | Bebê | Barrico | Claylet | Barrito | 262 | Faz potes tortos e diz que é de propósito. Fica emburrado se alguém pisa no barro dele. |
+| 090 | Adolescente | Rodaleiro | Spinpot | Tornero | 372 | Gira a roda de oleiro o dia inteiro. Diz que o deserto é só barro esperando água. |
+| 091 | Adulto | Urnadão | Urnstone | Tinajón | 482 | Carrega uma urna que guarda o eco de cada caravana perdida. Remenda as rachaduras com ouro. |
 
 ## Únicos e Rei
 
@@ -409,49 +454,91 @@ Não crescem. Aparecem uma vez por região (a partir do Bosque) e no Castelo.
 - **Tipo:** Cura/Suporte · **Região:** Bosque das Raízes
 - **Ossário:** Dizem que plantou o Bosque inteiro com uma semente só. Mexe-se uma vez por estação.
 
-### 038 · Vagonauta / Cartwraith / Vagonero
+### 039 · Vagonauta / Cartwraith / Vagonero
 - **Conceito:** Esqueleto de capataz que nunca saiu do vagonete e corre pelos trilhos abandonados das minas.
 - **Silhueta:** Vagonete de mina com rodas; o esqueleto de capacete com lanterna saindo de dentro, braços para frente.
 - **Personalidade:** Afobado, mandão, veloz. **No mapa:** rápido.
 - **Tipo:** Físico · **Região:** Minas de Cinzas
 - **Ossário:** Corre pelos trilhos à noite dando ordens a mineiros que já se foram. O vagonete nunca descarrila.
 
-### 048 · Brumaga / Fogmara / Brumaja
+### 053 · Brumaga / Fogmara / Brumaja
 - **Conceito:** Esqueleto de bruxa da névoa que mora no coração do pântano e cozinha brumas venenosas.
 - **Silhueta:** Chapéu pontudo torto e longo, manto em farrapos se desfazendo em névoa, colher de pau gigante.
 - **Personalidade:** Misteriosa, irônica, solitária. **No mapa:** tímido (foge).
 - **Tipo:** Veneno · **Região:** Pântano Verde-Musgo
 - **Ossário:** A névoa do pântano sai do caldeirão dela. Quando ri, o pântano inteiro fica mais denso.
 
-### 058 · Bufardo / Jestrel / Bufonel
+### 067 · Bufardo / Jestrel / Bufonel
 - **Conceito:** Esqueleto de bobo da corte de Ossório que comanda marionetes com fios mágicos.
 - **Silhueta:** Chapéu de bobo de três pontas com guizos; cruzeta de marionete erguida com um bonequinho pendurado.
 - **Personalidade:** Debochado, imprevisível, teatral. **No mapa:** rápido.
 - **Tipo:** Mágico · **Região:** Cidade Murada de Ossório
 - **Ossário:** As marionetes dele imitam quem as olha. Algumas imitam bem demais.
 
-### 068 · Nevasco / Blizzabbot / Nevadón
+### 078 · Nevasco / Blizzabbot / Nevadón
 - **Conceito:** Esqueleto de monge das neves que medita no pico mais alto, coberto por um manto de pelo branco.
 - **Silhueta:** Manto peludo branco e largo em forma de montanha; contas de oração; cabeça raspada pequena no topo.
 - **Personalidade:** Sábio, silencioso, bondoso. **No mapa:** patrulha.
 - **Tipo:** Cura/Suporte · **Região:** Picos Gelados
 - **Ossário:** Medita há tanto tempo que a neve se acumula nos ombros sem derreter. Uma palavra dele acalma tempestades.
 
-### 078 · Ampulhor / Sandkeeper / Arenario
+### 092 · Ampulhor / Sandkeeper / Arenario
 - **Conceito:** Esqueleto de guardião das ampulhetas dos templos do Deserto dos Ecos, que mede o tempo em areia.
 - **Silhueta:** Toucado de faixas listradas até os ombros; ampulheta grande flutuando acima da mão erguida.
 - **Personalidade:** Solene, impaciente, antigo. **No mapa:** patrulha.
 - **Tipo:** Mágico · **Região:** Deserto dos Ecos
 - **Ossário:** Vira a ampulheta e a batalha fica mais lenta para todos, menos para ele.
 
-### 079 · Degustor / Tastrel / Catadón
+### 094 · Degustor / Tastrel / Catadón
 - **Conceito:** Esqueleto do provador oficial do Rei, que provou tantos pratos envenenados que virou o próprio veneno.
 - **Silhueta:** Gola alta de corte e uma bandeja coberta (cloche) erguida numa mão; guardanapo no braço.
 - **Personalidade:** Refinado, desconfiado, ácido. **No mapa:** persegue o jogador.
 - **Tipo:** Veneno · **Região:** Castelo do Rei Esqueleto
 - **Ossário:** Provou cada prato do Rei por cem anos. Hoje é ele quem tempera os inimigos do castelo.
 
-### 080 · Ossárion / Ossarion / Osarión
+### 026 · Troncudo / Timberlord / Troncazo
+- **Conceito:** O parceiro do Guardião Ramalho: um lenhador gigante que carrega um tronco inteiro no ombro e grita "madeira!" antes de cada golpe.
+- **Silhueta:** Tronco atravessado nos ombros, mais largo que o corpo; barba de musgo pendurada no queixo.
+- **Personalidade:** Barulhento, leal, exibido. **No mapa:** persegue o jogador.
+- **Tipo:** Físico · **Região:** Bosque das Raízes
+- **Ossário:** Avisa antes de bater, por educação. Depois bate do mesmo jeito.
+
+### 040 · Bigornão / Anvilord / Yunquero
+- **Conceito:** O parceiro da Tia Fornalha: um guarda de forja com uma bigorna no lugar do peito, que aguenta qualquer pancada.
+- **Silhueta:** Bigorna de ferro presa ao peito e luvas enormes de couro; anda curvado com o peso.
+- **Personalidade:** Firme, calado, protetor. **No mapa:** patrulha.
+- **Tipo:** Físico · **Região:** Minas de Cinzas
+- **Ossário:** Serviu de bigorna para a Tia por cem anos. Nunca reclamou de uma martelada.
+
+### 054 · Caldeirona / Cauldrona / Calderona
+- **Conceito:** A parceira da Musga: uma cozinheira do brejo com um caldeirão fumegante no lugar da barriga, que tanto envenena quanto cura.
+- **Silhueta:** Caldeirão redondo no tronco soltando vapor verde; concha de sopa na mão.
+- **Personalidade:** Fofoqueira, maternal, imprevisível. **No mapa:** tímido (foge).
+- **Tipo:** Veneno · **Região:** Pântano Verde-Musgo
+- **Ossário:** Ninguém sabe o que tem na sopa dela. Ela também não, e é isso que a deixa feliz.
+
+### 068 · Bandeirão / Bannerguard / Banderón
+- **Conceito:** O parceiro do Comandante Caliço: um porta-estandarte que ergue a bandeira de Ossório e faz os aliados lutarem no mesmo compasso.
+- **Silhueta:** Mastro alto com uma bandeira azul tremulando acima da cabeça; elmo com penacho.
+- **Personalidade:** Honrado, solene, inspirador. **No mapa:** patrulha.
+- **Tipo:** Cura/Suporte · **Região:** Cidade Murada de Ossório
+- **Ossário:** Enquanto a bandeira está de pé, ninguém do lado dele recua. Ele nunca deixou a bandeira cair.
+
+### 079 · Patinora / Glidefrost / Patinieve
+- **Conceito:** A parceira de Alva: uma patinadora que dança sobre o gelo do Jardim e congela o tempo a cada pirueta.
+- **Silhueta:** Saia rodada de gelo e patins de lâmina; braços abertos em pose de giro.
+- **Personalidade:** Graciosa, melancólica, veloz. **No mapa:** rápido.
+- **Tipo:** Mágico · **Região:** Picos Gelados
+- **Ossário:** Dança sozinha no lago congelado esperando uma música que nunca toca. Gira tão rápido que o frio a segue.
+
+### 093 · Miragina / Mirageen / Espejina
+- **Conceito:** A parceira da Rainha Duna: uma dançarina de miragens que troca de lugar com o próprio reflexo e cura quem dança com ela.
+- **Silhueta:** Véus longos flutuando em volta e um espelho redondo de bronze nas mãos.
+- **Personalidade:** Serena, misteriosa, gentil. **No mapa:** patrulha.
+- **Tipo:** Cura/Suporte · **Região:** Deserto dos Ecos
+- **Ossário:** Ninguém sabe se a viu de verdade ou só o reflexo. Dizem que as duas são boa gente.
+
+### 095 · Ossárion / Ossarion / Osarión
 - **Conceito:** O Rei Esqueleto, senhor do castelo, que dominou o continente e guarda o segredo de 2040.
 - **Silhueta:** Coroa alta de pontas, manto real com gola de pele até o chão, cetro com orbe; o maior sprite do jogo.
 - **Personalidade:** Solitário, imponente, ferido. **No mapa:** patrulha.

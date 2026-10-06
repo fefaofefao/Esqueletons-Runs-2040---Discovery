@@ -246,7 +246,7 @@ Antes da luta, a Musga **cheira o ar** e diz: "Você tem cheiro de casa. De fam�
 - **Musga:** Snif, snif... Que estranho. Você tem cheiro de casa. De família.
 - *[flag pista_4 = True]*
 - **Musga:** Sabia que a névoa é minha? Quem respira, precisa de mim. Quem precisa, não esquece.
-- *[batalha boss: Ervaçal 49, Marretão 48, Regalírio 47, Cogumestre 48 · 1300 moedas]*
+- *[batalha boss: Caldeirona 47, Marretão 48, Regalírio 47, Cogumestre 48 · 1300 moedas]*
 - **Musga:** Ai, que deselegante. Ganhar de uma dama no próprio caldeirão.
 - **Musga:** Da primeira vez, a família me esqueceu numa torre. Mil anos de silêncio. De novo, não, querido.
 - **Musga:** Quer uma fofoca de graça? Os levados, mineiros e pescadores, foram todos pro castelo servir o titio.

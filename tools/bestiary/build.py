@@ -124,7 +124,7 @@ def build():
             if u["region"] == reg:
                 n += 1
                 u["number"] = n
-    king["number"] = 80
+    king["number"] = n + 1
     data = {"lines": lines_out, "uniques": uniques, "king": king}
     (ROOT / "data/species.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     with open(ROOT / "i18n/species.csv", "w", newline="", encoding="utf-8") as f:
@@ -162,7 +162,7 @@ def write_doc(data):
            "A bíblia de criaturas (seção 8 do AGENTS.md). **Fonte única:** `tools/bestiary/bestiary.py`; "
            "este arquivo, `data/species.json` e `i18n/species.csv` são gerados por `tools/bestiary/build.py`. "
            "Sprites: `tools/art/gen_skeletons.py`. Folha de revisão visual: `docs/bestiario_sheet.png`.", "",
-           "**80 espécies no Ossário:** 24 linhas × 3 estágios (Bebê → Adolescente → Adulto), 7 únicos e o Rei.", ""]
+           f"**{len(B.LINES) * 3 + len(B.UNIQUES) + 1} espécies no Ossário:** {len(B.LINES)} linhas × 3 estágios (Bebê → Adolescente → Adulto), {len(B.UNIQUES)} únicos (6 deles são os ases dos Guardiões) e o Rei.", ""]
     # resumo
     from collections import Counter
     tc = Counter(ln["type"] for ln in B.LINES)
@@ -215,7 +215,7 @@ def write_doc(data):
     out.append("Não crescem. Aparecem uma vez por região (a partir do Bosque) e no Castelo.")
     out.append("")
     for u in B.UNIQUES + [B.KING]:
-        n = 80 if u is B.KING else num[u["id"]]
+        n = data["king"]["number"] if u is B.KING else num[u["id"]]
         out.append(f"### {n:03d} · {u['names']['pt']} / {u['names']['en']} / {u['names']['es']}")
         out.append(f"- **Conceito:** {u['concept']}")
         out.append(f"- **Silhueta:** {u['silhouette']}")

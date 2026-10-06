@@ -927,8 +927,8 @@
     "tamer_key": "BTL_TAMER_ECO_RAMALHO",
     "enemies": [
      [
-      "lenhador_3",
-      95
+      "troncudo",
+      96
      ],
      [
       "flautista_3",
@@ -950,6 +950,21 @@
    },
    {
     "say": "DLG_C_ECO_BYE"
+   },
+   {
+    "say": "DLG_C_ECO_ACE_RAMALHO",
+    "speaker": "SPK_RAMALHO",
+    "if_not": "ace_ramalho"
+   },
+   {
+    "action": "give_monster",
+    "species": "troncudo",
+    "age": 90,
+    "if_not": "ace_ramalho"
+   },
+   {
+    "set_flag": "ace_ramalho",
+    "value": true
    }
   ],
   "eco_fornalha": [
@@ -974,8 +989,8 @@
     "tamer_key": "BTL_TAMER_ECO_FORNALHA",
     "enemies": [
      [
-      "mineiro_3",
-      95
+      "bigornao",
+      96
      ],
      [
       "ferreiro_3",
@@ -1001,6 +1016,21 @@
    },
    {
     "say": "DLG_C_ECO_BYE"
+   },
+   {
+    "say": "DLG_C_ECO_ACE_FORNALHA",
+    "speaker": "SPK_FORNALHA",
+    "if_not": "ace_fornalha"
+   },
+   {
+    "action": "give_monster",
+    "species": "bigornao",
+    "age": 90,
+    "if_not": "ace_fornalha"
+   },
+   {
+    "set_flag": "ace_fornalha",
+    "value": true
    }
   ],
   "eco_musga": [
@@ -1025,7 +1055,7 @@
     "tamer_key": "BTL_TAMER_ECO_MUSGA",
     "enemies": [
      [
-      "lavadeira_3",
+      "caldeirona",
       96
      ],
      [
@@ -1052,6 +1082,21 @@
    },
    {
     "say": "DLG_C_ECO_BYE"
+   },
+   {
+    "say": "DLG_C_ECO_ACE_MUSGA",
+    "speaker": "SPK_MUSGA",
+    "if_not": "ace_musga"
+   },
+   {
+    "action": "give_monster",
+    "species": "caldeirona",
+    "age": 90,
+    "if_not": "ace_musga"
+   },
+   {
+    "set_flag": "ace_musga",
+    "value": true
    }
   ],
   "eco_calico": [
@@ -1076,8 +1121,8 @@
     "tamer_key": "BTL_TAMER_ECO_CALICO",
     "enemies": [
      [
-      "sentinela_3",
-      97
+      "bandeirao",
+      96
      ],
      [
       "escriba_3",
@@ -1103,6 +1148,21 @@
    },
    {
     "say": "DLG_C_ECO_BYE"
+   },
+   {
+    "say": "DLG_C_ECO_ACE_CALICO",
+    "speaker": "SPK_CALICO",
+    "if_not": "ace_calico"
+   },
+   {
+    "action": "give_monster",
+    "species": "bandeirao",
+    "age": 90,
+    "if_not": "ace_calico"
+   },
+   {
+    "set_flag": "ace_calico",
+    "value": true
    }
   ],
   "eco_alva": [
@@ -1127,8 +1187,8 @@
     "tamer_key": "BTL_TAMER_ECO_ALVA",
     "enemies": [
      [
-      "carregador_3",
-      98
+      "patinora",
+      96
      ],
      [
       "escultor_3",
@@ -1154,6 +1214,21 @@
    },
    {
     "say": "DLG_C_ECO_BYE"
+   },
+   {
+    "say": "DLG_C_ECO_ACE_ALVA",
+    "speaker": "SPK_ALVA",
+    "if_not": "ace_alva"
+   },
+   {
+    "action": "give_monster",
+    "species": "patinora",
+    "age": 90,
+    "if_not": "ace_alva"
+   },
+   {
+    "set_flag": "ace_alva",
+    "value": true
    }
   ],
   "eco_duna": [
@@ -1178,8 +1253,8 @@
     "tamer_key": "BTL_TAMER_ECO_DUNA",
     "enemies": [
      [
-      "domador_escorpioes_3",
-      99
+      "miragina",
+      96
      ],
      [
       "cartografo_3",
@@ -1205,6 +1280,21 @@
    },
    {
     "say": "DLG_C_ECO_BYE"
+   },
+   {
+    "say": "DLG_C_ECO_ACE_DUNA",
+    "speaker": "SPK_DUNA",
+    "if_not": "ace_duna"
+   },
+   {
+    "action": "give_monster",
+    "species": "miragina",
+    "age": 90,
+    "if_not": "ace_duna"
+   },
+   {
+    "set_flag": "ace_duna",
+    "value": true
    }
   ]
  }

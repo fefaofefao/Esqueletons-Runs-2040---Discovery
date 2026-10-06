@@ -12,7 +12,7 @@ You wake up on a beach with a museum ticket in your pocket: 10/12/2040. The cont
 Esqueletons Runs 2040 — Discovery Edition is a pixel-art adventure RPG and the first game in the series. Travel with Lia and Taro, your two partners, across six regions, each guarded by a member of the King's family.
 
 SKELETONS THAT GROW UP
-• 80 original species to discover in the Ossuary.
+• 95 original species to discover in the Ossuary.
 • Level is age: every win can become a birthday, with cake, candles and confetti.
 • At the right age, skeletons grow from Baby to Teen to Adult, with new looks and new moves.
 • Golden skeletons: rare, shiny and recruitable.

@@ -23,6 +23,8 @@ MOVE_REMADA_DUPLA,Remada Dupla,Double Stroke,Remada Doble
 MOVE_REMADA_DUPLA_DESC,Acerta 2 vezes.,Hits twice.,Golpea 2 veces.
 MOVE_GOLPE_DE_TORA,Golpe de Tora,Log Slam,Golpe de Tronco
 MOVE_GOLPE_DE_TORA_DESC,Atrasa.,Delays.,Retrasa.
+MOVE_JARRO_PESADO,Jarro Pesado,Heavy Jar,Tinaja Pesada
+MOVE_JARRO_PESADO_DESC,DEF↓ (40%).,DEF↓ (40%).,DEF↓ (40%).
 MOVE_DESMORONAR,Desmoronar,Cave-In,Derrumbe
 MOVE_DESMORONAR_DESC,VEL↓ (30%).,SPD↓ (30%).,VEL↓ (30%).
 MOVE_ESTACA_FIRME,Estaca Firme,Pile Driver,Estaca Certera
@@ -63,6 +65,8 @@ MOVE_ESTATUA_DE_GELO,Estátua de Gelo,Ice Statue,Estatua de Hielo
 MOVE_ESTATUA_DE_GELO_DESC,VEL↓ (50%).,SPD↓ (50%).,VEL↓ (50%).
 MOVE_ROTA_DOS_ECOS,Rota dos Ecos,Echo Route,Ruta de Ecos
 MOVE_ROTA_DOS_ECOS_DESC,Sua VEL↑.,Your SPD↑.,Tu VEL↑.
+MOVE_LUZ_DE_VITRAL,Luz de Vitral,Stained Light,Luz de Vidriera
+MOVE_LUZ_DE_VITRAL_DESC,RES↓ (30%).,RES↓ (30%).,RES↓ (30%).
 MOVE_REMENDO,Remendo,Patch Up,Parche
 MOVE_REMENDO_DESC,Cura 35%.,Heals 35%.,Cura 35%.
 MOVE_CURATIVO,Curativo,Bandage,Vendaje
@@ -111,3 +115,5 @@ MOVE_ANIL_TOXICO,Anil Tóxico,Toxic Bluing,Añil Tóxico
 MOVE_ANIL_TOXICO_DESC,"Envenena (35%), RES↓.","Poisons (35%), RES↓.","Envenena (35%), RES↓."
 MOVE_FERRAO_DAS_DUNAS,Ferrão das Dunas,Dune Sting,Aguijón de Dunas
 MOVE_FERRAO_DAS_DUNAS_DESC,Envenena (50%).,Poisons (50%).,Envenena (50%).
+MOVE_ENXAME,Enxame,Swarm,Enjambre
+MOVE_ENXAME_DESC,Envenena (35%).,Poisons (35%).,Envenena (35%).

@@ -222,7 +222,7 @@ Na casa do **Seu Carvão** há um **mapa antigo** da costa: três baías lado a 
 - **Tia Fornalha:** Regra um: ninguém entra na forja sem bater. Você não bateu.
 - **Tia Fornalha:** Eu forjo as correntes que fecham as estradas. Estrada fechada, ninguém se perde. Simples.
 - **Tia Fornalha:** Regra dois: quem quer passar, aguenta o calor. Vamos ver.
-- *[batalha boss: Picaréu 34, Bigornel 33, Fumarel 35, Bilheiro 34 · 1000 moedas]*
+- *[batalha boss: Bigornão 32, Bigornel 33, Fumarel 35, Bilheiro 34 · 1000 moedas]*
 - **Tia Fornalha:** Hmpf. Regra três: quem vence, fala. Fala logo.
 - **Tia Fornalha:** O Rei é meu sobrinho. Quando a coroa rachar, a família vai embora de novo. Enquanto houver corrente, ninguém vai.
 - *(narração)* A corrente mestra prende todos os mineiros à forja. O que você vai fazer?

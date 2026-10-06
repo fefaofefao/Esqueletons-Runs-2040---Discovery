@@ -1089,6 +1089,192 @@ def tamborileiro(st):
 
 
 # ------------------------------------------------------------------ ÚNICOS e REI
+# ------------------------------------------------------------------ novas linhas (refino geral)
+def apicultora(st):
+    sp, f = new(st)
+    honey, veil, straw, comb = (240, 180, 50), (226, 232, 220), (210, 180, 110), (230, 170, 60)
+    hands = {1: {"l": (11, 22), "r": (21, 22)}, 2: {"r": (24, 18)}, 3: {"l": (7, 16), "r": (25, 16)}}.get(st)
+    draw_body(sp, f, hands)
+    L = Layer()
+    if st == 2:
+        tunic(L, f, (236, 226, 190))
+    elif st == 3:
+        cape(L, f, comb, bottom=27, spread=4)
+    sp.add(L)
+    if st == 3:
+        D = Layer(shade=False, outline=False)
+        for (x, y) in [(10, 18), (14, 20), (18, 18), (22, 20), (12, 23), (20, 23)]:
+            D.rect(x, y, 2, 2, darken(comb, .25))
+        sp.add(D)
+    draw_skull(sp, f, mood="happy" if st == 1 else "calm")
+    L = Layer(); hx, hy, rx, ry = H(f)
+    if st == 1:
+        L.ell(16, 23, 4.5, 3.5, honey); L.rect(13, 19, 7, 2, straw)
+    elif st == 2:
+        L.ell(hx, hy - ry + 1, rx + 4, 2, straw); cap(L, f, straw, depth=0.45)
+    else:
+        L.ell(hx, hy - ry + 0.5, 5.5, 4.2, comb); L.ell(hx, hy - ry - 2.5, 3.8, 2.6, comb); L.rect(int(hx - 6), int(hy - ry + 3), 13, 2, straw)
+    sp.add(L)
+    D = Layer(shade=False, outline=False); hx, hy, rx, ry = H(f)
+    if st == 2:
+        for x in range(int(hx - rx - 3), int(hx + rx + 4), 2):
+            D.line(x, hy - ry + 2, x, hy + 1, veil)
+        D.rect(24, 15, 2, 3, IRON); sparkle(D, [(25, 13), (26, 11)], (210, 210, 210))
+    elif st == 3:
+        for y in (int(hy - ry - 3), int(hy - ry), int(hy - ry + 2)):
+            D.line(hx - 4, y, hx + 4, y, darken(comb, .35))
+        D.rect(int(hx - 1), int(hy - ry + 1), 2, 2, (60, 40, 20))
+        sparkle(D, [(5, 8), (27, 6), (24, 3)], (60, 50, 30))
+    else:
+        sparkle(D, [(21, 18), (23, 15)], (60, 50, 30))
+    sp.add(D)
+    return sp.image()
+
+
+def vitralista(st):
+    sp, f = new(st)
+    blue, red, green, gold, leather = (90, 150, 230), (220, 80, 90), (90, 190, 120), (240, 200, 80), (140, 96, 64)
+    if st == 3:
+        L = Layer(); hx, hy, rx, ry = H(f)
+        L.ell(hx, hy, rx + 6, ry + 6, gold); sp.add(L)
+        D = Layer(shade=False, outline=False)
+        for k, c in enumerate([blue, red, green, blue, red, green, blue, red]):
+            import math as _m
+            a = k / 8 * 6.283
+            D.ell(hx + _m.cos(a) * (rx + 3.5), hy + _m.sin(a) * (ry + 3.5), 2, 2, c)
+        sp.add(D)
+    if st == 2:
+        L = Layer(); L.rect(19, 9, 9, 13, gold); sp.add(L)
+        D = Layer(shade=False, outline=False); D.rect(20, 10, 3, 5, blue); D.rect(24, 10, 3, 5, red); D.rect(20, 16, 7, 5, green); sp.add(D)
+    hands = {1: {"r": (21, 13)}, 3: {"l": (8, 21), "r": (24, 21)}}.get(st)
+    draw_body(sp, f, hands)
+    L = Layer()
+    if st == 2:
+        tunic(L, f, leather)
+    elif st == 3:
+        cape(L, f, (120, 90, 170), bottom=28, spread=3)
+    sp.add(L)
+    if st == 3:
+        D = Layer(shade=False, outline=False); D.line(11, 20, 21, 26, blue); D.line(21, 20, 11, 26, red); sp.add(D)
+    draw_skull(sp, f, mood="happy" if st == 2 else "calm")
+    L = Layer(); hx, hy, rx, ry = H(f)
+    if st == 1:
+        L.ell(hx + 3, hy, 2.5, 2.2, blue); L.line(hx + 1, hy, hx - 2, hy, IRON)
+    sp.add(L)
+    return sp.image()
+
+
+def oleiro(st):
+    sp, f = new(st, wide=1 if st == 3 else 0)
+    clay, clay_d, cloth, goldc = (190, 110, 70), (150, 80, 52), (236, 220, 180), (240, 196, 72)
+    if st == 3:
+        L = Layer(); L.ell(16, 16, 11, 10, clay); L.rect(11, 5, 10, 3, clay_d); sp.add(L)
+        D = Layer(shade=False, outline=False); D.line(9, 12, 13, 18, goldc); D.line(23, 11, 20, 19, goldc); D.line(14, 22, 19, 24, goldc); sp.add(D)
+    hands = {1: {"l": (12, 22), "r": (20, 22)}, 2: {"l": (10, 6), "r": (22, 6)}}.get(st)
+    draw_body(sp, f, hands, legs="wide" if st == 3 else "stand")
+    L = Layer()
+    if st == 2:
+        tunic(L, f, cloth); L.rect(13, 16, 7, 6, clay_d)
+    elif st == 3:
+        tunic(L, f, cloth, bottom=24, flare=2)
+    sp.add(L)
+    draw_skull(sp, f, mood="angry" if st == 3 else "calm")
+    L = Layer(); hx, hy, rx, ry = H(f)
+    if st == 1:
+        L.ell(16, 23, 4, 3.5, clay); L.rect(14, 19, 5, 2, clay_d)
+    elif st == 2:
+        L.ell(hx, hy - ry - 4, 4.5, 4, clay); L.rect(int(hx - 2), int(hy - ry - 9), 5, 2, clay_d)
+    else:
+        L.ell(hx, hy - ry + 0.5, rx + 1.5, 2.2, cloth); L.ell(hx + 2, hy - ry - 1.5, 2, 1.6, cloth)
+    sp.add(L)
+    D = Layer(shade=False, outline=False)
+    if st == 1:
+        sparkle(D, [(11, 27), (21, 28), (8, 24)], clay_d)
+    sp.add(D)
+    return sp.image()
+
+
+# ------------------------------------------------------------------ ases dos Guardiões
+def troncudo(_):
+    sp, f = new(3, wide=2)
+    bark, moss, shirt = (120, 82, 54), (100, 150, 80), (170, 60, 50)
+    L = Layer(); stick(L, 1, 10, 31, 6, bark, 4); L.ell(1.5, 10, 2, 3, darken(bark, .2)); L.ell(30.5, 6, 2, 3, darken(bark, .2)); sp.add(L)
+    draw_body(sp, f, {"l": (6, 10), "r": (26, 8)}, legs="wide")
+    L = Layer(); tunic(L, f, shirt, bottom=23, flare=2); sp.add(L)
+    D = Layer(shade=False, outline=False)
+    for x in (12, 16, 20):
+        D.line(x, 13, x, 22, darken(shirt, .25))
+    sp.add(D)
+    draw_skull(sp, f, mood="angry")
+    L = Layer(); hx, hy, rx, ry = H(f); L.poly([(hx - 3, hy + ry - 1), (hx + 3, hy + ry - 1), (hx + 1, hy + ry + 4), (hx - 1, hy + ry + 4)], moss); sp.add(L)
+    return sp.image()
+
+
+def bigornao(_):
+    sp, f = new(3, lean=0, wide=2)
+    iron, glove = (110, 114, 126), (150, 100, 60)
+    draw_body(sp, f, {"l": (6, 20), "r": (26, 20)}, legs="wide")
+    L = Layer(); L.poly([(8, 12), (24, 12), (22, 16), (19, 17), (19, 21), (13, 21), (13, 17), (10, 16)], iron); L.rect(11, 21, 10, 3, darken(iron, .2)); sp.add(L)
+    L = Layer(); L.ell(6, 20, 3, 3, glove); L.ell(26, 20, 3, 3, glove); sp.add(L)
+    draw_skull(sp, f, mood="calm")
+    D = Layer(shade=False, outline=False); D.line(9, 13, 23, 13, lighten(iron, .35)); sparkle(D, [(4, 6), (28, 5)], FLAME); sp.add(D)
+    return sp.image()
+
+
+def caldeirona(_):
+    sp, f = new(3)
+    pot, green, ladle = (60, 56, 64), (130, 210, 110), (190, 190, 200)
+    draw_body(sp, f, {"r": (26, 12)}, legs="stand")
+    L = Layer(); L.ell(16, 19, 8.5, 7, pot); L.rect(7, 12, 18, 2, darken(pot, .2)); sp.add(L)
+    D = Layer(shade=False, outline=False); D.ell(16, 13, 6.5, 1.5, green); sparkle(D, [(12, 9), (17, 7), (21, 10), (15, 4)], lighten(green, .2)); sp.add(D)
+    L = Layer(); stick(L, 26, 12, 22, 4, ladle); L.ell(21.5, 3.5, 2, 1.5, ladle); sp.add(L)
+    draw_skull(sp, f, mood="happy")
+    L = Layer(); cap(L, f, (120, 160, 90), depth=0.3); sp.add(L)
+    return sp.image()
+
+
+def bandeirao(_):
+    sp, f = new(3)
+    banner, gold, steel = (60, 100, 190), (230, 190, 80), (176, 182, 196)
+    L = Layer(); stick(L, 25, 30, 25, 0, WOOD_D, 1); L.poly([(26, 1), (31, 2), (30, 6), (31, 10), (26, 9)], banner); sp.add(L)
+    D = Layer(shade=False, outline=False); D.ell(28.5, 5.5, 1.2, 1.2, gold); sp.add(D)
+    draw_body(sp, f, {"r": (25, 16)})
+    L = Layer(); tunic(L, f, banner); L.rect(15, 13, 2, 10, gold); sp.add(L)
+    draw_skull(sp, f, mood="calm")
+    L = Layer(); cap(L, f, steel, depth=0.15, extra=0.8); hx, hy, rx, ry = H(f); L.poly([(hx - 1, hy - ry - 1), (hx + 1, hy - ry - 1), (hx - 3, hy - ry - 7)], (220, 70, 70)); sp.add(L)
+    return sp.image()
+
+
+def patinora(_):
+    sp, f = new(3, lean=-1)
+    ice, ice_d, blade = (196, 230, 250), (140, 190, 230), (220, 226, 236)
+    draw_body(sp, f, {"l": (3, 11), "r": (29, 9)}, legs="stand")
+    L = Layer(); L.poly([(10, 14), (22, 14), (27, 22), (5, 22)], ice); sp.add(L)
+    D = Layer(shade=False, outline=False)
+    for x in (8, 12, 16, 20, 24):
+        D.line(x, 21, x + 1, 16, ice_d)
+    D.line(9, 30, 14, 30, blade); D.line(18, 30, 23, 30, blade)
+    sparkle(D, [(2, 6), (30, 4), (27, 26), (4, 25)], (255, 255, 255))
+    sp.add(D)
+    draw_skull(sp, f, mood="sleepy")
+    L = Layer(); hx, hy, rx, ry = H(f); L.ell(hx, hy - ry - 1, 3, 1.5, ice); sp.add(L)
+    return sp.image()
+
+
+def miragina(_):
+    sp, f = new(3)
+    veil, veil2, bronze = (250, 214, 160), (236, 170, 120), (200, 140, 70)
+    L = Layer(); L.poly([(5, 10), (8, 9), (7, 27), (3, 26)], veil2); L.poly([(27, 10), (24, 9), (25, 27), (29, 26)], veil2); sp.add(L)
+    draw_body(sp, f, {"l": (12, 19), "r": (20, 19)})
+    L = Layer(); tunic(L, f, veil, bottom=25, flare=1); sp.add(L)
+    D = Layer(shade=False, outline=False); D.line(13, 24, 19, 24, (180, 60, 90)); D.line(12, 14, 20, 14, (180, 60, 90)); sp.add(D)
+    L = Layer(); L.ell(16, 20, 3.5, 3.5, bronze); sp.add(L)
+    D = Layer(shade=False, outline=False); D.ell(16, 20, 2, 2, (250, 240, 200)); sparkle(D, [(6, 4), (26, 3), (16, 30)], (250, 230, 180)); sp.add(D)
+    draw_skull(sp, f, mood="calm")
+    L = Layer(); cap(L, f, veil2, depth=0.2); sp.add(L)
+    return sp.image()
+
+
 def raizerno(_):
     sp = Sprite(); f = body_frame(3, wide=2)
     bark, bark2, leaf = (120, 86, 60), (90, 62, 44), (90, 160, 80)
@@ -1251,8 +1437,10 @@ def rei_esqueleto(_):
 LINE_FUNCS = {fn.__name__: fn for fn in [grumete, faroleira, marisqueiro, rendeira, lenhador, herborista,
                                          cogumeleiro, flautista, mineiro, ferreiro, gasista, aguadeiro,
                                          lavadeira, palafiteiro, jardineiro_lirios, sentinela, escriba, sineiro,
-                                         carregador, escultor, chazeiro, domador_escorpioes, cartografo, tamborileiro]}
-SINGLE_FUNCS = {fn.__name__: fn for fn in [raizerno, vagonauta, brumaga, bufardo, nevasco, ampulhor, degustor, rei_esqueleto]}
+                                         carregador, escultor, chazeiro, domador_escorpioes, cartografo, tamborileiro,
+                                         apicultora, vitralista, oleiro]}
+SINGLE_FUNCS = {fn.__name__: fn for fn in [raizerno, vagonauta, brumaga, bufardo, nevasco, ampulhor, degustor, rei_esqueleto,
+                                           troncudo, bigornao, caldeirona, bandeirao, patinora, miragina]}
 
 
 def map_frames(img):

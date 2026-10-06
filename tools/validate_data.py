@@ -3,7 +3,7 @@
 
 Falha (código 1) se encontrar:
   - IDs duplicados ou referências quebradas (mapas, props, NPCs, diálogos, regiões);
-  - total de espécies diferente de 80; linha sem 3 estágios;
+  - total de espécies diferente de 95 (80 + 15 da decisão 10); linha sem 3 estágios;
   - níveis de crescimento fora de ordem; selvagem de estágio 2/3 abaixo do crescimento;
   - atributos fora da banda do estágio; tipos desbalanceados (mais de ±1 linha);
   - prefixo de nome repetido mais de 2 vezes; golpe assinatura repetido;
@@ -302,15 +302,16 @@ def check_species(keys):
     for sid, c in all_ids.items():
         if c > 1:
             err(f"espécies: ID duplicado {sid}")
-    if total != 80:
-        err(f"espécies: total {total} (esperado 80)")
-    if len(lines) != 24:
-        err(f"espécies: {len(lines)} linhas de 3 estágios (esperado 24)")
-    if len(uniques) != 7:
-        err(f"espécies: {len(uniques)} únicos/raros (esperado 7)")
+    # 80 da seção 8 + 15 da decisão 10 do Fernando (3 linhas novas e os 6 ases dos Guardiões)
+    if total != 95:
+        err(f"espécies: total {total} (esperado 95)")
+    if len(lines) != 27:
+        err(f"espécies: {len(lines)} linhas de 3 estágios (esperado 27)")
+    if len(uniques) != 13:
+        err(f"espécies: {len(uniques)} únicos/raros (esperado 13)")
     for t in TYPES:
-        if abs(type_count[t] - 6) > 1:
-            err(f"espécies: tipo {t} com {type_count[t]} linhas (esperado 6 ±1)")
+        if abs(type_count[t] - len(lines) / 4) > 1.25:
+            err(f"espécies: tipo {t} com {type_count[t]} linhas (esperado {len(lines) / 4:.1f} ±1)")
     for mv, c in signatures.items():
         if c > 1:
             err(f"espécies: golpe assinatura {mv} repetido em {c} linhas")
@@ -351,7 +352,8 @@ def check_moves(keys):
         if c > 1:
             err(f"golpes: ID duplicado {mid}")
     counts = Counter(m.get("type") for m in d.get("moves", []))
-    want = {"fisico": 16, "magico": 16, "cura": 12, "veneno": 12}
+    # 56 da seção 8 + as 3 assinaturas das linhas novas (decisão 10)
+    want = {"fisico": 17, "magico": 17, "cura": 12, "veneno": 13}
     for t, n in want.items():
         if counts[t] != n:
             err(f"golpes: {counts[t]} do tipo {t} (esperado {n})")
@@ -576,7 +578,9 @@ def check_progression():
     prev = int(pr.get("start_age", 5))
     for r in b.get("regions", []):
         rid = r["id"]
-        nxt = min(leader_ages(r["leader"]))
+        # média da equipe do líder: o ás (único) vem mais novo porque tem atributos de único
+        la = leader_ages(r["leader"])
+        nxt = int(sum(la) / len(la))
         lv = [(t, e) for t in sorted(region_tables.get(rid, [])) for e in tables.get(t, [])]
         if lv:
             low = min(e["min_level"] for _, e in lv)

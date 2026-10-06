@@ -298,6 +298,13 @@
   ],
   "rota3_campo": [
    {
+    "species": "apicultora_2",
+    "stage": 2,
+    "min_level": 34,
+    "max_level": 36,
+    "rarity": "incomum"
+   },
+   {
     "species": "lavadeira_2",
     "stage": 2,
     "min_level": 34,
@@ -352,6 +359,13 @@
    }
   ],
   "rota3_norte": [
+   {
+    "species": "apicultora_2",
+    "stage": 2,
+    "min_level": 36,
+    "max_level": 38,
+    "rarity": "raro"
+   },
    {
     "species": "palafiteiro_2",
     "stage": 2,
@@ -440,6 +454,13 @@
   ],
   "rota4_campo": [
    {
+    "species": "vitralista_2",
+    "stage": 2,
+    "min_level": 46,
+    "max_level": 48,
+    "rarity": "incomum"
+   },
+   {
     "species": "sentinela_2",
     "stage": 2,
     "min_level": 46,
@@ -510,6 +531,13 @@
    }
   ],
   "quartel_salao": [
+   {
+    "species": "vitralista_2",
+    "stage": 2,
+    "min_level": 49,
+    "max_level": 51,
+    "rarity": "raro"
+   },
    {
     "species": "sentinela_2",
     "stage": 2,
@@ -621,16 +649,16 @@
    {
     "species": "chazeiro_2",
     "stage": 2,
-    "min_level": 66,
-    "max_level": 67,
+    "min_level": 65,
+    "max_level": 66,
     "rarity": "raro",
     "weight": 60
    },
    {
     "species": "escultor_3",
     "stage": 3,
-    "min_level": 66,
-    "max_level": 67,
+    "min_level": 65,
+    "max_level": 66,
     "rarity": "incomum",
     "weight": 40
    }
@@ -691,6 +719,13 @@
    }
   ],
   "rota6_sul": [
+   {
+    "species": "oleiro_2",
+    "stage": 2,
+    "min_level": 67,
+    "max_level": 69,
+    "rarity": "comum"
+   },
    {
     "species": "domador_escorpioes_3",
     "stage": 3,
@@ -779,6 +814,13 @@
   ],
   "rota6_norte": [
    {
+    "species": "oleiro_3",
+    "stage": 3,
+    "min_level": 70,
+    "max_level": 72,
+    "rarity": "incomum"
+   },
+   {
     "species": "tamborileiro_3",
     "stage": 3,
     "min_level": 70,
@@ -794,6 +836,13 @@
    }
   ],
   "templo_salao": [
+   {
+    "species": "oleiro_3",
+    "stage": 3,
+    "min_level": 71,
+    "max_level": 73,
+    "rarity": "comum"
+   },
    {
     "species": "domador_escorpioes_3",
     "stage": 3,

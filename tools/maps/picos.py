@@ -306,7 +306,7 @@ t("DLG_PI_ALVA_NO", "Entendo. Ninguém gosta de carregar a tristeza dos outros. 
 t("DLG_PI_ALVA_THAW", "O gelo da estrada vai derreter. Lá embaixo fica o deserto. Minha mãe mora lá.",
   "The ice on the road will melt. Down below is the desert. My mother lives there.", "El hielo del camino se derretirá. Allá abajo está el desierto. Mi madre vive allí.")
 t("DLG_PI_ALVA_AFTER", "Diz pra minha mãe que eu tô bem. Mais ou menos bem.", "Tell my mother I'm all right. More or less.", "Dile a mi madre que estoy bien. Más o menos.")
-ALVA_TEAM = team([("carregador", 72), ("escultor", 71), ("chazeiro", 73), ("mineiro", 72)])
+ALVA_TEAM = [["patinora", 70]] + team([("carregador", 72), ("chazeiro", 73), ("mineiro", 72)])
 R.d("alva", [say("DLG_PI_ALVA_1", "SPK_ALVA"), say("DLG_PI_ALVA_2", "SPK_ALVA"), say("DLG_PI_ALVA_3", "SPK_ALVA"),
              battle("BTL_TAMER_ALVA", ALVA_TEAM, 1900, "alva_beaten", kind="boss"),
              say("DLG_PI_ALVA_WIN", "SPK_ALVA"), say("DLG_PI_ALVA_MOTIVE", "SPK_ALVA"), say("DLG_PI_ALVA_ECHO", "SPK_ALVA"),
@@ -334,7 +334,7 @@ R.TABLES.update({
     "rota5_oeste": [e("carregador_2", 2, 58, 60, "comum"), e("sineiro_3", 3, 58, 60, "incomum")],
     "rota5_campo": [e("carregador_2", 2, 58, 60, "comum"), e("escultor_2", 2, 58, 60, "incomum"), e("chazeiro_2", 2, 59, 61, "raro"),
                     e("mineiro_3", 3, 58, 60, "comum"), e("sineiro_3", 3, 59, 61, "incomum")],
-    "rota5_ponte": [e("chazeiro_2", 2, 66, 67, "raro", 60), e("escultor_3", 3, 66, 67, "incomum", 40)],
+    "rota5_ponte": [e("chazeiro_2", 2, 65, 66, "raro", 60), e("escultor_3", 3, 65, 66, "incomum", 40)],
     "rota5_norte": [e("escultor_2", 2, 60, 62, "incomum"), e("carregador_2", 2, 60, 62, "comum")],
     "jardim_salao": [e("escultor_2", 2, 61, 63, "incomum"), e("carregador_2", 2, 61, 63, "comum"), e("mineiro_3", 3, 61, 63, "comum")],
     "jardim_sul": [e("chazeiro_2", 2, 62, 63, "raro"), e("escultor_2", 2, 62, 63, "incomum")],

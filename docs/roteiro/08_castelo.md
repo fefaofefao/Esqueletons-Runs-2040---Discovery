@@ -275,48 +275,66 @@ O Rei confirma tudo: o herdeiro foi chamado de 2040 para colocar a coroa e prend
   - (escolha) "`OPT_P_FIGHT`" → `castelo/eco_ramalho_luta` / "`OPT_P_NOT_NOW`"
 
 ### `castelo/eco_ramalho_luta`
-- *[batalha tamer: Troncalho 95, Silvanor 95, Floralma 95 · 3000 moedas + 2× pocao_g]*
+- *[batalha tamer: Troncudo 96, Silvanor 95, Floralma 95 · 3000 moedas + 2× pocao_g]*
 - *(narração)* O eco sorri e se desfaz no vento... até a próxima.
+- **SPK_RAMALHO:** Leva o Troncudo contigo. Ele grita "madeira!" mais alto quando tem plateia. *(if_not ace_ramalho)*
+- *[ação give_monster: {"species": "troncudo", "age": 90, "if_not": "ace_ramalho"}]* *(if_not ace_ramalho)*
+- *[flag ace_ramalho = True]*
 
 ### `castelo/eco_fornalha`
 - **SPK_FORNALHA:** Um eco da Tia. Regra do eco: repetir a última luta. Mais forte.
   - (escolha) "`OPT_P_FIGHT`" → `castelo/eco_fornalha_luta` / "`OPT_P_NOT_NOW`"
 
 ### `castelo/eco_fornalha_luta`
-- *[batalha tamer: Rochedão 95, Forjalma 95, Miasmor 96, Cisternão 95 · 3000 moedas + 2× pocao_g]*
+- *[batalha tamer: Bigornão 96, Forjalma 95, Miasmor 96, Cisternão 95 · 3000 moedas + 2× pocao_g]*
 - *(narração)* O eco sorri e se desfaz no vento... até a próxima.
+- **SPK_FORNALHA:** Regra número nove: quem vence a Tia leva o Bigornão. Cuida das costas dele. *(if_not ace_fornalha)*
+- *[ação give_monster: {"species": "bigornao", "age": 90, "if_not": "ace_fornalha"}]* *(if_not ace_fornalha)*
+- *[flag ace_fornalha = True]*
 
 ### `castelo/eco_musga`
 - **SPK_MUSGA:** Eco da Musga, querido. Até eco fofoca: dizem que você ficou forte. Prova?
   - (escolha) "`OPT_P_FIGHT`" → `castelo/eco_musga_luta` / "`OPT_P_NOT_NOW`"
 
 ### `castelo/eco_musga_luta`
-- *[batalha tamer: Caldeona 96, Palafitor 95, Aguapéu 95, Cogumestre 96 · 3000 moedas + 2× pocao_g]*
+- *[batalha tamer: Caldeirona 96, Palafitor 95, Aguapéu 95, Cogumestre 96 · 3000 moedas + 2× pocao_g]*
 - *(narração)* O eco sorri e se desfaz no vento... até a próxima.
+- **SPK_MUSGA:** A Caldeirona quer conhecer o mundo, querido. Só não prova a sopa dela antes do jantar. *(if_not ace_musga)*
+- *[ação give_monster: {"species": "caldeirona", "age": 90, "if_not": "ace_musga"}]* *(if_not ace_musga)*
+- *[flag ace_musga = True]*
 
 ### `castelo/eco_calico`
 - **SPK_CALICO:** Eco do Comandante. Em formação, uma última vez!
   - (escolha) "`OPT_P_FIGHT`" → `castelo/eco_calico_luta` / "`OPT_P_NOT_NOW`"
 
 ### `castelo/eco_calico_luta`
-- *[batalha tamer: Bastião 97, Pergamor 96, Carrilhão 96, Troncalho 97 · 3000 moedas + 2× pocao_g]*
+- *[batalha tamer: Bandeirão 96, Pergamor 96, Carrilhão 96, Troncalho 97 · 3000 moedas + 2× pocao_g]*
 - *(narração)* O eco sorri e se desfaz no vento... até a próxima.
+- **SPK_CALICO:** Bandeirão, nova formação: siga o herdeiro. É uma ordem. A última. *(if_not ace_calico)*
+- *[ação give_monster: {"species": "bandeirao", "age": 90, "if_not": "ace_calico"}]* *(if_not ace_calico)*
+- *[flag ace_calico = True]*
 
 ### `castelo/eco_alva`
 - **SPK_ALVA:** Sou o eco da Alva. Meu pai está com você? Então me mostra que ele está em boas mãos.
   - (escolha) "`OPT_P_FIGHT`" → `castelo/eco_alva_luta` / "`OPT_P_NOT_NOW`"
 
 ### `castelo/eco_alva_luta`
-- *[batalha tamer: Alpinor 98, Cristalor 97, Samovarão 98, Rochedão 97 · 3000 moedas + 2× pocao_g]*
+- *[batalha tamer: Patinora 96, Cristalor 97, Samovarão 98, Rochedão 97 · 3000 moedas + 2× pocao_g]*
 - *(narração)* O eco sorri e se desfaz no vento... até a próxima.
+- **SPK_ALVA:** A Patinora dançou sozinha por mil anos. Dança com ela de vez em quando? *(if_not ace_alva)*
+- *[ação give_monster: {"species": "patinora", "age": 90, "if_not": "ace_alva"}]* *(if_not ace_alva)*
+- *[flag ace_alva = True]*
 
 ### `castelo/eco_duna`
 - **SPK_DUNA:** O eco da rainha ainda dança na areia. Dança comigo?
   - (escolha) "`OPT_P_FIGHT`" → `castelo/eco_duna_luta` / "`OPT_P_NOT_NOW`"
 
 ### `castelo/eco_duna_luta`
-- *[batalha tamer: Aguilhão 99, Astrolar 99, Ecoarca 100, Palafitor 99 · 3000 moedas + 2× pocao_g]*
+- *[batalha tamer: Miragina 96, Astrolar 99, Ecoarca 100, Palafitor 99 · 3000 moedas + 2× pocao_g]*
 - *(narração)* O eco sorri e se desfaz no vento... até a próxima.
+- **SPK_DUNA:** A Miragina vai com você. Se um dia se perder, olha pro reflexo dela. *(if_not ace_duna)*
+- *[ação give_monster: {"species": "miragina", "age": 90, "if_not": "ace_duna"}]* *(if_not ace_duna)*
+- *[flag ace_duna = True]*
 
 ## 10. Contagem
-Cerca de **1200 palavras** de texto de jogo em PT-BR nesta região.
+Cerca de **1281 palavras** de texto de jogo em PT-BR nesta região.
