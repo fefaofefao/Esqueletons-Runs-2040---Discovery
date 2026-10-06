@@ -11,7 +11,7 @@ Formato sugerido:
 - [ ] (mapas) "O mapa tem que ser refinado" → 1º passe (bordas, copas, detalhes, casas de toras em Raizal) e 2º passe (trilhas em curva, riachos com ponte, lagos, ruínas e outros pontos de interesse). Aguardando o teste do Fernando. Veja `docs/mapas_sheet.png`.
 
 ## Resolvido
-- [x] (batalha) Não dava para escolher o próximo esqueleto quando um desmaiava → as linhas da lista tratavam o A como "ajustar valor". Corrigido também na troca normal e na lista de itens; testes de regressão.
+- [x] (batalha) Não dava para escolher o próximo esqueleto quando um desmaiava (na batalha não há botões A/B na tela, só o toque) → o toque na linha caía no "ajustar valor" porque a linha mostrava o PV como valor ajustável, e só aparecia "‹ 30/30 ›". Agora um toque escolhe. Corrigido também na troca normal e na lista de itens; testes de regressão pelo toque e pelo A.
 - [x] (loja) Nomes dos itens parecidos demais com os de outro jogo → Chá de Alga, Caldo de Tutano, Fatia de Bolo, Erva Amarga e Vela de Aniversário, com as falas atualizadas nos 3 idiomas.
 - [x] (derrota) Fala ao acordar no Rancho: "Te vi no chão lá fora! ... Te trouxe pra cá pra descansar. Ah, inclusive: a taxa do resgate foi de N moedas."
 - [x] (níveis dos selvagens) Os selvagens precisam acompanhar o momento da história, abaixo do próximo líder e em progressão → a Rota 1 começava em 10–12 anos (e os domadores em 12–14) logo depois do Fiscal Brás (6–7). Agora: Rota 1 7–9 → 12–14 no Túnel, domadores 9–14, Brás 7–8, Raizerno (opcional) 16, Ramalho 21–22. O `validate_data.py` confere em todas as regiões: cada rota começa até 2 anos acima do último líder vencido e nenhum selvagem passa de (próximo líder − 4).

@@ -12,7 +12,7 @@ func set_tree(t: SceneTree, h: Node) -> void:
 	host = h
 
 
-func _play(info: Dictionary, team: Array) -> String:
+func _play(info: Dictionary, team: Array, by_tap: bool = false) -> String:
 	var bag := {"pocao_p": 2}
 	var screen := BattleScreen.new().setup(info, team, bag)
 	host.add_child(screen)
@@ -34,8 +34,15 @@ func _play(info: Dictionary, team: Array) -> String:
 				# assim pega listas em que o A muda um valor em vez de escolher (bug do celular)
 				for i in screen._list.items.size():
 					if screen._list.items[i].get("enabled", true) and screen._list.items[i].id != "_back":
-						screen._list.index = i
-						screen._list.activate_current()
+						if by_tap:
+							# toque na linha, como no celular (na batalha não há botões A/B na tela)
+							var ev := InputEventMouseButton.new()
+							ev.button_index = MOUSE_BUTTON_LEFT
+							ev.pressed = true
+							screen._list._on_row_input(ev, i)
+						else:
+							screen._list.index = i
+							screen._list.activate_current()
 						break
 			_:
 				screen._log.skip()
@@ -66,6 +73,15 @@ func test_forced_replacement_is_selectable() -> void:
 		"enemies": [["teste_fisico", 25], ["teste_magico", 25]]}, team)
 	check(r in ["win", "lose"], "a troca forçada é escolhida e a batalha termina (%s)" % r)
 	check(team[0].is_fainted(), "o fraco desmaiou (houve troca forçada)")
+
+
+func test_forced_replacement_by_tap() -> void:
+	# a mesma troca forçada, escolhendo com um toque na linha (sem botão A na tela)
+	var team := [Monster.create("teste_cura", 2), Monster.create("teste_fisico", 30), Monster.create("teste_magico", 30)]
+	var r := await _play({"kind": "tamer", "seed": 4, "tamer_key": "DBG_TAMER_NAME", "reward": 0,
+		"enemies": [["teste_fisico", 25], ["teste_magico", 25]]}, team, true)
+	check(r in ["win", "lose"], "um toque escolhe quem entra e a batalha termina (%s)" % r)
+	check(team[0].is_fainted(), "houve troca forçada")
 
 
 func test_defeat_ends() -> void:
