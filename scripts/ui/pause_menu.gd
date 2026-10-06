@@ -1,6 +1,6 @@
 class_name PauseMenu
 extends Overlay
-## Pausa: Continuar, Configurações, Salvar e sair. O título do painel aceita
+## Pausa: Continuar, Equipe, Mochila, Viajar, Ossário, Configurações, Salvar e sair. O título do painel aceita
 ## três toques para abrir o menu de debug (só em build de debug).
 
 var _menu: MenuList
@@ -30,6 +30,7 @@ func _ready() -> void:
 		{"id": "resume", "key": "PAUSE_RESUME"},
 		{"id": "team", "key": "PAUSE_TEAM"},
 		{"id": "bag", "key": "PAUSE_BAG"},
+		{"id": "travel", "key": "PAUSE_TRAVEL", "enabled": Game.world != null and Travel.allowed_here(Game.world.map_id)},
 		{"id": "ossuary", "key": "PAUSE_OSSUARY"},
 		{"id": "settings", "key": "MENU_SETTINGS"},
 		{"id": "quit", "key": "PAUSE_SAVE_QUIT"},
@@ -46,6 +47,8 @@ func _on_activated(id: String) -> void:
 			Game.open_overlay(TeamMenu.new())
 		"bag":
 			Game.open_overlay(BagMenu.new())
+		"travel":
+			Game.open_overlay(TravelMenu.new())
 		"ossuary":
 			Game.open_overlay(OssuaryScreen.new())
 		"settings":

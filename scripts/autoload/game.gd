@@ -102,6 +102,17 @@ func warp(map_id: String, cell: Vector2i, facing: String) -> void:
 	await world.run_on_enter()
 
 
+## Viagem rápida para uma cidade já visitada (pausa → Viajar).
+func travel_to(city_id: String) -> void:
+	if world == null or not Travel.destinations().has(city_id):
+		return
+	var a := Travel.arrival(city_id)
+	if a.is_empty():
+		return
+	Audio.sfx("door")
+	await warp(str(a.map), a.cell, str(a.facing))
+
+
 func _set_screen(node: Node, screen_name: String) -> void:
 	close_all_overlays()
 	if screen:

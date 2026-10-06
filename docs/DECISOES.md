@@ -207,3 +207,11 @@ Registro das escolhas feitas sem consulta (AGENTS.md, seção A). Cada item diz 
 - **Raizal** ganhou casas próprias de toras com telhado de musgo (antes repetia as casas da Vila Maré).
 - Próximos passes dependem do retorno do Fernando no teste (traçado das trilhas, tamanho das áreas, pontos de interesse).
 - **Segundo passe (retorno do Fernando: trilhas retas, áreas vazias, falta de pontos de interesse):** trilhas longas das rotas viram curvas suaves (trilha e chão são passáveis, então a passagem não muda; as pontas perto de portas, cruzamentos e portões ficam no lugar); riachos com ponte de tábuas atravessando as rotas; pontos de interesse nas áreas vazias, por região (lagos com vitórias-régias e juncos, ruínas, bosquinhos, fogueiras, cristais e vagonete abandonado nas Minas, lago gelado e boneco de neve nos Picos, oásis no Deserto). Eles podem substituir decoração simples (árvores, tocos, pedras), nunca algo interativo. O tamanho dos mapas foi mantido: as áreas grandes agora têm o que explorar, e mudar o tamanho mexeria em todas as portas e roteiros.
+
+## Viagem rápida (pedido do Fernando)
+
+- **Onde:** pausa → **Viajar**, desde o começo do jogo. Lista só as cidades já visitadas, na ordem da história; a cidade atual aparece apagada ("você está aqui"). Sem cidades visitadas, o menu explica que elas aparecem depois da primeira visita.
+- **Visitada** = entrou no mapa da cidade (`visited_cities` no save). Saves antigos: o progresso conta (venceu o líder da região → a cidade dele vale como visitada; `data/travel.json → visited_by_flag`).
+- **Chegada:** na porta do Rancho (cura e equipe logo ali), com autosave e o evento de entrada do mapa, como uma porta comum.
+- **Bloqueios:** nas cenas finais (`museu_2040`, `sala_trono`) a opção fica apagada. Nada mais é bloqueado: como só há destinos já visitados, a viagem nunca adianta a história.
+- Testes: `tests/test_travel.gd`. Captura: `capture.tscn -- --travel`.

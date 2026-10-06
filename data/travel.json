@@ -1,0 +1,14 @@
+{
+ "_comment": "Viagem rápida (pedido do Fernando): só para cidades já visitadas, desde o começo do jogo. A chegada é na porta do Rancho. 'visited_by_flag' reconhece cidades de saves antigos pelo progresso da história.",
+ "arrive_at": "ranch_door",
+ "visited_by_flag": {
+  "vila_mare": "bras_beaten",
+  "raizal": "ramalho_beaten",
+  "brasal": "fornalha_beaten",
+  "brejo": "musga_beaten",
+  "ossorio": "calico_beaten",
+  "geada": "alva_beaten",
+  "palmeiral": "duna_beaten"
+ },
+ "blocked_maps": ["museu_2040", "sala_trono"]
+}

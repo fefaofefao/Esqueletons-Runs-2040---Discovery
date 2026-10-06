@@ -131,3 +131,7 @@ AD_OFFER_REVIVE,Quer ver um anúncio para reviver a equipe sem perder moedas? É
 AD_XP_DOUBLED,XP em dobro!,Double XP!,¡XP doble!
 AD_REVIVE_DONE,Equipe revivida. Nenhuma moeda perdida!,Team revived. No coins lost!,Equipo revivido. ¡No perdiste monedas!
 AD_NOT_COMPLETED,"O anúncio não foi até o fim, então não há recompensa.","The ad didn't play to the end, so there's no reward.","El anuncio no llegó al final, así que no hay recompensa."
+PAUSE_TRAVEL,Viajar,Travel,Viajar
+TRAVEL_TITLE,Para qual cidade?,Which town?,¿A qué ciudad?
+TRAVEL_HERE,(você está aqui),(you are here),(estás aquí)
+TRAVEL_NONE,Você ainda não conhece nenhuma cidade. Elas aparecem aqui depois da primeira visita.,You don't know any towns yet. They show up here after your first visit.,Todavía no conoces ninguna ciudad. Aparecen aquí después de tu primera visita.

@@ -69,6 +69,7 @@ func load_map(id: String, cell: Vector2i, facing: String) -> void:
 	camera.position = camera_target()
 	camera.reset_smoothing()
 	SaveGame.set_position(map_id, region_id, cell, facing)
+	Travel.mark_visited(map_id)
 	var region := Data.region(region_id)
 	Audio.play_music(str(map.data.get("music", region.get("music", ""))))
 	if map.data.has("name_key") and (changed_region or bool(map.data.get("always_banner", false))):

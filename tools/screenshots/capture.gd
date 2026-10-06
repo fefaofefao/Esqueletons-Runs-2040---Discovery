@@ -36,6 +36,10 @@ func _ready() -> void:
 			await _region_shots(a.substr(9))
 			get_tree().quit()
 			return
+	if "--travel" in OS.get_cmdline_user_args():
+		await _travel_shots()
+		get_tree().quit()
+		return
 	if "--bosque" in OS.get_cmdline_user_args():
 		await _bosque_shots()
 		get_tree().quit()
@@ -552,3 +556,26 @@ func _store_shots() -> void:
 	Game.warp("sala_trono", Vector2i(10, 7), "up")
 	await _wait(1.8)
 	await _advance([], "s7_trono", 0, 2)
+
+
+## Viagem rápida: pausa com "Viajar", lista de cidades visitadas e a chegada.
+func _travel_shots() -> void:
+	Game.start_new_game("Téo")
+	await _wait(1.0)
+	await _advance()
+	for f in ["intro_done", "bento_met", "has_partner", "partner_lia", "partner_taro", "tut_battle", "tut_marker", "bras_beaten", "ramalho_beaten", "x_raizal_visto", "x_vila_mare_visto"]:
+		SaveGame.set_flag(f)
+	SaveGame.data["visited_cities"] = ["vila_mare", "raizal", "brasal"]
+	await _goto("raizal", Vector2i(19, 22), "up")
+	Game.open_overlay(PauseMenu.new())
+	await _wait(0.4)
+	await _shot("t1_pausa_viajar")
+	Game.open_overlay(TravelMenu.new())
+	await _wait(0.4)
+	await _shot("t2_cidades")
+	Game.close_all_overlays()
+	Game.travel_to("vila_mare")
+	await _wait(1.6)
+	await _advance([], "", -1, 12)
+	await _shot("t3_chegada_vila")
+

@@ -419,3 +419,5 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 ## Progressão dos selvagens e refinamento dos mapas (pedidos do Fernando)
 - Selvagens e domadores em rampa: cada rota começa perto da idade do último líder e fica abaixo do próximo (Rota 1 agora 7–9 → 12–14). Regra conferida pelo `validate_data.py`.
 - Mapas: 1º passe de refinamento (`tools/maps/refine.py`), tiles com mais variação, casas de toras em Raizal e a folha `docs/mapas_sheet.png` para revisão.
+- Mapas, 2º passe: trilhas em curva, riachos com ponte, lagos, ruínas e outros pontos de interesse.
+- **Viagem rápida** (pausa → Viajar) para cidades já visitadas, chegada na porta do Rancho.
