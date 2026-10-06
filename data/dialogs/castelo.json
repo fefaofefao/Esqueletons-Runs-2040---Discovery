@@ -441,7 +441,118 @@
      ]
     ],
     "reward": 0,
-    "win_flag": "rei_beaten"
+    "win_flag": "rei_beaten",
+    "script": [
+     {
+      "at": "start",
+      "sfx": "exclaim",
+      "shake": true,
+      "lines": [
+       "BTL_FIN_START_1",
+       "BTL_FIN_START_2"
+      ]
+     },
+     {
+      "at": "hp_below",
+      "species": "rei_esqueleto",
+      "pct": 0.7,
+      "flash": [
+       120,
+       80,
+       170
+      ],
+      "shake": true,
+      "sfx": "grow_flash",
+      "lines": [
+       "BTL_FIN_CROWN_1",
+       "BTL_FIN_CROWN_2"
+      ],
+      "effects": [
+       {
+        "kind": "delay",
+        "side": "player",
+        "amount": 0.6
+       }
+      ]
+     },
+     {
+      "at": "hp_below",
+      "species": "rei_esqueleto",
+      "pct": 0.4,
+      "flash": [
+       255,
+       220,
+       120
+      ],
+      "sfx": "heal",
+      "lines": [
+       {
+        "key": "BTL_FIN_LIA",
+        "if": "partner_lia"
+       },
+       {
+        "key": "BTL_FIN_TARO",
+        "if": "partner_taro"
+       },
+       "BTL_FIN_BOND"
+      ],
+      "effects": [
+       {
+        "kind": "stages",
+        "side": "player",
+        "species_prefix": [
+         "faroleira",
+         "grumete"
+        ],
+        "stats": {
+         "atk": 1,
+         "mag": 1,
+         "spd": 1
+        }
+       },
+       {
+        "kind": "heal",
+        "side": "player",
+        "species_prefix": [
+         "faroleira",
+         "grumete"
+        ],
+        "pct": 0.3
+       }
+      ]
+     },
+     {
+      "at": "hp_below",
+      "species": "rei_esqueleto",
+      "pct": 0.15,
+      "flash": [
+       170,
+       240,
+       250
+      ],
+      "shake": true,
+      "sfx": "grow_flash",
+      "lines": [
+       "BTL_FIN_CRACK_1",
+       "BTL_FIN_CRACK_2"
+      ],
+      "effects": [
+       {
+        "kind": "stages",
+        "side": "enemy",
+        "species_prefix": [
+         "rei_esqueleto"
+        ],
+        "stats": {
+         "def": -1,
+         "res": -1,
+         "spd": -1
+        }
+       }
+      ]
+     }
+    ],
+    "bg": "res://assets/battle/bg_trono.png"
    },
    {
     "say": "DLG_C_REI_DOWN"

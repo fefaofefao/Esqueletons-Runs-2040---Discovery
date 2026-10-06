@@ -85,8 +85,20 @@
     "say": "DLG_P_KNOCK"
    },
    {
+    "say": "DLG_P_TARO_FIRST",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_P_LIA_FIRST",
+    "speaker": "SPK_LIA"
+   },
+   {
     "say": "DLG_P_BENTO_KIDS",
     "speaker": "SPK_BENTO"
+   },
+   {
+    "say": "DLG_P_LIA_SEE",
+    "speaker": "SPK_LIA"
    },
    {
     "say": "DLG_P_LIA_1",
@@ -103,6 +115,13 @@
    {
     "say": "DLG_P_TARO_2",
     "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_P_OAR"
+   },
+   {
+    "say": "DLG_P_LIA_OAR",
+    "speaker": "SPK_LIA"
    },
    {
     "say": "DLG_P_CHOOSE",
@@ -137,6 +156,41 @@
    {
     "say": "DLG_P_DUO_TARO",
     "speaker": "SPK_TARO"
+   },
+   {
+    "say": "DLG_P_PACT",
+    "choice": [
+     {
+      "text": "OPT_P_PACT_HAND",
+      "goto": "prologo/pacto"
+     },
+     {
+      "text": "OPT_P_PACT_WAIT",
+      "goto": "prologo/pacto_hesita"
+     }
+    ]
+   }
+  ],
+  "pacto_hesita": [
+   {
+    "say": "DLG_P_PACT_WAIT",
+    "speaker": "SPK_TARO"
+   },
+   {
+    "goto": "prologo/pacto"
+   }
+  ],
+  "pacto": [
+   {
+    "say": "DLG_P_PACT_DONE"
+   },
+   {
+    "say": "DLG_P_PACT_LIA",
+    "speaker": "SPK_LIA"
+   },
+   {
+    "action": "sfx",
+    "name": "recruit"
    },
    {
     "goto": "prologo/depois_escolha"

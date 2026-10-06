@@ -36,6 +36,10 @@ func _ready() -> void:
 			await _region_shots(a.substr(9))
 			get_tree().quit()
 			return
+	if "--final" in OS.get_cmdline_user_args():
+		await _final_shots()
+		get_tree().quit()
+		return
 	if "--battle-ui" in OS.get_cmdline_user_args():
 		await _battle_ui_shots()
 		get_tree().quit()
@@ -621,4 +625,41 @@ func _battle_ui_shots() -> void:
 	Game.battle._open_switch(false)
 	await _wait(0.4)
 	await _shot("u3_troca")
+
+
+## Batalha final: sala do trono, fala de abertura e o momento de Lia e Taro.
+func _final_shots() -> void:
+	Game.start_new_game("Téo")
+	await _wait(1.0)
+	await _advance()
+	for f in ["intro_done", "bento_met", "has_partner", "partner_lia", "partner_taro", "tut_battle", "tut_marker"]:
+		SaveGame.set_flag(f)
+	var lia := Monster.create("faroleira_3", 90)
+	lia.nickname = "Lia"
+	lia.starter = true
+	var taro := Monster.create("grumete_3", 90)
+	taro.nickname = "Taro"
+	taro.starter = true
+	SaveGame.data["party"] = [lia.to_dict(), taro.to_dict(), Monster.create("sentinela_3", 88).to_dict(), Monster.create("lavadeira_3", 88).to_dict()]
+	await _goto("sala_trono", Vector2i(-1, -1), "up")
+	var node: Dictionary = {}
+	for n in Data.dialog("castelo/recusar"):
+		if n is Dictionary and n.get("action", "") == "battle":
+			node = n
+	var info := {"kind": "boss", "enemies": node.enemies, "tamer_key": node.tamer_key, "reward": 0, "script": node.script, "bg": node.bg}
+	Game.start_battle(info)
+	await _wait(2.4)
+	await _shot("f1_abertura")
+	for i in 40:
+		await _wait(0.1)
+		if Game.battle.state == "ring":
+			break
+		Game.battle._log.skip()
+	for m in Game.battle.engine.teams[1]:
+		if m.species_id == "rei_esqueleto":
+			m.hp = int(m.max_hp() * 0.35)
+	Game.battle._script_done[1] = true
+	Game.battle._run_script(false)
+	await _wait(1.8)
+	await _shot("f2_lia_taro")
 

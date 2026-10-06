@@ -12,7 +12,7 @@ func set_tree(t: SceneTree, h: Node) -> void:
 	host = h
 
 
-func _play(info: Dictionary, team: Array, by_tap: bool = false) -> String:
+func _play(info: Dictionary, team: Array, by_tap: bool = false, inspect: Callable = Callable()) -> String:
 	var bag := {"pocao_p": 2}
 	var screen := BattleScreen.new().setup(info, team, bag)
 	host.add_child(screen)
@@ -47,6 +47,8 @@ func _play(info: Dictionary, team: Array, by_tap: bool = false) -> String:
 			_:
 				screen._log.skip()
 	Speed.set_debug_multiplier(1.0)
+	if inspect.is_valid():
+		inspect.call(screen)
 	screen.queue_free()
 	await tree.process_frame
 	return result[0]
@@ -82,6 +84,22 @@ func test_forced_replacement_by_tap() -> void:
 		"enemies": [["teste_fisico", 25], ["teste_magico", 25]]}, team, true)
 	check(r in ["win", "lose"], "um toque escolhe quem entra e a batalha termina (%s)" % r)
 	check(team[0].is_fainted(), "houve troca forçada")
+
+
+func test_scripted_moments_fire_once() -> void:
+	# roteiro da batalha final: fala no começo e efeito quando o inimigo cai abaixo de 90% do PV
+	var team := [Monster.create("teste_fisico", 40), Monster.create("teste_magico", 40)]
+	var script := [
+		{"at": "start", "lines": ["BTL_FIN_START_1"]},
+		{"at": "hp_below", "species": "teste_veneno", "pct": 0.9, "lines": ["BTL_FIN_BOND"],
+		 "effects": [{"kind": "stages", "side": "player", "stats": {"atk": 1}}, {"kind": "delay", "side": "player", "amount": 0.3}]},
+	]
+	var fired := [0]
+	var r := await _play({"kind": "boss", "seed": 2, "tamer_key": "DBG_TAMER_NAME", "reward": 0, "script": script,
+		"enemies": [["teste_veneno", 30], ["teste_cura", 30]]}, team, false,
+		func(sc: BattleScreen) -> void: fired[0] = sc._script_done.size())
+	check(r in ["win", "lose"], "batalha com roteiro termina (%s)" % r)
+	check_eq(fired[0], 2, "os dois momentos dispararam uma vez cada")
 
 
 func test_defeat_ends() -> void:

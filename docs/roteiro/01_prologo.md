@@ -44,18 +44,23 @@ Não há Guardião no Prólogo. O **Fiscal Brás**, capanga de Ramalho, antecipa
 - **Bento:** A cabana é ali, ó. A porta range, mas é boa gente.
 
 ### Cabana — Lia e Taro
-- **(narração)** Toc, toc. Duas cabecinhas de osso espiam pela porta.
-- **Bento:** Ah, os pequenos. Despertaram faz poucos dias. Ainda tão procurando alguém.
-- **Lia:** Oi! Eu sou a Lia. Acordei sozinha, no escuro. Agora eu não largo minha lamparina.
-- **Lia:** Um dia eu vou acender o farol velho da praia. Aí ninguém mais se perde no mar!
-- **Taro:** Taro. Levaram meus pais pro castelo. Eu vou buscar.
-- **Taro:** Se você for pro norte, eu vou junto. Se não for, vou sozinho mesmo.
-- **Bento:** Esqueleto sozinho não vai longe. Gente sozinha, menos ainda. Leva os dois, {player}.
-- **Lia:** Sério?! Eu vou iluminar o caminho, prometo!
-- **Taro:** ...Valeu. Não fica pra trás.
-- **Lia:** Eu ilumino, você corre, Taro. Combinado?
-- **Taro:** Tá. Mas eu vou na frente.
-- **Bento:** Toma três poções. Esqueleto também rala o joelho.
+- **(narração)** BAM! A porta abre de uma vez. Dois esqueletinhos entram rolando, embolados num nó de ossos.
+- **Taro:** Cheguei primeiro.
+- **Lia:** Chegou nada! Eu segurei a porta pra você, seu remo ambulante!
+- **Bento:** Calma, os dois! Acordaram faz poucos dias e desde então não param quietos.
+- **Lia:** Ei... você não é esqueleto! Tem pele! E essa roupa brilha no escuro! *(pista: roupa de 2040)*
+- **Lia:** Eu sou a Lia! Acordei sozinha numa caverna escura. Desde então, essa lamparina não sai da minha mão.
+- **Lia:** Um dia eu acendo o farol velho da praia. Aí ninguém mais se perde. Nem no mar, nem no escuro!
+- **Taro:** Taro. Os capangas do Rei levaram meus pais pro castelo. Bem na minha frente.
+- **Taro:** Eu vou lá buscar os dois. Com ajuda ou sem.
+- **(narração)** Taro gira o remo pra mostrar que é sério e quase apaga a lamparina da Lia.
+- **Lia:** Viu? Sozinho ele derruba até a gente.
+- **Bento:** Esqueleto sozinho não vai longe, Taro. Gente sozinha, menos ainda. {player}: leva os dois.
+- **Lia:** Sério?! A gente vai junto?! Eu ilumino o caminho, prometo! / **Taro:** ...Tá. Mas não fica pra trás.
+- **Lia:** Combinado: eu ilumino, o Taro corre na frente, e você... / **Taro:** ...decide pra onde. Não erra.
+- **(narração + escolha)** Lia estende a mão de osso. Taro bufa, mas põe a dele em cima. Falta a sua. → "Pôr a mão" / "Hesitar" (Taro: "Anda logo. Mão de gente esfria rápido, osso não.")
+- **(narração)** Três mãos juntas. Por um instante, a lamparina da Lia brilha mais forte do que deveria. **Lia:** Viu?! Ela também gostou de você!
+- **Bento:** Toma três chás de alga. Esqueleto também rala o joelho.
 - **Bento:** Na praia tem esqueleto selvagem. Encosta num, que ele vem brigar. Treina um pouco antes da vila.
 
 ### 1ª batalha — dicas do Bento (só na primeira)

@@ -15,7 +15,7 @@ const PLACE_WIDTH := 240.0
 const VALUE_PREFIXES := ["LANG_NAME_", "VAL_", "SET_TEXT_SLOW", "SET_TEXT_NORMAL", "SET_TEXT_FAST"]
 ## Fora do teste (texto montado com dados de fora ou só de debug).
 ## Batalha: mensagens (log de 3 linhas), prévia do golpe, descrições e listas.
-const BATTLE_LOG_PREFIXES := ["BTL_WILD", "BTL_TAMER_", "BTL_GO", "BTL_COME", "BTL_USED", "BTL_MISS", "BTL_NO_", "BTL_CRIT",
+const BATTLE_LOG_PREFIXES := ["BTL_FIN_", "BTL_WILD", "BTL_TAMER_", "BTL_GO", "BTL_COME", "BTL_USED", "BTL_MISS", "BTL_NO_", "BTL_CRIT",
 	"BTL_EFF_STRONG_MSG", "BTL_EFF_WEAK_MSG", "BTL_POISON", "BTL_ALREADY", "BTL_STAT_", "BTL_HEALED", "BTL_CURED",
 	"BTL_REVIVED", "BTL_ITEM_USED", "BTL_FAINT", "BTL_XP", "BTL_LEVEL_UP", "BTL_LEARNED", "BTL_LEARN_PROMPT",
 	"BTL_DID_NOT", "BTL_FLED", "BTL_FLEE", "BTL_CANT", "BTL_WIN", "BTL_MONEY", "BTL_LOSE", "BTL_SINTONIA", "BTL_DELAYED", "BTL_TIP_",

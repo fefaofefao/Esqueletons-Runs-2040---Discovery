@@ -38,7 +38,9 @@ static func run(n: Dictionary) -> bool:
 		"battle":
 			var info := {"kind": str(n.get("kind", "tamer")), "enemies": n.get("enemies", []),
 				"tamer_key": str(n.get("tamer_key", "BTL_TAMER_DEFAULT")), "reward": int(n.get("reward", 0)),
-				"tips": n.get("tips", [])}
+				"tips": n.get("tips", []), "script": n.get("script", [])}
+			if n.has("bg"):
+				info["bg"] = str(n["bg"])
 			var result: String = await Game.start_battle(info)
 			if result != "win":
 				return false

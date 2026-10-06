@@ -261,8 +261,49 @@ R.d("trono", [say("DLG_C_T_0"), lia("DLG_C_T_L1"), nar("DLG_C_T_LN", **{"if": "p
 R.d("trono_de_novo", [say("DLG_C_REI_AGAIN", "SPK_REI"), goto(ref("trono_coroa"))])
 R.d("trono_coroa", [ask("DLG_C_REI_4", "SPK_REI", [("OPT_C_CROWN", ref("coroa_tentar")), ("OPT_C_REFUSE", ref("recusar"))])])
 R.d("coroa_tentar", [say("DLG_C_TRY_0"), lia("DLG_C_TRY_L"), taro("DLG_C_TRY_T"), say("DLG_C_TRY_1"), goto(ref("recusar"))])
+# Batalha final com momentos roteirizados (a coroa pesa o tempo, Lia e Taro viram o jogo, a coroa racha)
+t("BTL_FIN_START_1", "Ossárion ergue a coroa rachada. Todas as velas do salão tremem ao mesmo tempo.",
+  "Ossárion raises the cracked crown. Every candle in the hall flickers at once.",
+  "Ossárion alza la corona agrietada. Todas las velas del salón tiemblan a la vez.")
+t("BTL_FIN_START_2", "Ossárion: Mil anos esperando. Não vou perder mais ninguém. Nem você.",
+  "Ossárion: A thousand years of waiting. I won't lose anyone else. Not even you.",
+  "Ossárion: Mil años esperando. No voy a perder a nadie más. Ni a ti.")
+t("BTL_FIN_CROWN_1", "A coroa canta. O tempo fica pesado, como água fria nos ossos.",
+  "The crown sings. Time grows heavy, like cold water in your bones.",
+  "La corona canta. El tiempo se vuelve pesado, como agua fría en los huesos.")
+t("BTL_FIN_CROWN_2", "Ossárion: Fica. Aqui ninguém vai embora. Ninguém se perde.",
+  "Ossárion: Stay. No one leaves here. No one gets lost.",
+  "Ossárion: Quédate. Aquí nadie se va. Nadie se pierde.")
+t("BTL_FIN_LIA", "Lia: Eu não tenho mais medo do escuro! Nem do seu!",
+  "Lia: I'm not afraid of the dark anymore! Not even yours!",
+  "Lia: ¡Ya no le tengo miedo a la oscuridad! ¡Ni a la tuya!")
+t("BTL_FIN_TARO", "Taro: Meus pais tão lá embaixo esperando. Eu não paro aqui!",
+  "Taro: My parents are waiting down there. I'm not stopping here!",
+  "Taro: Mis padres esperan allá abajo. ¡No me detengo aquí!")
+t("BTL_FIN_BOND", "A lamparina e o remo brilham juntos. A coragem dos dois aquece a sala inteira.",
+  "The lamp and the oar shine together. Their courage warms the whole hall.",
+  "El farolillo y el remo brillan juntos. Su valor calienta toda la sala.")
+t("BTL_FIN_CRACK_1", "CRACK! A rachadura corre a coroa de ponta a ponta.",
+  "CRACK! The fracture runs across the crown from end to end.",
+  "¡CRAC! La grieta recorre la corona de punta a punta.")
+t("BTL_FIN_CRACK_2", "Ossárion: Eu só... queria minha família de volta.",
+  "Ossárion: I only... wanted my family back.",
+  "Ossárion: Yo solo... quería recuperar a mi familia.")
+FINAL_SCRIPT = [
+    {"at": "start", "sfx": "exclaim", "shake": True, "lines": ["BTL_FIN_START_1", "BTL_FIN_START_2"]},
+    {"at": "hp_below", "species": "rei_esqueleto", "pct": 0.7, "flash": [120, 80, 170], "shake": True, "sfx": "grow_flash",
+     "lines": ["BTL_FIN_CROWN_1", "BTL_FIN_CROWN_2"], "effects": [{"kind": "delay", "side": "player", "amount": 0.6}]},
+    {"at": "hp_below", "species": "rei_esqueleto", "pct": 0.4, "flash": [255, 220, 120], "sfx": "heal",
+     "lines": [{"key": "BTL_FIN_LIA", "if": "partner_lia"}, {"key": "BTL_FIN_TARO", "if": "partner_taro"}, "BTL_FIN_BOND"],
+     "effects": [{"kind": "stages", "side": "player", "species_prefix": ["faroleira", "grumete"], "stats": {"atk": 1, "mag": 1, "spd": 1}},
+                 {"kind": "heal", "side": "player", "species_prefix": ["faroleira", "grumete"], "pct": 0.3}]},
+    {"at": "hp_below", "species": "rei_esqueleto", "pct": 0.15, "flash": [170, 240, 250], "shake": True, "sfx": "grow_flash",
+     "lines": ["BTL_FIN_CRACK_1", "BTL_FIN_CRACK_2"],
+     "effects": [{"kind": "stages", "side": "enemy", "species_prefix": ["rei_esqueleto"], "stats": {"def": -1, "res": -1, "spd": -1}}]},
+]
 R.d("recusar", [say("DLG_C_REI_5", "SPK_REI"), say("DLG_C_REI_6", "SPK_REI"), flag("rei_falou"),
-                battle("BTL_TAMER_REI", [["rei_esqueleto", 120], ["jardineiro_lirios_3", 78]], 0, "rei_beaten", kind="boss"),
+                battle("BTL_TAMER_REI", [["rei_esqueleto", 120], ["jardineiro_lirios_3", 78]], 0, "rei_beaten", kind="boss")
+                | {"script": FINAL_SCRIPT, "bg": "res://assets/battle/bg_trono.png"},
                 say("DLG_C_REI_DOWN"), say("DLG_C_REI_DOWN2", "SPK_REI"),
                 {"goto": ref("final_a"), "if": "has_carta_alva", "if_count": RED},
                 goto(ref("final_b"))])

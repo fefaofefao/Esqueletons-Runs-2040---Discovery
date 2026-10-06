@@ -221,3 +221,9 @@ Registro das escolhas feitas sem consulta (AGENTS.md, seção A). Cada item diz 
 - **Troca quando um esqueleto desmaia não aceitava o A:** as linhas da equipe e dos itens na batalha mostravam o PV/quantidade como um "valor ajustável" (como nas Configurações), e o A tentava ajustar o valor em vez de escolher. Agora essas linhas são só informativas (`fixed`). O teste de interface passa pelo mesmo caminho do botão A (`MenuList.activate_current`), e há um teste específico da troca forçada; os dois falham sem a correção.
 - **Itens renomeados** (decisão 8 da seção C): nomes ligados à praia, aos ossos e aos aniversários. Todas as falas que citavam poção, antídoto ou reviver foram reescritas nos 3 idiomas. As descrições continuam curtas porque precisam caber na faixa da loja e da mochila.
 - **Fala do resgate** (decisão 9): `Game._rescue_talk`. A taxa é a mesma da regra de derrota (`battle.json → defeat.money_loss`); com o premiado "reviver sem perder moedas", a fala diz que não cobrou nada.
+
+## Refino geral (pedido do Fernando)
+
+- **Toque na batalha:** golpes em linhas de 18 px com 3 px de folga (antes 15 px colados); listas de troca/itens com linhas de 17 px; ícones do anel com área de toque de 24 px.
+- **Apresentação de Lia e Taro:** entrada com briga de quem chegou primeiro, a Lia percebendo que o protagonista "não é esqueleto" (roupa de 2040), o remo do Taro quase apagando a lamparina e um pacto de mãos (escolha: pôr a mão ou hesitar).
+- **Batalha final:** fundo próprio (sala do trono com o trono gigante, a coroa rachada e velas) e momentos roteirizados (`info.script`, `BattleScreen._run_script`): abertura do Rei; a 70% do PV a coroa "pesa o tempo" (atrasa a dupla em campo); a 40% Lia e Taro viram o jogo (+1 ATQ/MAG/VEL e 30% de cura neles); a 15% a coroa racha (Rei com −1 DEF/RES/VEL) e ele confessa que só queria a família de volta. Com flash e tremor de tela.

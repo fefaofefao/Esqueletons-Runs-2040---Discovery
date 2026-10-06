@@ -429,8 +429,54 @@ def cake(frame):
     return img
 
 
+def battle_bg_throne():
+    """Batalha final: a sala do trono. Base do castelo, mais escura, com o trono
+    gigante ao fundo, a coroa rachada brilhando e velas acesas."""
+    img = battle_bg_region("castelo")
+    W, H = img.size
+    hz = 92
+    for y in range(H):                                                   # mais escuro nas bordas
+        for x in range(W):
+            c = img.getpixel((x, y))
+            d = abs(x - W / 2) / (W / 2)
+            k = 0.55 + 0.45 * (1 - d * d)
+            put(img, x, y, (int(c[0] * k), int(c[1] * k), int(c[2] * k)))
+    cx = W // 2
+    for y in range(8, hz):                                               # encosto do trono
+        half = 30 - int((y - 8) * 0.08)
+        for x in range(cx - half, cx + half):
+            edge = x in (cx - half, cx + half - 1)
+            put(img, x, y, (46, 34, 58) if not edge else (120, 96, 60))
+    for k, x0 in enumerate(range(cx - 26, cx + 27, 13)):                 # pontas do encosto
+        for y in range(0, 10):
+            if abs(x0 - cx) // 13 % 2 == 0 or y > 4:
+                rect(img, x0 - 2, 8 - y, 4, 1, (46, 34, 58))
+    rect(img, cx - 40, hz - 18, 80, 18, (58, 44, 70))                    # assento
+    rect(img, cx - 40, hz - 18, 80, 2, (150, 120, 70))
+    for x in range(cx - 16, cx + 17):                                    # coroa rachada
+        for y in range(18, 34):
+            if y > 25 or (x - cx) % 8 in (0, 1, 2) and y > 18 + abs((x - cx) % 8 - 1):
+                put(img, x, y, (230, 190, 80))
+    for i in range(12):                                                  # rachadura brilhando
+        put(img, cx + (i % 3) - 1, 18 + i, (170, 240, 250))
+        put(img, cx + (i % 3), 18 + i, (240, 255, 255))
+    for r in range(18, 3, -1):                                           # brilho em volta da coroa
+        for a in range(0, 360, 6):
+            x = int(cx + math.cos(math.radians(a)) * r * 1.6)
+            y = int(26 + math.sin(math.radians(a)) * r)
+            if 0 <= x < W and 0 <= y < hz:
+                c = img.getpixel((x, y))
+                put(img, x, y, mix(c[:3], (150, 220, 240), 0.06))
+    for x0 in (40, 104, 296, 360):                                       # velas nas colunas
+        rect(img, x0, hz - 30, 4, 10, (236, 226, 200))
+        ellipse(img, x0 + 2, hz - 33, 2, 3, (255, 200, 90))
+        put(img, x0 + 2, hz - 34, (255, 250, 220))
+    return img
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
+    battle_bg_throne().save(OUT / "bg_trono.png")
     battle_bg_forest().save(OUT / "bg_bosque.png")
     battle_bg().save(OUT / "bg_praia.png")
     for kind in ("minas", "pantano", "ossorio", "picos", "deserto", "castelo"):

@@ -241,6 +241,8 @@ func _run() -> void:
 		_mark_actor(null)
 		for uid in cards:
 			cards[uid].refresh()
+		if engine.result == "":
+			await _run_script(false)
 		if engine.result != "":
 			await _finish()
 			break
@@ -280,6 +282,99 @@ func _intro() -> void:
 	# dicas de tutorial (1ª batalha do Prólogo)
 	for tip in info.get("tips", []):
 		await _say(str(tip))
+	await _run_script(true)
+
+
+# ------------------------------------------------------------------ roteiro na batalha
+## Momentos roteirizados (batalha final): info.script = [{"at": "start" | "hp_below",
+## "species", "pct", "lines": [chave | {"key", "if"}], "flash": [r, g, b], "shake": bool,
+## "sfx", "effects": [{"kind": "delay" | "stages" | "heal", "side": "player" | "enemy",
+## "species_prefix": [...], "amount", "stats": {...}, "pct"}]}]. Cada um dispara uma vez.
+var _script_done := {}
+
+
+func _run_script(at_start: bool) -> void:
+	var list: Array = info.get("script", [])
+	for i in list.size():
+		if _script_done.has(i) or engine.result != "":
+			continue
+		var ev: Dictionary = list[i]
+		var fire := false
+		match str(ev.get("at", "")):
+			"start":
+				fire = at_start
+			"hp_below":
+				if not at_start:
+					for m in engine.teams[BattleEngine.ENEMY]:
+						if m.species_id == str(ev.get("species", "")) and not m.is_fainted() and m.hp_ratio() <= float(ev.get("pct", 0.5)):
+							fire = true
+		if not fire:
+			continue
+		_script_done[i] = true
+		_log.visible = true
+		if ev.has("sfx"):
+			Audio.sfx(str(ev["sfx"]))
+		if ev.has("flash"):
+			var c: Array = ev["flash"]
+			_flash(Color8(int(c[0]), int(c[1]), int(c[2])))
+		if bool(ev.get("shake", false)):
+			_shake()
+		for line in ev.get("lines", []):
+			if line is Dictionary:
+				if line.has("if") and not SaveGame.get_flag(str(line["if"])):
+					continue
+				await _say(str(line["key"]))
+			else:
+				await _say(str(line))
+		for eff in ev.get("effects", []):
+			_apply_script_effect(eff)
+		for uid in cards:
+			cards[uid].refresh()
+		_refresh_timeline()
+
+
+func _apply_script_effect(eff: Dictionary) -> void:
+	var side := BattleEngine.PLAYER if str(eff.get("side", "player")) == "player" else BattleEngine.ENEMY
+	var prefixes: Array = eff.get("species_prefix", [])
+	var targets: Array = []
+	for m in engine.teams[side]:
+		if m.is_fainted():
+			continue
+		if not prefixes.is_empty() and not prefixes.any(func(p: String) -> bool: return m.species_id.begins_with(p)):
+			continue
+		targets.append(m)
+	match str(eff.get("kind", "")):
+		"delay":
+			for m in targets:
+				if engine.active[side].has(engine.teams[side].find(m)):
+					engine.next_at[m.uid] = float(engine.next_at.get(m.uid, engine.now)) + engine.base_delay(m) * float(eff.get("amount", 0.5))
+		"stages":
+			for m in targets:
+				for s in eff.get("stats", {}):
+					m.stages[s] = clampi(int(m.stages.get(s, 0)) + int(eff["stats"][s]), -3, 3)
+		"heal":
+			for m in targets:
+				m.hp = mini(m.max_hp(), m.hp + int(round(m.max_hp() * float(eff.get("pct", 0.25)))))
+
+
+func _flash(c: Color) -> void:
+	var r := ColorRect.new()
+	r.color = c
+	r.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	r.set_anchors_preset(Control.PRESET_FULL_RECT)
+	r.size = get_viewport().get_visible_rect().size
+	add_child(r)
+	var tw := create_tween()
+	tw.tween_property(r, "color:a", 0.0, 0.6).from(0.85)
+	tw.tween_callback(r.queue_free)
+
+
+func _shake() -> void:
+	var base := _root.position
+	var tw := create_tween()
+	for k in 6:
+		tw.tween_property(_root, "position", base + Vector2(3 if k % 2 == 0 else -3, (k % 3) - 1), 0.04)
+	tw.tween_property(_root, "position", base, 0.05)
 
 
 func _refresh_timeline(ghost_weight: float = -1.0) -> void:
