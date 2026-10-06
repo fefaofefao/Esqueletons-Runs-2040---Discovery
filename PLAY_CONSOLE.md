@@ -51,7 +51,8 @@ Gerado por `tools/store/gen_play_console.py` a partir de `config/publisher.json`
 - **Faixas etárias:** 13–15, 16–17 e 18+ (público-alvo 13+).
 - O app **não** é destinado a crianças e não participa do programa Famílias.
 - Pode atrair crianças sem querer? **Não** — o tom é de aventura para 13+, e os anúncios seguem a configuração abaixo.
-- Configuração de anúncios no código (`data/ads.json`): `tagForChildDirectedTreatment = false`, `tagForUnderAgeOfConsent = false`, conteúdo máximo dos anúncios **T**.
+- Configuração de anúncios no código (`data/ads.json`): `tagForChildDirectedTreatment = false`, `tagForUnderAgeOfConsent = false`, conteúdo máximo dos anúncios **PG**.
+- O teto **PG** do AdMob mantém os anúncios dentro da classificação do jogo (10+/PEGI 7): a política de anúncios do Google Play pede que os anúncios sejam adequados à classificação do app. No AdMob, em *Bloqueio de controles → Classificação de conteúdo*, escolha também **PG** para valer no servidor.
 
 ### ID de publicidade
 - **O app usa o ID de publicidade: Sim.** Finalidade: **Publicidade ou marketing** e **Análise** (feitas pelo SDK do Google AdMob).
@@ -90,6 +91,7 @@ Nada é coletado para funcionalidade do app nem para personalização própria. 
 
 - Ícone 512×512: `store/graphics/icon_512.png` · Gráfico de destaque 1024×500: `store/graphics/feature_1024x500.png`.
 - Os textos não citam outras marcas (o `tools/store/gen_store_docs.py` confere).
+- As capturas mostram o jogo atual: depois de mudar a interface ou o conteúdo mostrado, refaça com `python3 tools/store/gen_store_shots.py`.
 
 ## 5. Versões e testes
 

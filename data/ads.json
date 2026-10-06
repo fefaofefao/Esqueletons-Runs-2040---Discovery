@@ -3,7 +3,7 @@
  "interstitial": {"min_battles": 3, "min_seconds": 180, "grace_seconds": 600},
  "rewarded": {"marker_bonus": 25, "after_flag": "tut_marker"},
  "banner": {"reserve_px": 28},
- "audience": {"child_directed": false, "under_age_of_consent": false, "max_rating": "T"},
+ "audience": {"child_directed": false, "under_age_of_consent": false, "max_rating": "PG"},
  "test_ids": {
   "app_id": "ca-app-pub-3940256099942544~3347511713",
   "banner": "ca-app-pub-3940256099942544/6300978111",

@@ -74,7 +74,10 @@ def main():
     a("- O app **não** é destinado a crianças e não participa do programa Famílias.")
     a(f"- Pode atrair crianças sem querer? **Não** — o tom é de aventura para {age}+, e os anúncios seguem a configuração abaixo.")
     a(f"- Configuração de anúncios no código (`data/ads.json`): `tagForChildDirectedTreatment = {str(aud.get('child_directed', False)).lower()}`, "
-      f"`tagForUnderAgeOfConsent = {str(aud.get('under_age_of_consent', False)).lower()}`, conteúdo máximo dos anúncios **{aud.get('max_rating', 'T')}**.")
+      f"`tagForUnderAgeOfConsent = {str(aud.get('under_age_of_consent', False)).lower()}`, conteúdo máximo dos anúncios **{aud.get('max_rating', 'PG')}**.")
+    a("- O teto **PG** do AdMob mantém os anúncios dentro da classificação do jogo (10+/PEGI 7): a política de anúncios do Google Play "
+      "pede que os anúncios sejam adequados à classificação do app. No AdMob, em *Bloqueio de controles → Classificação de conteúdo*, "
+      "escolha também **PG** para valer no servidor.")
     a("")
     a("### ID de publicidade")
     a("- **O app usa o ID de publicidade: Sim.** Finalidade: **Publicidade ou marketing** e **Análise** (feitas pelo SDK do Google AdMob).")
@@ -113,6 +116,7 @@ def main():
     a("")
     a("- Ícone 512×512: `store/graphics/icon_512.png` · Gráfico de destaque 1024×500: `store/graphics/feature_1024x500.png`.")
     a("- Os textos não citam outras marcas (o `tools/store/gen_store_docs.py` confere).")
+    a("- As capturas mostram o jogo atual: depois de mudar a interface ou o conteúdo mostrado, refaça com `python3 tools/store/gen_store_shots.py`.")
     a("")
     a("## 5. Versões e testes")
     a("")

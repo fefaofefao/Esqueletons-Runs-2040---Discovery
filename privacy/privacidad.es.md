@@ -13,7 +13,7 @@ Para seguir siendo gratuito, el juego muestra anuncios de Google AdMob. El SDK d
 Donde la ley lo exige (por ejemplo, el RGPD en la Unión Europea y el Reino Unido, y la LGPD en Brasil), el juego pide tu consentimiento antes de inicializar los anuncios, mediante la Plataforma de Mensajes al Usuario de Google. Puedes revisar tu elección en cualquier momento en Ajustes → Privacidad y anuncios. También puedes restablecer o eliminar el ID de publicidad en los ajustes del dispositivo.
 
 ## Público y menores
-El juego está destinado a personas de 13 años o más. No recopilamos a sabiendas datos de menores de 13 años. Los anuncios están configurados como no dirigidos a niños y con una clasificación de contenido apta para adolescentes.
+El juego está destinado a personas de 13 años o más. No recopilamos a sabiendas datos de menores de 13 años. Los anuncios están configurados como no dirigidos a niños y con un límite de contenido acorde con la clasificación del juego (PG: apto para todo público, con orientación de los padres).
 
 ## Seguridad
 Los datos recopilados por el SDK de anuncios se transmiten cifrados (HTTPS). El juego funciona totalmente sin conexión; sin conexión no se carga ningún anuncio.
@@ -22,5 +22,5 @@ Los datos recopilados por el SDK de anuncios se transmiten cifrados (HTTPS). El 
 Puedes solicitar información, corrección o eliminación de datos personales mediante el contacto indicado. Como FSamp Labs no guarda datos personales, las solicitudes sobre los datos de anuncios las atiende Google; para borrar el progreso del juego, desinstala la app o borra sus datos.
 
 ## Cambios
-Esta política puede actualizarse; la versión vigente está siempre en esta dirección. Vigente desde 2026-10-05.
+Esta política puede actualizarse; la versión vigente está siempre en esta dirección. Vigente desde 2026-10-06.
 

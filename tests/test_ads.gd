@@ -53,6 +53,14 @@ func test_no_backend_offline() -> void:
 	check(not Ads.rewarded_available(), "sem SDK, nenhuma oferta de premiado")
 
 
+## Público 13+ fora do programa Famílias, e anúncios que não passam da
+## classificação do jogo (fantasia leve, ~10+): teto PG no AdMob.
+func test_audience_config() -> void:
+	var aud: Dictionary = Ads.rules.get("audience", {})
+	check(not bool(aud.get("child_directed", true)), "não é direcionado a crianças (público 13+)")
+	check(str(aud.get("max_rating", "")) in ["G", "PG"], "teto de conteúdo dos anúncios ≤ classificação do jogo (G ou PG)")
+
+
 func test_interstitial_rules() -> void:
 	var fb := _reset()
 	SaveGame.data["play_time"]["real"] = 300.0

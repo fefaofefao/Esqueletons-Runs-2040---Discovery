@@ -292,9 +292,12 @@ func run_growths() -> void:
 func _battle_flash() -> void:
 	_fade.mouse_filter = Control.MOUSE_FILTER_STOP
 	var tw := create_tween()
-	for i in 3:
-		tw.tween_property(_fade, "color", Color(1, 1, 1, 0.85), 0.06)
-		tw.tween_property(_fade, "color", Color(1, 1, 1, 0.0), 0.08)
+	# Fotossensibilidade: no máximo ~3 clarões por segundo, mesmo no 2x
+	# (o tween acelera junto, então no 2x vai um clarão só).
+	var flashes := 2 if Engine.time_scale <= 1.0 else 1
+	for i in flashes:
+		tw.tween_property(_fade, "color", Color(1, 1, 1, 0.6), 0.12)
+		tw.tween_property(_fade, "color", Color(1, 1, 1, 0.0), 0.22)
 	tw.tween_property(_fade, "color", Color(0.06, 0.05, 0.08, 1.0), 0.22)
 	await tw.finished
 

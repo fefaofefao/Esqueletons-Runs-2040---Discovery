@@ -48,7 +48,7 @@ func _init_sdk() -> void:
 		if bool(_audience.get("child_directed", false)) else RequestConfiguration.TagForChildDirectedTreatment.FALSE)
 	rc.tag_for_under_age_of_consent = (RequestConfiguration.TagForUnderAgeOfConsent.TRUE
 		if bool(_audience.get("under_age_of_consent", false)) else RequestConfiguration.TagForUnderAgeOfConsent.FALSE)
-	rc.max_ad_content_rating = str(_audience.get("max_rating", "T"))
+	rc.max_ad_content_rating = str(_audience.get("max_rating", "PG"))
 	MobileAds.set_request_configuration(rc)
 	var listener := OnInitializationCompleteListener.new()
 	listener.on_initialization_complete = func(_s: InitializationStatus) -> void:
