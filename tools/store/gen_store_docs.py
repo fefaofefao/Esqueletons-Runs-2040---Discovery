@@ -93,7 +93,7 @@ FEITO PARA O CELULAR
 • Funciona offline. Sem login.
 • Português, inglês e espanhol.
 
-Gratuito, com anúncios opcionais e não intrusivos.""",
+Gratuito, com anúncios. Os vídeos com recompensa são sempre opcionais.""",
     },
     "en": {
         "title": "Esqueletons Runs 2040",
@@ -126,7 +126,7 @@ MADE FOR PHONES
 • Plays offline. No login.
 • English, Portuguese and Spanish.
 
-Free, with optional, non-intrusive ads.""",
+Free, with ads. Rewarded videos are always optional.""",
     },
     "es": {
         "title": "Esqueletons Runs 2040",
@@ -159,7 +159,7 @@ HECHO PARA EL MÓVIL
 • Funciona sin conexión. Sin inicio de sesión.
 • Español, portugués e inglés.
 
-Gratis, con anuncios opcionales y no intrusivos.""",
+Gratis, con anuncios. Los videos con recompensa son siempre opcionales.""",
     },
 }
 

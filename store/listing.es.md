@@ -6,7 +6,7 @@ Esqueletons Runs 2040
 ## Descrição curta (77/80)
 Hazte amigo de esqueletos, celebra cumpleaños y descubre el misterio de 2040.
 
-## Descrição longa (1502/4000)
+## Descrição longa (1525/4000)
 Despiertas en una playa con una entrada de museo en el bolsillo: 12/10/2040. El continente está dominado por esqueletos, y el Rey Esqueleto te quiere en su castillo. ¿Por qué?
 
 Esqueletons Runs 2040 — Edición Discovery es un RPG de aventura en pixel art, el primer juego de la serie. Viaja con Lia y Taro, tus dos compañeros, por seis regiones, cada una con un Guardián de la familia del Rey.
@@ -35,7 +35,7 @@ HECHO PARA EL MÓVIL
 • Funciona sin conexión. Sin inicio de sesión.
 • Español, portugués e inglés.
 
-Gratis, con anuncios opcionales y no intrusivos.
+Gratis, con anuncios. Los videos con recompensa son siempre opcionales.
 
 ## Gráficos
 - Ícone: `store/graphics/icon_512.png`
