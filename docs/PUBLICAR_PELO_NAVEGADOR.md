@@ -100,7 +100,7 @@ O número da versão (*versionCode*) é o número da execução do Actions, ent�
 **Criar app**:
 | Campo | Valor |
 |---|---|
-| Nome | `Esqueletons Runs 2040: Discovery` |
+| Nome (máx. 30) | `Esqueletons Runs 2040` |
 | Idioma padrão | Português (Brasil) – pt-BR |
 | App ou jogo | Jogo |
 | Gratuito ou pago | Gratuito |

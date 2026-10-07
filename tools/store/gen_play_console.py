@@ -17,6 +17,8 @@ def main():
     aud = ads.get("audience", {})
     age = int(pub.get("audience_min_age", 13))
     site = pub["website"]
+    if len(pub["store_title"]) > 30:
+        raise SystemExit(f"gen_play_console: store_title com {len(pub['store_title'])} caracteres; o Google Play aceita até 30")
     L = []
     a = L.append
     a(f"# Google Play Console — {pub['store_title']}")
@@ -28,7 +30,7 @@ def main():
     a("")
     a("| Campo | Resposta |")
     a("|---|---|")
-    a(f"| Nome do app | {pub['store_title']} |")
+    a(f"| Nome do app (máx. 30) | {pub['store_title']} ({len(pub['store_title'])} caracteres) |")
     a("| Idioma padrão | Português (Brasil) – pt-BR |")
     a("| App ou jogo | Jogo |")
     a("| Gratuito ou pago | Gratuito |")

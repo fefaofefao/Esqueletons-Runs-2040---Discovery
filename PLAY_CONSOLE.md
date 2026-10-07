@@ -1,4 +1,4 @@
-# Google Play Console — Esqueletons Runs 2040: Discovery
+# Google Play Console — Esqueletons Runs 2040
 
 Gerado por `tools/store/gen_play_console.py` a partir de `config/publisher.json` e `data/ads.json`. Não edite à mão: mude o `publisher.json` e rode `python3 tools/sync_publisher.py`.
 
@@ -6,7 +6,7 @@ Gerado por `tools/store/gen_play_console.py` a partir de `config/publisher.json`
 
 | Campo | Resposta |
 |---|---|
-| Nome do app | Esqueletons Runs 2040: Discovery |
+| Nome do app (máx. 30) | Esqueletons Runs 2040 (21 caracteres) |
 | Idioma padrão | Português (Brasil) – pt-BR |
 | App ou jogo | Jogo |
 | Gratuito ou pago | Gratuito |

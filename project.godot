@@ -14,7 +14,7 @@ general/ios/enabled=false
 
 [application]
 
-config/name="Esqueletons Runs 2040: Discovery"
+config/name="Esqueletons Runs 2040"
 config/description="RPG de coleta de esqueletos. Edição Discovery."
 config/version="0.1.0"
 run/main_scene="res://scenes/main.tscn"
