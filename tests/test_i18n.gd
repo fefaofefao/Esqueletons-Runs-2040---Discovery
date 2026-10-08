@@ -46,3 +46,17 @@ func test_font_has_all_characters() -> void:
 	check(missing.is_empty(), "fonte sem os caracteres: %s" % ", ".join(PackedStringArray(missing.keys())))
 	for ch in "áéíóúâêôãõçñÁÉÍÓÚÂÊÔÃÕÇÑ¿¡üÜ":
 		check(font.has_char(ch.unicode_at(0)), "fonte com '%s'" % ch)
+
+
+## Sobre: a política abre no idioma do jogo e o feedback leva versão e idioma.
+func test_about_links_follow_language() -> void:
+	var p := {"privacy_policy_url": "https://exemplo.github.io/privacidade.html", "contact_email": "a@b.com", "game_name": "Jogo"}
+	check_eq(AboutScreen.privacy_url(p, "pt_BR"), "https://exemplo.github.io/privacidade.html", "PT abre a política em português")
+	check_eq(AboutScreen.privacy_url(p, "en"), "https://exemplo.github.io/privacy.html", "EN abre a política em inglês")
+	check_eq(AboutScreen.privacy_url(p, "es"), "https://exemplo.github.io/privacidad.html", "ES abre a política em espanhol")
+	var other := {"privacy_policy_url": "https://outro.site/politica"}
+	check_eq(AboutScreen.privacy_url(other, "en"), "https://outro.site/politica", "outro site: URL intacta")
+	var mail := AboutScreen.feedback_mailto(p)
+	check(mail.begins_with("mailto:a@b.com?subject="), "feedback vai para o e-mail de contato")
+	var v := str(ProjectSettings.get_setting("application/config/version", ""))
+	check(mail.contains(v.uri_encode()), "o e-mail de feedback leva a versão")

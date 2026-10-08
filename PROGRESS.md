@@ -431,3 +431,8 @@ Especificação: `AGENTS.md`. Decisões: `docs/DECISOES.md`. Correções do Fern
 - **Textos menos genéricos:** mensagens de batalha com a cara do mundo ("Um X chacoalhou do mato!", "Bem na junta! Crítico!", "X desmontou!", "Vitória! Os ossos do time vibram!"); "Debater-se" virou "Teimosia"; a mensagem de caminho fechado não fala mais em "versão de teste".
 - **Caça a bugs:** replay automático de todas as regiões (Prólogo ao Castelo) sem erros de script nem travamentos.
 - Simulador refeito com as novas linhas e ases: todos os critérios OK.
+
+## Versão 0.1.1 (teste fechado)
+- **Sobre → Sugestões e erros:** abre o e-mail de contato já com versão, aparelho, sistema e idioma, para os testadores mandarem feedback.
+- **Política de privacidade no idioma do jogo** (PT, EN ou ES) ao tocar em "Política de privacidade".
+- Versão 0.1.1; o código de versão continua sendo o número do build do Actions.

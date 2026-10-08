@@ -39,6 +39,8 @@ ABOUT_CONTACT,Contato: {v},Contact: {v},Contacto: {v}
 ABOUT_SITE,Site: {v},Website: {v},Sitio web: {v}
 ABOUT_PRIVACY,Política de privacidade,Privacy policy,Política de privacidad
 ABOUT_CREDITS,Créditos,Credits,Créditos
+ABOUT_FEEDBACK,Sugestões e erros,Feedback and bugs,Sugerencias y errores
+ABOUT_FEEDBACK_BODY,"Conte o que aconteceu (onde estava, o que fez):","Tell us what happened (where you were, what you did):","Cuéntanos qué pasó (dónde estabas, qué hiciste):"
 ABOUT_PRIVACY_PENDING,A política de privacidade será publicada no site da produtora antes do lançamento.,The privacy policy will be published on the studio's website before launch.,La política de privacidad se publicará en el sitio del estudio antes del lanzamiento.
 MSG_SAVED,Jogo salvo.,Game saved.,Partida guardada.
 MSG_AREA_LOCKED,Uma cerca de ossos fecha a passagem. Ainda não é hora.,A fence of bones blocks the way. Not yet.,Una cerca de huesos cierra el paso. Todavía no.

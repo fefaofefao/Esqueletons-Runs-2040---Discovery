@@ -98,7 +98,7 @@ Nada é coletado para funcionalidade do app nem para personalização própria. 
 
 1. Configure os Secrets do GitHub (veja `docs/BUILD.md`): keystore e os 4 IDs reais do AdMob.
 2. Preencha os campos entre colchetes do `config/publisher.json` e rode `python3 tools/sync_publisher.py`. O release falha enquanto houver placeholders.
-3. Crie a tag `v0.1.0` (ou rode o workflow com *release* marcado) e baixe o artefato `esqueletons-release-aab`.
+3. Crie a tag `v0.1.1` (ou rode o workflow com *release* marcado) e baixe o artefato `esqueletons-release-aab`.
 4. Ative a **Assinatura de apps do Google Play** e envie o `.aab` para a faixa de **teste fechado**.
 5. **Conta pessoal nova (criada depois de 13/11/2023):** o Google exige um **teste fechado com pelo menos 12 testadores, ativos por 14 dias seguidos**, antes de liberar a produção. Convide os testadores por e-mail ou Grupo do Google logo no começo.
 6. Depois do teste fechado, peça o acesso à produção respondendo ao questionário sobre o teste.

@@ -28,7 +28,7 @@ const OSS_HEADER_WIDTH := 260.0
 const PREVIEW_PREFIXES := ["TYPE_", "BTL_EFF_STRONG", "BTL_EFF_NORMAL", "BTL_EFF_WEAK", "BTL_TARGET_", "BTL_WEIGHT_", "BTL_DETAIL", "BTL_AGE"]
 ## Nome de esqueleto/golpe no pior caso para as mensagens da batalha.
 const WORST_UNIT := "Wwwwwwwwwww"
-const SKIP_KEYS := ["BTL_LOSE_MONEY", "BTL_NO_PARTY", "DBG_TIMES_BODY", "ABOUT_VERSION", "ABOUT_PRODUCER", "ABOUT_CONTACT", "ABOUT_SITE", "NAME_DEFAULT", "SPK_BENTO"]
+const SKIP_KEYS := ["BTL_LOSE_MONEY", "BTL_NO_PARTY", "DBG_TIMES_BODY", "ABOUT_VERSION", "ABOUT_PRODUCER", "ABOUT_CONTACT", "ABOUT_SITE", "ABOUT_FEEDBACK_BODY", "NAME_DEFAULT", "SPK_BENTO"]
 ## Pior caso do nome do jogador (10 caracteres largos).
 const WORST_NAME := "WWWWWWWWWW"
 
