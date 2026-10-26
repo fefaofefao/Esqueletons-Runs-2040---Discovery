@@ -27,6 +27,10 @@ func _ready() -> void:
 	await _shot("00_titulo_intro")
 	await _wait(1.6)
 	await _shot("01_titulo")
+	if "--ad" in OS.get_cmdline_user_args():
+		await _ad_scenes()
+		get_tree().quit()
+		return
 	if "--store" in OS.get_cmdline_user_args():
 		await _store_shots()
 		get_tree().quit()
@@ -663,3 +667,137 @@ func _final_shots() -> void:
 	await _wait(1.8)
 	await _shot("f2_lia_taro")
 
+
+
+## Cenas para vídeos de anúncio. Rode com o gravador de filme do Godot:
+##   godot --write-movie out.avi --fixed-fps 30 --resolution 1280x720 res://tools/screenshots/capture.tscn -- --ad --out=DIR
+## Cada cena imprime "MARK <nome> <quadro>" para o corte (tools/video/make_ads.py).
+func _mark(scene: String) -> void:
+	print("MARK ", scene, " ", Engine.get_frames_drawn())
+
+
+## Espera a tela de batalha existir (start_battle só a cria depois do flash).
+func _await_battle() -> void:
+	for i in 100:
+		if Game.battle != null:
+			return
+		await _wait(0.05)
+
+
+## Joga sozinho: escolhe o golpe de maior poder e o primeiro alvo.
+func _autoplay(seconds: float) -> void:
+	await _await_battle()
+	var t := 0.0
+	while Game.battle and t < seconds:
+		if Game.battle.state == "ring":
+			Game.battle._on_ring_chosen("moves")
+			await _wait(0.45)
+			if Game.battle and Game.battle.state == "moves":
+				var ml = Game.battle._moves
+				var best := 0
+				var best_p := -1
+				for i in ml.move_ids.size():
+					var pw := int(Game.battle.engine.move_data(ml.move_ids[i]).get("power", 0))
+					if ml.usable(i) and pw > best_p:
+						best = i
+						best_p = pw
+				ml.index = best
+				ml.move_cursor(0)
+				Game.battle._update_move_detail()
+				await _wait(0.3)
+				Game.battle._choose_move()
+				await _wait(0.35)
+			if Game.battle and Game.battle.state == "target":
+				Game.battle._confirm_target()
+		await _wait(0.1)
+		t += 0.1
+
+
+func _ad_scenes() -> void:
+	_mark("title")
+	Game.start_new_game("Téo")
+	await _wait(1.0)
+	await _advance()
+	for f in ["intro_done", "bento_met", "has_partner", "partner_lia", "partner_taro", "tut_battle", "tut_marker"]:
+		SaveGame.set_flag(f)
+	var lia := Monster.create("faroleira_1", 15)
+	lia.nickname = "Lia"
+	lia.starter = true
+	var taro := Monster.create("grumete_1", 15)
+	taro.nickname = "Taro"
+	taro.starter = true
+	taro.gain_xp(Monster.xp_for_level(16) - taro.xp - 2)
+	SaveGame.data["party"] = [taro.to_dict(), lia.to_dict(), Monster.create("lenhador_1", 14).to_dict()]
+	var ids: Array = Data.all_species_ids(false)
+	for i in ids.size():
+		if i % 4 != 3:
+			Ossuary.entry(str(ids[i]))["seen"] = true
+		if i % 3 == 0:
+			Ossuary.entry(str(ids[i]))["recruited"] = true
+	# mapa: caminhando pela rota com selvagens à vista
+	await _goto("rota_1", Vector2i(19, 43), "up")
+	_mark("map")
+	await _hold("move_up", 2.2)
+	await _hold("move_right", 0.8)
+	await _hold("move_up", 1.4)
+	# batalha com um Golden
+	_mark("battle")
+	Game.start_battle({"kind": "wild", "seed": 7, "enemies": [["herborista_1", 14, true], ["lenhador_1", 14]]})
+	await _await_battle()
+	_mark("battle_on")
+	await _autoplay(9.0)
+	_mark("battle_end")
+	# vitória: Taro faz 16 anos e cresce
+	await _await_battle()
+	if Game.battle:
+		Game.battle.debug_win()
+	for i in 60:
+		await _wait(0.25)
+		if Game.top_overlay() is GrowthCeremony:
+			break
+		if Game.top_overlay() is DialogBox or Game.top_overlay() is ChoiceBox:
+			Controls.tap_action("btn_a")
+		elif Game.battle and Game.battle.state != "busy":
+			Controls.tap_action("btn_a")
+	_mark("growth")
+	for i in 60:
+		await _wait(0.25)
+		if not (Game.top_overlay() is GrowthCeremony):
+			break
+	_mark("growth_end")
+	Game.close_all_overlays()
+	# Ossário
+	Game.open_overlay(OssuaryScreen.new())
+	await _wait(0.4)
+	_mark("ossuary")
+	for i in 14:
+		Controls.tap_action("move_down")
+		await _wait(0.18)
+	_mark("ossuary_end")
+	Game.close_all_overlays()
+	# batalha final contra o Rei
+	var l3 := Monster.create("faroleira_3", 90)
+	l3.nickname = "Lia"
+	l3.starter = true
+	var t3 := Monster.create("grumete_3", 90)
+	t3.nickname = "Taro"
+	t3.starter = true
+	SaveGame.data["party"] = [l3.to_dict(), t3.to_dict(), Monster.create("sentinela_3", 88).to_dict(), Monster.create("lavadeira_3", 88).to_dict()]
+	await _goto("sala_trono", Vector2i(-1, -1), "up")
+	var node: Dictionary = {}
+	for n in Data.dialog("castelo/recusar"):
+		if n is Dictionary and n.get("action", "") == "battle":
+			node = n
+	Game.start_battle({"kind": "boss", "enemies": node.enemies, "tamer_key": node.tamer_key, "reward": 0, "script": node.script, "bg": node.bg})
+	await _await_battle()
+	_mark("final")
+	await _wait(2.6)
+	await _autoplay(5.0)
+	if Game.battle:
+		for m in Game.battle.engine.teams[1]:
+			if m.species_id == "rei_esqueleto":
+				m.hp = int(m.max_hp() * 0.12)
+		_mark("final_crack")
+		Game.battle._run_script(false)
+		await _wait(4.0)
+	_mark("end")
